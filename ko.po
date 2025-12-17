@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-17 06:33+0000\n"
+"PO-Revision-Date: 2025-12-18 06:58+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -1131,7 +1131,7 @@ msgstr "*** %s 를 읽을 수 없음"
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr "%s 의 %s 에서 %s 는 예상된 방식 %04o로 전송합니다"
+msgstr "%s 의 %s 에서 %s 는 예상된 방식 %04o 로 전송합니다"
 
 #: lib/fileinfo.c:76
 #, c-format
@@ -1216,7 +1216,7 @@ msgstr "*** %s 읽기 중 오류가 발생하고, 유형을 무시합니다"
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr "*** 플래기는 'on' 또는 'off' 여야 합니다; '%s' 무시하기"
+msgstr "*** 플래그는 'on' 또는 'off' 여야 합니다; '%s' 무시하기"
 
 #: lib/init.c:548
 #, c-format
@@ -1282,49 +1282,49 @@ msgstr "***     %s"
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** %s 에서 예상치 못한 토큰 `%s' 가 발견되어, 계속 할 수 없습니다"
 
 #: lib/init.c:1414
 #, c-format
 msgid "*** invalid security rule: %s"
-msgstr ""
+msgstr "*** 잘못된 보안 규칙: %s"
 
 #: lib/init.c:1426
 #, c-format
 msgid "*** unknown security rule: %s"
-msgstr ""
+msgstr "*** 알 수 없는 보안 규칙: %s"
 
 #: lib/init.c:1435
 #, c-format
 msgid "*** unknown security action: %s"
-msgstr ""
+msgstr "*** 알 수 없는 보안 동작: %s"
 
 #: lib/init.c:1461
 #, c-format
 msgid "*** malformed security line: %s"
-msgstr ""
+msgstr "*** 잘못된 보안 줄: %s"
 
 #: lib/init.c:1622
 #, c-format
 msgid "*** missing configuration file `%s'"
-msgstr ""
+msgstr "*** 누락된 구성 파일 `%s'"
 
 #: lib/init.c:1658
 #, c-format
 msgid "*** unable to find profile '%s'"
-msgstr ""
+msgstr "*** 프로파일 '%s' 를 찾을 수 없음"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "abidiff 사용법 오류"
 
 #: lib/inspect_abidiff.c:275
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 에서 ABI 변경"
 
 #: lib/inspect_abidiff.c:284
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 에서 ABI 비호환 변경"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1495,7 +1495,7 @@ msgstr "${ARCH}에서 ${FILE}의 -D_FORTIFY_SOURCE 손실"
 #: lib/inspect_annocheck.c:464
 #, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s 는 %s 에서 -O2 -D_FORTIFY_SOURCE 를 잃었을 수도 있습니다"
 
 #: lib/inspect_annocheck.c:489
 #, c-format
@@ -1591,7 +1591,7 @@ msgstr ""
 #: lib/inspect_capabilities.c:98
 #, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr ""
+msgstr "%s 의 %s 에서 %s: '%s' 용 파일 기능을 찾을 수 있습니다\n"
 
 #: lib/inspect_capabilities.c:134
 #, c-format
@@ -1599,6 +1599,8 @@ msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
 msgstr ""
+"%s 의 %s 에서 %s: '%s' 용 파일 기능 목록 항목을 찾을 수 있으며, 꾸러미와 "
+"일치합니다\n"
 
 #: lib/inspect_capabilities.c:145
 #, c-format
@@ -1669,7 +1671,7 @@ msgstr ""
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
@@ -1678,7 +1680,7 @@ msgstr ""
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
@@ -1702,7 +1704,7 @@ msgstr ""
 #: lib/inspect_config.c:153
 #, c-format
 msgid "%%config file content change for %s in %s on %s"
-msgstr ""
+msgstr "%s 의 %s 에서 %s 용 %%config 파일 내용 변경"
 
 #: lib/inspect_config.c:168
 #, c-format
@@ -1710,6 +1712,8 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
+"%s 의 %s 에서 %s 용 %%config 파일 변경 (%%config 를 %smarked 로 -> %%config "
+"를 %smarked 로)\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
 msgid "not "
@@ -1840,18 +1844,24 @@ msgid ""
 "File %s is no longer a valid desktop entry file on %s; desktop-file-validate "
 "reports:"
 msgstr ""
+"파일 %s 는 %s 에서 유효한 데스크탑 항목 파일이 아닙니다; desktop-file-"
+"validate 보고:"
 
 #: lib/inspect_desktop.c:457
 #, c-format
 msgid ""
 "New file %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"새로운 파일 %s 는 %s 에서 유효한 데스크탑 파일이 아닙니다; desktop-file-"
+"validate 보고:"
 
 #: lib/inspect_desktop.c:459
 #, c-format
 msgid ""
 "File %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"파일 %s 는 %s 에서 유효한 데스크탑 파일이 아닙니다; desktop-file-validate "
+"보고:"
 
 #: lib/inspect_disttag.c:184
 #, c-format
@@ -3181,7 +3191,7 @@ msgstr "*** cl_engine_new가 NULL 을 반환되었으며, clamav 라이브러리
 #: lib/inspect_virus.c:98
 #, c-format
 msgid "Virus detected in %s in the %s package on %s: %s"
-msgstr "%s 꾸러미의 %s에서 바이러스가 탐지되었습니다 %s: %s"
+msgstr "%s 꾸러미의 %s 에서 바이러스가 탐지되었습니다 %s: %s"
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
@@ -3209,12 +3219,12 @@ msgstr "${ARCH}의 ${FILE}에서 바이러스 또는 멀웨어"
 #: lib/inspect_xml.c:195
 #, c-format
 msgid "%s is a well-formed XML file in %s on %s, but is not a valid XML file"
-msgstr ""
+msgstr "%s 는 %s 의 %s 에서 잘-형성된 XML 파일이지만, 유효한 XML 파일이 아닙니다"
 
 #: lib/inspect_xml.c:203
 #, c-format
 msgid "%s is not a well-formed XML file in %s on %s"
-msgstr ""
+msgstr "%s 는 %s 의 %s 에서 잘-형성된 XML 파일이 아닙니다"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
