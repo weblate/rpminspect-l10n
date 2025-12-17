@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-10-09 06:27+0000\n"
+"PO-Revision-Date: 2025-12-17 06:33+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.13.3\n"
+"X-Generator: Weblate 5.15\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -44,6 +44,8 @@ msgid ""
 "Packages that lost payload data from the before build to the after build are "
 "reported."
 msgstr ""
+"빈 자료를 위해 제작 전후에 모든 바이너리 RPM을 점검합니다. 제작 전에서 제작 "
+"후까지 유효 자료를 잃어버린 꾸러미는 보고됩니다."
 
 #: include/inspect.h:1359
 msgid ""
@@ -65,7 +67,7 @@ msgstr ""
 
 #: include/inspect.h:1371
 msgid "Check that XML files included in the RPM payload are well-formed."
-msgstr ""
+msgstr "RPM 유효 자료에 포함된 XML 파일이 잘-형성되었는지 확인하세요."
 
 #: include/inspect.h:1377
 msgid ""
@@ -1129,7 +1131,7 @@ msgstr "*** %s 를 읽을 수 없음"
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
+msgstr "%s 의 %s 에서 %s 는 예상된 방식 %04o로 전송합니다"
 
 #: lib/fileinfo.c:76
 #, c-format
@@ -1190,12 +1192,12 @@ msgstr "*** 잘못된 방식 문자열: %s"
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** array %s->%s 에 추가된 항목에서 문제가 발생했습니다"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** %s 에 무시된 항목 추가 중에 문제가 발생했습니다"
 
 #: lib/init.c:418 lib/init.c:432
 msgid "*** error reading "
@@ -1204,17 +1206,17 @@ msgstr "*** 오류 읽기 "
 #: lib/init.c:458
 #, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr ""
+msgstr "*** 잘못된 부분 %s->%s 무시하기"
 
 #: lib/init.c:515 lib/init.c:528
 #, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr ""
+msgstr "*** %s 읽기 중 오류가 발생하고, 유형을 무시합니다"
 
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
+msgstr "*** 플래기는 'on' 또는 'off' 여야 합니다; '%s' 무시하기"
 
 #: lib/init.c:548
 #, c-format
@@ -1223,17 +1225,17 @@ msgstr "*** 알 수 없는 검사: `%s`"
 
 #: lib/init.c:559
 msgid "*** malformed/unknown inspections section"
-msgstr ""
+msgstr "*** 잘못됨/알 수 없는 검사 부분"
 
 #: lib/init.c:591
 #, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr ""
+msgstr "*** 잘못된 %s 구성 무시하기: %s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** 알 수 없는 모듈성 정적 문맥 설정 '%s'"
 
 #: lib/init.c:717
 #, c-format
@@ -2999,15 +3001,15 @@ msgstr ""
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "예상치 못한 상세 파일이름"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "정확하게 일치합니다"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "함께 시작합니다"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
@@ -3132,7 +3134,7 @@ msgstr ""
 #: lib/inspect_unicode.c:621
 #, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr ""
+msgstr "${FILE}에서 %prep 을 실행 할 수 없음"
 
 #: lib/inspect_unicode.c:624
 #, c-format
@@ -3148,25 +3150,25 @@ msgstr "유니코드 검사는 원천 꾸러미만 적용되며, 건너뜁니다
 #: lib/inspect_upstream.c:60
 #, c-format
 msgid "New upstream source file `%s` appeared"
-msgstr ""
+msgstr "새로운 업스트림 원천 파일 `%s`이 나타났습니다"
 
 #: lib/inspect_upstream.c:62
 msgid "new source file ${FILE}"
-msgstr ""
+msgstr "새로운 원천 ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
 msgid "Upstream source file `%s` changed content"
-msgstr ""
+msgstr "업스트림 원천 파일 `%s` 내용이 변경되었습니다"
 
 #: lib/inspect_upstream.c:93
 msgid "checksum of ${FILE}"
-msgstr ""
+msgstr "${FILE}의 체크썸"
 
 #: lib/inspect_upstream.c:195
 #, c-format
 msgid "Source file `%s` removed"
-msgstr ""
+msgstr "원천 파일`%s`가 제거되었습니다"
 
 #: lib/inspect_upstream.c:197
 msgid "source file ${FILE} removed"
@@ -3287,6 +3289,8 @@ msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
 msgstr ""
+"결과는 한 줄에 하나의 결과로 요약되며, 페이징 프로그램과 함께 콘솔 "
+"보기용으로 적합합니다."
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
 #, c-format
