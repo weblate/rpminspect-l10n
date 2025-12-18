@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-18 06:58+0000\n"
+"PO-Revision-Date: 2025-12-18 22:03+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -472,7 +472,7 @@ msgstr ""
 
 #: include/results.h:191
 msgid "Correct the reported errors in the XML document"
-msgstr ""
+msgstr "XML 문서에서 보고된 오류를 정정합니다"
 
 #: include/results.h:206
 msgid ""
@@ -628,7 +628,7 @@ msgstr ""
 
 #: include/results.h:453
 msgid "See annocheck(1) for more information."
-msgstr ""
+msgstr "더 많은 정보를 위해 annocheck(1) 를 참고하세요."
 
 #: include/results.h:460
 msgid ""
@@ -997,37 +997,37 @@ msgstr ""
 #: lib/abi.c:65
 #, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr ""
+msgstr "*** 잘못된 ABI 수준 식별자: %s"
 
 #: lib/abi.c:70
 #, c-format
 msgid "*** ABI level %d already defined"
-msgstr ""
+msgstr "*** ABI 수준 %d 가 이미 정의되었습니다"
 
 #: lib/abi.c:84
 #, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr ""
+msgstr "*** 잘못된 ABI 수준 항목: %s"
 
 #: lib/builds.c:73
 #, c-format
 msgid "*** unable to create download directory %s"
-msgstr ""
+msgstr "*** 내려받기 디렉토리 %s 를 생성 할 수 없음"
 
 #: lib/builds.c:85
 #, c-format
 msgid "*** unknown working directory type: %d"
-msgstr ""
+msgstr "*** 알 수 없는 동작 디렉토리 유형: %d"
 
 #: lib/builds.c:173
 #, c-format
 msgid "*** unable to read %s, skipping"
-msgstr ""
+msgstr "*** %s 를 읽을 수 없고, 건너뛰기"
 
 #: lib/builds.c:205
 #, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr ""
+msgstr "*** 알 수 없는 디렉토리 구성원이 발견되었습니다: %s"
 
 #: lib/builds.c:234
 #, c-format
@@ -1399,12 +1399,12 @@ msgstr ""
 
 #: lib/inspect_addedfiles.c:211
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 새로운 보안과 연관된 파일 ${FILE}"
 
 #: lib/inspect_addedfiles.c:231
 #, c-format
 msgid "`%s` added on %s in %s"
-msgstr ""
+msgstr "%s 의 %s 에서 추가된 `%s`"
 
 #: lib/inspect_addedfiles.c:232
 msgid "new file ${FILE} on ${ARCH}"
@@ -2051,11 +2051,11 @@ msgstr ""
 #: lib/inspect_emptyrpm.c:116
 #, c-format
 msgid "New package %s is empty (no payloads)"
-msgstr ""
+msgstr "새로운 꾸러미 %s 가 비어 있습니다 (유효 자료가 없습니다)"
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} 은 비어 있는 유효자료를 갖습니다"
 
 #: lib/inspect_files.c:111
 #, c-format
@@ -2083,20 +2083,20 @@ msgstr ""
 #: lib/inspect_filesize.c:76
 #, c-format
 msgid "%s became an empty file on %s"
-msgstr ""
+msgstr "%s 는 %s 에서 빈 파일이 되었습니다"
 
 #: lib/inspect_filesize.c:80
 msgid "empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 빈 ${FILE}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
 msgid "%s grew by %lld%% on %s"
-msgstr ""
+msgstr "%s 가 %lld%% 으로 커졌습니다 (%s 에서)"
 
 #: lib/inspect_filesize.c:99
 msgid "${FILE} size grew on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 크기가 ${ARCH} 에서 커졌습니다"
 
 #: lib/inspect_filesize.c:103
 #, c-format
@@ -2190,6 +2190,8 @@ msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
+"명령: %s\n"
+"종료 코드: %d%s%s"
 
 #: lib/inspect_kmod.c:28
 msgid "${FILE} kernel module alias on ${ARCH}"
@@ -3132,7 +3134,7 @@ msgstr "*** %s에서 빈 localpath"
 
 #: lib/inspect_unicode.c:474
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 의 금지된 코드 점"
 
 #: lib/inspect_unicode.c:551
 #, c-format
@@ -3228,36 +3230,36 @@ msgstr "%s 는 %s 의 %s 에서 잘-형성된 XML 파일이 아닙니다"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 은 ${ARCH} 에서 잘-형성된 XML이 아닙니다"
 
 #: lib/koji.c:142
 #, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr ""
+msgstr "*** XML-RPC 결함: %s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc 결함 코드 %s (%d): getBuild(%s) (%s 에서)"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** Koji 제작 상태는 %s 용 %s 이며, 계속 할 수 없습니다"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc 결함 코드%s (%d): getTaskInfo(%s) (%s 에서)"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
-msgstr ""
+msgstr "*** Koji 작업 상태는 작업 %s 를 위해 %s 이며, 계속 진행 할 수 없습니다"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "RPM 꾸러미 제작"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
@@ -3265,17 +3267,17 @@ msgstr ""
 
 #: lib/magic.c:21
 msgid "*** unable to initialize the magic library"
-msgstr ""
+msgstr "*** 매직 라이브러리를 초기화 할 수 없음"
 
 #: lib/magic.c:26
 #, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr ""
+msgstr "*** 매직 데이타베이스를 적재 할 수 없음: %s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
 msgid "*** unable to mkdir %s"
-msgstr ""
+msgstr "*** mkdir %s 를 할 수 없음"
 
 #: lib/output.c:25
 msgid ""
@@ -3893,12 +3895,12 @@ msgstr "제작"
 
 #: src/rpminspect.c:937
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
-msgstr "*** 피어가 없고, 지정된 구조를 위한 꾸러미가 있는지 확인합니다"
+msgstr "*** 비교 대상이 없고 , 지정된 구조를 위한 꾸러미가 있는지 확인합니다"
 
 #: src/rpminspect.c:958
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
-msgstr "*** 제작 전/후 사이에서 피어 꾸러미의 묶음을 찾을 수 없음"
+msgstr "*** 제작 전/후 사이에서 비교 대상 꾸러미의 묶음을 찾을 수 없음"
 
 #: src/rpminspect.c:972
 msgid "*** unable to determine product release or none specified (-r)."
