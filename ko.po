@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-18 22:03+0000\n"
+"PO-Revision-Date: 2025-12-20 17:18+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15\n"
+"X-Generator: Weblate 5.15.1\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -729,19 +729,23 @@ msgid ""
 "A new subpackage has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"새로운 하위꾸러미가 제작 후에 나타났습니다.  이는 컴퓨팅 분야의 발전을 "
+"표시하는 것일 수도 있습니다."
 
 #: include/results.h:587
 #, c-format
 msgid ""
 "Make sure the spec file in the after build contains a valid %changelog "
 "section."
-msgstr ""
+msgstr "제작 후에 지정된 파일이 유효한 %changelog 부분을 포함하는지 확인하세요."
 
 #: include/results.h:597
 msgid ""
 "Files should not be installed in old directory names.  Modify the package to "
 "install the affected file to the preferred directory."
 msgstr ""
+"파일은 오래된 디렉토리 이름으로 설치되지 않습니다.  해당 파일을 선호하는 "
+"디렉토리에 설치하도록 꾸러미를 수정하세요."
 
 #: include/results.h:607
 msgid ""
@@ -1032,27 +1036,27 @@ msgstr "*** 알 수 없는 디렉토리 구성원이 발견되었습니다: %s"
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "요청된 %s 를 내려받는 데 사용 가능한 공간이 충분하지 않습니다.\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    %s 에서 %s 가 필요하고, %s 가 있습니다.\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
-msgstr ""
+msgstr "대체 작업 디렉토리를 지정하기 위해 `-w' 옵션을 참고하세요.\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
-msgstr ""
+msgstr "요청된 %s 를 내려받는 데 필요한 공간을 결정 할 수 없음.\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "%s 에 사용 가능한 충분한 공간이 확인하세요."
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
@@ -1500,93 +1504,93 @@ msgstr "%s 는 %s 에서 -O2 -D_FORTIFY_SOURCE 를 잃었을 수도 있습니다
 #: lib/inspect_annocheck.c:489
 #, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' 는 %s 에서 %s 에 대해 계속 통과합니다"
 
 #: lib/inspect_annocheck.c:492
 #, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' 시험은 이제 %s 에서 %s 에 대해 통과합니다"
 
 #: lib/inspect_annocheck.c:495
 #, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' 시험은 이제 %s 에서 %s 에 대해 실패합니다"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
 #, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' 시험은 %s 에서 %s 에 대해 실패합니다"
 
 #: lib/inspect_annocheck.c:503
 #, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' 시험은 %s 에서 %s 에 대해 통과합니다"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
 msgid "annocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "annocheck '%s' 시험은 %s 에서 %s 에 대해 통과합니다"
 
 #: lib/inspect_annocheck.c:553
 #, c-format
 msgid "annocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "annocheck '%s' 시험은 이제 %s 에서 %s 애 대해 통과합니다"
 
 #: lib/inspect_annocheck.c:555
 #, c-format
 msgid "annocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "annocheck '%s' 시험은 이제 %s 에서 %s 에 대해 실패합니다"
 
 #: lib/inspect_annocheck.c:561 lib/inspect_annocheck.c:571
 #, c-format
 msgid "annocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "annocheck '%s' 시험은 %s 에서 %s 에 대해 실패합니다"
 
 #: lib/inspect_annocheck.c:616
 #, c-format
 msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s 는 %s 에서 손실된 -D_FORTIFY_SOURCE 를 가질 수도 있습니다"
 
 #: lib/inspect_arch.c:77
 msgid "lost ${ARCH}"
-msgstr ""
+msgstr "손실된 ${ARCH}"
 
 #: lib/inspect_arch.c:79
 #, c-format
 msgid "Architecture '%s' has disappeared"
-msgstr ""
+msgstr "구조 '%s' 가 사라졌습니다"
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 획득함"
 
 #: lib/inspect_arch.c:96
 #, c-format
 msgid "Architecture '%s' has appeared"
-msgstr ""
+msgstr "구조 '%s' 가 나타났습니다"
 
 #: lib/inspect_badfuncs.c:152
 #, c-format
 msgid "Forbidden function symbols found:\n"
-msgstr ""
+msgstr "금지된 함수 기호를 찾았습니다:\n"
 
 #: lib/inspect_badfuncs.c:168
 #, c-format
 msgid "%s may use forbidden functions on %s"
-msgstr ""
+msgstr "%s 는 %s 에서 금지된 함수를 사용 할 수도 있습니다"
 
 #: lib/inspect_badfuncs.c:175
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 에서 금지된 함수"
 
 #: lib/inspect_capabilities.c:82
 #, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
-msgstr ""
+msgstr "%s 를 위한 파일 기능은 '%s' 부터 %s 의 %s 인 '%s' 까지 변경되었습니다\n"
 
 #: lib/inspect_capabilities.c:86
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 기능"
 
 #: lib/inspect_capabilities.c:98
 #, c-format
@@ -1607,24 +1611,26 @@ msgstr ""
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
+"%s 용 파일 기능 목록이 일치하지 않습니다: '%s' 가 예상되지만, %s 의 %s 에서 "
+"'%s' 를 얻었습니다\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 기능 목록"
 
 #: lib/inspect_capabilities.c:165
 #, c-format
 msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
-msgstr ""
+msgstr "%s (%s) 용 파일 기능은 %s 에서 %s 인 기능 목록에서 찾을 수 없습니다\n"
 
 #: lib/inspect_capabilities.c:184
 #, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
-msgstr ""
+msgstr "파일 기능은 %s 에서 %s 가 예상되지만 %s 에서 찾을 수 없습니다: '%s' 예상됨\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
@@ -1722,30 +1728,30 @@ msgstr "없음 "
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "%s 의 %s 에서 %s 는 누락된 디버깅 기호입니다"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "누락된 디버깅 기호"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "누락: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%s 에서 %s 의 %s 는 디버깅 기호를 포함합니다"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "디버깅 기호를 포함합니다"
 
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "포함: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
@@ -1773,7 +1779,7 @@ msgstr ""
 #: lib/inspect_debuginfo.c:292
 #, c-format
 msgid "Lost: %s"
-msgstr ""
+msgstr "손실: %s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
@@ -2009,7 +2015,7 @@ msgstr ""
 #: lib/inspect_elf.c:742
 #, c-format
 msgid "The following new objects were built without -fPIC:\n"
-msgstr ""
+msgstr "다음 새로운 대상이 -fPIC 없이 제작되었습니다:\n"
 
 #: lib/inspect_elf.c:755
 #, c-format
@@ -2150,7 +2156,7 @@ msgstr ""
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "kmidiff 사용법 오류"
 
 #: lib/inspect_kmidiff.c:256
 #, c-format
@@ -2300,20 +2306,20 @@ msgstr ""
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 기존 빈 하위 꾸러미 ${FILE}"
 
 #: lib/inspect_lostpayload.c:93
 #, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr ""
+msgstr "%s 에서 꾸러미 %s 는 비워졌습니다 (유효한 자료 없음)"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "${ARCH} 에서 하위꾸러미 ${FILE} 는 이제 비워졌습니다"
 
 #: lib/inspect_lto.c:144
 msgid "${FILE} not portable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 는 ${ARCH} 에서 휴대용이 아닙니다"
 
 #: lib/inspect_lto.c:152
 #, c-format
@@ -2599,16 +2605,16 @@ msgstr ""
 
 #: lib/inspect_ownership.c:204
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 에 대한 잘못된 그룹"
 
 #: lib/inspect_ownership.c:268
 #, c-format
 msgid "File %s changed %s from `%s` to `%s` on %s"
-msgstr ""
+msgstr "파일 %s 가 `%s` 에서 %s 의 `%s` 로 %s 를 변경했습니다"
 
 #: lib/inspect_ownership.c:270
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 이 ${ARCH} 에서 소유자가 변경되었습니다"
 
 #: lib/inspect_patches.c:395
 #, c-format
@@ -2639,92 +2645,92 @@ msgstr ""
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "정의되지 않은 패치 파일 %s."
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
 #, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr ""
+msgstr "*** 패치 압축 해제를 할 수 없음: %s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
-msgstr ""
+msgstr "오염된 패치 ${FILE}"
 
 #: lib/inspect_patches.c:477 lib/inspect_patches.c:484
 #, c-format
 msgid "Patch %s is under 4 bytes in size - is it corrupt?"
-msgstr ""
+msgstr "패치 %s 의 크기가 4바이트 미만입니다 - 오염되었나요?"
 
 #: lib/inspect_patches.c:506
 #, c-format
 msgid "%s changed (%ld bytes -> %ld bytes)"
-msgstr ""
+msgstr "%s 변경됨 (%ld 바이트 -> %ld 바이트)"
 
 #: lib/inspect_patches.c:510 lib/inspect_patches.c:535
 msgid "patch file ${FILE}"
-msgstr ""
+msgstr "패치 파일 ${FILE}"
 
 #: lib/inspect_patches.c:531
 #, c-format
 msgid "New patch file `%s` appeared"
-msgstr ""
+msgstr "새로운 패치 파일 `%s` 가 나타났습니다"
 
 #: lib/inspect_patches.c:551
 msgid "patch changes ${FILE}"
-msgstr ""
+msgstr "패치 변경 ${FILE}"
 
 #: lib/inspect_patches.c:555
 #, c-format
 msgid "%s touches as many as %ld line%s"
-msgstr ""
+msgstr "%s 는 %ld line%s 처럼 많은 영향을 줍니다"
 
 #: lib/inspect_patches.c:557
 #, c-format
 msgid "%s touches %ld file%s"
-msgstr ""
+msgstr "%s 는 %ld file%s 에 영향을 줍니다"
 
 #: lib/inspect_patches.c:559
 #, c-format
 msgid "%s touches %ld file%s and %s%ld line%s"
-msgstr ""
+msgstr "%s 는 %ld file%s 및 %s%ld line%s 에 영향을 줍니다"
 
 #: lib/inspect_patches.c:559
 msgid "as many as "
-msgstr ""
+msgstr "최대한 많은 "
 
 #: lib/inspect_patches.c:626 lib/inspect_upstream.c:141
 msgid "No source packages available, skipping inspection."
-msgstr ""
+msgstr "사용 가능한 원천 꾸러미가 없어, 검사를 건너뛰기."
 
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "처리 할 수 없는 패치 파일 `%s` 가 지정된 파일에서 정의되었습니다"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** 인식하지 못하는 %%patch 행: %s"
 
 #: lib/inspect_patches.c:828
 #, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr ""
+msgstr "*** 지정된 파일 행을 읽을 수 없음: %s"
 
 #: lib/inspect_patches.c:881
 #, c-format
 msgid "Patch file `%s` removed"
-msgstr ""
+msgstr "패치 파일 `%s` 가 제거되었습니다"
 
 #: lib/inspect_pathmigration.c:81
 #, c-format
 msgid "File %s found should be in %s on %s"
-msgstr ""
+msgstr "찾는 파일 %s 는 %s 의 %s 에 있어야 합니다"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 은 ${ARCH} 에서 %s 에 있어야 합니다"
 
 #: lib/inspect_permissions.c:84
 msgid " changed setuid/setgid;"
@@ -2752,11 +2758,11 @@ msgstr " FIFO로 됩니다;"
 
 #: lib/inspect_permissions.c:99
 msgid " became a symbolic link;"
-msgstr ""
+msgstr " 심볼릭 링크가 되었습니다;"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " 소켓이 되었습니다;"
 
 #: lib/inspect_permissions.c:105
 msgid " permissions"
@@ -2764,21 +2770,21 @@ msgstr " 권한"
 
 #: lib/inspect_permissions.c:111
 msgid " relaxed"
-msgstr ""
+msgstr " 완화됨"
 
 #: lib/inspect_permissions.c:114
 msgid " changed"
-msgstr " 변경"
+msgstr " 변경됨"
 
 #: lib/inspect_permissions.c:129
 #, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr ""
+msgstr "%s 가 %04o 에서 %04o 까지 (%s 에서)"
 
 #: lib/inspect_permissions.c:135
 #, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 권한이 %04o 에서 %04o 까지 (${ARCH} 에서)"
 
 #: lib/inspect_permissions.c:149
 #, c-format
