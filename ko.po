@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-20 17:18+0000\n"
+"PO-Revision-Date: 2025-12-21 15:04+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -752,6 +752,8 @@ msgid ""
 "ELF .o and .a files should not carry LTO (Link Time Optimization) bytecode.  "
 "Make sure you have stripped LTO bytecode from those files at install time."
 msgstr ""
+"ELF .o 및  .a 파일은 LTO (연결 시간 최적화) 바이트코드를 수행하지 않습니다.  "
+"설치 시간에 이들 파일에서 분리된 LTO 바이트코드인지 확인하세요."
 
 #: include/results.h:617
 msgid ""
@@ -1154,7 +1156,7 @@ msgstr ""
 #: lib/fileinfo.c:155
 #, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
+msgstr "%s 에서 %s 인 %s 는 예상된 소유자 '%s' 를 수행합니다"
 
 #: lib/fileinfo.c:168
 #, c-format
@@ -1957,21 +1959,23 @@ msgstr ""
 
 #: lib/inspect_elf.c:444
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 에서 GNU_STACK"
 
 #: lib/inspect_elf.c:496
 #, c-format
 msgid "File %s has invalid execstack flags (%s) on %s"
-msgstr ""
+msgstr "파일 %s 는 %s 에서 잘못된 execstack 플래그 (%s) 를 갖고 있습니다"
 
 #: lib/inspect_elf.c:501
 #, c-format
 msgid "File %s has unrecognized GNU_STACK '%s' (expected RW or RWE) on %s"
 msgstr ""
+"파일 %s 는 %s 에서 인식하지 못하는 GNU_STACK '%s' (예상된 RW 또는 RWE)를 "
+"갖고 있습니다"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 에서 execstack"
 
 #: lib/inspect_elf.c:525
 #, c-format
@@ -2167,7 +2171,7 @@ msgstr ""
 
 #: lib/inspect_kmidiff.c:258
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 에서 KMI 변경"
 
 #: lib/inspect_kmidiff.c:260
 #, c-format
@@ -2596,7 +2600,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:183
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 용 CAP_SETUID 및 g+w"
 
 #: lib/inspect_ownership.c:199
 #, c-format
