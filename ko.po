@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-22 17:20+0000\n"
+"PO-Revision-Date: 2025-12-27 04:43+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -1260,21 +1260,21 @@ msgstr ""
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** 잘못된 badfuncs->allowed 부분"
 
 #: lib/init.c:822
 #, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
-msgstr ""
+msgstr "*** 유니코드 제외 정규 표현식 읽기 오류: %s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** 잘못된 rpmdeps->ignore 부분; 건너뛰기"
 
 #: lib/init.c:968
 #, c-format
 msgid "*** Invalid filename in the fileinfo list: %s"
-msgstr ""
+msgstr "*** fileinfo 목록에서 유효하지 않은 파일이름: %s"
 
 #: lib/init.c:969
 msgid "*** From this invalid line:"
@@ -1338,6 +1338,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s with ABI compatibility "
 "level %ld on %s revealed ABI differences."
 msgstr ""
+"꾸러미 %s 에서 이전 버전과 새로운 버전의 %s 비교하기는 (%s 에서 ABI 호환성 "
+"수준 %ld 를 갖는) ABI 차이가 드러납니다."
 
 #: lib/inspect_abidiff.c:298
 #, c-format
@@ -1345,6 +1347,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s on %s revealed ABI "
 "differences."
 msgstr ""
+"%s 의 꾸러미 %s 에서 %s 의 이전 버전과 새로운 버전의 비교하기는 ABI 차이가 "
+"드러납니다."
 
 #: lib/inspect_abidiff.c:302
 #, c-format
@@ -1707,7 +1711,7 @@ msgstr ""
 #: lib/inspect_config.c:132
 #, c-format
 msgid "Symlink value for %%config file %s changed in %s on %s."
-msgstr ""
+msgstr "%%config 파일 %s 를 위한 심링크 값은 %s 의 %s 에서 변경되었습니다."
 
 #: lib/inspect_config.c:153
 #, c-format
@@ -1758,25 +1762,25 @@ msgstr "포함: %s"
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%s 의 %s 에서 %s 는 디버깅 기호를 획득했습니다"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "디버깅 기호를 획득했습니다"
 
 #: lib/inspect_debuginfo.c:266
 #, c-format
 msgid "Gained: %s"
-msgstr ""
+msgstr "획득됨: %s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%s 의 %s 인 %s 는 디버깅 기호를 잃었습니다"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "잃어버린 디버깅 기호"
 
 #: lib/inspect_debuginfo.c:292
 #, c-format
@@ -1789,10 +1793,12 @@ msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
 msgstr ""
+"%s 의 %s 에서 %s 는 carries.gosymtab 있지만 .gnu_debugdata 기호를 갖고 있지 "
+"않습니다"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnu_debugdata 와 .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
@@ -1800,10 +1806,12 @@ msgid ""
 "Desktop file %s on %s references executable %s but %s is not executable by "
 "all"
 msgstr ""
+"%s 에서 데스크탑 파일 %s 는 실행 할 수 있는 %s 를 참조하지만 %s 는 "
+"모두에게서 실행 할 수 있는 것은 아닙니다"
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 은 ${ARCH} 에서 비-실행 파일을 참조합니다"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -1812,6 +1820,9 @@ msgid ""
 "executable of that name, however it has a TryExec key so it may be ignored "
 "in case %s does not exist"
 msgstr ""
+"%s 에서 데스크탑 파일 %s 는 실행 할 수 있는 %s 를 참조합니다; 하위꾸러미는 "
+"실행 할 수 있는 해당 이름을 포함하지 않으나, TryExec 키를 갖고 있어서 %s 가 "
+"존재하지 않는 경우에 무시 될 수도 있습니다"
 
 #: lib/inspect_desktop.c:308
 #, c-format
@@ -1819,32 +1830,38 @@ msgid ""
 "Desktop file %s on %s references executable %s but no subpackages contain an "
 "executable of that name"
 msgstr ""
+"%s 에서 데스크탑 파일 %s 는 실행 할 수 있는 %s 를 참조하지만 하위꾸러미는 "
+"실행 할 수 있는 해당 이름을 포함하지 않습니다"
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 은 ${ARCH} 에서 빠진 실행 부분을 참조합니다"
 
 #: lib/inspect_desktop.c:354
 #, c-format
 msgid "Desktop file %s on %s references icon %s but %s is not readable by all"
 msgstr ""
+"%s 에서 데스크탑 파일 %s 는 아이콘 %s 를 참조하지만 %s 는 모두에게서 읽을 수 "
+"있는 것은 아닙니다"
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 는 ${ARCH} 에서 읽을 수 있는 아이콘을 참조합니다"
 
 #: lib/inspect_desktop.c:376
 #, c-format
 msgid "Desktop file %s on %s references icon %s but no subpackages contain %s"
 msgstr ""
+"%s 에서 데스크탑 파일 %s 는 아이콘 %s 를 참조하지만 하위꾸러미는 %s 를 "
+"포함하지 않습니다"
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 는 ${ARCH} 에서 빠진 아이콘을 참조합니다"
 
 #: lib/inspect_desktop.c:452
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 는 ${ARCH} 에서 유효하지 않습니다"
 
 #: lib/inspect_desktop.c:455
 #, c-format
