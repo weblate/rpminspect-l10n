@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-27 04:43+0000\n"
+"PO-Revision-Date: 2025-12-27 17:29+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -999,6 +999,8 @@ msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
+"오류 및 경고를 수정하기 위한 도움을 위한 https://www.freedesktop.org/"
+"software/systemd/man/udev.html 에서 udev 문서에 언급되어 있습니다."
 
 #: lib/abi.c:65
 #, c-format
@@ -1145,6 +1147,8 @@ msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s 의 %s 에서 %s 는 예상되지 않는 방식%04o 를 수행합니다; 예상된 방식 %04o; "
+"보안 팀에 의한 점검이 필요합니다"
 
 #: lib/fileinfo.c:96
 #, c-format
@@ -1152,6 +1156,8 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o, Security Team review may be "
 "required"
 msgstr ""
+"%s 의 %s 에서 %s 는 비보안 방식 %04o 을 수행하며, 보안 팀 검토가 필요 할 "
+"수도 있습니다"
 
 #: lib/fileinfo.c:155
 #, c-format
@@ -1164,6 +1170,8 @@ msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s 의 %s 에서 %s 는 예상치 않은 소유자 '%s' 를 수행합니다; 예상한 소유자 "
+"'%s'; 보안 팀에 의한 검사가 필요합니다"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
 #, c-format
@@ -1246,17 +1254,17 @@ msgstr "*** 알 수 없는 모듈성 정적 문맥 설정 '%s'"
 #: lib/init.c:717
 #, c-format
 msgid "*** unknown specname match setting '%s', defaulting to 'full'"
-msgstr ""
+msgstr "*** 알 수 없는 사양이름 일치 설정 '%s', 기본값은 'full' 입니다"
 
 #: lib/init.c:732
 #, c-format
 msgid "*** unknown specname primary setting '%s', defaulting to 'name'"
-msgstr ""
+msgstr "*** 알 수 없는 사양이름 우선 설정 '%s' 이고, 기본값은 'name' 입니다"
 
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
-msgstr ""
+msgstr "*** 잘못된 annocheck failure_reporting_level: %s, 기본값은 %s 입니다"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
@@ -2092,7 +2100,7 @@ msgstr ""
 #: lib/inspect_files.c:113
 #, c-format
 msgid "invalid spec line: %s"
-msgstr ""
+msgstr "잘못된 사양 행: %s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
@@ -2199,7 +2207,7 @@ msgstr ""
 
 #: lib/inspect_kmidiff.c:263
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 에서 KMI 비호환 변경"
 
 #: lib/inspect_kmidiff.c:265
 #, c-format
@@ -2209,7 +2217,7 @@ msgstr ""
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "kmidiff 예기치 않은 종료"
 
 #: lib/inspect_kmidiff.c:274
 #, c-format
