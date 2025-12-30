@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-27 17:29+0000\n"
+"PO-Revision-Date: 2025-12-31 17:58+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -2263,7 +2263,7 @@ msgstr "커널 모듈 %s 는 의존성 '%s'를 제거합니다 (%s 에 존재하
 
 #: lib/inspect_kmod.c:229
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 커널 모듈 의존성"
 
 #: lib/inspect_kmod.c:243
 #, c-format
@@ -2277,7 +2277,7 @@ msgstr "${FILE} 커널 모듈 매개변수"
 #: lib/inspect_license.c:47
 #, c-format
 msgid "*** parse error in license database %s"
-msgstr ""
+msgstr "*** 저작권 데이타베이스 %s 에서 구문 분석 오류"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
@@ -2331,7 +2331,7 @@ msgstr "${ARCH} 에서 누락된 하위 꾸러미 ${FILE}"
 #: lib/inspect_lostpayload.c:82
 #, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr ""
+msgstr "%s 에서 꾸러미 %s 는 계속 비워 있습니다 (유효한 자료 없음)"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
@@ -2355,32 +2355,36 @@ msgstr "${FILE} 는 ${ARCH} 에서 휴대용이 아닙니다"
 msgid ""
 "%s contains symbols [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s 는 %s 에서 기호 [%s] 를 포함합니다; 이는 컴파일러 버전 간 이동이 쉽지 "
+"않습니다"
 
 #: lib/inspect_lto.c:168
 #, c-format
 msgid ""
 "%s contains symbol [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s 는 %s 에서 기호 [%s] 를 포함합니다; 이는 컴파일러 버전 간 이동이 쉽지 "
+"않습니다"
 
 #: lib/inspect_manpage.c:52
 #, c-format
 msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
-msgstr ""
+msgstr "구문 분석 오류 %s:%d:%d: %s: %s: %s\n"
 
 #: lib/inspect_manpage.c:81
 #, c-format
 msgid "*** unable to compile man page path regular expression: %s"
-msgstr ""
+msgstr "man 부분 경로 정규 표현식을 컴파일 할 수 없음: %s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
 msgid "Unable to open man page %s\n"
-msgstr ""
+msgstr "man 부분을 열 수 없음 %s\n"
 
 #: lib/inspect_manpage.c:187
 #, c-format
 msgid "Man page %s does not end in %s\n"
-msgstr ""
+msgstr "Man 부분 %s 는 %s 로 끝나지 않습니다\n"
 
 #: lib/inspect_manpage.c:195
 #, c-format
@@ -2604,7 +2608,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:124
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 에 대한 잘못된 소유자"
 
 #: lib/inspect_ownership.c:162
 #, c-format
@@ -2935,17 +2939,17 @@ msgstr "지정 파일"
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "원천 꾸러미 %s 에서 '%s' 를 획득함"
 
 #: lib/inspect_rpmdeps.c:889
 #, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%s 에서 하위꾸러미 %s 로 '%s' 를 획득함"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "원천 꾸러미 %s 에서 '%s' 를 유지함"
 
 #: lib/inspect_rpmdeps.c:899
 #, c-format
