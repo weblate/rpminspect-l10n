@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-12-31 17:58+0000\n"
+"PO-Revision-Date: 2026-01-11 02:58+0000\n"
 "Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
@@ -2010,17 +2010,17 @@ msgstr ""
 #: lib/inspect_elf.c:527
 #, c-format
 msgid "Object has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "객체는 실행 가능한 구조가 있습니다 (GNU-stack note = X): %s (%s 에서)"
 
 #: lib/inspect_elf.c:531
 #, c-format
 msgid "Stack is still executable: %s on %s"
-msgstr ""
+msgstr "구조는 아직 실행 할 수 있습니다: %s ( %s 에서)"
 
 #: lib/inspect_elf.c:533
 #, c-format
 msgid "Stack is executable: %s on %s"
-msgstr ""
+msgstr "구조는 실행 할 수 있습니다: %s (%s 에서)"
 
 #: lib/inspect_elf.c:564
 #, c-format
