@@ -2630,7 +2630,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 의 ${FILE} 용 CAP_SETUID 및 g+w"
 
 #: lib/inspect_ownership.c:179
 #, c-format
