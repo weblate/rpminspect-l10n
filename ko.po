@@ -2994,7 +2994,7 @@ msgstr ""
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%s 에서 하위꾸러미 %s 로 '%s' 를 획득함"
 
 #: lib/inspect_runpath.c:136
 #, c-format
