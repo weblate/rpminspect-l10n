@@ -2601,7 +2601,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 에 대한 잘못된 소유자"
 
 #: lib/inspect_ownership.c:92
 #, c-format
