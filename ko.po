@@ -2423,7 +2423,7 @@ msgstr ""
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr ""
+msgstr "${ARCH} 에서 man 부분 ${FILE} 은 잘못된 경로를 갖고 있습니다"
 
 #: lib/inspect_manpage.c:327
 #, c-format
