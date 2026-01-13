@@ -2965,7 +2965,7 @@ msgstr "원천 꾸러미 %s 에서 '%s' 를 유지함"
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%s 에서 하위꾸러미 %s 로 '%s' 를 획득함"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
