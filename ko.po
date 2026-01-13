@@ -2464,7 +2464,7 @@ msgstr ""
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr ""
+msgstr "꾸러미 설명은 비-전문적인 언어를 포함합니다 %s:"
 
 #: lib/inspect_metadata.c:93
 #, c-format
