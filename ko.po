@@ -1947,6 +1947,8 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
+"%s 의 %s 에서 %s 용 %%config 파일 변경 (%%config 를 %smarked 로 -> %%config "
+"를 %smarked 로)\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
