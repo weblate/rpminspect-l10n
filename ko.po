@@ -1376,6 +1376,8 @@ msgstr ""
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
 msgstr ""
+"%s 의 꾸러미 %s 에서 %s 의 이전 버전과 새로운 버전의 비교하기는 ABI 차이가 "
+"드러납니다."
 
 #: lib/inspect_abidiff.c:309
 #, c-format
