@@ -2999,7 +2999,7 @@ msgstr "%s 에서 하위꾸러미 %s 로 '%s' 를 획득함"
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
-msgstr ""
+msgstr "*** 제품 출시 정규 표현식을 컴파일 할 수 없음: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
