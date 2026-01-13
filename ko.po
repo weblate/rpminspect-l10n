@@ -2414,7 +2414,7 @@ msgstr ""
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 빈 ${FILE}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
