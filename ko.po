@@ -2837,7 +2837,7 @@ msgstr ""
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 는 ${ARCH} 에서 휴대용이 아닙니다"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
