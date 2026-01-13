@@ -2151,7 +2151,7 @@ msgstr "%s 가 %lld%% 으로 커졌습니다 (%s 에서)"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 크기가 ${ARCH} 에서 커졌습니다"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
