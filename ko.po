@@ -2473,7 +2473,7 @@ msgstr ""
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "설명은 ${ARCH}에서 전문적이지 않은 단어를 포함합니다"
 
 #: lib/inspect_metadata.c:109
 #, c-format
