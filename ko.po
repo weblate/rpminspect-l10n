@@ -2147,7 +2147,7 @@ msgstr "${FILE} 크기가 ${ARCH} 에서 커졌습니다"
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr ""
+msgstr "%s 가 %lld%% 으로 커졌습니다 (%s 에서)"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
