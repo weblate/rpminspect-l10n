@@ -1981,7 +1981,7 @@ msgstr ""
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "객체는 실행 가능한 구조가 있습니다 (GNU-stack note = X): %s (%s 에서)"
 
 #: lib/inspect_elf.c:435
 #, c-format
