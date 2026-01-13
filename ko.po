@@ -2610,7 +2610,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 ${FILE} 에 대한 잘못된 그룹"
 
 #: lib/inspect_ownership.c:119
 #, c-format
