@@ -1186,7 +1186,7 @@ msgstr ""
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
+msgstr "%s 에서 %s 인 %s 는 예상된 소유자 '%s' 를 수행합니다"
 
 #: lib/fileinfo.c:262
 #, c-format
