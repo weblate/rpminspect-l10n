@@ -9,8 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
 "PO-Revision-Date: 2026-01-14 19:58+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
 "Language: ko\n"
@@ -717,8 +716,8 @@ msgid ""
 "A new architecture has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
-"새로운 하위꾸러미가 제작 후에 나타났습니다.  이는 컴퓨팅 분야의 발전을 "
-"표시하는 것일 수도 있습니다."
+"새로운 구조가 제작 후에 나타났습니다.  이는 컴퓨팅 분야의 발전을 표시하는 "
+"것일 수도 있습니다."
 
 #: include/results.h:576
 msgid ""
@@ -1186,7 +1185,7 @@ msgstr ""
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr "%s 에서 %s 인 %s 는 예상된 소유자 '%s' 를 수행합니다"
+msgstr "%s 에서 %s 인 %s 는 예상된 그룹 '%s' 를 수행합니다"
 
 #: lib/fileinfo.c:262
 #, c-format
@@ -1194,8 +1193,8 @@ msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
-"%s 의 %s 에서 %s 는 예상치 않은 소유자 '%s' 를 수행합니다; 예상한 소유자 "
-"'%s'; 보안 팀에 의한 검사가 필요합니다"
+"%s 의 %s 에서 %s 는 그룹의 예상치 않은 '%s' 를 수행합니다; 예상한 그룹 '%s'; "
+"보안 팀에 의한 검사가 필요합니다"
 
 #: lib/init.c:226
 #, c-format
@@ -1369,15 +1368,13 @@ msgid ""
 "Comparing from %s to %s in package %s with ABI compatibility level %ld on %s "
 "revealed ABI differences."
 msgstr ""
-"꾸러미 %s 에서 이전 버전과 새로운 버전의 %s 비교하기는 (%s 에서 ABI 호환성 "
-"수준 %ld 를 갖는) ABI 차이가 드러납니다."
+"꾸러미 %s 에서 %s 부터 %s 까지 비교하기는 %s 에서 ABI 호환성 수준 %ld 를 "
+"갖는 ABI 차이가 드러납니다."
 
 #: lib/inspect_abidiff.c:304
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
-msgstr ""
-"%s 의 꾸러미 %s 에서 %s 의 이전 버전과 새로운 버전의 비교하기는 ABI 차이가 "
-"드러납니다."
+msgstr "%s 의 꾸러미 %s 에서 %s 부터 %s 까지의 비교하기는 ABI 차이가 드러납니다."
 
 #: lib/inspect_abidiff.c:309
 #, c-format
@@ -1947,8 +1944,8 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
-"%s 의 %s 에서 %s 용 %%config 파일 변경 (%%config 를 %smarked 로 -> %%config "
-"를 %smarked 로)\n"
+"%s 의 %s 에서 %s 용 %%doc 파일 변경 (%%doc 를 %smarked 로 -> %%doc 를 "
+"%smarked 로)\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
@@ -1981,12 +1978,12 @@ msgstr ""
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
-msgstr "객체는 실행 가능한 구조가 있습니다 (GNU-stack note = X): %s (%s 에서)"
+msgstr "객체는 아직 실행 가능한 구조가 있습니다 (no GNU-stack note): %s (%s 에서)"
 
 #: lib/inspect_elf.c:435
 #, c-format
 msgid "Object has executable stack (no GNU-stack note): %s on %s"
-msgstr "객체는 실행 가능한 구조가 있습니다 (GNU-stack note = X): %s (%s 에서)"
+msgstr "객체는 실행 가능한 구조가 있습니다 (no GNU-stack note): %s (%s 에서)"
 
 #: lib/inspect_elf.c:438
 #, c-format
@@ -2016,7 +2013,7 @@ msgstr "${ARCH} 의 ${FILE} 에서 execstack"
 #: lib/inspect_elf.c:525
 #, c-format
 msgid "Object still has executable stack (GNU-stack note = X): %s on %s"
-msgstr "객체는 실행 가능한 구조가 있습니다 (GNU-stack note = X): %s (%s 에서)"
+msgstr "객체는 여전히 실행 가능한 구조가 있습니다 (GNU-stack note = X): %s (%s 에서)"
 
 #: lib/inspect_elf.c:527
 #, c-format
@@ -2147,11 +2144,11 @@ msgstr "${FILE} 크기가 ${ARCH} 에서 커졌습니다"
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr "%s 가 %lld%% 으로 커졌습니다 (%s 에서)"
+msgstr "%s 가 %lld%% 으로 줄어들었습니다 (%s 에서)"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr "${FILE} 크기가 ${ARCH} 에서 커졌습니다"
+msgstr "${FILE} 크기가 ${ARCH} 에서 줄어들었습니다"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2414,7 +2411,7 @@ msgstr ""
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr "${ARCH} 에서 빈 ${FILE}"
+msgstr "${ARCH} 에서 빈 man 부분 ${FILE}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
@@ -2423,7 +2420,7 @@ msgstr ""
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr "${ARCH} 에서 man 부분 ${FILE} 은 잘못된 경로를 갖고 있습니다"
+msgstr "${ARCH} 에서 man 부분 ${FILE} 은 오류를 갖고 있습니다"
 
 #: lib/inspect_manpage.c:327
 #, c-format
@@ -2464,7 +2461,7 @@ msgstr ""
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr "꾸러미 설명은 비-전문적인 언어를 포함합니다 %s:"
+msgstr "꾸러미 요약은 %s 애서 비-전문적인 언어를 포함합니다"
 
 #: lib/inspect_metadata.c:93
 #, c-format
@@ -2473,7 +2470,7 @@ msgstr ""
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr "설명은 ${ARCH}에서 전문적이지 않은 단어를 포함합니다"
+msgstr "요약은 ${ARCH} 에서 비-전문적이지 용어를 포함합니다"
 
 #: lib/inspect_metadata.c:109
 #, c-format
@@ -2601,7 +2598,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr "${ARCH} 에서 ${FILE} 에 대한 잘못된 소유자"
+msgstr "${ARCH} 에서 ${FILE} 에 대한 금지된 소유자"
 
 #: lib/inspect_ownership.c:92
 #, c-format
@@ -2610,7 +2607,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr "${ARCH} 에서 ${FILE} 에 대한 잘못된 그룹"
+msgstr "${ARCH} 에서 ${FILE} 에 대한 금지된 그룹"
 
 #: lib/inspect_ownership.c:119
 #, c-format
@@ -2630,7 +2627,7 @@ msgstr ""
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr "${ARCH} 의 ${FILE} 용 CAP_SETUID 및 g+w"
+msgstr "${ARCH} 의 ${FILE} 용 CAP_SETUID 및 o+x"
 
 #: lib/inspect_ownership.c:179
 #, c-format
@@ -2837,7 +2834,7 @@ msgstr ""
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr "${FILE} 는 ${ARCH} 에서 휴대용이 아닙니다"
+msgstr "${FILE} 는 ${ARCH} 에서 전체-쓰기가 가능합니다"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
@@ -2965,7 +2962,7 @@ msgstr "원천 꾸러미 %s 에서 '%s' 를 유지함"
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr "%s 에서 하위꾸러미 %s 로 '%s' 를 획득함"
+msgstr "%s 의 하위꾸러미 %s 에서 '%s' 를 유지함"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
@@ -2994,12 +2991,12 @@ msgstr ""
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr "%s 에서 하위꾸러미 %s 로 '%s' 를 획득함"
+msgstr "%s 의 하위꾸러미 %s 에서 '%s' 를 손실함"
 
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
-msgstr "*** 제품 출시 정규 표현식을 컴파일 할 수 없음: %s"
+msgstr "*** $ORIGIN root prefix 정규 표현식을 컴파일 할 수 없음: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
@@ -3021,7 +3018,7 @@ msgstr ""
 
 #: lib/inspect_shellsyntax.c:125
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr "${ARCH}에서 잘못된 디렉토리 ${FILE}"
+msgstr "${ARCH} 에서 잘못된 쉘 스크립트 ${FILE}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
