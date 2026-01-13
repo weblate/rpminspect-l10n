@@ -1194,6 +1194,8 @@ msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s 의 %s 에서 %s 는 예상치 않은 소유자 '%s' 를 수행합니다; 예상한 소유자 "
+"'%s'; 보안 팀에 의한 검사가 필요합니다"
 
 #: lib/init.c:226
 #, c-format
