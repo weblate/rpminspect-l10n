@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-05-11 05:30+0000\n"
+"PO-Revision-Date: 2026-01-18 08:58+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11.3\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -1731,7 +1731,7 @@ msgstr ""
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "შეიცავს: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
@@ -3168,7 +3168,7 @@ msgstr ""
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
-msgstr ""
+msgstr "clamav-ის ვერსიის ინფორმაცია"
 
 #: lib/inspect_virus.c:140
 #, c-format
@@ -3183,7 +3183,7 @@ msgstr ""
 #: lib/inspect_virus.c:169
 #, c-format
 msgid "%s version %u (%s)"
-msgstr ""
+msgstr "%s-ის ვერსია %u (%s)"
 
 #: lib/inspect_virus.c:201
 msgid "virus or malware in ${FILE} on ${ARCH}"
@@ -3444,7 +3444,7 @@ msgstr ""
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
-msgstr ""
+msgstr "გაუქმებადი არაა"
 
 #: lib/strfuncs.c:310
 msgid "Anyone"
