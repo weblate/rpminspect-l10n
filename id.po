@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-02-07 13:58+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://translate.fedoraproject.org/projects/"
+"rpminspect/main/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -23,12 +26,19 @@ msgid ""
 "checks to see if the License tag contains any unprofessional words as "
 "defined in the configuration file."
 msgstr ""
+"Pastikan string yang tercantum dalam tag License metadata RPM menggambarkan "
+"lisensi perangkat lunak yang diizinkan sesuai dengan definisi dalam basis "
+"data lisensi. Selain itu, periksa apakah tag License mengandung kata-kata "
+"yang tidak pantas sesuai dengan definisi dalam berkas konfigurasi."
 
 #: include/inspect.h:1347
 msgid ""
 "Check all binary RPMs in the build for any empty payloads. When comparing "
 "two builds, report new packages in the after build with empty payloads."
 msgstr ""
+"Periksa semua paket RPM biner dalam proses build untuk memastikan tidak ada "
+"payload kosong. Saat membandingkan dua proses build, laporkan paket baru "
+"dalam proses build setelahnya yang memiliki payload kosong."
 
 #: include/inspect.h:1353
 msgid ""
@@ -36,6 +46,9 @@ msgid ""
 "Packages that lost payload data from the before build to the after build are "
 "reported."
 msgstr ""
+"Periksa semua paket RPM biner pada build sebelum dan sesudah untuk "
+"memastikan tidak ada payload kosong. Paket yang kehilangan data payload dari "
+"build sebelum ke build sesudah akan dilaporkan."
 
 #: include/inspect.h:1359
 msgid ""
@@ -47,6 +60,15 @@ msgid ""
 "before build specified, check for differences between the before and after "
 "build values of the previous RPM header values and report them."
 msgstr ""
+"Lakukan beberapa pemeriksaan header RPM. Pertama, pastikan bahwa Vendor "
+"berisi string yang diharapkan sesuai dengan yang terdefinisi dalam berkas "
+"konfigurasi. Kedua, pastikan bahwa host build berada di subdomain yang "
+"diharapkan sesuai dengan yang terdefinisi dalam berkas konfigurasi. Ketiga, "
+"periksa string Summary untuk kata-kata yang tidak profesional. Keempat, "
+"periksa Description untuk kata-kata yang tidak profesional. Terakhir, jika "
+"ada sebelum build yang ditentukan, periksa perbedaan antara nilai sebelum "
+"dan setelah build dari nilai header RPM sebelumnya dan laporkan perbedaan "
+"tersebut."
 
 #: include/inspect.h:1365
 msgid ""
@@ -54,10 +76,16 @@ msgid ""
 "man page is compressed. Second, check that each man page contains valid "
 "content. Lastly, check that each man page is installed to the correct path."
 msgstr ""
+"Lakukan beberapa pemeriksaan pada halaman manual (man pages) dalam paket "
+"RPM. Pertama, pastikan setiap halaman manual telah dikompres. Kedua, "
+"pastikan setiap halaman manual berisi konten yang valid. Terakhir, pastikan "
+"setiap halaman manual diinstal pada jalur yang benar."
 
 #: include/inspect.h:1371
 msgid "Check that XML files included in the RPM payload are well-formed."
 msgstr ""
+"Periksa apakah berkas XML yang disertakan dalam payload RPM memiliki format "
+"yang baik (well-formed)."
 
 #: include/inspect.h:1377
 msgid ""
@@ -67,28 +95,41 @@ msgid ""
 "after build did not lose a PT_GNU_RELRO segment. When comparing builds and "
 "there is a list of forbidden library functions, make sure nothing uses them."
 msgstr ""
+"Lakukan beberapa pemeriksaan pada berkas ELF. Pertama, periksa bahwa objek "
+"ELF tidak mengandung stack yang dapat dieksekusi. Kedua, periksa bahwa objek "
+"ELF tidak mengandung relokasi teks. Saat membandingkan build, periksa bahwa "
+"objek ELF pada build sesudahnya tidak kehilangan segmen PT_GNU_RELRO. Saat "
+"membandingkan build dan terdapat daftar fungsi pustaka yang dilarang, "
+"pastikan tidak ada yang menggunakannya."
 
 #: include/inspect.h:1383
 msgid ""
 "Perform syntax and file reference checks on *.desktop files. Syntax errors "
 "and invalid file references are reported as errors."
 msgstr ""
+"Lakukan pemeriksaan sintaksis dan referensi berkas pada berkas *.desktop. "
+"Kesalahan sintaksis dan referensi berkas yang tidak valid dilaporkan sebagai "
+"galat."
 
 #: include/inspect.h:1389
 msgid ""
 "Check that the 'Release' tag in the RPM spec file includes the %{?dist} "
 "directive."
 msgstr ""
+"Periksa apakah tag 'Release' dalam berkas spek RPM menyertakan direktif %"
+"{?dist}."
 
 #: include/inspect.h:1395
 msgid "Ensure the spec file name conforms to the NAME.spec naming format."
-msgstr ""
+msgstr "Pastikan nama berkas spek sesuai dengan format penamaan NAME.spec."
 
 #: include/inspect.h:1403
 msgid ""
 "Ensure compliance with modularity build and packaging policies (only valid "
 "for module builds, no-op otherwise)."
 msgstr ""
+"Pastikan kepatuhan terhadap kebijakan build dan pengemasan modular (hanya "
+"berlaku untuk build modul, tidak ada tindakan jika sebaliknya)."
 
 #: include/inspect.h:1411
 msgid ""
@@ -97,6 +138,10 @@ msgid ""
 "exceeded.  The bytecode version is vendor specific to releases and defined "
 "in the configuration file."
 msgstr ""
+"Periksa versi bytecode Java minimum yang diperlukan dalam berkas class, "
+"laporkan perubahan versi bytecode antar build, dan laporkan jika versi "
+"bytecode melampaui batas. Versi bytecode bersifat spesifik vendor untuk "
+"rilis tertentu dan ditentukan dalam berkas konfigurasi."
 
 #: include/inspect.h:1417
 msgid ""
@@ -109,6 +154,15 @@ msgid ""
 "C and C++ header files are preprocessed and compared using diff(1).  Any "
 "changes with diff output are included in the results."
 msgstr ""
+"Laporkan berkas yang berubah dari build sebelum ke build sesudah. Perubahan "
+"berkas tertentu akan memicu peringatan tambahan jika masalahnya lebih kritis "
+"daripada sekadar pelaporan perubahan (misalnya, dugaan dampak keamanan). "
+"Setiap berkas terkompresi gzip, bzip2, atau xz hanya akan dibandingkan "
+"kontennya yang tidak terkompresi, yang memungkinkan perubahan pada tingkat "
+"kompresi yang digunakan. Berkas katalog pesan (.mo) dibongkar dan "
+"dibandingkan menggunakan diff(1). Berkas header C dan C++ publik diproses "
+"terlebih dahulu dan dibandingkan menggunakan diff(1). Setiap perubahan "
+"dengan output diff disertakan dalam hasil."
 
 #: include/inspect.h:1423
 msgid ""
@@ -118,6 +172,11 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Laporkan berkas yang telah berpindah jalur instalasi atau antar sub-paket "
+"antar build. Berkas yang dipindahkan dengan awalan jalur keamanan "
+"menghasilkan pelaporan khusus jika tinjauan keamanan diperlukan. Paket yang "
+"di-rebase melaporkan temuan ini pada tingkat INFO, sementara paket yang "
+"tidak di-rebase melaporkannya pada tingkat VERIFY atau lebih tinggi."
 
 #: include/inspect.h:1429
 msgid ""
@@ -129,6 +188,14 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Laporkan berkas yang dihapus dari build sebelum ke build sesudah. Pustaka "
+"bersama (shared libraries) mendapatkan output pelaporan tambahan karena "
+"mungkin merupakan penghapusan dependensi yang tidak terduga. Berkas yang "
+"dihapus dengan awalan jalur keamanan menghasilkan pelaporan khusus jika "
+"tinjauan keamanan diperlukan. RPM sumber dan berkas debuginfo diabaikan oleh "
+"inspeksi ini. Paket yang di-rebase melaporkan temuan ini pada tingkat INFO, "
+"sementara paket yang tidak di-rebase melaporkannya pada tingkat VERIFY atau "
+"lebih tinggi."
 
 #: include/inspect.h:1435
 msgid ""
@@ -140,6 +207,14 @@ msgid ""
 "Rebased packages report these findings at the INFO level while non-rebased "
 "packages report them at the VERIFY level or higher."
 msgstr ""
+"Laporkan berkas yang ditambahkan dari build sebelum ke build sesudah. Berkas "
+"Debuginfo diabaikan sebagaimana berkas yang cocok dengan pola yang "
+"ditentukan dalam berkas konfigurasi. Berkas yang ditambahkan ke jalur "
+"keamanan menghasilkan pelaporan khusus jika tinjauan keamanan diperlukan. "
+"Berkas setuid dan setgid baru memicu peringatan keamanan kecuali berkas "
+"tersebut ada dalam daftar fileinfo. Paket yang di-rebase melaporkan temuan "
+"ini pada tingkat INFO, sementara paket yang tidak di-rebase melaporkannya "
+"pada tingkat VERIFY atau lebih tinggi."
 
 #: include/inspect.h:1441
 msgid ""
@@ -148,6 +223,11 @@ msgid ""
 "on the rebaseable list, the change is reported as informational. Otherwise "
 "the change is reported as a rebase of the package and requires inspection."
 msgstr ""
+"Laporkan arsip Sumber (Source) yang ditentukan dalam berkas spek RPM yang "
+"kontennya berubah antara build sebelum dan sesudah. Jika arsip sumber "
+"berubah dan paket berada dalam daftar yang dapat di-rebase, perubahan "
+"tersebut dilaporkan sebagai informasi. Jika tidak, perubahan tersebut "
+"dilaporkan sebagai rebase paket dan memerlukan inspeksi."
 
 #: include/inspect.h:1447
 msgid ""
@@ -155,6 +235,10 @@ msgid ""
 "make sure executables are owned by the correct user and group. If a before "
 "and after build have been specified, also report ownership changes."
 msgstr ""
+"Laporkan berkas dan direktori yang dimiliki oleh pengguna dan grup yang "
+"tidak terduga. Pastikan berkas eksekutabel dimiliki oleh pengguna dan grup "
+"yang benar. Jika build sebelum dan sesudah telah ditentukan, laporkan juga "
+"perubahan kepemilikan."
 
 #: include/inspect.h:1453
 msgid ""
@@ -165,6 +249,13 @@ msgid ""
 "perform the previous check but also report if a previously bad script is now "
 "passing the syntax check."
 msgstr ""
+"Untuk semua skrip shell dalam build, lakukan pemeriksaan sintaksis "
+"menggunakan shell yang ditentukan dalam baris #! (shell juga harus terdaftar "
+"dalam bagian shell di data konfigurasi). Jika pemeriksaan sintaksis "
+"mengembalikan nilai bukan nol, laporkan kepada pengguna dan kembalikan "
+"gabungan stdout dan stderr. Jika membandingkan dua build, lakukan "
+"pemeriksaan sebelumnya tetapi laporkan juga jika skrip yang sebelumnya buruk "
+"sekarang lolos pemeriksaan sintaksis."
 
 #: include/inspect.h:1459
 msgid ""
@@ -174,12 +265,19 @@ msgid ""
 "build.  If no annocheck tests are defined in the configuration file, this "
 "inspection is skipped."
 msgstr ""
+"Lakukan pengujian annocheck yang ditentukan dalam berkas konfigurasi pada "
+"semua berkas ELF dalam build. Jika hanya satu build yang ditentukan, hanya "
+"analisis yang akan dilakukan. Jika dua build ditentukan, hasil pengujian "
+"antara build sebelum dan sesudah akan dibandingkan. Jika tidak ada pengujian "
+"annocheck yang ditentukan dalam berkas konfigurasi, inspeksi ini dilewati."
 
 #: include/inspect.h:1465
 msgid ""
 "Compare DT_NEEDED entries in dynamic ELF executables and shared libraries "
 "between the before and after build and report changes."
 msgstr ""
+"Bandingkan entri DT_NEEDED dalam eksekutabel ELF dinamis dan pustaka bersama "
+"antara build sebelum dan sesudah, lalu laporkan perubahannya."
 
 #: include/inspect.h:1471
 msgid ""
@@ -187,6 +285,10 @@ msgid ""
 "non-empty files became empty, report those as results needing verification.  "
 "Report file change percentages as info-only."
 msgstr ""
+"Laporkan perubahan ukuran berkas antar build. Jika berkas kosong menjadi "
+"tidak kosong atau berkas tidak kosong menjadi kosong, laporkan hal tersebut "
+"sebagai hasil yang memerlukan verifikasi. Laporkan persentase perubahan "
+"berkas hanya sebagai informasi (info-only)."
 
 #: include/inspect.h:1477
 msgid ""
@@ -194,6 +296,10 @@ msgid ""
 "list for the product release specified or determined.  Any setuid or setgid "
 "changes will raise a message requiring Security Team review."
 msgstr ""
+"Laporkan perubahan mode stat(2) antar build. Memeriksa terhadap daftar "
+"fileinfo untuk rilis produk yang ditentukan atau ditetapkan. Setiap "
+"perubahan setuid atau setgid akan memunculkan pesan yang memerlukan tinjauan "
+"Tim Keamanan."
 
 #: include/inspect.h:1485
 msgid ""
@@ -202,6 +308,10 @@ msgid ""
 "capabilities changes not listed will raise a message requiring Security Team "
 "review."
 msgstr ""
+"Laporkan perubahan capabilities(7) antar build. Memeriksa terhadap daftar "
+"kapabilitas untuk rilis produk yang ditentukan atau ditetapkan. Setiap "
+"perubahan kapabilitas yang tidak terdaftar akan memunculkan pesan yang "
+"memerlukan tinjauan Tim Keamanan."
 
 #: include/inspect.h:1494
 msgid ""
@@ -209,6 +319,9 @@ msgid ""
 "between builds.  This inspection is intended as an information gathering "
 "tool to gather kernel module differences between two builds."
 msgstr ""
+"Laporkan perbedaan parameter modul kernel, dependensi, ID PCI, atau simbol "
+"antar build. Inspeksi ini ditujukan sebagai alat pengumpulan informasi untuk "
+"menghimpun perbedaan modul kernel antara dua build."
 
 #: include/inspect.h:1501
 msgid ""
@@ -218,12 +331,19 @@ msgid ""
 "architectures as provided in the before build and not seeing them in the "
 "after build."
 msgstr ""
+"Laporkan arsitektur RPM yang muncul dan menghilang antara build sebelum dan "
+"sesudah. Inspeksi ini tidak melaporkan hilangnya paket noarch. Tujuan dari "
+"inspeksi ini adalah untuk melaporkan hilangnya arsitektur mesin target "
+"sebagaimana disediakan dalam build sebelum dan tidak terlihat dalam build "
+"sesudah."
 
 #: include/inspect.h:1507
 msgid ""
 "Report RPM subpackages that appear and disappear between the before and "
 "after builds."
 msgstr ""
+"Laporkan sub-paket RPM yang muncul dan menghilang antara build sebelum dan "
+"sesudah."
 
 #: include/inspect.h:1513
 #, c-format
@@ -232,6 +352,9 @@ msgid ""
 "Reports any other differences in the existing changelog between builds and "
 "that the new entry contains new text entries."
 msgstr ""
+"Pastikan paket berisi entri dalam %changelog untuk versi yang di-build. "
+"Melaporkan perbedaan lain dalam changelog yang ada antar build dan "
+"memastikan bahwa entri baru berisi entri teks baru."
 
 #: include/inspect.h:1519
 msgid ""
@@ -240,6 +363,10 @@ msgid ""
 "path migrations.  The main examples are /bin migrating to /usr/bin and /sbin "
 "migrating to /usr/sbin."
 msgstr ""
+"Laporkan berkas yang dikemas dalam direktori yang tidak lagi digunakan oleh "
+"produk. Biasanya ini berarti paket belum diperbarui untuk menyesuaikan "
+"dengan migrasi jalur. Contoh utamanya adalah migrasi /bin ke /usr/bin dan "
+"migrasi /sbin ke /usr/sbin."
 
 #: include/inspect.h:1525
 msgid ""
@@ -249,6 +376,12 @@ msgid ""
 "ELF objects shipped in packages.  This inspection looks for LTO bytecode in "
 "ELF relocatable objects and reports if any is present."
 msgstr ""
+"Link Time Optimization (LTO) menghasilkan eksekutabel dan pustaka ELF "
+"bersama yang lebih kecil dan lebih cepat. Bytecode LTO tidak stabil dari "
+"satu rilis gcc ke rilis berikutnya. Oleh karena itu, bytecode LTO tidak "
+"boleh ada dalam objek ELF .a dan .o yang dikirimkan dalam paket. Inspeksi "
+"ini mencari bytecode LTO dalam objek ELF yang dapat direlokasi dan "
+"melaporkan jika ada yang ditemukan."
 
 #: include/inspect.h:1531
 msgid ""
@@ -256,18 +389,26 @@ msgid ""
 "ensures absolute and relative symlinks are valid.  It also checks for any "
 "symlink usage that will cause problems for RPM."
 msgstr ""
+"Tautan simbolik (symbolic links) harus dapat diselesaikan pada sistem yang "
+"terinstal. Inspeksi ini memastikan symlink absolut dan relatif valid. "
+"Inspeksi ini juga memeriksa penggunaan symlink apa pun yang akan menyebabkan "
+"masalah bagi RPM."
 
 #: include/inspect.h:1537
 #, c-format
 msgid ""
 "Check %files sections in the spec file for any forbidden path references."
 msgstr ""
+"Periksa bagian %files dalam berkas spek untuk setiap referensi jalur yang "
+"dilarang."
 
 #: include/inspect.h:1543
 msgid ""
 "Compare MIME types of files between builds and report any changes for "
 "verification."
 msgstr ""
+"Bandingkan tipe MIME berkas antar build dan laporkan setiap perubahan untuk "
+"verifikasi."
 
 #: include/inspect.h:1549
 msgid ""
@@ -280,6 +421,14 @@ msgid ""
 "that, turn off the abidiff inspection or add the package name to the "
 "rebaseable list."
 msgstr ""
+"Saat membandingkan dua build atau dua paket, bandingkan berkas ELF "
+"menggunakan abidiff(1) dari proyek libabigail. Perbedaan akan dilaporkan. "
+"Jika paket tersebut merupakan rebase dan tidak ada dalam daftar yang dapat "
+"di-rebase serta inspeksi rebase diaktifkan, perbedaan ABI dilaporkan sebagai "
+"kegagalan. Asumsinya di sini adalah rpminspect membandingkan build untuk "
+"tujuan pemeliharaan dan Anda tidak ingin memperkenalkan perubahan ABI apa "
+"pun bagi pengguna. Jika Anda tidak mempedulikan hal itu, matikan inspeksi "
+"abidiff atau tambahkan nama paket ke daftar yang dapat di-rebase."
 
 #: include/inspect.h:1555
 msgid ""
@@ -290,6 +439,12 @@ msgid ""
 "rebase, an incompatible change reported by kmidiff is reported for "
 "verification."
 msgstr ""
+"kmidiff membandingkan Interface Modul Kernel (KMI) biner dari dua pohon "
+"kernel Linux. KMI biner adalah antarmuka yang diekspos oleh kernel Linux ke "
+"modul-modulnya. Pohon yang kita minati di sini adalah hasil dari build pohon "
+"sumber kernel Linux. Jika build yang dibandingkan tidak dianggap sebagai "
+"rebase, perubahan yang tidak kompatibel yang dilaporkan oleh kmidiff akan "
+"dilaporkan untuk verifikasi."
 
 #: include/inspect.h:1561
 #, c-format
@@ -299,6 +454,11 @@ msgid ""
 "is reported at the INFO level.  Content and location changes are reporting "
 "at the VERIFY level unless the comparison is between rebased packages."
 msgstr ""
+"Periksa dan laporkan perbedaan dalam berkas konfigurasi yang ditandai dengan "
+"%config dalam berkas spek. Jika perubahan hanya berupa spasi kosong atau "
+"pemformatan, hasilnya dilaporkan pada tingkat INFO. Perubahan konten dan "
+"lokasi dilaporkan pada tingkat VERIFY kecuali perbandingannya adalah antar "
+"paket yang di-rebase."
 
 #: include/inspect.h:1567
 #, c-format
@@ -306,6 +466,8 @@ msgid ""
 "Report changes in %doc marked files.  Files that have been added or removed "
 "as documentation files, for instance."
 msgstr ""
+"Laporkan perubahan pada berkas yang ditandai %doc. Misalnya, berkas yang "
+"telah ditambahkan atau dihapus sebagai berkas dokumentasi."
 
 #: include/inspect.h:1573
 msgid ""
@@ -319,6 +481,16 @@ msgid ""
 "can also list patch names that rpminspect should ignore during the "
 "inspection."
 msgstr ""
+"Menginspeksi semua patch yang ditentukan dalam berkas spek dan melaporkan "
+"perubahan antar build. Pemeriksaan fungsional di sini adalah untuk "
+"memastikan semua patch yang ditentukan dalam preamble memiliki makro "
+"aplikasi yang sesuai dalam berkas spek. Pada tingkat INFO, rpminspect "
+"melaporkan perubahan jumlah berkas, jumlah baris, dan ukuran patch. Jika "
+"ambang batas tercapai terkait perubahan ukuran patch atau jumlah berkas yang "
+"disentuh patch, rpminspect melaporkan perubahan tersebut pada tingkat VERIFY "
+"kecuali perbandingannya adalah untuk rebase. Berkas konfigurasi juga dapat "
+"mencantumkan nama-nama patch yang harus diabaikan oleh rpminspect selama "
+"inspeksi."
 
 #: include/inspect.h:1579
 msgid ""
@@ -326,6 +498,9 @@ msgid ""
 "found by libclamav will fail the inspection.  The ignore_path rules are not "
 "used in this inspection.  All files are scanned."
 msgstr ""
+"Melakukan pemindaian virus pada setiap berkas dalam build menggunakan "
+"libclamav. Apa pun yang ditemukan oleh libclamav akan menggagalkan inspeksi. "
+"Aturan ignore_path tidak digunakan dalam inspeksi ini. Semua berkas dipindai."
 
 #: include/inspect.h:1585
 msgid ""
@@ -335,6 +510,12 @@ msgid ""
 "subdirectory map to the product release string.  The rules in each file "
 "define the politically sensitive allow and deny rules for that release."
 msgstr ""
+"Periksa berkas-berkas yang dikenal sensitif secara politik dalam paket dan "
+"laporkan apakah berkas tersebut diizinkan atau dilarang. Aturan berasal dari "
+"subdirektori politics/ dalam paket rpminspect-data untuk produk tersebut. "
+"Berkas-berkas dalam subdirektori politics/ dipetakan ke string rilis produk. "
+"Aturan dalam setiap berkas menentukan aturan izin dan pelarangan "
+"sensitivitas politik untuk rilis tersebut."
 
 #: include/inspect.h:1591
 msgid ""
@@ -343,12 +524,18 @@ msgid ""
 "catch built packages that make use of deprecated API functions if you wish "
 "built packages to conform to replacement APIs."
 msgstr ""
+"Periksa fungsi-fungsi terlarang dalam berkas ELF. Fungsi-fungsi terlarang "
+"ditentukan dalam berkas konfigurasi runtime. Biasanya inspeksi ini digunakan "
+"untuk mendeteksi paket-paket yang di-build yang menggunakan fungsi API yang "
+"sudah usang jika Anda ingin paket yang di-build mematuhi API pengganti."
 
 #: include/inspect.h:1597
 msgid ""
 "Check for forbidden paths in both the DT_RPATH and DT_RUNPATH settings in "
 "ELF shared objects."
 msgstr ""
+"Periksa jalur-jalur terlarang baik dalam pengaturan DT_RPATH maupun "
+"DT_RUNPATH dalam objek bersama ELF."
 
 #: include/inspect.h:1603
 msgid ""
@@ -356,6 +543,10 @@ msgid ""
 "for any prohibited Unicode code points, as defined in the configuration "
 "file.  Any prohibited code points are reported as a possible security risk."
 msgstr ""
+"Pindai berkas kode sumber yang telah diekstrak dan di-patch, skrip, serta "
+"berkas spek RPM untuk setiap titik kode Unicode yang dilarang, sebagaimana "
+"ditentukan dalam berkas konfigurasi. Setiap titik kode yang dilarang "
+"dilaporkan sebagai risiko keamanan yang mungkin terjadi."
 
 #: include/inspect.h:1609
 msgid ""
@@ -365,6 +556,11 @@ msgid ""
 "will check for correct RPM dependency metadata when inspecting a single "
 "build and report findings."
 msgstr ""
+"Periksa metadata dependensi RPM yang benar. Laporkan temuan yang salah atau "
+"konflik serta perubahan yang diharapkan saat membandingkan build baru dengan "
+"build yang lebih lama. Perubahan hanya dilaporkan saat membandingkan build, "
+"tetapi inspeksi ini akan memeriksa metadata dependensi RPM yang benar saat "
+"menginspeksi build tunggal dan melaporkan temuannya."
 
 #: include/inspect.h:1615
 msgid ""
@@ -373,24 +569,33 @@ msgid ""
 "report where symbols unexpectedly appear or disappear and what corrective "
 "action is needed."
 msgstr ""
+"Memeriksa apakah berkas dalam paket RPM telah dihapus simbol debugging-nya "
+"(stripped) dan berkas dalam paket debuginfo membawa simbol debugging. Saat "
+"membandingkan build, laporkan di mana simbol muncul atau menghilang secara "
+"tidak terduga dan tindakan perbaikan apa yang diperlukan."
 
 #: include/inspect.h:1621
 msgid "Perform syntax check on udev rules files using udevadm verify."
 msgstr ""
+"Lakukan pemeriksaan sintaksis pada berkas aturan udev menggunakan udevadm "
+"verify."
 
 #: include/results.h:31
 msgid "Change the string specified on the 'Vendor:' line in the spec file."
-msgstr ""
+msgstr "Ubah string yang ditentukan pada baris 'Vendor:' dalam berkas spek."
 
 #: include/results.h:38
 msgid "Make sure the SRPM is built on a host within the expected subdomain."
-msgstr ""
+msgstr "Pastikan SRPM di-build pada host di dalam subdomain yang diharapkan."
 
 #: include/results.h:45
 msgid ""
 "Unprofessional language as defined in the configuration file was found in "
 "the text shown.  Remove or change the offending words and rebuild."
 msgstr ""
+"Bahasa tidak profesional sebagaimana ditentukan dalam berkas konfigurasi "
+"ditemukan dalam teks yang ditampilkan. Hapus atau ubah kata-kata yang "
+"menyinggung tersebut dan build ulang."
 
 #: include/results.h:60 include/results.h:75
 #, c-format
@@ -398,6 +603,8 @@ msgid ""
 "Check to see if you eliminated a subpackage but still have the %package and/"
 "or the %files section for it."
 msgstr ""
+"Periksa untuk melihat apakah Anda telah meniadakan sub-paket tetapi masih "
+"memiliki bagian %package dan/atau %files untuk sub-paket tersebut."
 
 #: include/results.h:90
 msgid ""
@@ -405,6 +612,10 @@ msgid ""
 "distribution (e.g., GPLv2+).  If the license in question is approved, the "
 "license database needs updating in the rpminspect-data package."
 msgstr ""
+"Tag License harus berisi string lisensi yang disetujui sebagaimana "
+"ditentukan oleh distribusi (misalnya, GPLv2+). Jika lisensi yang dimaksud "
+"telah disetujui, basis data lisensi perlu diperbarui dalam paket rpminspect-"
+"data."
 
 #: include/results.h:97
 msgid ""
@@ -412,6 +623,9 @@ msgid ""
 "valid licensedb file.  This is also commonly due to a missing vendor "
 "specific rpminspect-data package on the system."
 msgstr ""
+"Pastikan pengaturan licensedb dalam konfigurasi rpminspect mengarah ke "
+"berkas licensedb yang valid. Hal ini juga umum terjadi karena paket "
+"rpminspect-data spesifik vendor yang hilang di sistem."
 
 #: include/results.h:104
 msgid ""
@@ -422,36 +636,51 @@ msgid ""
 "but marked unapproved, you may need to work with the legal team regarding "
 "options for this software."
 msgstr ""
+"Singkatan lisensi yang ditentukan tidak terdaftar sebagai lisensi yang "
+"disetujui dalam basis data lisensi. Basis data lisensi ditentukan dalam "
+"berkas konfigurasi rpminspect. Periksa berkas ini dan kirimkan pull request "
+"ke proyek hulu yang sesuai untuk memperbarui basis data. Jika lisensi "
+"tercantum dalam basis data tetapi ditandai tidak disetujui, Anda mungkin "
+"perlu bekerja sama dengan tim hukum mengenai opsi untuk perangkat lunak ini."
 
 #: include/results.h:119 include/results.h:154
 msgid "Ensure all object files are compiled with -fPIC"
-msgstr ""
+msgstr "Pastikan semua berkas objek dikompilasi dengan -fPIC"
 
 #: include/results.h:126
 msgid ""
 "Ensure that the package is being built with the correct compiler and "
 "compiler flags"
 msgstr ""
+"Pastikan bahwa paket sedang di-build dengan kompilator dan flag kompilator "
+"yang benar"
 
 #: include/results.h:133
 msgid ""
 "The data in an ELF file appears to be corrupt; ensure that packaged ELF "
 "files are not being truncated or incorrectly modified"
 msgstr ""
+"Data dalam berkas ELF tampak rusak; pastikan berkas ELF yang dikemas tidak "
+"terpotong atau dimodifikasi secara salah"
 
 #: include/results.h:140
 msgid ""
 "An ELF stack is marked as executable. Ensure that no execstack options are "
 "being passed to the linker, and that no functions are defined on the stack."
 msgstr ""
+"Stack ELF ditandai sebagai dapat dieksekusi. Pastikan tidak ada opsi "
+"execstack yang diteruskan ke linker, dan tidak ada fungsi yang ditentukan "
+"pada stack."
 
 #: include/results.h:147
 msgid "Ensure executables are linked with with '-z relro -z now'"
-msgstr ""
+msgstr "Pastikan eksekutabel ditautkan dengan '-z relro -z now'"
 
 #: include/results.h:169
 msgid "Correct the errors in the man page as reported by the libmandoc parser."
 msgstr ""
+"Perbaiki kesalahan pada halaman man seperti yang dilaporkan oleh parser "
+"libmandoc."
 
 #: include/results.h:176
 msgid ""
@@ -459,34 +688,47 @@ msgid ""
 "in the directory beneath /usr/share/man that matches the section number of "
 "the page."
 msgstr ""
+"Perbaiki jalur instalasi untuk halaman man. Halaman man harus diinstal dalam "
+"direktori di bawah /usr/share/man yang sesuai dengan nomor bagian dari "
+"halaman tersebut."
 
 #: include/results.h:191
 msgid "Correct the reported errors in the XML document"
-msgstr ""
+msgstr "Perbaiki kesalahan yang dilaporkan dalam dokumen XML"
 
 #: include/results.h:206
 msgid ""
 "Refer to the Desktop Entry Specification at https://standards.freedesktop."
 "org/desktop-entry-spec/latest/ for help correcting the errors and warnings"
 msgstr ""
+"Lihat Spesifikasi Entri Desktop di [https://standards.freedesktop.org/"
+"desktop-entry-spec/latest/](https://standards.freedesktop.org/desktop-entry-"
+"spec/latest/) untuk bantuan memperbaiki kesalahan dan peringatan"
 
 #: include/results.h:221
 msgid ""
 "The Release: tag in the spec file must include a '%{?dist}' string.  Please "
 "add this to the spec file per the distribution packaging guidelines."
 msgstr ""
+"Tag Release: dalam berkas spek harus menyertakan string '%{?dist}'. Harap "
+"tambahkan ini ke berkas spek sesuai dengan pedoman pengemasan distribusi."
 
 #: include/results.h:236
 msgid ""
 "The spec file name does not match the expected NAME.spec format.  Rename the "
 "spec file to conform to this policy."
 msgstr ""
+"Nama berkas spek tidak cocok dengan format NAME.spec yang diharapkan. Ubah "
+"nama berkas spek untuk mematuhi kebijakan ini."
 
 #: include/results.h:253
 msgid ""
 "This package is part of a module but is missing the %{modularitylabel} "
 "header tag.  Add this as a %define in the spec file and rebuild."
 msgstr ""
+"Paket ini adalah bagian dari modul tetapi tidak memiliki tag header %"
+"{modularitylabel}. Tambahkan ini sebagai %define dalam berkas spek dan build "
+"ulang."
 
 #: include/results.h:260
 msgid ""
@@ -496,6 +738,11 @@ msgid ""
 "rules determining if the /data/static_context setting is required, "
 "forbidden, or recommend."
 msgstr ""
+"Build ini berisi pengaturan /data/static_context yang valid atau tidak "
+"valid. Rujuk ke aturan modul untuk produk yang Anda build untuk menentukan "
+"pengaturan yang seharusnya. Pengaturan konfigurasi rpminspect juga "
+"menetapkan aturan yang menentukan apakah pengaturan /data/static_context "
+"diwajibkan, dilarang, atau direkomendasikan."
 
 #: include/results.h:277
 msgid ""
@@ -503,24 +750,36 @@ msgid ""
 "met for the product release.  Ensure you are using the correct JDK for the "
 "build."
 msgstr ""
+"Versi bytecode Java untuk satu atau lebih berkas class dalam build tidak "
+"terpenuhi untuk rilis produk tersebut. Pastikan Anda menggunakan JDK yang "
+"benar untuk build tersebut."
 
 #: include/results.h:292
 msgid ""
 "File changes were found.  In most cases these are expected, but it is a good "
 "idea to verify the changes found are deliberate."
 msgstr ""
+"Perubahan berkas ditemukan. Dalam kebanyakan kasus hal ini memang "
+"diharapkan, tetapi ada baiknya untuk memverifikasi bahwa perubahan yang "
+"ditemukan adalah disengaja."
 
 #: include/results.h:307
 msgid ""
 "Unexpected file moves were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file moves between builds."
 msgstr ""
+"Perpindahan berkas yang tidak terduga ditemukan. Verifikasi bahwa perubahan "
+"ini benar. Jika tidak, sesuaikan build untuk mencegah perpindahan berkas "
+"antar build."
 
 #: include/results.h:322
 msgid ""
 "Unexpected file removals were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file removals between builds."
 msgstr ""
+"Penghapusan berkas yang tidak terduga ditemukan. Verifikasi bahwa perubahan "
+"ini benar. Jika tidak, sesuaikan build untuk mencegah penghapusan berkas "
+"antar build."
 
 #: include/results.h:337
 #, c-format
@@ -532,6 +791,13 @@ msgid ""
 "You may also need to update the data package or local configuration file and "
 "change the forbidden_path_prefixes or forbidden_path_suffixes list."
 msgstr ""
+"Penambahan berkas yang tidak terduga ditemukan. Verifikasi bahwa perubahan "
+"ini benar. Jika tidak, sesuaikan build untuk mencegah penambahan berkas "
+"antar build. Jika sudah benar, perbarui %s dan kirimkan patch ke proyek data "
+"rpminspect yang memiliki berkas tersebut agar rpminspect mengetahui bahwa "
+"perubahan ini memang diharapkan. Anda mungkin juga perlu memperbarui paket "
+"data atau berkas konfigurasi lokal dan mengubah daftar "
+"forbidden_path_prefixes atau forbidden_path_suffixes."
 
 #: include/results.h:352
 #, c-format
@@ -541,6 +807,10 @@ msgid ""
 "deliberate, but needs inspection. If this change is expected, update %s and "
 "send a patch to the project that owns that file."
 msgstr ""
+"Konten arsip sumber berubah secara tidak terduga. Versi paket tidak berubah "
+"antar build, tetapi konten arsip sumber berubah. Hal ini mungkin disengaja, "
+"tetapi memerlukan inspeksi. Jika perubahan ini diharapkan, perbarui %s dan "
+"kirimkan patch ke proyek yang memiliki berkas tersebut."
 
 #: include/results.h:367
 #, c-format
@@ -549,6 +819,8 @@ msgid ""
 "permissions are expected, update %s and send a patch to the project that "
 "owns it."
 msgstr ""
+"Pastikan bagian %%files menyertakan makro %%defattr. Jika izin-izin ini "
+"memang diharapkan, perbarui %s dan kirimkan patch ke proyek yang memilikinya."
 
 #: include/results.h:374
 #, c-format
@@ -557,6 +829,9 @@ msgid ""
 "configuration, which is usually root. If this ownership is expected, update "
 "%s and send a patch to the project that owns it."
 msgstr ""
+"Berkas jalur bin harus dimiliki oleh bin_owner yang ditetapkan dalam "
+"konfigurasi rpminspect, yang biasanya adalah root. Jika kepemilikan ini "
+"memang diharapkan, perbarui %s dan kirimkan patch ke proyek yang memilikinya."
 
 #: include/results.h:381
 #, c-format
@@ -565,6 +840,9 @@ msgid ""
 "configuration, which is usually root. If this ownership is expect, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"Berkas jalur bin harus dimiliki oleh bin_group yang ditetapkan dalam "
+"konfigurasi rpminspect, yang biasanya adalah root. Jika kepemilikan ini "
+"memang diharapkan, perbarui %s dan kirimkan patch ke proyek yang memilikinya."
 
 #: include/results.h:388
 #, c-format
@@ -573,6 +851,10 @@ msgid ""
 "or remove the world execute bit on the file (chmod o-x). If this ownership "
 "is expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"Lakukan chgrp pada berkas ke bin_group yang ditetapkan dalam konfigurasi "
+"rpminspect atau hapus bit eksekusi world pada berkas (chmod o-x). Jika "
+"kepemilikan ini memang diharapkan, perbarui %s dan kirimkan patch ke proyek "
+"yang memilikinya."
 
 #: include/results.h:395
 #, c-format
@@ -581,6 +863,10 @@ msgid ""
 "or remove the group write bit on the file (chmod g-w). If this ownership is "
 "expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"Lakukan chgrp pada berkas ke bin_group yang ditetapkan dalam konfigurasi "
+"rpminspect atau hapus bit tulis grup pada berkas (chmod g-w). Jika "
+"kepemilikan ini memang diharapkan, perbarui %s dan kirimkan patch ke proyek "
+"yang memilikinya."
 
 #: include/results.h:402
 #, c-format
@@ -589,6 +875,10 @@ msgid ""
 "process to set correct owner and group information. If expected, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"Verifikasi bahwa perubahan kepemilikan memang diharapkan. Jika tidak, "
+"sesuaikan proses build paket untuk menetapkan informasi pemilik dan grup "
+"yang benar. Jika diharapkan, perbarui %s dan kirimkan patch ke proyek yang "
+"memilikinya."
 
 #: include/results.h:409
 msgid ""
@@ -599,26 +889,36 @@ msgid ""
 "remedy, add a fileinfo rule for this file to the vendor data package under "
 "the appropriate product release file."
 msgstr ""
+"rpminspect mengharapkan aturan fileinfo dari paket data vendor untuk berkas "
+"ini. Biasanya ini berarti berkas tersebut membawa serangkaian izin non-"
+"standar (misalnya, setuid) yang merupakan kondisi di mana rpminspect akan "
+"memeriksa daftar fileinfo untuk memastikan paket mematuhi aturan vendor. "
+"Untuk memperbaikinya, tambahkan aturan fileinfo untuk berkas ini ke paket "
+"data vendor di bawah berkas rilis produk yang sesuai."
 
 #: include/results.h:424
 msgid "Consult the shell documentation for proper syntax."
-msgstr ""
+msgstr "Konsultasikan dokumentasi shell untuk sintaksis yang tepat."
 
 #: include/results.h:431
 msgid ""
 "The file referenced was not a known shell script in the before build but is "
 "now a shell script in the after build."
 msgstr ""
+"Berkas yang dirujuk bukan merupakan skrip shell yang dikenal pada build "
+"sebelum tetapi sekarang menjadi skrip shell pada build sesudah."
 
 #: include/results.h:438
 msgid ""
 "The referenced shell script is invalid. Consider debugging it with the '-n' "
 "option on the shell to find and fix the problem."
 msgstr ""
+"Skrip shell yang dirujuk tidak valid. Pertimbangkan untuk melakukan debug "
+"dengan opsi '-n' pada shell untuk menemukan dan memperbaiki masalah tersebut."
 
 #: include/results.h:453
 msgid "See annocheck(1) for more information."
-msgstr ""
+msgstr "Lihat annocheck(1) untuk informasi lebih lanjut."
 
 #: include/results.h:460
 msgid ""
@@ -627,6 +927,11 @@ msgid ""
 "declarations). Symbols may also appear as unfortified if the compiler is "
 "unable to determine the size of a buffer, which is not necessarily an error."
 msgstr ""
+"Pastikan semua berkas objek dikompilasi dengan '-O2 -D_FORTIFY_SOURCE=2', "
+"dan semua header yang sesuai disertakan (tidak ada deklarasi fungsi implisit)"
+". Simbol juga mungkin muncul sebagai tidak terfortifikasi (unfortified) jika "
+"kompilator tidak dapat menentukan ukuran buffer, yang belum tentu merupakan "
+"kesalahan."
 
 #: include/results.h:475
 msgid ""
@@ -636,6 +941,11 @@ msgid ""
 "If they are not, modify the package spec file to ensure the build links with "
 "the correct shared libraries."
 msgstr ""
+"Simbol DT_NEEDED telah ditambahkan atau dihapus. Hal ini terjadi ketika "
+"lingkungan build memiliki versi pustaka yang diperlukan yang berbeda. "
+"Terkadang hal ini disengaja tetapi terkadang tidak. Verifikasi bahwa "
+"perubahan ini memang diharapkan. Jika tidak, modifikasi berkas spek paket "
+"untuk memastikan build menautkan dengan pustaka bersama yang benar."
 
 #: include/results.h:490
 msgid ""
@@ -643,6 +953,9 @@ msgid ""
 "is, you can adjust the filesize inspection settings in the rpminspect.yaml "
 "file."
 msgstr ""
+"Ukuran berkas bertambah dalam jumlah yang cukup signifikan. Pastikan "
+"perubahan ini disengaja. Jika ya, Anda dapat menyesuaikan pengaturan "
+"inspeksi filesize dalam berkas rpminspect.yaml."
 
 #: include/results.h:497
 msgid ""
@@ -650,18 +963,25 @@ msgid ""
 "it is, you can adjust the filesize inspection settings in the rpminspect."
 "yaml file."
 msgstr ""
+"Ukuran berkas berkurang dalam jumlah yang cukup signifikan. Pastikan "
+"perubahan ini disengaja. Jika ya, Anda dapat menyesuaikan pengaturan "
+"inspeksi filesize dalam berkas rpminspect.yaml."
 
 #: include/results.h:504
 msgid ""
 "A previously empty file is no longer empty.  Make sure this change is "
 "intended and fix the package spec file if necessary."
 msgstr ""
+"Berkas yang sebelumnya kosong kini tidak lagi kosong. Pastikan perubahan ini "
+"disengaja dan perbaiki berkas spek paket jika diperlukan."
 
 #: include/results.h:511
 msgid ""
 "A previously non-empty file is now empty.  Make sure this change is intended "
 "and fix the package space file if necessary."
 msgstr ""
+"Berkas yang sebelumnya tidak kosong kini menjadi kosong. Pastikan perubahan "
+"ini disengaja dan perbaiki berkas spek paket jika diperlukan."
 
 #: include/results.h:526
 #, c-format
@@ -672,6 +992,12 @@ msgid ""
 "may also be of help for this situation.  If necessary, update %s with the "
 "changes found here and send a patch to the project that owns the data file."
 msgstr ""
+"Capabilities yang tidak terduga ditemukan pada berkas yang ditunjukkan. "
+"Konsultasikan dengan capabilities(7) dan sesuaikan berkas dalam paket atau "
+"modifikasi daftar kapabilitas dalam paket data vendor rpminspect. Tim "
+"keamanan juga mungkin dapat membantu dalam situasi ini. Jika perlu, perbarui "
+"%s dengan perubahan yang ditemukan di sini dan kirimkan patch ke proyek yang "
+"memiliki berkas data tersebut."
 
 #: include/results.h:541
 msgid ""
@@ -679,6 +1005,9 @@ msgid ""
 "usability problems for users if module parameters were removed in a "
 "maintenance update."
 msgstr ""
+"Parameter modul kernel dihapus antar build. Hal ini dapat menimbulkan "
+"masalah kegunaan bagi pengguna jika parameter modul dihapus dalam pembaruan "
+"pemeliharaan."
 
 #: include/results.h:548
 msgid ""
@@ -686,6 +1015,9 @@ msgid ""
 "usability problems for users if module dependencies changed in a maintenance "
 "update."
 msgstr ""
+"Dependensi modul kernel berubah antar build. Hal ini dapat menimbulkan "
+"masalah kegunaan bagi pengguna jika dependensi modul berubah dalam pembaruan "
+"pemeliharaan."
 
 #: include/results.h:555
 msgid ""
@@ -693,6 +1025,9 @@ msgid ""
 "usability problems for users if module device aliases changed in a "
 "maintenance update."
 msgstr ""
+"Alias perangkat modul kernel berubah antar build. Hal ini dapat menimbulkan "
+"masalah kegunaan bagi pengguna jika alias perangkat modul berubah dalam "
+"pembaruan pemeliharaan."
 
 #: include/results.h:565
 msgid ""
@@ -700,12 +1035,17 @@ msgid ""
 "build.  This may be deliberate, but check to make sure you do not have any "
 "unexpected ExclusiveArch lines in the spec file."
 msgstr ""
+"Arsitektur yang ada pada build sebelum kini hilang pada build sesudah. Hal "
+"ini mungkin disengaja, tetapi periksa untuk memastikan Anda tidak memiliki "
+"baris ExclusiveArch yang tidak terduga dalam berkas spek."
 
 #: include/results.h:566
 msgid ""
 "A new architecture has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Arsitektur baru telah muncul pada build sesudah. Hal ini mungkin "
+"mengindikasikan kemajuan dalam dunia komputasi."
 
 #: include/results.h:576
 msgid ""
@@ -713,12 +1053,17 @@ msgid ""
 "This may be deliberate, but check to make sure you have correct syntax "
 "defining the subpackage in the spec file"
 msgstr ""
+"Sub-paket yang ada pada build sebelum kini hilang pada build sesudah. Hal "
+"ini mungkin disengaja, tetapi periksa untuk memastikan Anda memiliki "
+"sintaksis yang benar saat menentukan sub-paket dalam berkas spek"
 
 #: include/results.h:577
 msgid ""
 "A new subpackage has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Sub-paket baru telah muncul pada build sesudah. Hal ini mungkin "
+"mengindikasikan kemajuan dalam dunia komputasi."
 
 #: include/results.h:587
 #, c-format
@@ -726,18 +1071,24 @@ msgid ""
 "Make sure the spec file in the after build contains a valid %changelog "
 "section."
 msgstr ""
+"Pastikan berkas spek pada build sesudah berisi bagian %changelog yang valid."
 
 #: include/results.h:597
 msgid ""
 "Files should not be installed in old directory names.  Modify the package to "
 "install the affected file to the preferred directory."
 msgstr ""
+"Berkas tidak boleh diinstal dalam nama direktori lama. Modifikasi paket "
+"untuk menginstal berkas yang terpengaruh ke direktori yang lebih disukai."
 
 #: include/results.h:607
 msgid ""
 "ELF .o and .a files should not carry LTO (Link Time Optimization) bytecode.  "
 "Make sure you have stripped LTO bytecode from those files at install time."
 msgstr ""
+"Berkas ELF .o dan .a tidak boleh membawa bytecode LTO (Link Time "
+"Optimization). Pastikan Anda telah menghapus bytecode LTO dari berkas-berkas "
+"tersebut pada saat instalasi."
 
 #: include/results.h:617
 msgid ""
@@ -746,6 +1097,11 @@ msgid ""
 "and have a non-symlink turn in to a symlink, ensure this is deliberate.  "
 "NOTE:  You cannot turn a directory in to a symlink due to RPM limitations."
 msgstr ""
+"Pastikan symlink merujuk ke tujuan yang valid di salah satu sub-paket build; "
+"symlink yang menggantung (dangling) tidak diizinkan. Jika Anda membandingkan "
+"build dan mendapati sesuatu yang bukan symlink berubah menjadi symlink, "
+"pastikan hal ini disengaja. CATATAN: Anda tidak dapat mengubah direktori "
+"menjadi symlink karena batasan RPM."
 
 #: include/results.h:618
 #, c-format
@@ -758,6 +1114,14 @@ msgid ""
 "scriptlet for replacing a directory.  See the packaging guidelines for "
 "'Scriptlet to replace a directory' for more information."
 msgstr ""
+"Pastikan symlink merujuk ke tujuan yang valid di salah satu sub-paket build; "
+"symlink yang menggantung (dangling) tidak diizinkan. Jika Anda membandingkan "
+"build dan mendapati sesuatu yang bukan symlink berubah menjadi symlink, "
+"pastikan hal ini disengaja. CATATAN: Anda tidak dapat mengubah direktori "
+"menjadi symlink karena batasan RPM. Jika Anda benar-benar harus "
+"melakukannya, pastikan Anda menyertakan scriptlet %pretrans untuk mengganti "
+"direktori. Lihat pedoman pengemasan untuk 'Scriptlet to replace a directory' "
+"untuk informasi lebih lanjut."
 
 #: include/results.h:628
 #, c-format
@@ -767,6 +1131,10 @@ msgid ""
 "See the RPM documentation or distribution package maintainer guide for more "
 "information."
 msgstr ""
+"Hapus referensi jalur terlarang dari baris yang ditunjukkan pada bagian "
+"%files. Dalam banyak kasus, Anda dapat menggunakan makro RPM untuk "
+"menentukan lokasi jalur. Lihat dokumentasi RPM atau panduan pemeliharaan "
+"paket distribusi untuk informasi lebih lanjut."
 
 #: include/results.h:638
 msgid ""
@@ -774,6 +1142,9 @@ msgid ""
 "is intended and if necessary fix the spec file so the correct file is "
 "included in the built package."
 msgstr ""
+"Dalam banyak kasus, perubahan tipe MIME adalah disengaja. Verifikasi bahwa "
+"perubahan tersebut memang diharapkan dan jika perlu perbaiki berkas spek "
+"sehingga berkas yang benar disertakan dalam paket yang di-build."
 
 #: include/results.h:648
 msgid ""
@@ -781,6 +1152,10 @@ msgid ""
 "users.  See the abidiff(1) documentation and the distribution ABI policies "
 "to determine if this detected change is allowed."
 msgstr ""
+"Perubahan ABI yang diperkenalkan selama pembaruan pemeliharaan dapat "
+"menyebabkan masalah bagi pengguna. Lihat dokumentasi abidiff(1) dan "
+"kebijakan ABI distribusi untuk menentukan apakah perubahan yang terdeteksi "
+"ini diizinkan."
 
 #: include/results.h:658
 msgid ""
@@ -788,6 +1163,10 @@ msgid ""
 "problems for users.  See the libabigail documentation and the distribution "
 "KMI policy to determine if this detected change is allowed."
 msgstr ""
+"Antarmuka Modul Kernel (KMI) yang diperkenalkan selama pembaruan "
+"pemeliharaan dapat menyebabkan masalah bagi pengguna. Lihat dokumentasi "
+"libabigail dan kebijakan KMI distribusi untuk menentukan apakah perubahan "
+"yang terdeteksi ini diizinkan."
 
 #: include/results.h:668
 #, c-format
@@ -797,6 +1176,11 @@ msgid ""
 "configuration files, make sure the package can handle upgrading an existing "
 "package -or- honor the old file locations."
 msgstr ""
+"Perubahan pada %config harus dilakukan dengan hati-hati. Pastikan Anda telah "
+"menginstal berkas yang benar dan di lokasi yang benar. Jika sebuah paket "
+"melakukan restrukturisasi berkas konfigurasi, pastikan paket tersebut dapat "
+"menangani peningkatan (upgrade) paket yang ada -atau- tetap menghormati "
+"lokasi berkas yang lama."
 
 #: include/results.h:678
 #, c-format
@@ -805,6 +1189,10 @@ msgid ""
 "the package is not a rebase.  Sometimes upstream projects rename or move "
 "documentation files and the spec file needs to account for those changes."
 msgstr ""
+"Perubahan ditemukan di antara berkas %doc. Verifikasi bahwa perubahan ini "
+"disengaja jika paket tersebut bukan merupakan rebase. Terkadang proyek hulu "
+"mengganti nama atau memindahkan berkas dokumentasi dan berkas spek perlu "
+"menyesuaikan dengan perubahan tersebut."
 
 #: include/results.h:688
 msgid ""
@@ -814,6 +1202,11 @@ msgid ""
 "the source package has any zero length or otherwise invalid patches and "
 "correct the problem."
 msgstr ""
+"Berkas patch yang tidak valid ditemukan. Hal ini biasanya hasil dari "
+"pembuatan kumpulan patch dengan membandingkan dua pohon kode. Ketika berkas "
+"menghilang, hal itu dapat menyebabkan patch berukuran nol dalam kumpulan "
+"yang dihasilkan. Periksa apakah paket sumber memiliki patch berukuran nol "
+"atau patch tidak valid lainnya dan perbaiki masalah tersebut."
 
 #: include/results.h:690
 #, c-format
@@ -827,6 +1220,15 @@ msgid ""
 "define the patch at the top of the spec file.  So Patch47 is applied with "
 "either a '%patch 47', '%patch -P 47', '%patch -P47', or '%patch47' macro."
 msgstr ""
+"Patch yang disebutkan ditentukan dalam header RPM sumber (artinya memiliki "
+"definisi PatchN: dalam berkas spek) tetapi tidak diterapkan di mana pun "
+"dalam berkas spek. Patch tersebut kehilangan makro %patch yang sesuai dan "
+"berkas spek tidak memiliki makro %autosetup atau %autopatch. Anda dapat "
+"memperbaikinya dengan menambahkan makro %patch yang sesuai dalam berkas spek "
+"(biasanya di bagian %prep). Angka yang ditentukan dengan makro %patch sesuai "
+"dengan angka yang digunakan untuk menentukan patch di bagian atas berkas "
+"spek. Jadi, Patch47 diterapkan dengan makro '%patch 47', '%patch -P 47', "
+"'%patch -P47', atau '%patch47'."
 
 #: include/results.h:692
 #, c-format
@@ -836,12 +1238,19 @@ msgid ""
 "For example, Patch47 needs to have either a '%patch 47', '%patch -P 47', "
 "'%patch -P47', or '%patch47' macro."
 msgstr ""
+"Patch yang disebutkan telah ditentukan tetapi tidak cocok nomornya dengan "
+"makro %patch. Pastikan semua patch bernomor memiliki makro %patch yang "
+"sesuai. Sebagai contoh, Patch47 harus memiliki makro '%patch 47', '%patch -P "
+"47', '%patch -P47', atau '%patch47'."
 
 #: include/results.h:694
 msgid ""
 "The defined patch file is not something rpminspect can handle.  This is "
 "likely a bug and should be reported to the upstream rpminspect project."
 msgstr ""
+"Berkas patch yang ditentukan bukan sesuatu yang dapat ditangani oleh "
+"rpminspect. Ini kemungkinan adalah bug dan harus dilaporkan ke proyek hulu "
+"rpminspect."
 
 #: include/results.h:704
 msgid ""
@@ -851,6 +1260,12 @@ msgid ""
 "sure the file in question is clean, please file a bug with rpminspect for "
 "further help."
 msgstr ""
+"ClamAV telah menemukan virus dalam berkas yang disebutkan. Ini mungkin "
+"merupakan positif palsu (false positive), tetapi Anda harus memeriksa berkas "
+"yang dimaksud secara manual untuk memastikan berkas tersebut bersih. Ini "
+"mungkin masalah dengan basis data atau deteksi ClamAV. Jika Anda yakin "
+"berkas yang dimaksud bersih, harap ajukan bug ke rpminspect untuk bantuan "
+"lebih lanjut."
 
 #: include/results.h:714
 #, c-format
@@ -860,6 +1275,10 @@ msgid ""
 "vendor data package for the product.  Modify the %s file and send a patch to "
 "the project that owns it."
 msgstr ""
+"Berkas dengan konten yang berpotensi sensitif secara politik ditemukan dalam "
+"paket. Jika berkas ini diizinkan, berkas tersebut harus ditambahkan ke paket "
+"data vendor rpminspect untuk produk tersebut. Ubah berkas %s dan kirimkan "
+"patch ke proyek yang memilikinya."
 
 #: include/results.h:724
 msgid ""
@@ -872,6 +1291,15 @@ msgid ""
 "order to allow for backwards compatibility.  Whenever possible the "
 "deprecated functions should not be used."
 msgstr ""
+"Simbol terlarang ditemukan dalam berkas ELF dalam paket. Pengaturan "
+"konfigurasi untuk rpminspect menunjukkan bahwa simbol yang disebutkan "
+"dilarang dalam paket. Jika hal ini disengaja, Anda mungkin ingin "
+"menonaktifkan inspeksi badfuncs. Jika tidak disengaja, periksa halaman man "
+"untuk simbol yang disebutkan guna melihat fungsi API apa yang telah "
+"menggantikan simbol terlarang tersebut. Biasanya sebuah fungsi ditandai "
+"sebagai usang (deprecated) tetapi tetap disediakan untuk memungkinkan "
+"kompatibilitas mundur. Sebisa mungkin fungsi yang sudah usang tidak boleh "
+"digunakan."
 
 #: include/results.h:734
 msgid ""
@@ -882,6 +1310,12 @@ msgid ""
 "try using a program such as patchelf to remove these properties from the ELF "
 "files."
 msgstr ""
+"Properti DT_RPATH atau DT_RUNPATH ditemukan pada objek bersama ELF dalam "
+"paket ini. Penggunaan DT_RPATH dan DT_RUNPATH tidak dianjurkan kecuali dalam "
+"situasi tertentu. Periksa apakah Anda telah menonaktifkan rpath selama tahap "
+"%build di berkas spek. Jika Anda tidak dapat melakukannya dengan mudah, Anda "
+"dapat mencoba menggunakan program seperti patchelf untuk menghapus properti "
+"ini dari berkas ELF."
 
 #: include/results.h:736
 msgid ""
@@ -889,6 +1323,9 @@ msgid ""
 "This indicates a linker error and should not happen.  ELF objects should "
 "only carry DT_RPATH or DT_RUNPATH, never both."
 msgstr ""
+"Properti DT_RPATH dan DT_RUNPATH ditemukan dalam sebuah objek bersama ELF. "
+"Ini menunjukkan kesalahan linker dan tidak seharusnya terjadi. Objek ELF "
+"hanya boleh membawa DT_RPATH atau DT_RUNPATH, tidak pernah keduanya."
 
 #: include/results.h:746
 msgid ""
@@ -898,6 +1335,11 @@ msgid ""
 "discuss the situation with the Product Security Team to determine the "
 "correct course of action."
 msgstr ""
+"Berkas konfigurasi rpminspect berisi daftar titik kode Unicode yang "
+"dilarang. Satu ditemukan dalam pohon sumber yang telah diekstrak dan di-"
+"patch atau di salah satu berkas sumber teks dalam RPM sumber. Hapus titik "
+"kode ini atau diskusikan situasinya dengan Tim Keamanan Produk untuk "
+"menentukan tindakan yang tepat."
 
 #: include/results.h:748
 #, c-format
@@ -908,6 +1350,11 @@ msgid ""
 "running.  A common cause is removal of the working directory while the "
 "program is executing."
 msgstr ""
+"Bagian %prep dari berkas spek tidak dapat dieksekusi karena beberapa alasan. "
+"Hal ini biasanya disebabkan oleh kegagalan dalam librpmbuild, yang biasanya "
+"terkait dengan masalah ekstraksi arsip atau perubahan sistem berkas saat "
+"rpminspect sedang berjalan. Penyebab umum adalah penghapusan direktori kerja "
+"saat program sedang berjalan."
 
 #: include/results.h:758
 msgid ""
@@ -915,6 +1362,9 @@ msgid ""
 "Check the spec file for this dependency and ensure you have not misspelled a "
 "macro or used a macro name that does not exist."
 msgstr ""
+"Makro berkas spek RPM yang tidak terurai ditemukan dalam aturan dependensi "
+"yang dicatat. Periksa berkas spek untuk dependensi ini dan pastikan Anda "
+"tidak salah mengeja makro atau menggunakan nama makro yang tidak ada."
 
 #: include/results.h:760
 msgid ""
@@ -923,6 +1373,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{version}-%{release}' "
 "in the spec file."
 msgstr ""
+"Tambahkan 'Requires' eksplisit yang ditunjukkan ke berkas spek untuk sub-"
+"paket yang disebutkan. Sub-paket yang bergantung pada pustaka bersama di sub-"
+"paket lain harus membawa 'Requires: NAMA_SUBPAKET = %{version}-%{release}' "
+"yang eksplisit dalam berkas spek."
 
 #: include/results.h:762
 msgid ""
@@ -931,6 +1385,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-"
 "%{release}' in the spec file."
 msgstr ""
+"Tambahkan 'Requires' eksplisit yang ditunjukkan ke berkas spek untuk sub-"
+"paket yang disebutkan. Sub-paket yang bergantung pada pustaka bersama di sub-"
+"paket lain harus membawa 'Requires: NAMA_SUBPAKET = %{epoch}:%{version}-%"
+"{release}' yang eksplisit dalam berkas spek."
 
 #: include/results.h:764
 #, c-format
@@ -941,6 +1399,11 @@ msgid ""
 "spec file but you do need to make sure only one subpackage is packaging up "
 "the shared library in question."
 msgstr ""
+"Periksa bagian %files pada sub-paket dan pernyataan Provides eksplisit. "
+"Hanya satu sub-paket yang boleh menyediakan pustaka bersama tertentu. Nama "
+"pustaka bersama secara otomatis ditambahkan sebagai Provides, jadi tidak "
+"perlu menentukannya dalam berkas spek, tetapi Anda perlu memastikan hanya "
+"satu sub-paket yang mengemas pustaka bersama yang dimaksud."
 
 #: include/results.h:766
 msgid ""
@@ -950,6 +1413,12 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Dependensi yang terdaftar pada build sebelum berubah menjadi dependensi yang "
+"ditunjukkan pada build sesudah. Jika ini adalah hasil VERIFY, itu berarti "
+"rpminspect mendeteksi perubahan dalam apa yang dianggapnya sebagai pembaruan "
+"pemeliharaan dalam sebuah paket. Hasil INFO berarti perubahan tersebut "
+"terdeteksi, tetapi dianggap baik-baik saja karena membandingkan build yang "
+"di-rebase."
 
 #: include/results.h:768
 msgid ""
@@ -959,6 +1428,11 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Dependensi baru terlihat pada build sesudah yang tidak ada pada build "
+"sebelum. Jika ini adalah hasil VERIFY, itu berarti rpminspect mendeteksi "
+"perubahan dalam apa yang dianggapnya sebagai pembaruan pemeliharaan dalam "
+"sebuah paket. Hasil INFO berarti perubahan tersebut terdeteksi, tetapi "
+"dianggap baik-baik saja karena membandingkan build yang di-rebase."
 
 #: include/results.h:770
 msgid ""
@@ -968,6 +1442,12 @@ msgid ""
 "An INFO result means it noticed this change, but deems it ok because it is "
 "comparing a rebased build."
 msgstr ""
+"Dependensi yang terlihat pada build sebelum tidak terlihat pada build "
+"sesudah, yang berarti dependensi tersebut dihapus atau hilang. Jika ini "
+"adalah hasil VERIFY, itu berarti rpminspect mendeteksi perubahan dalam apa "
+"yang dianggapnya sebagai pembaruan pemeliharaan dalam sebuah paket. Hasil "
+"INFO berarti perubahan tersebut terdeteksi, tetapi dianggap baik-baik saja "
+"karena membandingkan build yang di-rebase."
 
 #: include/results.h:772
 msgid ""
@@ -977,151 +1457,161 @@ msgid ""
 "%{version}-%{release}' to capture the package package Epoch in the "
 "dependency."
 msgstr ""
+"Paket memiliki nilai Epoch yang lebih besar dari nol, tetapi dependensi sub-"
+"paket eksplisit tidak menggunakannya secara konsisten. Untuk dependensi yang "
+"dilaporkan, '= %{version}-%{release}' perlu diubah menjadi '= %{epoch}:%"
+"{version}-%{release}' untuk menyertakan Epoch paket dalam dependensi "
+"tersebut."
 
 #: include/results.h:781
 msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
+"Rujuk ke dokumentasi udev di [https://www.freedesktop.org/software/systemd/"
+"man/udev.html](https://www.freedesktop.org/software/systemd/man/udev.html) "
+"untuk bantuan memperbaiki kesalahan dan peringatan."
 
 #: lib/abi.c:65
 #, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr ""
+msgstr "*** pengenal tingkat ABI salah format: %s"
 
 #: lib/abi.c:70
 #, c-format
 msgid "*** ABI level %d already defined"
-msgstr ""
+msgstr "*** tingkat ABI %d sudah ditentukan"
 
 #: lib/abi.c:84
 #, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr ""
+msgstr "*** entri tingkat ABI salah format: %s"
 
 #: lib/builds.c:73
 #, c-format
 msgid "*** unable to create download directory %s"
-msgstr ""
+msgstr "*** tidak dapat membuat direktori unduhan %s"
 
 #: lib/builds.c:85
 #, c-format
 msgid "*** unknown working directory type: %d"
-msgstr ""
+msgstr "*** tipe direktori kerja tidak dikenal: %d"
 
 #: lib/builds.c:173
 #, c-format
 msgid "*** unable to read %s, skipping"
-msgstr ""
+msgstr "*** tidak dapat membaca %s, dilewati"
 
 #: lib/builds.c:205
 #, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr ""
+msgstr "*** ditemukan anggota direktori yang tidak dikenal: %s"
 
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "Ruang tersedia tidak mencukupi untuk mengunduh %s yang diminta.\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    Membutuhkan %s di %s, tersedia %s.\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
-msgstr ""
+msgstr "Lihat opsi `-w' untuk menentukan direktori kerja alternatif.\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
 msgstr ""
+"Tidak dapat menentukan ruang yang diperlukan untuk mengunduh %s yang "
+"diminta.\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "Pastikan %s memiliki ruang tersedia yang cukup."
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
-msgstr ""
+msgstr "build"
 
 #: lib/builds.c:320
 msgid "Downloading module"
-msgstr ""
+msgstr "Mengunduh modul"
 
 #: lib/builds.c:323
 msgid "Downloading RPM build"
-msgstr ""
+msgstr "Mengunduh build RPM"
 
 #: lib/builds.c:373 lib/inspect_modularity.c:47
 #, c-format
 msgid "*** ignoring malformed module metadata file: %s"
-msgstr ""
+msgstr "*** mengabaikan berkas metadata modul yang salah format: %s"
 
 #: lib/builds.c:383
 #, c-format
 msgid "*** malformed rpm filters in file: %s"
-msgstr ""
+msgstr "*** filter rpm salah format dalam berkas: %s"
 
 #: lib/builds.c:541 lib/builds.c:545
 msgid "task"
-msgstr ""
+msgstr "tugas"
 
 #: lib/builds.c:659 lib/builds.c:662
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: lib/builds.c:791
 #, c-format
 msgid "*** `%s' already exists in %s"
-msgstr ""
+msgstr "*** `%s' sudah ada di %s"
 
 #: lib/builds.c:829
 #, c-format
 msgid "*** unable to find local build: %s"
-msgstr ""
+msgstr "*** tidak dapat menemukan build lokal: %s"
 
 #: lib/builds.c:841
 #, c-format
 msgid "*** unable to download RPM: %s"
-msgstr ""
+msgstr "*** tidak dapat mengunduh RPM: %s"
 
 #: lib/builds.c:860 lib/builds.c:893 lib/builds.c:903
 #, c-format
 msgid "*** unable to find build %s in Koji hub %s"
-msgstr ""
+msgstr "*** tidak dapat menemukan build %s di hub Koji %s"
 
 #: lib/builds.c:872
 #, c-format
 msgid "*** unable to find task %s in Koji hub %s"
-msgstr ""
+msgstr "*** tidak dapat menemukan tugas %s di hub Koji %s"
 
 #: lib/checksums.c:91
 #, c-format
 msgid "*** %s is a FIFO"
-msgstr ""
+msgstr "*** %s adalah FIFO"
 
 #: lib/copyfile.c:117
 #, c-format
 msgid "%s already exists"
-msgstr ""
+msgstr "%s sudah ada"
 
 #: lib/copyfile.c:122
 msgid ", overwriting"
-msgstr ""
+msgstr ", menimpa"
 
 #: lib/curl.c:267 lib/readfile.c:60
 #, c-format
 msgid "*** unable to read %s"
-msgstr ""
+msgstr "*** tidak dapat membaca %s"
 
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
+msgstr "%s di %s pada %s membawa mode yang diharapkan %04o"
 
 #: lib/fileinfo.c:76
 #, c-format
@@ -1129,6 +1619,8 @@ msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s di %s pada %s membawa mode yang tidak diharapkan %04o; mode yang "
+"diharapkan %04o; memerlukan inspeksi oleh Tim Keamanan"
 
 #: lib/fileinfo.c:96
 #, c-format
@@ -1136,11 +1628,13 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o, Security Team review may be "
 "required"
 msgstr ""
+"%s di %s pada %s membawa mode tidak aman %04o, tinjauan Tim Keamanan mungkin "
+"diperlukan"
 
 #: lib/fileinfo.c:155
 #, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
+msgstr "%s di %s pada %s membawa pemilik yang diharapkan '%s'"
 
 #: lib/fileinfo.c:168
 #, c-format
@@ -1148,6 +1642,8 @@ msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s di %s pada %s membawa pemilik yang tidak diharapkan '%s'; pemilik yang "
+"diharapkan '%s'; memerlukan inspeksi oleh Tim Keamanan"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
 #, c-format
@@ -1155,11 +1651,13 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o but has no fileinfo rule for owner "
 "specification, Security Team review may be required"
 msgstr ""
+"%s di %s pada %s membawa mode tidak aman %04o tetapi tidak memiliki aturan "
+"fileinfo untuk spesifikasi pemilik, tinjauan Tim Keamanan mungkin diperlukan"
 
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
+msgstr "%s di %s pada %s membawa grup yang diharapkan '%s'"
 
 #: lib/fileinfo.c:262
 #, c-format
@@ -1167,154 +1665,161 @@ msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s di %s pada %s membawa grup yang tidak diharapkan '%s'; grup yang "
+"diharapkan '%s'; memerlukan inspeksi oleh Tim Keamanan"
 
 #: lib/init.c:226
 #, c-format
 msgid "*** invalid input string `%s`"
-msgstr ""
+msgstr "*** string input tidak valid `%s`"
 
 #: lib/init.c:253 lib/init.c:262 lib/init.c:270 lib/init.c:282 lib/init.c:291
 #: lib/init.c:299 lib/init.c:311 lib/init.c:320 lib/init.c:328 lib/init.c:340
 #, c-format
 msgid "*** invalid mode string: %s"
-msgstr ""
+msgstr "*** string mode tidak valid: %s"
 
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** masalah saat menambahkan entri ke array %s->%s"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** masalah saat menambahkan entri pengabaian ke %s"
 
 #: lib/init.c:418 lib/init.c:432
 msgid "*** error reading "
-msgstr ""
+msgstr "*** galat saat membaca "
 
 #: lib/init.c:458
 #, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr ""
+msgstr "*** mengabaikan bagian salah format %s->%s"
 
 #: lib/init.c:515 lib/init.c:528
 #, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr ""
+msgstr "*** galat saat membaca pola pengabaian %s"
 
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
+msgstr "*** flag harus 'on' atau 'off'; mengabaikan '%s'"
 
 #: lib/init.c:548
 #, c-format
 msgid "*** unknown inspections: `%s`"
-msgstr ""
+msgstr "*** inspeksi tidak dikenal: `%s`"
 
 #: lib/init.c:559
 msgid "*** malformed/unknown inspections section"
-msgstr ""
+msgstr "*** bagian inspeksi salah format/tidak dikenal"
 
 #: lib/init.c:591
 #, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr ""
+msgstr "*** mengabaikan berkas konfigurasi %s yang salah format: %s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** pengaturan konteks statis modularitas tidak dikenal '%s'"
 
 #: lib/init.c:717
 #, c-format
 msgid "*** unknown specname match setting '%s', defaulting to 'full'"
 msgstr ""
+"*** pengaturan pencocokan nama spek '%s' tidak dikenal, menggunakan default "
+"'full'"
 
 #: lib/init.c:732
 #, c-format
 msgid "*** unknown specname primary setting '%s', defaulting to 'name'"
 msgstr ""
+"*** pengaturan primer nama spek '%s' tidak dikenal, menggunakan default "
+"'name'"
 
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
 msgstr ""
+"*** annocheck failure_reporting_level tidak valid: %s, menggunakan default %s"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** bagian badfuncs->allowed salah format"
 
 #: lib/init.c:822
 #, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
-msgstr ""
+msgstr "*** galat saat membaca ekspresi reguler pengecualian unicode: %s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** bagian rpmdeps->ignore salah format; dilewati"
 
 #: lib/init.c:968
 #, c-format
 msgid "*** Invalid filename in the fileinfo list: %s"
-msgstr ""
+msgstr "*** Nama berkas tidak valid dalam daftar fileinfo: %s"
 
 #: lib/init.c:969
 msgid "*** From this invalid line:"
-msgstr ""
+msgstr "*** Dari baris tidak valid ini:"
 
 #: lib/init.c:970
 #, c-format
 msgid "***     %s"
-msgstr ""
+msgstr "***     %s"
 
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** token tidak terduga `%s' terlihat di %s, tidak dapat melanjutkan"
 
 #: lib/init.c:1414
 #, c-format
 msgid "*** invalid security rule: %s"
-msgstr ""
+msgstr "*** aturan keamanan tidak valid: %s"
 
 #: lib/init.c:1426
 #, c-format
 msgid "*** unknown security rule: %s"
-msgstr ""
+msgstr "*** aturan keamanan tidak dikenal: %s"
 
 #: lib/init.c:1435
 #, c-format
 msgid "*** unknown security action: %s"
-msgstr ""
+msgstr "*** tindakan keamanan tidak dikenal: %s"
 
 #: lib/init.c:1461
 #, c-format
 msgid "*** malformed security line: %s"
-msgstr ""
+msgstr "*** baris keamanan salah format: %s"
 
 #: lib/init.c:1622
 #, c-format
 msgid "*** missing configuration file `%s'"
-msgstr ""
+msgstr "*** berkas konfigurasi `%s' hilang"
 
 #: lib/init.c:1658
 #, c-format
 msgid "*** unable to find profile '%s'"
-msgstr ""
+msgstr "*** tidak dapat menemukan profil '%s'"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "galat penggunaan abidiff"
 
 #: lib/inspect_abidiff.c:275
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Perubahan ABI pada ${FILE} di ${ARCH}"
 
 #: lib/inspect_abidiff.c:284
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Perubahan ABI yang tidak kompatibel pada ${FILE} di ${ARCH}"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1322,6 +1827,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s with ABI compatibility "
 "level %ld on %s revealed ABI differences."
 msgstr ""
+"Membandingkan versi lama vs. baru dari %s dalam paket %s dengan tingkat "
+"kompatibilitas ABI %ld pada %s mengungkapkan perbedaan ABI."
 
 #: lib/inspect_abidiff.c:298
 #, c-format
@@ -1329,6 +1836,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s on %s revealed ABI "
 "differences."
 msgstr ""
+"Membandingkan versi lama vs. baru dari %s dalam paket %s pada %s "
+"mengungkapkan perbedaan ABI."
 
 #: lib/inspect_abidiff.c:302
 #, c-format
@@ -1336,11 +1845,15 @@ msgid ""
 "Comparing from %s to %s in package %s with ABI compatibility level %ld on %s "
 "revealed ABI differences."
 msgstr ""
+"Membandingkan dari %s ke %s dalam paket %s dengan tingkat kompatibilitas ABI "
+"%ld pada %s mengungkapkan perbedaan ABI."
 
 #: lib/inspect_abidiff.c:304
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
 msgstr ""
+"Membandingkan dari %s ke %s dalam paket %s pada %s mengungkapkan perbedaan "
+"ABI."
 
 #: lib/inspect_abidiff.c:309
 #, c-format
@@ -1349,6 +1862,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Perintah: %s\n"
+"\n"
+"%s"
 
 #: lib/inspect_addedfiles.c:149
 #, c-format
@@ -1356,10 +1872,12 @@ msgid ""
 "Packages should not contain files or directories starting with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Paket tidak boleh berisi berkas atau direktori yang diawali dengan `%s` pada "
+"%s di %s: %s"
 
 #: lib/inspect_addedfiles.c:150 lib/inspect_addedfiles.c:164
 msgid "invalid directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "direktori tidak valid ${FILE} di ${ARCH}"
 
 #: lib/inspect_addedfiles.c:163
 #, c-format
@@ -1367,15 +1885,17 @@ msgid ""
 "Packages should not contain files or directories ending with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Paket tidak boleh berisi berkas atau direktori yang diakhiri dengan `%s` "
+"pada %s di %s: %s"
 
 #: lib/inspect_addedfiles.c:177
 #, c-format
 msgid "Forbidden directory `%s` found on %s in %s: %s"
-msgstr ""
+msgstr "Direktori terlarang `%s` ditemukan pada %s di %s: %s"
 
 #: lib/inspect_addedfiles.c:178
 msgid "forbidden directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "direktori terlarang ${FILE} di ${ARCH}"
 
 #: lib/inspect_addedfiles.c:209
 #, c-format
@@ -1383,202 +1903,205 @@ msgid ""
 "New security-related file `%s` added on %s in %s requires inspection by the "
 "Security Team"
 msgstr ""
+"Berkas terkait keamanan baru `%s` ditambahkan pada %s di %s memerlukan "
+"inspeksi oleh Tim Keamanan"
 
 #: lib/inspect_addedfiles.c:211
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "berkas terkait keamanan baru ${FILE} di ${ARCH}"
 
 #: lib/inspect_addedfiles.c:231
 #, c-format
 msgid "`%s` added on %s in %s"
-msgstr ""
+msgstr "`%s` ditambahkan pada %s di %s"
 
 #: lib/inspect_addedfiles.c:232
 msgid "new file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "berkas baru ${FILE} di ${ARCH}"
 
 #: lib/inspect_addedfiles.c:248
 msgid "the fileinfo list"
-msgstr ""
+msgstr "daftar fileinfo"
 
 #: lib/inspect_annocheck.c:116 lib/inspect_annocheck.c:151
 #, c-format
 msgid "*** libannocheck_enable_profile: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_profile: %s"
 
 #: lib/inspect_annocheck.c:136
 #, c-format
 msgid "*** libannocheck_get_known_profiles: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_profiles: %s"
 
 #: lib/inspect_annocheck.c:168
 msgid "NOT RUN"
-msgstr ""
+msgstr "TIDAK DIJALANKAN"
 
 #: lib/inspect_annocheck.c:170
 msgid "PASSED"
-msgstr ""
+msgstr "LOLOS"
 
 #: lib/inspect_annocheck.c:172 lib/output_summary.c:59
 msgid "FAILED"
-msgstr ""
+msgstr "GAGAL"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "MUNGKIN"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
-msgstr ""
+msgstr "dilewati"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
-msgstr ""
+msgstr "TIDAK DIKENAL"
 
 #: lib/inspect_annocheck.c:226
 #, c-format
 msgid "*** libannocheck_init: %s"
-msgstr ""
+msgstr "*** libannocheck_init: %s"
 
 #: lib/inspect_annocheck.c:255
 #, c-format
 msgid "*** libannocheck_%s_test: %s"
-msgstr ""
+msgstr "*** libannocheck_%s_test: %s"
 
 #: lib/inspect_annocheck.c:267
 #, c-format
 msgid "*** libannocheck_enable_all_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_all_tests: %s"
 
 #: lib/inspect_annocheck.c:280
 #, c-format
 msgid "*** libannocheck_reinit: %s"
-msgstr ""
+msgstr "*** libannocheck_reinit: %s"
 
 #: lib/inspect_annocheck.c:373
 #, c-format
 msgid "*** before libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** sebelum libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:382 lib/inspect_annocheck.c:426
 #, c-format
 msgid "*** libannocheck_get_known_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_tests: %s"
 
 #: lib/inspect_annocheck.c:400 lib/inspect_annocheck.c:530
 #, c-format
 msgid "*** libannocheck_finish: %s"
-msgstr ""
+msgstr "*** libannocheck_finish: %s"
 
 #: lib/inspect_annocheck.c:417
 #, c-format
 msgid "*** after libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** sesudah libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:461 lib/inspect_annocheck.c:613
 msgid "lost -D_FORTIFY_SOURCE in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "kehilangan -D_FORTIFY_SOURCE di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_annocheck.c:464
 #, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s mungkin telah kehilangan -O2 -D_FORTIFY_SOURCE pada %s"
 
 #: lib/inspect_annocheck.c:489
 #, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' terus lolos untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:492
 #, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "tes libannocheck '%s' sekarang lolos untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:495
 #, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "tes libannocheck '%s' sekarang gagal untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
 #, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "tes libannocheck '%s' gagal untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:503
 #, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "tes libannocheck '%s' lolos untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
 msgid "annocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "tes annocheck '%s' lolos untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:553
 #, c-format
 msgid "annocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "tes annocheck '%s' sekarang lolos untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:555
 #, c-format
 msgid "annocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "tes annocheck '%s' sekarang gagal untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:561 lib/inspect_annocheck.c:571
 #, c-format
 msgid "annocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "tes annocheck '%s' gagal untuk %s pada %s"
 
 #: lib/inspect_annocheck.c:616
 #, c-format
 msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s mungkin telah kehilangan -D_FORTIFY_SOURCE pada %s"
 
 #: lib/inspect_arch.c:77
 msgid "lost ${ARCH}"
-msgstr ""
+msgstr "kehilangan ${ARCH}"
 
 #: lib/inspect_arch.c:79
 #, c-format
 msgid "Architecture '%s' has disappeared"
-msgstr ""
+msgstr "Arsitektur '%s' telah menghilang"
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "mendapatkan ${ARCH}"
 
 #: lib/inspect_arch.c:96
 #, c-format
 msgid "Architecture '%s' has appeared"
-msgstr ""
+msgstr "Arsitektur '%s' telah muncul"
 
 #: lib/inspect_badfuncs.c:152
 #, c-format
 msgid "Forbidden function symbols found:\n"
-msgstr ""
+msgstr "Simbol fungsi terlarang ditemukan:\n"
 
 #: lib/inspect_badfuncs.c:168
 #, c-format
 msgid "%s may use forbidden functions on %s"
-msgstr ""
+msgstr "%s mungkin menggunakan fungsi terlarang pada %s"
 
 #: lib/inspect_badfuncs.c:175
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "fungsi terlarang di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_capabilities.c:82
 #, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
 msgstr ""
+"Kapabilitas berkas untuk %s berubah dari '%s' menjadi '%s' di %s pada %s\n"
 
 #: lib/inspect_capabilities.c:86
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr ""
+msgstr "kapabilitas ${FILE} pada ${ARCH}"
 
 #: lib/inspect_capabilities.c:98
 #, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr ""
+msgstr "Kapabilitas berkas ditemukan untuk %s: '%s' di %s pada %s\n"
 
 #: lib/inspect_capabilities.c:134
 #, c-format
@@ -1586,17 +2109,21 @@ msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
 msgstr ""
+"Entri daftar kapabilitas berkas ditemukan untuk %s: '%s' di %s pada %s, "
+"cocok dengan paket\n"
 
 #: lib/inspect_capabilities.c:145
 #, c-format
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
+"Ketidakcocokan daftar kapabilitas berkas untuk %s: diharapkan '%s', didapat "
+"'%s' di %s pada %s\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr ""
+msgstr "daftar kapabilitas ${FILE} pada ${ARCH}"
 
 #: lib/inspect_capabilities.c:165
 #, c-format
@@ -1604,42 +2131,50 @@ msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
 msgstr ""
+"Kapabilitas berkas untuk %s (%s) tidak ditemukan pada daftar kapabilitas di "
+"%s pada %s\n"
 
 #: lib/inspect_capabilities.c:184
 #, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
 msgstr ""
+"Kapabilitas berkas diharapkan untuk %s di %s tetapi tidak ditemukan pada %s: "
+"diharapkan '%s'\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
 "  Changes to security policy related files require inspection by the "
 "Security Response Team."
 msgstr ""
+"  Perubahan pada berkas terkait kebijakan keamanan memerlukan inspeksi oleh "
+"Tim Respon Keamanan."
 
 #: lib/inspect_changedfiles.c:319
 #, c-format
 msgid "Compressed %s file %s changed content in %s on %s."
-msgstr ""
+msgstr "Berkas %s terkompresi %s berubah kontennya di %s pada %s."
 
 #: lib/inspect_changedfiles.c:353 lib/inspect_changedfiles.c:367
 #, c-format
 msgid "Error running msgunfmt on %s in %s on %s; malformed mo file?"
 msgstr ""
+"Galat saat menjalankan msgunfmt pada %s di %s pada %s; berkas mo salah "
+"format?"
 
 #: lib/inspect_changedfiles.c:357 lib/inspect_changedfiles.c:371
 msgid "msgunfmt on ${FILE}"
-msgstr ""
+msgstr "msgunfmt pada ${FILE}"
 
 #: lib/inspect_changedfiles.c:382
 #, c-format
 msgid "Message catalog %s changed content in %s on %s"
-msgstr ""
+msgstr "Katalog pesan %s berubah kontennya di %s pada %s"
 
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
 msgid "${FILE}"
-msgstr ""
+msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
 #, c-format
@@ -1647,25 +2182,27 @@ msgid ""
 "Public header file %s changed content in %s on %s.  A unified diff of the "
 "changes follows."
 msgstr ""
+"Berkas header publik %s berubah kontennya di %s pada %s. Diff terpadu "
+"(unified diff) dari perubahan tersebut menyusul."
 
 #: lib/inspect_changedfiles.c:462
 #, c-format
 msgid "File %s changed content in %s on %s."
-msgstr ""
+msgstr "Berkas %s berubah kontennya di %s pada %s."
 
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
-msgstr ""
+msgstr "Inspeksi dilewati karena tipe build ini bukan `rpm'."
 
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
@@ -1673,6 +2210,8 @@ msgid ""
 "%%config file %s went from actual file to symlink (pointing to %s) in %s on "
 "%s"
 msgstr ""
+"Berkas %%config %s berubah dari berkas asli menjadi symlink (merujuk ke %s) "
+"di %s pada %s"
 
 #: lib/inspect_config.c:123
 #, c-format
@@ -1680,16 +2219,18 @@ msgid ""
 "%%config file %s was a symlink (pointing to %s), became an actual file in %s "
 "on %s"
 msgstr ""
+"Berkas %%config %s tadinya merupakan symlink (merujuk ke %s), menjadi berkas "
+"asli di %s pada %s"
 
 #: lib/inspect_config.c:132
 #, c-format
 msgid "Symlink value for %%config file %s changed in %s on %s."
-msgstr ""
+msgstr "Nilai symlink untuk berkas %%config %s berubah di %s pada %s."
 
 #: lib/inspect_config.c:153
 #, c-format
 msgid "%%config file content change for %s in %s on %s"
-msgstr ""
+msgstr "Perubahan konten berkas %%config untuk %s di %s pada %s"
 
 #: lib/inspect_config.c:168
 #, c-format
@@ -1697,66 +2238,68 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
+"Perubahan berkas %%config untuk %s di %s pada %s (%sditandai sebagai "
+"%%config -> %sditandai sebagai %%config)\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
 msgid "not "
-msgstr ""
+msgstr "tidak "
 
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "%s di %s pada %s kehilangan simbol debugging"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "kehilangan simbol debugging"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "Hilang: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%s di %s pada %s mengandung simbol debugging"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "mengandung simbol debugging"
 
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "Mengandung: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%s di %s pada %s mendapatkan simbol debugging"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "mendapatkan simbol debugging"
 
 #: lib/inspect_debuginfo.c:266
 #, c-format
 msgid "Gained: %s"
-msgstr ""
+msgstr "Mendapatkan: %s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%s di %s pada %s kehilangan simbol debugging"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "kehilangan simbol debugging"
 
 #: lib/inspect_debuginfo.c:292
 #, c-format
 msgid "Lost: %s"
-msgstr ""
+msgstr "Kehilangan: %s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
@@ -1764,10 +2307,12 @@ msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
 msgstr ""
+"%s di %s pada %s membawa .gosymtab tetapi seharusnya tidak memiliki simbol "
+".gnu_debugdata"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnu_debugdata dengan .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
@@ -1775,10 +2320,12 @@ msgid ""
 "Desktop file %s on %s references executable %s but %s is not executable by "
 "all"
 msgstr ""
+"Berkas desktop %s pada %s merujuk eksekutabel %s tetapi %s tidak dapat "
+"dieksekusi oleh semua"
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${FILE} merujuk berkas yang tidak dapat dieksekusi pada ${ARCH}"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -1787,6 +2334,9 @@ msgid ""
 "executable of that name, however it has a TryExec key so it may be ignored "
 "in case %s does not exist"
 msgstr ""
+"Berkas desktop %s pada %s merujuk eksekutabel %s; tidak ada sub-paket yang "
+"berisi eksekutabel dengan nama tersebut, namun memiliki kunci TryExec "
+"sehingga mungkin diabaikan jika %s tidak ada"
 
 #: lib/inspect_desktop.c:308
 #, c-format
@@ -1794,32 +2344,38 @@ msgid ""
 "Desktop file %s on %s references executable %s but no subpackages contain an "
 "executable of that name"
 msgstr ""
+"Berkas desktop %s pada %s merujuk eksekutabel %s tetapi tidak ada sub-paket "
+"yang berisi eksekutabel dengan nama tersebut"
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} merujuk eksekutabel yang hilang pada ${ARCH}"
 
 #: lib/inspect_desktop.c:354
 #, c-format
 msgid "Desktop file %s on %s references icon %s but %s is not readable by all"
 msgstr ""
+"Berkas desktop %s pada %s merujuk ikon %s tetapi %s tidak dapat dibaca oleh "
+"semua"
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} merujuk ikon yang tidak dapat dibaca pada ${ARCH}"
 
 #: lib/inspect_desktop.c:376
 #, c-format
 msgid "Desktop file %s on %s references icon %s but no subpackages contain %s"
 msgstr ""
+"Berkas desktop %s pada %s merujuk ikon %s tetapi tidak ada sub-paket yang "
+"berisi %s"
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} merujuk ikon yang hilang pada ${ARCH}"
 
 #: lib/inspect_desktop.c:452
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr ""
+msgstr "${FILE} tidak valid pada ${ARCH}"
 
 #: lib/inspect_desktop.c:455
 #, c-format
@@ -1827,27 +2383,33 @@ msgid ""
 "File %s is no longer a valid desktop entry file on %s; desktop-file-validate "
 "reports:"
 msgstr ""
+"Berkas %s bukan lagi berkas entri desktop yang valid pada %s; laporan "
+"desktop-file-validate:"
 
 #: lib/inspect_desktop.c:457
 #, c-format
 msgid ""
 "New file %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"Berkas baru %s bukan berkas desktop yang valid pada %s; laporan desktop-file-"
+"validate:"
 
 #: lib/inspect_desktop.c:459
 #, c-format
 msgid ""
 "File %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"Berkas %s bukan berkas desktop yang valid pada %s; laporan desktop-file-"
+"validate:"
 
 #: lib/inspect_disttag.c:184
 #, c-format
 msgid "The %s file is missing the %s tag."
-msgstr ""
+msgstr "Berkas %s kehilangan tag %s."
 
 #: lib/inspect_disttag.c:186
 msgid "${FILE} missing Release tag"
-msgstr ""
+msgstr "${FILE} kehilangan tag Release"
 
 #: lib/inspect_disttag.c:192
 #, c-format
@@ -1856,25 +2418,29 @@ msgid ""
 "should be of the form '%s' in the %s tag or in a macro used in the %s tag. "
 "After RPM macro expansion, no dist tag was found in this %s tag value."
 msgstr ""
+"Nilai tag %s kehilangan tag dist dalam format yang benar. Tag dist "
+"seharusnya dalam bentuk '%s' di dalam tag %s atau dalam makro yang digunakan "
+"dalam tag %s. Setelah ekspansi makro RPM, tidak ada tag dist yang ditemukan "
+"dalam nilai tag %s ini."
 
 #: lib/inspect_disttag.c:194
 #, c-format
 msgid "${FILE} does not use '%%{?dist}' in Release"
-msgstr ""
+msgstr "${FILE} tidak menggunakan '%%{?dist}' dalam Release"
 
 #: lib/inspect_disttag.c:263
 msgid "Specified package is not a source RPM, skipping."
-msgstr ""
+msgstr "Paket yang ditentukan bukan merupakan RPM sumber, dilewati."
 
 #: lib/inspect_doc.c:71
 #, c-format
 msgid "%doc ${FILE}"
-msgstr ""
+msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
 #, c-format
 msgid "%%doc file content change for %s in %s on %s\n"
-msgstr ""
+msgstr "Perubahan konten berkas %%doc untuk %s di %s pada %s\n"
 
 #: lib/inspect_doc.c:113
 #, c-format
@@ -1882,134 +2448,146 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
+"Perubahan berkas %%doc untuk %s di %s pada %s (%sditandai sebagai %%doc -> "
+"%sditandai sebagai %%doc)\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
 msgid "%s was an ELF file and now is not on %s"
-msgstr ""
+msgstr "%s tadinya adalah berkas ELF dan sekarang bukan pada %s"
 
 #: lib/inspect_dsodeps.c:96 lib/inspect_dsodeps.c:108
 msgid "ELF file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "berkas ELF ${FILE} pada ${ARCH}"
 
 #: lib/inspect_dsodeps.c:106
 #, c-format
 msgid "%s was a dynamic ELF file and now is not on %s"
-msgstr ""
+msgstr "%s tadinya adalah berkas ELF dinamis dan sekarang bukan pada %s"
 
 #: lib/inspect_dsodeps.c:146
 #, c-format
 msgid "DT_NEEDED symbol(s) removed from %s on %s"
-msgstr ""
+msgstr "Simbol DT_NEEDED dihapus dari %s pada %s"
 
 #: lib/inspect_dsodeps.c:148 lib/inspect_dsodeps.c:165
 msgid "DT_NEEDED symbol(s) in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Simbol DT_NEEDED dalam ${FILE} pada ${ARCH}"
 
 #: lib/inspect_dsodeps.c:163
 #, c-format
 msgid "DT_NEEDED symbol(s) added to %s on %s"
-msgstr ""
+msgstr "Simbol DT_NEEDED ditambahkan ke %s pada %s"
 
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
 msgstr ""
+"Objek masih memiliki stack yang dapat dieksekusi (tidak ada catatan GNU-"
+"stack): %s pada %s"
 
 #: lib/inspect_elf.c:435
 #, c-format
 msgid "Object has executable stack (no GNU-stack note): %s on %s"
 msgstr ""
+"Objek memiliki stack yang dapat dieksekusi (tidak ada catatan GNU-stack): %s "
+"pada %s"
 
 #: lib/inspect_elf.c:438
 #, c-format
 msgid "Program built without GNU_STACK: %s on %s"
-msgstr ""
+msgstr "Program di-build tanpa GNU_STACK: %s pada %s"
 
 #: lib/inspect_elf.c:444
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "GNU_STACK di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_elf.c:496
 #, c-format
 msgid "File %s has invalid execstack flags (%s) on %s"
-msgstr ""
+msgstr "Berkas %s memiliki flag execstack tidak valid (%s) pada %s"
 
 #: lib/inspect_elf.c:501
 #, c-format
 msgid "File %s has unrecognized GNU_STACK '%s' (expected RW or RWE) on %s"
 msgstr ""
+"Berkas %s memiliki GNU_STACK '%s' yang tidak dikenali (diharapkan RW atau "
+"RWE) pada %s"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "execstack di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_elf.c:525
 #, c-format
 msgid "Object still has executable stack (GNU-stack note = X): %s on %s"
 msgstr ""
+"Objek masih memiliki stack yang dapat dieksekusi (catatan GNU-stack = X): %s "
+"pada %s"
 
 #: lib/inspect_elf.c:527
 #, c-format
 msgid "Object has executable stack (GNU-stack note = X): %s on %s"
 msgstr ""
+"Objek memiliki stack yang dapat dieksekusi (catatan GNU-stack = X): %s pada "
+"%s"
 
 #: lib/inspect_elf.c:531
 #, c-format
 msgid "Stack is still executable: %s on %s"
-msgstr ""
+msgstr "Stack masih dapat dieksekusi: %s pada %s"
 
 #: lib/inspect_elf.c:533
 #, c-format
 msgid "Stack is executable: %s on %s"
-msgstr ""
+msgstr "Stack dapat dieksekusi: %s pada %s"
 
 #: lib/inspect_elf.c:564
 #, c-format
 msgid "%s lost full GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s kehilangan perlindungan keamanan penuh GNU_RELRO pada %s"
 
 #: lib/inspect_elf.c:567
 #, c-format
 msgid "%s lost GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s kehilangan perlindungan keamanan GNU_RELRO pada %s"
 
 #: lib/inspect_elf.c:578
 msgid "lost GNU_RELRO in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "kehilangan GNU_RELRO di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_elf.c:725
 #, c-format
 msgid "The following objects lost -fPIC:\n"
-msgstr ""
+msgstr "Objek-objek berikut kehilangan -fPIC:\n"
 
 #: lib/inspect_elf.c:742
 #, c-format
 msgid "The following new objects were built without -fPIC:\n"
-msgstr ""
+msgstr "Objek-objek baru berikut di-build tanpa -fPIC:\n"
 
 #: lib/inspect_elf.c:755
 #, c-format
 msgid "%s in %s has objects built without -fPIC on %s"
-msgstr ""
+msgstr "%s di %s memiliki objek yang di-build tanpa -fPIC pada %s"
 
 #: lib/inspect_elf.c:763
 msgid "missing -fPIC in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "kehilangan -fPIC di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_elf.c:799
 msgid "TEXTREL relocations in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Relokasi TEXTREL di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_elf.c:814
 #, c-format
 msgid "%s in %s acquired TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s di %s memperoleh relokasi TEXTREL pada %s"
 
 #: lib/inspect_elf.c:817
 #, c-format
 msgid "%s in %s has TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s di %s memiliki relokasi TEXTREL pada %s"
 
 #: lib/inspect_emptyrpm.c:95
 #, c-format
@@ -2017,6 +2595,8 @@ msgid ""
 "New package %s is empty (no payloads); this is expected per the rpminspect "
 "configuration"
 msgstr ""
+"Paket baru %s kosong (tidak ada payload); hal ini diharapkan sesuai dengan "
+"konfigurasi rpminspect"
 
 #: lib/inspect_emptyrpm.c:105
 #, c-format
@@ -2024,65 +2604,67 @@ msgid ""
 "New package %s is empty (no payloads); this is expected because the package "
 "only contains %%ghost entries"
 msgstr ""
+"Paket baru %s kosong (tidak ada payload); hal ini diharapkan karena paket "
+"hanya berisi entri %%ghost"
 
 #: lib/inspect_emptyrpm.c:116
 #, c-format
 msgid "New package %s is empty (no payloads)"
-msgstr ""
+msgstr "Paket baru %s kosong (tidak ada payload)"
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} memiliki payload kosong"
 
 #: lib/inspect_files.c:111
 #, c-format
 msgid "Forbidden path reference (%s) on line %ld of %s"
-msgstr ""
+msgstr "Referensi jalur terlarang (%s) pada baris %ld di %s"
 
 #: lib/inspect_files.c:113
 #, c-format
 msgid "invalid spec line: %s"
-msgstr ""
+msgstr "baris spek tidak valid: %s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Inspeksi berkas hanya untuk paket sumber, dilewati."
 
 #: lib/inspect_filesize.c:67
 #, c-format
 msgid "%s became a non-empty file on %s"
-msgstr ""
+msgstr "%s menjadi berkas tidak kosong pada %s"
 
 #: lib/inspect_filesize.c:71
 msgid "non-empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${FILE} tidak kosong pada ${ARCH}"
 
 #: lib/inspect_filesize.c:76
 #, c-format
 msgid "%s became an empty file on %s"
-msgstr ""
+msgstr "%s menjadi berkas kosong pada %s"
 
 #: lib/inspect_filesize.c:80
 msgid "empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${FILE} kosong pada ${ARCH}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
 msgid "%s grew by %lld%% on %s"
-msgstr ""
+msgstr "%s bertambah sebesar %lld%% pada %s"
 
 #: lib/inspect_filesize.c:99
 msgid "${FILE} size grew on ${ARCH}"
-msgstr ""
+msgstr "ukuran ${FILE} bertambah pada ${ARCH}"
 
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr ""
+msgstr "%s berkurang sebesar %lld%% pada %s"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr ""
+msgstr "ukuran ${FILE} berkurang pada ${ARCH}"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2090,10 +2672,12 @@ msgid ""
 "File %s (%s), Java byte code version %d is incorrect (wrong endianness? "
 "corrupted file? space JDK?)"
 msgstr ""
+"Berkas %s (%s), versi bytecode Java %d tidak benar (salah endianness? berkas "
+"rusak? JDK ruang?)"
 
 #: lib/inspect_javabytecode.c:131
 msgid "incorrect Java byte code version in ${FILE}"
-msgstr ""
+msgstr "versi bytecode Java tidak benar di ${FILE}"
 
 #: lib/inspect_javabytecode.c:136
 #, c-format
@@ -2101,33 +2685,37 @@ msgid ""
 "File %s (%s), Java byte code version %d greater than supported major version "
 "%d for product release %s"
 msgstr ""
+"Berkas %s (%s), versi bytecode Java %d lebih besar dari versi utama yang "
+"didukung %d untuk rilis produk %s"
 
 #: lib/inspect_javabytecode.c:137
 msgid "Java byte code version too new in ${FILE}"
-msgstr ""
+msgstr "Versi bytecode Java terlalu baru di ${FILE}"
 
 #: lib/inspect_javabytecode.c:152
 #, c-format
 msgid "Java byte code version changed from %d to %d in %s from %s"
-msgstr ""
+msgstr "Versi bytecode Java berubah dari %d menjadi %d di %s dari %s"
 
 #: lib/inspect_javabytecode.c:153
 msgid "Java byte code version changed in ${FILE}"
-msgstr ""
+msgstr "Versi bytecode Java berubah di ${FILE}"
 
 #: lib/inspect_javabytecode.c:255 lib/inspect_javabytecode.c:267
 msgid "*** missing JVM version to product release mapping"
-msgstr ""
+msgstr "*** pemetaan versi JVM ke rilis produk tidak ada"
 
 #: lib/inspect_kmidiff.c:252
 #, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s generated a kmidiff(1) usage error."
 msgstr ""
+"Membandingkan %s dengan %s dalam paket %s pada %s menghasilkan galat "
+"penggunaan kmidiff(1)."
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "galat penggunaan kmidiff"
 
 #: lib/inspect_kmidiff.c:256
 #, c-format
@@ -2135,10 +2723,12 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed Kernel Module Interface "
 "(KMI) differences."
 msgstr ""
+"Membandingkan %s dengan %s dalam paket %s pada %s mengungkapkan perbedaan "
+"Interface Modul Kernel (KMI)."
 
 #: lib/inspect_kmidiff.c:258
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "perubahan KMI di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_kmidiff.c:260
 #, c-format
@@ -2146,20 +2736,24 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed incompatible Kernel Module "
 "Interface (KMI) differences."
 msgstr ""
+"Membandingkan %s dengan %s dalam paket %s pada %s mengungkapkan perbedaan "
+"Interface Modul Kernel (KMI) yang tidak kompatibel."
 
 #: lib/inspect_kmidiff.c:263
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "perubahan KMI tidak kompatibel di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_kmidiff.c:265
 #, c-format
 msgid ""
 "kmidiff(1) comparison of %s to %s in package %s on %s ended unexpectedly."
 msgstr ""
+"Perbandingan kmidiff(1) antara %s dengan %s dalam paket %s pada %s berakhir "
+"secara tidak terduga."
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "kmidiff keluar secara tidak terduga"
 
 #: lib/inspect_kmidiff.c:274
 #, c-format
@@ -2167,197 +2761,204 @@ msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
+"Perintah: %s\n"
+"Kode keluar: %d%s%s"
 
 #: lib/inspect_kmod.c:28
 msgid "${FILE} kernel module alias on ${ARCH}"
-msgstr ""
+msgstr "alias modul kernel ${FILE} pada ${ARCH}"
 
 #: lib/inspect_kmod.c:31
 #, c-format
 msgid "Kernel module '%s' lost alias '%s'"
-msgstr ""
+msgstr "Modul kernel '%s' kehilangan alias '%s'"
 
 #: lib/inspect_kmod.c:41
 #, c-format
 msgid "Kernel module '%s' gained alias '%s'"
-msgstr ""
+msgstr "Modul kernel '%s' mendapatkan alias '%s'"
 
 #: lib/inspect_kmod.c:188
 #, c-format
 msgid "Kernel module %s removes parameter '%s' (was present in %s)."
-msgstr ""
+msgstr "Modul kernel %s menghapus parameter '%s' (sebelumnya ada di %s)."
 
 #: lib/inspect_kmod.c:191 lib/inspect_kmod.c:208
 msgid "${FILE} kernel module parameter on ${ARCH}"
-msgstr ""
+msgstr "parameter modul kernel ${FILE} pada ${ARCH}"
 
 #: lib/inspect_kmod.c:205
 #, c-format
 msgid "Kernel module %s adds parameter '%s' (was not present in %s)."
 msgstr ""
+"Modul kernel %s menambahkan parameter '%s' (sebelumnya tidak ada di %s)."
 
 #: lib/inspect_kmod.c:226
 #, c-format
 msgid "Kernel module %s removes dependency '%s' (was present in %s)."
-msgstr ""
+msgstr "Modul kernel %s menghapus dependensi '%s' (sebelumnya ada di %s)."
 
 #: lib/inspect_kmod.c:229
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr ""
+msgstr "dependensi modul kernel ${FILE} pada ${ARCH}"
 
 #: lib/inspect_kmod.c:243
 #, c-format
 msgid "Kernel module %s adds dependency '%s' (was not present in %s)."
 msgstr ""
+"Modul kernel %s menambahkan dependensi '%s' (sebelumnya tidak ada di %s)."
 
 #: lib/inspect_kmod.c:246
 msgid "${FILE} kernel module parameter"
-msgstr ""
+msgstr "parameter modul kernel ${FILE}"
 
 #: lib/inspect_license.c:47
 #, c-format
 msgid "*** parse error in license database %s"
-msgstr ""
+msgstr "*** galat parse dalam basis data lisensi %s"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
-msgstr ""
+msgstr "*** masalah saat memeriksa basis data lisensi"
 
 #: lib/inspect_license.c:464
 #, c-format
 msgid "Unapproved license in %s: %s"
-msgstr ""
+msgstr "Lisensi tidak disetujui dalam %s: %s"
 
 #: lib/inspect_license.c:505
 #, c-format
 msgid "Empty License Tag in %s"
-msgstr ""
+msgstr "Tag License kosong dalam %s"
 
 #: lib/inspect_license.c:509
 msgid "missing License tag in ${FILE}"
-msgstr ""
+msgstr "tag License hilang di ${FILE}"
 
 #: lib/inspect_license.c:518
 #, c-format
 msgid "Valid License Tag in %s: %s"
-msgstr ""
+msgstr "Tag License valid dalam %s: %s"
 
 #: lib/inspect_license.c:532
 #, c-format
 msgid "License Tag contains unprofessional language in %s: %s"
-msgstr ""
+msgstr "Tag License mengandung bahasa tidak profesional dalam %s: %s"
 
 #: lib/inspect_license.c:536
 msgid "unprofessional language in License tag in ${FILE}"
-msgstr ""
+msgstr "bahasa tidak profesional dalam tag License di ${FILE}"
 
 #: lib/inspect_license.c:573
 msgid "Missing license database(s)."
-msgstr ""
+msgstr "Basis data lisensi hilang."
 
 #: lib/inspect_license.c:577
 msgid "missing license database"
-msgstr ""
+msgstr "basis data lisensi hilang"
 
 #: lib/inspect_lostpayload.c:62
 #, c-format
 msgid "Existing subpackage %s is now missing on %s"
-msgstr ""
+msgstr "Sub-paket %s yang sudah ada kini hilang pada %s"
 
 #: lib/inspect_lostpayload.c:66
 msgid "missing subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "sub-paket ${FILE} hilang pada ${ARCH}"
 
 #: lib/inspect_lostpayload.c:82
 #, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr ""
+msgstr "Paket %s pada %s terus menjadi kosong (tidak ada payload)"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "sub-paket kosong yang sudah ada ${FILE} pada ${ARCH}"
 
 #: lib/inspect_lostpayload.c:93
 #, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr ""
+msgstr "Paket %s pada %s menjadi kosong (tidak ada payload)"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "sub-paket ${FILE} pada ${ARCH} sekarang memiliki payload kosong"
 
 #: lib/inspect_lto.c:144
 msgid "${FILE} not portable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} tidak portabel pada ${ARCH}"
 
 #: lib/inspect_lto.c:152
 #, c-format
 msgid ""
 "%s contains symbols [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s mengandung simbol [%s] pada %s; ini tidak portabel antar versi kompilator"
 
 #: lib/inspect_lto.c:168
 #, c-format
 msgid ""
 "%s contains symbol [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s mengandung simbol [%s] pada %s; ini tidak portabel antar versi kompilator"
 
 #: lib/inspect_manpage.c:52
 #, c-format
 msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
-msgstr ""
+msgstr "Galat saat mengurai %s:%d:%d: %s: %s: %s\n"
 
 #: lib/inspect_manpage.c:81
 #, c-format
 msgid "*** unable to compile man page path regular expression: %s"
-msgstr ""
+msgstr "*** tidak dapat mengompilasi ekspresi reguler jalur halaman man: %s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
 msgid "Unable to open man page %s\n"
-msgstr ""
+msgstr "Tidak dapat membuka halaman man %s\n"
 
 #: lib/inspect_manpage.c:187
 #, c-format
 msgid "Man page %s does not end in %s\n"
-msgstr ""
+msgstr "Halaman man %s tidak berakhiran %s\n"
 
 #: lib/inspect_manpage.c:195
 #, c-format
 msgid "man page with %s suffix is not really compressed with gzip\n"
 msgstr ""
+"halaman man dengan akhiran %s tidak benar-benar dikompresi dengan gzip\n"
 
 #: lib/inspect_manpage.c:236
 #, c-format
 msgid "Errors found validating %s\n"
-msgstr ""
+msgstr "Kesalahan ditemukan saat memvalidasi %s\n"
 
 #: lib/inspect_manpage.c:299
 #, c-format
 msgid "Man page %s is possibly empty on %s in %s"
-msgstr ""
+msgstr "Halaman man %s kemungkinan kosong pada %s di %s"
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "halaman man kosong ${FILE} pada ${ARCH}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
 msgid "Man page checker reported problems with %s on %s in %s"
-msgstr ""
+msgstr "Pemeriksa halaman man melaporkan masalah dengan %s pada %s di %s"
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr ""
+msgstr "halaman man ${FILE} pada ${ARCH} memiliki kesalahan"
 
 #: lib/inspect_manpage.c:327
 #, c-format
 msgid "Man page %s has incorrect path on %s in %s"
-msgstr ""
+msgstr "Halaman man %s memiliki jalur yang salah pada %s di %s"
 
 #: lib/inspect_manpage.c:330
 msgid "man page ${FILE} on ${ARCH} has incorrect path"
-msgstr ""
+msgstr "halaman man ${FILE} pada ${ARCH} memiliki jalur yang salah"
 
 #: lib/inspect_metadata.c:40
 #, c-format
@@ -2365,15 +2966,17 @@ msgid ""
 "Vendor not set in the rpminspect configuration, ignoring Package Vendor "
 "\"%s\" in %s"
 msgstr ""
+"Vendor tidak ditetapkan dalam konfigurasi rpminspect, mengabaikan Vendor "
+"Paket \"%s\" di %s"
 
 #: lib/inspect_metadata.c:51
 #, c-format
 msgid "Package Vendor \"%s\" is not \"%s\" in %s"
-msgstr ""
+msgstr "Vendor Paket \"%s\" bukan \"%s\" di %s"
 
 #: lib/inspect_metadata.c:55
 msgid "invalid vendor ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "vendor tidak valid ${FILE} pada ${ARCH}"
 
 #: lib/inspect_metadata.c:76
 #, c-format
@@ -2381,58 +2984,60 @@ msgid ""
 "Package Build Host \"%s\" is not within an expected build host subdomain in "
 "%s"
 msgstr ""
+"Host Build Paket \"%s\" tidak berada dalam subdomain host build yang "
+"diharapkan di %s"
 
 #: lib/inspect_metadata.c:80
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "host build tidak valid ${FILE} pada ${ARCH}"
 
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr ""
+msgstr "Ringkasan Paket mengandung bahasa tidak profesional di %s"
 
 #: lib/inspect_metadata.c:93
 #, c-format
 msgid "Summary: %s"
-msgstr ""
+msgstr "Ringkasan: %s"
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "Ringkasan mengandung kata-kata tidak profesional pada ${ARCH}"
 
 #: lib/inspect_metadata.c:109
 #, c-format
 msgid "Package Description contains unprofessional language in %s:"
-msgstr ""
+msgstr "Deskripsi Paket mengandung bahasa tidak profesional di %s:"
 
 #: lib/inspect_metadata.c:114
 msgid "Description contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "Deskripsi mengandung kata-kata tidak profesional pada ${ARCH}"
 
 #: lib/inspect_metadata.c:134
 #, c-format
 msgid "Gained Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "Mendapatkan Vendor Paket \"%s\" di %s"
 
 #: lib/inspect_metadata.c:136
 #, c-format
 msgid "Lost Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "Kehilangan Vendor Paket \"%s\" di %s"
 
 #: lib/inspect_metadata.c:138
 #, c-format
 msgid "Package Vendor changed from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Vendor Paket berubah dari \"%s\" menjadi \"%s\" di %s"
 
 #: lib/inspect_metadata.c:156
 #, c-format
 msgid "Package Summary change from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Ringkasan Paket berubah dari \"%s\" menjadi \"%s\" di %s"
 
 #: lib/inspect_metadata.c:169
 #, c-format
 msgid "Package Description changed in %s"
-msgstr ""
+msgstr "Deskripsi Paket berubah di %s"
 
 #: lib/inspect_metadata.c:170
 #, c-format
@@ -2445,6 +3050,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"dari:\n"
+"\n"
+"%s\n"
+"\n"
+"menjadi:\n"
+"\n"
+"%s"
 
 #: lib/inspect_modularity.c:119
 #, c-format
@@ -2452,6 +3064,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "forbid the presence of /data/static_context in the module metadata."
 msgstr ""
+"Nilai /data/static_context di %s adalah %s, tetapi aturan rilis produk "
+"melarang keberadaan /data/static_context dalam metadata modul."
 
 #: lib/inspect_modularity.c:125
 #, c-format
@@ -2459,6 +3073,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "require the presence of /data/static_context in the module metadata."
 msgstr ""
+"Nilai /data/static_context di %s adalah %s, tetapi aturan rilis produk "
+"mewajibkan keberadaan /data/static_context dalam metadata modul."
 
 #: lib/inspect_modularity.c:131
 #, c-format
@@ -2466,6 +3082,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "recommend the presence of /data/static_context in the module metadata."
 msgstr ""
+"Nilai /data/static_context di %s adalah %s, tetapi aturan rilis produk "
+"merekomendasikan keberadaan /data/static_context dalam metadata modul."
 
 #: lib/inspect_modularity.c:133
 #, c-format
@@ -2473,6 +3091,8 @@ msgid ""
 "The /data/static_context value in %s is %s, and the product release rules do "
 "not have a setting for /data/static_context in the module metadata."
 msgstr ""
+"Nilai /data/static_context di %s adalah %s, dan aturan rilis produk tidak "
+"memiliki pengaturan untuk /data/static_context dalam metadata modul."
 
 #: lib/inspect_modularity.c:135
 #, c-format
@@ -2480,16 +3100,18 @@ msgid ""
 "The /data/static_context value in %s is %s as required by the product "
 "release rules."
 msgstr ""
+"Nilai /data/static_context di %s adalah %s sebagaimana diwajibkan oleh "
+"aturan rilis produk."
 
 #: lib/inspect_modularity.c:143
 #, c-format
 msgid "%s The /data/static_context value is the same as in %s."
-msgstr ""
+msgstr "%s Nilai /data/static_context sama dengan yang ada di %s."
 
 #: lib/inspect_modularity.c:145
 #, c-format
 msgid "%s The /data/static_context value has changed since %s."
-msgstr ""
+msgstr "%s Nilai /data/static_context telah berubah sejak %s."
 
 #: lib/inspect_modularity.c:180
 #, c-format
@@ -2497,47 +3119,49 @@ msgid ""
 "Package \"%s\" is part of a module but lacks the '%%{modularitylabel}' "
 "header tag."
 msgstr ""
+"Paket \"%s\" adalah bagian dari modul tetapi tidak memiliki tag header '%%"
+"{modularitylabel}'."
 
 #: lib/inspect_modularity.c:224
 msgid "Inspection skipped because this build's type is not `module'."
-msgstr ""
+msgstr "Inspeksi dilewati karena tipe build ini bukan `module'."
 
 #: lib/inspect_movedfiles.c:52
 #, c-format
 msgid "%s moved to ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "%s pindah ke ${FILE} pada ${ARCH}"
 
 #: lib/inspect_movedfiles.c:55
 #, c-format
 msgid "%s probably moved to %s on %s\n"
-msgstr ""
+msgstr "%s kemungkinan pindah ke %s pada %s\n"
 
 #: lib/inspect_ownership.c:77
 #, c-format
 msgid "File %s has forbidden owner `%s` on %s"
-msgstr ""
+msgstr "Berkas %s memiliki pemilik terlarang `%s` pada %s"
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "pemilik terlarang untuk ${FILE} pada ${ARCH}"
 
 #: lib/inspect_ownership.c:92
 #, c-format
 msgid "File %s has forbidden group `%s` on %s"
-msgstr ""
+msgstr "Berkas %s memiliki grup terlarang `%s` pada %s"
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "grup terlarang untuk ${FILE} pada ${ARCH}"
 
 #: lib/inspect_ownership.c:119
 #, c-format
 msgid "File %s has owner `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "Berkas %s memiliki pemilik `%s` pada %s, tetapi seharusnya `%s`"
 
 #: lib/inspect_ownership.c:124
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "pemilik tidak valid untuk ${FILE} pada ${ARCH}"
 
 #: lib/inspect_ownership.c:162
 #, c-format
@@ -2545,38 +3169,42 @@ msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is world "
 "executable"
 msgstr ""
+"Berkas %s pada %s memiliki kapabilitas CAP_SETUID tetapi grupnya `%s` dan "
+"dapat dieksekusi oleh world"
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID dan o+x untuk ${FILE} pada ${ARCH}"
 
 #: lib/inspect_ownership.c:179
 #, c-format
 msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is group writable"
 msgstr ""
+"Berkas %s pada %s memiliki kapabilitas CAP_SETUID tetapi grupnya `%s` dan "
+"dapat ditulis oleh grup"
 
 #: lib/inspect_ownership.c:183
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID dan g+w untuk ${FILE} pada ${ARCH}"
 
 #: lib/inspect_ownership.c:199
 #, c-format
 msgid "File %s has group `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "Berkas %s memiliki grup `%s` pada %s, tetapi seharusnya `%s`"
 
 #: lib/inspect_ownership.c:204
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "grup tidak valid untuk ${FILE} pada ${ARCH}"
 
 #: lib/inspect_ownership.c:268
 #, c-format
 msgid "File %s changed %s from `%s` to `%s` on %s"
-msgstr ""
+msgstr "Berkas %s berubah %s dari `%s` menjadi `%s` pada %s"
 
 #: lib/inspect_ownership.c:270
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr ""
+msgstr "${FILE} berubah pemilik pada ${ARCH}"
 
 #: lib/inspect_patches.c:395
 #, c-format
@@ -2584,188 +3212,190 @@ msgid ""
 "Patch number %ld (%s) is missing a corresponding %%patch%ld macro, usually "
 "in %%prep."
 msgstr ""
+"Nomor patch %ld (%s) kehilangan makro %%patch%ld yang sesuai, biasanya di "
+"%%prep."
 
 #: lib/inspect_patches.c:397
 #, c-format
 msgid "missing %%patch macro for ${FILE}"
-msgstr ""
+msgstr "makro %%patch hilang untuk ${FILE}"
 
 #: lib/inspect_patches.c:399
 #, c-format
 msgid "Patch number %ld (%s) is mismatched with %%patch%ld macro."
-msgstr ""
+msgstr "Nomor patch %ld (%s) tidak cocok dengan makro %%patch%ld."
 
 #: lib/inspect_patches.c:401
 #, c-format
 msgid "mismatched %%patch macro for ${FILE}"
-msgstr ""
+msgstr "makro %%patch tidak cocok untuk ${FILE}"
 
 #: lib/inspect_patches.c:422
 msgid "undefined Patch ${FILE}"
-msgstr ""
+msgstr "Patch ${FILE} tidak ditentukan"
 
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "Berkas Patch %s tidak ditentukan."
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
 #, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr ""
+msgstr "*** tidak dapat membuka kompresi patch: %s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
-msgstr ""
+msgstr "patch ${FILE} rusak"
 
 #: lib/inspect_patches.c:477 lib/inspect_patches.c:484
 #, c-format
 msgid "Patch %s is under 4 bytes in size - is it corrupt?"
-msgstr ""
+msgstr "Patch %s berukuran di bawah 4 bita - apakah rusak?"
 
 #: lib/inspect_patches.c:506
 #, c-format
 msgid "%s changed (%ld bytes -> %ld bytes)"
-msgstr ""
+msgstr "%s berubah (%ld bita -> %ld bita)"
 
 #: lib/inspect_patches.c:510 lib/inspect_patches.c:535
 msgid "patch file ${FILE}"
-msgstr ""
+msgstr "berkas patch ${FILE}"
 
 #: lib/inspect_patches.c:531
 #, c-format
 msgid "New patch file `%s` appeared"
-msgstr ""
+msgstr "Berkas patch baru `%s` muncul"
 
 #: lib/inspect_patches.c:551
 msgid "patch changes ${FILE}"
-msgstr ""
+msgstr "perubahan patch ${FILE}"
 
 #: lib/inspect_patches.c:555
 #, c-format
 msgid "%s touches as many as %ld line%s"
-msgstr ""
+msgstr "%s menyentuh sebanyak %ld baris%s"
 
 #: lib/inspect_patches.c:557
 #, c-format
 msgid "%s touches %ld file%s"
-msgstr ""
+msgstr "%s menyentuh %ld berkas%s"
 
 #: lib/inspect_patches.c:559
 #, c-format
 msgid "%s touches %ld file%s and %s%ld line%s"
-msgstr ""
+msgstr "%s menyentuh %ld berkas%s dan %s%ld baris%s"
 
 #: lib/inspect_patches.c:559
 msgid "as many as "
-msgstr ""
+msgstr "sebanyak "
 
 #: lib/inspect_patches.c:626 lib/inspect_upstream.c:141
 msgid "No source packages available, skipping inspection."
-msgstr ""
+msgstr "Tidak ada paket sumber yang tersedia, melewati inspeksi."
 
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "Berkas patch `%s` yang tidak tertangani ditentukan dalam berkas spek"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** baris %%patch tidak dikenali: %s"
 
 #: lib/inspect_patches.c:828
 #, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr ""
+msgstr "*** tidak dapat membaca baris berkas spek: %s"
 
 #: lib/inspect_patches.c:881
 #, c-format
 msgid "Patch file `%s` removed"
-msgstr ""
+msgstr "Berkas patch `%s` dihapus"
 
 #: lib/inspect_pathmigration.c:81
 #, c-format
 msgid "File %s found should be in %s on %s"
-msgstr ""
+msgstr "Berkas %s ditemukan seharusnya berada di %s pada %s"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} seharusnya berada di %s pada ${ARCH}"
 
 #: lib/inspect_permissions.c:84
 msgid " changed setuid/setgid;"
-msgstr ""
+msgstr " berubah setuid/setgid;"
 
 #: lib/inspect_permissions.c:89
 msgid " became a directory;"
-msgstr ""
+msgstr " menjadi direktori;"
 
 #: lib/inspect_permissions.c:91
 msgid " became a character device;"
-msgstr ""
+msgstr " menjadi perangkat karakter;"
 
 #: lib/inspect_permissions.c:93
 msgid " became a block device;"
-msgstr ""
+msgstr " menjadi perangkat blok;"
 
 #: lib/inspect_permissions.c:95
 msgid " became a regular file;"
-msgstr ""
+msgstr " menjadi berkas reguler;"
 
 #: lib/inspect_permissions.c:97
 msgid " became a FIFO;"
-msgstr ""
+msgstr " menjadi FIFO;"
 
 #: lib/inspect_permissions.c:99
 msgid " became a symbolic link;"
-msgstr ""
+msgstr " menjadi tautan simbolik;"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " menjadi soket;"
 
 #: lib/inspect_permissions.c:105
 msgid " permissions"
-msgstr ""
+msgstr " izin"
 
 #: lib/inspect_permissions.c:111
 msgid " relaxed"
-msgstr ""
+msgstr " dilonggarkan"
 
 #: lib/inspect_permissions.c:114
 msgid " changed"
-msgstr ""
+msgstr " berubah"
 
 #: lib/inspect_permissions.c:129
 #, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr ""
+msgstr "%s dari %04o menjadi %04o pada %s"
 
 #: lib/inspect_permissions.c:135
 #, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr ""
+msgstr "izin ${FILE} dari %04o menjadi %04o pada ${ARCH}"
 
 #: lib/inspect_permissions.c:149
 #, c-format
 msgid "%s (%s) is world-writable on %s"
-msgstr ""
+msgstr "%s (%s) dapat ditulis oleh world pada %s"
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} dapat ditulis oleh world pada ${ARCH}"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
 msgid "*** invalid politics entry with pattern=%s and digest=%s"
-msgstr ""
+msgstr "*** entri politik tidak valid dengan pattern=%s dan digest=%s"
 
 #: lib/inspect_politics.c:92
 #, c-format
 msgid "*** unknown digest type for pattern %s: %s"
-msgstr ""
+msgstr "*** tipe digest tidak dikenal untuk pattern %s: %s"
 
 #: lib/inspect_politics.c:126
 #, c-format
@@ -2773,6 +3403,8 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules allow this "
 "file."
 msgstr ""
+"Berkas yang berpotensi sensitif secara politik (%s) ditemukan di %s pada %s: "
+"aturan mengizinkan berkas ini."
 
 #: lib/inspect_politics.c:134
 #, c-format
@@ -2780,50 +3412,54 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules prohibit "
 "this file."
 msgstr ""
+"Berkas yang berpotensi sensitif secara politik (%s) ditemukan di %s pada %s: "
+"aturan melarang berkas ini."
 
 #: lib/inspect_politics.c:138
 msgid "${FILE} is politically sensitive"
-msgstr ""
+msgstr "${FILE} sensitif secara politik"
 
 #: lib/inspect_removedfiles.c:26
 msgid ""
 "; Removing security policy related files requires inspection by the Security "
 "Response Team."
 msgstr ""
+"; Menghapus berkas terkait kebijakan keamanan memerlukan inspeksi oleh Tim "
+"Respon Keamanan."
 
 #: lib/inspect_removedfiles.c:85
 msgid "library ${FILE} removed on ${ARCH}"
-msgstr ""
+msgstr "pustaka ${FILE} dihapus pada ${ARCH}"
 
 #: lib/inspect_removedfiles.c:131
 #, c-format
 msgid "ABI break: Library %s with SONAME '%s' removed from %s"
-msgstr ""
+msgstr "Pelanggaran ABI: Pustaka %s dengan SONAME '%s' dihapus dari %s"
 
 #: lib/inspect_removedfiles.c:132
 msgid "missing SONAME in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "SONAME hilang di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_removedfiles.c:135
 #, c-format
 msgid "ABI break: Library %s removed from %s"
-msgstr ""
+msgstr "Pelanggaran ABI: Pustaka %s dihapus dari %s"
 
 #: lib/inspect_removedfiles.c:138
 #, c-format
 msgid "%s removed from %s"
-msgstr ""
+msgstr "%s dihapus dari %s"
 
 #: lib/inspect_rpmdeps.c:129
 #, c-format
 msgid "Invalid looking %s dependency in the %s package on %s: %s"
-msgstr ""
+msgstr "Dependensi %s yang tampak tidak valid dalam paket %s pada %s: %s"
 
 #: lib/inspect_rpmdeps.c:132 lib/inspect_rpmdeps.c:892
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
 #, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' di %s pada ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -2833,11 +3469,15 @@ msgid ""
 "%s' to the spec file to avoid the need to test interoperability between "
 "various combinations of old and new subpackages."
 msgstr ""
+"Sub-paket %s pada %s membawa '%s' yang berasal dari sub-paket %s tetapi "
+"tidak membawa persyaratan versi paket yang eksplisit. Silakan tambahkan "
+"'Requires: %s = %s' ke dalam berkas spek untuk menghindari keharusan menguji "
+"interoperabilitas antara berbagai kombinasi sub-paket lama dan baru."
 
 #: lib/inspect_rpmdeps.c:387
 #, c-format
 msgid "missing 'Requires: ${FILE} = %s' in %s on ${ARCH}"
-msgstr ""
+msgstr "kehilangan 'Requires: ${FILE} = %s' di %s pada ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:409
 #, c-format
@@ -2845,132 +3485,137 @@ msgid ""
 "Multiple subpackages provide '%s': [%s] but these subpackages carry explicit "
 "Requires: [%s]"
 msgstr ""
+"Beberapa sub-paket menyediakan '%s': [%s] tetapi sub-paket ini membawa "
+"Requires eksplisit: [%s]"
 
 #: lib/inspect_rpmdeps.c:410
 #, c-format
 msgid "%s all provide '${FILE}' on ${ARCH}"
-msgstr ""
+msgstr "%s semuanya menyediakan '${FILE}' pada ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:540
 #, c-format
 msgid "Missing epoch prefix on the version-release in '%s' for %s on %s"
-msgstr ""
+msgstr "Awalan epoch pada version-release di '%s' untuk %s pada %s hilang"
 
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' membutuhkan epoch di %s pada ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
-msgstr ""
+msgstr "berkas spek"
 
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "Mendapatkan '%s' dalam paket sumber %s"
 
 #: lib/inspect_rpmdeps.c:889
 #, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Mendapatkan '%s' dalam sub-paket %s pada %s"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "Mempertahankan '%s' dalam paket sumber %s"
 
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Mempertahankan '%s' dalam sub-paket %s pada %s"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr ""
+msgstr "Mengubah '%s' menjadi '%s' dalam paket sumber %s"
 
 #: lib/inspect_rpmdeps.c:909
 #, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Mengubah '%s' menjadi '%s' dalam sub-paket %s pada %s"
 
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "'%s' menjadi '${FILE}' di %s pada ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
-msgstr ""
+msgstr "; hal ini diharapkan"
 
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr ""
+msgstr "Kehilangan '%s' dalam paket sumber %s"
 
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Kehilangan '%s' dalam sub-paket %s pada %s"
 
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
-msgstr ""
+msgstr "*** tidak dapat mengompilasi ekspresi reguler awalan root $ORIGIN: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
 msgid "%s has an invalid-looking %s on %s: %s"
-msgstr ""
+msgstr "%s memiliki %s yang tampak tidak valid pada %s: %s"
 
 #: lib/inspect_runpath.c:192
 msgid "runtime search path in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "jalur pencarian runtime di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_runpath.c:270
 msgid "both DT_RPATH and DT_RUNPATH in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "baik DT_RPATH maupun DT_RUNPATH ada di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_runpath.c:272
 #, c-format
 msgid "%s has both DT_RPATH and DT_RUNPATH on %s; this is not allowed"
 msgstr ""
+"%s memiliki DT_RPATH dan DT_RUNPATH pada %s; hal ini tidak diperbolehkan"
 
 #: lib/inspect_shellsyntax.c:125
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "skrip shell tidak valid ${FILE} pada ${ARCH}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
 msgid "%s is a shell script but was not before on %s"
-msgstr ""
+msgstr "%s adalah skrip shell tetapi sebelumnya bukan pada %s"
 
 #: lib/inspect_shellsyntax.c:134
 #, c-format
 msgid "%s is a %s script but was a %s script before on %s"
-msgstr ""
+msgstr "%s adalah skrip %s tetapi sebelumnya adalah skrip %s pada %s"
 
 #: lib/inspect_shellsyntax.c:181
 #, c-format
 msgid "%s is no longer a valid %s script on %s"
-msgstr ""
+msgstr "%s bukan lagi skrip %s yang valid pada %s"
 
 #: lib/inspect_shellsyntax.c:190
 #, c-format
 msgid "%s became a valid %s script on %s"
-msgstr ""
+msgstr "%s menjadi skrip %s yang valid pada %s"
 
 #: lib/inspect_shellsyntax.c:193
 msgid ""
 ". The script fails with '-n' but passes with '-O extglob'; be sure 'shopt "
 "extglob' is set in the script."
 msgstr ""
+". Skrip gagal dengan '-n' tetapi lolos dengan '-O extglob'; pastikan 'shopt "
+"extglob' diatur dalam skrip."
 
 #: lib/inspect_shellsyntax.c:204 lib/inspect_shellsyntax.c:224
 #, c-format
 msgid "%s is not a valid %s script on %s"
-msgstr ""
+msgstr "%s bukan skrip %s yang valid pada %s"
 
 #: lib/inspect_shellsyntax.c:215
 #, c-format
@@ -2978,131 +3623,137 @@ msgid ""
 "%s fails with '-n' but passes with '-O extglob'; be sure 'shopt extglob' is "
 "set in the script on %s"
 msgstr ""
+"%s gagal dengan '-n' tetapi lolos dengan '-O extglob'; pastikan 'shopt "
+"extglob' diatur dalam skrip pada %s"
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "nama berkas spek tidak terduga"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "cocok persis"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "diawali dengan"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
-msgstr ""
+msgstr "diakhiri dengan"
 
 #: lib/inspect_specname.c:78
 #, c-format
 msgid "Spec filename does not %s the primary name %s; got '%s'"
-msgstr ""
+msgstr "Nama berkas spek tidak %s nama primer %s; didapat '%s'"
 
 #: lib/inspect_specname.c:109
 msgid "The specname inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Inspeksi specname hanya untuk paket sumber, dilewati."
 
 #: lib/inspect_subpackages.c:68
 #, c-format
 msgid "Subpackage '%s' has disappeared on '%s'"
-msgstr ""
+msgstr "Sub-paket '%s' telah menghilang pada '%s'"
 
 #: lib/inspect_subpackages.c:75 lib/inspect_subpackages.c:99
 msgid "subpackage ${FILE}"
-msgstr ""
+msgstr "sub-paket ${FILE}"
 
 #: lib/inspect_subpackages.c:92
 #, c-format
 msgid "Subpackage '%s' has appeared on '%s'"
-msgstr ""
+msgstr "Sub-paket '%s' telah muncul pada '%s'"
 
 #: lib/inspect_symlinks.c:98
 #, c-format
 msgid ""
 "Directory %s became a symbolic link (to %s) in %s on %s; this is not allowed!"
 msgstr ""
+"Direktori %s menjadi tautan simbolik (ke %s) di %s pada %s; hal ini tidak "
+"diperbolehkan!"
 
 #: lib/inspect_symlinks.c:100
 #, c-format
 msgid "%s %s became a symbolic link (to %s) in %s on %s"
-msgstr ""
+msgstr "%s %s menjadi tautan simbolik (ke %s) di %s pada %s"
 
 #: lib/inspect_symlinks.c:108
 msgid "${FILE} became a symlink on ${ARCH}"
-msgstr ""
+msgstr "${FILE} menjadi symlink pada ${ARCH}"
 
 #: lib/inspect_symlinks.c:125
 msgid "unable to read symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "tidak dapat membaca symlink ${FILE} pada ${ARCH}"
 
 #: lib/inspect_symlinks.c:126
 #, c-format
 msgid "An error occurred reading symbolic link %s in %s on %s."
-msgstr ""
+msgstr "Terjadi kesalahan saat membaca tautan simbolik %s di %s pada %s."
 
 #: lib/inspect_symlinks.c:178
 #, c-format
 msgid ""
 "%s %s has too many levels of redirects and cannot be resolved in %s on %s"
 msgstr ""
+"%s %s memiliki terlalu banyak tingkat pengalihan dan tidak dapat "
+"diselesaikan di %s pada %s"
 
 #: lib/inspect_symlinks.c:182
 msgid "too many redirects for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "terlalu banyak pengalihan untuk ${FILE} pada ${ARCH}"
 
 #: lib/inspect_symlinks.c:277
 #, c-format
 msgid "%s %s %s a dangling symbolic link in %s on %s"
-msgstr ""
+msgstr "%s %s %s tautan simbolik yang menggantung di %s pada %s"
 
 #: lib/inspect_symlinks.c:284
 msgid "dangling symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "symlink menggantung ${FILE} pada ${ARCH}"
 
 #: lib/inspect_types.c:69
 msgid "${FILE} MIME type on ${ARCH}"
-msgstr ""
+msgstr "tipe MIME ${FILE} pada ${ARCH}"
 
 #: lib/inspect_types.c:77 lib/inspect_types.c:82
 #, c-format
 msgid "Unknown MIME type `%s' on %s in %s"
-msgstr ""
+msgstr "Tipe MIME `%s' tidak dikenal pada %s di %s"
 
 #: lib/inspect_types.c:107
 #, c-format
 msgid "MIME type for %s in %s was `%s/%s' and became `%s/%s'"
-msgstr ""
+msgstr "Tipe MIME untuk %s di %s tadinya `%s/%s' dan menjadi `%s/%s'"
 
 #: lib/inspect_udevrules.c:104 lib/inspect_udevrules.c:116
 #, c-format
 msgid "%s is a valid udev rules file on %s"
-msgstr ""
+msgstr "%s adalah berkas aturan udev yang valid pada %s"
 
 #: lib/inspect_udevrules.c:106
 #, c-format
 msgid "%s is now a valid udev rules file on %s"
-msgstr ""
+msgstr "%s sekarang adalah berkas aturan udev yang valid pada %s"
 
 #: lib/inspect_udevrules.c:109
 #, c-format
 msgid "%s is no longer a valid udev rules file on %s"
-msgstr ""
+msgstr "%s bukan lagi berkas aturan udev yang valid pada %s"
 
 #: lib/inspect_udevrules.c:112 lib/inspect_udevrules.c:118
 #, c-format
 msgid "%s is not a valid udev rules file on %s"
-msgstr ""
+msgstr "%s bukan berkas aturan udev yang valid pada %s"
 
 #: lib/inspect_unicode.c:465
 #, c-format
 msgid "*** empty localpath on %s"
-msgstr ""
+msgstr "*** localpath kosong pada %s"
 
 #: lib/inspect_unicode.c:474
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "titik kode terlarang di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_unicode.c:551
 #, c-format
@@ -3110,11 +3761,13 @@ msgid ""
 "A forbidden code point, 0x%04X, was found in the %s source file on line %ld "
 "at column %ld.  This source file is used by %s."
 msgstr ""
+"Titik kode terlarang, 0x%04X, ditemukan dalam berkas sumber %s pada baris "
+"%ld di kolom %ld. Berkas sumber ini digunakan oleh %s."
 
 #: lib/inspect_unicode.c:621
 #, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr ""
+msgstr "tidak dapat menjalankan %prep di ${FILE}"
 
 #: lib/inspect_unicode.c:624
 #, c-format
@@ -3122,183 +3775,195 @@ msgid ""
 "Unable to run through the %%prep section in %s or manually unpack sources "
 "for further scanning."
 msgstr ""
+"Tidak dapat menjalankan bagian %%prep di %s atau mengekstrak sumber secara "
+"manual untuk pemindaian lebih lanjut."
 
 #: lib/inspect_unicode.c:744
 msgid "The unicode inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Inspeksi unicode hanya untuk paket sumber, dilewati."
 
 #: lib/inspect_upstream.c:60
 #, c-format
 msgid "New upstream source file `%s` appeared"
-msgstr ""
+msgstr "Berkas sumber hulu baru `%s` muncul"
 
 #: lib/inspect_upstream.c:62
 msgid "new source file ${FILE}"
-msgstr ""
+msgstr "berkas sumber baru ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
 msgid "Upstream source file `%s` changed content"
-msgstr ""
+msgstr "Berkas sumber hulu `%s` berubah kontennya"
 
 #: lib/inspect_upstream.c:93
 msgid "checksum of ${FILE}"
-msgstr ""
+msgstr "checksum dari ${FILE}"
 
 #: lib/inspect_upstream.c:195
 #, c-format
 msgid "Source file `%s` removed"
-msgstr ""
+msgstr "Berkas sumber `%s` dihapus"
 
 #: lib/inspect_upstream.c:197
 msgid "source file ${FILE} removed"
-msgstr ""
+msgstr "berkas sumber ${FILE} dihapus"
 
 #: lib/inspect_virus.c:40
 msgid "*** cl_engine_new returned NULL, check clamav library"
-msgstr ""
+msgstr "*** cl_engine_new mengembalikan NULL, periksa pustaka clamav"
 
 #: lib/inspect_virus.c:98
 #, c-format
 msgid "Virus detected in %s in the %s package on %s: %s"
-msgstr ""
+msgstr "Virus terdeteksi di %s dalam paket %s pada %s: %s"
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
-msgstr ""
+msgstr "informasi versi clamav"
 
 #: lib/inspect_virus.c:140
 #, c-format
 msgid "clamav version %s"
-msgstr ""
+msgstr "versi clamav %s"
 
 #: lib/inspect_virus.c:145
 #, c-format
 msgid "*** missing %s"
-msgstr ""
+msgstr "*** %s hilang"
 
 #: lib/inspect_virus.c:169
 #, c-format
 msgid "%s version %u (%s)"
-msgstr ""
+msgstr "%s versi %u (%s)"
 
 #: lib/inspect_virus.c:201
 msgid "virus or malware in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "virus atau malware di ${FILE} pada ${ARCH}"
 
 #: lib/inspect_xml.c:195
 #, c-format
 msgid "%s is a well-formed XML file in %s on %s, but is not a valid XML file"
 msgstr ""
+"%s adalah berkas XML dengan format baik di %s pada %s, tetapi bukan berkas "
+"XML yang valid"
 
 #: lib/inspect_xml.c:203
 #, c-format
 msgid "%s is not a well-formed XML file in %s on %s"
-msgstr ""
+msgstr "%s bukan berkas XML dengan format baik di %s pada %s"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr ""
+msgstr "${FILE} bukan XML dengan format baik pada ${ARCH}"
 
 #: lib/koji.c:142
 #, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr ""
+msgstr "*** Kegagalan XML-RPC: %s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** kode kegagalan xmlrpc %s (%d): getBuild(%s) dari %s"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** Status build Koji adalah %s untuk %s, tidak dapat melanjutkan"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** kode kegagalan xmlrpc %s (%d): getTaskInfo(%s) dari %s"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
-msgstr ""
+msgstr "*** Status tugas Koji adalah %s untuk tugas %s, tidak dapat melanjutkan"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "Build paket RPM"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
-msgstr ""
+msgstr "Build modul yang terdiri dari beberapa build paket RPM"
 
 #: lib/magic.c:21
 msgid "*** unable to initialize the magic library"
-msgstr ""
+msgstr "*** tidak dapat menginisialisasi pustaka magic"
 
 #: lib/magic.c:26
 #, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr ""
+msgstr "*** tidak dapat memuat basis data magic: %s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
 msgid "*** unable to mkdir %s"
-msgstr ""
+msgstr "*** tidak dapat membuat direktori (mkdir) %s"
 
 #: lib/output.c:25
 msgid ""
 "Detailed results suitable for the console and piping through paging programs."
 msgstr ""
+"Hasil terperinci yang sesuai untuk konsol dan disalurkan melalui program "
+"paging."
 
 #: lib/output.c:27
 msgid ""
 "Results organized as a JSON data structure suitable for reading by web "
 "applications and other frontend tools."
 msgstr ""
+"Hasil diatur sebagai struktur data JSON yang sesuai untuk dibaca oleh "
+"aplikasi web dan alat frontend lainnya."
 
 #: lib/output.c:29
 msgid ""
 "Results organized as an XUnit data structure suitable for use with Jenkins "
 "and other XUnit-enabled services."
 msgstr ""
+"Hasil diatur sebagai struktur data XUnit yang sesuai untuk digunakan dengan "
+"Jenkins dan layanan berkemampuan XUnit lainnya."
 
 #: lib/output.c:31
 msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
 msgstr ""
+"Hasil diringkas dengan satu hasil per baris, sesuai untuk tampilan konsol "
+"dengan program paging."
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
 #, c-format
 msgid "*** error opening %s for writing"
-msgstr ""
+msgstr "*** galat saat membuka %s untuk penulisan"
 
 #: lib/output_summary.c:53
 msgid "added"
-msgstr ""
+msgstr "ditambahkan"
 
 #: lib/output_summary.c:55
 msgid "removed"
-msgstr ""
+msgstr "dihapus"
 
 #: lib/output_summary.c:57
 msgid "changed"
-msgstr ""
+msgstr "berubah"
 
 #: lib/output_summary.c:61
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: lib/output_summary.c:63
 msgid "unknown"
-msgstr ""
+msgstr "tidak diketahui"
 
 #: lib/output_text.c:92 lib/output_xunit.c:83
 #, c-format
 msgid "Result: %s\n"
-msgstr ""
+msgstr "Hasil: %s\n"
 
 #: lib/output_text.c:95 lib/output_xunit.c:96
 #, c-format
@@ -3306,6 +3971,8 @@ msgid ""
 "Waiver Authorization: %s\n"
 "\n"
 msgstr ""
+"Otorisasi Dispensasi: %s\n"
+"\n"
 
 #: lib/output_text.c:99 lib/output_xunit.c:110
 #, c-format
@@ -3314,6 +3981,9 @@ msgid ""
 "%s\n"
 "\n"
 msgstr ""
+"Detail:\n"
+"%s\n"
+"\n"
 
 #: lib/output_text.c:103 lib/output_xunit.c:118
 #, c-format
@@ -3321,78 +3991,80 @@ msgid ""
 "Suggested Remedy:\n"
 "%s"
 msgstr ""
+"Saran Perbaikan:\n"
+"%s"
 
 #: lib/output_xunit.c:54
 #, c-format
 msgid "*** opening %s for writing"
-msgstr ""
+msgstr "*** membuka %s untuk penulisan"
 
 #: lib/parse_yaml.c:114 lib/parse_yaml.c:139
 #, c-format
 msgid "*** %s: broken document"
-msgstr ""
+msgstr "*** %s: dokumen rusak"
 
 #: lib/parse_yaml.c:158 lib/parse_yaml.c:305
 #, c-format
 msgid "*** skipping token type %s"
-msgstr ""
+msgstr "*** melewatkan tipe token %s"
 
 #: lib/parse_yaml.c:386
 msgid "*** malformed type - freed?"
-msgstr ""
+msgstr "*** tipe salah format - dibebaskan?"
 
 #: lib/peers.c:176
 #, c-format
 msgid "There is not enough available space to unpack all of the RPMs.\n"
-msgstr ""
+msgstr "Ruang tersedia tidak cukup untuk mengekstrak semua RPM.\n"
 
 #: lib/readelf.c:48
 #, c-format
 msgid "*** unknown elftype_t %d"
-msgstr ""
+msgstr "*** elftype_t %d tidak diketahui"
 
 #: lib/readelf.c:76
 msgid "*** libelf version mismatch"
-msgstr ""
+msgstr "*** ketidakcocokan versi libelf"
 
 #: lib/readfile.c:50
 #, c-format
 msgid "*** unable to find end of %s"
-msgstr ""
+msgstr "*** tidak dapat menemukan akhir dari %s"
 
 #: lib/readfile.c:68
 #, c-format
 msgid "*** unable to close %s"
-msgstr ""
+msgstr "*** tidak dapat menutup %s"
 
 #: lib/rmtree.c:74
 #, c-format
 msgid "*** %s is not a directory"
-msgstr ""
+msgstr "*** %s bukan sebuah direktori"
 
 #: lib/rpm.c:71
 #, c-format
 msgid "*** Fopen failed for %s: %s"
-msgstr ""
+msgstr "*** Fopen gagal untuk %s: %s"
 
 #: lib/rpm.c:255
 #, c-format
 msgid "*** file index %d is out of bounds for %s"
-msgstr ""
+msgstr "*** indeks berkas %d di luar batas untuk %s"
 
 #: lib/rpm.c:431
 msgid "*** error reading file from RPM payload"
-msgstr ""
+msgstr "*** galat saat membaca berkas dari payload RPM"
 
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d"
 
 #: lib/runcmd.c:173
 #, c-format
 msgid "%d (%s)"
-msgstr ""
+msgstr "%d (%s)"
 
 #: lib/runcmd.c:178
 #, c-format
@@ -3401,103 +4073,106 @@ msgid ""
 "\n"
 "%s tried to run the command and it received signal %s"
 msgstr ""
+"%s\n"
+"\n"
+"%s mencoba menjalankan perintah dan menerima sinyal %s"
 
 #: lib/runcmd.c:182
 #, c-format
 msgid "%s tried to run the command and it received signal %s"
-msgstr ""
+msgstr "%s mencoba menjalankan perintah dan menerima sinyal %s"
 
 #: lib/strfuncs.c:250 lib/strfuncs.c:282
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: lib/strfuncs.c:252 lib/strfuncs.c:284
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: lib/strfuncs.c:254 lib/strfuncs.c:286
 msgid "INFO"
-msgstr ""
+msgstr "INFO"
 
 #: lib/strfuncs.c:256 lib/strfuncs.c:288
 msgid "VERIFY"
-msgstr ""
+msgstr "VERIFY"
 
 #: lib/strfuncs.c:258 lib/strfuncs.c:290
 msgid "BAD"
-msgstr ""
+msgstr "BAD"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "SKIP"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "DIAGNOSTIK"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
-msgstr ""
+msgstr "TiDaK DiKeNaL"
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
-msgstr ""
+msgstr "Tidak Dapat Didispensasi"
 
 #: lib/strfuncs.c:310
 msgid "Anyone"
-msgstr ""
+msgstr "Siapa Saja"
 
 #: lib/strfuncs.c:312
 msgid "Security"
-msgstr ""
+msgstr "Keamanan"
 
 #: lib/strfuncs.c:543
 msgid "regular file"
-msgstr ""
+msgstr "berkas reguler"
 
 #: lib/strfuncs.c:545
 msgid "directory"
-msgstr ""
+msgstr "direktori"
 
 #: lib/strfuncs.c:547
 msgid "character device"
-msgstr ""
+msgstr "perangkat karakter"
 
 #: lib/strfuncs.c:549
 msgid "block device"
-msgstr ""
+msgstr "perangkat blok"
 
 #: lib/strfuncs.c:551
 msgid "FIFO (named pipe)"
-msgstr ""
+msgstr "FIFO (named pipe)"
 
 #: lib/strfuncs.c:553
 msgid "symbolic link"
-msgstr ""
+msgstr "tautan simbolik"
 
 #: lib/strfuncs.c:555
 msgid "socket"
-msgstr ""
+msgstr "soket"
 
 #: lib/strfuncs.c:614
 msgid "Success."
-msgstr ""
+msgstr "Berhasil."
 
 #: lib/strfuncs.c:616
 msgid "One or more inspections failed."
-msgstr ""
+msgstr "Satu atau lebih inspeksi gagal."
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "Galat program."
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
-msgstr ""
+msgstr "Profil yang ditentukan tidak ditemukan."
 
 #: lib/strfuncs.c:622
 msgid "Insufficient disk space in the working directory."
-msgstr ""
+msgstr "Ruang disk di direktori kerja tidak mencukupi."
 
 #: src/rpminspect.c:48
 #, c-format
@@ -3505,169 +4180,176 @@ msgid ""
 "Compare package builds for policy compliance and consistency.\n"
 "\n"
 msgstr ""
+"Bandingkan build paket untuk kepatuhan kebijakan dan konsistensi.\n"
+"\n"
 
 #: src/rpminspect.c:49
 #, c-format
 msgid "Usage: %s [OPTIONS] [before build] [after build]\n"
-msgstr ""
+msgstr "Penggunaan: %s [OPSI] [build sebelum] [build sesudah]\n"
 
 #: src/rpminspect.c:50
 #, c-format
 msgid "Options:\n"
-msgstr ""
+msgstr "Opsi:\n"
 
 #: src/rpminspect.c:51
 #, c-format
 msgid "  -c FILE, --config=FILE      Configuration file to use\n"
-msgstr ""
+msgstr "  -c BERKAS, --config=BERKAS    Berkas konfigurasi yang digunakan\n"
 
 #: src/rpminspect.c:52
 #, c-format
 msgid "  -p NAME, --profile=NAME     Configuration profile to use\n"
-msgstr ""
+msgstr "  -p NAMA, --profile=NAMA     Profil konfigurasi yang digunakan\n"
 
 #: src/rpminspect.c:53
 #, c-format
 msgid "  -T LIST, --tests=LIST       List of tests to run\n"
-msgstr ""
+msgstr "  -T DAFTAR, --tests=DAFTAR   Daftar pengujian yang dijalankan\n"
 
 #: src/rpminspect.c:54
 #, c-format
 msgid "                                (default: ALL)\n"
-msgstr ""
+msgstr "                                (default: SEMUA)\n"
 
 #: src/rpminspect.c:55
 #, c-format
 msgid "  -E LIST, --exclude=LIST     List of tests to exclude\n"
-msgstr ""
+msgstr "  -E DAFTAR, --exclude=DAFTAR Daftar pengujian yang dikecualikan\n"
 
 #: src/rpminspect.c:56
 #, c-format
 msgid "                                (default: none)\n"
-msgstr ""
+msgstr "                                (default: none)\n"
 
 #: src/rpminspect.c:57
 #, c-format
 msgid "  -a LIST, --arches=LIST      List of architectures to check\n"
-msgstr ""
+msgstr "  -a DAFTAR, --arches=DAFTAR  Daftar arsitektur yang diperiksa\n"
 
 #: src/rpminspect.c:58
 #, c-format
 msgid "  -r STR, --release=STR       Product release string\n"
-msgstr ""
+msgstr "  -r STR, --release=STR       String rilis produk\n"
 
 #: src/rpminspect.c:59
 #, c-format
 msgid "  -n, --no-rebase             Disable build rebase detection\n"
-msgstr ""
+msgstr "  -n, --no-rebase             Nonaktifkan deteksi rebase build\n"
 
 #: src/rpminspect.c:60
 #, c-format
 msgid "  -b TYPE, --build-type=TYPE  Set Koji build type to TYPE\n"
-msgstr ""
+msgstr "  -b TIPE, --build-type=TIPE  Atur tipe build Koji ke TIPE\n"
 
 #: src/rpminspect.c:61
 #, c-format
 msgid "  -o FILE, --output=FILE      Write results to FILE\n"
-msgstr ""
+msgstr "  -o BERKAS, --output=BERKAS  Tulis hasil ke BERKAS\n"
 
 #: src/rpminspect.c:62
 #, c-format
 msgid "                                (default: stdout)\n"
-msgstr ""
+msgstr "                                (default: stdout)\n"
 
 #: src/rpminspect.c:63
 #, c-format
 msgid "  -F TYPE, --format=TYPE      Format output results as TYPE\n"
-msgstr ""
+msgstr "  -F TIPE, --format=TIPE      Format hasil output sebagai TIPE\n"
 
 #: src/rpminspect.c:64
 #, c-format
 msgid "                                (default: text)\n"
-msgstr ""
+msgstr "                                (default: text)\n"
 
 #: src/rpminspect.c:65
 #, c-format
 msgid "  -t TAG, --threshold=TAG     Result threshold triggering exit\n"
-msgstr ""
+msgstr "  -t TAG, --threshold=TAG     Ambang batas hasil yang memicu keluar\n"
 
 #: src/rpminspect.c:66
 #, c-format
 msgid "                              failure (default: VERIFY)\n"
-msgstr ""
+msgstr "                              kegagalan (default: VERIFY)\n"
 
 #: src/rpminspect.c:67
 #, c-format
 msgid "  -s TAG, --suppress=TAG      Results suppression threshold\n"
-msgstr ""
+msgstr "  -s TAG, --suppress=TAG      Ambang batas penekanan hasil\n"
 
 #: src/rpminspect.c:68
 #, c-format
 msgid "                                (default: off, report everything)\n"
-msgstr ""
+msgstr "                                (default: off, laporkan semuanya)\n"
 
 #: src/rpminspect.c:69
 #, c-format
 msgid "  -l, --list                  List available tests and formats\n"
 msgstr ""
+"  -l, --list                  Daftar pengujian dan format yang tersedia\n"
 
 #: src/rpminspect.c:70
 #, c-format
 msgid "  -w PATH, --workdir=PATH     Temporary directory to use\n"
-msgstr ""
+msgstr "  -w JALUR, --workdir=JALUR   Direktori sementara yang digunakan\n"
 
 #: src/rpminspect.c:71
 #, c-format
 msgid "                                (default: %s)\n"
-msgstr ""
+msgstr "                                (default: %s)\n"
 
 #: src/rpminspect.c:72
 #, c-format
 msgid ""
 "  -f, --fetch-only            Fetch builds only, do not perform inspections\n"
 msgstr ""
+"  -f, --fetch-only            Hanya ambil build, jangan lakukan inspeksi\n"
 
 #: src/rpminspect.c:73
 #, c-format
 msgid "                                (implies -k)\n"
-msgstr ""
+msgstr "                                (menyiratkan -k)\n"
 
 #: src/rpminspect.c:74
 #, c-format
 msgid ""
 "  -k, --keep                  Do not remove the comparison working files\n"
-msgstr ""
+msgstr "  -k, --keep                  Jangan hapus berkas kerja perbandingan\n"
 
 #: src/rpminspect.c:75
 #, c-format
 msgid "  -d, --debug                 Debugging mode output\n"
-msgstr ""
+msgstr "  -d, --debug                 Output mode debugging\n"
 
 #: src/rpminspect.c:76
 #, c-format
 msgid ""
 "  -D, --dump-config           Dump configuration settings (in YAML format)\n"
 msgstr ""
+"  -D, --dump-config           Buang pengaturan konfigurasi (dalam format "
+"YAML)\n"
 
 #: src/rpminspect.c:77
 #, c-format
 msgid "  -v, --verbose               Verbose inspection output\n"
-msgstr ""
+msgstr "  -v, --verbose               Output inspeksi verbose\n"
 
 #: src/rpminspect.c:78
 #, c-format
 msgid "                              when finished, display full path\n"
 msgstr ""
+"                              setelah selesai, tampilkan jalur lengkap\n"
 
 #: src/rpminspect.c:79
 #, c-format
 msgid "  -?, --help                  Display usage information\n"
-msgstr ""
+msgstr "  -?, --help                  Tampilkan informasi penggunaan\n"
 
 #: src/rpminspect.c:80
 #, c-format
 msgid "  -V, --version               Display program version\n"
-msgstr ""
+msgstr "  -V, --version               Tampilkan versi program\n"
 
 #: src/rpminspect.c:81
 #, c-format
@@ -3675,86 +4357,89 @@ msgid ""
 "\n"
 "See the rpminspect(1) man page for more information.\n"
 msgstr ""
+"\n"
+"Lihat halaman man rpminspect(1) untuk informasi lebih lanjut.\n"
 
 #: src/rpminspect.c:114
 #, c-format
 msgid "*** unable to compile product release regular expression: %s"
-msgstr ""
+msgstr "*** tidak dapat mengompilasi ekspresi reguler rilis produk: %s"
 
 #: src/rpminspect.c:168 src/rpminspect.c:179
 #, c-format
 msgid "*** product release for after build (%s) is empty"
-msgstr ""
+msgstr "*** rilis produk untuk build sesudah (%s) kosong"
 
 #: src/rpminspect.c:196 src/rpminspect.c:204
 #, c-format
 msgid "*** product release for before build (%s) is empty"
-msgstr ""
+msgstr "*** rilis produk untuk build sebelum (%s) kosong"
 
 #: src/rpminspect.c:259
 #, c-format
 msgid "*** unable to determine product release for %s and %s"
-msgstr ""
+msgstr "*** tidak dapat menentukan rilis produk untuk %s dan %s"
 
 #: src/rpminspect.c:260
 msgid ""
 "*** See the 'favor_release' setting in the rpminspect configuration file."
 msgstr ""
+"*** Lihat pengaturan 'favor_release' dalam berkas konfigurasi rpminspect."
 
 #: src/rpminspect.c:288
 msgid "*** the -T and -E options are mutually exclusive"
-msgstr ""
+msgstr "*** opsi -T dan -E bersifat eksklusif satu sama lain"
 
 #: src/rpminspect.c:289 src/rpminspect.c:305 src/rpminspect.c:737
 #: src/rpminspect.c:776
 #, c-format
 msgid "*** See `%s --help` for more information."
-msgstr ""
+msgstr "*** Lihat `%s --help` untuk informasi lebih lanjut."
 
 #: src/rpminspect.c:304
 #, c-format
 msgid "*** unknown inspection: `%s`"
-msgstr ""
+msgstr "*** inspeksi tidak dikenal: `%s`"
 
 #: src/rpminspect.c:455
 #, c-format
 msgid "*** unsupported build type: `%s`."
-msgstr ""
+msgstr "*** tipe build tidak didukung: `%s`."
 
 #: src/rpminspect.c:464
 #, c-format
 msgid "*** invalid build type: `%s`."
-msgstr ""
+msgstr "*** tipe build tidak valid: `%s`."
 
 #: src/rpminspect.c:481
 #, c-format
 msgid "*** invalid output format: `%s`."
-msgstr ""
+msgstr "*** format output tidak valid: `%s`."
 
 #: src/rpminspect.c:493
 #, c-format
 msgid "*** unable to expand working directory: `%s`"
-msgstr ""
+msgstr "*** tidak dapat mengekspansi direktori kerja: `%s`"
 
 #: src/rpminspect.c:506
 #, c-format
 msgid "*** unable to use `%s' as working directory"
-msgstr ""
+msgstr "*** tidak dapat menggunakan `%s' sebagai direktori kerja"
 
 #: src/rpminspect.c:536
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s version %s\n"
 
 #: src/rpminspect.c:539
 #, c-format
 msgid "*** ?? getopt returned character code 0%o ??"
-msgstr ""
+msgstr "*** ?? getopt mengembalikan kode karakter 0%o ??"
 
 #: src/rpminspect.c:546
 #, c-format
 msgid "Available build types:\n"
-msgstr ""
+msgstr "Tipe build yang tersedia:\n"
 
 #: src/rpminspect.c:567
 #, c-format
@@ -3762,6 +4447,8 @@ msgid ""
 "\n"
 "Available output formats:\n"
 msgstr ""
+"\n"
+"Format output yang tersedia:\n"
 
 #: src/rpminspect.c:584
 #, c-format
@@ -3769,34 +4456,37 @@ msgid ""
 "\n"
 "Available inspections:\n"
 msgstr ""
+"\n"
+"Inspeksi yang tersedia:\n"
 
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
 #, c-format
 msgid "*** failed to read configuration file %s"
-msgstr ""
+msgstr "*** gagal membaca berkas konfigurasi %s"
 
 #: src/rpminspect.c:658
 #, c-format
 msgid "*** Please specify a configuration file using '-c' or supply ./%s"
 msgstr ""
+"*** Silakan tentukan berkas konfigurasi menggunakan '-c' atau sediakan ./%s"
 
 #: src/rpminspect.c:736
 msgid "*** Invalid before and after build specification."
-msgstr ""
+msgstr "*** Spesifikasi build sebelum dan sesudah tidak valid."
 
 #: src/rpminspect.c:744
 msgid "*** unable to read RPM configuration"
-msgstr ""
+msgstr "*** tidak dapat membaca konfigurasi RPM"
 
 #: src/rpminspect.c:775
 #, c-format
 msgid "*** unsupported architecture specified: `%s`"
-msgstr ""
+msgstr "*** arsitektur yang ditentukan tidak didukung: `%s`"
 
 #: src/rpminspect.c:793
 #, c-format
 msgid "*** unable to create directory %s"
-msgstr ""
+msgstr "*** tidak dapat membuat direktori %s"
 
 #: src/rpminspect.c:851
 #, c-format
@@ -3804,73 +4494,79 @@ msgid ""
 "Version information for libraries and programs used by %s as well as storage "
 "requirements.  This result is for informational and diagnostic purposes only."
 msgstr ""
+"Informasi versi untuk pustaka dan program yang digunakan oleh %s serta "
+"persyaratan penyimpanan. Hasil ini hanya untuk tujuan informasional dan "
+"diagnostik."
 
 #: src/rpminspect.c:858
 #, c-format
 msgid "Space required to download artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Ruang yang diperlukan untuk mengunduh artefak: %lu bita (%s)\n"
 
 #: src/rpminspect.c:866
 #, c-format
 msgid "Space required to unpack artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Ruang yang diperlukan untuk mengekstrak artefak: %lu bita (%s)\n"
 
 #: src/rpminspect.c:878
 #, c-format
 msgid "Command line arguments used to invoke %s."
-msgstr ""
+msgstr "Argumen baris perintah yang digunakan untuk memanggil %s."
 
 #: src/rpminspect.c:902
 #, c-format
 msgid "Local configuration file: %s"
-msgstr ""
+msgstr "Local configuration file: %s"
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "Build Sebelum"
 
 #: src/rpminspect.c:917
 msgid "After Build"
-msgstr ""
+msgstr "Build Sesudah"
 
 #: src/rpminspect.c:920
 msgid "Build"
-msgstr ""
+msgstr "Build"
 
 #: src/rpminspect.c:937
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
-msgstr ""
+msgstr "*** tidak ada peer, pastikan paket ada untuk arsitektur yang ditentukan"
 
 #: src/rpminspect.c:958
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
 msgstr ""
+"*** tidak dapat menemukan kumpulan paket peer antara build sebelum dan "
+"sesudah"
 
 #: src/rpminspect.c:972
 msgid "*** unable to determine product release or none specified (-r)."
 msgstr ""
+"*** tidak dapat menentukan rilis produk atau tidak ada yang ditentukan (-r)."
 
 #: src/rpminspect.c:984
 #, c-format
 msgid "Skipping %s inspection..."
-msgstr ""
+msgstr "Melewati inspeksi %s..."
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "lewati"
 
 #: src/rpminspect.c:1009
 #, c-format
 msgid "Running %s inspection..."
-msgstr ""
+msgstr "Menjalankan inspeksi %s..."
 
 #: src/rpminspect.c:1018
 msgid "pass"
-msgstr ""
+msgstr "lolos"
 
 #: src/rpminspect.c:1018
 msgid "FAIL"
-msgstr ""
+msgstr "GAGAL"
 
 #: src/rpminspect.c:1046
 #, c-format
@@ -3878,3 +4574,5 @@ msgid ""
 "\n"
 "Keeping working directory: %s\n"
 msgstr ""
+"\n"
+"Mempertahankan direktori kerja: %s\n"
