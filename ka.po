@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2026-01-18 08:58+0000\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"PO-Revision-Date: 2026-03-31 11:58+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
+"memory@weblate.org>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ka/>\n"
 "Language: ka\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 5.16.2\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -3776,7 +3777,7 @@ msgstr ""
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
 #, c-format
 msgid "*** failed to read configuration file %s"
-msgstr ""
+msgstr "კონფიგურაციის ფაილის გახსნის შეცდომა: %s"
 
 #: src/rpminspect.c:658
 #, c-format
