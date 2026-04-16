@@ -8,13 +8,17 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-04-17 13:59+0000\n"
+"Last-Translator: \"Марко Костић (Marko Kostić)\" <marko.m.kostic@gmail.com>\n"
+"Language-Team: Serbian <https://translate.fedoraproject.org/projects/"
+"rpminspect/main/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.17\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -23,12 +27,19 @@ msgid ""
 "checks to see if the License tag contains any unprofessional words as "
 "defined in the configuration file."
 msgstr ""
+"Потврђује да ниска наведена у ознаци License у РПМ метаподацима описује "
+"дозвољене софтверске лиценце како је дефинисано у бази података лиценци. "
+"Такође проверава да ли ознака License садржи било какве непрофесионалне речи "
+"како је дефинисано у датотеци подешавања."
 
 #: include/inspect.h:1347
 msgid ""
 "Check all binary RPMs in the build for any empty payloads. When comparing "
 "two builds, report new packages in the after build with empty payloads."
 msgstr ""
+"Проверава све бинарне РПМ-ове у изградњи на било какве празне терете. "
+"Приликом поређења две изградње, пријављује нове пакете у каснијој изградњи "
+"са празним теретима."
 
 #: include/inspect.h:1353
 msgid ""
@@ -36,6 +47,9 @@ msgid ""
 "Packages that lost payload data from the before build to the after build are "
 "reported."
 msgstr ""
+"Проверава све бинарне РПМ-ове у претходним и каснијим изградњама на било "
+"какве празне терете. Пријављују се пакети који су изгубили податке терета из "
+"претходне изградње у каснију изградњу."
 
 #: include/inspect.h:1359
 msgid ""
@@ -47,6 +61,14 @@ msgid ""
 "before build specified, check for differences between the before and after "
 "build values of the previous RPM header values and report them."
 msgstr ""
+"Обавља неке провере РПМ заглавља. Прво, проверава да ли Vendor садржи "
+"очекивану ниску како је дефинисано у датотеци подешавања. Друго, проверава "
+"да ли је домаћин изградње у очекиваном поддомену како је дефинисано у "
+"датотеци подешавања. Треће, проверава ниску Summary на било какве "
+"непрофесионалне речи. Четврто, проверава Description на било какве "
+"непрофесионалне речи. На крају, ако је наведена претходна изградња, "
+"проверава разлике између претходних и каснијих вредности заглавља РПМ-а и "
+"пријављује их."
 
 #: include/inspect.h:1365
 msgid ""
@@ -54,10 +76,14 @@ msgid ""
 "man page is compressed. Second, check that each man page contains valid "
 "content. Lastly, check that each man page is installed to the correct path."
 msgstr ""
+"Обавља неке провере на man страницама у РПМ терету. Прво, проверава да ли је "
+"свака man страница сажета. Друго, проверава да ли свака man страница садржи "
+"исправан садржај. На крају, проверава да ли је свака man страница "
+"инсталирана на исправну путању."
 
 #: include/inspect.h:1371
 msgid "Check that XML files included in the RPM payload are well-formed."
-msgstr ""
+msgstr "Проверава да ли су XML датотеке укључене у РПМ терет добро обликоване."
 
 #: include/inspect.h:1377
 msgid ""
@@ -67,28 +93,40 @@ msgid ""
 "after build did not lose a PT_GNU_RELRO segment. When comparing builds and "
 "there is a list of forbidden library functions, make sure nothing uses them."
 msgstr ""
+"Обавља неколико провера на ELF датотекама. Прво, проверава да ELF објекти не "
+"садрже извршни стек. Друго, проверава да ELF објекти не садрже релокације "
+"текста. Приликом поређења изградњи, проверава да ELF објекти у каснијој "
+"изградњи нису изгубили PT_GNU_RELRO сегмент. Приликом поређења изградњи и "
+"ако постоји списак забрањених функција библиотека, осигурава да их ништа не "
+"користи."
 
 #: include/inspect.h:1383
 msgid ""
 "Perform syntax and file reference checks on *.desktop files. Syntax errors "
 "and invalid file references are reported as errors."
 msgstr ""
+"Обавља провере синтаксе и референци датотека на *.desktop датотекама. "
+"Синтаксне грешке и неисправне референце датотека се пријављују као грешке."
 
 #: include/inspect.h:1389
 msgid ""
 "Check that the 'Release' tag in the RPM spec file includes the %{?dist} "
 "directive."
 msgstr ""
+"Проверава да ли ознака „Release“ у РПМ spec датотеци укључује директиву %"
+"{?dist}."
 
 #: include/inspect.h:1395
 msgid "Ensure the spec file name conforms to the NAME.spec naming format."
-msgstr ""
+msgstr "Осигурава да назив spec датотеке одговара формату именовања НАЗИВ.spec."
 
 #: include/inspect.h:1403
 msgid ""
 "Ensure compliance with modularity build and packaging policies (only valid "
 "for module builds, no-op otherwise)."
 msgstr ""
+"Осигурава усклађеност са смерницама за модуларну изградњу и паковање (важи "
+"само за модуларне изградње, иначе нема дејства)."
 
 #: include/inspect.h:1411
 msgid ""
@@ -97,6 +135,10 @@ msgid ""
 "exceeded.  The bytecode version is vendor specific to releases and defined "
 "in the configuration file."
 msgstr ""
+"Проверава најмање потребно издање Java бајт-кода у датотекама класа, "
+"пријављује промене издања бајт-кода између изградњи и пријављује ако су "
+"издања бајт-кода прекорачена. Издање бајт-кода је специфично за произвођача "
+"и издања и дефинисано је у датотеци подешавања."
 
 #: include/inspect.h:1417
 msgid ""
@@ -109,6 +151,14 @@ msgid ""
 "C and C++ header files are preprocessed and compared using diff(1).  Any "
 "changes with diff output are included in the results."
 msgstr ""
+"Пријављује измењене датотеке из претходне изградње у каснију изградњу. "
+"Одређене промене датотека ће изазвати додатна упозорења ако је проблем "
+"критичнији од самог пријављивања промена (нпр. сумњив безбедносни утицај). "
+"Било које gzip, bzip2 или xz сажете датотеке ће имати само свој несажети "
+"садржај упоређен, што ће омогућити промене кроз коришћени ниво сажимања. "
+"Датотеке каталога порука (.mo) се распакују и упоређују помоћу diff(1). "
+"Јавне C и C++ датотеке заглавља се претпроцесирају и упоређују помоћу diff(1)"
+". Било какве промене са diff излазом су укључене у резултате."
 
 #: include/inspect.h:1423
 msgid ""
@@ -118,6 +168,11 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Пријављује датотеке које су преместиле путање инсталације или кроз потпакете "
+"између изградњи. Датотеке премештене са безбедносним префиксом путање "
+"генеришу посебно извештавање у случају да је потребан безбедносни преглед. "
+"Ребазирани пакети пријављују ове налазе на нивоу INFO, док неребазирани "
+"пакети пријављују на нивоу VERIFY или вишем."
 
 #: include/inspect.h:1429
 msgid ""
@@ -129,6 +184,13 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Пријављује уклоњене датотеке из претходне изградње у каснију изградњу. "
+"Дељене библиотеке добијају додатно извештавање јер могу бити неочекивана "
+"уклањања зависности. Датотеке уклоњене са безбедносним префиксом путање "
+"генеришу посебно извештавање у случају да је потребан безбедносни преглед. "
+"Изворни РПМ-ови и debuginfo датотеке се занемарују овом инспекцијом. "
+"Ребазирани пакети пријављују ове налазе на нивоу INFO, док неребазирани "
+"пакети пријављују на нивоу VERIFY или вишем."
 
 #: include/inspect.h:1435
 msgid ""
@@ -140,6 +202,14 @@ msgid ""
 "Rebased packages report these findings at the INFO level while non-rebased "
 "packages report them at the VERIFY level or higher."
 msgstr ""
+"Пријављује додате датотеке из претходне изградње у каснију изградњу. "
+"Debuginfo датотеке се занемарују као и датотеке које се подударају са "
+"мустрама дефинисаним у датотеци подешавања. Датотеке додате у безбедносне "
+"путање генеришу посебно извештавање у случају да је потребан безбедносни "
+"преглед. Нове setuid и setgid датотеке подижу безбедносно упозорење осим ако "
+"је датотека на списку података о датотекама. Ребазирани пакети пријављују "
+"ове налазе на нивоу INFO, док неребазирани пакети пријављују на нивоу VERIFY "
+"или вишем."
 
 #: include/inspect.h:1441
 msgid ""
@@ -148,6 +218,10 @@ msgid ""
 "on the rebaseable list, the change is reported as informational. Otherwise "
 "the change is reported as a rebase of the package and requires inspection."
 msgstr ""
+"Пријављује изворне архиве дефинисане у РПМ spec датотеци које мењају садржај "
+"између претходне и касније изградње. Ако се изворне архиве промене и пакет "
+"је на списку за ребазирање, промена се пријављује као информативна. У "
+"супротном, промена се пријављује као ребазирање пакета и захтева инспекцију."
 
 #: include/inspect.h:1447
 msgid ""
@@ -155,6 +229,10 @@ msgid ""
 "make sure executables are owned by the correct user and group. If a before "
 "and after build have been specified, also report ownership changes."
 msgstr ""
+"Пријављује датотеке и директоријуме у власништву неочекиваних корисника и "
+"група. Проверава како би се осигурало да су извршне датотеке у власништву "
+"исправног корисника и групе. Ако су наведене претходна и каснија изградња, "
+"такође пријављује промене власништва."
 
 #: include/inspect.h:1453
 msgid ""
@@ -165,6 +243,12 @@ msgid ""
 "perform the previous check but also report if a previously bad script is now "
 "passing the syntax check."
 msgstr ""
+"За све шкољкине скрипте у изградњи, обавља проверу синтаксе користећи шкољку "
+"дефинисану у њеној #! линији (шкољка такође мора бити наведена у одељку за "
+"шкољке у подацима подешавања). Ако провера синтаксе врати вредност различиту "
+"од нуле, пријављује то кориснику и враћа комбиновани стандардни излаз и "
+"излаз грешака. Ако се пореде две изградње, обавља претходну проверу али "
+"такође пријављује ако претходно лоша скрипта сада пролази проверу синтаксе."
 
 #: include/inspect.h:1459
 msgid ""
@@ -174,12 +258,19 @@ msgid ""
 "build.  If no annocheck tests are defined in the configuration file, this "
 "inspection is skipped."
 msgstr ""
+"Обавља annocheck тестове дефинисане у датотеци подешавања на свим ELF "
+"датотекама у изградњи. Једна наведена изградња ће обавити само анализу. Две "
+"наведене изградње ће упоредити резултате тестова између претходне и касније "
+"изградње. Ако нису дефинисани annocheck тестови у датотеци подешавања, ова "
+"инспекција се прескаче."
 
 #: include/inspect.h:1465
 msgid ""
 "Compare DT_NEEDED entries in dynamic ELF executables and shared libraries "
 "between the before and after build and report changes."
 msgstr ""
+"Упоредите DT_NEEDED уносе у динамичким ELF извршним датотекама и дељеним "
+"библиотекама између претходне и нове изградње и пријавите промене."
 
 #: include/inspect.h:1471
 msgid ""
@@ -187,6 +278,10 @@ msgid ""
 "non-empty files became empty, report those as results needing verification.  "
 "Report file change percentages as info-only."
 msgstr ""
+"Пријавите промене у величини датотека између изградњи. Ако су празне "
+"датотеке постале непразне или су непразне постале празне, пријавите их као "
+"резултате који захтевају потврду. Пријавите проценте промена датотека само "
+"као информације."
 
 #: include/inspect.h:1477
 msgid ""
@@ -194,6 +289,10 @@ msgid ""
 "list for the product release specified or determined.  Any setuid or setgid "
 "changes will raise a message requiring Security Team review."
 msgstr ""
+"Пријавите промене stat(2) режима између изградњи.  Врши провере према списку "
+"података о датотекама за наведено или одређено издање производа.  Свака "
+"промена setuid или setgid режима ће подићи поруку која захтева преглед "
+"безбедносног тима."
 
 #: include/inspect.h:1485
 msgid ""
@@ -202,6 +301,10 @@ msgid ""
 "capabilities changes not listed will raise a message requiring Security Team "
 "review."
 msgstr ""
+"Пријавите промене могућности(7) између изградњи. Врши провере према списку "
+"могућности за наведено или одређено издање производа. Свака промена "
+"могућности која није на списку ће подићи поруку која захтева преглед "
+"безбедносног тима."
 
 #: include/inspect.h:1494
 msgid ""
@@ -209,6 +312,9 @@ msgid ""
 "between builds.  This inspection is intended as an information gathering "
 "tool to gather kernel module differences between two builds."
 msgstr ""
+"Пријавите разлике у параметрима модула језгра, зависностима, PCI ID-овима "
+"или симболима између изградњи. Ова инспекција је замишљена као алатка за "
+"прикупљање података о разликама у модулима језгра између две изградње."
 
 #: include/inspect.h:1501
 msgid ""
@@ -218,12 +324,18 @@ msgid ""
 "architectures as provided in the before build and not seeing them in the "
 "after build."
 msgstr ""
+"Пријавите RPM архитектуре које се појављују и нестају између претходне и "
+"нове изградње. Ова инспекција не пријављује губитак noarch пакета. Сврха ове "
+"инспекције је да пријави губитак архитектура циљне машине које су биле "
+"присутне у претходној изградњи, а нема их у новој."
 
 #: include/inspect.h:1507
 msgid ""
 "Report RPM subpackages that appear and disappear between the before and "
 "after builds."
 msgstr ""
+"Пријавите RPM потпакете који се појављују и нестају између претходне и нове "
+"изградње."
 
 #: include/inspect.h:1513
 #, c-format
@@ -232,6 +344,9 @@ msgid ""
 "Reports any other differences in the existing changelog between builds and "
 "that the new entry contains new text entries."
 msgstr ""
+"Осигурајте да пакети садрже унос у %changelog за изграђено издање. "
+"Пријављује све остале разлике у постојећем дневнику промена између изградњи "
+"и да нови унос садржи нове текстуалне ставке."
 
 #: include/inspect.h:1519
 msgid ""
@@ -240,6 +355,10 @@ msgid ""
 "path migrations.  The main examples are /bin migrating to /usr/bin and /sbin "
 "migrating to /usr/sbin."
 msgstr ""
+"Пријавите датотеке које су упаковане у директоријуме које производ више не "
+"користи. Обично то значи да пакет није ажуриран како би се узеле у обзир "
+"миграције путања. Главни примери су миграција /bin у /usr/bin и /sbin у /usr/"
+"sbin."
 
 #: include/inspect.h:1525
 msgid ""
@@ -249,6 +368,11 @@ msgid ""
 "ELF objects shipped in packages.  This inspection looks for LTO bytecode in "
 "ELF relocatable objects and reports if any is present."
 msgstr ""
+"Оптимизација у време повезивања (LTO) производи мање и брже дељене ELF "
+"извршне датотеке и библиотеке. LTO бајтни кôд није стабилан између два "
+"издања gcc-а. Као такав, LTO бајтни кôд не би требало да буде присутан у .a "
+"и .o ELF објектима који се испоручују у пакетима. Ова инспекција тражи LTO "
+"бајтни кôд у ELF преместивим објектима и пријављује ако је неки присутан."
 
 #: include/inspect.h:1531
 msgid ""
@@ -256,18 +380,26 @@ msgid ""
 "ensures absolute and relative symlinks are valid.  It also checks for any "
 "symlink usage that will cause problems for RPM."
 msgstr ""
+"Симболичке везе морају бити разрешиве на инсталираном систему. Ова "
+"инспекција осигурава да су апсолутне и релативне симболичке везе исправне. "
+"Такође проверава било какво коришћење симболичких веза које ће узроковати "
+"проблеме за RPM."
 
 #: include/inspect.h:1537
 #, c-format
 msgid ""
 "Check %files sections in the spec file for any forbidden path references."
 msgstr ""
+"Проверите одељке %files у спец датотеци за било каква забрањена позивања на "
+"путање."
 
 #: include/inspect.h:1543
 msgid ""
 "Compare MIME types of files between builds and report any changes for "
 "verification."
 msgstr ""
+"Упоредите MIME врсте датотека између изградњи и пријавите све промене ради "
+"потврде."
 
 #: include/inspect.h:1549
 msgid ""
@@ -280,6 +412,13 @@ msgid ""
 "that, turn off the abidiff inspection or add the package name to the "
 "rebaseable list."
 msgstr ""
+"Приликом поређења две изградње или два пакета, упоредите ELF датотеке "
+"користећи abidiff(1) из пројекта libabigail. Разлике се пријављују. Ако је "
+"пакет ребаза а није на списку за ребазирање и ако је инспекција ребазе "
+"омогућена, ABI разлике се пријављују као неуспеси. Претпоставка је да "
+"rpminspect пореди изградње у сврхе одржавања и да не желите да уводите "
+"никакве ABI промене за кориснике. Ако вам то није битно, искључите abidiff "
+"инспекцију или додајте назив пакета на списак за ребазирање."
 
 #: include/inspect.h:1555
 msgid ""
@@ -290,6 +429,11 @@ msgid ""
 "rebase, an incompatible change reported by kmidiff is reported for "
 "verification."
 msgstr ""
+"kmidiff упоређује бинарне спреге модула језгра (KMI) два стабла Линукс "
+"језгра. Бинарни KMI је спрега коју Линукс језгро излаже својим модулима. "
+"Стабла која нас овде занимају су резултат изградње изворног стабла Линукс "
+"језгра. Ако се поређене изградње не сматрају ребазом, некомпатибилна промена "
+"коју пријави kmidiff се пријављује ради потврде."
 
 #: include/inspect.h:1561
 #, c-format
@@ -299,6 +443,10 @@ msgid ""
 "is reported at the INFO level.  Content and location changes are reporting "
 "at the VERIFY level unless the comparison is between rebased packages."
 msgstr ""
+"Проверите и пријавите разлике у датотекама подешавања означеним са %config у "
+"спец датотеци. Ако су промене само у празним местима или форматирању, "
+"резултат се пријављује на нивоу INFO. Промене садржаја и локације се "
+"пријављују на нивоу VERIFY, осим ако је поређење између ребазираних пакета."
 
 #: include/inspect.h:1567
 #, c-format
@@ -306,6 +454,8 @@ msgid ""
 "Report changes in %doc marked files.  Files that have been added or removed "
 "as documentation files, for instance."
 msgstr ""
+"Пријавите промене у датотекама означеним са %doc. На пример, датотеке које "
+"су додате или уклоњене као датотеке документације."
 
 #: include/inspect.h:1573
 msgid ""
@@ -319,6 +469,14 @@ msgid ""
 "can also list patch names that rpminspect should ignore during the "
 "inspection."
 msgstr ""
+"Прегледа све закрпе дефинисане у спец датотеци и пријављује промене између "
+"изградњи. Функционална провера овде је да се осигура да све дефинисане "
+"закрпе у уводу имају одговарајући макро за примену у спец датотеци. На нивоу "
+"INFO, rpminspect пријављује број датотека, број редова и промене у величини "
+"закрпе. Ако се достигну прагови у вези са променом величине закрпе или броја "
+"датотека које закрпа дотиче, rpminspect пријављује промену на нивоу VERIFY "
+"осим ако је поређење за ребазу. Датотека подешавања такође може навести "
+"називе закрпа које би rpminspect требало да занемари током инспекције."
 
 #: include/inspect.h:1579
 msgid ""
@@ -326,6 +484,9 @@ msgid ""
 "found by libclamav will fail the inspection.  The ignore_path rules are not "
 "used in this inspection.  All files are scanned."
 msgstr ""
+"Обавља скенирање на вирусе сваке датотеке в изградњи користећи libclamav. "
+"Било шта што пронађе libclamav ће довести до неуспеха инспекције. Правила "
+"ignore_path се не користе у овој инспекцији. Све датотеке се скенирају."
 
 #: include/inspect.h:1585
 msgid ""
@@ -335,6 +496,12 @@ msgid ""
 "subdirectory map to the product release string.  The rules in each file "
 "define the politically sensitive allow and deny rules for that release."
 msgstr ""
+"Проверите да ли у пакетима постоје познате политички осетљиве датотеке и "
+"пријавите да ли су дозвољене или забрањене. Правила долазе из "
+"поддиректоријума politics/ у пакету rpminspect-data за производ. Датотеке у "
+"поддиректоријуму politics/ се мапирају на ниску издања производа. Правила у "
+"свакој датотеци дефинишу политички осетљива правила дозвољавања и одбијања "
+"за то издање."
 
 #: include/inspect.h:1591
 msgid ""
@@ -343,12 +510,19 @@ msgid ""
 "catch built packages that make use of deprecated API functions if you wish "
 "built packages to conform to replacement APIs."
 msgstr ""
+"Проверите да ли постоје забрањене функције у ELF датотекама. Забрањене "
+"функције су дефинисане у датотекама подешавања извршног окружења. Обично се "
+"овај преглед користи за проналажење изграђених пакета који користе застареле "
+"АПИ функције ако желите да изграђени пакети буду у складу са заменским АПИ-"
+"јима."
 
 #: include/inspect.h:1597
 msgid ""
 "Check for forbidden paths in both the DT_RPATH and DT_RUNPATH settings in "
 "ELF shared objects."
 msgstr ""
+"Проверите да ли постоје забрањене путање у DT_RPATH и DT_RUNPATH "
+"подешавањима у ELF дељеним објектима."
 
 #: include/inspect.h:1603
 msgid ""
@@ -356,6 +530,10 @@ msgid ""
 "for any prohibited Unicode code points, as defined in the configuration "
 "file.  Any prohibited code points are reported as a possible security risk."
 msgstr ""
+"Скенирајте распаковане и закрпљене датотеке изворног кода, скрипте и RPM "
+"spec датотеке за било коју забрањену Уникод кодну тачку, како је дефинисано "
+"у датотеци подешавања. Било која забрањена кодна тачка се пријављује као "
+"могући безбедносни ризик."
 
 #: include/inspect.h:1609
 msgid ""
@@ -365,6 +543,11 @@ msgid ""
 "will check for correct RPM dependency metadata when inspecting a single "
 "build and report findings."
 msgstr ""
+"Проверите исправност метаподатака RPM зависности. Пријавите нетачне или "
+"сукобљене налазе као и очекиване промене приликом поређења нове изградње са "
+"старијом. Промене се пријављују само приликом поређења изградњи, али овај "
+"преглед ће проверити исправност метаподатака RPM зависности приликом "
+"прегледа појединачне изградње и пријавити налазе."
 
 #: include/inspect.h:1615
 msgid ""
@@ -373,24 +556,32 @@ msgid ""
 "report where symbols unexpectedly appear or disappear and what corrective "
 "action is needed."
 msgstr ""
+"Проверава да ли су из датотека у RPM пакетима уклоњени симболи за исправљање "
+"грешака и да ли датотеке у debuginfo пакетима садрже симболе за исправљање "
+"грешака. Приликом поређења изградњи, пријављује где се симболи неочекивано "
+"појављују или нестају и која је корективна радња потребна."
 
 #: include/inspect.h:1621
 msgid "Perform syntax check on udev rules files using udevadm verify."
 msgstr ""
+"Извршите проверу синтаксе над датотекама udev правила користећи „udevadm "
+"verify“."
 
 #: include/results.h:31
 msgid "Change the string specified on the 'Vendor:' line in the spec file."
-msgstr ""
+msgstr "Промените ниску наведену у „Vendor:“ реду у spec датотеци."
 
 #: include/results.h:38
 msgid "Make sure the SRPM is built on a host within the expected subdomain."
-msgstr ""
+msgstr "Уверите се да је SRPM изграђен на домаћину унутар очекиваног поддомена."
 
 #: include/results.h:45
 msgid ""
 "Unprofessional language as defined in the configuration file was found in "
 "the text shown.  Remove or change the offending words and rebuild."
 msgstr ""
+"Непрофесионалан језик, како је дефинисано у датотеци подешавања, пронађен је "
+"у приказаном тексту. Уклоните или промените спорне речи и поново изградите."
 
 #: include/results.h:60 include/results.h:75
 #, c-format
@@ -398,6 +589,8 @@ msgid ""
 "Check to see if you eliminated a subpackage but still have the %package and/"
 "or the %files section for it."
 msgstr ""
+"Проверите да ли сте уклонили потпакет али и даље имате одељак %package и/или "
+"%files за њега."
 
 #: include/results.h:90
 msgid ""
@@ -405,6 +598,9 @@ msgid ""
 "distribution (e.g., GPLv2+).  If the license in question is approved, the "
 "license database needs updating in the rpminspect-data package."
 msgstr ""
+"Ознака License мора да садржи одобрену ниску лиценце како је дефинисано "
+"дистрибуцијом (нпр. GPLv2+). Ако је предметна лиценца одобрена, базу "
+"података лиценци треба ажурирати у пакету rpminspect-data."
 
 #: include/results.h:97
 msgid ""
@@ -412,6 +608,9 @@ msgid ""
 "valid licensedb file.  This is also commonly due to a missing vendor "
 "specific rpminspect-data package on the system."
 msgstr ""
+"Уверите се да је подешавање licensedb у rpminspect подешавањима постављено "
+"на исправну licensedb датотеку. Ово је такође често збова недостајућег "
+"rpminspect-data пакета специфичног за произвођача на систему."
 
 #: include/results.h:104
 msgid ""
@@ -422,36 +621,48 @@ msgid ""
 "but marked unapproved, you may need to work with the legal team regarding "
 "options for this software."
 msgstr ""
+"Наведена скраћеница лиценце није наведена као одобрена у бази података "
+"лиценци. База података лиценци је наведена у rpminspect датотеци подешавања. "
+"Проверите ову датотеку и пошаљите захтев за повлачење одговарајућем узводном "
+"пројекту ради ажурирања базе података. Ако је лиценца наведена у бази "
+"података али означена као неодобрена, можда ћете морати да сарађујете са "
+"правним тимом у вези са опцијама за овај софтвер."
 
 #: include/results.h:119 include/results.h:154
 msgid "Ensure all object files are compiled with -fPIC"
-msgstr ""
+msgstr "Осигурајте да су све објектне датотеке компајлиране са -fPIC"
 
 #: include/results.h:126
 msgid ""
 "Ensure that the package is being built with the correct compiler and "
 "compiler flags"
 msgstr ""
+"Уверите се да се пакет гради са исправним компајлером и заставицама "
+"компајлера"
 
 #: include/results.h:133
 msgid ""
 "The data in an ELF file appears to be corrupt; ensure that packaged ELF "
 "files are not being truncated or incorrectly modified"
 msgstr ""
+"Подаци у ELF датотеци изгледају оштећени, осигурајте да запаковане ELF "
+"датотеке нису скраћене или неисправно измењене"
 
 #: include/results.h:140
 msgid ""
 "An ELF stack is marked as executable. Ensure that no execstack options are "
 "being passed to the linker, and that no functions are defined on the stack."
 msgstr ""
+"ELF штек је означен као извршан. Осигурајте да се никакве execstack опције "
+"не прослеђују повезивачу и да никакве функције нису дефинисане на штеку."
 
 #: include/results.h:147
 msgid "Ensure executables are linked with with '-z relro -z now'"
-msgstr ""
+msgstr "Осигурајте да су извршне датотеке повезане са „-z relro -z now“"
 
 #: include/results.h:169
 msgid "Correct the errors in the man page as reported by the libmandoc parser."
-msgstr ""
+msgstr "Исправите грешке у man страници како је пријавио libmandoc растављач."
 
 #: include/results.h:176
 msgid ""
@@ -459,34 +670,46 @@ msgid ""
 "in the directory beneath /usr/share/man that matches the section number of "
 "the page."
 msgstr ""
+"Исправите путању за инсталацију man странице. Man странице морају бити "
+"инсталиране у директоријуму унутар /usr/share/man који одговара броју одељка "
+"странице."
 
 #: include/results.h:191
 msgid "Correct the reported errors in the XML document"
-msgstr ""
+msgstr "Исправите пријављене грешке у ИксМЛ (XML) документу"
 
 #: include/results.h:206
 msgid ""
 "Refer to the Desktop Entry Specification at https://standards.freedesktop."
 "org/desktop-entry-spec/latest/ for help correcting the errors and warnings"
 msgstr ""
+"Погледајте спецификацију уноса радне површине на https://"
+"standards.freedesktop.org/desktop-entry-spec/latest/ за помоћ при исправљању "
+"грешака и упозорења"
 
 #: include/results.h:221
 msgid ""
 "The Release: tag in the spec file must include a '%{?dist}' string.  Please "
 "add this to the spec file per the distribution packaging guidelines."
 msgstr ""
+"Ознака „Release:“ у спец датотеци мора да садржи ниску „%{?dist}“. Додајте "
+"ово у спец датотеку према смерницама за паковање дистрибуције."
 
 #: include/results.h:236
 msgid ""
 "The spec file name does not match the expected NAME.spec format.  Rename the "
 "spec file to conform to this policy."
 msgstr ""
+"Назив спец датотеке се не поклапа са очекиваним форматом „NAME.spec“. "
+"Преименујте спец датотеку како би била у складу са овом политиком."
 
 #: include/results.h:253
 msgid ""
 "This package is part of a module but is missing the %{modularitylabel} "
 "header tag.  Add this as a %define in the spec file and rebuild."
 msgstr ""
+"Овај пакет је део модула али му недостаје ознака заглавља „%{modularitylabel}"
+"“. Додајте ово као „%define“ у спец датотеку и поново изградите пакет."
 
 #: include/results.h:260
 msgid ""
@@ -496,6 +719,11 @@ msgid ""
 "rules determining if the /data/static_context setting is required, "
 "forbidden, or recommend."
 msgstr ""
+"Ова изградња садржи исправно или неисправно подешавање „/data/static_context"
+"“. Погледајте правила модула за производ који градите да бисте одредили које "
+"подешавање треба да буде. Подешавања конфигурације за „rpminspect“ такође "
+"постављају правила која одређују да ли је подешавање „/data/static_context“ "
+"обавезно, забрањено или препоручено."
 
 #: include/results.h:277
 msgid ""
@@ -503,24 +731,35 @@ msgid ""
 "met for the product release.  Ensure you are using the correct JDK for the "
 "build."
 msgstr ""
+"Издање Јава бајт-кода за једну или више датотека класа у изградњи није "
+"испуњено за издање производа. Проверите да ли користите одговарајући ЈДК "
+"(JDK) за изградњу."
 
 #: include/results.h:292
 msgid ""
 "File changes were found.  In most cases these are expected, but it is a good "
 "idea to verify the changes found are deliberate."
 msgstr ""
+"Пронађене су измене датотека. У већини случајева оне су очекиване, али је "
+"добра идеја потврдити да су пронађене измене намерне."
 
 #: include/results.h:307
 msgid ""
 "Unexpected file moves were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file moves between builds."
 msgstr ""
+"Пронађена су неочекивана премештања датотека. Потврдите да ли су ове измене "
+"исправне. Ако нису, подесите изградњу како бисте спречили премештање "
+"датотека између изградњи."
 
 #: include/results.h:322
 msgid ""
 "Unexpected file removals were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file removals between builds."
 msgstr ""
+"Пронађена су неочекивана уклањања датотека. Потврдите да ли су ове измене "
+"исправне. Ако нису, подесите изградњу како бисте спречили уклањање датотека "
+"између изградњи."
 
 #: include/results.h:337
 #, c-format
@@ -532,6 +771,13 @@ msgid ""
 "You may also need to update the data package or local configuration file and "
 "change the forbidden_path_prefixes or forbidden_path_suffixes list."
 msgstr ""
+"Пронађена су неочекивана додавања датотека. Потврдите да ли су ове измене "
+"исправне. Ако нису, подесите изградњу како бисте спречили додавање датотека "
+"између изградњи. Ако јесу исправне, ажурирајте „%s“ и пошаљите закрпу "
+"пројекту података „rpminspect“ који поседује ту датотеку како би „rpminspect"
+"“ знао да очекује ову измену. Можда ћете такође морати да ажурирате пакет "
+"података или локалну конфигурациону датотеку и измените списак „"
+"forbidden_path_prefixes“ или „forbidden_path_suffixes“."
 
 #: include/results.h:352
 #, c-format
@@ -541,6 +787,10 @@ msgid ""
 "deliberate, but needs inspection. If this change is expected, update %s and "
 "send a patch to the project that owns that file."
 msgstr ""
+"Неочекивано је измењен садржај изворне архиве. Издање пакета се није "
+"променило између изградњи, али садржај изворне архиве јесте. Ово може бити "
+"намерно, али захтева преглед. Ако је ова измена очекивана, ажурирајте „%s“ и "
+"пошаљите закрпу пројекту који поседује ту датотеку."
 
 #: include/results.h:367
 #, c-format
@@ -549,6 +799,9 @@ msgid ""
 "permissions are expected, update %s and send a patch to the project that "
 "owns it."
 msgstr ""
+"Проверите да ли одељак „%%files“ садржи макро „%%defattr“. Ако су ова "
+"овлашћења очекивана, ажурирајте „%s“ и пошаљите закрпу пројекту који га "
+"поседује."
 
 #: include/results.h:374
 #, c-format
@@ -557,6 +810,10 @@ msgid ""
 "configuration, which is usually root. If this ownership is expected, update "
 "%s and send a patch to the project that owns it."
 msgstr ""
+"Датотеке у путањи „bin“ морају бити у власништву корисника „bin_owner“ "
+"постављеног у конфигурацији за „rpminspect“, што је обично „root“. Ако је "
+"ово власништво очекивано, ажурирајте „%s“ и пошаљите закрпу пројекту који га "
+"поседује."
 
 #: include/results.h:381
 #, c-format
@@ -565,6 +822,10 @@ msgid ""
 "configuration, which is usually root. If this ownership is expect, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"Датотеке у путањи „bin“ морају бити у власништву групе „bin_group“ "
+"постављене у конфигурацији за „rpminspect“, што је обично „root“. Ако је ово "
+"власништво очекивано, ажурирајте „%s“ и пошаљите закрпу пројекту који га "
+"поседује."
 
 #: include/results.h:388
 #, c-format
@@ -573,6 +834,10 @@ msgid ""
 "or remove the world execute bit on the file (chmod o-x). If this ownership "
 "is expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"Или промените групу датотеке („chgrp“) на „bin_group“ постављену у "
+"конфигурацији за „rpminspect“ или уклоните бит извршавања за остале на "
+"датотеци („chmod o-x“). Ако је ово власништво очекивано, ажурирајте „%s“ и "
+"пошаљите закрпу пројекту који га поседује."
 
 #: include/results.h:395
 #, c-format
@@ -581,6 +846,10 @@ msgid ""
 "or remove the group write bit on the file (chmod g-w). If this ownership is "
 "expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"Или промените групу датотеке („chgrp“) на „bin_group“ постављену у "
+"конфигурацији за „rpminspect“ или уклоните бит уписа за групу на датотеци („"
+"chmod g-w“). Ако је ово власништво очекивано, ажурирајте „%s“ и пошаљите "
+"закрпу пројекту који га поседује."
 
 #: include/results.h:402
 #, c-format
@@ -589,6 +858,9 @@ msgid ""
 "process to set correct owner and group information. If expected, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"Потврдите да ли су измене власништва очекиване. Ако нису, подесите процес "
+"изградње пакета да бисте поставили исправне податке о власнику и групи. Ако "
+"су очекиване, ажурирајте „%s“ и пошаљите закрпу пројекту који га поседује."
 
 #: include/results.h:409
 msgid ""
@@ -599,26 +871,36 @@ msgid ""
 "remedy, add a fileinfo rule for this file to the vendor data package under "
 "the appropriate product release file."
 msgstr ""
+"„rpminspect“ очекује правило „fileinfo“ из пакета података добављача за ову "
+"датотеку. Ово обично значи да датотека носи неуобичајен скуп овлашћења (нпр. "
+"„setuid“), што је услов при којем би „rpminspect“ проверио списак „fileinfo“ "
+"како би се осигурало да пакет одговара правилима добављача. Да бисте ово "
+"исправили, додајте правило „fileinfo“ за ову датотеку у пакет података "
+"добављача под одговарајућом датотеком издања производа."
 
 #: include/results.h:424
 msgid "Consult the shell documentation for proper syntax."
-msgstr ""
+msgstr "Погледајте документацију шкољке за исправну синтаксу."
 
 #: include/results.h:431
 msgid ""
 "The file referenced was not a known shell script in the before build but is "
 "now a shell script in the after build."
 msgstr ""
+"Датотека на коју се упућује није била позната шкољкина скрипта у изградњи "
+"пре, али је сада шкољкина скрипта у изградњи после."
 
 #: include/results.h:438
 msgid ""
 "The referenced shell script is invalid. Consider debugging it with the '-n' "
 "option on the shell to find and fix the problem."
 msgstr ""
+"Упућена шкољкина скрипта је неисправна. Размислите о уклањању грешака помоћу "
+"опције „-n“ у шкољки како бисте пронашли и поправили проблем."
 
 #: include/results.h:453
 msgid "See annocheck(1) for more information."
-msgstr ""
+msgstr "Погледајте „annocheck(1)“ за више података."
 
 #: include/results.h:460
 msgid ""
@@ -627,6 +909,11 @@ msgid ""
 "declarations). Symbols may also appear as unfortified if the compiler is "
 "unable to determine the size of a buffer, which is not necessarily an error."
 msgstr ""
+"Осигурајте да су све објектне датотеке компајлиране са „-O2 -"
+"D_FORTIFY_SOURCE=2“, и да су сва одговарајућа заглавља укључена (без "
+"имплицитних декларација функција). Симболи се такође могу појавити као "
+"неутврђени ако компајлер не може да одреди величину оставе, што није нужно "
+"грешка."
 
 #: include/results.h:475
 msgid ""
@@ -636,6 +923,11 @@ msgid ""
 "If they are not, modify the package spec file to ensure the build links with "
 "the correct shared libraries."
 msgstr ""
+"Симболи „DT_NEEDED“ су додати или уклоњени. Ово се дешава када окружење "
+"изградње има различита издања потребних библиотека. Понекад је ово намерно, "
+"а понекад не. Потврдите да су ове промене очекиване. Ако нису, измените спец "
+"датотеку пакета како бисте осигурали да се изградња повезује са исправним "
+"дељеним библиотекама."
 
 #: include/results.h:490
 msgid ""
@@ -643,6 +935,9 @@ msgid ""
 "is, you can adjust the filesize inspection settings in the rpminspect.yaml "
 "file."
 msgstr ""
+"Датотека је порасла за приметну количину. Осигурајте да је ова промена "
+"намерна. Ако јесте, можете подесити подешавања прегледа величине датотеке у "
+"датотеци „rpminspect.yaml“."
 
 #: include/results.h:497
 msgid ""
@@ -650,18 +945,25 @@ msgid ""
 "it is, you can adjust the filesize inspection settings in the rpminspect."
 "yaml file."
 msgstr ""
+"Датотека се смањила за приметну количину. Осигурајте да је ова промена "
+"намерна. Ако јесте, можете подесити подешавања прегледа величине датотеке у "
+"датотеци „rpminspect.yaml“."
 
 #: include/results.h:504
 msgid ""
 "A previously empty file is no longer empty.  Make sure this change is "
 "intended and fix the package spec file if necessary."
 msgstr ""
+"Претходно празна датотека више није празна. Уверите се да је ова промена "
+"намерна и поправите спец датотеку пакета ако је потребно."
 
 #: include/results.h:511
 msgid ""
 "A previously non-empty file is now empty.  Make sure this change is intended "
 "and fix the package space file if necessary."
 msgstr ""
+"Претходно непразна датотека је сада празна. Уверите се да је ова промена "
+"намерна и поправите спец датотеку пакета ако је потребно."
 
 #: include/results.h:526
 #, c-format
@@ -672,6 +974,12 @@ msgid ""
 "may also be of help for this situation.  If necessary, update %s with the "
 "changes found here and send a patch to the project that owns the data file."
 msgstr ""
+"Пронађене су неочекиване могућности у назначеној датотеци. Погледајте „"
+"capabilities(7)“ и или прилагодите датотеке у пакету или измените списак "
+"могућности у пакету података продавца за „rpminspect“. Безбедносни тим "
+"такође може бити од помоћи у овој ситуацији. Ако је потребно, ажурирајте %s "
+"са овде пронађеним променама и пошаљите закрпу пројекту који поседује "
+"датотеку података."
 
 #: include/results.h:541
 msgid ""
@@ -679,6 +987,9 @@ msgid ""
 "usability problems for users if module parameters were removed in a "
 "maintenance update."
 msgstr ""
+"Параметри модула језгра су уклоњени између изградњи. Ово може представљати "
+"проблеме са употребљивошћу за кориснике ако су параметри модула уклоњени у "
+"ажурирању одржавања."
 
 #: include/results.h:548
 msgid ""
@@ -686,6 +997,9 @@ msgid ""
 "usability problems for users if module dependencies changed in a maintenance "
 "update."
 msgstr ""
+"Зависности модула језгра су промењене између изградњи. Ово може представљати "
+"проблеме са употребљивошћу за кориснике ако су се зависности модула "
+"промениле у ажурирању одржавања."
 
 #: include/results.h:555
 msgid ""
@@ -693,6 +1007,9 @@ msgid ""
 "usability problems for users if module device aliases changed in a "
 "maintenance update."
 msgstr ""
+"Алијаси уређаја модула језгра су промењони између изградњи. Ово може "
+"представљати проблеме са употребљивошћу за кориснике ако су се алијаси "
+"уређаја модула промениле у ажурирању одржавања."
 
 #: include/results.h:565
 msgid ""
@@ -700,12 +1017,17 @@ msgid ""
 "build.  This may be deliberate, but check to make sure you do not have any "
 "unexpected ExclusiveArch lines in the spec file."
 msgstr ""
+"Архитектура присутна у изградњи пре сада недостаје у изградњи после. Ово "
+"може бити намерно, али проверите како бисте се уверили да немате неочекиване "
+"„ExclusiveArch“ редове у спец датотеци."
 
 #: include/results.h:566
 msgid ""
 "A new architecture has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Нова архитектура се појавила у изградњи после. Ово може указивати на "
+"напредак у свету рачунарства."
 
 #: include/results.h:576
 msgid ""
@@ -713,12 +1035,17 @@ msgid ""
 "This may be deliberate, but check to make sure you have correct syntax "
 "defining the subpackage in the spec file"
 msgstr ""
+"Подпакет присутан у изградњи пре сада недостаје у изградњи после. Ово може "
+"бити намерно, али проверите како бисте се уверили да имате исправну синтаксу "
+"која дефинише подпакет у спец датотеци"
 
 #: include/results.h:577
 msgid ""
 "A new subpackage has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Нови подпакет се појавио у изградњи после. Ово може указивати на напредак у "
+"свету рачунарства."
 
 #: include/results.h:587
 #, c-format
@@ -726,18 +1053,25 @@ msgid ""
 "Make sure the spec file in the after build contains a valid %changelog "
 "section."
 msgstr ""
+"Уверите се да спец датотека у изградњи после садржи исправан одељак "
+"„%changelog“."
 
 #: include/results.h:597
 msgid ""
 "Files should not be installed in old directory names.  Modify the package to "
 "install the affected file to the preferred directory."
 msgstr ""
+"Датотеке не би требало да буду инсталиране у старим називима директоријума. "
+"Измените пакет тако да инсталира обухваћену датотеку у пожељни директоријум."
 
 #: include/results.h:607
 msgid ""
 "ELF .o and .a files should not carry LTO (Link Time Optimization) bytecode.  "
 "Make sure you have stripped LTO bytecode from those files at install time."
 msgstr ""
+"ELF .o и .a датотеке не би требало да носе LTO (Link Time Optimization) "
+"бајтни код. Уверите се да сте уклонили LTO бајтни код из тих датотека "
+"приликом инсталирања."
 
 #: include/results.h:617
 msgid ""
@@ -746,6 +1080,11 @@ msgid ""
 "and have a non-symlink turn in to a symlink, ensure this is deliberate.  "
 "NOTE:  You cannot turn a directory in to a symlink due to RPM limitations."
 msgstr ""
+"Осигурајте да симболичке везе показују на важеће одредиште у једном од "
+"подпакета изградње; висеће симболичке везе нису дозвољене. Ако поредите "
+"издања и имате не-симболичку везу која је постала симболичка, уверите се да "
+"је то намерно. НАПОМЕНА: Не можете претворити директоријум у симболичку везу "
+"због RPM ограничења."
 
 #: include/results.h:618
 #, c-format
@@ -758,6 +1097,13 @@ msgid ""
 "scriptlet for replacing a directory.  See the packaging guidelines for "
 "'Scriptlet to replace a directory' for more information."
 msgstr ""
+"Осигурајте да симболичке везе показују на важеће одредиште у једном од "
+"подпакета изградње; висеће симболичке везе нису дозвољене. Ако поредите "
+"издања и имате не-симболичку везу која је постала симболичка, уверите се да "
+"је то намерно. НАПОМЕНА: Не можете претворити директоријум у симболичку везу "
+"због RPM ограничења. Ако то апсолутно морате да урадите, обавезно укључите "
+"„%pretrans“ скриптицу за замену директоријума. Погледајте смернице за "
+"паковање за „Скриптица за замену директоријума“ за више информација."
 
 #: include/results.h:628
 #, c-format
@@ -767,6 +1113,10 @@ msgid ""
 "See the RPM documentation or distribution package maintainer guide for more "
 "information."
 msgstr ""
+"Уклоните забрањене референце путања из наведеног реда у одељку „%files“. У "
+"многим случајевима можете користити RPM макрое да наведете локације путања. "
+"Погледајте RPM документацију или водич за одржаваоце пакета дистрибуције за "
+"више информација."
 
 #: include/results.h:638
 msgid ""
@@ -774,6 +1124,9 @@ msgid ""
 "is intended and if necessary fix the spec file so the correct file is "
 "included in the built package."
 msgstr ""
+"У многим случајевима је промена MIME врсте намерна. Потврдите да је измена "
+"жељена и ако је потребно поправите „spec“ датотеку тако да исправна датотека "
+"буде укључена у изграђени пакет."
 
 #: include/results.h:648
 msgid ""
@@ -781,6 +1134,9 @@ msgid ""
 "users.  See the abidiff(1) documentation and the distribution ABI policies "
 "to determine if this detected change is allowed."
 msgstr ""
+"ABI измене уведене током ажурирања одржавања могу довести до проблема за "
+"кориснике. Погледајте „abidiff(1)“ документацију и ABI политике дистрибуције "
+"како бисте утврдили да ли је ова откривена измена дозвољена."
 
 #: include/results.h:658
 msgid ""
@@ -788,6 +1144,10 @@ msgid ""
 "problems for users.  See the libabigail documentation and the distribution "
 "KMI policy to determine if this detected change is allowed."
 msgstr ""
+"Интерфејс модула језгра (KMI) уведен током ажурирања одржавања може довести "
+"до проблема за кориснике. Погледајте „libabigail“ документацију и KMI "
+"политику дистрибуције како бисте утврдили да ли је ова откривена измена "
+"дозвољена."
 
 #: include/results.h:668
 #, c-format
@@ -797,6 +1157,10 @@ msgid ""
 "configuration files, make sure the package can handle upgrading an existing "
 "package -or- honor the old file locations."
 msgstr ""
+"Измене у „%config“ треба радити пажљиво. Уверите се да сте инсталирали "
+"исправну датотеку и на исправно место. Ако пакет реструктурира датотеке "
+"подешавања, уверите се да пакет може да рукује надоградњом постојећег "
+"пакета -или- поштујте старе локације датотека."
 
 #: include/results.h:678
 #, c-format
@@ -805,6 +1169,9 @@ msgid ""
 "the package is not a rebase.  Sometimes upstream projects rename or move "
 "documentation files and the spec file needs to account for those changes."
 msgstr ""
+"Пронађене су измене међу „%doc“ датотекама. Потвдите да су ове измене "
+"намерне ако пакет није ребазирање. Понекад узводни пројекти преименују или "
+"преместе датотеке документације и „spec“ датотека мора то да узме у обзир."
 
 #: include/results.h:688
 msgid ""
@@ -814,6 +1181,11 @@ msgid ""
 "the source package has any zero length or otherwise invalid patches and "
 "correct the problem."
 msgstr ""
+"Пронађена је неисправна датотека закрпе. Ово је обично резултат стварања "
+"збирке закрпа поређењем два стабла. Када датотеке нестану, то може довести "
+"до закрпа нулте дужине у резултујућој збирци. Проверите да ли изворни пакет "
+"има закрпе нулте дужине или на други начин неисправне закрпе и исправите "
+"проблем."
 
 #: include/results.h:690
 #, c-format
@@ -827,6 +1199,14 @@ msgid ""
 "define the patch at the top of the spec file.  So Patch47 is applied with "
 "either a '%patch 47', '%patch -P 47', '%patch -P47', or '%patch47' macro."
 msgstr ""
+"Именована закрпа је дефинисана у заглављу изворног RPM-а (што значи да има „"
+"PatchN:“ дефиницију у „spec“ датотеци) али није примењена нигде у „spec“ "
+"датотеци. Недостаје одговарајући „%patch“ макро и у „spec“ датотеци "
+"недостају „%autosetup“ или „%autopatch“ макрои. Ово можете поправити "
+"додавањем одговарајућег „%patch“ макроа у „spec“ датотеку (обично в одељку "
+"„%prep“). Број наведен уз „%patch“ макро одговара броју који је коришћен за "
+"дефинисање закрпе на врху „spec“ датотеке. Тако се „Patch47“ примењује са "
+"макроом „%patch 47“, „%patch -P 47“, „%patch -P47“ или „%patch47“."
 
 #: include/results.h:692
 #, c-format
@@ -836,12 +1216,18 @@ msgid ""
 "For example, Patch47 needs to have either a '%patch 47', '%patch -P 47', "
 "'%patch -P47', or '%patch47' macro."
 msgstr ""
+"Именована закрпа је дефинисана али се број не подудара са „%patch“ макроом. "
+"Уверите се да све нумерисане закрпе имају одговарајуће „%patch“ макрое. На "
+"пример, „Patch47“ треба да има макро „%patch 47“, „%patch -P 47“, „%patch -"
+"P47“ или „%patch47“."
 
 #: include/results.h:694
 msgid ""
 "The defined patch file is not something rpminspect can handle.  This is "
 "likely a bug and should be reported to the upstream rpminspect project."
 msgstr ""
+"Дефинисана датотека закрпе није нешто чиме „rpminspect“ може да рукује. Ово "
+"је вероватно грешка и треба је пријавити узводном „rpminspect“ пројекту."
 
 #: include/results.h:704
 msgid ""
@@ -851,6 +1237,11 @@ msgid ""
 "sure the file in question is clean, please file a bug with rpminspect for "
 "further help."
 msgstr ""
+"ClamAV је пронашао вирус у именованој датотеци. Ово може бити лажно "
+"позитиван резултат, али би требало да ручно прегледате дотичну датотеку како "
+"бисте се уверили да је чиста. Ово може бити проблем са ClamAV базом података "
+"или откривањем. Ако сте сигурни да је дотична датотека чиста, пријавите "
+"грешку „rpminspect“-у за даљу помоћ."
 
 #: include/results.h:714
 #, c-format
@@ -860,6 +1251,10 @@ msgid ""
 "vendor data package for the product.  Modify the %s file and send a patch to "
 "the project that owns it."
 msgstr ""
+"У пакету је пронађена датотека са потенцијално политички осетљивим "
+"садржајем. Ако је ова датотека дозвољена, треба је додати в пакет података "
+"произвођача „rpminspect“ за тај производ. Измените датотеку „%s“ и пошаљите "
+"закрпу пројекту који је поседује."
 
 #: include/results.h:724
 msgid ""
@@ -872,6 +1267,13 @@ msgid ""
 "order to allow for backwards compatibility.  Whenever possible the "
 "deprecated functions should not be used."
 msgstr ""
+"Забрањени симболи су пронађени у ELF датотеци у пакету. Подешавања за „"
+"rpminspect“ указују на то да су именовани симболи забрањени у пакетима. Ако "
+"је то намерно, можда ћете желети да онемогућите проверу „badfuncs“. Ако није "
+"намерно, проверите „man“ странице за именоване симболе да бисте видели које "
+"су API функције замениле забрањене симболе. Обично је функција означена као "
+"застарела, али је и даље доступна како би се омогућила компатибилност "
+"уназад. Кад год је могуће, застареле функције не би требало користити."
 
 #: include/results.h:734
 msgid ""
@@ -882,6 +1284,12 @@ msgid ""
 "try using a program such as patchelf to remove these properties from the ELF "
 "files."
 msgstr ""
+"DT_RPATH или DT_RUNPATH својства су пронађена у ELF дељеним објектима у овом "
+"пакету. Коришћење DT_RPATH и DT_RUNPATH се не препоручује осим у одређеним "
+"ситуацијама. Проверите да ли сте онемогућили „rpath“ током фазе „%build“ у „"
+"spec“ датотеци. Ако то не можете лако да урадите, можете покушати да "
+"користите програм као што је „patchelf“ да уклоните ова својства из ELF "
+"датотека."
 
 #: include/results.h:736
 msgid ""
@@ -889,6 +1297,9 @@ msgid ""
 "This indicates a linker error and should not happen.  ELF objects should "
 "only carry DT_RPATH or DT_RUNPATH, never both."
 msgstr ""
+"И DT_RPATH и DT_RUNPATH својства су пронађена у ELF дељеном објекту. Ово "
+"указује на грешку повезивача и не би требало да се дешава. ELF објекти треба "
+"да носе само DT_RPATH или DT_RUNPATH, никада оба."
 
 #: include/results.h:746
 msgid ""
@@ -898,6 +1309,11 @@ msgid ""
 "discuss the situation with the Product Security Team to determine the "
 "correct course of action."
 msgstr ""
+"Датотека подешавања за „rpminspect“ садржи списак забрањених Уникод кодних "
+"тачака. Једна је пронађена у распакованом и закрпљеном изворном стаблу или у "
+"једној од текстуалних изворних датотека у изворном RPM-у. Или уклоните ову "
+"кодну тачку или разговарајте о ситуацији са тимом за безбедност производа "
+"како бисте утврдили исправан ток радње."
 
 #: include/results.h:748
 #, c-format
@@ -908,6 +1324,11 @@ msgid ""
 "running.  A common cause is removal of the working directory while the "
 "program is executing."
 msgstr ""
+"Одељак „%prep“ у „spec“ датотеци није могао бити извршен из неког разлога. "
+"Ово је обично резултат неуспеха у „librpmbuild“-у, што је обично повезано са "
+"проблемима при извлачењу архиве или променом система датотека док „rpminspect"
+"“ ради. Уобичајени узрок је уклањање радног директоријума док се програм "
+"извршава."
 
 #: include/results.h:758
 msgid ""
@@ -915,6 +1336,9 @@ msgid ""
 "Check the spec file for this dependency and ensure you have not misspelled a "
 "macro or used a macro name that does not exist."
 msgstr ""
+"Непроширени RPM „spec“ макрои су пронађени у наведеном правилу зависности. "
+"Проверите „spec“ датотеку за ову зависност и уверите се да нисте погрешно "
+"написали макро или користили назив макроа који не постоји."
 
 #: include/results.h:760
 msgid ""
@@ -923,6 +1347,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{version}-%{release}' "
 "in the spec file."
 msgstr ""
+"Додајте наведену изричиту зависност (Requires) у спец датотеку за именовани "
+"потпакет. Потпакети који зависе од дељених библиотека у другом потпакету "
+"морају имати изричито „Requires: SUBPACKAGE_NAME = %{version}-%{release}“ у "
+"спец датотеци."
 
 #: include/results.h:762
 msgid ""
@@ -931,6 +1359,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-"
 "%{release}' in the spec file."
 msgstr ""
+"Додајте наведену изричиту зависност (Requires) у спец датотеку за именовани "
+"потпакет. Потпакети који зависе од дељених библиотека у другом потпакету "
+"морају имати изричито „Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-%"
+"{release}“ у спец датотеци."
 
 #: include/results.h:764
 #, c-format
@@ -941,6 +1373,11 @@ msgid ""
 "spec file but you do need to make sure only one subpackage is packaging up "
 "the shared library in question."
 msgstr ""
+"Проверите одељке „%files“ потпакета и изричите изјаве „Provides“. Само један "
+"потпакет треба да обезбеђује дату дељену библиотеку. Називи дељених "
+"библиотека се аутоматски додају као „Provides“, па нема потребе наводити их "
+"у спец датотеци, али морате осигурати да само један потпакет пакује дату "
+"дељену библиотеку."
 
 #: include/results.h:766
 msgid ""
@@ -950,6 +1387,11 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Зависност наведена у изградњи „пре“ промењена је у наведену зависност у "
+"изградњи „после“. Ако је ово резултат VERIFY, то значи да је rpminspect "
+"приметио промену у ономе што сматра ажурирањем одржавања у пакету. Резултат "
+"INFO значи да је приметио ову промену, али је сматра исправном јер пореди "
+"ребазирану изградњу."
 
 #: include/results.h:768
 msgid ""
@@ -959,6 +1401,11 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Нова зависност је виђена у изградњи „после“ која није била присутна у "
+"изградњи „пре“. Ако је ово резултат VERIFY, то значи да је rpminspect "
+"приметио промену у ономе што сматра ажурирањем одржавања у пакету. Резултат "
+"INFO значи да је приметио ову промену, али је сматра исправном јер пореди "
+"ребазирану изградњу."
 
 #: include/results.h:770
 msgid ""
@@ -968,6 +1415,11 @@ msgid ""
 "An INFO result means it noticed this change, but deems it ok because it is "
 "comparing a rebased build."
 msgstr ""
+"Зависност виђена у изградњи „пре“ није виђена у изградњи „после“, што значи "
+"да је уклоњена или изгубљена. Ако је ово резултат VERIFY, то значи да је "
+"rpminspect приметио промену у ономе што сматра ажурирањем одржавања у "
+"пакету. Резултат INFO значи да је приметио ову промену, али је сматра "
+"исправном јер пореди ребазирану изградњу."
 
 #: include/results.h:772
 msgid ""
@@ -977,151 +1429,157 @@ msgid ""
 "%{version}-%{release}' to capture the package package Epoch in the "
 "dependency."
 msgstr ""
+"Пакет има вредност Epoch већу од нуле, али изричите зависности потпакета је "
+"не користе доследно. За пријављену зависност, „= %{version}-%{release}“ "
+"треба променити у „= %{epoch}:%{version}-%{release}“ како би се обухватио "
+"Epoch пакета у зависности."
 
 #: include/results.h:781
 msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
+"Погледајте udev документацију на https://www.freedesktop.org/software/"
+"systemd/man/udev.html за помоћ при исправљању грешака и упозорења."
 
 #: lib/abi.c:65
 #, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr ""
+msgstr "*** лоше обликован одредник ABI нивоа: %s"
 
 #: lib/abi.c:70
 #, c-format
 msgid "*** ABI level %d already defined"
-msgstr ""
+msgstr "*** ABI ниво %d је већ одређен"
 
 #: lib/abi.c:84
 #, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr ""
+msgstr "*** лоше обликован унос ABI нивоа: %s"
 
 #: lib/builds.c:73
 #, c-format
 msgid "*** unable to create download directory %s"
-msgstr ""
+msgstr "*** не могу да направим директоријум за преузимање %s"
 
 #: lib/builds.c:85
 #, c-format
 msgid "*** unknown working directory type: %d"
-msgstr ""
+msgstr "*** непозната врста радног директоријума: %d"
 
 #: lib/builds.c:173
 #, c-format
 msgid "*** unable to read %s, skipping"
-msgstr ""
+msgstr "*** не могу да прочитам %s, прескачем"
 
 #: lib/builds.c:205
 #, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr ""
+msgstr "*** наишао сам на непознатог члана директоријума: %s"
 
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "Нема довољно доступног простора за преузимање захтеваног %s.\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    Потребно је %s у %s, имам %s.\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
-msgstr ""
+msgstr "Погледајте опцију „-w“ за навођење другог радног директоријума.\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
-msgstr ""
+msgstr "Не могу да одредим потребан простор за преузимање захтеваног %s.\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "Осигурајте да %s има довољно доступног простора."
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
-msgstr ""
+msgstr "изградња"
 
 #: lib/builds.c:320
 msgid "Downloading module"
-msgstr ""
+msgstr "Преузимање модула"
 
 #: lib/builds.c:323
 msgid "Downloading RPM build"
-msgstr ""
+msgstr "Преузимање РПМ изградње"
 
 #: lib/builds.c:373 lib/inspect_modularity.c:47
 #, c-format
 msgid "*** ignoring malformed module metadata file: %s"
-msgstr ""
+msgstr "*** занемарујем лоше обликовану датотеку метаподатака модула: %s"
 
 #: lib/builds.c:383
 #, c-format
 msgid "*** malformed rpm filters in file: %s"
-msgstr ""
+msgstr "*** лоше обликовани рпм филтери у датотеци: %s"
 
 #: lib/builds.c:541 lib/builds.c:545
 msgid "task"
-msgstr ""
+msgstr "задатак"
 
 #: lib/builds.c:659 lib/builds.c:662
 msgid "RPM"
-msgstr ""
+msgstr "РПМ"
 
 #: lib/builds.c:791
 #, c-format
 msgid "*** `%s' already exists in %s"
-msgstr ""
+msgstr "*** „%s“ већ постоји у %s"
 
 #: lib/builds.c:829
 #, c-format
 msgid "*** unable to find local build: %s"
-msgstr ""
+msgstr "*** не могу да пронађем локалну изградњу: %s"
 
 #: lib/builds.c:841
 #, c-format
 msgid "*** unable to download RPM: %s"
-msgstr ""
+msgstr "*** не могу да преузмем РПМ: %s"
 
 #: lib/builds.c:860 lib/builds.c:893 lib/builds.c:903
 #, c-format
 msgid "*** unable to find build %s in Koji hub %s"
-msgstr ""
+msgstr "*** не могу да пронађем изградњу %s у Који чворишту %s"
 
 #: lib/builds.c:872
 #, c-format
 msgid "*** unable to find task %s in Koji hub %s"
-msgstr ""
+msgstr "*** не могу да пронађем задатак %s у Који чворишту %s"
 
 #: lib/checksums.c:91
 #, c-format
 msgid "*** %s is a FIFO"
-msgstr ""
+msgstr "*** %s је ФИФО"
 
 #: lib/copyfile.c:117
 #, c-format
 msgid "%s already exists"
-msgstr ""
+msgstr "%s већ постоји"
 
 #: lib/copyfile.c:122
 msgid ", overwriting"
-msgstr ""
+msgstr ", преписујем"
 
 #: lib/curl.c:267 lib/readfile.c:60
 #, c-format
 msgid "*** unable to read %s"
-msgstr ""
+msgstr "*** не могу да прочитам %s"
 
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
+msgstr "%s у %s на %s има очекивани режим %04o"
 
 #: lib/fileinfo.c:76
 #, c-format
@@ -1129,6 +1587,8 @@ msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s у %s на %s има неочекивани режим %04o; очекивани режим %04o; захтева "
+"преглед од стране безбедносног тима"
 
 #: lib/fileinfo.c:96
 #, c-format
@@ -1136,11 +1596,13 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o, Security Team review may be "
 "required"
 msgstr ""
+"%s у %s на %s има небезбедан режим %04o, можда је потребан преглед "
+"безбедносног тима"
 
 #: lib/fileinfo.c:155
 #, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
+msgstr "%s у %s на %s има очекиваног власника „%s“"
 
 #: lib/fileinfo.c:168
 #, c-format
@@ -1148,6 +1610,8 @@ msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s у %s на %s има неочекиваног власника „%s“; очекивани власник „%s“; "
+"захтева преглед од стране безбедносног тима"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
 #, c-format
@@ -1155,11 +1619,13 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o but has no fileinfo rule for owner "
 "specification, Security Team review may be required"
 msgstr ""
+"%s у %s на %s носи небезбедан режим %04o али нема правило података о "
+"датотеци за одредбу власника, можда је потребан преглед безбедносног тима"
 
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
+msgstr "%s у %s на %s носи очекивану групу „%s“"
 
 #: lib/fileinfo.c:262
 #, c-format
@@ -1167,154 +1633,160 @@ msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s у %s на %s носи неочекивану групу „%s“; очекивана група је „%s“; захтева "
+"преглед безбедносног тима"
 
 #: lib/init.c:226
 #, c-format
 msgid "*** invalid input string `%s`"
-msgstr ""
+msgstr "*** неисправна улазна ниска „%s“"
 
 #: lib/init.c:253 lib/init.c:262 lib/init.c:270 lib/init.c:282 lib/init.c:291
 #: lib/init.c:299 lib/init.c:311 lib/init.c:320 lib/init.c:328 lib/init.c:340
 #, c-format
 msgid "*** invalid mode string: %s"
-msgstr ""
+msgstr "*** неисправан режим ниске: %s"
 
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** проблем при додавању уноса у низ %s->%s"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** проблем при додавању уноса за занемаривање у %s"
 
 #: lib/init.c:418 lib/init.c:432
 msgid "*** error reading "
-msgstr ""
+msgstr "*** грешка при читању "
 
 #: lib/init.c:458
 #, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr ""
+msgstr "*** занемарујем лоше обликован одељак %s->%s"
 
 #: lib/init.c:515 lib/init.c:528
 #, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr ""
+msgstr "*** грешка при читању %s шаблона за занемаривање"
 
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
+msgstr "*** заставица мора бити „on“ (укљ) или „off“ (искљ); занемарујем „%s“"
 
 #: lib/init.c:548
 #, c-format
 msgid "*** unknown inspections: `%s`"
-msgstr ""
+msgstr "*** непознате инспекције: „%s“"
 
 #: lib/init.c:559
 msgid "*** malformed/unknown inspections section"
-msgstr ""
+msgstr "*** лоше обликован/непознат одељак инспекција"
 
 #: lib/init.c:591
 #, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr ""
+msgstr "*** занемарујем лоше обликовану %s датотеку подешавања: %s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** непозната подешавања статичког контекста модуларности „%s“"
 
 #: lib/init.c:717
 #, c-format
 msgid "*** unknown specname match setting '%s', defaulting to 'full'"
 msgstr ""
+"*** непознато подешавање подударања назива спецификације „%s“, подразумевам „"
+"full“ (потпуно)"
 
 #: lib/init.c:732
 #, c-format
 msgid "*** unknown specname primary setting '%s', defaulting to 'name'"
 msgstr ""
+"*** непознато примарно подешавање назива спецификације „%s“, подразумевам „"
+"name“ (назив)"
 
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
-msgstr ""
+msgstr "*** неисправан annocheck failure_reporting_level: %s, подразумевам %s"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** лоше обликован одељак badfuncs->allowed"
 
 #: lib/init.c:822
 #, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
-msgstr ""
+msgstr "*** грешка при читању уникодног регуларног израза за искључивање: %s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** лоше обликован одељак „rpmdeps->ignore“; прескачем"
 
 #: lib/init.c:968
 #, c-format
 msgid "*** Invalid filename in the fileinfo list: %s"
-msgstr ""
+msgstr "*** Неисправан назив датотеке на списку података о датотекама: %s"
 
 #: lib/init.c:969
 msgid "*** From this invalid line:"
-msgstr ""
+msgstr "*** Из овог неисправног реда:"
 
 #: lib/init.c:970
 #, c-format
 msgid "***     %s"
-msgstr ""
+msgstr "***     %s"
 
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** неочекивани симбол „%s“ је виђен у %s, не могу да наставим"
 
 #: lib/init.c:1414
 #, c-format
 msgid "*** invalid security rule: %s"
-msgstr ""
+msgstr "*** неисправно безбедносно правило: %s"
 
 #: lib/init.c:1426
 #, c-format
 msgid "*** unknown security rule: %s"
-msgstr ""
+msgstr "*** непознато безбедносно правило: %s"
 
 #: lib/init.c:1435
 #, c-format
 msgid "*** unknown security action: %s"
-msgstr ""
+msgstr "*** непозната безбедносна радња: %s"
 
 #: lib/init.c:1461
 #, c-format
 msgid "*** malformed security line: %s"
-msgstr ""
+msgstr "*** лоше обликован безбедносни ред: %s"
 
 #: lib/init.c:1622
 #, c-format
 msgid "*** missing configuration file `%s'"
-msgstr ""
+msgstr "*** недостаје датотека подешавања „%s“"
 
 #: lib/init.c:1658
 #, c-format
 msgid "*** unable to find profile '%s'"
-msgstr ""
+msgstr "*** не могу да пронађем профил „%s“"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "грешка у коришћењу „abidiff“-а"
 
 #: lib/inspect_abidiff.c:275
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ABI измена у ${FILE} на ${ARCH}"
 
 #: lib/inspect_abidiff.c:284
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ABI некомпатибилна измена у ${FILE} на ${ARCH}"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1322,6 +1794,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s with ABI compatibility "
 "level %ld on %s revealed ABI differences."
 msgstr ""
+"Поређење старог наспрам новог издања %s у пакету %s са ABI нивоом "
+"компатибилности %ld на %s је открило ABI разлике."
 
 #: lib/inspect_abidiff.c:298
 #, c-format
@@ -1329,6 +1803,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s on %s revealed ABI "
 "differences."
 msgstr ""
+"Поређење старог наспрам новог издања %s у пакету %s на %s је открило ABI "
+"разлике."
 
 #: lib/inspect_abidiff.c:302
 #, c-format
@@ -1336,11 +1812,13 @@ msgid ""
 "Comparing from %s to %s in package %s with ABI compatibility level %ld on %s "
 "revealed ABI differences."
 msgstr ""
+"Поређење од %s до %s у пакету %s са ABI нивоом компатибилности %ld на %s је "
+"открило ABI разлике."
 
 #: lib/inspect_abidiff.c:304
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
-msgstr ""
+msgstr "Поређење од %s до %s у пакету %s на %s је открило ABI разлике."
 
 #: lib/inspect_abidiff.c:309
 #, c-format
@@ -1349,6 +1827,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Наредба: %s\n"
+"\n"
+"%s"
 
 #: lib/inspect_addedfiles.c:149
 #, c-format
@@ -1356,10 +1837,12 @@ msgid ""
 "Packages should not contain files or directories starting with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Пакети не би требало да садрже датотеке или директоријуме који почињу са „%s"
+"“ на %s у %s: %s"
 
 #: lib/inspect_addedfiles.c:150 lib/inspect_addedfiles.c:164
 msgid "invalid directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "неисправан директоријум ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:163
 #, c-format
@@ -1367,15 +1850,17 @@ msgid ""
 "Packages should not contain files or directories ending with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Пакети не би требало да садрже датотеке или директоријуме који се завршавају "
+"на „%s“ на %s у %s: %s"
 
 #: lib/inspect_addedfiles.c:177
 #, c-format
 msgid "Forbidden directory `%s` found on %s in %s: %s"
-msgstr ""
+msgstr "Пронађен је забрањени директоријум „%s“ на %s у %s: %s"
 
 #: lib/inspect_addedfiles.c:178
 msgid "forbidden directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "забрањени директоријум ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:209
 #, c-format
@@ -1383,220 +1868,224 @@ msgid ""
 "New security-related file `%s` added on %s in %s requires inspection by the "
 "Security Team"
 msgstr ""
+"Нова безбедносна датотека „%s“ додата на %s у %s захтева преглед од стране "
+"безбедносног тима"
 
 #: lib/inspect_addedfiles.c:211
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "нова безбедносна датотека ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:231
 #, c-format
 msgid "`%s` added on %s in %s"
-msgstr ""
+msgstr "„%s“ је додато на %s у %s"
 
 #: lib/inspect_addedfiles.c:232
 msgid "new file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "нова датотека ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:248
 msgid "the fileinfo list"
-msgstr ""
+msgstr "списак података о датотекама"
 
 #: lib/inspect_annocheck.c:116 lib/inspect_annocheck.c:151
 #, c-format
 msgid "*** libannocheck_enable_profile: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_profile: %s"
 
 #: lib/inspect_annocheck.c:136
 #, c-format
 msgid "*** libannocheck_get_known_profiles: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_profiles: %s"
 
 #: lib/inspect_annocheck.c:168
 msgid "NOT RUN"
-msgstr ""
+msgstr "НИЈЕ ПОКРЕНУТО"
 
 #: lib/inspect_annocheck.c:170
 msgid "PASSED"
-msgstr ""
+msgstr "УСПЕЛО"
 
 #: lib/inspect_annocheck.c:172 lib/output_summary.c:59
 msgid "FAILED"
-msgstr ""
+msgstr "НИЈЕ УСПЕЛО"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "МОЖДА"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
-msgstr ""
+msgstr "прескочено"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
-msgstr ""
+msgstr "НЕПОЗНАТО"
 
 #: lib/inspect_annocheck.c:226
 #, c-format
 msgid "*** libannocheck_init: %s"
-msgstr ""
+msgstr "*** libannocheck_init: %s"
 
 #: lib/inspect_annocheck.c:255
 #, c-format
 msgid "*** libannocheck_%s_test: %s"
-msgstr ""
+msgstr "*** libannocheck_%s_test: %s"
 
 #: lib/inspect_annocheck.c:267
 #, c-format
 msgid "*** libannocheck_enable_all_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_all_tests: %s"
 
 #: lib/inspect_annocheck.c:280
 #, c-format
 msgid "*** libannocheck_reinit: %s"
-msgstr ""
+msgstr "*** libannocheck_reinit: %s"
 
 #: lib/inspect_annocheck.c:373
 #, c-format
 msgid "*** before libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** пре libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:382 lib/inspect_annocheck.c:426
 #, c-format
 msgid "*** libannocheck_get_known_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_tests: %s"
 
 #: lib/inspect_annocheck.c:400 lib/inspect_annocheck.c:530
 #, c-format
 msgid "*** libannocheck_finish: %s"
-msgstr ""
+msgstr "*** libannocheck_finish: %s"
 
 #: lib/inspect_annocheck.c:417
 #, c-format
 msgid "*** after libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** после libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:461 lib/inspect_annocheck.c:613
 msgid "lost -D_FORTIFY_SOURCE in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "изгубљено -D_FORTIFY_SOURCE у ${FILE} на ${ARCH}"
 
 #: lib/inspect_annocheck.c:464
 #, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s је можда изгубио -O2 -D_FORTIFY_SOURCE на %s"
 
 #: lib/inspect_annocheck.c:489
 #, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr ""
+msgstr "libannocheck „%s“ наставља да пролази за %s на %s"
 
 #: lib/inspect_annocheck.c:492
 #, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "libannocheck „%s“ тест сада пролази за %s на %s"
 
 #: lib/inspect_annocheck.c:495
 #, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "libannocheck „%s“ тест сада пада за %s на %s"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
 #, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "libannocheck „%s“ тест пада за %s на %s"
 
 #: lib/inspect_annocheck.c:503
 #, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "libannocheck „%s“ тест пролази за %s на %s"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
 msgid "annocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "annocheck „%s“ тест пролази за %s на %s"
 
 #: lib/inspect_annocheck.c:553
 #, c-format
 msgid "annocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "annocheck „%s“ тест сада пролази за %s на %s"
 
 #: lib/inspect_annocheck.c:555
 #, c-format
 msgid "annocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "annocheck „%s“ тест сада пада за %s на %s"
 
 #: lib/inspect_annocheck.c:561 lib/inspect_annocheck.c:571
 #, c-format
 msgid "annocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "annocheck „%s“ тест пада за %s на %s"
 
 #: lib/inspect_annocheck.c:616
 #, c-format
 msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s је можда изгубио -D_FORTIFY_SOURCE на %s"
 
 #: lib/inspect_arch.c:77
 msgid "lost ${ARCH}"
-msgstr ""
+msgstr "изгубљена ${ARCH}"
 
 #: lib/inspect_arch.c:79
 #, c-format
 msgid "Architecture '%s' has disappeared"
-msgstr ""
+msgstr "Архитектура „%s“ је нестала"
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "добијена ${ARCH}"
 
 #: lib/inspect_arch.c:96
 #, c-format
 msgid "Architecture '%s' has appeared"
-msgstr ""
+msgstr "Архитектура „%s“ се појавила"
 
 #: lib/inspect_badfuncs.c:152
 #, c-format
 msgid "Forbidden function symbols found:\n"
-msgstr ""
+msgstr "Пронађени су забрањени симболи функција:\n"
 
 #: lib/inspect_badfuncs.c:168
 #, c-format
 msgid "%s may use forbidden functions on %s"
-msgstr ""
+msgstr "%s можда користи забрањене функције на %s"
 
 #: lib/inspect_badfuncs.c:175
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "забрањене функције у ${FILE} на ${ARCH}"
 
 #: lib/inspect_capabilities.c:82
 #, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
-msgstr ""
+msgstr "Овлашћења датотеке за %s су измењена из „%s“ у „%s“ у %s на %s\n"
 
 #: lib/inspect_capabilities.c:86
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr ""
+msgstr "овлашћења ${FILE} на ${ARCH}"
 
 #: lib/inspect_capabilities.c:98
 #, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr ""
+msgstr "Пронађена овлашћења датотеке за %s: „%s“ у %s на %s\n"
 
 #: lib/inspect_capabilities.c:134
 #, c-format
 msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
-msgstr ""
+msgstr "Пронађене су могућности датотеке за %s: „%s“ у %s на %s\n"
 
 #: lib/inspect_capabilities.c:145
 #, c-format
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
+"Неслагање списка овлашћења датотеке за %s: очекивано „%s“, добијено „%s“ у "
+"%s на %s\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr ""
+msgstr "списак овлашћења ${FILE} на ${ARCH}"
 
 #: lib/inspect_capabilities.c:165
 #, c-format
@@ -1604,42 +2093,48 @@ msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
 msgstr ""
+"Овлашћења датотеке за %s (%s) нису пронађена на списку овлашћења у %s на %s\n"
 
 #: lib/inspect_capabilities.c:184
 #, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
 msgstr ""
+"Могућности датотеке за %s (%s) нису пронађене на списку могућности у %s на "
+"%s\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
 "  Changes to security policy related files require inspection by the "
 "Security Response Team."
 msgstr ""
+"  Измене датотека везаних за безбедносну полису захтевају преглед од стране "
+"тима за безбедносни одговор."
 
 #: lib/inspect_changedfiles.c:319
 #, c-format
 msgid "Compressed %s file %s changed content in %s on %s."
-msgstr ""
+msgstr "Сажета %s датотека %s је изменила садржај у %s на %s."
 
 #: lib/inspect_changedfiles.c:353 lib/inspect_changedfiles.c:367
 #, c-format
 msgid "Error running msgunfmt on %s in %s on %s; malformed mo file?"
 msgstr ""
+"Грешка при покретању „msgunfmt“ на %s у %s на %s; неисправна „mo“ датотека?"
 
 #: lib/inspect_changedfiles.c:357 lib/inspect_changedfiles.c:371
 msgid "msgunfmt on ${FILE}"
-msgstr ""
+msgstr "msgunfmt на ${FILE}"
 
 #: lib/inspect_changedfiles.c:382
 #, c-format
 msgid "Message catalog %s changed content in %s on %s"
-msgstr ""
+msgstr "Збирка порука %s је изменила садржај у %s на %s"
 
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
 msgid "${FILE}"
-msgstr ""
+msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
 #, c-format
@@ -1647,25 +2142,29 @@ msgid ""
 "Public header file %s changed content in %s on %s.  A unified diff of the "
 "changes follows."
 msgstr ""
+"Јавна датотека заглавља %s је изменила садржај у %s на %s. Следе сједињене "
+"разлике измена."
 
 #: lib/inspect_changedfiles.c:462
 #, c-format
 msgid "File %s changed content in %s on %s."
 msgstr ""
+"Садржај јавне датотеке заглавља %s је измењен у %s на %s. Следи обједињена "
+"разлика измена."
 
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
-msgstr ""
+msgstr "Прегледање је прескочено јер врста ове изградње није „rpm“."
 
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
@@ -1673,6 +2172,8 @@ msgid ""
 "%%config file %s went from actual file to symlink (pointing to %s) in %s on "
 "%s"
 msgstr ""
+"%%config датотека %s је постала симболичка веза (показује на %s) уместо "
+"стварне датотеке у %s на %s"
 
 #: lib/inspect_config.c:123
 #, c-format
@@ -1680,16 +2181,19 @@ msgid ""
 "%%config file %s was a symlink (pointing to %s), became an actual file in %s "
 "on %s"
 msgstr ""
+"%%config датотека %s је била симболичка веза (показивала на %s), а постала "
+"је стварна датотека у %s на %s"
 
 #: lib/inspect_config.c:132
 #, c-format
 msgid "Symlink value for %%config file %s changed in %s on %s."
 msgstr ""
+"Вредност симболичке везе за %%config датотеку %s је измењена у %s на %s."
 
 #: lib/inspect_config.c:153
 #, c-format
 msgid "%%config file content change for %s in %s on %s"
-msgstr ""
+msgstr "Измена садржаја %%config датотеке за %s у %s на %s"
 
 #: lib/inspect_config.c:168
 #, c-format
@@ -1697,66 +2201,68 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
+"Измена %%config датотеке за %s у %s на %s (%smarked као %%config -> %smarked "
+"као %%config)\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
 msgid "not "
-msgstr ""
+msgstr "није "
 
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "%s у %s на %s недостају симболи за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "недостају симболи за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "Недостаје: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%s у %s на %s садржи симболе за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "садржи симболе за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "Садржи: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%s у %s на %s је добио симболе за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "добијени симболи за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:266
 #, c-format
 msgid "Gained: %s"
-msgstr ""
+msgstr "Добијено: %s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%s у %s на %s је изгубио симболе за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "изгубљени симболи за исправљање грешака"
 
 #: lib/inspect_debuginfo.c:292
 #, c-format
 msgid "Lost: %s"
-msgstr ""
+msgstr "Изгубљено: %s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
@@ -1764,10 +2270,11 @@ msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
 msgstr ""
+"%s у %s на %s носи .gosymtab али не би требало да има .gnu_debugdata симбол"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnu_debugdata са .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
@@ -1775,10 +2282,12 @@ msgid ""
 "Desktop file %s on %s references executable %s but %s is not executable by "
 "all"
 msgstr ""
+"Датотека радне површи %s на %s упућује на извршну датотеку %s, али %s не "
+"могу сви да изврше"
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${FILE} упућује на неизвршну датотеку на ${ARCH}"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -1787,6 +2296,9 @@ msgid ""
 "executable of that name, however it has a TryExec key so it may be ignored "
 "in case %s does not exist"
 msgstr ""
+"Датотека радне површи %s на %s упућује на извршну датотеку %s; међутим, "
+"ниједан подпакет не садржи извршну датотеку тог назива, али пошто има кључ „"
+"TryExec“ може бити занемарена у случају да %s не постоји"
 
 #: lib/inspect_desktop.c:308
 #, c-format
@@ -1794,32 +2306,38 @@ msgid ""
 "Desktop file %s on %s references executable %s but no subpackages contain an "
 "executable of that name"
 msgstr ""
+"Датотека радне површи %s на %s упућује на извршну датотеку %s, али ниједан "
+"подпакет не садржи извршну датотеку тог назива"
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} упућује на извршну датотеку која недостаје на ${ARCH}"
 
 #: lib/inspect_desktop.c:354
 #, c-format
 msgid "Desktop file %s on %s references icon %s but %s is not readable by all"
 msgstr ""
+"Датотека радне површи %s на %s упућује на иконицу %s, али %s не могу сви да "
+"читају"
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} упућује на нечитљиву иконицу на ${ARCH}"
 
 #: lib/inspect_desktop.c:376
 #, c-format
 msgid "Desktop file %s on %s references icon %s but no subpackages contain %s"
 msgstr ""
+"Датотека радне површи %s на %s упућује на иконицу %s, али је ниједан "
+"подпакет не садржи %s"
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} упућује на иконицу која недостаје на ${ARCH}"
 
 #: lib/inspect_desktop.c:452
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr ""
+msgstr "${FILE} није исправан на ${ARCH}"
 
 #: lib/inspect_desktop.c:455
 #, c-format
@@ -1827,27 +2345,33 @@ msgid ""
 "File %s is no longer a valid desktop entry file on %s; desktop-file-validate "
 "reports:"
 msgstr ""
+"Датотека %s више није исправна датотека уноса радне површи на %s; „desktop-"
+"file-validate“ извештава:"
 
 #: lib/inspect_desktop.c:457
 #, c-format
 msgid ""
 "New file %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"Нова датотека %s није исправна датотека радне површи на %s; „desktop-file-"
+"validate“ извештава:"
 
 #: lib/inspect_desktop.c:459
 #, c-format
 msgid ""
 "File %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"Датотека %s није исправна датотека радне површи на %s; „desktop-file-validate"
+"“ извештава:"
 
 #: lib/inspect_disttag.c:184
 #, c-format
 msgid "The %s file is missing the %s tag."
-msgstr ""
+msgstr "Датотеци %s недостаје ознака %s."
 
 #: lib/inspect_disttag.c:186
 msgid "${FILE} missing Release tag"
-msgstr ""
+msgstr "${FILE} недостаје ознака издања (Release)"
 
 #: lib/inspect_disttag.c:192
 #, c-format
@@ -1856,25 +2380,29 @@ msgid ""
 "should be of the form '%s' in the %s tag or in a macro used in the %s tag. "
 "After RPM macro expansion, no dist tag was found in this %s tag value."
 msgstr ""
+"Вредност ознаке %s нема ознаку дистрибуције (dist) у исправном облику. "
+"Ознака дистрибуције треба да буде у облику „%s“ у ознаци %s или у макроу "
+"који се користи у ознаци %s. Након развијања РПМ макроа, није пронађена "
+"ознака дистрибуције у овој вредности ознаке %s."
 
 #: lib/inspect_disttag.c:194
 #, c-format
 msgid "${FILE} does not use '%%{?dist}' in Release"
-msgstr ""
+msgstr "${FILE} не користи „%%{?dist}“ у издању (Release)"
 
 #: lib/inspect_disttag.c:263
 msgid "Specified package is not a source RPM, skipping."
-msgstr ""
+msgstr "Наведени пакет није изворни РПМ, прескачем."
 
 #: lib/inspect_doc.c:71
 #, c-format
 msgid "%doc ${FILE}"
-msgstr ""
+msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
 #, c-format
 msgid "%%doc file content change for %s in %s on %s\n"
-msgstr ""
+msgstr "%%doc измена садржаја датотеке за %s у %s на %s\n"
 
 #: lib/inspect_doc.c:113
 #, c-format
@@ -1882,134 +2410,136 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
+"%%doc измена датотеке за %s у %s на %s (%smarked као %%doc -> %smarked као "
+"%%doc)\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
 msgid "%s was an ELF file and now is not on %s"
-msgstr ""
+msgstr "%s је била ELF датотека, а сада више није на %s"
 
 #: lib/inspect_dsodeps.c:96 lib/inspect_dsodeps.c:108
 msgid "ELF file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ELF датотека ${FILE} на ${ARCH}"
 
 #: lib/inspect_dsodeps.c:106
 #, c-format
 msgid "%s was a dynamic ELF file and now is not on %s"
-msgstr ""
+msgstr "%s је била динамичка ELF датотека, а сада више није на %s"
 
 #: lib/inspect_dsodeps.c:146
 #, c-format
 msgid "DT_NEEDED symbol(s) removed from %s on %s"
-msgstr ""
+msgstr "DT_NEEDED симбол(и) уклоњени из %s на %s"
 
 #: lib/inspect_dsodeps.c:148 lib/inspect_dsodeps.c:165
 msgid "DT_NEEDED symbol(s) in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "DT_NEEDED симбол(и) у ${FILE} на ${ARCH}"
 
 #: lib/inspect_dsodeps.c:163
 #, c-format
 msgid "DT_NEEDED symbol(s) added to %s on %s"
-msgstr ""
+msgstr "DT_NEEDED симбол(и) додати у %s на %s"
 
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "Објекат и даље има извршни стек (нема GNU-stack напомене): %s на %s"
 
 #: lib/inspect_elf.c:435
 #, c-format
 msgid "Object has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "Објекат има извршни стек (нема GNU-stack напомене): %s на %s"
 
 #: lib/inspect_elf.c:438
 #, c-format
 msgid "Program built without GNU_STACK: %s on %s"
-msgstr ""
+msgstr "Програм је изграђен без GNU_STACK: %s на %s"
 
 #: lib/inspect_elf.c:444
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "GNU_STACK у ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:496
 #, c-format
 msgid "File %s has invalid execstack flags (%s) on %s"
-msgstr ""
+msgstr "Датотека %s има неисправне execstack заставице (%s) на %s"
 
 #: lib/inspect_elf.c:501
 #, c-format
 msgid "File %s has unrecognized GNU_STACK '%s' (expected RW or RWE) on %s"
-msgstr ""
+msgstr "Датотека %s има непрепознат GNU_STACK „%s“ (очекивано RW или RWE) на %s"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "execstack у ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:525
 #, c-format
 msgid "Object still has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "Објекат и даље има извршни стек (GNU-stack напомена = X): %s на %s"
 
 #: lib/inspect_elf.c:527
 #, c-format
 msgid "Object has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "Објекат има извршни стек (GNU-stack напомена = X): %s на %s"
 
 #: lib/inspect_elf.c:531
 #, c-format
 msgid "Stack is still executable: %s on %s"
-msgstr ""
+msgstr "Стек је и даље извршан: %s на %s"
 
 #: lib/inspect_elf.c:533
 #, c-format
 msgid "Stack is executable: %s on %s"
-msgstr ""
+msgstr "Стек је извршан: %s на %s"
 
 #: lib/inspect_elf.c:564
 #, c-format
 msgid "%s lost full GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s је изгубио потпуну GNU_RELRO безбедносну заштиту на %s"
 
 #: lib/inspect_elf.c:567
 #, c-format
 msgid "%s lost GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s је изгубио GNU_RELRO безбедносну заштиту на %s"
 
 #: lib/inspect_elf.c:578
 msgid "lost GNU_RELRO in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "изгубљен GNU_RELRO у ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:725
 #, c-format
 msgid "The following objects lost -fPIC:\n"
-msgstr ""
+msgstr "Следећи објекти су изгубили -fPIC:\n"
 
 #: lib/inspect_elf.c:742
 #, c-format
 msgid "The following new objects were built without -fPIC:\n"
-msgstr ""
+msgstr "Следећи нови објекти су изграђени без -fPIC:\n"
 
 #: lib/inspect_elf.c:755
 #, c-format
 msgid "%s in %s has objects built without -fPIC on %s"
-msgstr ""
+msgstr "%s у %s има објекте изграђене без -fPIC на %s"
 
 #: lib/inspect_elf.c:763
 msgid "missing -fPIC in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "недостаје -fPIC у ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:799
 msgid "TEXTREL relocations in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "TEXTREL релокације у ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:814
 #, c-format
 msgid "%s in %s acquired TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s у %s је задобио TEXTREL релокације на %s"
 
 #: lib/inspect_elf.c:817
 #, c-format
 msgid "%s in %s has TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s у %s има TEXTREL релокације на %s"
 
 #: lib/inspect_emptyrpm.c:95
 #, c-format
@@ -2017,6 +2547,8 @@ msgid ""
 "New package %s is empty (no payloads); this is expected per the rpminspect "
 "configuration"
 msgstr ""
+"Нови пакет %s је празан (без терета); ово је очекивано према подешавању "
+"rpminspect-а"
 
 #: lib/inspect_emptyrpm.c:105
 #, c-format
@@ -2024,65 +2556,67 @@ msgid ""
 "New package %s is empty (no payloads); this is expected because the package "
 "only contains %%ghost entries"
 msgstr ""
+"Нови пакет %s је празан (без терета); ово је очекивано јер пакет садржи само "
+"%%ghost уносе"
 
 #: lib/inspect_emptyrpm.c:116
 #, c-format
 msgid "New package %s is empty (no payloads)"
-msgstr ""
+msgstr "Нови пакет %s је празан (без терета)"
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} има празан терет"
 
 #: lib/inspect_files.c:111
 #, c-format
 msgid "Forbidden path reference (%s) on line %ld of %s"
-msgstr ""
+msgstr "Забрањена референца путање (%s) у %ld. реду %s"
 
 #: lib/inspect_files.c:113
 #, c-format
 msgid "invalid spec line: %s"
-msgstr ""
+msgstr "неисправан spec ред: %s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Инспекција датотека је само за изворне пакете, прескачем."
 
 #: lib/inspect_filesize.c:67
 #, c-format
 msgid "%s became a non-empty file on %s"
-msgstr ""
+msgstr "%s је постала непразна датотека на %s"
 
 #: lib/inspect_filesize.c:71
 msgid "non-empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "непразна ${FILE} на ${ARCH}"
 
 #: lib/inspect_filesize.c:76
 #, c-format
 msgid "%s became an empty file on %s"
-msgstr ""
+msgstr "%s је постала празна датотека на %s"
 
 #: lib/inspect_filesize.c:80
 msgid "empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "празна ${FILE} на ${ARCH}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
 msgid "%s grew by %lld%% on %s"
-msgstr ""
+msgstr "%s је порастао за %lld%% на %s"
 
 #: lib/inspect_filesize.c:99
 msgid "${FILE} size grew on ${ARCH}"
-msgstr ""
+msgstr "величина ${FILE} је порасла на ${ARCH}"
 
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr ""
+msgstr "%s се смањио за %lld%% на %s"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr ""
+msgstr "величина ${FILE} се смањила на ${ARCH}"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2090,10 +2624,12 @@ msgid ""
 "File %s (%s), Java byte code version %d is incorrect (wrong endianness? "
 "corrupted file? space JDK?)"
 msgstr ""
+"Датотека %s (%s), издање Java бајт кода %d је неисправно (погрешан поредак "
+"бајтова? оштећена датотека? space JDK?)"
 
 #: lib/inspect_javabytecode.c:131
 msgid "incorrect Java byte code version in ${FILE}"
-msgstr ""
+msgstr "неисправно издање Java бајт кода у ${FILE}"
 
 #: lib/inspect_javabytecode.c:136
 #, c-format
@@ -2101,33 +2637,36 @@ msgid ""
 "File %s (%s), Java byte code version %d greater than supported major version "
 "%d for product release %s"
 msgstr ""
+"Датотека %s (%s), издање Java бајт кода %d је веће од подржаног главног "
+"издања %d за издање производа %s"
 
 #: lib/inspect_javabytecode.c:137
 msgid "Java byte code version too new in ${FILE}"
-msgstr ""
+msgstr "издање Java бајт кода је превише ново у ${FILE}"
 
 #: lib/inspect_javabytecode.c:152
 #, c-format
 msgid "Java byte code version changed from %d to %d in %s from %s"
-msgstr ""
+msgstr "издање Java бајт кода је промењено са %d на %d у %s са %s"
 
 #: lib/inspect_javabytecode.c:153
 msgid "Java byte code version changed in ${FILE}"
-msgstr ""
+msgstr "издање Java бајт кода је промењено у ${FILE}"
 
 #: lib/inspect_javabytecode.c:255 lib/inspect_javabytecode.c:267
 msgid "*** missing JVM version to product release mapping"
-msgstr ""
+msgstr "*** недостаје мапирање JVM издања на издање производа"
 
 #: lib/inspect_kmidiff.c:252
 #, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s generated a kmidiff(1) usage error."
 msgstr ""
+"Поређење %s са %s у пакету %s на %s је створило грешку коришћења kmidiff(1)."
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "грешка у употреби kmidiff-а"
 
 #: lib/inspect_kmidiff.c:256
 #, c-format
@@ -2135,10 +2674,12 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed Kernel Module Interface "
 "(KMI) differences."
 msgstr ""
+"Поређење %s са %s у пакету %s на %s је открило разлике у спрези модула "
+"језгра (KMI)."
 
 #: lib/inspect_kmidiff.c:258
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "KMI измена у ${FILE} на ${ARCH}"
 
 #: lib/inspect_kmidiff.c:260
 #, c-format
@@ -2146,20 +2687,22 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed incompatible Kernel Module "
 "Interface (KMI) differences."
 msgstr ""
+"Поређење %s са %s у пакету %s на %s је открило некомпатибилне разлике у "
+"спрези модула језгра (KMI)."
 
 #: lib/inspect_kmidiff.c:263
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "KMI некомпатибилна измена у ${FILE} на ${ARCH}"
 
 #: lib/inspect_kmidiff.c:265
 #, c-format
 msgid ""
 "kmidiff(1) comparison of %s to %s in package %s on %s ended unexpectedly."
-msgstr ""
+msgstr "kmidiff(1) поређење %s са %s у пакету %s на %s је неочекивано завршено."
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "неочекивани излаз kmidiff-а"
 
 #: lib/inspect_kmidiff.c:274
 #, c-format
@@ -2167,197 +2710,199 @@ msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
+"Наредба: %s\n"
+"Излазни код: %d%s%s"
 
 #: lib/inspect_kmod.c:28
 msgid "${FILE} kernel module alias on ${ARCH}"
-msgstr ""
+msgstr "${FILE} псеудоним модула језгра на ${ARCH}"
 
 #: lib/inspect_kmod.c:31
 #, c-format
 msgid "Kernel module '%s' lost alias '%s'"
-msgstr ""
+msgstr "Модул језгра „%s“ је изгубио псеудоним „%s“"
 
 #: lib/inspect_kmod.c:41
 #, c-format
 msgid "Kernel module '%s' gained alias '%s'"
-msgstr ""
+msgstr "Модул језгра „%s“ је добио псеудоним „%s“"
 
 #: lib/inspect_kmod.c:188
 #, c-format
 msgid "Kernel module %s removes parameter '%s' (was present in %s)."
-msgstr ""
+msgstr "Модул језгра %s уклања параметар „%s“ (био је присутан у %s)."
 
 #: lib/inspect_kmod.c:191 lib/inspect_kmod.c:208
 msgid "${FILE} kernel module parameter on ${ARCH}"
-msgstr ""
+msgstr "${FILE} параметар модула језгра на ${ARCH}"
 
 #: lib/inspect_kmod.c:205
 #, c-format
 msgid "Kernel module %s adds parameter '%s' (was not present in %s)."
-msgstr ""
+msgstr "Модул језгра %s додаје параметар „%s“ (није био присутан у %s)."
 
 #: lib/inspect_kmod.c:226
 #, c-format
 msgid "Kernel module %s removes dependency '%s' (was present in %s)."
-msgstr ""
+msgstr "Модул језгра %s уклања зависност „%s“ (била је присутна у %s)."
 
 #: lib/inspect_kmod.c:229
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr ""
+msgstr "${FILE} зависност модула језгра на ${ARCH}"
 
 #: lib/inspect_kmod.c:243
 #, c-format
 msgid "Kernel module %s adds dependency '%s' (was not present in %s)."
-msgstr ""
+msgstr "Модул језгра %s додаје зависност „%s“ (није била присутна у %s)."
 
 #: lib/inspect_kmod.c:246
 msgid "${FILE} kernel module parameter"
-msgstr ""
+msgstr "${FILE} параметар модула језгра"
 
 #: lib/inspect_license.c:47
 #, c-format
 msgid "*** parse error in license database %s"
-msgstr ""
+msgstr "*** грешка у обради базе података лиценци %s"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
-msgstr ""
+msgstr "*** проблем при провери базе података лиценци"
 
 #: lib/inspect_license.c:464
 #, c-format
 msgid "Unapproved license in %s: %s"
-msgstr ""
+msgstr "Неодобрена лиценца у %s: %s"
 
 #: lib/inspect_license.c:505
 #, c-format
 msgid "Empty License Tag in %s"
-msgstr ""
+msgstr "Празна ознака лиценце у %s"
 
 #: lib/inspect_license.c:509
 msgid "missing License tag in ${FILE}"
-msgstr ""
+msgstr "недостаје ознака лиценце у ${FILE}"
 
 #: lib/inspect_license.c:518
 #, c-format
 msgid "Valid License Tag in %s: %s"
-msgstr ""
+msgstr "Исправна ознака лиценце у %s: %s"
 
 #: lib/inspect_license.c:532
 #, c-format
 msgid "License Tag contains unprofessional language in %s: %s"
-msgstr ""
+msgstr "Ознака лиценце садржи непрофесионалан језик у %s: %s"
 
 #: lib/inspect_license.c:536
 msgid "unprofessional language in License tag in ${FILE}"
-msgstr ""
+msgstr "непрофесионалан језик у ознаци лиценце у ${FILE}"
 
 #: lib/inspect_license.c:573
 msgid "Missing license database(s)."
-msgstr ""
+msgstr "Недостају базе података лиценци."
 
 #: lib/inspect_license.c:577
 msgid "missing license database"
-msgstr ""
+msgstr "недостаје база података лиценци"
 
 #: lib/inspect_lostpayload.c:62
 #, c-format
 msgid "Existing subpackage %s is now missing on %s"
-msgstr ""
+msgstr "Постојећи подпакет %s сада недостаје на %s"
 
 #: lib/inspect_lostpayload.c:66
 msgid "missing subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "недостаје подпакет ${FILE} на ${ARCH}"
 
 #: lib/inspect_lostpayload.c:82
 #, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr ""
+msgstr "Пакет %s на %s је и даље празан (нема корисних терета)"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "постојећи празан подпакет ${FILE} на ${ARCH}"
 
 #: lib/inspect_lostpayload.c:93
 #, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr ""
+msgstr "Пакет %s на %s је постао празан (нема корисних терета)"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "подпакет ${FILE} на ${ARCH} сада има празан корисни терет"
 
 #: lib/inspect_lto.c:144
 msgid "${FILE} not portable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} није преносно на ${ARCH}"
 
 #: lib/inspect_lto.c:152
 #, c-format
 msgid ""
 "%s contains symbols [%s] on %s; this is not portable across compiler versions"
-msgstr ""
+msgstr "%s садржи симболе [%s] на %s; ово није преносно кроз издања компајлера"
 
 #: lib/inspect_lto.c:168
 #, c-format
 msgid ""
 "%s contains symbol [%s] on %s; this is not portable across compiler versions"
-msgstr ""
+msgstr "%s садржи симбол [%s] на %s; ово није преносно кроз издања компајлера"
 
 #: lib/inspect_manpage.c:52
 #, c-format
 msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
-msgstr ""
+msgstr "Грешка при рашчлањивању %s:%d:%d: %s: %s: %s\n"
 
 #: lib/inspect_manpage.c:81
 #, c-format
 msgid "*** unable to compile man page path regular expression: %s"
-msgstr ""
+msgstr "*** не могу да компајлирам регуларни израз путање човекове странице: %s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
 msgid "Unable to open man page %s\n"
-msgstr ""
+msgstr "Не могу да отворим човекову страницу %s\n"
 
 #: lib/inspect_manpage.c:187
 #, c-format
 msgid "Man page %s does not end in %s\n"
-msgstr ""
+msgstr "Ман страница %s се не завршава на %s\n"
 
 #: lib/inspect_manpage.c:195
 #, c-format
 msgid "man page with %s suffix is not really compressed with gzip\n"
-msgstr ""
+msgstr "ман страница са суфиксом %s заправо није сажета гзипом\n"
 
 #: lib/inspect_manpage.c:236
 #, c-format
 msgid "Errors found validating %s\n"
-msgstr ""
+msgstr "Пронађене су грешке приликом провере %s\n"
 
 #: lib/inspect_manpage.c:299
 #, c-format
 msgid "Man page %s is possibly empty on %s in %s"
-msgstr ""
+msgstr "Ман страница %s је вероватно празна на %s у %s"
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "празна ман страница ${FILE} на ${ARCH}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
 msgid "Man page checker reported problems with %s on %s in %s"
-msgstr ""
+msgstr "Проверавач ман страница је пријавио проблеме са %s на %s у %s"
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr ""
+msgstr "ман страница ${FILE} на ${ARCH} има грешаке"
 
 #: lib/inspect_manpage.c:327
 #, c-format
 msgid "Man page %s has incorrect path on %s in %s"
-msgstr ""
+msgstr "Ман страница %s има неисправну путању на %s у %s"
 
 #: lib/inspect_manpage.c:330
 msgid "man page ${FILE} on ${ARCH} has incorrect path"
-msgstr ""
+msgstr "ман страница ${FILE} на ${ARCH} има неисправну путању"
 
 #: lib/inspect_metadata.c:40
 #, c-format
@@ -2365,15 +2910,17 @@ msgid ""
 "Vendor not set in the rpminspect configuration, ignoring Package Vendor "
 "\"%s\" in %s"
 msgstr ""
+"Добављач није подешен у подешавањима rpminspect-а, занемарујем добављача "
+"пакета „%s“ у %s"
 
 #: lib/inspect_metadata.c:51
 #, c-format
 msgid "Package Vendor \"%s\" is not \"%s\" in %s"
-msgstr ""
+msgstr "Добављач пакета „%s“ није „%s“ у %s"
 
 #: lib/inspect_metadata.c:55
 msgid "invalid vendor ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "неисправан добављач ${FILE} на ${ARCH}"
 
 #: lib/inspect_metadata.c:76
 #, c-format
@@ -2381,58 +2928,60 @@ msgid ""
 "Package Build Host \"%s\" is not within an expected build host subdomain in "
 "%s"
 msgstr ""
+"Домаћин изградње пакета „%s“ није унутар очекиваног поддомена домаћина "
+"изградње у %s"
 
 #: lib/inspect_metadata.c:80
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "неисправан домаћин изградње ${FILE} на ${ARCH}"
 
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr ""
+msgstr "Сажетак пакета садржи непрофесионалан језик у %s"
 
 #: lib/inspect_metadata.c:93
 #, c-format
 msgid "Summary: %s"
-msgstr ""
+msgstr "Сажетак: %s"
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "Сажетак садржи непрофесионалне речи на ${ARCH}"
 
 #: lib/inspect_metadata.c:109
 #, c-format
 msgid "Package Description contains unprofessional language in %s:"
-msgstr ""
+msgstr "Опис пакета садржи непрофесионалан језик у %s:"
 
 #: lib/inspect_metadata.c:114
 msgid "Description contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "Опис садржи непрофесионалне речи на ${ARCH}"
 
 #: lib/inspect_metadata.c:134
 #, c-format
 msgid "Gained Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "Добијен добављач пакета „%s“ у %s"
 
 #: lib/inspect_metadata.c:136
 #, c-format
 msgid "Lost Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "Изгубљен добављач пакета „%s“ у %s"
 
 #: lib/inspect_metadata.c:138
 #, c-format
 msgid "Package Vendor changed from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Произвођач пакета је промењен са „%s“ на „%s“ у %s"
 
 #: lib/inspect_metadata.c:156
 #, c-format
 msgid "Package Summary change from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Сажетак пакета је промењен са „%s“ на „%s“ у %s"
 
 #: lib/inspect_metadata.c:169
 #, c-format
 msgid "Package Description changed in %s"
-msgstr ""
+msgstr "Опис пакета је измењен у %s"
 
 #: lib/inspect_metadata.c:170
 #, c-format
@@ -2445,6 +2994,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"од:\n"
+"\n"
+"%s\n"
+"\n"
+"до:\n"
+"\n"
+"%s"
 
 #: lib/inspect_modularity.c:119
 #, c-format
@@ -2452,6 +3008,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "forbid the presence of /data/static_context in the module metadata."
 msgstr ""
+"Вредност „/data/static_context“ у %s је %s, али правила издања производа "
+"забрањују присуство „/data/static_context“ у метаподацима модула."
 
 #: lib/inspect_modularity.c:125
 #, c-format
@@ -2459,6 +3017,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "require the presence of /data/static_context in the module metadata."
 msgstr ""
+"Вредност „/data/static_context“ у %s је %s, али правила издања производа "
+"захтевају присуство „/data/static_context“ у метаподацима модула."
 
 #: lib/inspect_modularity.c:131
 #, c-format
@@ -2466,6 +3026,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "recommend the presence of /data/static_context in the module metadata."
 msgstr ""
+"Вредност „/data/static_context“ у %s је %s, али правила издања производа "
+"препоручују присуство „/data/static_context“ у метаподацима модула."
 
 #: lib/inspect_modularity.c:133
 #, c-format
@@ -2473,6 +3035,8 @@ msgid ""
 "The /data/static_context value in %s is %s, and the product release rules do "
 "not have a setting for /data/static_context in the module metadata."
 msgstr ""
+"Вредност „/data/static_context“ у %s је %s, а правила издања производа "
+"немају подешавање за „/data/static_context“ у метаподацима модула."
 
 #: lib/inspect_modularity.c:135
 #, c-format
@@ -2480,16 +3044,18 @@ msgid ""
 "The /data/static_context value in %s is %s as required by the product "
 "release rules."
 msgstr ""
+"Вредност „/data/static_context“ у %s је %s као што захтевају правила издања "
+"производа."
 
 #: lib/inspect_modularity.c:143
 #, c-format
 msgid "%s The /data/static_context value is the same as in %s."
-msgstr ""
+msgstr "%s Вредност „/data/static_context“ је иста као у %s."
 
 #: lib/inspect_modularity.c:145
 #, c-format
 msgid "%s The /data/static_context value has changed since %s."
-msgstr ""
+msgstr "%s Вредност „/data/static_context“ је измењена од %s."
 
 #: lib/inspect_modularity.c:180
 #, c-format
@@ -2497,47 +3063,49 @@ msgid ""
 "Package \"%s\" is part of a module but lacks the '%%{modularitylabel}' "
 "header tag."
 msgstr ""
+"Пакет „%s“ је део модула али му недостаје ознака заглавља „%%"
+"{modularitylabel}“."
 
 #: lib/inspect_modularity.c:224
 msgid "Inspection skipped because this build's type is not `module'."
-msgstr ""
+msgstr "Провера је прескочена јер врста ове изградње није „module“."
 
 #: lib/inspect_movedfiles.c:52
 #, c-format
 msgid "%s moved to ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "%s је премештено у ${FILE} на ${ARCH}"
 
 #: lib/inspect_movedfiles.c:55
 #, c-format
 msgid "%s probably moved to %s on %s\n"
-msgstr ""
+msgstr "%s је вероватно премештено у %s на %s\n"
 
 #: lib/inspect_ownership.c:77
 #, c-format
 msgid "File %s has forbidden owner `%s` on %s"
-msgstr ""
+msgstr "Датотека %s има забрањеног власника „%s“ на %s"
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "забрањени власник за ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:92
 #, c-format
 msgid "File %s has forbidden group `%s` on %s"
-msgstr ""
+msgstr "Датотека %s има забрањену групу „%s“ на %s"
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "забрањена група за ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:119
 #, c-format
 msgid "File %s has owner `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "Датотека %s има власника „%s“ на %s, али би требало да буде „%s“"
 
 #: lib/inspect_ownership.c:124
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "неисправан власник за ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:162
 #, c-format
@@ -2545,38 +3113,41 @@ msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is world "
 "executable"
 msgstr ""
+"Датотека %s на %s има CAP_SETUID могућност али групу „%s“ и извршна је за све"
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID и o+x за ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:179
 #, c-format
 msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is group writable"
 msgstr ""
+"Датотека %s на %s има CAP_SETUID могућност али групу „%s“ и група може да "
+"пише у њу"
 
 #: lib/inspect_ownership.c:183
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID и g+w за ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:199
 #, c-format
 msgid "File %s has group `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "Датотека %s има групу „%s“ на %s, али би требало да буде „%s“"
 
 #: lib/inspect_ownership.c:204
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "неисправна група за ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:268
 #, c-format
 msgid "File %s changed %s from `%s` to `%s` on %s"
-msgstr ""
+msgstr "Датотека %s је изменила %s из „%s“ у „%s“ на %s"
 
 #: lib/inspect_ownership.c:270
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr ""
+msgstr "${FILE} је изменио власника на ${ARCH}"
 
 #: lib/inspect_patches.c:395
 #, c-format
@@ -2584,188 +3155,190 @@ msgid ""
 "Patch number %ld (%s) is missing a corresponding %%patch%ld macro, usually "
 "in %%prep."
 msgstr ""
+"Закрпи број %ld (%s) недостаје одговарајући макро „%%patch%ld“, обично у "
+"„%%prep“."
 
 #: lib/inspect_patches.c:397
 #, c-format
 msgid "missing %%patch macro for ${FILE}"
-msgstr ""
+msgstr "недостаје макро „%%patch“ за ${FILE}"
 
 #: lib/inspect_patches.c:399
 #, c-format
 msgid "Patch number %ld (%s) is mismatched with %%patch%ld macro."
-msgstr ""
+msgstr "Закрпа број %ld (%s) се не подудара са макроом „%%patch%ld“."
 
 #: lib/inspect_patches.c:401
 #, c-format
 msgid "mismatched %%patch macro for ${FILE}"
-msgstr ""
+msgstr "неподударање макроа „%%patch“ за ${FILE}"
 
 #: lib/inspect_patches.c:422
 msgid "undefined Patch ${FILE}"
-msgstr ""
+msgstr "недефинисана закрпа ${FILE}"
 
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "Недефинисана датотека закрпе „%s“."
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
 #, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr ""
+msgstr "*** не могу да распакујем закрпу: %s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
-msgstr ""
+msgstr "оштећена закрпа ${FILE}"
 
 #: lib/inspect_patches.c:477 lib/inspect_patches.c:484
 #, c-format
 msgid "Patch %s is under 4 bytes in size - is it corrupt?"
-msgstr ""
+msgstr "Закрпа %s је мања од 4 бајта — да ли је оштећена?"
 
 #: lib/inspect_patches.c:506
 #, c-format
 msgid "%s changed (%ld bytes -> %ld bytes)"
-msgstr ""
+msgstr "%s је измењено (%ld бајтова -> %ld бајтова)"
 
 #: lib/inspect_patches.c:510 lib/inspect_patches.c:535
 msgid "patch file ${FILE}"
-msgstr ""
+msgstr "датотека закрпе ${FILE}"
 
 #: lib/inspect_patches.c:531
 #, c-format
 msgid "New patch file `%s` appeared"
-msgstr ""
+msgstr "Појавила се нова датотека закрпе „%s“"
 
 #: lib/inspect_patches.c:551
 msgid "patch changes ${FILE}"
-msgstr ""
+msgstr "закрпа мења ${FILE}"
 
 #: lib/inspect_patches.c:555
 #, c-format
 msgid "%s touches as many as %ld line%s"
-msgstr ""
+msgstr "%s мења чак %ld линија%s"
 
 #: lib/inspect_patches.c:557
 #, c-format
 msgid "%s touches %ld file%s"
-msgstr ""
+msgstr "%s мења %ld датотека%s"
 
 #: lib/inspect_patches.c:559
 #, c-format
 msgid "%s touches %ld file%s and %s%ld line%s"
-msgstr ""
+msgstr "%s мења %ld датотека%s и %s%ld линија%s"
 
 #: lib/inspect_patches.c:559
 msgid "as many as "
-msgstr ""
+msgstr "чак "
 
 #: lib/inspect_patches.c:626 lib/inspect_upstream.c:141
 msgid "No source packages available, skipping inspection."
-msgstr ""
+msgstr "Нема доступних изворних пакета, прескачем преглед."
 
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "Необрађена датотека закрпе „%s“ је дефинисана у spec датотеци"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** непрепозната %%patch линија: %s"
 
 #: lib/inspect_patches.c:828
 #, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr ""
+msgstr "*** не могу да прочитам линију spec датотеке: %s"
 
 #: lib/inspect_patches.c:881
 #, c-format
 msgid "Patch file `%s` removed"
-msgstr ""
+msgstr "Датотека закрпе „%s“ је уклоњена"
 
 #: lib/inspect_pathmigration.c:81
 #, c-format
 msgid "File %s found should be in %s on %s"
-msgstr ""
+msgstr "Пронађена датотека %s треба да буде у %s на %s"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} треба да буде у %s на ${ARCH}"
 
 #: lib/inspect_permissions.c:84
 msgid " changed setuid/setgid;"
-msgstr ""
+msgstr " промењен setuid/setgid;"
 
 #: lib/inspect_permissions.c:89
 msgid " became a directory;"
-msgstr ""
+msgstr " постао је директоријум;"
 
 #: lib/inspect_permissions.c:91
 msgid " became a character device;"
-msgstr ""
+msgstr " постао је знаковни уређај;"
 
 #: lib/inspect_permissions.c:93
 msgid " became a block device;"
-msgstr ""
+msgstr " постао је блок уређај;"
 
 #: lib/inspect_permissions.c:95
 msgid " became a regular file;"
-msgstr ""
+msgstr " постао је обична датотека;"
 
 #: lib/inspect_permissions.c:97
 msgid " became a FIFO;"
-msgstr ""
+msgstr " постао је FIFO;"
 
 #: lib/inspect_permissions.c:99
 msgid " became a symbolic link;"
-msgstr ""
+msgstr " постао је симболичка веза;"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " постао је прикључница;"
 
 #: lib/inspect_permissions.c:105
 msgid " permissions"
-msgstr ""
+msgstr " овлашћења"
 
 #: lib/inspect_permissions.c:111
 msgid " relaxed"
-msgstr ""
+msgstr " опуштено"
 
 #: lib/inspect_permissions.c:114
 msgid " changed"
-msgstr ""
+msgstr " промењено"
 
 #: lib/inspect_permissions.c:129
 #, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr ""
+msgstr "%s са %04o ка %04o на %s"
 
 #: lib/inspect_permissions.c:135
 #, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr ""
+msgstr "${FILE} овлашћења са %04o ка %04o на ${ARCH}"
 
 #: lib/inspect_permissions.c:149
 #, c-format
 msgid "%s (%s) is world-writable on %s"
-msgstr ""
+msgstr "%s (%s) је уписиво за све на %s"
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} је уписиво за све на ${ARCH}"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
 msgid "*** invalid politics entry with pattern=%s and digest=%s"
-msgstr ""
+msgstr "*** неисправан унос политике са pattern=%s и digest=%s"
 
 #: lib/inspect_politics.c:92
 #, c-format
 msgid "*** unknown digest type for pattern %s: %s"
-msgstr ""
+msgstr "*** непозната врста сажетка за шаблон %s: %s"
 
 #: lib/inspect_politics.c:126
 #, c-format
@@ -2773,6 +3346,8 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules allow this "
 "file."
 msgstr ""
+"Могућа политички осетљива датотека (%s) је пронађена у %s на %s: правила "
+"дозвољавају ову датотеку."
 
 #: lib/inspect_politics.c:134
 #, c-format
@@ -2780,50 +3355,54 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules prohibit "
 "this file."
 msgstr ""
+"Могућа политички осетљива датотека (%s) је пронађена у %s на %s: правила "
+"забрањују ову датотеку."
 
 #: lib/inspect_politics.c:138
 msgid "${FILE} is politically sensitive"
-msgstr ""
+msgstr "${FILE} је политички осетљива"
 
 #: lib/inspect_removedfiles.c:26
 msgid ""
 "; Removing security policy related files requires inspection by the Security "
 "Response Team."
 msgstr ""
+"; Уклањање датотека повезаних са безбедносном политиком захтева преглед од "
+"стране тима за безбедносни одговор."
 
 #: lib/inspect_removedfiles.c:85
 msgid "library ${FILE} removed on ${ARCH}"
-msgstr ""
+msgstr "библиотека ${FILE} је уклоњена на ${ARCH}"
 
 #: lib/inspect_removedfiles.c:131
 #, c-format
 msgid "ABI break: Library %s with SONAME '%s' removed from %s"
-msgstr ""
+msgstr "ABI прекид: Библиотека %s са SONAME „%s“ је уклоњена из %s"
 
 #: lib/inspect_removedfiles.c:132
 msgid "missing SONAME in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "недостаје SONAME у ${FILE} на ${ARCH}"
 
 #: lib/inspect_removedfiles.c:135
 #, c-format
 msgid "ABI break: Library %s removed from %s"
-msgstr ""
+msgstr "ABI прекид: Библиотека %s је уклоњена из %s"
 
 #: lib/inspect_removedfiles.c:138
 #, c-format
 msgid "%s removed from %s"
-msgstr ""
+msgstr "%s је уклоњено из %s"
 
 #: lib/inspect_rpmdeps.c:129
 #, c-format
 msgid "Invalid looking %s dependency in the %s package on %s: %s"
-msgstr ""
+msgstr "Неисправно изгледајућа %s зависност у %s пакету на %s: %s"
 
 #: lib/inspect_rpmdeps.c:132 lib/inspect_rpmdeps.c:892
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
 #, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' у %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -2833,11 +3412,15 @@ msgid ""
 "%s' to the spec file to avoid the need to test interoperability between "
 "various combinations of old and new subpackages."
 msgstr ""
+"Потпакет %s на %s садржи „%s“ који долази из потпакета %s али не садржи "
+"изричит захтев за издањем пакета. Додајте „Requires: %s = %s“ у spec "
+"датотеку како бисте избегли потребу за тестирањем међусобне усклађености "
+"између различитих комбинација старих и нових потпакета."
 
 #: lib/inspect_rpmdeps.c:387
 #, c-format
 msgid "missing 'Requires: ${FILE} = %s' in %s on ${ARCH}"
-msgstr ""
+msgstr "недостаје „Requires: ${FILE} = %s“ у %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:409
 #, c-format
@@ -2845,132 +3428,137 @@ msgid ""
 "Multiple subpackages provide '%s': [%s] but these subpackages carry explicit "
 "Requires: [%s]"
 msgstr ""
+"Више потпакета обезбеђује „%s“: [%s] али ови потпакети садрже изричите „"
+"Requires“: [%s]"
 
 #: lib/inspect_rpmdeps.c:410
 #, c-format
 msgid "%s all provide '${FILE}' on ${ARCH}"
-msgstr ""
+msgstr "%s сви обезбеђују „${FILE}“ на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:540
 #, c-format
 msgid "Missing epoch prefix on the version-release in '%s' for %s on %s"
-msgstr ""
+msgstr "Недостаје префикс epoch у version-release „%s“ за %s на %s"
 
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr ""
+msgstr "„${FILE}“ захтева епоху у %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
-msgstr ""
+msgstr "spec датотека"
 
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "Добијено „%s“ у изворном пакету %s"
 
 #: lib/inspect_rpmdeps.c:889
 #, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Добијено „%s“ у потпакету %s на %s"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "Задржано „%s“ у изворном пакету %s"
 
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Задржано „%s“ у потпакету %s на %s"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr ""
+msgstr "Измењено „%s“ у „%s“ у изворном пакету %s"
 
 #: lib/inspect_rpmdeps.c:909
 #, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Измењено „%s“ у „%s“ у потпакету %s на %s"
 
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "„%s“ је постало „${FILE}“ у %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
-msgstr ""
+msgstr "; ово је очекивано"
 
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr ""
+msgstr "Изгубљено „%s“ у изворном пакету %s"
 
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Изгубљено „%s“ у потпакету %s на %s"
 
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
 msgstr ""
+"*** не могу да компилирам регуларни израз $ORIGIN коренског префикса: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
 msgid "%s has an invalid-looking %s on %s: %s"
-msgstr ""
+msgstr "%s има неисправан изглед %s на %s: %s"
 
 #: lib/inspect_runpath.c:192
 msgid "runtime search path in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "путања извршног претраживања у ${FILE} на ${ARCH}"
 
 #: lib/inspect_runpath.c:270
 msgid "both DT_RPATH and DT_RUNPATH in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "и DT_RPATH и DT_RUNPATH у ${FILE} на ${ARCH}"
 
 #: lib/inspect_runpath.c:272
 #, c-format
 msgid "%s has both DT_RPATH and DT_RUNPATH on %s; this is not allowed"
-msgstr ""
+msgstr "%s има и DT_RPATH и DT_RUNPATH на %s; ово није дозвољено"
 
 #: lib/inspect_shellsyntax.c:125
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "неисправна скрипта шкољке ${FILE} на ${ARCH}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
 msgid "%s is a shell script but was not before on %s"
-msgstr ""
+msgstr "%s је скрипта шкољке али раније није била на %s"
 
 #: lib/inspect_shellsyntax.c:134
 #, c-format
 msgid "%s is a %s script but was a %s script before on %s"
-msgstr ""
+msgstr "%s је %s скрипта али је раније била %s скрипта на %s"
 
 #: lib/inspect_shellsyntax.c:181
 #, c-format
 msgid "%s is no longer a valid %s script on %s"
-msgstr ""
+msgstr "%s више није исправна %s скрипта на %s"
 
 #: lib/inspect_shellsyntax.c:190
 #, c-format
 msgid "%s became a valid %s script on %s"
-msgstr ""
+msgstr "%s је постала исправна %s скрипта на %s"
 
 #: lib/inspect_shellsyntax.c:193
 msgid ""
 ". The script fails with '-n' but passes with '-O extglob'; be sure 'shopt "
 "extglob' is set in the script."
 msgstr ""
+". Скрипта не успева са „-n“ али пролази са „-O extglob“; проверите да ли је „"
+"shopt extglob“ постављено у скрипти."
 
 #: lib/inspect_shellsyntax.c:204 lib/inspect_shellsyntax.c:224
 #, c-format
 msgid "%s is not a valid %s script on %s"
-msgstr ""
+msgstr "%s није исправна %s скрипта на %s"
 
 #: lib/inspect_shellsyntax.c:215
 #, c-format
@@ -2978,131 +3566,136 @@ msgid ""
 "%s fails with '-n' but passes with '-O extglob'; be sure 'shopt extglob' is "
 "set in the script on %s"
 msgstr ""
+"%s не успева са „-n“ али пролази са „-O extglob“; проверите да ли је „shopt "
+"extglob“ постављено у скрипти на %s"
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "неочекиван назив спец датотеке"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "тачно се поклапа"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "почиње са"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
-msgstr ""
+msgstr "завршава се са"
 
 #: lib/inspect_specname.c:78
 #, c-format
 msgid "Spec filename does not %s the primary name %s; got '%s'"
-msgstr ""
+msgstr "Назив спец датотеке се не %s са примарним називом %s; добих „%s“"
 
 #: lib/inspect_specname.c:109
 msgid "The specname inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Провера назива спец датотеке је само за изворне пакете, прескачем."
 
 #: lib/inspect_subpackages.c:68
 #, c-format
 msgid "Subpackage '%s' has disappeared on '%s'"
-msgstr ""
+msgstr "Потпакет „%s“ је нестао на „%s“"
 
 #: lib/inspect_subpackages.c:75 lib/inspect_subpackages.c:99
 msgid "subpackage ${FILE}"
-msgstr ""
+msgstr "потпакет ${FILE}"
 
 #: lib/inspect_subpackages.c:92
 #, c-format
 msgid "Subpackage '%s' has appeared on '%s'"
-msgstr ""
+msgstr "Потпакет „%s“ се појавио на „%s“"
 
 #: lib/inspect_symlinks.c:98
 #, c-format
 msgid ""
 "Directory %s became a symbolic link (to %s) in %s on %s; this is not allowed!"
 msgstr ""
+"Директоријум %s је постао симболичка веза (ка %s) у %s на %s; ово није "
+"дозвољено!"
 
 #: lib/inspect_symlinks.c:100
 #, c-format
 msgid "%s %s became a symbolic link (to %s) in %s on %s"
-msgstr ""
+msgstr "%s %s је постао симболичка веза (ка %s) у %s на %s"
 
 #: lib/inspect_symlinks.c:108
 msgid "${FILE} became a symlink on ${ARCH}"
-msgstr ""
+msgstr "${FILE} је постао симболичка веза на ${ARCH}"
 
 #: lib/inspect_symlinks.c:125
 msgid "unable to read symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "не могу да прочитам симболичку везу ${FILE} на ${ARCH}"
 
 #: lib/inspect_symlinks.c:126
 #, c-format
 msgid "An error occurred reading symbolic link %s in %s on %s."
-msgstr ""
+msgstr "Дошло је до грешке при читању симболичке везе %s у %s на %s."
 
 #: lib/inspect_symlinks.c:178
 #, c-format
 msgid ""
 "%s %s has too many levels of redirects and cannot be resolved in %s on %s"
 msgstr ""
+"%s %s има превише нивоа преусмеравања и не може бити разрешен у %s на %s"
 
 #: lib/inspect_symlinks.c:182
 msgid "too many redirects for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "превише преусмеравања за ${FILE} на ${ARCH}"
 
 #: lib/inspect_symlinks.c:277
 #, c-format
 msgid "%s %s %s a dangling symbolic link in %s on %s"
-msgstr ""
+msgstr "%s %s %s је висећа симболичка веза у %s на %s"
 
 #: lib/inspect_symlinks.c:284
 msgid "dangling symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "висећа симболичка веза ${FILE} на ${ARCH}"
 
 #: lib/inspect_types.c:69
 msgid "${FILE} MIME type on ${ARCH}"
-msgstr ""
+msgstr "MIME врста за ${FILE} на ${ARCH}"
 
 #: lib/inspect_types.c:77 lib/inspect_types.c:82
 #, c-format
 msgid "Unknown MIME type `%s' on %s in %s"
-msgstr ""
+msgstr "Непозната MIME врста „%s“ на %s у %s"
 
 #: lib/inspect_types.c:107
 #, c-format
 msgid "MIME type for %s in %s was `%s/%s' and became `%s/%s'"
-msgstr ""
+msgstr "MIME врста за %s у %s је била „%s/%s“ а постала је „%s/%s“"
 
 #: lib/inspect_udevrules.c:104 lib/inspect_udevrules.c:116
 #, c-format
 msgid "%s is a valid udev rules file on %s"
-msgstr ""
+msgstr "%s је исправна датотека са udev правилима на %s"
 
 #: lib/inspect_udevrules.c:106
 #, c-format
 msgid "%s is now a valid udev rules file on %s"
-msgstr ""
+msgstr "%s је сада исправна датотека са udev правилима на %s"
 
 #: lib/inspect_udevrules.c:109
 #, c-format
 msgid "%s is no longer a valid udev rules file on %s"
-msgstr ""
+msgstr "%s више није исправна датотека са udev правилима на %s"
 
 #: lib/inspect_udevrules.c:112 lib/inspect_udevrules.c:118
 #, c-format
 msgid "%s is not a valid udev rules file on %s"
-msgstr ""
+msgstr "%s није исправна датотека са udev правилима на %s"
 
 #: lib/inspect_unicode.c:465
 #, c-format
 msgid "*** empty localpath on %s"
-msgstr ""
+msgstr "*** празна локална путања на %s"
 
 #: lib/inspect_unicode.c:474
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "забрањена кодна тачка у ${FILE} на ${ARCH}"
 
 #: lib/inspect_unicode.c:551
 #, c-format
@@ -3110,11 +3703,13 @@ msgid ""
 "A forbidden code point, 0x%04X, was found in the %s source file on line %ld "
 "at column %ld.  This source file is used by %s."
 msgstr ""
+"Забрањена кодна тачка, 0x%04X, пронађена је у изворној датотеци %s у %ld. "
+"реду, у %ld. колони. Ову изворну датотеку користи %s."
 
 #: lib/inspect_unicode.c:621
 #, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr ""
+msgstr "не могу да покренем %prep у ${FILE}"
 
 #: lib/inspect_unicode.c:624
 #, c-format
@@ -3122,183 +3717,195 @@ msgid ""
 "Unable to run through the %%prep section in %s or manually unpack sources "
 "for further scanning."
 msgstr ""
+"Није могуће извршити %%prep одељак у %s или ручно отпаковати изворе за даље "
+"прегледање."
 
 #: lib/inspect_unicode.c:744
 msgid "The unicode inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Уникод преглед је само за изворне пакете, прескачем."
 
 #: lib/inspect_upstream.c:60
 #, c-format
 msgid "New upstream source file `%s` appeared"
-msgstr ""
+msgstr "Појавила се нова узводна изворна датотека „%s“"
 
 #: lib/inspect_upstream.c:62
 msgid "new source file ${FILE}"
-msgstr ""
+msgstr "нова изворна датотека ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
 msgid "Upstream source file `%s` changed content"
-msgstr ""
+msgstr "Узводна изворна датотека „%s“ је изменила садржај"
 
 #: lib/inspect_upstream.c:93
 msgid "checksum of ${FILE}"
-msgstr ""
+msgstr "сума провере за ${FILE}"
 
 #: lib/inspect_upstream.c:195
 #, c-format
 msgid "Source file `%s` removed"
-msgstr ""
+msgstr "Изворна датотека „%s“ је уклоњена"
 
 #: lib/inspect_upstream.c:197
 msgid "source file ${FILE} removed"
-msgstr ""
+msgstr "изворна датотека ${FILE} је уклоњена"
 
 #: lib/inspect_virus.c:40
 msgid "*** cl_engine_new returned NULL, check clamav library"
-msgstr ""
+msgstr "*** cl_engine_new је вратио NULL, проверите clamav библиотеку"
 
 #: lib/inspect_virus.c:98
 #, c-format
 msgid "Virus detected in %s in the %s package on %s: %s"
-msgstr ""
+msgstr "Вирус је откривен у %s у пакету %s на %s: %s"
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
-msgstr ""
+msgstr "подаци о clamav издању"
 
 #: lib/inspect_virus.c:140
 #, c-format
 msgid "clamav version %s"
-msgstr ""
+msgstr "clamav издање %s"
 
 #: lib/inspect_virus.c:145
 #, c-format
 msgid "*** missing %s"
-msgstr ""
+msgstr "*** недостаје %s"
 
 #: lib/inspect_virus.c:169
 #, c-format
 msgid "%s version %u (%s)"
-msgstr ""
+msgstr "%s издање %u (%s)"
 
 #: lib/inspect_virus.c:201
 msgid "virus or malware in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "вирус или злонамерни програм у ${FILE} на ${ARCH}"
 
 #: lib/inspect_xml.c:195
 #, c-format
 msgid "%s is a well-formed XML file in %s on %s, but is not a valid XML file"
 msgstr ""
+"%s је добро обликована XML датотека у %s на %s, али није исправна XML "
+"датотека"
 
 #: lib/inspect_xml.c:203
 #, c-format
 msgid "%s is not a well-formed XML file in %s on %s"
-msgstr ""
+msgstr "%s није добро обликована XML датотека у %s на %s"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr ""
+msgstr "${FILE} није добро обликован XML на ${ARCH}"
 
 #: lib/koji.c:142
 #, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr ""
+msgstr "*** XML-RPC грешка: %s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc код грешке %s (%d): getBuild(%s) са %s"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** Стање Који изградње је %s за %s, не могу да наставим"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc грешка са кодом %s (%d): getTaskInfo(%s) са %s"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
-msgstr ""
+msgstr "*** Стање Који задатка је %s за задатак %s, не могу да наставим"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "Изградња РПМ пакета"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
-msgstr ""
+msgstr "Изградња модула која се састоји од више изградњи РПМ пакета"
 
 #: lib/magic.c:21
 msgid "*** unable to initialize the magic library"
-msgstr ""
+msgstr "*** не могу да покренем библиотеку „magic“"
 
 #: lib/magic.c:26
 #, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr ""
+msgstr "*** не могу да учитам базу података „magic“: %s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
 msgid "*** unable to mkdir %s"
-msgstr ""
+msgstr "*** не могу да направим директоријум %s"
 
 #: lib/output.c:25
 msgid ""
 "Detailed results suitable for the console and piping through paging programs."
 msgstr ""
+"Детаљни резултати погодни за конзолу и прослеђивање кроз програме за преглед "
+"страница."
 
 #: lib/output.c:27
 msgid ""
 "Results organized as a JSON data structure suitable for reading by web "
 "applications and other frontend tools."
 msgstr ""
+"Резултати организовани као JSON структура података погодна за читање веб "
+"апликацијама и другим алатима прочеља."
 
 #: lib/output.c:29
 msgid ""
 "Results organized as an XUnit data structure suitable for use with Jenkins "
 "and other XUnit-enabled services."
 msgstr ""
+"Резултати организовани као XUnit структура података погодна за коришћење са "
+"Џенкинсом и другим услугама које подржавају XUnit."
 
 #: lib/output.c:31
 msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
 msgstr ""
+"Резултати сажети са једним резултатом по реду, погодни за конзолни преглед "
+"програмом за преглед страница."
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
 #, c-format
 msgid "*** error opening %s for writing"
-msgstr ""
+msgstr "*** грешка при отварању %s за упис"
 
 #: lib/output_summary.c:53
 msgid "added"
-msgstr ""
+msgstr "додато"
 
 #: lib/output_summary.c:55
 msgid "removed"
-msgstr ""
+msgstr "уклоњено"
 
 #: lib/output_summary.c:57
 msgid "changed"
-msgstr ""
+msgstr "измењено"
 
 #: lib/output_summary.c:61
 msgid "ok"
-msgstr ""
+msgstr "у реду"
 
 #: lib/output_summary.c:63
 msgid "unknown"
-msgstr ""
+msgstr "непознато"
 
 #: lib/output_text.c:92 lib/output_xunit.c:83
 #, c-format
 msgid "Result: %s\n"
-msgstr ""
+msgstr "Резултат: %s\n"
 
 #: lib/output_text.c:95 lib/output_xunit.c:96
 #, c-format
@@ -3306,6 +3913,8 @@ msgid ""
 "Waiver Authorization: %s\n"
 "\n"
 msgstr ""
+"Овлашћење за изузеће: %s\n"
+"\n"
 
 #: lib/output_text.c:99 lib/output_xunit.c:110
 #, c-format
@@ -3314,6 +3923,9 @@ msgid ""
 "%s\n"
 "\n"
 msgstr ""
+"Детаљи:\n"
+"%s\n"
+"\n"
 
 #: lib/output_text.c:103 lib/output_xunit.c:118
 #, c-format
@@ -3321,78 +3933,80 @@ msgid ""
 "Suggested Remedy:\n"
 "%s"
 msgstr ""
+"Предложени лек:\n"
+"%s"
 
 #: lib/output_xunit.c:54
 #, c-format
 msgid "*** opening %s for writing"
-msgstr ""
+msgstr "*** отварам %s за писање"
 
 #: lib/parse_yaml.c:114 lib/parse_yaml.c:139
 #, c-format
 msgid "*** %s: broken document"
-msgstr ""
+msgstr "*** %s: оштећен документ"
 
 #: lib/parse_yaml.c:158 lib/parse_yaml.c:305
 #, c-format
 msgid "*** skipping token type %s"
-msgstr ""
+msgstr "*** прескачем врсту жетона %s"
 
 #: lib/parse_yaml.c:386
 msgid "*** malformed type - freed?"
-msgstr ""
+msgstr "*** лоше обликована врста — ослобођена?"
 
 #: lib/peers.c:176
 #, c-format
 msgid "There is not enough available space to unpack all of the RPMs.\n"
-msgstr ""
+msgstr "Нема довољно доступног простора за отпакивање свих РПМ-ова.\n"
 
 #: lib/readelf.c:48
 #, c-format
 msgid "*** unknown elftype_t %d"
-msgstr ""
+msgstr "*** непозната „elftype_t“ %d"
 
 #: lib/readelf.c:76
 msgid "*** libelf version mismatch"
-msgstr ""
+msgstr "*** непоклапање издања „libelf“-а"
 
 #: lib/readfile.c:50
 #, c-format
 msgid "*** unable to find end of %s"
-msgstr ""
+msgstr "*** не могу да пронађем крај за %s"
 
 #: lib/readfile.c:68
 #, c-format
 msgid "*** unable to close %s"
-msgstr ""
+msgstr "*** не могу да затворим %s"
 
 #: lib/rmtree.c:74
 #, c-format
 msgid "*** %s is not a directory"
-msgstr ""
+msgstr "*** %s није директоријум"
 
 #: lib/rpm.c:71
 #, c-format
 msgid "*** Fopen failed for %s: %s"
-msgstr ""
+msgstr "*** „Fopen“ није успело за %s: %s"
 
 #: lib/rpm.c:255
 #, c-format
 msgid "*** file index %d is out of bounds for %s"
-msgstr ""
+msgstr "*** индекс датотеке %d је изван граница за %s"
 
 #: lib/rpm.c:431
 msgid "*** error reading file from RPM payload"
-msgstr ""
+msgstr "*** грешка при читању датотеке из РПМ терета"
 
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d."
 
 #: lib/runcmd.c:173
 #, c-format
 msgid "%d (%s)"
-msgstr ""
+msgstr "%d (%s)"
 
 #: lib/runcmd.c:178
 #, c-format
@@ -3401,103 +4015,106 @@ msgid ""
 "\n"
 "%s tried to run the command and it received signal %s"
 msgstr ""
+"%s\n"
+"\n"
+"%s је покушао да покрене наредбу и примио је сигнал %s"
 
 #: lib/runcmd.c:182
 #, c-format
 msgid "%s tried to run the command and it received signal %s"
-msgstr ""
+msgstr "%s је покушао да покрене наредбу и примио је сигнал %s"
 
 #: lib/strfuncs.c:250 lib/strfuncs.c:282
 msgid "NULL"
-msgstr ""
+msgstr "НИШТА"
 
 #: lib/strfuncs.c:252 lib/strfuncs.c:284
 msgid "OK"
-msgstr ""
+msgstr "У реду"
 
 #: lib/strfuncs.c:254 lib/strfuncs.c:286
 msgid "INFO"
-msgstr ""
+msgstr "ИНФО"
 
 #: lib/strfuncs.c:256 lib/strfuncs.c:288
 msgid "VERIFY"
-msgstr ""
+msgstr "ПОТВРДИ"
 
 #: lib/strfuncs.c:258 lib/strfuncs.c:290
 msgid "BAD"
-msgstr ""
+msgstr "ЛОШЕ"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "ПРЕСКОЧИ"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "ДИЈАГНОСТИКА"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
-msgstr ""
+msgstr "НЕПОЗНАТО"
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
-msgstr ""
+msgstr "Не може се одбацити"
 
 #: lib/strfuncs.c:310
 msgid "Anyone"
-msgstr ""
+msgstr "Било ко"
 
 #: lib/strfuncs.c:312
 msgid "Security"
-msgstr ""
+msgstr "Безбедност"
 
 #: lib/strfuncs.c:543
 msgid "regular file"
-msgstr ""
+msgstr "обична датотека"
 
 #: lib/strfuncs.c:545
 msgid "directory"
-msgstr ""
+msgstr "директоријум"
 
 #: lib/strfuncs.c:547
 msgid "character device"
-msgstr ""
+msgstr "знаковни уређај"
 
 #: lib/strfuncs.c:549
 msgid "block device"
-msgstr ""
+msgstr "блок уређај"
 
 #: lib/strfuncs.c:551
 msgid "FIFO (named pipe)"
-msgstr ""
+msgstr "ФИФО (именована спојка)"
 
 #: lib/strfuncs.c:553
 msgid "symbolic link"
-msgstr ""
+msgstr "симболичка веза"
 
 #: lib/strfuncs.c:555
 msgid "socket"
-msgstr ""
+msgstr "прикључница"
 
 #: lib/strfuncs.c:614
 msgid "Success."
-msgstr ""
+msgstr "Успех."
 
 #: lib/strfuncs.c:616
 msgid "One or more inspections failed."
-msgstr ""
+msgstr "Једна или више инспекција није успела."
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "Грешка у програму."
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
-msgstr ""
+msgstr "Наведени профил није пронађен."
 
 #: lib/strfuncs.c:622
 msgid "Insufficient disk space in the working directory."
-msgstr ""
+msgstr "Недовољно простора на диску у радном директоријуму."
 
 #: src/rpminspect.c:48
 #, c-format
@@ -3505,169 +4122,178 @@ msgid ""
 "Compare package builds for policy compliance and consistency.\n"
 "\n"
 msgstr ""
+"Упоредите изградње пакета ради усклађености са полисама и доследности.\n"
+"\n"
 
 #: src/rpminspect.c:49
 #, c-format
 msgid "Usage: %s [OPTIONS] [before build] [after build]\n"
-msgstr ""
+msgstr "Употреба: %s [ОПЦИЈЕ] [изградња пре] [изградња после]\n"
 
 #: src/rpminspect.c:50
 #, c-format
 msgid "Options:\n"
-msgstr ""
+msgstr "Опције:\n"
 
 #: src/rpminspect.c:51
 #, c-format
 msgid "  -c FILE, --config=FILE      Configuration file to use\n"
 msgstr ""
+"  -c ДАТОТЕКА, --config=ДАТОТЕКА      Датотека подешавања за коришћење\n"
 
 #: src/rpminspect.c:52
 #, c-format
 msgid "  -p NAME, --profile=NAME     Configuration profile to use\n"
-msgstr ""
+msgstr "  -p НАЗИВ, --profile=НАЗИВ     Профил подешавања за коришћење\n"
 
 #: src/rpminspect.c:53
 #, c-format
 msgid "  -T LIST, --tests=LIST       List of tests to run\n"
-msgstr ""
+msgstr "  -T СПИСАК, --tests=СПИСАК       Списак тестова за покретање\n"
 
 #: src/rpminspect.c:54
 #, c-format
 msgid "                                (default: ALL)\n"
-msgstr ""
+msgstr "                                (подразумевано: ALL)\n"
 
 #: src/rpminspect.c:55
 #, c-format
 msgid "  -E LIST, --exclude=LIST     List of tests to exclude\n"
-msgstr ""
+msgstr "  -E СПИСАК, --exclude=СПИСАК     Списак тестова за изузимање\n"
 
 #: src/rpminspect.c:56
 #, c-format
 msgid "                                (default: none)\n"
-msgstr ""
+msgstr "                                (подразумевано: ништа)\n"
 
 #: src/rpminspect.c:57
 #, c-format
 msgid "  -a LIST, --arches=LIST      List of architectures to check\n"
-msgstr ""
+msgstr "  -a СПИСАК, --arches=СПИСАК      Списак архитектура за проверу\n"
 
 #: src/rpminspect.c:58
 #, c-format
 msgid "  -r STR, --release=STR       Product release string\n"
-msgstr ""
+msgstr "  -r НИСКА, --release=НИСКА       Ниска издања производа\n"
 
 #: src/rpminspect.c:59
 #, c-format
 msgid "  -n, --no-rebase             Disable build rebase detection\n"
 msgstr ""
+"  -n, --no-rebase             Онемогући откривање поновног заснивања "
+"изградње\n"
 
 #: src/rpminspect.c:60
 #, c-format
 msgid "  -b TYPE, --build-type=TYPE  Set Koji build type to TYPE\n"
-msgstr ""
+msgstr "  -b VRSTA, --build-type=VRSTA  Постави Који врсту изградње на ВРСТА\n"
 
 #: src/rpminspect.c:61
 #, c-format
 msgid "  -o FILE, --output=FILE      Write results to FILE\n"
-msgstr ""
+msgstr "  -o ДАТОТЕКА, --output=ДАТОТЕКА      Упиши резултате у ДАТОТЕКУ\n"
 
 #: src/rpminspect.c:62
 #, c-format
 msgid "                                (default: stdout)\n"
-msgstr ""
+msgstr "                                (подразумевано: stdout)\n"
 
 #: src/rpminspect.c:63
 #, c-format
 msgid "  -F TYPE, --format=TYPE      Format output results as TYPE\n"
 msgstr ""
+"  -F ВРСТА, --format=ВРСТА      Форматирај излазне резултате као ВРСТА\n"
 
 #: src/rpminspect.c:64
 #, c-format
 msgid "                                (default: text)\n"
-msgstr ""
+msgstr "                                (подразумевано: text)\n"
 
 #: src/rpminspect.c:65
 #, c-format
 msgid "  -t TAG, --threshold=TAG     Result threshold triggering exit\n"
-msgstr ""
+msgstr "  -t ОЗНАКА, --threshold=ОЗНАКА     Праг резултата који изазива излаз\n"
 
 #: src/rpminspect.c:66
 #, c-format
 msgid "                              failure (default: VERIFY)\n"
-msgstr ""
+msgstr "                              неуспех (подразумевано: VERIFY)\n"
 
 #: src/rpminspect.c:67
 #, c-format
 msgid "  -s TAG, --suppress=TAG      Results suppression threshold\n"
-msgstr ""
+msgstr "  -s OZNAKA, --suppress=OZNAKA      Праг потискивања резултата\n"
 
 #: src/rpminspect.c:68
 #, c-format
 msgid "                                (default: off, report everything)\n"
 msgstr ""
+"                                (подразумевано: искључено, пријави све)\n"
 
 #: src/rpminspect.c:69
 #, c-format
 msgid "  -l, --list                  List available tests and formats\n"
-msgstr ""
+msgstr "  -l, --list                  Испиши доступне тестове и формате\n"
 
 #: src/rpminspect.c:70
 #, c-format
 msgid "  -w PATH, --workdir=PATH     Temporary directory to use\n"
 msgstr ""
+"  -w PUTANJA, --workdir=PUTANJA     Привремени директоријум за коришћење\n"
 
 #: src/rpminspect.c:71
 #, c-format
 msgid "                                (default: %s)\n"
-msgstr ""
+msgstr "                                (подразумевано: %s)\n"
 
 #: src/rpminspect.c:72
 #, c-format
 msgid ""
 "  -f, --fetch-only            Fetch builds only, do not perform inspections\n"
 msgstr ""
+"  -f, --fetch-only            Само добави изградње, не извршавај прегледе\n"
 
 #: src/rpminspect.c:73
 #, c-format
 msgid "                                (implies -k)\n"
-msgstr ""
+msgstr "                                (подразумева -k)\n"
 
 #: src/rpminspect.c:74
 #, c-format
 msgid ""
 "  -k, --keep                  Do not remove the comparison working files\n"
-msgstr ""
+msgstr "  -k, --keep                  Не уклањај радне датотеке поређења\n"
 
 #: src/rpminspect.c:75
 #, c-format
 msgid "  -d, --debug                 Debugging mode output\n"
-msgstr ""
+msgstr "  -d, --debug                 Излаз режима за уклањање грешака\n"
 
 #: src/rpminspect.c:76
 #, c-format
 msgid ""
 "  -D, --dump-config           Dump configuration settings (in YAML format)\n"
-msgstr ""
+msgstr "  -D, --dump-config           Испиши подешавања (у ЈАМЛ формату)\n"
 
 #: src/rpminspect.c:77
 #, c-format
 msgid "  -v, --verbose               Verbose inspection output\n"
-msgstr ""
+msgstr "  -v, --verbose               Опширан излаз прегледа\n"
 
 #: src/rpminspect.c:78
 #, c-format
 msgid "                              when finished, display full path\n"
-msgstr ""
+msgstr "                              по завршетку, прикажи пуну путању\n"
 
 #: src/rpminspect.c:79
 #, c-format
 msgid "  -?, --help                  Display usage information\n"
-msgstr ""
+msgstr "  -?, --help                  Прикажи податке о употреби\n"
 
 #: src/rpminspect.c:80
 #, c-format
 msgid "  -V, --version               Display program version\n"
-msgstr ""
+msgstr "  -V, --version               Прикажи издање програма\n"
 
 #: src/rpminspect.c:81
 #, c-format
@@ -3675,86 +4301,89 @@ msgid ""
 "\n"
 "See the rpminspect(1) man page for more information.\n"
 msgstr ""
+"\n"
+"Погледајте rpminspect(1) man страницу за више података.\n"
 
 #: src/rpminspect.c:114
 #, c-format
 msgid "*** unable to compile product release regular expression: %s"
-msgstr ""
+msgstr "*** не могу да компајлирам регуларни израз издања производа: %s"
 
 #: src/rpminspect.c:168 src/rpminspect.c:179
 #, c-format
 msgid "*** product release for after build (%s) is empty"
-msgstr ""
+msgstr "*** издање производа за накнадну изградњу (%s) је празно"
 
 #: src/rpminspect.c:196 src/rpminspect.c:204
 #, c-format
 msgid "*** product release for before build (%s) is empty"
-msgstr ""
+msgstr "*** издање производа за претходну изградњу (%s) је празно"
 
 #: src/rpminspect.c:259
 #, c-format
 msgid "*** unable to determine product release for %s and %s"
-msgstr ""
+msgstr "*** не могу да одредим издање производа за %s и %s"
 
 #: src/rpminspect.c:260
 msgid ""
 "*** See the 'favor_release' setting in the rpminspect configuration file."
 msgstr ""
+"*** Погледајте поставку „favor_release“ у датотеци подешавања rpminspect-а."
 
 #: src/rpminspect.c:288
 msgid "*** the -T and -E options are mutually exclusive"
-msgstr ""
+msgstr "*** опције -T и -E се међусобно искључују"
 
 #: src/rpminspect.c:289 src/rpminspect.c:305 src/rpminspect.c:737
 #: src/rpminspect.c:776
 #, c-format
 msgid "*** See `%s --help` for more information."
-msgstr ""
+msgstr "*** Погледајте „%s --help“ за више података."
 
 #: src/rpminspect.c:304
 #, c-format
 msgid "*** unknown inspection: `%s`"
-msgstr ""
+msgstr "*** непозната инспекција: „%s“"
 
 #: src/rpminspect.c:455
 #, c-format
 msgid "*** unsupported build type: `%s`."
-msgstr ""
+msgstr "*** неподржана врста изградње: „%s“."
 
 #: src/rpminspect.c:464
 #, c-format
 msgid "*** invalid build type: `%s`."
-msgstr ""
+msgstr "*** неисправна врста изградње: „%s“."
 
 #: src/rpminspect.c:481
 #, c-format
 msgid "*** invalid output format: `%s`."
-msgstr ""
+msgstr "*** неисправан излазни формат: „%s“."
 
 #: src/rpminspect.c:493
 #, c-format
 msgid "*** unable to expand working directory: `%s`"
-msgstr ""
+msgstr "*** не могу да раширим радни директоријум: „%s“"
 
 #: src/rpminspect.c:506
 #, c-format
 msgid "*** unable to use `%s' as working directory"
-msgstr ""
+msgstr "*** не могу да користим „%s“ као радни директоријум"
 
 #: src/rpminspect.c:536
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s издање %s\n"
 
 #: src/rpminspect.c:539
 #, c-format
 msgid "*** ?? getopt returned character code 0%o ??"
-msgstr ""
+msgstr "*** ?? getopt је вратио код знака 0%o ??"
 
 #: src/rpminspect.c:546
 #, c-format
 msgid "Available build types:\n"
-msgstr ""
+msgstr "Доступне врсте изградње:\n"
 
 #: src/rpminspect.c:567
 #, c-format
@@ -3762,6 +4391,8 @@ msgid ""
 "\n"
 "Available output formats:\n"
 msgstr ""
+"\n"
+"Доступни излазни формати:\n"
 
 #: src/rpminspect.c:584
 #, c-format
@@ -3769,34 +4400,36 @@ msgid ""
 "\n"
 "Available inspections:\n"
 msgstr ""
+"\n"
+"Доступне инспекције:\n"
 
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
 #, c-format
 msgid "*** failed to read configuration file %s"
-msgstr ""
+msgstr "*** нисам успео да прочитам датотеку подешавања %s"
 
 #: src/rpminspect.c:658
 #, c-format
 msgid "*** Please specify a configuration file using '-c' or supply ./%s"
-msgstr ""
+msgstr "*** Наведите датотеку подешавања користећи „-c“ или доставите ./%s"
 
 #: src/rpminspect.c:736
 msgid "*** Invalid before and after build specification."
-msgstr ""
+msgstr "*** Неисправна одредба изградње пре и после."
 
 #: src/rpminspect.c:744
 msgid "*** unable to read RPM configuration"
-msgstr ""
+msgstr "*** не могу да прочитам РПМ подешавања"
 
 #: src/rpminspect.c:775
 #, c-format
 msgid "*** unsupported architecture specified: `%s`"
-msgstr ""
+msgstr "*** наведена је неподржана архитектура: „%s“"
 
 #: src/rpminspect.c:793
 #, c-format
 msgid "*** unable to create directory %s"
-msgstr ""
+msgstr "*** не могу да направим директоријум %s"
 
 #: src/rpminspect.c:851
 #, c-format
@@ -3804,73 +4437,77 @@ msgid ""
 "Version information for libraries and programs used by %s as well as storage "
 "requirements.  This result is for informational and diagnostic purposes only."
 msgstr ""
+"Подаци о издањима библиотека и програма које користи %s као и захтеви за "
+"складиштење. Овај резултат служи искључиво у информативне и дијагностичке "
+"сврхе."
 
 #: src/rpminspect.c:858
 #, c-format
 msgid "Space required to download artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Простор потребан за преузимање артефаката: %lu бајтова (%s)\n"
 
 #: src/rpminspect.c:866
 #, c-format
 msgid "Space required to unpack artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Простор потребан за отпакивање артефаката: %lu бајтова (%s)\n"
 
 #: src/rpminspect.c:878
 #, c-format
 msgid "Command line arguments used to invoke %s."
-msgstr ""
+msgstr "Аргументи линије наредби коришћени за позивање %s."
 
 #: src/rpminspect.c:902
 #, c-format
 msgid "Local configuration file: %s"
-msgstr ""
+msgstr "Локална датотека подешавања: %s"
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "Пре изградње"
 
 #: src/rpminspect.c:917
 msgid "After Build"
-msgstr ""
+msgstr "Након изградње"
 
 #: src/rpminspect.c:920
 msgid "Build"
-msgstr ""
+msgstr "Изградња"
 
 #: src/rpminspect.c:937
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
 msgstr ""
+"*** нема парњака, уверите се да пакети постоје за наведену архитектуру(е)"
 
 #: src/rpminspect.c:958
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
-msgstr ""
+msgstr "*** не могу да пронађем скуп парњака пакета између пре и након изградње"
 
 #: src/rpminspect.c:972
 msgid "*** unable to determine product release or none specified (-r)."
-msgstr ""
+msgstr "*** не могу да одредим издање производа или није наведено (-r)."
 
 #: src/rpminspect.c:984
 #, c-format
 msgid "Skipping %s inspection..."
-msgstr ""
+msgstr "Прескачем преглед %s..."
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "прескочи"
 
 #: src/rpminspect.c:1009
 #, c-format
 msgid "Running %s inspection..."
-msgstr ""
+msgstr "Покрећем преглед %s..."
 
 #: src/rpminspect.c:1018
 msgid "pass"
-msgstr ""
+msgstr "прошло"
 
 #: src/rpminspect.c:1018
 msgid "FAIL"
-msgstr ""
+msgstr "НЕУСПЕХ"
 
 #: src/rpminspect.c:1046
 #, c-format
@@ -3878,3 +4515,5 @@ msgid ""
 "\n"
 "Keeping working directory: %s\n"
 msgstr ""
+"\n"
+"Задржавам радни директоријум: %s\n"
