@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-05-13 10:00+0000\n"
+"Last-Translator: Bone NI <bounkirdni@gmail.com>\n"
+"Language-Team: Lao <https://translate.fedoraproject.org/projects/rpminspect/"
+"main/lo/>\n"
 "Language: lo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -24,12 +26,17 @@ msgid ""
 "checks to see if the License tag contains any unprofessional words as "
 "defined in the configuration file."
 msgstr ""
+"ກວດສອບຂໍ້ຄວາມທີ່ລະບຸໃນແທັກ License ຂອງຂໍ້ມູນເມຕາ RPM ວ່າໄດ້ອະທິບາຍເຖິງໃບອະນຸຍາດຊອບແວທີ່ອະນຸຍາດ"
+"ຕາມທີ່ກຳນົດໄວ້ໃນຖານຂໍ້ມູນໃບອະນຸຍາດຫຼືບໍ່. ນອກຈາກນີ້ ຍັງກວດສອບວ່າແທັກ License ມີຄຳສັບທີ່ບໍ່ເໝາະສົມຕາມທີ່"
+"ກຳນົດໄວ້ໃນໄຟລ໌ການຕັ້ງຄ່າຫຼືບໍ່."
 
 #: include/inspect.h:1347
 msgid ""
 "Check all binary RPMs in the build for any empty payloads. When comparing "
 "two builds, report new packages in the after build with empty payloads."
 msgstr ""
+"ກວດສອບທຸກໄຟລ໌ RPM ແບບໄບນາຣີໃນການບິວວ່າາມີຂໍ້ມູນເພໂຫຼດ (payload) ທີ່ວ່າງເປົ່າຫຼືບໍ່. ເມື່ອປຽບທຽບສອງ"
+"ການບິວ, ໃຫ້ລາຍງານແພັກເກດໃໝ່ໃນການບິວຫຼັງທີ່ມີຂໍ້ມູນເພໂຫຼດວ່າງເປົ່າ."
 
 #: include/inspect.h:1353
 msgid ""
@@ -37,6 +44,8 @@ msgid ""
 "Packages that lost payload data from the before build to the after build are "
 "reported."
 msgstr ""
+"ກວດສອບທຸກໄຟລ໌ RPM ແບບໄບນາຣີທັງໃນການບິວກ່ອນ ແລະ ຫຼັງ ວ່າາມີຂໍ້ມູນເພໂຫຼດທີ່ວ່າງເປົ່າຫຼືບໍ່. ຈະມີການລາຍງ"
+"ານແພັກເກດທີ່ສູນເສຍຂໍ້ມູນເພໂຫຼດຈາກການບິວກ່ອນໄປຫາການບິວຫຼັງ."
 
 #: include/inspect.h:1359
 msgid ""
@@ -48,6 +57,11 @@ msgid ""
 "before build specified, check for differences between the before and after "
 "build values of the previous RPM header values and report them."
 msgstr ""
+"ດຳເນີນການກວດສອບສ່ວນຫົວ (header) ຂອງ RPM. ທຳອິດ, ກວດສອບວ່າ Vendor ມີຂໍ້ຄວາມຕາມທີ່ຄາດໄວ້ໃນ"
+"ໄຟລ໌ການຕັ້ງຄ່າ. ອັນທີສອງ, ກວດສອບວ່າ build host ຢູ່ໃນຊັບໂດເມນທີ່ຄາດໄວ້ຕາມທີ່ກຳນົດໃນໄຟລ໌ການຕັ້ງຄ່"
+"າ. ອັນທີສາມ, ກວດສອບຂໍ້ຄວາມ Summary ວ່າາມີຄຳສັບທີ່ບໍ່ເໝາະສົມຫຼືບໍ່. ອັນທີສີ່, ກວດສອບ Description ວ່"
+"າາມີຄຳສັບທີ່ບໍ່ເໝາະສົມຫຼືບໍ່. ສຸດທ້າຍ, ຖ້າມີການລະບຸການບິວກ່ອນໜ້າ, ໃຫ້ກວດສອບຄວາມແຕກຕ່າງລະຫວ່າງຄ່າສ່ວນຫົ"
+"ວ RPM ຂອງການບິວກ່ອນ ແລະ ຫຼັງ ແລ້ວລາຍງານຜົນ."
 
 #: include/inspect.h:1365
 msgid ""
@@ -55,10 +69,14 @@ msgid ""
 "man page is compressed. Second, check that each man page contains valid "
 "content. Lastly, check that each man page is installed to the correct path."
 msgstr ""
+"ດຳເນີນການກວດສອບໜ້າຄູ່ມື (man pages) ໃນເພໂຫຼດຂອງ RPM. ທຳອິດ, ກວດສອບວ່າແຕ່ລະໜ້າຄູ່ມືໄດ້ຖືກບີບອັດ"
+"ຫຼືບໍ່. ອັນທີສອງ, ກວດສອບວ່າແຕ່ລະໜ້າຄູ່ມືມີເນື້ອຫາທີ່ຖືກຕ້ອງ. ສຸດທ້າຍ, ກວດສອບວ່າແຕ່ລະໜ້າຄູ່ມືໄດ້ຖືກຕິດຕັ້ງລົງໃນ"
+"ເສັ້ນທາງ (path) ທີ່ຖືກຕ້ອງຫຼືບໍ່."
 
 #: include/inspect.h:1371
 msgid "Check that XML files included in the RPM payload are well-formed."
 msgstr ""
+"ກວດສອບວ່າໄຟລ໌ XML ທີ່ລວມຢູ່ໃນເພໂຫຼດຂອງ RPM ນັ້ນມີຮູບແບບທີ່ຖືກຕ້ອງ (well-formed)."
 
 #: include/inspect.h:1377
 msgid ""
@@ -68,28 +86,38 @@ msgid ""
 "after build did not lose a PT_GNU_RELRO segment. When comparing builds and "
 "there is a list of forbidden library functions, make sure nothing uses them."
 msgstr ""
+"ດຳເນີນການກວດສອບຫຼາຍຢ່າງກ່ຽວກັບໄຟລ໌ ELF. ທຳອິດ, ກວດສອບວ່າວັດຖຸ ELF ບໍ່ມີ stack ທີ່ສາມາດປະມວນຜົ"
+"ນໄດ້ (executable stack). ອັນທີສອງ, ກວດສອບວ່າວັດຖຸ ELF ບໍ່ມີການຍ້າຍຕຳແໜ່ງຂໍ້ຄວາມ (text "
+"relocations). ເມື່ອປຽບທຽບການບິວ, ໃຫ້ກວດສອບວ່າວັດຖຸ ELF ໃນການບິວຫຼັງບໍ່ໄດ້ສູນເສຍເຊັກເມັນ "
+"PT_GNU_RELRO. ເມື່ອປຽບທຽບການບິວ ແລະ ມີລາຍຊື່ຟັງຊັນໄລບຣາຣີທີ່ຕ້ອງຫ້າມ, ໃຫ້ກວດສອບໃຫ້ແນ່ໃຈວ່າບໍ່ມີຫຍັ"
+"ງນຳໃຊ້ພວກມັນ."
 
 #: include/inspect.h:1383
 msgid ""
 "Perform syntax and file reference checks on *.desktop files. Syntax errors "
 "and invalid file references are reported as errors."
 msgstr ""
+"ດຳເນີນການກວດສອບໄວຍາກອນ ແລະ ການອ້າງອີງໄຟລ໌ໃນໄຟລ໌ *.desktop. ຂໍ້ຜິດພາດທາງໄວຍາກອນ ແລະ ກາ"
+"ນອ້າງອີງໄຟລ໌ທີ່ບໍ່ຖືກຕ້ອງຈະຖືກລາຍງານເປັນຂໍ້ຜິດພາດ."
 
 #: include/inspect.h:1389
 msgid ""
 "Check that the 'Release' tag in the RPM spec file includes the %{?dist} "
 "directive."
 msgstr ""
+"ກວດສອບວ່າແທັກ 'Release' ໃນໄຟລ໌ RPM spec ໄດ້ລວມເອົາຄຳສັ່ງ %{?dist} ແລ້ວຫຼືບໍ່."
 
 #: include/inspect.h:1395
 msgid "Ensure the spec file name conforms to the NAME.spec naming format."
-msgstr ""
+msgstr "ກວດສອບໃຫ້ແນ່ໃຈວ່າຊື່ໄຟລ໌ spec ສອດຄ່ອງກັບຮູບແບບການຕັ້ງຊື່ NAME.spec."
 
 #: include/inspect.h:1403
 msgid ""
 "Ensure compliance with modularity build and packaging policies (only valid "
 "for module builds, no-op otherwise)."
 msgstr ""
+"ກວດສອບໃຫ້ແນ່ໃຈວ່າສອດຄ່ອງກັບນະໂຍບາຍການບິວແບບໂມດູລາ ແລະ ການຈັດເຮັດແພັກເກດ (ມີຜົນສະເພາະການບິວ"
+"ແບບໂມດູລເທົ່ານັ້ນ, ຖ້າບໍ່ດັ່ງນັ້ນຈະຂ້າມໄປ)."
 
 #: include/inspect.h:1411
 msgid ""
@@ -98,6 +126,9 @@ msgid ""
 "exceeded.  The bytecode version is vendor specific to releases and defined "
 "in the configuration file."
 msgstr ""
+"ກວດສອບເວີຊັນ Java bytecode ຂັ້ນຕ່ຳທີ່ຕ້ອງການໃນໄຟລ໌ class, ລາຍງານການປ່ຽນແປງເວີຊັນ "
+"bytecode ລະຫວ່າງການບິວ, ແລະ ລາຍງານຫາກເວີຊັນ bytecode ເກີນກຳນົດ. ເວີຊັນ bytecode ແມ່ນຂຶ້ນ"
+"ກັບຜູ້ຜະລິດ (vendor) ແຕ່ລະລຸ້ນ ແລະ ຖືກກຳນົດໄວ້ໃນໄຟລ໌ການຕັ້ງຄ່າ."
 
 #: include/inspect.h:1417
 msgid ""
@@ -110,6 +141,11 @@ msgid ""
 "C and C++ header files are preprocessed and compared using diff(1).  Any "
 "changes with diff output are included in the results."
 msgstr ""
+"ລາຍງານໄຟລ໌ທີ່ປ່ຽນແປງຈາກການບິວກ່ອນໄປຫາການບິວຫຼັງ. ການປ່ຽນແປງບາງໄຟລ໌ຈະມີການແຈ້ງເຕືອນເພີ່ມເຕີມຖ້າຫ"
+"າກມີຄວາມສ່ຽງ (ເຊັ່ນ: ຜົນກະທົບດ້ານຄວາມປອດໄພ). ສຳລັບໄຟລ໌ທີ່ບີບອັດດ້ວຍ gzip, bzip2, ຫຼື xz ຈະຖືກປ"
+"ຽບທຽບສະເພາະເນື້ອຫາທີ່ບໍ່ໄດ້ບີບອັດເທົ່ານັ້ນ. ໄຟລ໌ລາຍການຂໍ້ຄວາມ (.mo) ຈະຖືກແຍກອອກ ແລະ ປຽບທຽບໂດຍໃ"
+"ຊ້ diff(1). ໄຟລ໌ສ່ວນຫົວ (header) ຂອງ C ແລະ C++ ຈະຖືກປະມວນຜົນກ່ອນ ແລະ ປຽບທຽບໂດຍໃຊ້ "
+"diff(1). ທຸກການປ່ຽນແປງທີ່ມີຜົນຈາກ diff ຈະຖືກລວມເຂົ້າໃນຜົນລັດ."
 
 #: include/inspect.h:1423
 msgid ""
@@ -119,6 +155,9 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"ລາຍງານໄຟລ໌ທີ່ມີການຍ້າຍເສັ້ນທາງການຕິດຕັ້ງ ຫຼື ຍ້າຍຂ້າມແພັກເກດຍ່ອຍລະຫວ່າງການບິວ. ໄຟລ໌ທີ່ຖືກຍ້າຍໂດຍມີຄຳນ"
+"ຳໜ້າເສັ້ນທາງທີ່ກ່ຽວກັບຄວາມປອດໄພຈະມີການລາຍງານເປັນພິເສດ. ແພັກເກດທີ່ຖືກ Rebase ຈະລາຍງານໃນລະດັບ "
+"INFO, ສ່ວນແພັກເກດທີ່ບໍ່ໄດ້ Rebase ຈະລາຍງານໃນລະດັບ VERIFY ຫຼື ສູງກວ່າ."
 
 #: include/inspect.h:1429
 msgid ""
@@ -130,6 +169,11 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"ລາຍງານໄຟລ໌ທີ່ຖືກລຶບອອກຈາກການບິວກ່ອນໄປຫາການບິວຫຼັງ. ໄລບຣາຣີທີ່ໃຊ້ຮ່ວມກັນ (Shared libraries) ຈະ"
+"ມີການລາຍງານເພີ່ມເຕີມຍ້ອນວ່າອາດເປັນການລຶບຄວາມຕ້ອງການ (dependency) ທີ່ບໍ່ຄາດຄິດ. ໄຟລ໌ທີ່ຖືກລຶບອອກຈ"
+"າກເສັ້ນທາງຄວາມປອດໄພຈະມີການລາຍງານເປັນພິເສດ. ສ່ວນ Source RPMs ແລະ ໄຟລ໌ debuginfo ຈະຖືກຂ້"
+"າມໄປ. ແພັກເກດທີ່ຖືກ Rebase ຈະລາຍງານໃນລະດັບ INFO, ສ່ວນແພັກເກດທີ່ບໍ່ໄດ້ Rebase ຈະລາຍງານໃນລະ"
+"ດັບ VERIFY ຫຼື ສູງກວ່າ."
 
 #: include/inspect.h:1435
 msgid ""
@@ -141,6 +185,11 @@ msgid ""
 "Rebased packages report these findings at the INFO level while non-rebased "
 "packages report them at the VERIFY level or higher."
 msgstr ""
+"ລາຍງານໄຟລ໌ທີ່ຖືກເພີ່ມເຂົ້າລະຫວ່າງການບິວກ່ອນ ແລະ ຫຼັງ. ໄຟລ໌ Debuginfo ແລະ ໄຟລ໌ທີ່ກົງກັບຮູບແບບໃນໄຟລ໌"
+"ການຕັ້ງຄ່າຈະຖືກຂ້າມໄປ. ໄຟລ໌ທີ່ເພີ່ມເຂົ້າໃນເສັ້ນທາງຄວາມປອດໄພຈະມີການລາຍງານເປັນພິເສດ. ໄຟລ໌ setuid "
+"ແລະ setgid ໃໝ່ຈະມີການແຈ້ງເຕືອນຄວາມປອດໄພ ເວັ້ນເສຍແຕ່ວ່າໄຟລ໌ນັ້ນຈະຢູ່ໃນລາຍຊື່ fileinfo. ແພັກເກດ"
+"ທີ່ຖືກ Rebase ຈະລາຍງານໃນລະດັບ INFO, ສ່ວນແພັກເກດທີ່ບໍ່ໄດ້ Rebase ຈະລາຍງານໃນລະດັບ VERIFY ຫຼື "
+"ສູງກວ່າ."
 
 #: include/inspect.h:1441
 msgid ""
@@ -149,6 +198,9 @@ msgid ""
 "on the rebaseable list, the change is reported as informational. Otherwise "
 "the change is reported as a rebase of the package and requires inspection."
 msgstr ""
+"ລາຍງານໄຟລ໌ຈັດເກັບ Source ທີ່ກຳນົດໃນໄຟລ໌ RPM spec ທີ່ມີການປ່ຽນແປງເນື້ອຫາລະຫວ່າງການບິວກ່ອນ ແລະ "
+"ຫຼັງ. ຖ້າ Source ປ່ຽນແປງ ແລະ ແພັກເກດຢູ່ໃນລາຍຊື່ທີ່ rebase ໄດ້, ການປ່ຽນແປງຈະຖືກລາຍງານເປັນຂໍ້ມູນທົ່"
+"ວໄປ. ຖ້າບໍ່ດັ່ງນັ້ນ ຈະຖືກລາຍງານວ່າເປັນການ rebase ແພັກເກດ ແລະ ຕ້ອງມີການກວດສອບ."
 
 #: include/inspect.h:1447
 msgid ""
@@ -156,6 +208,9 @@ msgid ""
 "make sure executables are owned by the correct user and group. If a before "
 "and after build have been specified, also report ownership changes."
 msgstr ""
+"ລາຍງານໄຟລ໌ ແລະ ໄດເຣັກທໍຣີທີ່ເປັນເຈົ້າຂອງໂດຍຜູ້ໃຊ້ ແລະ ກຸ່ມທີ່ບໍ່ຖືກຕ້ອງ. ກວດສອບໃຫ້ແນ່ໃຈວ່າໄຟລ໌ທີ່ປະມວນຜົ"
+"ນໄດ້ (executables) ເປັນຂອງຜູ້ໃຊ້ ແລະ ກຸ່ມທີ່ຖືກຕ້ອງ. ຖ້າມີການລະບຸການບິວກ່ອນ ແລະ ຫຼັງ, ໃຫ້ລາຍງານກ"
+"ານປ່ຽນແປງຄວາມເປັນເຈົ້າຂອງນຳ."
 
 #: include/inspect.h:1453
 msgid ""
@@ -166,6 +221,10 @@ msgid ""
 "perform the previous check but also report if a previously bad script is now "
 "passing the syntax check."
 msgstr ""
+"ສຳລັບທຸກ shell script ໃນການບິວ, ໃຫ້ກວດສອບໄວຍາກອນໂດຍໃຊ້ shell ທີ່ກຳນົດໃນບັນທັດ #!. ຖ້າການ"
+"ກວດສອບພົບຂໍ້ຜິດພາດ (ຄ່າທີ່ສົ່ງກັບບໍ່ແມ່ນສູນ), ໃຫ້ລາຍງານຕໍ່ຜູ້ໃຊ້ ແລະ ສົ່ງຄ່າ stdout ກັບ stderr ລວມກັ"
+"ນ. ຖ້າປຽບທຽບສອງການບິວ, ໃຫ້ກວດສອບ ແລະ ລາຍງານຫາກ script ທີ່ເຄີຍຜິດພາດມາກ່ອນນັ້ນຜ່ານການກວດສ"
+"ອບແລ້ວ."
 
 #: include/inspect.h:1459
 msgid ""
@@ -175,12 +234,17 @@ msgid ""
 "build.  If no annocheck tests are defined in the configuration file, this "
 "inspection is skipped."
 msgstr ""
+"ດຳເນີນການທົດສອບ annocheck ທີ່ກຳນົດໃນໄຟລ໌ການຕັ້ງຄ່າກັບທຸກໄຟລ໌ ELF ໃນການບິວ. ຖ້າລະບຸການບິວດຽວ ຈ"
+"ະເປັນການວິເຄາະເທົ່ານັ້ນ. ຖ້າລະບຸສອງການບິວ ຈະເປັນການປຽບທຽບຜົນການທົດສອບລະຫວ່າງການບິວກ່ອນ ແລະ ຫຼັ"
+"ງ. ຖ້າບໍ່ມີການກຳນົດການທົດສອບ annocheck ໄວ້, ການກວດສອບນີ້ຈະຖືກຂ້າມໄປ."
 
 #: include/inspect.h:1465
 msgid ""
 "Compare DT_NEEDED entries in dynamic ELF executables and shared libraries "
 "between the before and after build and report changes."
 msgstr ""
+"ປຽບທຽບລາຍການ DT_NEEDED ໃນໄຟລ໌ ELF ທີ່ປະມວນຜົນໄດ້ ແລະ ໄລບຣາຣີທີ່ໃຊ້ຮ່ວມກັນ ລະຫວ່າງການບິວກ່ອ"
+"ນ ແລະ ຫຼັງ ແລ້ວລາຍງານການປ່ຽນແປງ."
 
 #: include/inspect.h:1471
 msgid ""
@@ -188,6 +252,9 @@ msgid ""
 "non-empty files became empty, report those as results needing verification.  "
 "Report file change percentages as info-only."
 msgstr ""
+"ລາຍງານການປ່ຽນແປງຂະໜາດໄຟລ໌ລະຫວ່າງການບິວ. ຖ້າໄຟລ໌ທີ່ເຄີຍວ່າງເປົ່າກາຍເປັນບໍ່ວ່າງ ຫຼື ໄຟລ໌ທີ່ບໍ່ວ່າງກາຍເປັ"
+"ນວ່າງເປົ່າ, ໃຫ້ລາຍງານວ່າເປັນຜົນລັດທີ່ຕ້ອງມີການຢືນຢັນ. ລາຍງານເປີເຊັນການປ່ຽນແປງໄຟລ໌ເປັນຂໍ້ມູນທົ່ວໄປເທົ່ານັ້"
+"ນ."
 
 #: include/inspect.h:1477
 msgid ""
@@ -195,6 +262,8 @@ msgid ""
 "list for the product release specified or determined.  Any setuid or setgid "
 "changes will raise a message requiring Security Team review."
 msgstr ""
+"ລາຍງານການປ່ຽນແປງໂໝດ stat(2) ລະຫວ່າງການບິວ. ກວດສອບກັບລາຍຊື່ fileinfo ສຳລັບລຸ້ນຜະລິດຕະພັນທີ່"
+"ກຳນົດ. ການປ່ຽນແປງ setuid ຫຼື setgid ໃດໆ ຈະມີຂໍ້ຄວາມແຈ້ງເຕືອນໃຫ້ທີມງານຄວາມປອດໄພກວດສອບ."
 
 #: include/inspect.h:1485
 msgid ""
@@ -203,6 +272,9 @@ msgid ""
 "capabilities changes not listed will raise a message requiring Security Team "
 "review."
 msgstr ""
+"ລາຍງານການປ່ຽນແປງ capabilities(7) ລະຫວ່າງການບິວ. ກວດສອບກັບລາຍຊື່ capabilities ສຳລັບລຸ້ນ"
+"ຜະລິດຕະພັນທີ່ກຳນົດ. ການປ່ຽນແປງ capabilities ໃດໆ ທີ່ບໍ່ໄດ້ຢູ່ໃນລາຍຊື່ຈະມີຂໍ້ຄວາມແຈ້ງເຕືອນໃຫ້ທີມງານຄວ"
+"າມປອດໄພກວດສອບ."
 
 #: include/inspect.h:1494
 msgid ""
@@ -210,6 +282,9 @@ msgid ""
 "between builds.  This inspection is intended as an information gathering "
 "tool to gather kernel module differences between two builds."
 msgstr ""
+"ລາຍງານຄວາມແຕກຕ່າງຂອງພາກາມິເຕີ kernel module, dependency, PCI ID, ຫຼື symbol ລະຫວ່າງ"
+"ການບິວ. ການກວດສອບນີ້ມີໄວ້ເພື່ອເປັນເຄື່ອງມືຮວບຮວມຂໍ້ມູນຄວາມແຕກຕ່າງຂອງ kernel module ລະຫວ່າງສອງ"
+"ການບິວ."
 
 #: include/inspect.h:1501
 msgid ""
@@ -219,12 +294,16 @@ msgid ""
 "architectures as provided in the before build and not seeing them in the "
 "after build."
 msgstr ""
+"ລາຍງານສະຖາປັດຕະຍະກຳ (architectures) ຂອງ RPM ທີ່ປາກົດຂຶ້ນ ຫຼື ຫາຍໄປລະຫວ່າງການບິວກ່ອນ ແລະ "
+"ຫຼັງ. ການກວດສອບນີ້ຈະບໍ່ລາຍງານການຫາຍໄປຂອງແພັກເກດ noarch ແຕ່ມີຈຸດປະສົງເພື່ອລາຍງານການຫາຍໄປຂອງ"
+"ສະຖາປັດຕະຍະກຳເປົ້າໝາຍທີ່ມີໃນການບິວກ່ອນແຕ່ບໍ່ມີໃນການບິວຫຼັງ."
 
 #: include/inspect.h:1507
 msgid ""
 "Report RPM subpackages that appear and disappear between the before and "
 "after builds."
 msgstr ""
+"ລາຍງານແພັກເກດຍ່ອຍຂອງ RPM ທີ່ປາກົດຂຶ້ນ ຫຼື ຫາຍໄປລະຫວ່າງການບິວກ່ອນ ແລະ ຫຼັງ."
 
 #: include/inspect.h:1513
 #, c-format
@@ -233,6 +312,8 @@ msgid ""
 "Reports any other differences in the existing changelog between builds and "
 "that the new entry contains new text entries."
 msgstr ""
+"ກວດສອບໃຫ້ແນ່ໃຈວ່າແພັກເກດມີການບັນທຶກໃນ %changelog ສຳລັບເວີຊັນທີ່ບິວ. ລາຍງານຄວາມແຕກຕ່າງອື່ນໆ ໃ"
+"ນ changelog ລະຫວ່າງການບິວ ແລະ ກວດສອບວ່າລາຍການໃໝ່ມີຂໍ້ຄວາມບັນທຶກໃໝ່."
 
 #: include/inspect.h:1519
 msgid ""
@@ -241,6 +322,9 @@ msgid ""
 "path migrations.  The main examples are /bin migrating to /usr/bin and /sbin "
 "migrating to /usr/sbin."
 msgstr ""
+"ລາຍງານໄຟລ໌ທີ່ຖືກຈັດແພັກເກດໄວ້ໃນໄດເຣັກທໍຣີທີ່ຜະລິດຕະພັນບໍ່ໃຊ້ແລ້ວ. ໂດຍປົກກະຕິແລ້ວໝາຍຄວາມວ່າແພັກເກດຍັງບໍ່"
+"ທັນໄດ້ອັບເດດຕາມການຍ້າຍເສັ້ນທາງ. ຕົວຢ່າງຫຼັກແມ່ນການຍ້າຍຈາກ /bin ໄປ /usr/bin ແລະ ຈາກ /sbin "
+"ໄປ /usr/sbin."
 
 #: include/inspect.h:1525
 msgid ""
@@ -250,6 +334,10 @@ msgid ""
 "ELF objects shipped in packages.  This inspection looks for LTO bytecode in "
 "ELF relocatable objects and reports if any is present."
 msgstr ""
+"Link Time Optimization (LTO) ຊ່ວຍໃຫ້ໄຟລ໌ ELF ທີ່ປະມວນຜົນໄດ້ ແລະ ໄລບຣາຣີມີຂະໜາດນ້ອຍລົງ ແລ"
+"ະ ໄວຂຶ້ນ. ແຕ່ LTO bytecode ບໍ່ຄົງທີ່ລະຫວ່າງເວີຊັນຂອງ gcc. ດັ່ງນັ້ນ, ບໍ່ຄວນມີ LTO bytecode ໃນວັດ"
+"ຖຸ ELF .a ແລະ .o ທີ່ມາກັບແພັກເກດ. ການກວດສອບນີ້ຈະຊອກຫາ LTO bytecode ໃນວັດຖຸ ELF ທີ່ຍ້າຍຕຳແ"
+"ໜ່ງໄດ້ ແລະ ລາຍງານຫາກພົບເຫັນ."
 
 #: include/inspect.h:1531
 msgid ""
@@ -257,18 +345,23 @@ msgid ""
 "ensures absolute and relative symlinks are valid.  It also checks for any "
 "symlink usage that will cause problems for RPM."
 msgstr ""
+"Symbolic links ຕ້ອງສາມາດເຂົ້າເຖິງໄດ້ໃນລະບົບທີ່ຕິດຕັ້ງ. ການກວດສອບນີ້ເຮັດໃຫ້ແນ່ໃຈວ່າ symlinks ແບ"
+"ບ absolute ແລະ relative ນັ້ນຖືກຕ້ອງ. ນອກຈາກນີ້ຍັງກວດສອບການໃຊ້ symlink ທີ່ອາດກໍ່ໃຫ້ເກີດບັນຫາກັ"
+"ບ RPM."
 
 #: include/inspect.h:1537
 #, c-format
 msgid ""
 "Check %files sections in the spec file for any forbidden path references."
 msgstr ""
+"ກວດສອບພາກສ່ວນ %files ໃນໄຟລ໌ spec ວ່າາມີການອ້າງອີງເສັ້ນທາງ (path) ທີ່ຕ້ອງຫ້າມຫຼືບໍ່."
 
 #: include/inspect.h:1543
 msgid ""
 "Compare MIME types of files between builds and report any changes for "
 "verification."
 msgstr ""
+"ປຽບທຽບປະເພດ MIME ຂອງໄຟລ໌ລະຫວ່າງການບິວ ແລະ ລາຍງານການປ່ຽນແປງໃດໆ ເພື່ອການຢືນຢັນ."
 
 #: include/inspect.h:1549
 msgid ""
@@ -281,6 +374,12 @@ msgid ""
 "that, turn off the abidiff inspection or add the package name to the "
 "rebaseable list."
 msgstr ""
+"ເມື່ອປຽບທຽບສອງການບິວ ຫຼື ສອງແພັກເກດ, ໃຫ້ປຽບທຽບໄຟລ໌ ELF ໂດຍໃຊ້ abidiff(1) ຈາກໂຄງການ "
+"libabigail. ຄວາມແຕກຕ່າງຈະຖືກລາຍງານ. ຖ້າແພັກເກດເປັນການ rebase ແລະ ບໍ່ໄດ້ຢູ່ໃນລາຍຊື່ "
+"rebaseable ແລະ ມີການເປີດໃຊ້ການກວດສອບ rebase, ຄວາມແຕກຕ່າງຂອງ ABI ຈະຖືກລາຍງານວ່າເປັນກາ"
+"ນຜິດພາດ. ສົມມຸດຕິຖານແມ່ນ rpminspect ກວດສອບເພື່ອການບຳລຸງຮັກສາ ແລະ ທ່ານບໍ່ຕ້ອງການໃຫ້ມີການປ່ຽນແປ"
+"ງ ABI ສຳລັບຜູ້ໃຊ້. ຖ້າທ່ານບໍ່ສົນໃຈເລື່ອງນີ້, ໃຫ້ປິດການກວດສອບ abidiff ຫຼື ເພີ່ມຊື່ແພັກເກດເຂົ້າໃນລາຍຊື່ "
+"rebaseable."
 
 #: include/inspect.h:1555
 msgid ""
@@ -291,6 +390,9 @@ msgid ""
 "rebase, an incompatible change reported by kmidiff is reported for "
 "verification."
 msgstr ""
+"kmidiff ໃຊ້ປຽບທຽບ Kernel Module Interfaces (KMI) ແບບໄບນາຣີຂອງ Linux kernel ສອງຊຸ"
+"ດ. KMI ແມ່ນອິນເຕີເຟດທີ່ Linux kernel ເປີດໃຫ້ໂມດູນຕ່າງໆ ໃຊ້. ຖ້າການບິວທີ່ປຽບທຽບບໍ່ໄດ້ຖືກຖືວ່າເປັນກາ"
+"ນ rebase, ການປ່ຽນແປງທີ່ເຂົ້າກັນບໍ່ໄດ້ເຊິ່ງລາຍງານໂດຍ kmidiff ຈະຖືກແຈ້ງເພື່ອການຢືນຢັນ."
 
 #: include/inspect.h:1561
 #, c-format
@@ -300,6 +402,9 @@ msgid ""
 "is reported at the INFO level.  Content and location changes are reporting "
 "at the VERIFY level unless the comparison is between rebased packages."
 msgstr ""
+"ກວດສອບ ແລະ ລາຍງານຄວາມແຕກຕ່າງໃນໄຟລ໌ການຕັ້ງຄ່າທີ່ໝາຍດ້ວຍ %config ໃນໄຟລ໌ spec. ຖ້າການປ່ຽນແປ"
+"ງມີພຽງແຕ່ຍະຫວ່າງ ຫຼື ຮູບແບບ, ຈະລາຍງານໃນລະດັບ INFO. ການປ່ຽນແປງເນື້ອຫາ ແລະ ສະຖານທີ່ ຈະລາຍງາ"
+"ນໃນລະດັບ VERIFY ເວັ້ນເສຍແຕ່ຈະເປັນການປຽບທຽບລະຫວ່າງແພັກເກດທີ່ rebase."
 
 #: include/inspect.h:1567
 #, c-format
@@ -307,6 +412,8 @@ msgid ""
 "Report changes in %doc marked files.  Files that have been added or removed "
 "as documentation files, for instance."
 msgstr ""
+"ລາຍງານການປ່ຽນແປງໃນໄຟລ໌ທີ່ໝາຍດ້ວຍ %doc. ຕົວຢ່າງເຊັ່ນ: ໄຟລ໌ທີ່ຖືກເພີ່ມເຂົ້າ ຫຼື ລຶບອອກໃນຖານະໄຟລ໌ເອກະ"
+"ສານອ້າງອີງ."
 
 #: include/inspect.h:1573
 msgid ""
@@ -320,6 +427,11 @@ msgid ""
 "can also list patch names that rpminspect should ignore during the "
 "inspection."
 msgstr ""
+"ກວດສອບທຸກ patch ທີ່ກຳນົດໃນໄຟລ໌ spec ແລະ ລາຍງານການປ່ຽນແປງລະຫວ່າງການບິວ. ການກວດສອບນີ້ເຮັດເ"
+"ພື່ອໃຫ້ແນ່ໃຈວ່າ patch ທຸກອັນທີ່ກຳນົດໄວ້ມີ macro ສຳລັບການໃຊ້ງານທີ່ກົງກັນ. ໃນລະດັບ INFO, "
+"rpminspect ຈະລາຍງານຈຳນວນໄຟລ໌, ຈຳນວນບັນທັດ ແລະ ການປ່ຽນແປງຂະໜາດ patch. ຖ້າການປ່ຽນແປງຮ"
+"ອດເກນທີ່ກຳນົດ, ຈະລາຍງານໃນລະດັບ VERIFY ເວັ້ນເສຍແຕ່ວ່າຈະເປັນການ rebase. ໄຟລ໌ການຕັ້ງຄ່າຍັງສາມາ"
+"ດລະບຸຊື່ patch ທີ່ໃຫ້ຂ້າມການກວດສອບໄດ້."
 
 #: include/inspect.h:1579
 msgid ""
@@ -327,6 +439,8 @@ msgid ""
 "found by libclamav will fail the inspection.  The ignore_path rules are not "
 "used in this inspection.  All files are scanned."
 msgstr ""
+"ດຳເນີນການສະແກນຫາໄວຣັດໃນທຸກໄຟລ໌ຂອງການບິວໂດຍໃຊ້ libclamav. ຫາກພົບສິ່ງຜິດປົກກະຕິ ຈະຖືວ່າບໍ່ຜ່ານກາ"
+"ນກວດສອບ. ກົດການຂ້າມ (ignore_path) ຈະບໍ່ຖືກນຳໃຊ້ໃນການກວດສອບນີ້, ທຸກໄຟລ໌ຈະຖືກສະແກນທັງໝົດ."
 
 #: include/inspect.h:1585
 msgid ""
@@ -336,6 +450,9 @@ msgid ""
 "subdirectory map to the product release string.  The rules in each file "
 "define the politically sensitive allow and deny rules for that release."
 msgstr ""
+"ກວດສອບໄຟລ໌ທີ່ມີຄວາມລະອຽດອ່ອນທາງດ້ານການເມືອງໃນແພັກເກດ ແລະ ລາຍງານວ່າພວກມັນຖືກອະນຸຍາດ ຫຼື ຕ້ອງຫ້"
+"າມ. ກົດເກນເຫຼົ່ານີ້ມາຈາກໄດເຣັກທໍຣີຍ່ອຍ politics/ ໃນແພັກເກດ rpminspect-data ຂອງຜະລິດຕະພັນນັ້ນ"
+"ໆ."
 
 #: include/inspect.h:1591
 msgid ""
@@ -344,12 +461,17 @@ msgid ""
 "catch built packages that make use of deprecated API functions if you wish "
 "built packages to conform to replacement APIs."
 msgstr ""
+"ກວດສອບຟັງຊັນທີ່ຕ້ອງຫ້າມໃນໄຟລ໌ ELF. ຟັງຊັນຕ້ອງຫ້າມຖືກກຳນົດໄວ້ໃນໄຟລ໌ການຕັ້ງຄ່າ runtime. ໂດຍປົກກະຕິແ"
+"ລ້ວ ການກວດສອບນີ້ໃຊ້ເພື່ອຊອກຫາແພັກເກດທີ່ຍັງໃຊ້ຟັງຊັນ API ທີ່ຍົກເລີກແລ້ວ (deprecated) ເພື່ອໃຫ້ແພັກເກດ"
+"ປ່ຽນໄປໃຊ້ API ໃໝ່ທີ່ທົດແທນ."
 
 #: include/inspect.h:1597
 msgid ""
 "Check for forbidden paths in both the DT_RPATH and DT_RUNPATH settings in "
 "ELF shared objects."
 msgstr ""
+"ກວດສອບເສັ້ນທາງ (paths) ທີ່ຕ້ອງຫ້າມໃນທັງຄ່າ DT_RPATH ແລະ DT_RUNPATH ໃນວັດຖຸ ELF ທີ່ໃຊ້ຮ່ວມກັ"
+"ນ."
 
 #: include/inspect.h:1603
 msgid ""
@@ -357,6 +479,9 @@ msgid ""
 "for any prohibited Unicode code points, as defined in the configuration "
 "file.  Any prohibited code points are reported as a possible security risk."
 msgstr ""
+"ສະແກນໄຟລ໌ source code ທີ່ຖືກແຍກອອກ ແລະ patch ແລ້ວ, ລວມທັງ scripts ແລະ ໄຟລ໌ RPM spec "
+"ເພື່ອຊອກຫາລະຫັດ Unicode ທີ່ຕ້ອງຫ້າມຕາມທີ່ກຳນົດໃນໄຟລ໌ການຕັ້ງຄ່າ. ລະຫັດທີ່ຕ້ອງຫ້າມຈະຖືກລາຍງານວ່າເປັນຄ"
+"ວາມສ່ຽງດ້ານຄວາມປອດໄພ."
 
 #: include/inspect.h:1609
 msgid ""
@@ -366,6 +491,8 @@ msgid ""
 "will check for correct RPM dependency metadata when inspecting a single "
 "build and report findings."
 msgstr ""
+"ກວດສອບຂໍ້ມູນເມຕາຄວາມຕ້ອງການ (dependency) ຂອງ RPM ໃຫ້ຖືກຕ້ອງ. ລາຍງານສິ່ງທີ່ບໍ່ຖືກຕ້ອງ ຫຼື ຂັດແຍ່ງ"
+"ກັນ ລວມທັງການປ່ຽນແປງທີ່ຄາດໄວ້ເມື່ອປຽບທຽບການບິວໃໝ່ກັບການບິວເກົ່າ."
 
 #: include/inspect.h:1615
 msgid ""
@@ -374,24 +501,28 @@ msgid ""
 "report where symbols unexpectedly appear or disappear and what corrective "
 "action is needed."
 msgstr ""
+"ກວດສອບວ່າໄຟລ໌ໃນແພັກເກດ RPM ໄດ້ຖືກລຶບ debugging symbols ອອກແລ້ວ ແລະ ໄຟລ໌ໃນແພັກເກດ "
+"debuginfo ມີ debugging symbols ຄົບຖ້ວນ. ເມື່ອປຽບທຽບການບິວ, ໃຫ້ລາຍງານຫາກ symbols ປາກົ"
+"ດ ຫຼື ຫາຍໄປແບບບໍ່ຄາດຄິດ ແລະ ວິທີແກ້ໄຂ."
 
 #: include/inspect.h:1621
 msgid "Perform syntax check on udev rules files using udevadm verify."
-msgstr ""
+msgstr "ດຳເນີນການກວດສອບໄວຍາກອນຂອງໄຟລ໌ກົດເກນ udev ໂດຍໃຊ້ udevadm verify."
 
 #: include/results.h:31
 msgid "Change the string specified on the 'Vendor:' line in the spec file."
-msgstr ""
+msgstr "ປ່ຽນຂໍ້ຄວາມທີ່ລະບຸໃນບັນທັດ 'Vendor:' ໃນໄຟລ໌ spec."
 
 #: include/results.h:38
 msgid "Make sure the SRPM is built on a host within the expected subdomain."
-msgstr ""
+msgstr "ກວດສອບໃຫ້ແນ່ໃຈວ່າ SRPM ຖືກບິວໃນ host ທີ່ຢູ່ໃນຊັບໂດເມນທີ່ຄາດໄວ້."
 
 #: include/results.h:45
 msgid ""
 "Unprofessional language as defined in the configuration file was found in "
 "the text shown.  Remove or change the offending words and rebuild."
 msgstr ""
+"ພົບພາສາທີ່ບໍ່ເໝາະສົມຕາມທີ່ກຳນົດໃນໄຟລ໌ການຕັ້ງຄ່າໃນຂໍ້ຄວາມທີ່ສະແດງ. ໃຫ້ລຶບ ຫຼື ປ່ຽນຄຳສັບດັ່ງກ່າວ ແລ້ວບິວໃໝ່."
 
 #: include/results.h:60 include/results.h:75
 #, c-format
@@ -399,6 +530,8 @@ msgid ""
 "Check to see if you eliminated a subpackage but still have the %package and/"
 "or the %files section for it."
 msgstr ""
+"ກວດສອບເບິ່ງວ່າທ່ານໄດ້ຍົກເລີກແພັກເກດຍ່ອຍໄປແລ້ວ ແຕ່ຍັງຄົງມີພາກສ່ວນ %package ແລະ/ຫຼື %files ຂອງມັນ"
+"ຢູ່ຫຼືບໍ່."
 
 #: include/results.h:90
 msgid ""
@@ -406,6 +539,8 @@ msgid ""
 "distribution (e.g., GPLv2+).  If the license in question is approved, the "
 "license database needs updating in the rpminspect-data package."
 msgstr ""
+"ແທັກ License ຕ້ອງມີຂໍ້ຄວາມໃບອະນຸຍາດທີ່ໄດ້ຮັບອະນຸມັດຕາມທີ່ກຳນົດໂດຍຊຸດຕິດຕັ້ງ (ຕົວຢ່າງ: GPLv2+). ຖ້າໃ"
+"ບອະນຸຍາດນັ້ນຖືກຕ້ອງແລ້ວ, ຖານຂໍ້ມູນໃບອະນຸຍາດໃນແພັກເກດ rpminspect-data ອາດຕ້ອງໄດ້ຮັບການອັບເດດ."
 
 #: include/results.h:97
 msgid ""
@@ -413,6 +548,8 @@ msgid ""
 "valid licensedb file.  This is also commonly due to a missing vendor "
 "specific rpminspect-data package on the system."
 msgstr ""
+"ກວດສອບໃຫ້ແນ່ໃຈວ່າຄ່າ licensedb ໃນການຕັ້ງຄ່າ rpminspect ຖືກຕັ້ງໃຫ້ຊີ້ໄປຫາໄຟລ໌ licensedb ທີ່ຖືກຕ້"
+"ອງ. ສິ່ງນີ້ມັກເກີດຈາກການຂາດແພັກເກດ rpminspect-data ສະເພາະຂອງຜູ້ຜະລິດໃນລະບົບ."
 
 #: include/results.h:104
 msgid ""
@@ -423,36 +560,44 @@ msgid ""
 "but marked unapproved, you may need to work with the legal team regarding "
 "options for this software."
 msgstr ""
+"ຕົວອັກສອນຫຍໍ້ຂອງໃບອະນຸຍາດທີ່ລະບຸ ບໍ່ໄດ້ຢູ່ໃນລາຍຊື່ອະນຸມັດໃນຖານຂໍ້ມູນໃບອະນຸຍາດ. ຖານຂໍ້ມູນໃບອະນຸຍາດຖືກກຳນົ"
+"ດໃນໄຟລ໌ການຕັ້ງຄ່າ rpminspect. ໃຫ້ກວດສອບໄຟລ໌ນີ້ ແລະ ສົ່ງ pull request ໄປຫາໂຄງການຕົ້ນທາງເພື່ອ"
+"ອັບເດດຖານຂໍ້ມູນ."
 
 #: include/results.h:119 include/results.h:154
 msgid "Ensure all object files are compiled with -fPIC"
-msgstr ""
+msgstr "ກວດສອບໃຫ້ແນ່ໃຈວ່າທຸກໄຟລ໌ object ຖືກຄອມໄພລ໌ດ້ວຍ -fPIC"
 
 #: include/results.h:126
 msgid ""
 "Ensure that the package is being built with the correct compiler and "
 "compiler flags"
 msgstr ""
+"ກວດສອບໃຫ້ແນ່ໃຈວ່າແພັກເກດຖືກບິວດ້ວຍ compiler ແລະ compiler flags ທີ່ຖືກຕ້ອງ"
 
 #: include/results.h:133
 msgid ""
 "The data in an ELF file appears to be corrupt; ensure that packaged ELF "
 "files are not being truncated or incorrectly modified"
 msgstr ""
+"ຂໍ້ມູນໃນໄຟລ໌ ELF ເບິ່ງຄືວ່າເສຍຫາຍ; ກວດສອບໃຫ້ແນ່ໃຈວ່າໄຟລ໌ ELF ໃນແພັກເກດບໍ່ໄດ້ຖືກຕັດອອກ ຫຼື ຖືກແກ້ໄຂຢ່"
+"າງບໍ່ຖືກຕ້ອງ"
 
 #: include/results.h:140
 msgid ""
 "An ELF stack is marked as executable. Ensure that no execstack options are "
 "being passed to the linker, and that no functions are defined on the stack."
 msgstr ""
+"ELF stack ຖືກໝາຍວ່າສາມາດປະມວນຜົນໄດ້. ກວດສອບໃຫ້ແນ່ໃຈວ່າບໍ່ມີການສົ່ງຕົວເລືອກ execstack ໄປຫາ "
+"linker ແລະ ບໍ່ມີຟັງຊັນໃດຖືກກຳນົດໃນ stack."
 
 #: include/results.h:147
 msgid "Ensure executables are linked with with '-z relro -z now'"
-msgstr ""
+msgstr "ກວດສອບໃຫ້ແນ່ໃຈວ່າໄຟລ໌ທີ່ປະມວນຜົນໄດ້ຖືກລິ້ງດ້ວຍ '-z relro -z now'"
 
 #: include/results.h:169
 msgid "Correct the errors in the man page as reported by the libmandoc parser."
-msgstr ""
+msgstr "ແກ້ໄຂຂໍ້ຜິດພາດໃນໜ້າຄູ່ມື (man page) ຕາມທີ່ລາຍງານໂດຍ libmandoc parser."
 
 #: include/results.h:176
 msgid ""
@@ -460,34 +605,43 @@ msgid ""
 "in the directory beneath /usr/share/man that matches the section number of "
 "the page."
 msgstr ""
+"ແກ້ໄຂເສັ້ນທາງການຕິດຕັ້ງໜ້າຄູ່ມື. ໜ້າຄູ່ມືຕ້ອງຖືກຕິດຕັ້ງໃນໄດເຣັກທໍຣີພາຍໃຕ້ /usr/share/man ທີ່ກົງກັບເລກພາກ"
+"ສ່ວນ (section number) ຂອງໜ້ານັ້ນ."
 
 #: include/results.h:191
 msgid "Correct the reported errors in the XML document"
-msgstr ""
+msgstr "ແກ້ໄຂຂໍ້ຜິດພາດທີ່ລາຍງານໃນເອກະສານ XML"
 
 #: include/results.h:206
 msgid ""
 "Refer to the Desktop Entry Specification at https://standards.freedesktop."
 "org/desktop-entry-spec/latest/ for help correcting the errors and warnings"
 msgstr ""
+"ເບິ່ງລາຍລະອຽດ Desktop Entry Specification ທີ່ https://standards.freedesktop.org/"
+"desktop-entry-spec/latest/ ເພື່ອຊ່ວຍແກ້ໄຂຂໍ້ຜິດພາດ ແລະ ຄຳເຕືອນ"
 
 #: include/results.h:221
 msgid ""
 "The Release: tag in the spec file must include a '%{?dist}' string.  Please "
 "add this to the spec file per the distribution packaging guidelines."
 msgstr ""
+"ແທັກ Release: ໃນໄຟລ໌ spec ຕ້ອງລວມເອົາຂໍ້ຄວາມ '%{?dist}'. ກະລຸນາເພີ່ມສິ່ງນີ້ເຂົ້າໃນໄຟລ໌ spec ຕ"
+"າມແນວທາງການຈັດເຮັດແພັກເກດ."
 
 #: include/results.h:236
 msgid ""
 "The spec file name does not match the expected NAME.spec format.  Rename the "
 "spec file to conform to this policy."
 msgstr ""
+"ຊື່ໄຟລ໌ spec ບໍ່ກົງກັບຮູບແບບ NAME.spec ທີ່ຄາດໄວ້. ໃຫ້ປ່ຽນຊື່ໄຟລ໌ spec ໃຫ້ສອດຄ່ອງກັບນະໂຍບາຍນີ້."
 
 #: include/results.h:253
 msgid ""
 "This package is part of a module but is missing the %{modularitylabel} "
 "header tag.  Add this as a %define in the spec file and rebuild."
 msgstr ""
+"ແພັກເກດນີ້ເປັນສ່ວນໜຶ່ງຂອງໂມດູລ ແຕ່ຂາດແທັກສ່ວນຫົວ %{modularitylabel}. ໃຫ້ເພີ່ມສິ່ງນີ້ເປັນ %define "
+"ໃນໄຟລ໌ spec ແລ້ວບິວໃໝ່."
 
 #: include/results.h:260
 msgid ""
@@ -497,6 +651,10 @@ msgid ""
 "rules determining if the /data/static_context setting is required, "
 "forbidden, or recommend."
 msgstr ""
+"ການບິວດ໌ນີ້ມີການກຳນົດຄ່າ /data/static_context ທີ່ຖືກຕ້ອງ ຫຼື ບໍ່ຖືກຕ້ອງ. ໃຫ້ເບິ່ງກົດເກນຂອງໂມດູນສຳລັບ"
+"ຜະລິດຕະພັນທີ່ທ່ານກຳລັງສ້າງ ເພື່ອກວດສອບວ່າການກຳນົດຄ່ານັ້ນຄວນຈະເປັນແນວໃດ. ການກຳນົດຄ່າຂອງ "
+"rpminspect ຍັງໄດ້ກຳນົດກົດເກນເພື່ອລະບຸວ່າ ການກຳນົດຄ່າ /data/static_context ນັ້ນແມ່ນ ຈຳເປັນ, "
+"ຕ້ອງຫ້າມ ຫຼື ແນະນຳໃຫ້ໃຊ້."
 
 #: include/results.h:277
 msgid ""
@@ -504,24 +662,32 @@ msgid ""
 "met for the product release.  Ensure you are using the correct JDK for the "
 "build."
 msgstr ""
+"ເວີຊັນ Java bytecode ສຳລັບໄຟລ໌ class ຢ່າງໜ້ອຍໜຶ່ງໄຟລ໌ໃນການບິວບໍ່ກົງກັບລຸ້ນຜະລິດຕະພັນ. ກວດສອບໃຫ້ແ"
+"ນ່ໃຈວ່າທ່ານໃຊ້ JDK ທີ່ຖືກຕ້ອງ."
 
 #: include/results.h:292
 msgid ""
 "File changes were found.  In most cases these are expected, but it is a good "
 "idea to verify the changes found are deliberate."
 msgstr ""
+"ພົບການປ່ຽນແປງຂອງໄຟລ໌. ສ່ວນຫຼາຍແລ້ວແມ່ນສິ່ງທີ່ຄາດໄວ້, ແຕ່ຄວນກວດສອບເພື່ອໃຫ້ແນ່ໃຈວ່າການປ່ຽນແປງນັ້ນເປັນ"
+"ໄປຕາມຄວາມຕັ້ງໃຈ."
 
 #: include/results.h:307
 msgid ""
 "Unexpected file moves were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file moves between builds."
 msgstr ""
+"ພົບການຍ້າຍໄຟລ໌ທີ່ບໍ່ຄາດຄິດ. ໃຫ້ຢືນຢັນວ່າການປ່ຽນແປງເຫຼົ່ານີ້ຖືກຕ້ອງ. ຖ້າບໍ່ຖືກ, ໃຫ້ປັບປຸງການບິວເພື່ອປ້ອງກັນການ"
+"ຍ້າຍໄຟລ໌ລະຫວ່າງການບິວ."
 
 #: include/results.h:322
 msgid ""
 "Unexpected file removals were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file removals between builds."
 msgstr ""
+"ພົບການລຶບໄຟລ໌ທີ່ບໍ່ຄາດຄິດ. ໃຫ້ຢືນຢັນວ່າການປ່ຽນແປງເຫຼົ່ານີ້ຖືກຕ້ອງ. ຖ້າບໍ່ຖືກ, ໃຫ້ປັບປຸງການບິວເພື່ອປ້ອງກັນການລຶ"
+"ບໄຟລ໌ລະຫວ່າງການບິວ."
 
 #: include/results.h:337
 #, c-format
@@ -533,6 +699,11 @@ msgid ""
 "You may also need to update the data package or local configuration file and "
 "change the forbidden_path_prefixes or forbidden_path_suffixes list."
 msgstr ""
+"ພົບການເພີ່ມໄຟລ໌ທີ່ບໍ່ຄາດຄິດ. ກວດສອບເບິ່ງວ່າການປ່ຽນແປງເຫຼົ່ານີ້ຖືກຕ້ອງຫຼືບໍ່. ຖ້າບໍ່ຖືກ, ໃຫ້ປັບປຸງການສ້າງ "
+"(build) ເພື່ອປ້ອງກັນການເພີ່ມໄຟລ໌ລະຫວ່າງການສ້າງ. ຖ້າຖືກຕ້ອງ, ໃຫ້ອັບເດດ %s ແລະ ສົ່ງ patch ໄປຍັງໂ"
+"ຄງການຂໍ້ມູນ rpminspect ທີ່ເປັນເຈົ້າຂອງໄຟລ໌ນັ້ນ ເພື່ອໃຫ້ rpminspect ຮັບຮູ້ການປ່ຽນແປງນີ້. ທ່ານອາດຈະຕ້"
+"ອງອັບເດດແພັກເກັດຂໍ້ມູນ ຫຼື ໄຟລ໌ກຳນົດຄ່າທ້ອງຖິ່ນ ແລະ ປ່ຽນແປງລາຍການ forbidden_path_prefixes ຫຼື "
+"forbidden_path_suffixes."
 
 #: include/results.h:352
 #, c-format
@@ -542,6 +713,10 @@ msgid ""
 "deliberate, but needs inspection. If this change is expected, update %s and "
 "send a patch to the project that owns that file."
 msgstr ""
+"ເນື້ອໃນຂອງໄຟລ໌ເກັບມ້ຽນຊອສ (source archive) ມີການປ່ຽນແປງທີ່ບໍ່ຄາດຄິດ. ເວີຊັນຂອງແພັກເກດບໍ່ໄດ້ປ່ຽນແ"
+"ປງລະຫວ່າງການບິວດ໌, ແຕ່ເນື້ອໃນຂອງໄຟລ໌ເກັບມ້ຽນຊອສມີການປ່ຽນແປງ. ສິ່ງນີ້ອາດຈະເປັນຄວາມຕັ້ງໃຈ, ແຕ່ຕ້ອງມີ"
+"ການກວດສອບ. ຫາກການປ່ຽນແປງນີ້ຖືກຕ້ອງແລ້ວ, ໃຫ້ອັບເດດ %s ແລະ ສົ່ງແພັດທ໌ (patch) ໄປຫາໂຄງການທີ່ເປັ"
+"ນເຈົ້າຂອງໄຟລ໌ນັ້ນ."
 
 #: include/results.h:367
 #, c-format
@@ -550,6 +725,8 @@ msgid ""
 "permissions are expected, update %s and send a patch to the project that "
 "owns it."
 msgstr ""
+"ໃຫ້ແນ່ໃຈວ່າໃນສ່ວນ %%files ໄດ້ລວມເອົາ %%defattr macro ນຳ. ຫາກການກຳນົດສິດເຫຼົ່ານີ້ຖືກຕ້ອງແລ້ວ, "
+"ໃຫ້ອັບເດດ %s ແລະ ສົ່ງແພັດທ໌ໄປຫາໂຄງການທີ່ເປັນເຈົ້າຂອງມັນ."
 
 #: include/results.h:374
 #, c-format
@@ -558,6 +735,9 @@ msgid ""
 "configuration, which is usually root. If this ownership is expected, update "
 "%s and send a patch to the project that owns it."
 msgstr ""
+"ໄຟລ໌ໃນເສັ້ນທາງ Bin ຕ້ອງມີເຈົ້າຂອງເປັນ bin_owner ທີ່ຕັ້ງໄວ້ໃນການກຳນົດຄ່າ rpminspect, ເຊິ່ງປົກກະຕິ"
+"ແລ້ວແມ່ນ root. ຫາກຄວາມເປັນເຈົ້າຂອງນີ້ຖືກຕ້ອງແລ້ວ, ໃຫ້ອັບເດດ %s ແລະ ສົ່ງແພັດທ໌ໄປຫາໂຄງການທີ່ເປັນເຈົ້"
+"າຂອງມັນ."
 
 #: include/results.h:381
 #, c-format
@@ -566,6 +746,9 @@ msgid ""
 "configuration, which is usually root. If this ownership is expect, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"ໄຟລ໌ໃນເສັ້ນທາງ Bin ຕ້ອງມີກຸ່ມເຈົ້າຂອງເປັນ bin_group ທີ່ຕັ້ງໄວ້ໃນການກຳນົດຄ່າ rpminspect, ເຊິ່ງປົກກ"
+"ະຕິແລ້ວແມ່ນ root. ຫາກຄວາມເປັນເຈົ້າຂອງກຸ່ມນີ້ຖືກຕ້ອງແລ້ວ, ໃຫ້ອັບເດດ %s ແລະ ສົ່ງແພັດທ໌ໄປຫາໂຄງການທີ່ເ"
+"ປັນເຈົ້າຂອງມັນ."
 
 #: include/results.h:388
 #, c-format
@@ -574,6 +757,9 @@ msgid ""
 "or remove the world execute bit on the file (chmod o-x). If this ownership "
 "is expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"ໃຫ້ໃຊ້ຄຳສັ່ງ chgrp ປ່ຽນກຸ່ມຂອງໄຟລ໌ໃຫ້ເປັນ bin_group ທີ່ຕັ້ງໄວ້ໃນການກຳນົດຄ່າ rpminspect ຫຼື ເອົາບິດ"
+"ການປະມວນຜົນສາທາລະນະ (world execute bit) ອອກຈາກໄຟລ໌ (chmod o-x). ຫາກຄວາມເປັນເຈົ້າຂອ"
+"ງນີ້ຖືກຕ້ອງແລ້ວ, ໃຫ້ອັບເດດ %s ແລະ ສົ່ງແພັດທ໌ໄປຫາໂຄງການທີ່ເປັນເຈົ້າຂອງມັນ."
 
 #: include/results.h:395
 #, c-format
@@ -582,6 +768,9 @@ msgid ""
 "or remove the group write bit on the file (chmod g-w). If this ownership is "
 "expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"ໃຫ້ໃຊ້ຄຳສັ່ງ chgrp ປ່ຽນກຸ່ມຂອງໄຟລ໌ໃຫ້ເປັນ bin_group ທີ່ຕັ້ງໄວ້ໃນການກຳນົດຄ່າ rpminspect ຫຼື ເອົາບິດ"
+"ການຂຽນຂອງກຸ່ມ (group write bit) ອອກຈາກໄຟລ໌ (chmod g-w). ຫາກຄວາມເປັນເຈົ້າຂອງນີ້ຖືກຕ້ອງແລ້"
+"ວ, ໃຫ້ອັບເດດ %s ແລະ ສົ່ງແພັດທ໌ໄປຫາໂຄງການທີ່ເປັນເຈົ້າຂອງມັນ."
 
 #: include/results.h:402
 #, c-format
@@ -590,6 +779,9 @@ msgid ""
 "process to set correct owner and group information. If expected, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"ກວດສອບວ່າການປ່ຽນແປງຄວາມເປັນເຈົ້າຂອງນັ້ນເປັນໄປຕາມທີ່ຄາດໄວ້ຫຼືບໍ່. ຫາກບໍ່ແມ່ນ, ໃຫ້ປັບປຸງຂັ້ນຕອນການບິວດ໌ແ"
+"ພັກເກດເພື່ອຕັ້ງຄ່າຂໍ້ມູນເຈົ້າຂອງ ແລະ ກຸ່ມໃຫ້ຖືກຕ້ອງ. ຫາກຖືກຕ້ອງແລ້ວ, ໃຫ້ອັບເດດ %s ແລະ ສົ່ງແພັດທ໌ໄປຫາໂຄ"
+"ງການທີ່ເປັນເຈົ້າຂອງມັນ."
 
 #: include/results.h:409
 msgid ""
@@ -600,26 +792,32 @@ msgid ""
 "remedy, add a fileinfo rule for this file to the vendor data package under "
 "the appropriate product release file."
 msgstr ""
+"rpminspect ຕ້ອງການກົດເກນ fileinfo ຈາກແພັກເກດຂໍ້ມູນຜູ້ຜະລິດສຳລັບໄຟລ໌ນີ້. ໂດຍປົກກະຕິໝາຍຄວາມວ່າໄ"
+"ຟລ໌ມີການກຳນົດສິດທີ່ບໍ່ແມ່ນມາດຕະຖານ (ເຊັ່ນ: setuid)."
 
 #: include/results.h:424
 msgid "Consult the shell documentation for proper syntax."
-msgstr ""
+msgstr "ສຶກສາເອກະສານອ້າງອີງຂອງ shell ສຳລັບໄວຍາກອນທີ່ຖືກຕ້ອງ."
 
 #: include/results.h:431
 msgid ""
 "The file referenced was not a known shell script in the before build but is "
 "now a shell script in the after build."
 msgstr ""
+"ໄຟລ໌ທີ່ອ້າງອີງບໍ່ໄດ້ເປັນ shell script ໃນການບິວກ່ອນໜ້າ ແຕ່ຕອນນີ້ກາຍເປັນ shell script ໃນການບິວຫຼັ"
+"ງ."
 
 #: include/results.h:438
 msgid ""
 "The referenced shell script is invalid. Consider debugging it with the '-n' "
 "option on the shell to find and fix the problem."
 msgstr ""
+"ເຊລສະຄຣິບທີ່ອ້າງອີງບໍ່ຖືກຕ້ອງ. ກະລຸນາພິຈາລະນາກວດສອບຂໍ້ຜິດພາດດ້ວຍຕົວເລືອກ '-n' ໃນເຊລ ເພື່ອຊອກຫາ ແ"
+"ລະ ແກ້ໄຂບັນຫາ."
 
 #: include/results.h:453
 msgid "See annocheck(1) for more information."
-msgstr ""
+msgstr "ເບິ່ງ annocheck(1) ສຳລັບຂໍ້ມູນເພີ່ມເຕີມ."
 
 #: include/results.h:460
 msgid ""
@@ -628,6 +826,8 @@ msgid ""
 "declarations). Symbols may also appear as unfortified if the compiler is "
 "unable to determine the size of a buffer, which is not necessarily an error."
 msgstr ""
+"ກວດສອບໃຫ້ແນ່ໃຈວ່າທຸກໄຟລ໌ object ຖືກຄອມໄພລ໌ດ້ວຍ '-O2 -D_FORTIFY_SOURCE=2' ແລະ ໄດ້ລວມເອົາ"
+"ສ່ວນຫົວ (headers) ທີ່ເໝາະສົມແລ້ວ."
 
 #: include/results.h:475
 msgid ""
@@ -637,6 +837,8 @@ msgid ""
 "If they are not, modify the package spec file to ensure the build links with "
 "the correct shared libraries."
 msgstr ""
+"symbols DT_NEEDED ຖືກເພີ່ມເຂົ້າ ຫຼື ລຶບອອກ. ສິ່ງນີ້ເກີດຂຶ້ນເມື່ອສະພາບແວດລ້ອມການບິວມີເວີຊັນຂອງໄລບຣາຣີ"
+"ທີ່ແຕກຕ່າງກັນ."
 
 #: include/results.h:490
 msgid ""
@@ -644,6 +846,8 @@ msgid ""
 "is, you can adjust the filesize inspection settings in the rpminspect.yaml "
 "file."
 msgstr ""
+"ໄຟລ໌ມີຂະໜາດໃຫຍ່ຂຶ້ນຢ່າງເຫັນໄດ້ຊັດ. ກວດສອບໃຫ້ແນ່ໃຈວ່າການປ່ຽນແປງນີ້ແມ່ນຄວາມຕັ້ງໃຈ. ຖ້າແມ່ນ, ທ່ານສາມາ"
+"ດປັບການກຳນົດຄ່າການກວດສອບຂະໜາດໄຟລ໌ (filesize inspection) ໃນໄຟລ໌ rpminspect.yaml."
 
 #: include/results.h:497
 msgid ""
@@ -651,18 +855,22 @@ msgid ""
 "it is, you can adjust the filesize inspection settings in the rpminspect."
 "yaml file."
 msgstr ""
+"ໄຟລ໌ມີຂະໜາດນ້ອຍລົງຢ່າງເຫັນໄດ້ຊັດ. ກວດສອບໃຫ້ແນ່ໃຈວ່າການປ່ຽນແປງນີ້ແມ່ນຄວາມຕັ້ງໃຈ. ຖ້າແມ່ນ, ທ່ານສາມາ"
+"ດປັບການກຳນົດຄ່າການກວດສອບຂະໜາດໄຟລ໌ (filesize inspection) ໃນໄຟລ໌ rpminspect.yaml."
 
 #: include/results.h:504
 msgid ""
 "A previously empty file is no longer empty.  Make sure this change is "
 "intended and fix the package spec file if necessary."
 msgstr ""
+"ໄຟລ໌ທີ່ເຄີຍວ່າງເປົ່າຕອນນີ້ບໍ່ວ່າງແລ້ວ. ກວດສອບໃຫ້ແນ່ໃຈວ່າການປ່ຽນແປງນີ້ແມ່ນຄວາມຕັ້ງໃຈ."
 
 #: include/results.h:511
 msgid ""
 "A previously non-empty file is now empty.  Make sure this change is intended "
 "and fix the package space file if necessary."
 msgstr ""
+"ໄຟລ໌ທີ່ເຄີຍມີເນື້ອຫາຕອນນີ້ພັດວ່າງເປົ່າ. ກວດສອບໃຫ້ແນ່ໃຈວ່າການປ່ຽນແປງນີ້ແມ່ນຄວາມຕັ້ງໃຈ."
 
 #: include/results.h:526
 #, c-format
@@ -673,6 +881,10 @@ msgid ""
 "may also be of help for this situation.  If necessary, update %s with the "
 "changes found here and send a patch to the project that owns the data file."
 msgstr ""
+"ພົບການກຳນົດສິດ (capabilities) ທີ່ບໍ່ຄາດຄິດໃນໄຟລ໌ທີ່ລະບຸ. ໃຫ້ກວດສອບ capabilities(7) ແລະ ປັບປຸ"
+"ງໄຟລ໌ໃນແພັກເກດ ຫຼື ແກ້ໄຂລາຍການ capabilities ໃນແພັກເກດຂໍ້ມູນ rpminspect ຂອງຜູ້ຜະລິດ. ທີມງານ"
+"ຄວາມປອດໄພອາດຈະຊ່ວຍໃນກໍລະນີນີ້ໄດ້. ຫາກຈຳເປັນ, ໃຫ້ອັບເດດ %s ດ້ວຍການປ່ຽນແປງທີ່ພົບຢູ່ບ່ອນນີ້ ແລະ ສົ່ງແ"
+"ພັດທ໌ໄປຫາໂຄງການທີ່ເປັນເຈົ້າຂອງໄຟລ໌ຂໍ້ມູນນັ້ນ."
 
 #: include/results.h:541
 msgid ""
@@ -680,6 +892,8 @@ msgid ""
 "usability problems for users if module parameters were removed in a "
 "maintenance update."
 msgstr ""
+"ພາກາມິເຕີຂອງ Kernel module ຖືກລຶບອອກລະຫວ່າງການບິວ. ສິ່ງນີ້ອາດກໍ່ໃຫ້ເກີດບັນຫາການໃຊ້ງານຫາກມີການລຶ"
+"ບອອກໃນລະຫວ່າງການອັບເດດບຳລຸງຮັກສາ."
 
 #: include/results.h:548
 msgid ""
@@ -687,6 +901,8 @@ msgid ""
 "usability problems for users if module dependencies changed in a maintenance "
 "update."
 msgstr ""
+"ຄວາມຕ້ອງການ (dependencies) ຂອງ Kernel module ມີການປ່ຽນແປງລະຫວ່າງການບິວ. ສິ່ງນີ້ອາດກໍ່ໃຫ້ເ"
+"ກີດບັນຫາການໃຊ້ງານສຳລັບຜູ້ໃຊ້."
 
 #: include/results.h:555
 msgid ""
@@ -694,6 +910,9 @@ msgid ""
 "usability problems for users if module device aliases changed in a "
 "maintenance update."
 msgstr ""
+"ນາມແຝງອຸປະກອນຂອງໂມດູນເຄີເນິລ (Kernel module device aliases) ມີການປ່ຽນແປງລະຫວ່າງການບິວ"
+"ດ໌. ສິ່ງນີ້ອາດເຮັດໃຫ້ເກີດບັນຫາໃນການນຳໃຊ້ສຳລັບຜູ້ໃຊ້ ຫາກນາມແຝງອຸປະກອນຂອງໂມດູນມີການປ່ຽນແປງໃນການອັບ"
+"ເດດບຳລຸງຮັກສາ."
 
 #: include/results.h:565
 msgid ""
@@ -701,12 +920,15 @@ msgid ""
 "build.  This may be deliberate, but check to make sure you do not have any "
 "unexpected ExclusiveArch lines in the spec file."
 msgstr ""
+"ສະຖາປັດຕະຍະກຳທີ່ມີໃນການບິວກ່ອນໜ້າ ໄດ້ຫາຍໄປໃນການບິວຫຼັງ. ໃຫ້ກວດສອບເບິ່ງວ່າທ່ານໄດ້ກຳນົດ "
+"ExclusiveArch ໃນໄຟລ໌ spec ຜິດພາດຫຼືບໍ່."
 
 #: include/results.h:566
 msgid ""
 "A new architecture has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"ມີສະຖາປັດຕະຍະກຳໃໝ່ປາກົດຂຶ້ນໃນການບິວຫຼັງ. ສິ່ງນີ້ອາດສະແດງເຖິງຄວາມກ້າວໜ້າໃນໂລກຄອມພິວເຕີ."
 
 #: include/results.h:576
 msgid ""
@@ -714,31 +936,36 @@ msgid ""
 "This may be deliberate, but check to make sure you have correct syntax "
 "defining the subpackage in the spec file"
 msgstr ""
+"ແພັກເກັດຍ່ອຍທີ່ມີຢູ່ໃນການບິວກ່ອນໜ້ານີ້ໄດ້ຫາຍໄປໃນການບິວຄັ້ງນີ້. ນີ້ອາດຈະເປັນຄວາມຕັ້ງໃຈ, ແຕ່ກະລຸນາກວດສອບໃ"
+"ຫ້ແນ່ໃຈວ່າທ່ານໄດ້ໃຊ້ໄວຍາກອນທີ່ຖືກຕ້ອງໃນການກຳນົດແພັກເກັດຍ່ອຍໃນໄຟລ໌ spec."
 
 #: include/results.h:577
 msgid ""
 "A new subpackage has appeared in the after build.  This may indicate "
 "progress in the world of computing."
-msgstr ""
+msgstr "ມີແພັກເກດຍ່ອຍໃໝ່ປາກົດຂຶ້ນໃນການບິວຫຼັງ."
 
 #: include/results.h:587
 #, c-format
 msgid ""
 "Make sure the spec file in the after build contains a valid %changelog "
 "section."
-msgstr ""
+msgstr "ກວດສອບໃຫ້ແນ່ໃຈວ່າໄຟລ໌ spec ໃນການບິວຫຼັງມີພາກສ່ວນ %changelog ທີ່ຖືກຕ້ອງ."
 
 #: include/results.h:597
 msgid ""
 "Files should not be installed in old directory names.  Modify the package to "
 "install the affected file to the preferred directory."
 msgstr ""
+"ບໍ່ຄວນຕິດຕັ້ງໄຟລ໌ໃນໄດເຣັກທໍຣີຊື່ເກົ່າ. ໃຫ້ແກ້ໄຂແພັກເກດເພື່ອຕິດຕັ້ງໄຟລ໌ໃນໄດເຣັກທໍຣີທີ່ເໝາະສົມ."
 
 #: include/results.h:607
 msgid ""
 "ELF .o and .a files should not carry LTO (Link Time Optimization) bytecode.  "
 "Make sure you have stripped LTO bytecode from those files at install time."
 msgstr ""
+"ໄຟລ໌ ELF .o ແລະ .a ບໍ່ຄວນມີ LTO bytecode. ກວດສອບໃຫ້ແນ່ໃຈວ່າໄດ້ລຶບ LTO bytecode ອອກແລ້ວໃ"
+"ນເວລາຕິດຕັ້ງ."
 
 #: include/results.h:617
 msgid ""
@@ -747,6 +974,8 @@ msgid ""
 "and have a non-symlink turn in to a symlink, ensure this is deliberate.  "
 "NOTE:  You cannot turn a directory in to a symlink due to RPM limitations."
 msgstr ""
+"ກວດສອບໃຫ້ແນ່ໃຈວ່າ symlinks ຊີ້ໄປຫາປາຍທາງທີ່ຖືກຕ້ອງ; ບໍ່ອະນຸຍາດໃຫ້ມີ symlinks ທີ່ຊີ້ໄປບ່ອນວ່າງເປົ່"
+"າ. ໝາຍເຫດ: ທ່ານບໍ່ສາມາດປ່ຽນໄດເຣັກທໍຣີໃຫ້ເປັນ symlink ໄດ້ ເນື່ອງຈາກຂໍ້ຈຳກັດຂອງ RPM."
 
 #: include/results.h:618
 #, c-format
@@ -759,6 +988,12 @@ msgid ""
 "scriptlet for replacing a directory.  See the packaging guidelines for "
 "'Scriptlet to replace a directory' for more information."
 msgstr ""
+"ກວດສອບໃຫ້ແນ່ໃຈວ່າ symlinks ຊີ້ໄປຫາປາຍທາງທີ່ຖືກຕ້ອງໃນແພັກເກັດຍ່ອຍໃດໜຶ່ງຂອງການສ້າງ (build); ບໍ່ອ"
+"ະນຸຍາດໃຫ້ມີ symlinks ທີ່ເສຍ (dangling symlinks). ຖ້າທ່ານກຳລັງປຽບທຽບການສ້າງ ແລະ ມີການປ່ຽນ"
+"ຈາກສິ່ງທີ່ບໍ່ແມ່ນ symlink ມາເປັນ symlink, ໃຫ້ແນ່ໃຈວ່າສິ່ງນີ້ແມ່ນຄວາມຕັ້ງໃຈ. ໝາຍເຫດ: ທ່ານບໍ່ສາມາດປ່ຽ"
+"ນໄດເລັກທໍຣີໃຫ້ເປັນ symlink ໄດ້ ເນື່ອງຈາກຂໍ້ຈຳກັດຂອງ RPM. ຖ້າຈຳເປັນຕ້ອງເຮັດແນວນັ້ນແທ້ໆ, ໃຫ້ແນ່ໃຈວ່າ"
+"ທ່ານໄດ້ລວມເອົາ scriptlet %pretrans ເພື່ອປ່ຽນແທນໄດເລັກທໍຣີ. ເບິ່ງຄຳແນະນຳການສ້າງແພັກເກັດ "
+"(packaging guidelines) ສຳລັບ 'Scriptlet to replace a directory' ເພື່ອຂໍ້ມູນເພີ່ມເຕີມ."
 
 #: include/results.h:628
 #, c-format
@@ -768,6 +1003,9 @@ msgid ""
 "See the RPM documentation or distribution package maintainer guide for more "
 "information."
 msgstr ""
+"ລຶບການອ້າງອີງເສັ້ນທາງ (path) ທີ່ຕ້ອງຫ້າມອອກຈາກແຖວທີ່ລະບຸໃນສ່ວນ %files. ໃນຫຼາຍໆກໍລະນີ ທ່ານສາມາດ"
+"ໃຊ້ RPM macros ເພື່ອກຳນົດຕຳແໜ່ງເສັ້ນທາງ. ເບິ່ງເອກະສານ RPM ຫຼື ຄູ່ມືຜູ້ເບິ່ງແຍງແພັກເກັດເພື່ອຂໍ້ມູນເພີ່ມເຕີ"
+"ມ."
 
 #: include/results.h:638
 msgid ""
@@ -775,6 +1013,8 @@ msgid ""
 "is intended and if necessary fix the spec file so the correct file is "
 "included in the built package."
 msgstr ""
+"ໃນຫຼາຍກໍລະນີ ການປ່ຽນປະເພດ MIME ແມ່ນຄວາມຕັ້ງໃຈ. ໃຫ້ຢືນຢັນຄວາມຖືກຕ້ອງ ແລະ ແກ້ໄຂໄຟລ໌ spec ຫາກຈ"
+"ຳເປັນ."
 
 #: include/results.h:648
 msgid ""
@@ -782,6 +1022,8 @@ msgid ""
 "users.  See the abidiff(1) documentation and the distribution ABI policies "
 "to determine if this detected change is allowed."
 msgstr ""
+"ການປ່ຽນແປງ ABI ທີ່ເກີດຂຶ້ນໃນລະຫວ່າງການອັບເດດບຳລຸງຮັກສາ ອາດເຮັດໃຫ້ເກີດບັນຫາແກ່ຜູ້ໃຊ້. ເບິ່ງເອກະສາ"
+"ນ abidiff(1) ແລະ ນະໂຍບາຍ ABI ຂອງລະບົບເພື່ອພິຈາລະນາວ່າການປ່ຽນແປງທີ່ກວດພົບນີ້ໄດ້ຮັບອະນຸຍາດຫຼືບໍ່."
 
 #: include/results.h:658
 msgid ""
@@ -789,6 +1031,8 @@ msgid ""
 "problems for users.  See the libabigail documentation and the distribution "
 "KMI policy to determine if this detected change is allowed."
 msgstr ""
+"ການປ່ຽນແປງ Kernel Module Interface (KMI) ອາດກໍ່ໃຫ້ເກີດບັນຫາແກ່ຜູ້ໃຊ້. ໃຫ້ກວດສອບນະໂຍບາຍ "
+"KMI ວ່າການປ່ຽນແປງນີ້ໄດ້ຮັບອະນຸຍາດຫຼືບໍ່."
 
 #: include/results.h:668
 #, c-format
@@ -798,6 +1042,8 @@ msgid ""
 "configuration files, make sure the package can handle upgrading an existing "
 "package -or- honor the old file locations."
 msgstr ""
+"ການປ່ຽນແປງ %config ຄວນເຮັດດ້ວຍຄວາມລະມັດລະວັງ. ກວດສອບໃຫ້ແນ່ໃຈວ່າໄດ້ຕິດຕັ້ງໄຟລ໌ທີ່ຖືກຕ້ອງໃນສະຖານ"
+"ທີ່ທີ່ຖືກຕ້ອງ."
 
 #: include/results.h:678
 #, c-format
@@ -806,6 +1052,8 @@ msgid ""
 "the package is not a rebase.  Sometimes upstream projects rename or move "
 "documentation files and the spec file needs to account for those changes."
 msgstr ""
+"ພົບການປ່ຽນແປງໃນໄຟລ໌ %doc. ບາງຄັ້ງໂຄງການຕົ້ນທາງອາດປ່ຽນຊື່ ຫຼື ຍ້າຍໄຟລ໌ເອກະສານ ເຊິ່ງໄຟລ໌ spec ຕ້ອ"
+"ງໄດ້ປັບປຸງຕາມ."
 
 #: include/results.h:688
 msgid ""
@@ -815,6 +1063,7 @@ msgid ""
 "the source package has any zero length or otherwise invalid patches and "
 "correct the problem."
 msgstr ""
+"ພົບໄຟລ໌ patch ທີ່ບໍ່ຖືກຕ້ອງ. ສິ່ງນີ້ມັກເກີດຈາກການສ້າງ patch ໂດຍການປຽບທຽບສອງໂຄງສ້າງໄຟລ໌."
 
 #: include/results.h:690
 #, c-format
@@ -828,6 +1077,12 @@ msgid ""
 "define the patch at the top of the spec file.  So Patch47 is applied with "
 "either a '%patch 47', '%patch -P 47', '%patch -P47', or '%patch47' macro."
 msgstr ""
+"ແພັດທ໌ (patch) ທີ່ລະບຸໄດ້ມີການກຳນົດໄວ້ໃນສ່ວນຫົວຂອງ source RPM (ໝາຍຄວາມວ່າມີການກຳນົດ "
+"PatchN: ໃນໄຟລ໌ spec) ແຕ່ບໍ່ໄດ້ຖືກນຳໃຊ້ຢູ່ບ່ອນໃດໃນໄຟລ໌ spec ເລີຍ. ມັນຂາດ macro %patch ທີ່ກ່ຽວຂ້"
+"ອງ ແລະ ໄຟລ໌ spec ກໍຂາດ macro %autosetup ຫຼື %autopatch. ທ່ານສາມາດແກ້ໄຂສິ່ງນີ້ໄດ້ໂດຍການເພີ່"
+"ມ macro %patch ທີ່ເໝາະສົມລົງໃນໄຟລ໌ spec (ປົກກະຕິແລ້ວແມ່ນຢູ່ໃນສ່ວນ %prep). ຕົວເລກທີ່ລະບຸກັບ "
+"macro %patch ແມ່ນກົງກັບຕົວເລກທີ່ໃຊ້ກຳນົດແພັດທ໌ຢູ່ສ່ວນເທິງຂອງໄຟລ໌ spec. ຕົວຢ່າງ Patch47 ຈະຖືກນຳໃ"
+"ຊ້ດ້ວຍ macro '%patch 47', '%patch -P 47', '%patch -P47', ຫຼື '%patch47'."
 
 #: include/results.h:692
 #, c-format
@@ -837,12 +1092,17 @@ msgid ""
 "For example, Patch47 needs to have either a '%patch 47', '%patch -P 47', "
 "'%patch -P47', or '%patch47' macro."
 msgstr ""
+"ແພັດທ໌ທີ່ລະບຸໄດ້ຖືກກຳນົດໄວ້ ແຕ່ຕົວເລກບໍ່ກົງກັບ macro %patch. ໃຫ້ແນ່ໃຈວ່າທຸກໆແພັດທ໌ທີ່ມີຕົວເລກກຳກັບ ມີ "
+"macro %patch ທີ່ກົງກັນ. ຕົວຢ່າງ, Patch47 ຈຳເປັນຕ້ອງມີ macro '%patch 47', '%patch -P "
+"47', '%patch -P47', ຫຼື '%patch47'."
 
 #: include/results.h:694
 msgid ""
 "The defined patch file is not something rpminspect can handle.  This is "
 "likely a bug and should be reported to the upstream rpminspect project."
 msgstr ""
+"ໄຟລ໌ patch ທີ່ກຳນົດໄວ້ບໍ່ແມ່ນຮູບແບບທີ່ rpminspect ສາມາດຈັດການໄດ້. ນີ້ອາດເປັນບັກ ແລະ ຄວນລາຍງານໃ"
+"ຫ້ໂຄງການ rpminspect."
 
 #: include/results.h:704
 msgid ""
@@ -852,6 +1112,10 @@ msgid ""
 "sure the file in question is clean, please file a bug with rpminspect for "
 "further help."
 msgstr ""
+"ClamAV ພົບໄວຣັສໃນໄຟລ໌ດັ່ງກ່າວ. ນີ້ອາດຈະເປັນການກວດພົບທີ່ຜິດພາດ (false positive), ແຕ່ທ່ານຄວນກວ"
+"ດສອບໄຟລ໌ນັ້ນດ້ວຍຕົນເອງເພື່ອໃຫ້ແນ່ໃຈວ່າມັນປອດໄພ. ນີ້ອາດຈະເປັນບັນຫາກັບຖານຂໍ້ມູນ ຫຼື ການກວດຈັບຂອງ "
+"ClamAV. ຖ້າທ່ານໝັ້ນໃຈວ່າໄຟລ໌ນັ້ນປອດໄພ, ກະລຸນາແຈ້ງບັນຫາ (file a bug) ໄປຫາ rpminspect ເພື່ອຂໍ"
+"ຄວາມຊ່ວຍເຫຼືອເພີ່ມເຕີມ."
 
 #: include/results.h:714
 #, c-format
@@ -861,6 +1125,9 @@ msgid ""
 "vendor data package for the product.  Modify the %s file and send a patch to "
 "the project that owns it."
 msgstr ""
+"ພົບໄຟລ໌ທີ່ມີເນື້ອໃນທີ່ອາດຈະມີຄວາມອ່ອນໄຫວທາງດ້ານການເມືອງໃນແພັກເກດ. ຫາກໄຟລ໌ນີ້ໄດ້ຮັບອະນຸຍາດ, ມັນຄວນຈ"
+"ະຖືກເພີ່ມເຂົ້າໃນແພັກເກດຂໍ້ມູນ rpminspect ຂອງຜູ້ຜະລິດສຳລັບຜະລິດຕະພັນນັ້ນ. ໃຫ້ແກ້ໄຂໄຟລ໌ %s ແລະ ສົ່ງແພັ"
+"ດທ໌ໄປຫາໂຄງການທີ່ເປັນເຈົ້າຂອງມັນ."
 
 #: include/results.h:724
 msgid ""
@@ -873,6 +1140,11 @@ msgid ""
 "order to allow for backwards compatibility.  Whenever possible the "
 "deprecated functions should not be used."
 msgstr ""
+"ພົບສັນຍະລັກ (symbols) ທີ່ຕ້ອງຫ້າມໃນໄຟລ໌ ELF ໃນແພັກເກັດ. ການກຳນົດຄ່າສຳລັບ rpminspect ລະບຸວ່າສັ"
+"ນຍະລັກດັ່ງກ່າວແມ່ນຕ້ອງຫ້າມໃນແພັກເກັດ. ຖ້າສິ່ງນີ້ແມ່ນຄວາມຕັ້ງໃຈ, ທ່ານອາດຈະຕ້ອງການປິດການກວດສອບ "
+"badfuncs. ຖ້າບໍ່ແມ່ນຄວາມຕັ້ງໃຈ, ໃຫ້ກວດເບິ່ງໜ້າ man pages ສຳລັບສັນຍະລັກນັ້ນ ເພື່ອເບິ່ງວ່າຟັງຊັນ API "
+"ໃດທີ່ມາແທນສັນຍະລັກທີ່ຕ້ອງຫ້າມ. ໂດຍປົກກະຕິແລ້ວ ຟັງຊັນຈະຖືກໝາຍວ່າບໍ່ແນະນຳໃຫ້ໃຊ້ (deprecated) ແຕ່ຍັງມີ"
+"ໃຫ້ຢູ່ເພື່ອຮອງຮັບການເຮັດວຽກຮ່ວມກັບລຸ້ນເກົ່າ. ຖ້າເປັນໄປໄດ້ ບໍ່ຄວນໃຊ້ຟັງຊັນທີ່ຖືກໝາຍວ່າ deprecated."
 
 #: include/results.h:734
 msgid ""
@@ -883,6 +1155,10 @@ msgid ""
 "try using a program such as patchelf to remove these properties from the ELF "
 "files."
 msgstr ""
+"ພົບຄຸນສົມບັດ DT_RPATH ຫຼື DT_RUNPATH ໃນ ELF shared objects ໃນແພັກເກັດນີ້. ບໍ່ແນະນຳໃຫ້ໃຊ້ "
+"DT_RPATH ແລະ DT_RUNPATH ຍົກເວັ້ນໃນບາງສະຖານະການ. ກວດສອບເບິ່ງວ່າທ່ານໄດ້ປິດການໃຊ້ງານ "
+"rpath ໃນໄລຍະ %build ຂອງໄຟລ໌ spec ຫຼືບໍ່. ຖ້າທ່ານບໍ່ສາມາດເຮັດສິ່ງນີ້ໄດ້ໂດຍງ່າຍ, ທ່ານສາມາດລອງໃຊ້ໂ"
+"ປຣແກຣມເຊັ່ນ patchelf ເພື່ອລຶບຄຸນສົມບັດເຫຼົ່ານີ້ອອກຈາກໄຟລ໌ ELF."
 
 #: include/results.h:736
 msgid ""
@@ -890,6 +1166,7 @@ msgid ""
 "This indicates a linker error and should not happen.  ELF objects should "
 "only carry DT_RPATH or DT_RUNPATH, never both."
 msgstr ""
+"ພົບທັງ DT_RPATH ແລະ DT_RUNPATH ໃນວັດຖຸ ELF ອັນດຽວກັນ. ນີ້ສະແດງເຖິງຂໍ້ຜິດພາດຂອງ linker."
 
 #: include/results.h:746
 msgid ""
@@ -899,6 +1176,10 @@ msgid ""
 "discuss the situation with the Product Security Team to determine the "
 "correct course of action."
 msgstr ""
+"ໄຟລ໌ກຳນົດຄ່າ rpminspect ປະກອບມີລາຍການລະຫັດຢູນິໂຄດ (Unicode code points) ທີ່ຕ້ອງຫ້າມ. ພົບໜຶ່"
+"ງໃນນັ້ນໃນຊອດໂຄດ (source tree) ທີ່ຖືກແຕກໄຟລ໌ ແລະ ແພັດແລ້ວ ຫຼື ໃນໜຶ່ງຂອງໄຟລ໌ຊອດຂໍ້ຄວາມໃນ "
+"source RPM. ໃຫ້ລຶບລະຫັດນີ້ອອກ ຫຼື ປຶກສາກັບທີມງານຄວາມປອດໄພຂອງຜະລິດຕະພັນ (Product Security "
+"Team) ເພື່ອຊອກຫາວິທີແກ້ໄຂທີ່ຖືກຕ້ອງ."
 
 #: include/results.h:748
 #, c-format
@@ -909,6 +1190,10 @@ msgid ""
 "running.  A common cause is removal of the working directory while the "
 "program is executing."
 msgstr ""
+"ສ່ວນ %prep ຂອງໄຟລ໌ spec ບໍ່ສາມາດເຮັດວຽກໄດ້ດ້ວຍເຫດຜົນບາງຢ່າງ. ສ່ວນຫຼາຍມັກຈະເກີດຈາກຄວາມລົ້ມເຫຼວ"
+"ໃນ librpmbuild, ເຊິ່ງປົກກະຕິແລ້ວຈະກ່ຽວຂ້ອງກັບບັນຫາການແຕກໄຟລ໌ຈັດເກັບ (archive extraction) "
+"ຫຼື ລະບົບໄຟລ໌ມີການປ່ຽນແປງໃນຂະນະທີ່ rpminspect ກຳລັງເຮັດວຽກ. ສາເຫດທົ່ວໄປແມ່ນການລຶບໄດເລັກທໍຣີເຮັດ"
+"ວຽກໃນຂະນະທີ່ໂປຣແກຣມກຳລັງເຮັດວຽກ."
 
 #: include/results.h:758
 msgid ""
@@ -916,6 +1201,9 @@ msgid ""
 "Check the spec file for this dependency and ensure you have not misspelled a "
 "macro or used a macro name that does not exist."
 msgstr ""
+"ພົບ macro ໃນໄຟລ໌ RPM spec ທີ່ບໍ່ໄດ້ຖືກຂະຫຍາຍ (unexpanded) ໃນກົດການຂຶ້ນກັບ (dependency "
+"rule) ທີ່ລະບຸ. ກວດສອບໄຟລ໌ spec ສຳລັບການຂຶ້ນກັບນີ້ ແລະ ໃຫ້ແນ່ໃຈວ່າທ່ານບໍ່ໄດ້ພິມ macro ຜິດ ຫຼື ໃຊ້ຊື່ "
+"macro ທີ່ບໍ່ມີຢູ່."
 
 #: include/results.h:760
 msgid ""
@@ -924,6 +1212,9 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{version}-%{release}' "
 "in the spec file."
 msgstr ""
+"ເພີ່ມ 'Requires' ທີ່ລະບຸໄວ້ຢ່າງຊັດເຈນລົງໃນໄຟລ໌ spec ສຳລັບແພັກເກດຍ່ອຍທີ່ລະບຸ. ແພັກເກດຍ່ອຍທີ່ຂຶ້ນກັບໄລ"
+"ບຣາຣີທີ່ໃຊ້ຮ່ວມກັນໃນແພັກເກດຍ່ອຍອື່ນ ຈະຕ້ອງມີ 'Requires: SUBPACKAGE_NAME = %{version}-%"
+"{release}' ທີ່ຊັດເຈນໃນໄຟລ໌ spec."
 
 #: include/results.h:762
 msgid ""
@@ -932,6 +1223,9 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-"
 "%{release}' in the spec file."
 msgstr ""
+"ເພີ່ມ 'Requires' ທີ່ລະບຸໄວ້ຢ່າງຊັດເຈນລົງໃນໄຟລ໌ spec ສຳລັບແພັກເກດຍ່ອຍທີ່ລະບຸ. ແພັກເກດຍ່ອຍທີ່ຂຶ້ນກັບໄລ"
+"ບຣາຣີທີ່ໃຊ້ຮ່ວມກັນໃນແພັກເກດຍ່ອຍອື່ນ ຈະຕ້ອງມີ 'Requires: SUBPACKAGE_NAME = %{epoch}:%"
+"{version}-%{release}' ທີ່ຊັດເຈນໃນໄຟລ໌ spec."
 
 #: include/results.h:764
 #, c-format
@@ -942,6 +1236,8 @@ msgid ""
 "spec file but you do need to make sure only one subpackage is packaging up "
 "the shared library in question."
 msgstr ""
+"ກວດສອບພາກສ່ວນ %files ແລະ Provides ຂອງແພັກເກດຍ່ອຍ. ຄວນມີພຽງແພັກເກດຍ່ອຍດຽວເທົ່ານັ້ນທີ່ "
+"Provides ໄລບຣາຣີດັ່ງກ່າວ."
 
 #: include/results.h:766
 msgid ""
@@ -951,6 +1247,10 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"ການຂຶ້ນກັບ (dependency) ທີ່ລະບຸໃນການສ້າງກ່ອນໜ້າ ໄດ້ປ່ຽນເປັນການຂຶ້ນກັບທີ່ລະບຸໃນການສ້າງຫຼັງຈາກນັ້ນ. ຖ້າ"
+"ສິ່ງນີ້ແມ່ນຜົນການກວດສອບ (VERIFY result), ມັນໝາຍຄວາມວ່າ rpminspect ສັງເກດເຫັນການປ່ຽນແປງໃນ"
+"ສິ່ງທີ່ຖືວ່າເປັນການອັບເດດບຳລຸງຮັກສາໃນແພັກເກັດ. ຜົນໄດ້ຮັບ INFO ໝາຍຄວາມວ່າມັນສັງເກດເຫັນການປ່ຽນແປງ"
+"ນີ້, ແຕ່ຖືວ່າຕົກລົງເພາະມັນກຳລັງປຽບທຽບການສ້າງທີ່ມີການປ່ຽນຖານ (rebased build)."
 
 #: include/results.h:768
 msgid ""
@@ -960,6 +1260,10 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"ພົບການຂຶ້ນກັບ (dependency) ໃໝ່ໃນການສ້າງຫຼັງຈາກນັ້ນ ເຊິ່ງບໍ່ມີໃນການສ້າງກ່ອນໜ້າ. ຖ້າສິ່ງນີ້ແມ່ນຜົນການກວດ"
+"ສອບ (VERIFY result), ມັນໝາຍຄວາມວ່າ rpminspect ສັງເກດເຫັນການປ່ຽນແປງໃນສິ່ງທີ່ຖືວ່າເປັນການອັບ"
+"ເດດບຳລຸງຮັກສາໃນແພັກເກັດ. ຜົນໄດ້ຮັບ INFO ໝາຍຄວາມວ່າມັນສັງເກດເຫັນການປ່ຽນແປງນີ້, ແຕ່ຖືວ່າຕົກລົງເພາະ"
+"ມັນກຳລັງປຽບທຽບການສ້າງທີ່ມີການປ່ຽນຖານ (rebased build)."
 
 #: include/results.h:770
 msgid ""
@@ -969,6 +1273,10 @@ msgid ""
 "An INFO result means it noticed this change, but deems it ok because it is "
 "comparing a rebased build."
 msgstr ""
+"ການຂຶ້ນກັບ (dependency) ທີ່ພົບໃນການສ້າງກ່ອນໜ້າ ບໍ່ພົບໃນການສ້າງຫຼັງຈາກນັ້ນ ເຊິ່ງໝາຍຄວາມວ່າມັນຖືກລຶບອອ"
+"ກ ຫຼື ຫາຍໄປ. ຖ້າສິ່ງນີ້ແມ່ນຜົນການກວດສອບ (VERIFY result), ມັນໝາຍຄວາມວ່າ rpminspect ສັງເກດເ"
+"ຫັນການປ່ຽນແປງໃນສິ່ງທີ່ຖືວ່າເປັນການອັບເດດບຳລຸງຮັກສາໃນແພັກເກັດ. ຜົນໄດ້ຮັບ INFO ໝາຍຄວາມວ່າມັນສັງເກດເ"
+"ຫັນການປ່ຽນແປງນີ້, ແຕ່ຖືວ່າຕົກລົງເພາະມັນກຳລັງປຽບທຽບການສ້າງທີ່ມີການປ່ຽນຖານ (rebased build)."
 
 #: include/results.h:772
 msgid ""
@@ -978,151 +1286,156 @@ msgid ""
 "%{version}-%{release}' to capture the package package Epoch in the "
 "dependency."
 msgstr ""
+"ແພັກເກດນີ້ມີຄ່າ Epoch ຫຼາຍກວ່າສູນ, ແຕ່ການກຳນົດຄວາມກ່ຽວພັນຂອງແພັກເກດຍ່ອຍທີ່ລະບຸໄວ້ຍັງບໍ່ມີຄວາມສອດຄ່ອງ"
+"ກັນ. ສຳລັບຄວາມກ່ຽວພັນທີ່ລາຍງານ, ຈຳເປັນຕ້ອງປ່ຽນຈາກ '= %{version}-%{release}' ເປັນ '= %"
+"{epoch}:%{version}-%{release}' ເພື່ອໃຫ້ກວມເອົາຄ່າ Epoch ຂອງແພັກເກດໃນຄວາມກ່ຽວພັນນັ້ນ."
 
 #: include/results.h:781
 msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
+"ເບິ່ງເອກະສານ udev ທີ່ https://www.freedesktop.org/software/systemd/man/udev.html "
+"ເພື່ອຊ່ວຍແກ້ໄຂຂໍ້ຜິດພາດ ແລະ ຄຳເຕືອນ."
 
 #: lib/abi.c:65
 #, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr ""
+msgstr "*** ຮູບແບບຕົວລະບຸລະດັບ ABI ບໍ່ຖືກຕ້ອງ: %s"
 
 #: lib/abi.c:70
 #, c-format
 msgid "*** ABI level %d already defined"
-msgstr ""
+msgstr "*** ລະດັບ ABI %d ຖືກກຳນົດໄວ້ແລ້ວ"
 
 #: lib/abi.c:84
 #, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr ""
+msgstr "*** ຮູບແບບລາຍການລະດັບ ABI ບໍ່ຖືກຕ້ອງ: %s"
 
 #: lib/builds.c:73
 #, c-format
 msgid "*** unable to create download directory %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດສ້າງໄດເຣັກທໍຣີດາວໂຫຼດ %s"
 
 #: lib/builds.c:85
 #, c-format
 msgid "*** unknown working directory type: %d"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກປະເພດໄດເຣັກທໍຣີເຮັດວຽກ: %d"
 
 #: lib/builds.c:173
 #, c-format
 msgid "*** unable to read %s, skipping"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດອ່ານ %s, ກຳລັງຂ້າມໄປ"
 
 #: lib/builds.c:205
 #, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr ""
+msgstr "*** ພົບສະມາຊິກໄດເຣັກທໍຣີທີ່ບໍ່ຮູ້ຈັກ: %s"
 
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "ພື້ນທີ່ຫວ່າງບໍ່ພໍທີ່ຈະດາວໂຫຼດ %s ທີ່ຕ້ອງການ.\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    ຕ້ອງການ %s ໃນ %s, ແຕ່ມີພຽງ %s.\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
-msgstr ""
+msgstr "ເບິ່ງຕົວເລືອກ `-w' ເພື່ອກຳນົດໄດເຣັກທໍຣີເຮັດວຽກອື່ນ.\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
-msgstr ""
+msgstr "ບໍ່ສາມາດຄຳນວນພື້ນທີ່ທີ່ຕ້ອງການເພື່ອດາວໂຫຼດ %s ໄດ້.\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "ກວດສອບໃຫ້ແນ່ໃຈວ່າ %s ມີພື້ນທີ່ຫວ່າງພຽງພໍ."
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
-msgstr ""
+msgstr "ການບິວ (build)"
 
 #: lib/builds.c:320
 msgid "Downloading module"
-msgstr ""
+msgstr "ກຳລັງດາວໂຫຼດໂມດູລ"
 
 #: lib/builds.c:323
 msgid "Downloading RPM build"
-msgstr ""
+msgstr "ກຳລັງດາວໂຫຼດ RPM build"
 
 #: lib/builds.c:373 lib/inspect_modularity.c:47
 #, c-format
 msgid "*** ignoring malformed module metadata file: %s"
-msgstr ""
+msgstr "*** ກຳລັງຂ້າມໄຟລ໌ຂໍ້ມູນເມຕາຂອງໂມດູລທີ່ຜິດຮູບແບບ: %s"
 
 #: lib/builds.c:383
 #, c-format
 msgid "*** malformed rpm filters in file: %s"
-msgstr ""
+msgstr "*** ພົບຕົວຕອງ rpm ທີ່ຜິດຮູບແບບໃນໄຟລ໌: %s"
 
 #: lib/builds.c:541 lib/builds.c:545
 msgid "task"
-msgstr ""
+msgstr "ວຽກ (task)"
 
 #: lib/builds.c:659 lib/builds.c:662
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: lib/builds.c:791
 #, c-format
 msgid "*** `%s' already exists in %s"
-msgstr ""
+msgstr "*** `%s` ມີຢູ່ແລ້ວໃນ %s"
 
 #: lib/builds.c:829
 #, c-format
 msgid "*** unable to find local build: %s"
-msgstr ""
+msgstr "*** ບໍ່ພົບການບິວພາຍໃນເຄື່ອງ: %s"
 
 #: lib/builds.c:841
 #, c-format
 msgid "*** unable to download RPM: %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດດາວໂຫຼດ RPM: %s"
 
 #: lib/builds.c:860 lib/builds.c:893 lib/builds.c:903
 #, c-format
 msgid "*** unable to find build %s in Koji hub %s"
-msgstr ""
+msgstr "*** ບໍ່ພົບການບິວ %s ໃນ Koji hub %s"
 
 #: lib/builds.c:872
 #, c-format
 msgid "*** unable to find task %s in Koji hub %s"
-msgstr ""
+msgstr "*** ບໍ່ພົບວຽກ %s ໃນ Koji hub %s"
 
 #: lib/checksums.c:91
 #, c-format
 msgid "*** %s is a FIFO"
-msgstr ""
+msgstr "*** %s ແມ່ນ FIFO"
 
 #: lib/copyfile.c:117
 #, c-format
 msgid "%s already exists"
-msgstr ""
+msgstr "%s ມີຢູ່ແລ້ວ"
 
 #: lib/copyfile.c:122
 msgid ", overwriting"
-msgstr ""
+msgstr ", ກຳລັງຂຽນທັບ"
 
 #: lib/curl.c:267 lib/readfile.c:60
 #, c-format
 msgid "*** unable to read %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດອ່ານ %s"
 
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
+msgstr "%s ໃນ %s ບົນ %s ມີໂໝດ %04o ຕາມທີ່ຄາດໄວ້"
 
 #: lib/fileinfo.c:76
 #, c-format
@@ -1130,18 +1443,20 @@ msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s ໃນ %s ບົນ %s ມີໂໝດ %04o ເຊິ່ງບໍ່ຖືກຕ້ອງ; ໂໝດທີ່ຄາດໄວ້ແມ່ນ %04o; ຕ້ອງໃຫ້ທີມງານຄວາມປອດໄພກວດ"
+"ສອບ"
 
 #: lib/fileinfo.c:96
 #, c-format
 msgid ""
 "%s in %s on %s carries insecure mode %04o, Security Team review may be "
 "required"
-msgstr ""
+msgstr "%s ໃນ %s ບົນ %s ມີໂໝດ %04o ທີ່ບໍ່ປອດໄພ, ອາດຕ້ອງໃຫ້ທີມງານຄວາມປອດໄພກວດສອບ"
 
 #: lib/fileinfo.c:155
 #, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
+msgstr "%s ໃນ %s ບົນ %s ເປັນຂອງເຈົ້າຂອງ '%s' ຕາມທີ່ຄາດໄວ້"
 
 #: lib/fileinfo.c:168
 #, c-format
@@ -1149,6 +1464,8 @@ msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s ໃນ %s ບົນ %s ເປັນຂອງເຈົ້າຂອງ '%s' ເຊິ່ງບໍ່ຖືກຕ້ອງ; ເຈົ້າຂອງທີ່ຄາດໄວ້ແມ່ນ '%s'; ຕ້ອງໃຫ້ທີມງານຄ"
+"ວາມປອດໄພກວດສອບ"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
 #, c-format
@@ -1156,11 +1473,13 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o but has no fileinfo rule for owner "
 "specification, Security Team review may be required"
 msgstr ""
+"%s ໃນ %s ຢູ່ %s ມີໂໝດທີ່ບໍ່ປອດໄພ %04o ແຕ່ບໍ່ມີກົດເກັນ fileinfo ສຳລັບການກຳນົດເຈົ້າຂອງ, ອາດຈຳເປັນ"
+"ຕ້ອງໃຫ້ທີມງານຄວາມປອດໄພກວດສອບ."
 
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
+msgstr "%s ໃນ %s ບົນ %s ເປັນຂອງກຸ່ມ '%s' ຕາມທີ່ຄາດໄວ້"
 
 #: lib/fileinfo.c:262
 #, c-format
@@ -1168,154 +1487,159 @@ msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s ໃນ %s ບົນ %s ເປັນຂອງກຸ່ມ '%s' ເຊິ່ງບໍ່ຖືກຕ້ອງ; ກຸ່ມທີ່ຄາດໄວ້ແມ່ນ '%s'; ຕ້ອງໃຫ້ທີມງານຄວາມປອດໄພ"
+"ກວດສອບ"
 
 #: lib/init.c:226
 #, c-format
 msgid "*** invalid input string `%s`"
-msgstr ""
+msgstr "*** ຂໍ້ຄວາມຂາເຂົ້າບໍ່ຖືກຕ້ອງ `%s`"
 
 #: lib/init.c:253 lib/init.c:262 lib/init.c:270 lib/init.c:282 lib/init.c:291
 #: lib/init.c:299 lib/init.c:311 lib/init.c:320 lib/init.c:328 lib/init.c:340
 #, c-format
 msgid "*** invalid mode string: %s"
-msgstr ""
+msgstr "*** ຂໍ້ຄວາມໂໝດບໍ່ຖືກຕ້ອງ: %s"
 
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** ພົບບັນຫາໃນການເພີ່ມລາຍການເຂົ້າໃນອາເຣ (array) %s->%s"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** ພົບບັນຫາໃນການເພີ່ມລາຍການຂ້າມ (ignore) ເຂົ້າໃນ %s"
 
 #: lib/init.c:418 lib/init.c:432
 msgid "*** error reading "
-msgstr ""
+msgstr "*** ເກີດຂໍ້ຜິດພາດໃນການອ່ານ "
 
 #: lib/init.c:458
 #, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr ""
+msgstr "*** ກຳລັງຂ້າມພາກສ່ວນທີ່ຜິດຮູບແບບ %s->%s"
 
 #: lib/init.c:515 lib/init.c:528
 #, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr ""
+msgstr "*** ເກີດຂໍ້ຜິດພາດໃນການອ່ານຮູບແບບການຂ້າມຂອງ %s"
 
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
+msgstr "*** flag ຕ້ອງເປັນ 'on' ຫຼື 'off'; ກຳລັງຂ້າມ '%s'"
 
 #: lib/init.c:548
 #, c-format
 msgid "*** unknown inspections: `%s`"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກການກວດສອບ: `%s`"
 
 #: lib/init.c:559
 msgid "*** malformed/unknown inspections section"
-msgstr ""
+msgstr "*** ພາກສ່ວນການກວດສອບຜິດຮູບແບບ ຫຼື ບໍ່ຮູ້ຈັກ"
 
 #: lib/init.c:591
 #, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr ""
+msgstr "*** ກຳລັງຂ້າມໄຟລ໌ການຕັ້ງຄ່າ %s ທີ່ຜິດຮູບແບບ: %s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກການຕັ້ງຄ່າ modularity static context '%s'"
 
 #: lib/init.c:717
 #, c-format
 msgid "*** unknown specname match setting '%s', defaulting to 'full'"
 msgstr ""
+"*** ບໍ່ຮູ້ຈັກການຕັ້ງຄ່າການຈັບຄູ່ຊື່ spec '%s', ຈະໃຊ້ຄ່າເລີ່ມຕົ້ນເປັນ 'full'"
 
 #: lib/init.c:732
 #, c-format
 msgid "*** unknown specname primary setting '%s', defaulting to 'name'"
 msgstr ""
+"*** ບໍ່ຮູ້ຈັກການຕັ້ງຄ່າຫຼັກຂອງຊື່ spec '%s', ຈະໃຊ້ຄ່າເລີ່ມຕົ້ນເປັນ 'name'"
 
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
 msgstr ""
+"*** annocheck failure_reporting_level ບໍ່ຖືກຕ້ອງ: %s, ຈະໃຊ້ຄ່າເລີ່ມຕົ້ນເປັນ %s"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** ພາກສ່ວນ badfuncs->allowed ຜິດຮູບແບບ"
 
 #: lib/init.c:822
 #, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
-msgstr ""
+msgstr "*** ເກີດຂໍ້ຜິດພາດໃນການອ່ານ regular expression ຂອງ unicode exclude: %s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** ພາກສ່ວນ rpmdeps->ignore ຜິດຮູບແບບ; ກຳລັງຂ້າມໄປ"
 
 #: lib/init.c:968
 #, c-format
 msgid "*** Invalid filename in the fileinfo list: %s"
-msgstr ""
+msgstr "*** ຊື່ໄຟລ໌ໃນລາຍຊື່ fileinfo ບໍ່ຖືກຕ້ອງ: %s"
 
 #: lib/init.c:969
 msgid "*** From this invalid line:"
-msgstr ""
+msgstr "*** ຈາກບັນທັດທີ່ບໍ່ຖືກຕ້ອງນີ້:"
 
 #: lib/init.c:970
 #, c-format
 msgid "***     %s"
-msgstr ""
+msgstr "***     %s"
 
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** ພົບ token ທີ່ບໍ່ຄາດຄິດ `%s` ໃນ %s, ບໍ່ສາມາດດຳເນີນການຕໍ່ໄດ້"
 
 #: lib/init.c:1414
 #, c-format
 msgid "*** invalid security rule: %s"
-msgstr ""
+msgstr "*** ກົດເກນຄວາມປອດໄພບໍ່ຖືກຕ້ອງ: %s"
 
 #: lib/init.c:1426
 #, c-format
 msgid "*** unknown security rule: %s"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກກົດເກນຄວາມປອດໄພ: %s"
 
 #: lib/init.c:1435
 #, c-format
 msgid "*** unknown security action: %s"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກການດຳເນີນການດ້ານຄວາມປອດໄພ: %s"
 
 #: lib/init.c:1461
 #, c-format
 msgid "*** malformed security line: %s"
-msgstr ""
+msgstr "*** ບັນທັດຄວາມປອດໄພຜິດຮູບແບບ: %s"
 
 #: lib/init.c:1622
 #, c-format
 msgid "*** missing configuration file `%s'"
-msgstr ""
+msgstr "*** ຂາດໄຟລ໌ການຕັ້ງຄ່າ `%s`"
 
 #: lib/init.c:1658
 #, c-format
 msgid "*** unable to find profile '%s'"
-msgstr ""
+msgstr "*** ບໍ່ພົບໂປຣໄຟລ໌ '%s'"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "ຂໍ້ຜິດພາດໃນການໃຊ້ງານ abidiff"
 
 #: lib/inspect_abidiff.c:275
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ພົບການປ່ຽນແປງ ABI ໃນ ${FILE} ບົນ ${ARCH}"
 
 #: lib/inspect_abidiff.c:284
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ພົບການປ່ຽນແປງ ABI ທີ່ເຂົ້າກັນບໍ່ໄດ້ໃນ ${FILE} ບົນ ${ARCH}"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1323,6 +1647,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s with ABI compatibility "
 "level %ld on %s revealed ABI differences."
 msgstr ""
+"ການປຽບທຽບເວີຊັນເກົ່າ ແລະ ໃໝ່ຂອງ %s ໃນແພັກເກດ %s ດ້ວຍລະດັບຄວາມເຂົ້າກັນໄດ້ຂອງ ABI %ld ໃນ "
+"%s ພົບວ່າມີຄວາມແຕກຕ່າງຂອງ ABI."
 
 #: lib/inspect_abidiff.c:298
 #, c-format
@@ -1330,6 +1656,7 @@ msgid ""
 "Comparing old vs. new version of %s in package %s on %s revealed ABI "
 "differences."
 msgstr ""
+"ການປຽບທຽບ %s ເວີຊັນເກົ່າ ແລະ ໃໝ່ໃນແພັກເກດ %s ບົນ %s ພົບຄວາມແຕກຕ່າງຂອງ ABI."
 
 #: lib/inspect_abidiff.c:302
 #, c-format
@@ -1337,11 +1664,13 @@ msgid ""
 "Comparing from %s to %s in package %s with ABI compatibility level %ld on %s "
 "revealed ABI differences."
 msgstr ""
+"ການປຽບທຽບຈາກ %s ຫາ %s ໃນແພັກເກດ %s ດ້ວຍລະດັບຄວາມເຂົ້າກັນໄດ້ຂອງ ABI %ld ໃນ %s ພົບວ່າມີຄວ"
+"າມແຕກຕ່າງຂອງ ABI."
 
 #: lib/inspect_abidiff.c:304
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
-msgstr ""
+msgstr "ການປຽບທຽບຈາກ %s ໄປຫາ %s ໃນແພັກເກດ %s ບົນ %s ພົບຄວາມແຕກຕ່າງຂອງ ABI."
 
 #: lib/inspect_abidiff.c:309
 #, c-format
@@ -1350,6 +1679,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"ຄຳສັ່ງ: %s\n"
+"\n"
+"%s"
 
 #: lib/inspect_addedfiles.c:149
 #, c-format
@@ -1357,26 +1689,27 @@ msgid ""
 "Packages should not contain files or directories starting with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"ແພັກເກດບໍ່ຄວນມີໄຟລ໌ ຫຼື ໄດເຣັກທໍຣີທີ່ເລີ່ມຕົ້ນດ້ວຍ `%s` ບົນ %s ໃນ %s: %s"
 
 #: lib/inspect_addedfiles.c:150 lib/inspect_addedfiles.c:164
 msgid "invalid directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ໄດເຣັກທໍຣີ ${FILE} ບົນ ${ARCH} ບໍ່ຖືກຕ້ອງ"
 
 #: lib/inspect_addedfiles.c:163
 #, c-format
 msgid ""
 "Packages should not contain files or directories ending with `%s` on %s in "
 "%s: %s"
-msgstr ""
+msgstr "ແພັກເກດບໍ່ຄວນມີໄຟລ໌ ຫຼື ໄດເຣັກທໍຣີທີ່ລົງທ້າຍດ້ວຍ `%s` ບົນ %s ໃນ %s: %s"
 
 #: lib/inspect_addedfiles.c:177
 #, c-format
 msgid "Forbidden directory `%s` found on %s in %s: %s"
-msgstr ""
+msgstr "ພົບໄດເຣັກທໍຣີທີ່ຕ້ອງຫ້າມ `%s` ບົນ %s ໃນ %s: %s"
 
 #: lib/inspect_addedfiles.c:178
 msgid "forbidden directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ໄດເຣັກທໍຣີທີ່ຕ້ອງຫ້າມ ${FILE} ບົນ ${ARCH}"
 
 #: lib/inspect_addedfiles.c:209
 #, c-format
@@ -1384,263 +1717,269 @@ msgid ""
 "New security-related file `%s` added on %s in %s requires inspection by the "
 "Security Team"
 msgstr ""
+"ໄຟລ໌ໃໝ່ທີ່ກ່ຽວຂ້ອງກັບຄວາມປອດໄພ %s ທີ່ຖືກເພີ່ມເຂົ້າໃນ %s ຢູ່ %s ຈຳເປັນຕ້ອງໄດ້ຮັບການກວດສອບໂດຍທີມງານຄ"
+"ວາມປອດໄພ."
 
 #: lib/inspect_addedfiles.c:211
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ພົບໄຟລ໌ໃໝ່ທີ່ກ່ຽວກັບຄວາມປອດໄພ ${FILE} ບົນ ${ARCH}"
 
 #: lib/inspect_addedfiles.c:231
 #, c-format
 msgid "`%s` added on %s in %s"
-msgstr ""
+msgstr "`%s` ຖືກເພີ່ມເຂົ້າບົນ %s ໃນ %s"
 
 #: lib/inspect_addedfiles.c:232
 msgid "new file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ໄຟລ໌ໃໝ່ ${FILE} ບົນ ${ARCH}"
 
 #: lib/inspect_addedfiles.c:248
 msgid "the fileinfo list"
-msgstr ""
+msgstr "ລາຍຊື່ fileinfo"
 
 #: lib/inspect_annocheck.c:116 lib/inspect_annocheck.c:151
 #, c-format
 msgid "*** libannocheck_enable_profile: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_profile: %s"
 
 #: lib/inspect_annocheck.c:136
 #, c-format
 msgid "*** libannocheck_get_known_profiles: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_profiles: %s"
 
 #: lib/inspect_annocheck.c:168
 msgid "NOT RUN"
-msgstr ""
+msgstr "ບໍ່ໄດ້ເຮັດວຽກ"
 
 #: lib/inspect_annocheck.c:170
 msgid "PASSED"
-msgstr ""
+msgstr "ຜ່ານ"
 
 #: lib/inspect_annocheck.c:172 lib/output_summary.c:59
 msgid "FAILED"
-msgstr ""
+msgstr "ບໍ່ຜ່ານ"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "ອາດຈະ"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
-msgstr ""
+msgstr "ຂ້າມໄປ"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກ"
 
 #: lib/inspect_annocheck.c:226
 #, c-format
 msgid "*** libannocheck_init: %s"
-msgstr ""
+msgstr "*** libannocheck_init: %s"
 
 #: lib/inspect_annocheck.c:255
 #, c-format
 msgid "*** libannocheck_%s_test: %s"
-msgstr ""
+msgstr "*** libannocheck_%s_test: %s"
 
 #: lib/inspect_annocheck.c:267
 #, c-format
 msgid "*** libannocheck_enable_all_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_all_tests: %s"
 
 #: lib/inspect_annocheck.c:280
 #, c-format
 msgid "*** libannocheck_reinit: %s"
-msgstr ""
+msgstr "*** libannocheck_reinit: %s"
 
 #: lib/inspect_annocheck.c:373
 #, c-format
 msgid "*** before libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** ກ່ອນ libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:382 lib/inspect_annocheck.c:426
 #, c-format
 msgid "*** libannocheck_get_known_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_tests: %s"
 
 #: lib/inspect_annocheck.c:400 lib/inspect_annocheck.c:530
 #, c-format
 msgid "*** libannocheck_finish: %s"
-msgstr ""
+msgstr "*** libannocheck_finish: %s"
 
 #: lib/inspect_annocheck.c:417
 #, c-format
 msgid "*** after libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** ຫຼັງຈາກ libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:461 lib/inspect_annocheck.c:613
 msgid "lost -D_FORTIFY_SOURCE in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ເສຍ -D_FORTIFY_SOURCE ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_annocheck.c:464
 #, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s ອາດຈະເສຍ -O2 -D_FORTIFY_SOURCE ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:489
 #, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' ຍັງຄົງຜ່ານສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:492
 #, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ libannocheck '%s' ຜ່ານແລ້ວສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:495
 #, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ libannocheck '%s' ບໍ່ຜ່ານແລ້ວສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
 #, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ libannocheck '%s' ບໍ່ຜ່ານສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:503
 #, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ libannocheck '%s' ຜ່ານສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
 msgid "annocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ annocheck '%s' ຜ່ານສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:553
 #, c-format
 msgid "annocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ annocheck '%s' ຜ່ານແລ້ວສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:555
 #, c-format
 msgid "annocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ annocheck '%s' ບໍ່ຜ່ານແລ້ວສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:561 lib/inspect_annocheck.c:571
 #, c-format
 msgid "annocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "ການທົດສອບ annocheck '%s' ບໍ່ຜ່ານສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_annocheck.c:616
 #, c-format
 msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s ອາດຈະເສຍ -D_FORTIFY_SOURCE ຢູ່ %s"
 
 #: lib/inspect_arch.c:77
 msgid "lost ${ARCH}"
-msgstr ""
+msgstr "ເສຍ ${ARCH}"
 
 #: lib/inspect_arch.c:79
 #, c-format
 msgid "Architecture '%s' has disappeared"
-msgstr ""
+msgstr "ສະຖາປັດຕະຍະກຳ '%s' ໄດ້ຫາຍໄປ"
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "ໄດ້ຮັບ ${ARCH}"
 
 #: lib/inspect_arch.c:96
 #, c-format
 msgid "Architecture '%s' has appeared"
-msgstr ""
+msgstr "ສະຖາປັດຕະຍະກຳ '%s' ໄດ້ປະກົດຂຶ້ນ"
 
 #: lib/inspect_badfuncs.c:152
 #, c-format
 msgid "Forbidden function symbols found:\n"
-msgstr ""
+msgstr "ພົບສັນຍາລັກຟັງຊັນທີ່ຖືກຫ້າມ:\n"
 
 #: lib/inspect_badfuncs.c:168
 #, c-format
 msgid "%s may use forbidden functions on %s"
-msgstr ""
+msgstr "%s ອາດຈະໃຊ້ຟັງຊັນທີ່ຖືກຫ້າມຢູ່ %s"
 
 #: lib/inspect_badfuncs.c:175
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ຟັງຊັນທີ່ຖືກຫ້າມໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_capabilities.c:82
 #, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
 msgstr ""
+"ຄວາມສາມາດຂອງໄຟລ໌ (capabilities) ສຳລັບ %s ປ່ຽນຈາກ '%s' ເປັນ '%s' ໃນ %s ຢູ່ %s\n"
 
 #: lib/inspect_capabilities.c:86
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr ""
+msgstr "ຄວາມສາມາດຂອງ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_capabilities.c:98
 #, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr ""
+msgstr "ພົບຄວາມສາມາດຂອງໄຟລ໌ສຳລັບ %s: '%s' ໃນ %s ຢູ່ %s\n"
 
 #: lib/inspect_capabilities.c:134
 #, c-format
 msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
-msgstr ""
+msgstr "ພົບລາຍການຄວາມສາມາດຂອງໄຟລ໌ສຳລັບ %s: '%s' ໃນ %s ຢູ່ %s, ກົງກັບແພັກເກດ\n"
 
 #: lib/inspect_capabilities.c:145
 #, c-format
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
+"ລາຍການຄວາມສາມາດຂອງໄຟລ໌ບໍ່ກົງກັນສຳລັບ %s: ຕ້ອງການ '%s', ແຕ່ໄດ້ '%s' ໃນ %s ຢູ່ %s\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr ""
+msgstr "ລາຍການຄວາມສາມາດຂອງ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_capabilities.c:165
 #, c-format
 msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
-msgstr ""
+msgstr "ບໍ່ພົບຄວາມສາມາດຂອງໄຟລ໌ສຳລັບ %s (%s) ໃນລາຍການຄວາມສາມາດໃນ %s ຢູ່ %s\n"
 
 #: lib/inspect_capabilities.c:184
 #, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
-msgstr ""
+msgstr "ຕ້ອງການຄວາມສາມາດຂອງໄຟລ໌ສຳລັບ %s ໃນ %s ແຕ່ບໍ່ພົບຢູ່ %s: ຕ້ອງການ '%s'\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
 "  Changes to security policy related files require inspection by the "
 "Security Response Team."
 msgstr ""
+"  ການປ່ຽນແປງໄຟລ໌ທີ່ກ່ຽວຂ້ອງກັບນະໂຍບາຍຄວາມປອດໄພ ຈຳເປັນຕ້ອງໄດ້ຮັບການກວດສອບໂດຍທີມງານຕອບສະໜອງ"
+"ຄວາມປອດໄພ (Security Response Team)."
 
 #: lib/inspect_changedfiles.c:319
 #, c-format
 msgid "Compressed %s file %s changed content in %s on %s."
-msgstr ""
+msgstr "ໄຟລ໌ %s ທີ່ຖືກບີບອັດ %s ໄດ້ປ່ຽນແປງເນື້ອໃນໃນ %s ຢູ່ %s."
 
 #: lib/inspect_changedfiles.c:353 lib/inspect_changedfiles.c:367
 #, c-format
 msgid "Error running msgunfmt on %s in %s on %s; malformed mo file?"
-msgstr ""
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການລັນ msgunfmt ໃສ່ %s ໃນ %s ຢູ່ %s; ໄຟລ໌ mo ຜິດຮູບແບບ?"
 
 #: lib/inspect_changedfiles.c:357 lib/inspect_changedfiles.c:371
 msgid "msgunfmt on ${FILE}"
-msgstr ""
+msgstr "msgunfmt ຢູ່ ${FILE}"
 
 #: lib/inspect_changedfiles.c:382
 #, c-format
 msgid "Message catalog %s changed content in %s on %s"
-msgstr ""
+msgstr "ລາຍການຂໍ້ຄວາມ (Message catalog) %s ໄດ້ປ່ຽນແປງເນື້ອໃນໃນ %s ຢູ່ %s"
 
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
 msgid "${FILE}"
-msgstr ""
+msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
 #, c-format
@@ -1648,32 +1987,34 @@ msgid ""
 "Public header file %s changed content in %s on %s.  A unified diff of the "
 "changes follows."
 msgstr ""
+"ໄຟລ໌ສ່ວນຫົວສາທາລະນະ (Public header) %s ໄດ້ປ່ຽນແປງເນື້ອໃນໃນ %s ຢູ່ %s. ຂໍ້ມູນການປ່ຽນແປງ "
+"(unified diff) ມີດັ່ງນີ້."
 
 #: lib/inspect_changedfiles.c:462
 #, c-format
 msgid "File %s changed content in %s on %s."
-msgstr ""
+msgstr "ໄຟລ໌ %s ໄດ້ປ່ຽນແປງເນື້ອໃນໃນ %s ຢູ່ %s."
 
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
-msgstr ""
+msgstr "ຂ້າມການກວດສອບເນື່ອງຈາກປະເພດການບິລດ໌ນີ້ບໍ່ແມ່ນ `rpm'."
 
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
 msgid ""
 "%%config file %s went from actual file to symlink (pointing to %s) in %s on "
 "%s"
-msgstr ""
+msgstr "ໄຟລ໌ %%config %s ປ່ຽນຈາກໄຟລ໌ແທ້ໄປເປັນ symlink (ຊີ້ໄປຫາ %s) ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_config.c:123
 #, c-format
@@ -1681,16 +2022,17 @@ msgid ""
 "%%config file %s was a symlink (pointing to %s), became an actual file in %s "
 "on %s"
 msgstr ""
+"ໄຟລ໌ %%config %s ເຄີຍເປັນ symlink (ຊີ້ໄປຫາ %s), ໄດ້ກາຍມາເປັນໄຟລ໌ແທ້ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_config.c:132
 #, c-format
 msgid "Symlink value for %%config file %s changed in %s on %s."
-msgstr ""
+msgstr "ຄ່າ Symlink ສຳລັບໄຟລ໌ %%config %s ໄດ້ປ່ຽນແປງໃນ %s ຢູ່ %s."
 
 #: lib/inspect_config.c:153
 #, c-format
 msgid "%%config file content change for %s in %s on %s"
-msgstr ""
+msgstr "ເນື້ອໃນໄຟລ໌ %%config ປ່ຽນແປງສຳລັບ %s ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_config.c:168
 #, c-format
@@ -1698,77 +2040,79 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
+"ການປ່ຽນແປງໄຟລ໌ %%config ສຳລັບ %s ໃນ %s ທີ່ %s (%sຖືກໝາຍເປັນ %%config -> %sຖືກໝາຍເປັນ "
+"%%config)\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
 msgid "not "
-msgstr ""
+msgstr "ບໍ່ "
 
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "%s ໃນ %s ຢູ່ %s ຂາດສັນຍາລັກການດີບັກ (debugging symbols)"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "ຂາດສັນຍາລັກການດີບັກ"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "ຂາດຫາຍ: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%s ໃນ %s ຢູ່ %s ມີສັນຍາລັກການດີບັກ"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "ມີສັນຍາລັກການດີບັກ"
 
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "ປະກອບມີ: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%s ໃນ %s ຢູ່ %s ໄດ້ຮັບສັນຍາລັກການດີບັກ"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "ໄດ້ຮັບສັນຍາລັກການດີບັກ"
 
 #: lib/inspect_debuginfo.c:266
 #, c-format
 msgid "Gained: %s"
-msgstr ""
+msgstr "ໄດ້ຮັບ: %s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%s ໃນ %s ຢູ່ %s ເສຍສັນຍາລັກການດີບັກ"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "ເສຍສັນຍາລັກການດີບັກ"
 
 #: lib/inspect_debuginfo.c:292
 #, c-format
 msgid "Lost: %s"
-msgstr ""
+msgstr "ເສຍຫາຍ: %s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
 msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
-msgstr ""
+msgstr "%s ໃນ %s ຢູ່ %s ມີ .gosymtab ແຕ່ບໍ່ຄວນມີສັນຍາລັກ .gnu_debugdata"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnu_debugdata ພ້ອມກັບ .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
@@ -1776,10 +2120,11 @@ msgid ""
 "Desktop file %s on %s references executable %s but %s is not executable by "
 "all"
 msgstr ""
+"ໄຟລ໌ Desktop %s ຢູ່ %s ອ້າງອີງເຖິງໄຟລ໌ທີ່ລັນໄດ້ %s ແຕ່ %s ບໍ່ສາມາດລັນໄດ້ໂດຍທຸກຄົນ"
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ອ້າງອີງເຖິງໄຟລ໌ທີ່ບໍ່ສາມາດລັນໄດ້ຢູ່ ${ARCH}"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -1788,6 +2133,8 @@ msgid ""
 "executable of that name, however it has a TryExec key so it may be ignored "
 "in case %s does not exist"
 msgstr ""
+"ໄຟລ໌ Desktop %s ຢູ່ %s ອ້າງອີງເຖິງໄຟລ໌ທີ່ລັນໄດ້ %s; ບໍ່ມີແພັກເກດຍ່ອຍໃດມີໄຟລ໌ທີ່ລັນໄດ້ຊື່ນັ້ນ, ແຕ່ມັນມີຄີ "
+"TryExec ສະນັ້ນມັນອາດຈະຖືກຂ້າມໄປໃນກໍລະນີທີ່ %s ບໍ່ມີຢູ່"
 
 #: lib/inspect_desktop.c:308
 #, c-format
@@ -1795,32 +2142,34 @@ msgid ""
 "Desktop file %s on %s references executable %s but no subpackages contain an "
 "executable of that name"
 msgstr ""
+"ໄຟລ໌ Desktop %s ຢູ່ %s ອ້າງອີງເຖິງໄຟລ໌ທີ່ລັນໄດ້ %s ແຕ່ບໍ່ມີແພັກເກດຍ່ອຍໃດມີໄຟລ໌ທີ່ລັນໄດ້ຊື່ນັ້ນ"
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ອ້າງອີງເຖິງໄຟລ໌ທີ່ລັນໄດ້ທີ່ຂາດຫາຍໄປຢູ່ ${ARCH}"
 
 #: lib/inspect_desktop.c:354
 #, c-format
 msgid "Desktop file %s on %s references icon %s but %s is not readable by all"
 msgstr ""
+"ໄຟລ໌ Desktop %s ຢູ່ %s ອ້າງອີງເຖິງໄອຄອນ %s ແຕ່ %s ບໍ່ສາມາດອ່ານໄດ້ໂດຍທຸກຄົນ"
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ອ້າງອີງເຖິງໄອຄອນທີ່ບໍ່ສາມາດອ່ານໄດ້ຢູ່ ${ARCH}"
 
 #: lib/inspect_desktop.c:376
 #, c-format
 msgid "Desktop file %s on %s references icon %s but no subpackages contain %s"
-msgstr ""
+msgstr "ໄຟລ໌ Desktop %s ຢູ່ %s ອ້າງອີງເຖິງໄອຄອນ %s ແຕ່ບໍ່ມີແພັກເກດຍ່ອຍໃດມີ %s"
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ອ້າງອີງເຖິງໄອຄອນທີ່ຂາດຫາຍໄປຢູ່ ${ARCH}"
 
 #: lib/inspect_desktop.c:452
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ບໍ່ຖືກຕ້ອງຢູ່ ${ARCH}"
 
 #: lib/inspect_desktop.c:455
 #, c-format
@@ -1828,27 +2177,30 @@ msgid ""
 "File %s is no longer a valid desktop entry file on %s; desktop-file-validate "
 "reports:"
 msgstr ""
+"ໄຟລ໌ %s ບໍ່ແມ່ນໄຟລ໌ desktop entry ທີ່ຖືກຕ້ອງອີກຕໍ່ໄປຢູ່ %s; desktop-file-validate ລາຍງານວ່າ:"
 
 #: lib/inspect_desktop.c:457
 #, c-format
 msgid ""
 "New file %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"ໄຟລ໌ໃໝ່ %s ບໍ່ແມ່ນໄຟລ໌ desktop ທີ່ຖືກຕ້ອງຢູ່ %s; desktop-file-validate ລາຍງານວ່າ:"
 
 #: lib/inspect_desktop.c:459
 #, c-format
 msgid ""
 "File %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"ໄຟລ໌ %s ບໍ່ແມ່ນໄຟລ໌ desktop ທີ່ຖືກຕ້ອງຢູ່ %s; desktop-file-validate ລາຍງານວ່າ:"
 
 #: lib/inspect_disttag.c:184
 #, c-format
 msgid "The %s file is missing the %s tag."
-msgstr ""
+msgstr "ໄຟລ໌ %s ຂາດແທັກ %s."
 
 #: lib/inspect_disttag.c:186
 msgid "${FILE} missing Release tag"
-msgstr ""
+msgstr "${FILE} ຂາດແທັກ Release"
 
 #: lib/inspect_disttag.c:192
 #, c-format
@@ -1857,25 +2209,27 @@ msgid ""
 "should be of the form '%s' in the %s tag or in a macro used in the %s tag. "
 "After RPM macro expansion, no dist tag was found in this %s tag value."
 msgstr ""
+"ຄ່າຂອງແທັກ %s ຂາດແທັກ dist ໃນຮູບແບບທີ່ເໝາະສົມ. ແທັກ dist ຄວນຢູ່ໃນຮູບແບບ '%s' ໃນແທັກ %s ຫຼື "
+"ໃນມາໂຄຣທີ່ໃຊ້ໃນແທັກ %s. ຫຼັງຈາກຂະຫຍາຍ RPM macro ແລ້ວ, ບໍ່ພົບແທັກ dist ໃນຄ່າແທັກ %s ນີ້."
 
 #: lib/inspect_disttag.c:194
 #, c-format
 msgid "${FILE} does not use '%%{?dist}' in Release"
-msgstr ""
+msgstr "${FILE} ບໍ່ໄດ້ໃຊ້ '%%{?dist}' ໃນ Release"
 
 #: lib/inspect_disttag.c:263
 msgid "Specified package is not a source RPM, skipping."
-msgstr ""
+msgstr "ແພັກເກດທີ່ລະບຸບໍ່ແມ່ນ source RPM, ກໍາລັງຂ້າມ."
 
 #: lib/inspect_doc.c:71
 #, c-format
 msgid "%doc ${FILE}"
-msgstr ""
+msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
 #, c-format
 msgid "%%doc file content change for %s in %s on %s\n"
-msgstr ""
+msgstr "ເນື້ອໃນໄຟລ໌ %%doc ປ່ຽນແປງສຳລັບ %s ໃນ %s ຢູ່ %s\n"
 
 #: lib/inspect_doc.c:113
 #, c-format
@@ -1883,134 +2237,136 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
+"ການປ່ຽນແປງໄຟລ໌ %%doc ສຳລັບ %s ໃນ %s ທີ່ %s (%sຖືກໝາຍເປັນ %%doc -> %sຖືກໝາຍເປັນ %%doc)"
+"\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
 msgid "%s was an ELF file and now is not on %s"
-msgstr ""
+msgstr "%s ເຄີຍເປັນໄຟລ໌ ELF ແຕ່ຕອນນີ້ບໍ່ແມ່ນແລ້ວຢູ່ %s"
 
 #: lib/inspect_dsodeps.c:96 lib/inspect_dsodeps.c:108
 msgid "ELF file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ໄຟລ໌ ELF ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_dsodeps.c:106
 #, c-format
 msgid "%s was a dynamic ELF file and now is not on %s"
-msgstr ""
+msgstr "%s ເຄີຍເປັນໄຟລ໌ ELF ແບບໄດນາມິກ ແຕ່ຕອນນີ້ບໍ່ແມ່ນແລ້ວຢູ່ %s"
 
 #: lib/inspect_dsodeps.c:146
 #, c-format
 msgid "DT_NEEDED symbol(s) removed from %s on %s"
-msgstr ""
+msgstr "ສັນຍາລັກ DT_NEEDED ຖືກລົບອອກຈາກ %s ຢູ່ %s"
 
 #: lib/inspect_dsodeps.c:148 lib/inspect_dsodeps.c:165
 msgid "DT_NEEDED symbol(s) in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ສັນຍາລັກ DT_NEEDED ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_dsodeps.c:163
 #, c-format
 msgid "DT_NEEDED symbol(s) added to %s on %s"
-msgstr ""
+msgstr "ເພີ່ມສັນຍາລັກ DT_NEEDED ເຂົ້າໃນ %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "ອັອບເຈັກຍັງມີ executable stack (ບໍ່ມີ GNU-stack note): %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:435
 #, c-format
 msgid "Object has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "ອັອບເຈັກມີ executable stack (ບໍ່ມີ GNU-stack note): %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:438
 #, c-format
 msgid "Program built without GNU_STACK: %s on %s"
-msgstr ""
+msgstr "ໂປຣແກຣມຖືກບິລດ໌ໂດຍບໍ່ມີ GNU_STACK: %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:444
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "GNU_STACK ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_elf.c:496
 #, c-format
 msgid "File %s has invalid execstack flags (%s) on %s"
-msgstr ""
+msgstr "ໄຟລ໌ %s ມີແຟລັກ execstack ທີ່ບໍ່ຖືກຕ້ອງ (%s) ຢູ່ %s"
 
 #: lib/inspect_elf.c:501
 #, c-format
 msgid "File %s has unrecognized GNU_STACK '%s' (expected RW or RWE) on %s"
-msgstr ""
+msgstr "ໄຟລ໌ %s ມີ GNU_STACK '%s' ທີ່ບໍ່ຮູ້ຈັກ (ຕ້ອງການ RW ຫຼື RWE) ຢູ່ %s"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "execstack ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_elf.c:525
 #, c-format
 msgid "Object still has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "ອັອບເຈັກຍັງມີ executable stack (GNU-stack note = X): %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:527
 #, c-format
 msgid "Object has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "ອັອບເຈັກມີ executable stack (GNU-stack note = X): %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:531
 #, c-format
 msgid "Stack is still executable: %s on %s"
-msgstr ""
+msgstr "Stack ຍັງສາມາດລັນໄດ້: %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:533
 #, c-format
 msgid "Stack is executable: %s on %s"
-msgstr ""
+msgstr "Stack ສາມາດລັນໄດ້: %s ຢູ່ %s"
 
 #: lib/inspect_elf.c:564
 #, c-format
 msgid "%s lost full GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s ເສຍການປ້ອງກັນຄວາມປອດໄພ GNU_RELRO ແບບເຕັມຮູບແບບຢູ່ %s"
 
 #: lib/inspect_elf.c:567
 #, c-format
 msgid "%s lost GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s ເສຍການປ້ອງກັນຄວາມປອດໄພ GNU_RELRO ຢູ່ %s"
 
 #: lib/inspect_elf.c:578
 msgid "lost GNU_RELRO in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ເສຍ GNU_RELRO ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_elf.c:725
 #, c-format
 msgid "The following objects lost -fPIC:\n"
-msgstr ""
+msgstr "ອັອບເຈັກຕໍ່ໄປນີ້ເສຍ -fPIC:\n"
 
 #: lib/inspect_elf.c:742
 #, c-format
 msgid "The following new objects were built without -fPIC:\n"
-msgstr ""
+msgstr "ອັອບເຈັກໃໝ່ຕໍ່ໄປນີ້ຖືກບິລດ໌ໂດຍບໍ່ມີ -fPIC:\n"
 
 #: lib/inspect_elf.c:755
 #, c-format
 msgid "%s in %s has objects built without -fPIC on %s"
-msgstr ""
+msgstr "%s ໃນ %s ມີອັອບເຈັກທີ່ຖືກບິລດ໌ໂດຍບໍ່ມີ -fPIC ຢູ່ %s"
 
 #: lib/inspect_elf.c:763
 msgid "missing -fPIC in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ຂາດ -fPIC ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_elf.c:799
 msgid "TEXTREL relocations in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ການຍ້າຍຕຳແໜ່ງ TEXTREL ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_elf.c:814
 #, c-format
 msgid "%s in %s acquired TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s ໃນ %s ໄດ້ຮັບການຍ້າຍຕຳແໜ່ງ TEXTREL ຢູ່ %s"
 
 #: lib/inspect_elf.c:817
 #, c-format
 msgid "%s in %s has TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s ໃນ %s ມີການຍ້າຍຕຳແໜ່ງ TEXTREL ຢູ່ %s"
 
 #: lib/inspect_emptyrpm.c:95
 #, c-format
@@ -2018,6 +2374,7 @@ msgid ""
 "New package %s is empty (no payloads); this is expected per the rpminspect "
 "configuration"
 msgstr ""
+"ແພັກເກດໃໝ່ %s ວ່າງເປົ່າ (ບໍ່ມີ payload); ນີ້ແມ່ນສິ່ງທີ່ຄາດໄວ້ຕາມການຕັ້ງຄ່າ rpminspect"
 
 #: lib/inspect_emptyrpm.c:105
 #, c-format
@@ -2025,65 +2382,66 @@ msgid ""
 "New package %s is empty (no payloads); this is expected because the package "
 "only contains %%ghost entries"
 msgstr ""
+"ແພັກເກດໃໝ່ %s ວ່າງເປົ່າ (ບໍ່ມີ payload); ນີ້ແມ່ນສິ່ງທີ່ຄາດໄວ້ເພາະແພັກເກດມີພຽງລາຍການ %%ghost"
 
 #: lib/inspect_emptyrpm.c:116
 #, c-format
 msgid "New package %s is empty (no payloads)"
-msgstr ""
+msgstr "ແພັກເກດໃໝ່ %s ວ່າງເປົ່າ (ບໍ່ມີ payload)"
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} ມີ payload ທີ່ວ່າງເປົ່າ"
 
 #: lib/inspect_files.c:111
 #, c-format
 msgid "Forbidden path reference (%s) on line %ld of %s"
-msgstr ""
+msgstr "ມີການອ້າງອີງເສັ້ນທາງທີ່ຖືກຫ້າມ (%s) ຢູ່ແຖວທີ %ld ຂອງ %s"
 
 #: lib/inspect_files.c:113
 #, c-format
 msgid "invalid spec line: %s"
-msgstr ""
+msgstr "ແຖວ spec ບໍ່ຖືກຕ້ອງ: %s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
-msgstr ""
+msgstr "ການກວດສອບໄຟລ໌ແມ່ນສຳລັບແພັກເກັດຊອສ໌ເທົ່ານັ້ນ, ກຳລັງຂ້າມ."
 
 #: lib/inspect_filesize.c:67
 #, c-format
 msgid "%s became a non-empty file on %s"
-msgstr ""
+msgstr "%s ໄດ້ກາຍເປັນໄຟລ໌ທີ່ບໍ່ວ່າງເປົ່າຢູ່ %s"
 
 #: lib/inspect_filesize.c:71
 msgid "non-empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ທີ່ບໍ່ວ່າງເປົ່າຢູ່ ${ARCH}"
 
 #: lib/inspect_filesize.c:76
 #, c-format
 msgid "%s became an empty file on %s"
-msgstr ""
+msgstr "%s ໄດ້ກາຍເປັນໄຟລ໌ທີ່ວ່າງເປົ່າຢູ່ %s"
 
 #: lib/inspect_filesize.c:80
 msgid "empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ທີ່ວ່າງເປົ່າຢູ່ ${ARCH}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
 msgid "%s grew by %lld%% on %s"
-msgstr ""
+msgstr "%s ຂະຫຍາຍຕົວຂຶ້ນ %lld%% ຢູ່ %s"
 
 #: lib/inspect_filesize.c:99
 msgid "${FILE} size grew on ${ARCH}"
-msgstr ""
+msgstr "ຂະໜາດຂອງ ${FILE} ໃຫຍ່ຂຶ້ນຢູ່ ${ARCH}"
 
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr ""
+msgstr "%s ຫຼຸດລົງ %lld%% ຢູ່ %s"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr ""
+msgstr "ຂະໜາດຂອງ ${FILE} ຫຼຸດລົງຢູ່ ${ARCH}"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2091,10 +2449,11 @@ msgid ""
 "File %s (%s), Java byte code version %d is incorrect (wrong endianness? "
 "corrupted file? space JDK?)"
 msgstr ""
+"ໄຟລ໌ %s (%s), ເວີຊັນ Java byte code %d ບໍ່ຖືກຕ້ອງ (ການຈັດລຽງບິດຜິດ? ໄຟລ໌ເສຍຫາຍ?)"
 
 #: lib/inspect_javabytecode.c:131
 msgid "incorrect Java byte code version in ${FILE}"
-msgstr ""
+msgstr "ເວີຊັນ Java byte code ບໍ່ຖືກຕ້ອງໃນ ${FILE}"
 
 #: lib/inspect_javabytecode.c:136
 #, c-format
@@ -2102,33 +2461,35 @@ msgid ""
 "File %s (%s), Java byte code version %d greater than supported major version "
 "%d for product release %s"
 msgstr ""
+"ໄຟລ໌ %s (%s), ເວີຊັນ Java byte code %d ສູງກວ່າເວີຊັນຫຼັກ %d ທີ່ຮອງຮັບສຳລັບຜະລິດຕະພັນ %s"
 
 #: lib/inspect_javabytecode.c:137
 msgid "Java byte code version too new in ${FILE}"
-msgstr ""
+msgstr "ເວີຊັນ Java byte code ໃໝ່ເກີນໄປໃນ ${FILE}"
 
 #: lib/inspect_javabytecode.c:152
 #, c-format
 msgid "Java byte code version changed from %d to %d in %s from %s"
-msgstr ""
+msgstr "ເວີຊັນ Java byte code ປ່ຽນຈາກ %d ເປັນ %d ໃນ %s ຈາກ %s"
 
 #: lib/inspect_javabytecode.c:153
 msgid "Java byte code version changed in ${FILE}"
-msgstr ""
+msgstr "ເວີຊັນ Java byte code ມີການປ່ຽນແປງໃນ ${FILE}"
 
 #: lib/inspect_javabytecode.c:255 lib/inspect_javabytecode.c:267
 msgid "*** missing JVM version to product release mapping"
-msgstr ""
+msgstr "*** ຂາດການຈັບຄູ່ເວີຊັນ JVM ກັບການປ່ອຍຜະລິດຕະພັນ"
 
 #: lib/inspect_kmidiff.c:252
 #, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s generated a kmidiff(1) usage error."
 msgstr ""
+"ການປຽບທຽບ %s ກັບ %s ໃນແພັກເກດ %s ຢູ່ %s ເຮັດໃຫ້ເກີດຂໍ້ຜິດພາດໃນການໃຊ້ kmidiff(1)."
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "ຂໍ້ຜິດພາດໃນການໃຊ້ kmidiff"
 
 #: lib/inspect_kmidiff.c:256
 #, c-format
@@ -2136,10 +2497,12 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed Kernel Module Interface "
 "(KMI) differences."
 msgstr ""
+"ການປຽບທຽບ %s ກັບ %s ໃນແພັກເກດ %s ຢູ່ %s ພົບຄວາມແຕກຕ່າງຂອງ Kernel Module Interface "
+"(KMI)."
 
 #: lib/inspect_kmidiff.c:258
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ການປ່ຽນແປງ KMI ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_kmidiff.c:260
 #, c-format
@@ -2147,20 +2510,22 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed incompatible Kernel Module "
 "Interface (KMI) differences."
 msgstr ""
+"ການປຽບທຽບ %s ກັບ %s ໃນແພັກເກດ %s ຢູ່ %s ພົບຄວາມແຕກຕ່າງຂອງ KMI ທີ່ເຂົ້າກັນບໍ່ໄດ້."
 
 #: lib/inspect_kmidiff.c:263
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ການປ່ຽນແປງ KMI ທີ່ເຂົ້າກັນບໍ່ໄດ້ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_kmidiff.c:265
 #, c-format
 msgid ""
 "kmidiff(1) comparison of %s to %s in package %s on %s ended unexpectedly."
 msgstr ""
+"ການປຽບທຽບ kmidiff(1) ລະຫວ່າງ %s ກັບ %s ໃນແພັກເກດ %s ຢູ່ %s ສິ້ນສຸດລົງແບບບໍ່ຄາດຄິດ."
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "kmidiff ອອກຈາກການເຮັດວຽກແບບບໍ່ຄາດຄິດ"
 
 #: lib/inspect_kmidiff.c:274
 #, c-format
@@ -2168,197 +2533,201 @@ msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
+"ຄຳສັ່ງ: %s\n"
+"ລະຫັດອອກ (Exit code): %d%s%s"
 
 #: lib/inspect_kmod.c:28
 msgid "${FILE} kernel module alias on ${ARCH}"
-msgstr ""
+msgstr "ນາມແຝງ (alias) ຂອງ kernel module ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_kmod.c:31
 #, c-format
 msgid "Kernel module '%s' lost alias '%s'"
-msgstr ""
+msgstr "Kernel module '%s' ເສຍນາມແຝງ '%s'"
 
 #: lib/inspect_kmod.c:41
 #, c-format
 msgid "Kernel module '%s' gained alias '%s'"
-msgstr ""
+msgstr "Kernel module '%s' ໄດ້ຮັບນາມແຝງ '%s'"
 
 #: lib/inspect_kmod.c:188
 #, c-format
 msgid "Kernel module %s removes parameter '%s' (was present in %s)."
-msgstr ""
+msgstr "Kernel module %s ລົບພາຣາມິເຕີ '%s' ອອກ (ເຄີຍມີຢູ່ໃນ %s)."
 
 #: lib/inspect_kmod.c:191 lib/inspect_kmod.c:208
 msgid "${FILE} kernel module parameter on ${ARCH}"
-msgstr ""
+msgstr "ພາຣາມິເຕີຂອງ kernel module ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_kmod.c:205
 #, c-format
 msgid "Kernel module %s adds parameter '%s' (was not present in %s)."
-msgstr ""
+msgstr "Kernel module %s ເພີ່ມພາຣາມິເຕີ '%s' ເຂົ້າ (ບໍ່ເຄີຍມີຢູ່ໃນ %s)."
 
 #: lib/inspect_kmod.c:226
 #, c-format
 msgid "Kernel module %s removes dependency '%s' (was present in %s)."
 msgstr ""
+"Kernel module %s ລົບການຂຶ້ນຕໍ່ກັນ (dependency) '%s' ອອກ (ເຄີຍມີຢູ່ໃນ %s)."
 
 #: lib/inspect_kmod.c:229
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr ""
+msgstr "ການຂຶ້ນຕໍ່ກັນຂອງ kernel module ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_kmod.c:243
 #, c-format
 msgid "Kernel module %s adds dependency '%s' (was not present in %s)."
-msgstr ""
+msgstr "Kernel module %s ເພີ່ມການຂຶ້ນຕໍ່ກັນ '%s' ເຂົ້າ (ບໍ່ເຄີຍມີຢູ່ໃນ %s)."
 
 #: lib/inspect_kmod.c:246
 msgid "${FILE} kernel module parameter"
-msgstr ""
+msgstr "ພາລາມິເຕີຂອງໂມດູນເຄເນລ ${FILE}"
 
 #: lib/inspect_license.c:47
 #, c-format
 msgid "*** parse error in license database %s"
-msgstr ""
+msgstr "*** ເກີດຂໍ້ຜິດພາດໃນການວິເຄາະ (parse error) ໃນຖານຂໍ້ມູນໃບອະນຸຍາດ %s"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
-msgstr ""
+msgstr "*** ພົບບັນຫາໃນການກວດສອບຖານຂໍ້ມູນໃບອະນຸຍາດ"
 
 #: lib/inspect_license.c:464
 #, c-format
 msgid "Unapproved license in %s: %s"
-msgstr ""
+msgstr "ໃບອະນຸຍາດທີ່ບໍ່ໄດ້ຮັບການອະນຸມັດໃນ %s: %s"
 
 #: lib/inspect_license.c:505
 #, c-format
 msgid "Empty License Tag in %s"
-msgstr ""
+msgstr "ແທັກໃບອະນຸຍາດ (License Tag) ວ່າງເປົ່າໃນ %s"
 
 #: lib/inspect_license.c:509
 msgid "missing License tag in ${FILE}"
-msgstr ""
+msgstr "ຂາດແທັກໃບອະນຸຍາດ (License tag) ໃນ ${FILE}"
 
 #: lib/inspect_license.c:518
 #, c-format
 msgid "Valid License Tag in %s: %s"
-msgstr ""
+msgstr "ແທັກໃບອະນຸຍາດທີ່ຖືກຕ້ອງໃນ %s: %s"
 
 #: lib/inspect_license.c:532
 #, c-format
 msgid "License Tag contains unprofessional language in %s: %s"
-msgstr ""
+msgstr "ແທັກໃບອະນຸຍາດມີພາສາທີ່ບໍ່ເປັນທາງການໃນ %s: %s"
 
 #: lib/inspect_license.c:536
 msgid "unprofessional language in License tag in ${FILE}"
-msgstr ""
+msgstr "ພາສາທີ່ບໍ່ເປັນທາງການໃນແທັກໃບອະນຸຍາດໃນ ${FILE}"
 
 #: lib/inspect_license.c:573
 msgid "Missing license database(s)."
-msgstr ""
+msgstr "ຂາດຖານຂໍ້ມູນໃບອະນຸຍາດ."
 
 #: lib/inspect_license.c:577
 msgid "missing license database"
-msgstr ""
+msgstr "ຂາດຖານຂໍ້ມູນໃບອະນຸຍາດ"
 
 #: lib/inspect_lostpayload.c:62
 #, c-format
 msgid "Existing subpackage %s is now missing on %s"
-msgstr ""
+msgstr "ແພັກເກດຍ່ອຍ %s ທີ່ມີຢູ່ກ່ອນນັ້ນ ຕອນນີ້ໄດ້ຂາດຫາຍໄປຢູ່ %s"
 
 #: lib/inspect_lostpayload.c:66
 msgid "missing subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ຂາດແພັກເກດຍ່ອຍ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_lostpayload.c:82
 #, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr ""
+msgstr "ແພັກເກດ %s ຢູ່ %s ຍັງຄົງວ່າງເປົ່າ (ບໍ່ມີ payload)"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ແພັກເກດຍ່ອຍ ${FILE} ທີ່ມີຢູ່ແລ້ວນັ້ນວ່າງເປົ່າ ຢູ່ ${ARCH}"
 
 #: lib/inspect_lostpayload.c:93
 #, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr ""
+msgstr "ແພັກເກດ %s ຢູ່ %s ໄດ້ກາຍເປັນແພັກເກດວ່າງເປົ່າ (ບໍ່ມີ payload)"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "ແພັກເກດຍ່ອຍ ${FILE} ຢູ່ ${ARCH} ຕອນນີ້ມີ payload ວ່າງເປົ່າ"
 
 #: lib/inspect_lto.c:144
 msgid "${FILE} not portable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ບໍ່ສາມາດນຳໃຊ້ຂ້າມລະບົບ (not portable) ຢູ່ ${ARCH}"
 
 #: lib/inspect_lto.c:152
 #, c-format
 msgid ""
 "%s contains symbols [%s] on %s; this is not portable across compiler versions"
-msgstr ""
+msgstr "%s ມີສັນຍາລັກ [%s] ຢູ່ %s; ສິ່ງນີ້ບໍ່ສາມາດນຳໃຊ້ຂ້າມເວີຊັນຂອງຄອມໄພເລີໄດ້"
 
 #: lib/inspect_lto.c:168
 #, c-format
 msgid ""
 "%s contains symbol [%s] on %s; this is not portable across compiler versions"
-msgstr ""
+msgstr "%s ມີສັນຍາລັກ [%s] ຢູ່ %s; ສິ່ງນີ້ບໍ່ສາມາດນຳໃຊ້ຂ້າມເວີຊັນຂອງຄອມໄພເລີໄດ້"
 
 #: lib/inspect_manpage.c:52
 #, c-format
 msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
-msgstr ""
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການວິເຄາະ %s:%d:%d: %s: %s: %s\n"
 
 #: lib/inspect_manpage.c:81
 #, c-format
 msgid "*** unable to compile man page path regular expression: %s"
 msgstr ""
+"*** ບໍ່ສາມາດຄອມໄພລ໌ regular expression ຂອງເສັ້ນທາງໜ້າຄູ່ມື (man page path): %s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
 msgid "Unable to open man page %s\n"
-msgstr ""
+msgstr "ບໍ່ສາມາດເປີດໜ້າຄູ່ມື (man page) %s ໄດ້\n"
 
 #: lib/inspect_manpage.c:187
 #, c-format
 msgid "Man page %s does not end in %s\n"
-msgstr ""
+msgstr "ໜ້າຄູ່ມື %s ບໍ່ໄດ້ລົງທ້າຍດ້ວຍ %s\n"
 
 #: lib/inspect_manpage.c:195
 #, c-format
 msgid "man page with %s suffix is not really compressed with gzip\n"
-msgstr ""
+msgstr "ໜ້າຄູ່ມືທີ່ມີນາມສະກຸນ %s ບໍ່ໄດ້ຖືກບີບອັດດ້ວຍ gzip ແທ້ໆ\n"
 
 #: lib/inspect_manpage.c:236
 #, c-format
 msgid "Errors found validating %s\n"
-msgstr ""
+msgstr "ພົບຂໍ້ຜິດພາດໃນການກວດສອບຄວາມຖືກຕ້ອງຂອງ %s\n"
 
 #: lib/inspect_manpage.c:299
 #, c-format
 msgid "Man page %s is possibly empty on %s in %s"
-msgstr ""
+msgstr "ໜ້າຄູ່ມື %s ອາດຈະວ່າງເປົ່າຢູ່ %s ໃນ %s"
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ໜ້າຄູ່ມື ${FILE} ວ່າງເປົ່າຢູ່ ${ARCH}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
 msgid "Man page checker reported problems with %s on %s in %s"
-msgstr ""
+msgstr "ຕົວດີບັກໜ້າຄູ່ມືລາຍງານບັນຫາກັບ %s ຢູ່ %s ໃນ %s"
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr ""
+msgstr "ໜ້າຄູ່ມື ${FILE} ຢູ່ ${ARCH} ມີຂໍ້ຜິດພາດ"
 
 #: lib/inspect_manpage.c:327
 #, c-format
 msgid "Man page %s has incorrect path on %s in %s"
-msgstr ""
+msgstr "ໜ້າຄູ່ມື %s ມີເສັ້ນທາງທີ່ບໍ່ຖືກຕ້ອງຢູ່ %s ໃນ %s"
 
 #: lib/inspect_manpage.c:330
 msgid "man page ${FILE} on ${ARCH} has incorrect path"
-msgstr ""
+msgstr "ໜ້າຄູ່ມື ${FILE} ຢູ່ ${ARCH} ມີເສັ້ນທາງທີ່ບໍ່ຖືກຕ້ອງ"
 
 #: lib/inspect_metadata.c:40
 #, c-format
@@ -2366,15 +2735,17 @@ msgid ""
 "Vendor not set in the rpminspect configuration, ignoring Package Vendor "
 "\"%s\" in %s"
 msgstr ""
+"ບໍ່ໄດ້ຕັ້ງຄ່າຜູ້ຈຳໜ່າຍ (Vendor) ໃນການຕັ້ງຄ່າ rpminspect, ຈະຂ້າມ Package Vendor \"%s\" ໃນ "
+"%s"
 
 #: lib/inspect_metadata.c:51
 #, c-format
 msgid "Package Vendor \"%s\" is not \"%s\" in %s"
-msgstr ""
+msgstr "Package Vendor \"%s\" ບໍ່ແມ່ນ \"%s\" ໃນ %s"
 
 #: lib/inspect_metadata.c:55
 msgid "invalid vendor ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ຜູ້ຈຳໜ່າຍ (vendor) ບໍ່ຖືກຕ້ອງ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_metadata.c:76
 #, c-format
@@ -2382,58 +2753,59 @@ msgid ""
 "Package Build Host \"%s\" is not within an expected build host subdomain in "
 "%s"
 msgstr ""
+"Package Build Host \"%s\" ບໍ່ໄດ້ຢູ່ໃນ subdomain ຂອງ build host ທີ່ຄາດໄວ້ໃນ %s"
 
 #: lib/inspect_metadata.c:80
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "build host ບໍ່ຖືກຕ້ອງ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr ""
+msgstr "ຄຳອະທິບາຍຫຍໍ້ (Summary) ຂອງແພັກເກດມີພາສາທີ່ບໍ່ເໝາະສົມໃນ %s"
 
 #: lib/inspect_metadata.c:93
 #, c-format
 msgid "Summary: %s"
-msgstr ""
+msgstr "ຄຳອະທິບາຍຫຍໍ້: %s"
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "ຄຳອະທິບາຍຫຍໍ້ມີຄຳສັບທີ່ບໍ່ເໝາະສົມຢູ່ ${ARCH}"
 
 #: lib/inspect_metadata.c:109
 #, c-format
 msgid "Package Description contains unprofessional language in %s:"
-msgstr ""
+msgstr "ຄຳອະທິບາຍແພັກເກດມີພາສາທີ່ບໍ່ເໝາະສົມໃນ %s:"
 
 #: lib/inspect_metadata.c:114
 msgid "Description contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "ຄຳອະທິບາຍມີຄຳສັບທີ່ບໍ່ເໝາະສົມຢູ່ ${ARCH}"
 
 #: lib/inspect_metadata.c:134
 #, c-format
 msgid "Gained Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "ໄດ້ຮັບ Package Vendor \"%s\" ໃນ %s"
 
 #: lib/inspect_metadata.c:136
 #, c-format
 msgid "Lost Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "ເສຍ Package Vendor \"%s\" ໃນ %s"
 
 #: lib/inspect_metadata.c:138
 #, c-format
 msgid "Package Vendor changed from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Package Vendor ປ່ຽນຈາກ \"%s\" ເປັນ \"%s\" ໃນ %s"
 
 #: lib/inspect_metadata.c:156
 #, c-format
 msgid "Package Summary change from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "ຄຳອະທິບາຍຫຍໍ້ຂອງແພັກເກດປ່ຽນຈາກ \"%s\" ເປັນ \"%s\" ໃນ %s"
 
 #: lib/inspect_metadata.c:169
 #, c-format
 msgid "Package Description changed in %s"
-msgstr ""
+msgstr "ຄຳອະທິບາຍແພັກເກດໄດ້ປ່ຽນແປງໃນ %s"
 
 #: lib/inspect_metadata.c:170
 #, c-format
@@ -2446,6 +2818,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"ຈາກ:\n"
+"\n"
+"%s\n"
+"\n"
+"ເປັນ:\n"
+"\n"
+"%s"
 
 #: lib/inspect_modularity.c:119
 #, c-format
@@ -2453,6 +2832,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "forbid the presence of /data/static_context in the module metadata."
 msgstr ""
+"ຄ່າ /data/static_context ໃນ %s ແມ່ນ %s, ແຕ່ກົດການປ່ອຍຜະລິດຕະພັນຫ້າມບໍ່ໃຫ້ມີ /data/"
+"static_context ໃນ module metadata."
 
 #: lib/inspect_modularity.c:125
 #, c-format
@@ -2460,6 +2841,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "require the presence of /data/static_context in the module metadata."
 msgstr ""
+"ຄ່າ /data/static_context ໃນ %s ແມ່ນ %s, ແຕ່ກົດການປ່ອຍຜະລິດຕະພັນກຳນົດໃຫ້ມີ /data/"
+"static_context ໃນ module metadata."
 
 #: lib/inspect_modularity.c:131
 #, c-format
@@ -2467,6 +2850,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "recommend the presence of /data/static_context in the module metadata."
 msgstr ""
+"ຄ່າ /data/static_context ໃນ %s ແມ່ນ %s, ແຕ່ກົດການປ່ອຍຜະລິດຕະພັນແນະນຳໃຫ້ມີ /data/"
+"static_context ໃນ module metadata."
 
 #: lib/inspect_modularity.c:133
 #, c-format
@@ -2474,6 +2859,8 @@ msgid ""
 "The /data/static_context value in %s is %s, and the product release rules do "
 "not have a setting for /data/static_context in the module metadata."
 msgstr ""
+"ຄ່າ /data/static_context ໃນ %s ແມ່ນ %s, ແລະກົດການປ່ອຍຜະລິດຕະພັນບໍ່ໄດ້ຕັ້ງຄ່າສຳລັບ /data/"
+"static_context ໃນ module metadata."
 
 #: lib/inspect_modularity.c:135
 #, c-format
@@ -2481,16 +2868,17 @@ msgid ""
 "The /data/static_context value in %s is %s as required by the product "
 "release rules."
 msgstr ""
+"ຄ່າ /data/static_context ໃນ %s ແມ່ນ %s ຕາມທີ່ກົດການປ່ອຍຜະລິດຕະພັນກຳນົດໄວ້."
 
 #: lib/inspect_modularity.c:143
 #, c-format
 msgid "%s The /data/static_context value is the same as in %s."
-msgstr ""
+msgstr "%s ຄ່າ /data/static_context ແມ່ນຄືກັນກັບໃນ %s."
 
 #: lib/inspect_modularity.c:145
 #, c-format
 msgid "%s The /data/static_context value has changed since %s."
-msgstr ""
+msgstr "%s ຄ່າ /data/static_context ໄດ້ປ່ຽນແປງຕັ້ງແຕ່ %s."
 
 #: lib/inspect_modularity.c:180
 #, c-format
@@ -2498,47 +2886,48 @@ msgid ""
 "Package \"%s\" is part of a module but lacks the '%%{modularitylabel}' "
 "header tag."
 msgstr ""
+"ແພັກເກດ \"%s\" ເປັນສ່ວນໜຶ່ງຂອງໂມດູນແຕ່ຂາດແທັກສ່ວນຫົວ '%%{modularitylabel}'."
 
 #: lib/inspect_modularity.c:224
 msgid "Inspection skipped because this build's type is not `module'."
-msgstr ""
+msgstr "ຂ້າມການກວດສອບເນື່ອງຈາກປະເພດການບິລດ໌ນີ້ບໍ່ແມ່ນ `module'."
 
 #: lib/inspect_movedfiles.c:52
 #, c-format
 msgid "%s moved to ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "%s ໄດ້ຍ້າຍໄປຫາ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_movedfiles.c:55
 #, c-format
 msgid "%s probably moved to %s on %s\n"
-msgstr ""
+msgstr "%s ອາດຈະຍ້າຍໄປຫາ %s ຢູ່ %s\n"
 
 #: lib/inspect_ownership.c:77
 #, c-format
 msgid "File %s has forbidden owner `%s` on %s"
-msgstr ""
+msgstr "ໄຟລ໌ %s ມີເຈົ້າຂອງທີ່ຖືກຫ້າມ `%s` ຢູ່ %s"
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ເຈົ້າຂອງທີ່ຖືກຫ້າມສຳລັບ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_ownership.c:92
 #, c-format
 msgid "File %s has forbidden group `%s` on %s"
-msgstr ""
+msgstr "ໄຟລ໌ %s ມີກຸ່ມທີ່ຖືກຫ້າມ `%s` ຢູ່ %s"
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ກຸ່ມທີ່ຖືກຫ້າມສຳລັບ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_ownership.c:119
 #, c-format
 msgid "File %s has owner `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "ໄຟລ໌ %s ມີເຈົ້າຂອງແມ່ນ `%s` ຢູ່ %s, ແຕ່ຄວນຈະແມ່ນ `%s`"
 
 #: lib/inspect_ownership.c:124
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ເຈົ້າຂອງບໍ່ຖືກຕ້ອງສຳລັບ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_ownership.c:162
 #, c-format
@@ -2546,38 +2935,40 @@ msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is world "
 "executable"
 msgstr ""
+"ໄຟລ໌ %s ຢູ່ %s ມີຄວາມສາມາດ CAP_SETUID ແຕ່ກຸ່ມແມ່ນ `%s` ແລະສາມາດລັນໄດ້ໂດຍທຸກຄົນ"
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID ແລະ o+x ສຳລັບ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_ownership.c:179
 #, c-format
 msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is group writable"
 msgstr ""
+"ໄຟລ໌ %s ຢູ່ %s ມີຄວາມສາມາດ CAP_SETUID ແຕ່ກຸ່ມແມ່ນ `%s` ແລະກຸ່ມສາມາດຂຽນໄດ້"
 
 #: lib/inspect_ownership.c:183
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID ແລະ g+w ສຳລັບ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_ownership.c:199
 #, c-format
 msgid "File %s has group `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "ໄຟລ໌ %s ມີກຸ່ມແມ່ນ `%s` ຢູ່ %s, ແຕ່ຄວນຈະແມ່ນ `%s`"
 
 #: lib/inspect_ownership.c:204
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ກຸ່ມບໍ່ຖືກຕ້ອງສຳລັບ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_ownership.c:268
 #, c-format
 msgid "File %s changed %s from `%s` to `%s` on %s"
-msgstr ""
+msgstr "ໄຟລ໌ %s ໄດ້ປ່ຽນແປງ %s ຈາກ `%s` ເປັນ `%s` ຢູ່ %s"
 
 #: lib/inspect_ownership.c:270
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ປ່ຽນເຈົ້າຂອງຢູ່ ${ARCH}"
 
 #: lib/inspect_patches.c:395
 #, c-format
@@ -2585,188 +2976,189 @@ msgid ""
 "Patch number %ld (%s) is missing a corresponding %%patch%ld macro, usually "
 "in %%prep."
 msgstr ""
+"Patch ໝາຍເລກ %ld (%s) ຂາດມາໂຄຣ %%patch%ld ທີ່ກົງກັນ, ເຊິ່ງປົກກະຕິຄວນຢູ່ໃນ %%prep."
 
 #: lib/inspect_patches.c:397
 #, c-format
 msgid "missing %%patch macro for ${FILE}"
-msgstr ""
+msgstr "ຂາດມາໂຄຣ %%patch ສຳລັບ ${FILE}"
 
 #: lib/inspect_patches.c:399
 #, c-format
 msgid "Patch number %ld (%s) is mismatched with %%patch%ld macro."
-msgstr ""
+msgstr "Patch ໝາຍເລກ %ld (%s) ບໍ່ກົງກັບມາໂຄຣ %%patch%ld."
 
 #: lib/inspect_patches.c:401
 #, c-format
 msgid "mismatched %%patch macro for ${FILE}"
-msgstr ""
+msgstr "ມາໂຄຣ %%patch ບໍ່ກົງກັນສຳລັບ ${FILE}"
 
 #: lib/inspect_patches.c:422
 msgid "undefined Patch ${FILE}"
-msgstr ""
+msgstr "ບໍ່ໄດ້ກຳນົດ Patch ${FILE}"
 
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "ບໍ່ໄດ້ກຳນົດໄຟລ໌ Patch %s."
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
 #, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດແຕກໄຟລ໌ patch: %s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
-msgstr ""
+msgstr "ໄຟລ໌ patch ເສຍຫາຍ ${FILE}"
 
 #: lib/inspect_patches.c:477 lib/inspect_patches.c:484
 #, c-format
 msgid "Patch %s is under 4 bytes in size - is it corrupt?"
-msgstr ""
+msgstr "Patch %s ມີຂະໜາດຕໍ່າກວ່າ 4 ໄບຕ໌ - ມັນເສຍຫາຍຫຼືບໍ່?"
 
 #: lib/inspect_patches.c:506
 #, c-format
 msgid "%s changed (%ld bytes -> %ld bytes)"
-msgstr ""
+msgstr "%s ໄດ້ປ່ຽນແປງ (%ld ໄບຕ໌ -> %ld ໄບຕ໌)"
 
 #: lib/inspect_patches.c:510 lib/inspect_patches.c:535
 msgid "patch file ${FILE}"
-msgstr ""
+msgstr "ໄຟລ໌ patch ${FILE}"
 
 #: lib/inspect_patches.c:531
 #, c-format
 msgid "New patch file `%s` appeared"
-msgstr ""
+msgstr "ພົບໄຟລ໌ patch ໃໝ່ `%s` ປະກົດຂຶ້ນ"
 
 #: lib/inspect_patches.c:551
 msgid "patch changes ${FILE}"
-msgstr ""
+msgstr "patch ປ່ຽນແປງ ${FILE}"
 
 #: lib/inspect_patches.c:555
 #, c-format
 msgid "%s touches as many as %ld line%s"
-msgstr ""
+msgstr "%s ມີການແຕະຕ້ອງຫຼາຍເຖິງ %ld ແຖວ%s"
 
 #: lib/inspect_patches.c:557
 #, c-format
 msgid "%s touches %ld file%s"
-msgstr ""
+msgstr "%s ມີການແຕະຕ້ອງ %ld ໄຟລ໌%s"
 
 #: lib/inspect_patches.c:559
 #, c-format
 msgid "%s touches %ld file%s and %s%ld line%s"
-msgstr ""
+msgstr "%s ມີການແຕະຕ້ອງ %ld ໄຟລ໌%s ແລະ %s%ld ແຖວ%s"
 
 #: lib/inspect_patches.c:559
 msgid "as many as "
-msgstr ""
+msgstr "ຫຼາຍເຖິງ "
 
 #: lib/inspect_patches.c:626 lib/inspect_upstream.c:141
 msgid "No source packages available, skipping inspection."
-msgstr ""
+msgstr "ບໍ່ມີແພັກເກດຊອຣ໌ສ (source packages) ໃຫ້ບໍລິການ, ຈະຂ້າມການກວດສອບ."
 
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "ໄຟລ໌ patch `%s` ທີ່ລະບຸໃນໄຟລ໌ spec ບໍ່ໄດ້ຮັບການຈັດການ"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກແຖວ %%patch: %s"
 
 #: lib/inspect_patches.c:828
 #, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດອ່ານແຖວຂອງໄຟລ໌ spec: %s"
 
 #: lib/inspect_patches.c:881
 #, c-format
 msgid "Patch file `%s` removed"
-msgstr ""
+msgstr "ລົບໄຟລ໌ patch `%s` ອອກແລ້ວ"
 
 #: lib/inspect_pathmigration.c:81
 #, c-format
 msgid "File %s found should be in %s on %s"
-msgstr ""
+msgstr "ພົບໄຟລ໌ %s ເຊິ່ງຄວນຈະຢູ່ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ຄວນຈະຢູ່ໃນ %s ຢູ່ ${ARCH}"
 
 #: lib/inspect_permissions.c:84
 msgid " changed setuid/setgid;"
-msgstr ""
+msgstr " ປ່ຽນແປງ setuid/setgid;"
 
 #: lib/inspect_permissions.c:89
 msgid " became a directory;"
-msgstr ""
+msgstr " ກາຍເປັນໂຟນເດີ (directory);"
 
 #: lib/inspect_permissions.c:91
 msgid " became a character device;"
-msgstr ""
+msgstr " ກາຍເປັນ character device;"
 
 #: lib/inspect_permissions.c:93
 msgid " became a block device;"
-msgstr ""
+msgstr " ກາຍເປັນ block device;"
 
 #: lib/inspect_permissions.c:95
 msgid " became a regular file;"
-msgstr ""
+msgstr " ກາຍເປັນໄຟລ໌ປົກກະຕິ;"
 
 #: lib/inspect_permissions.c:97
 msgid " became a FIFO;"
-msgstr ""
+msgstr " ກາຍເປັນ FIFO;"
 
 #: lib/inspect_permissions.c:99
 msgid " became a symbolic link;"
-msgstr ""
+msgstr " ກາຍເປັນ symbolic link;"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " ກາຍເປັນ socket;"
 
 #: lib/inspect_permissions.c:105
 msgid " permissions"
-msgstr ""
+msgstr " ການອະນຸຍາດ (permissions)"
 
 #: lib/inspect_permissions.c:111
 msgid " relaxed"
-msgstr ""
+msgstr " ຜ່ອນຄາຍລົງ"
 
 #: lib/inspect_permissions.c:114
 msgid " changed"
-msgstr ""
+msgstr " ປ່ຽນແປງແລ້ວ"
 
 #: lib/inspect_permissions.c:129
 #, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr ""
+msgstr "%s ຈາກ %04o ເປັນ %04o ຢູ່ %s"
 
 #: lib/inspect_permissions.c:135
 #, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr ""
+msgstr "ການອະນຸຍາດຂອງ ${FILE} ຈາກ %04o ເປັນ %04o ຢູ່ ${ARCH}"
 
 #: lib/inspect_permissions.c:149
 #, c-format
 msgid "%s (%s) is world-writable on %s"
-msgstr ""
+msgstr "%s (%s) ສາມາດຂຽນໄດ້ໂດຍທຸກຄົນຢູ່ %s"
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ສາມາດຂຽນໄດ້ໂດຍທຸກຄົນຢູ່ ${ARCH}"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
 msgid "*** invalid politics entry with pattern=%s and digest=%s"
-msgstr ""
+msgstr "*** ລາຍການການເມືອງບໍ່ຖືກຕ້ອງດ້ວຍ pattern=%s ແລະ digest=%s"
 
 #: lib/inspect_politics.c:92
 #, c-format
 msgid "*** unknown digest type for pattern %s: %s"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກປະເພດ digest ສຳລັບ pattern %s: %s"
 
 #: lib/inspect_politics.c:126
 #, c-format
@@ -2774,6 +3166,7 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules allow this "
 "file."
 msgstr ""
+"ພົບໄຟລ໌ທີ່ອາດມີຄວາມອ່ອນໄຫວທາງການເມືອງ (%s) ໃນ %s ຢູ່ %s: ກົດລະບຽບອະນຸຍາດໃຫ້ມີໄຟລ໌ນີ້."
 
 #: lib/inspect_politics.c:134
 #, c-format
@@ -2781,50 +3174,53 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules prohibit "
 "this file."
 msgstr ""
+"ພົບໄຟລ໌ທີ່ອາດມີຄວາມອ່ອນໄຫວທາງການເມືອງ (%s) ໃນ %s ຢູ່ %s: ກົດລະບຽບຫ້າມມີໄຟລ໌ນີ້."
 
 #: lib/inspect_politics.c:138
 msgid "${FILE} is politically sensitive"
-msgstr ""
+msgstr "${FILE} ມີຄວາມອ່ອນໄຫວທາງການເມືອງ"
 
 #: lib/inspect_removedfiles.c:26
 msgid ""
 "; Removing security policy related files requires inspection by the Security "
 "Response Team."
 msgstr ""
+"; ການລົບໄຟລ໌ທີ່ກ່ຽວຂ້ອງກັບນະໂຍບາຍຄວາມປອດໄພ ຈຳເປັນຕ້ອງໄດ້ຮັບການກວດສອບໂດຍທີມງານຕອບສະໜອງຄວາມ"
+"ປອດໄພ."
 
 #: lib/inspect_removedfiles.c:85
 msgid "library ${FILE} removed on ${ARCH}"
-msgstr ""
+msgstr "ໄລບຣາຣີ (library) ${FILE} ຖືກລົບອອກຢູ່ ${ARCH}"
 
 #: lib/inspect_removedfiles.c:131
 #, c-format
 msgid "ABI break: Library %s with SONAME '%s' removed from %s"
-msgstr ""
+msgstr "ABI break: ໄລບຣາຣີ %s ທີ່ມີ SONAME '%s' ຖືກລົບອອກຈາກ %s"
 
 #: lib/inspect_removedfiles.c:132
 msgid "missing SONAME in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ຂາດ SONAME ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_removedfiles.c:135
 #, c-format
 msgid "ABI break: Library %s removed from %s"
-msgstr ""
+msgstr "ABI break: ໄລບຣາຣີ %s ຖືກລົບອອກຈາກ %s"
 
 #: lib/inspect_removedfiles.c:138
 #, c-format
 msgid "%s removed from %s"
-msgstr ""
+msgstr "%s ຖືກລົບອອກຈາກ %s"
 
 #: lib/inspect_rpmdeps.c:129
 #, c-format
 msgid "Invalid looking %s dependency in the %s package on %s: %s"
-msgstr ""
+msgstr "ພົບ %s dependency ທີ່ເບິ່ງຄືວ່າບໍ່ຖືກຕ້ອງໃນແພັກເກດ %s ທີ່ຢູ່ %s: %s"
 
 #: lib/inspect_rpmdeps.c:132 lib/inspect_rpmdeps.c:892
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
 #, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' ໃນ %s ຢູ່ ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -2834,11 +3230,14 @@ msgid ""
 "%s' to the spec file to avoid the need to test interoperability between "
 "various combinations of old and new subpackages."
 msgstr ""
+"ແພັກເກດຍ່ອຍ %s ຢູ່ %s ມີ '%s' ເຊິ່ງມາຈາກແພັກເກດຍ່ອຍ %s ແຕ່ບໍ່ໄດ້ລະບຸເວີຊັນຂອງແພັກເກດທີ່ຕ້ອງການຢ່າງ"
+"ຊັດເຈນ. ກະລຸນາເພີ່ມ 'Requires: %s = %s' ລົງໃນໄຟລ໌ spec ເພື່ອຫຼີກເວັ້ນຄວາມຈຳເປັນໃນການທົດສອບກ"
+"ານເຮັດວຽກຮ່ວມກັນ ລະຫວ່າງແພັກເກດຍ່ອຍເວີຊັນເກົ່າ ແລະ ໃໝ່."
 
 #: lib/inspect_rpmdeps.c:387
 #, c-format
 msgid "missing 'Requires: ${FILE} = %s' in %s on ${ARCH}"
-msgstr ""
+msgstr "ຂາດ 'Requires: ${FILE} = %s' ໃນ %s ຢູ່ ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:409
 #, c-format
@@ -2846,132 +3245,135 @@ msgid ""
 "Multiple subpackages provide '%s': [%s] but these subpackages carry explicit "
 "Requires: [%s]"
 msgstr ""
+"ມີຫຼາຍແພັກເກດຍ່ອຍທີ່ໃຫ້ '%s': [%s] ແຕ່ແພັກເກດຍ່ອຍເຫຼົ່ານີ້ມີການລະບຸ Requires: [%s]"
 
 #: lib/inspect_rpmdeps.c:410
 #, c-format
 msgid "%s all provide '${FILE}' on ${ARCH}"
-msgstr ""
+msgstr "%s ທັງໝົດໃຫ້ '${FILE}' ຢູ່ ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:540
 #, c-format
 msgid "Missing epoch prefix on the version-release in '%s' for %s on %s"
-msgstr ""
+msgstr "ຂາດ epoch prefix ໃນ version-release ໃນ '%s' ສຳລັບ %s ຢູ່ %s"
 
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' ຕ້ອງການ epoch ໃນ %s ຢູ່ ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
-msgstr ""
+msgstr "ໄຟລ໌ spec"
 
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "ໄດ້ຮັບ '%s' ເພີ່ມໃນແພັກເກດຊອດ %s"
 
 #: lib/inspect_rpmdeps.c:889
 #, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "ໄດ້ຮັບ '%s' ເພີ່ມໃນແພັກເກດຍ່ອຍ %s ຢູ່ %s"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "ຄົງຮັກສາ '%s' ໄວ້ໃນແພັກເກດຊອດ %s"
 
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "ຄົງຮັກສາ '%s' ໄວ້ໃນແພັກເກດຍ່ອຍ %s ຢູ່ %s"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr ""
+msgstr "ປ່ຽນ '%s' ເປັນ '%s' ໃນແພັກເກດຊອດ %s"
 
 #: lib/inspect_rpmdeps.c:909
 #, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "ປ່ຽນ '%s' ເປັນ '%s' ໃນແພັກເກດຍ່ອຍ %s ຢູ່ %s"
 
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "'%s' ໄດ້ກາຍເປັນ '${FILE}' ໃນ %s ຢູ່ ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
-msgstr ""
+msgstr "; ນີ້ແມ່ນສິ່ງທີ່ຄາດໄວ້ແລ້ວ"
 
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr ""
+msgstr "'%s' ຫາຍໄປໃນແພັກເກດຊອດ %s"
 
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "'%s' ຫາຍໄປໃນແພັກເກດຍ່ອຍ %s ຢູ່ %s"
 
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດ compile regular expression ຂອງ $ORIGIN root prefix: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
 msgid "%s has an invalid-looking %s on %s: %s"
-msgstr ""
+msgstr "%s ມີ %s ທີ່ເບິ່ງຄືວ່າບໍ່ຖືກຕ້ອງຢູ່ %s: %s"
 
 #: lib/inspect_runpath.c:192
 msgid "runtime search path in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ເສັ້ນທາງການຊອກຫາ (runtime search path) ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_runpath.c:270
 msgid "both DT_RPATH and DT_RUNPATH in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ພົບທັງ DT_RPATH ແລະ DT_RUNPATH ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_runpath.c:272
 #, c-format
 msgid "%s has both DT_RPATH and DT_RUNPATH on %s; this is not allowed"
-msgstr ""
+msgstr "%s ມີທັງ DT_RPATH ແລະ DT_RUNPATH ຢູ່ %s; ເຊິ່ງບໍ່ໄດ້ຮັບອະນຸຍາດ"
 
 #: lib/inspect_shellsyntax.c:125
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "shell script ${FILE} ບໍ່ຖືກຕ້ອງຢູ່ ${ARCH}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
 msgid "%s is a shell script but was not before on %s"
-msgstr ""
+msgstr "%s ເປັນ shell script ແຕ່ກ່ອນໜ້ານີ້ບໍ່ແມ່ນ ຢູ່ %s"
 
 #: lib/inspect_shellsyntax.c:134
 #, c-format
 msgid "%s is a %s script but was a %s script before on %s"
-msgstr ""
+msgstr "%s ເປັນ %s script ແຕ່ກ່ອນໜ້ານີ້ເຄີຍເປັນ %s script ຢູ່ %s"
 
 #: lib/inspect_shellsyntax.c:181
 #, c-format
 msgid "%s is no longer a valid %s script on %s"
-msgstr ""
+msgstr "%s ບໍ່ແມ່ນ %s script ທີ່ຖືກຕ້ອງອີກຕໍ່ໄປຢູ່ %s"
 
 #: lib/inspect_shellsyntax.c:190
 #, c-format
 msgid "%s became a valid %s script on %s"
-msgstr ""
+msgstr "%s ໄດ້ກາຍເປັນ %s script ທີ່ຖືກຕ້ອງຢູ່ %s"
 
 #: lib/inspect_shellsyntax.c:193
 msgid ""
 ". The script fails with '-n' but passes with '-O extglob'; be sure 'shopt "
 "extglob' is set in the script."
 msgstr ""
+". script ນີ້ຜິດພາດເມື່ອໃຊ້ '-n' ແຕ່ຜ່ານເມື່ອໃຊ້ '-O extglob'; ກະລຸນາກວດສອບໃຫ້ແນ່ໃຈວ່າໄດ້ຕັ້ງ "
+"'shopt extglob' ໃນ script ແລ້ວ."
 
 #: lib/inspect_shellsyntax.c:204 lib/inspect_shellsyntax.c:224
 #, c-format
 msgid "%s is not a valid %s script on %s"
-msgstr ""
+msgstr "%s ບໍ່ແມ່ນ %s script ທີ່ຖືກຕ້ອງຢູ່ %s"
 
 #: lib/inspect_shellsyntax.c:215
 #, c-format
@@ -2979,131 +3381,135 @@ msgid ""
 "%s fails with '-n' but passes with '-O extglob'; be sure 'shopt extglob' is "
 "set in the script on %s"
 msgstr ""
+"%s ຜິດພາດເມື່ອໃຊ້ '-n' ແຕ່ຜ່ານເມື່ອໃຊ້ '-O extglob'; ກະລຸນາກວດສອບໃຫ້ແນ່ໃຈວ່າໄດ້ຕັ້ງ 'shopt "
+"extglob' ໃນ script ຢູ່ %s ແລ້ວ"
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "ຊື່ໄຟລ໌ spec ບໍ່ເປັນໄປຕາມທີ່ຄາດໄວ້"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "ກົງກັນທຸກປະການ"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "ຂຶ້ນຕົ້ນດ້ວຍ"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
-msgstr ""
+msgstr "ລົງທ້າຍດ້ວຍ"
 
 #: lib/inspect_specname.c:78
 #, c-format
 msgid "Spec filename does not %s the primary name %s; got '%s'"
-msgstr ""
+msgstr "ຊື່ໄຟລ໌ spec ບໍ່ %s ກັບຊື່ຫຼັກ %s; ພົບວ່າເປັນ '%s'"
 
 #: lib/inspect_specname.c:109
 msgid "The specname inspection is only for source packages, skipping."
-msgstr ""
+msgstr "ການກວດສອບ specname ແມ່ນສຳລັບແພັກເກດຊອດເທົ່ານັ້ນ, ກຳລັງຂ້າມ..."
 
 #: lib/inspect_subpackages.c:68
 #, c-format
 msgid "Subpackage '%s' has disappeared on '%s'"
-msgstr ""
+msgstr "ແພັກເກດຍ່ອຍ '%s' ໄດ້ຫາຍໄປໃນ '%s'"
 
 #: lib/inspect_subpackages.c:75 lib/inspect_subpackages.c:99
 msgid "subpackage ${FILE}"
-msgstr ""
+msgstr "ແພັກເກດຍ່ອຍ ${FILE}"
 
 #: lib/inspect_subpackages.c:92
 #, c-format
 msgid "Subpackage '%s' has appeared on '%s'"
-msgstr ""
+msgstr "ແພັກເກດຍ່ອຍ '%s' ໄດ້ປະກົດຂຶ້ນໃນ '%s'"
 
 #: lib/inspect_symlinks.c:98
 #, c-format
 msgid ""
 "Directory %s became a symbolic link (to %s) in %s on %s; this is not allowed!"
 msgstr ""
+"Directory %s ໄດ້ກາຍເປັນ symbolic link (ໄປຫາ %s) ໃນ %s ຢູ່ %s; ນີ້ບໍ່ໄດ້ຮັບອະນຸຍາດ!"
 
 #: lib/inspect_symlinks.c:100
 #, c-format
 msgid "%s %s became a symbolic link (to %s) in %s on %s"
-msgstr ""
+msgstr "%s %s ໄດ້ກາຍເປັນ symbolic link (ໄປຫາ %s) ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_symlinks.c:108
 msgid "${FILE} became a symlink on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ໄດ້ກາຍເປັນ symlink ຢູ່ ${ARCH}"
 
 #: lib/inspect_symlinks.c:125
 msgid "unable to read symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ບໍ່ສາມາດອ່ານ symlink ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_symlinks.c:126
 #, c-format
 msgid "An error occurred reading symbolic link %s in %s on %s."
-msgstr ""
+msgstr "ເກີດຂໍ້ຜິດພາດໃນການອ່ານ symbolic link %s ໃນ %s ຢູ່ %s."
 
 #: lib/inspect_symlinks.c:178
 #, c-format
 msgid ""
 "%s %s has too many levels of redirects and cannot be resolved in %s on %s"
 msgstr ""
+"%s %s ມີລະດັບການ redirect ຫຼາຍເກີນໄປ ແລະ ບໍ່ສາມາດຫາປາຍທາງໄດ້ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_symlinks.c:182
 msgid "too many redirects for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ມີການ redirect ຫຼາຍເກີນໄປສຳລັບ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_symlinks.c:277
 #, c-format
 msgid "%s %s %s a dangling symbolic link in %s on %s"
-msgstr ""
+msgstr "%s %s %s ເປັນ dangling symbolic link ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_symlinks.c:284
 msgid "dangling symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ພົບ dangling symlink ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_types.c:69
 msgid "${FILE} MIME type on ${ARCH}"
-msgstr ""
+msgstr "ປະເພດ MIME ຂອງ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_types.c:77 lib/inspect_types.c:82
 #, c-format
 msgid "Unknown MIME type `%s' on %s in %s"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກປະເພດ MIME `%s' ຢູ່ %s ໃນ %s"
 
 #: lib/inspect_types.c:107
 #, c-format
 msgid "MIME type for %s in %s was `%s/%s' and became `%s/%s'"
-msgstr ""
+msgstr "ປະເພດ MIME ສຳລັບ %s ໃນ %s ເຄີຍເປັນ `%s/%s' ແຕ່ໄດ້ກາຍເປັນ `%s/%s'"
 
 #: lib/inspect_udevrules.c:104 lib/inspect_udevrules.c:116
 #, c-format
 msgid "%s is a valid udev rules file on %s"
-msgstr ""
+msgstr "%s ເປັນໄຟລ໌ udev rules ທີ່ຖືກຕ້ອງຢູ່ %s"
 
 #: lib/inspect_udevrules.c:106
 #, c-format
 msgid "%s is now a valid udev rules file on %s"
-msgstr ""
+msgstr "%s ຕອນນີ້ເປັນໄຟລ໌ udev rules ທີ່ຖືກຕ້ອງຢູ່ %s"
 
 #: lib/inspect_udevrules.c:109
 #, c-format
 msgid "%s is no longer a valid udev rules file on %s"
-msgstr ""
+msgstr "%s ບໍ່ແມ່ນໄຟລ໌ udev rules ທີ່ຖືກຕ້ອງອີກຕໍ່ໄປຢູ່ %s"
 
 #: lib/inspect_udevrules.c:112 lib/inspect_udevrules.c:118
 #, c-format
 msgid "%s is not a valid udev rules file on %s"
-msgstr ""
+msgstr "%s ບໍ່ແມ່ນໄຟລ໌ udev rules ທີ່ຖືກຕ້ອງຢູ່ %s"
 
 #: lib/inspect_unicode.c:465
 #, c-format
 msgid "*** empty localpath on %s"
-msgstr ""
+msgstr "*** localpath ຫວ່າງເປົ່າຢູ່ %s"
 
 #: lib/inspect_unicode.c:474
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ພົບ code point ທີ່ຕ້ອງຫ້າມໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_unicode.c:551
 #, c-format
@@ -3111,11 +3517,13 @@ msgid ""
 "A forbidden code point, 0x%04X, was found in the %s source file on line %ld "
 "at column %ld.  This source file is used by %s."
 msgstr ""
+"ພົບ code point ທີ່ຕ້ອງຫ້າມ, 0x%04X, ໃນໄຟລ໌ຊອດ %s ທີ່ແຖວ %ld ຄໍລຳ %ld. ໄຟລ໌ຊອດນີ້ຖືກໃຊ້ໂດຍ "
+"%s."
 
 #: lib/inspect_unicode.c:621
 #, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr ""
+msgstr "ບໍ່ສາມາດລັນ %prep ໃນ ${FILE}"
 
 #: lib/inspect_unicode.c:624
 #, c-format
@@ -3123,183 +3531,190 @@ msgid ""
 "Unable to run through the %%prep section in %s or manually unpack sources "
 "for further scanning."
 msgstr ""
+"ບໍ່ສາມາດລັນຜ່ານພາກສ່ວນ %%prep ໃນ %s ຫຼື ບໍ່ສາມາດແຕກໄຟລ໌ຊອດດ້ວຍຕົນເອງເພື່ອເຮັດການກວດສອບຕໍ່ໄປໄດ້."
 
 #: lib/inspect_unicode.c:744
 msgid "The unicode inspection is only for source packages, skipping."
-msgstr ""
+msgstr "ການກວດສອບ unicode ແມ່ນສຳລັບແພັກເກດຊອດເທົ່ານັ້ນ, ກຳລັງຂ້າມ..."
 
 #: lib/inspect_upstream.c:60
 #, c-format
 msgid "New upstream source file `%s` appeared"
-msgstr ""
+msgstr "ພົບໄຟລ໌ຊອດຕົ້ນທາງ (upstream) ໃໝ່ `%s` ປະກົດຂຶ້ນ"
 
 #: lib/inspect_upstream.c:62
 msgid "new source file ${FILE}"
-msgstr ""
+msgstr "ໄຟລ໌ຊອດໃໝ່ ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
 msgid "Upstream source file `%s` changed content"
-msgstr ""
+msgstr "ເນື້ອໃນຂອງໄຟລ໌ຊອດຕົ້ນທາງ `%s` ມີການປ່ຽນແປງ"
 
 #: lib/inspect_upstream.c:93
 msgid "checksum of ${FILE}"
-msgstr ""
+msgstr "ຄ່າ checksum ຂອງ ${FILE}"
 
 #: lib/inspect_upstream.c:195
 #, c-format
 msgid "Source file `%s` removed"
-msgstr ""
+msgstr "ໄຟລ໌ຊອດ `%s` ຖືກລຶບອອກ"
 
 #: lib/inspect_upstream.c:197
 msgid "source file ${FILE} removed"
-msgstr ""
+msgstr "ໄຟລ໌ຊອດ ${FILE} ຖືກລຶບອອກ"
 
 #: lib/inspect_virus.c:40
 msgid "*** cl_engine_new returned NULL, check clamav library"
-msgstr ""
+msgstr "*** cl_engine_new ສົ່ງຄ່າເປັນ NULL, ກະລຸນາກວດສອບ clamav library"
 
 #: lib/inspect_virus.c:98
 #, c-format
 msgid "Virus detected in %s in the %s package on %s: %s"
-msgstr ""
+msgstr "ກວດພົບໄວຣັສໃນ %s ໃນແພັກເກດ %s ຢູ່ %s: %s"
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
-msgstr ""
+msgstr "ຂໍ້ມູນເວີຊັນຂອງ clamav"
 
 #: lib/inspect_virus.c:140
 #, c-format
 msgid "clamav version %s"
-msgstr ""
+msgstr "clamav ເວີຊັນ %s"
 
 #: lib/inspect_virus.c:145
 #, c-format
 msgid "*** missing %s"
-msgstr ""
+msgstr "*** ຂາດ %s"
 
 #: lib/inspect_virus.c:169
 #, c-format
 msgid "%s version %u (%s)"
-msgstr ""
+msgstr "%s ເວີຊັນ %u (%s)"
 
 #: lib/inspect_virus.c:201
 msgid "virus or malware in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ພົບໄວຣັສ ຫຼື ມັນແວຣ໌ (malware) ໃນ ${FILE} ຢູ່ ${ARCH}"
 
 #: lib/inspect_xml.c:195
 #, c-format
 msgid "%s is a well-formed XML file in %s on %s, but is not a valid XML file"
 msgstr ""
+"%s ເປັນໄຟລ໌ XML ທີ່ມີຮູບແບບຖືກຕ້ອງ (well-formed) ໃນ %s ຢູ່ %s, ແຕ່ບໍ່ແມ່ນໄຟລ໌ XML ທີ່ສົມບູນ"
 
 #: lib/inspect_xml.c:203
 #, c-format
 msgid "%s is not a well-formed XML file in %s on %s"
-msgstr ""
+msgstr "%s ບໍ່ແມ່ນໄຟລ໌ XML ທີ່ມີຮູບແບບຖືກຕ້ອງ (well-formed) ໃນ %s ຢູ່ %s"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ບໍ່ແມ່ນ XML ທີ່ມີຮູບແບບຖືກຕ້ອງ (well-formed) ຢູ່ ${ARCH}"
 
 #: lib/koji.c:142
 #, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr ""
+msgstr "*** XML-RPC Fault: %s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc fault code %s (%d): getBuild(%s) ຈາກ %s"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** ສະຖານະການບິວຂອງ Koji ແມ່ນ %s ສຳລັບ %s, ບໍ່ສາມາດດຳເນີນການຕໍ່ໄດ້"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc fault code %s (%d): getTaskInfo(%s) ຈາກ %s"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
-msgstr ""
+msgstr "*** ສະຖານະ task ຂອງ Koji ແມ່ນ %s ສຳລັບ task %s, ບໍ່ສາມາດດຳເນີນການຕໍ່ໄດ້"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "ການບິວແພັກເກດ RPM"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
-msgstr ""
+msgstr "ການບິວ Module ທີ່ປະກອບດ້ວຍການບິວແພັກເກດ RPM ຫຼາຍອັນ"
 
 #: lib/magic.c:21
 msgid "*** unable to initialize the magic library"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດເລີ່ມຕົ້ນລະບົບ (initialize) magic library ໄດ້"
 
 #: lib/magic.c:26
 #, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດໂຫຼດ magic database ໄດ້: %s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
 msgid "*** unable to mkdir %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດສ້າງໄດເຣັກທໍຣີ (mkdir) %s"
 
 #: lib/output.c:25
 msgid ""
 "Detailed results suitable for the console and piping through paging programs."
 msgstr ""
+"ສະແດງຜົນລະອຽດທີ່ເໝາະສຳລັບຄອນໂຊລ (console) ແລະ ການໃຊ້ຮ່ວມກັບໂປຣແກຣມແບ່ງໜ້າ."
 
 #: lib/output.c:27
 msgid ""
 "Results organized as a JSON data structure suitable for reading by web "
 "applications and other frontend tools."
 msgstr ""
+"ສະແດງຜົນໃນຮູບແບບໂຄງສ້າງຂໍ້ມູນ JSON ເຊິ່ງເໝາະສຳລັບເວັບແອັບພລິເຄຊັນ ແລະ ເຄື່ອງມື frontend ອື່ນໆ."
 
 #: lib/output.c:29
 msgid ""
 "Results organized as an XUnit data structure suitable for use with Jenkins "
 "and other XUnit-enabled services."
 msgstr ""
+"ສະແດງຜົນໃນຮູບແບບໂຄງສ້າງຂໍ້ມູນ XUnit ເຊິ່ງເໝາະສຳລັບໃຊ້ຮ່ວມກັບ Jenkins ແລະ ບໍລິການອື່ນໆທີ່ຮອງຮັບ "
+"XUnit."
 
 #: lib/output.c:31
 msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
 msgstr ""
+"ສະແດງຜົນສະຫຼຸບໜຶ່ງລາຍການຕໍ່ໜຶ່ງແຖວ, ເໝາະສຳລັບການເບິ່ງຜ່ານຄອນໂຊລດ້ວຍໂປຣແກຣມແບ່ງໜ້າ."
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
 #, c-format
 msgid "*** error opening %s for writing"
-msgstr ""
+msgstr "*** ເກີດຂໍ້ຜິດພາດໃນການເປີດ %s ເພື່ອຂຽນ"
 
 #: lib/output_summary.c:53
 msgid "added"
-msgstr ""
+msgstr "ເພີ່ມແລ້ວ"
 
 #: lib/output_summary.c:55
 msgid "removed"
-msgstr ""
+msgstr "ລຶບອອກແລ້ວ"
 
 #: lib/output_summary.c:57
 msgid "changed"
-msgstr ""
+msgstr "ປ່ຽນແປງແລ້ວ"
 
 #: lib/output_summary.c:61
 msgid "ok"
-msgstr ""
+msgstr "ຕົກລົງ"
 
 #: lib/output_summary.c:63
 msgid "unknown"
-msgstr ""
+msgstr "ບໍ່ຮູ້ຈັກ"
 
 #: lib/output_text.c:92 lib/output_xunit.c:83
 #, c-format
 msgid "Result: %s\n"
-msgstr ""
+msgstr "ຜົນລັບ: %s\n"
 
 #: lib/output_text.c:95 lib/output_xunit.c:96
 #, c-format
@@ -3307,6 +3722,8 @@ msgid ""
 "Waiver Authorization: %s\n"
 "\n"
 msgstr ""
+"ການອະນຸມັດການຍົກເວັ້ນ (Waiver): %s\n"
+"\n"
 
 #: lib/output_text.c:99 lib/output_xunit.c:110
 #, c-format
@@ -3315,6 +3732,9 @@ msgid ""
 "%s\n"
 "\n"
 msgstr ""
+"ລາຍລະອຽດ:\n"
+"%s\n"
+"\n"
 
 #: lib/output_text.c:103 lib/output_xunit.c:118
 #, c-format
@@ -3322,78 +3742,80 @@ msgid ""
 "Suggested Remedy:\n"
 "%s"
 msgstr ""
+"ວິທີແກ້ໄຂທີ່ແນະນຳ:\n"
+"%s"
 
 #: lib/output_xunit.c:54
 #, c-format
 msgid "*** opening %s for writing"
-msgstr ""
+msgstr "*** ກຳລັງເປີດ %s ເພື່ອຂຽນ"
 
 #: lib/parse_yaml.c:114 lib/parse_yaml.c:139
 #, c-format
 msgid "*** %s: broken document"
-msgstr ""
+msgstr "*** %s: ເອກະສານເສຍຫາຍ"
 
 #: lib/parse_yaml.c:158 lib/parse_yaml.c:305
 #, c-format
 msgid "*** skipping token type %s"
-msgstr ""
+msgstr "*** ກຳລັງຂ້າມ token ປະເພດ %s"
 
 #: lib/parse_yaml.c:386
 msgid "*** malformed type - freed?"
-msgstr ""
+msgstr "*** ຮູບແບບ (type) ບໍ່ຖືກຕ້ອງ - ຖືກປ່ອຍ (freed) ແລ້ວ?"
 
 #: lib/peers.c:176
 #, c-format
 msgid "There is not enough available space to unpack all of the RPMs.\n"
-msgstr ""
+msgstr "ມີພື້ນທີ່ຫວ່າງບໍ່ພຽງພໍໃນການແຕກໄຟລ໌ RPM ທັງໝົດ.\n"
 
 #: lib/readelf.c:48
 #, c-format
 msgid "*** unknown elftype_t %d"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກ elftype_t %d"
 
 #: lib/readelf.c:76
 msgid "*** libelf version mismatch"
-msgstr ""
+msgstr "*** ເວີຊັນຂອງ libelf ບໍ່ກົງກັນ"
 
 #: lib/readfile.c:50
 #, c-format
 msgid "*** unable to find end of %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດຫາຈຸດສິ້ນສຸດຂອງ %s"
 
 #: lib/readfile.c:68
 #, c-format
 msgid "*** unable to close %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດປິດ %s"
 
 #: lib/rmtree.c:74
 #, c-format
 msgid "*** %s is not a directory"
-msgstr ""
+msgstr "*** %s ບໍ່ແມ່ນໄດເຣັກທໍຣີ"
 
 #: lib/rpm.c:71
 #, c-format
 msgid "*** Fopen failed for %s: %s"
-msgstr ""
+msgstr "*** ການໃຊ້ Fopen ລົ້ມເຫຼວສຳລັບ %s: %s"
 
 #: lib/rpm.c:255
 #, c-format
 msgid "*** file index %d is out of bounds for %s"
-msgstr ""
+msgstr "*** ດັດຊະນີໄຟລ໌ (file index) %d ຢູ່ນອກຂອບເຂດສຳລັບ %s"
 
 #: lib/rpm.c:431
 msgid "*** error reading file from RPM payload"
-msgstr ""
+msgstr "*** ເກີດຂໍ້ຜິດພາດໃນການອ່ານໄຟລ໌ຈາກ RPM payload"
 
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d"
 
 #: lib/runcmd.c:173
 #, c-format
 msgid "%d (%s)"
-msgstr ""
+msgstr "%d (%s)"
 
 #: lib/runcmd.c:178
 #, c-format
@@ -3402,103 +3824,106 @@ msgid ""
 "\n"
 "%s tried to run the command and it received signal %s"
 msgstr ""
+"%s\n"
+"\n"
+"%s ພະຍາຍາມລັນຄຳສັ່ງ ແລະ ໄດ້ຮັບສັນຍານ %s"
 
 #: lib/runcmd.c:182
 #, c-format
 msgid "%s tried to run the command and it received signal %s"
-msgstr ""
+msgstr "%s ພະຍາຍາມລັນຄຳສັ່ງ ແລະ ໄດ້ຮັບສັນຍານ %s"
 
 #: lib/strfuncs.c:250 lib/strfuncs.c:282
 msgid "NULL"
-msgstr ""
+msgstr "ວ່າງເປົ່າ (NULL)"
 
 #: lib/strfuncs.c:252 lib/strfuncs.c:284
 msgid "OK"
-msgstr ""
+msgstr "ຜ່ານ (OK)"
 
 #: lib/strfuncs.c:254 lib/strfuncs.c:286
 msgid "INFO"
-msgstr ""
+msgstr "ຂໍ້ມູນ (INFO)"
 
 #: lib/strfuncs.c:256 lib/strfuncs.c:288
 msgid "VERIFY"
-msgstr ""
+msgstr "ກວດສອບ (VERIFY)"
 
 #: lib/strfuncs.c:258 lib/strfuncs.c:290
 msgid "BAD"
-msgstr ""
+msgstr "ບໍ່ດີ (BAD)"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "ຂ້າມ (SKIP)"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "ການວິນິດໄສ"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
-msgstr ""
+msgstr "ບໍ່ຊາບ"
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
-msgstr ""
+msgstr "ຍົກເວັ້ນບໍ່ໄດ້"
 
 #: lib/strfuncs.c:310
 msgid "Anyone"
-msgstr ""
+msgstr "ທຸກຄົນ"
 
 #: lib/strfuncs.c:312
 msgid "Security"
-msgstr ""
+msgstr "ຄວາມປອດໄພ"
 
 #: lib/strfuncs.c:543
 msgid "regular file"
-msgstr ""
+msgstr "ໄຟລ໌ປົກກະຕິ"
 
 #: lib/strfuncs.c:545
 msgid "directory"
-msgstr ""
+msgstr "ໄດເຣັກທໍຣີ"
 
 #: lib/strfuncs.c:547
 msgid "character device"
-msgstr ""
+msgstr "character device"
 
 #: lib/strfuncs.c:549
 msgid "block device"
-msgstr ""
+msgstr "block device"
 
 #: lib/strfuncs.c:551
 msgid "FIFO (named pipe)"
-msgstr ""
+msgstr "FIFO (named pipe)"
 
 #: lib/strfuncs.c:553
 msgid "symbolic link"
-msgstr ""
+msgstr "symbolic link"
 
 #: lib/strfuncs.c:555
 msgid "socket"
-msgstr ""
+msgstr "socket"
 
 #: lib/strfuncs.c:614
 msgid "Success."
-msgstr ""
+msgstr "ສຳເລັດ."
 
 #: lib/strfuncs.c:616
 msgid "One or more inspections failed."
-msgstr ""
+msgstr "ການກວດສອບໜຶ່ງລາຍການ ຫຼື ຫຼາຍກວ່ານັ້ນລົ້ມເຫຼວ."
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "ໂປຣແກຣມຜິດພາດ."
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
-msgstr ""
+msgstr "ບໍ່ພົບໂປຣໄຟລ໌ (profile) ທີ່ລະບຸ."
 
 #: lib/strfuncs.c:622
 msgid "Insufficient disk space in the working directory."
-msgstr ""
+msgstr "ພື້ນທີ່ຫວ່າງໃນດິສກ໌ບໍ່ພຽງພໍໃນ working directory."
 
 #: src/rpminspect.c:48
 #, c-format
@@ -3506,169 +3931,176 @@ msgid ""
 "Compare package builds for policy compliance and consistency.\n"
 "\n"
 msgstr ""
+"ປຽບທຽບການບິວແພັກເກດເພື່ອຄວາມຖືກຕ້ອງຕາມນະໂຍບາຍ ແລະ ຄວາມສອດຄ່ອງ.\n"
+"\n"
 
 #: src/rpminspect.c:49
 #, c-format
 msgid "Usage: %s [OPTIONS] [before build] [after build]\n"
-msgstr ""
+msgstr "ວິທີໃຊ້: %s [ຕົວເລືອກ] [ການບິວກ່ອນໜ້າ] [ການບິວຫຼັງຈາກ]\n"
 
 #: src/rpminspect.c:50
 #, c-format
 msgid "Options:\n"
-msgstr ""
+msgstr "ຕົວເລືອກ:\n"
 
 #: src/rpminspect.c:51
 #, c-format
 msgid "  -c FILE, --config=FILE      Configuration file to use\n"
-msgstr ""
+msgstr "  -c FILE, --config=FILE      ໄຟລ໌ການຕັ້ງຄ່າທີ່ຈະໃຊ້\n"
 
 #: src/rpminspect.c:52
 #, c-format
 msgid "  -p NAME, --profile=NAME     Configuration profile to use\n"
-msgstr ""
+msgstr "  -p NAME, --profile=NAME     ໂປຣໄຟລ໌ການຕັ້ງຄ່າທີ່ຈະໃຊ້\n"
 
 #: src/rpminspect.c:53
 #, c-format
 msgid "  -T LIST, --tests=LIST       List of tests to run\n"
-msgstr ""
+msgstr "  -T LIST, --tests=LIST       ລາຍການການທົດສອບທີ່ຈະລັນ\n"
 
 #: src/rpminspect.c:54
 #, c-format
 msgid "                                (default: ALL)\n"
-msgstr ""
+msgstr "                                (ຄ່າມາຕຖານ: ທັງໝົດ)\n"
 
 #: src/rpminspect.c:55
 #, c-format
 msgid "  -E LIST, --exclude=LIST     List of tests to exclude\n"
-msgstr ""
+msgstr "  -E LIST, --exclude=LIST     ລາຍການການທົດສອບທີ່ຈະຍົກເວັ້ນ\n"
 
 #: src/rpminspect.c:56
 #, c-format
 msgid "                                (default: none)\n"
-msgstr ""
+msgstr "                                (ຄ່າມາຕຖານ: ບໍ່ມີ)\n"
 
 #: src/rpminspect.c:57
 #, c-format
 msgid "  -a LIST, --arches=LIST      List of architectures to check\n"
-msgstr ""
+msgstr "  -a LIST, --arches=LIST      ລາຍການສະຖາປັດຕະຍະກຳທີ່ຈະກວດສອບ\n"
 
 #: src/rpminspect.c:58
 #, c-format
 msgid "  -r STR, --release=STR       Product release string\n"
-msgstr ""
+msgstr "  -r STR, --release=STR       ຂໍ້ຄວາມເວີຊັນການປ່ອຍຜະລິດຕະພັນ\n"
 
 #: src/rpminspect.c:59
 #, c-format
 msgid "  -n, --no-rebase             Disable build rebase detection\n"
-msgstr ""
+msgstr "  -n, --no-rebase             ປິດການກວດສອບ build rebase\n"
 
 #: src/rpminspect.c:60
 #, c-format
 msgid "  -b TYPE, --build-type=TYPE  Set Koji build type to TYPE\n"
-msgstr ""
+msgstr "  -b TYPE, --build-type=TYPE  ຕັ້ງຄ່າປະເພດການບິວຂອງ Koji ເປັນ TYPE\n"
 
 #: src/rpminspect.c:61
 #, c-format
 msgid "  -o FILE, --output=FILE      Write results to FILE\n"
-msgstr ""
+msgstr "  -o FILE, --output=FILE      ຂຽນຜົນລັບລົງໃນໄຟລ໌\n"
 
 #: src/rpminspect.c:62
 #, c-format
 msgid "                                (default: stdout)\n"
-msgstr ""
+msgstr "                                (ຄ່າມາຕຖານ: stdout)\n"
 
 #: src/rpminspect.c:63
 #, c-format
 msgid "  -F TYPE, --format=TYPE      Format output results as TYPE\n"
-msgstr ""
+msgstr "  -F TYPE, --format=TYPE      ກຳນົດຮູບແບບຜົນລັບເປັນ TYPE\n"
 
 #: src/rpminspect.c:64
 #, c-format
 msgid "                                (default: text)\n"
-msgstr ""
+msgstr "                                (ຄ່າມາຕຖານ: text)\n"
 
 #: src/rpminspect.c:65
 #, c-format
 msgid "  -t TAG, --threshold=TAG     Result threshold triggering exit\n"
 msgstr ""
+"  -t TAG, --threshold=TAG     ກຳນົດລະດັບຜົນລັບ (threshold) ທີ່ຈະໃຫ້ໂປຣແກຣມຢຸດເຮັດວຽກ\n"
 
 #: src/rpminspect.c:66
 #, c-format
 msgid "                              failure (default: VERIFY)\n"
-msgstr ""
+msgstr "                              ເມື່ອລົ້ມເຫຼວ (ຄ່າມາຕຖານ: VERIFY)\n"
 
 #: src/rpminspect.c:67
 #, c-format
 msgid "  -s TAG, --suppress=TAG      Results suppression threshold\n"
-msgstr ""
+msgstr "  -s TAG, --suppress=TAG      ລະດັບໃນການປິດການສະແດງຜົນລັບ\n"
 
 #: src/rpminspect.c:68
 #, c-format
 msgid "                                (default: off, report everything)\n"
-msgstr ""
+msgstr "                                (ຄ່າມາຕຖານ: ປິດ, ລາຍງານທຸກຢ່າງ)\n"
 
 #: src/rpminspect.c:69
 #, c-format
 msgid "  -l, --list                  List available tests and formats\n"
 msgstr ""
+"  -l, --list                  ສະແດງລາຍການການທົດສອບ ແລະ ຮູບແບບທີ່ມີໃຫ້ໃຊ້\n"
 
 #: src/rpminspect.c:70
 #, c-format
 msgid "  -w PATH, --workdir=PATH     Temporary directory to use\n"
-msgstr ""
+msgstr "  -w PATH, --workdir=PATH     ໄດເຣັກທໍຣີຊົ່ວຄາວທີ່ຈະໃຊ້\n"
 
 #: src/rpminspect.c:71
 #, c-format
 msgid "                                (default: %s)\n"
-msgstr ""
+msgstr "                                (ຄ່າມາຕຖານ: %s)\n"
 
 #: src/rpminspect.c:72
 #, c-format
 msgid ""
 "  -f, --fetch-only            Fetch builds only, do not perform inspections\n"
 msgstr ""
+"  -f, --fetch-only            ດຶງຂໍ້ມູນການບິວເທົ່ານັ້ນ, ໂດຍບໍ່ຕ້ອງທຳການກວດສອບ\n"
 
 #: src/rpminspect.c:73
 #, c-format
 msgid "                                (implies -k)\n"
-msgstr ""
+msgstr "                                (ໝາຍເຖິງການໃຊ້ -k ໄປນຳ)\n"
 
 #: src/rpminspect.c:74
 #, c-format
 msgid ""
 "  -k, --keep                  Do not remove the comparison working files\n"
-msgstr ""
+msgstr "  -k, --keep                  ບໍ່ຕ້ອງລຶບໄຟລ໌ທີ່ໃຊ້ໃນການປຽບທຽບອອກ\n"
 
 #: src/rpminspect.c:75
 #, c-format
 msgid "  -d, --debug                 Debugging mode output\n"
-msgstr ""
+msgstr "  -d, --debug                 ສະແດງຜົນໃນໂໝດ debug\n"
 
 #: src/rpminspect.c:76
 #, c-format
 msgid ""
 "  -D, --dump-config           Dump configuration settings (in YAML format)\n"
 msgstr ""
+"  -D, --dump-config           ສະແດງຄ່າການຕັ້ງຄ່າທັງໝົດ (ໃນຮູບແບບ YAML)\n"
 
 #: src/rpminspect.c:77
 #, c-format
 msgid "  -v, --verbose               Verbose inspection output\n"
-msgstr ""
+msgstr "  -v, --verbose               ສະແດງລາຍລະອຽດການກວດສອບແບບລະອຽດ\n"
 
 #: src/rpminspect.c:78
 #, c-format
 msgid "                              when finished, display full path\n"
 msgstr ""
+"                              ເມື່ອສຳເລັດ, ໃຫ້ສະແດງເສັ້ນທາງເຕັມ (full path)\n"
 
 #: src/rpminspect.c:79
 #, c-format
 msgid "  -?, --help                  Display usage information\n"
-msgstr ""
+msgstr "  -?, --help                  ສະແດງຂໍ້ມູນວິທີການໃຊ້\n"
 
 #: src/rpminspect.c:80
 #, c-format
 msgid "  -V, --version               Display program version\n"
-msgstr ""
+msgstr "  -V, --version               ສະແດງເວີຊັນຂອງໂປຣແກຣມ\n"
 
 #: src/rpminspect.c:81
 #, c-format
@@ -3676,86 +4108,88 @@ msgid ""
 "\n"
 "See the rpminspect(1) man page for more information.\n"
 msgstr ""
+"\n"
+"ເບິ່ງຂໍ້ມູນເພີ່ມເຕີມໄດ້ທີ່ໜ້າ man page ຂອງ rpminspect(1).\n"
 
 #: src/rpminspect.c:114
 #, c-format
 msgid "*** unable to compile product release regular expression: %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດ compile product release regular expression: %s"
 
 #: src/rpminspect.c:168 src/rpminspect.c:179
 #, c-format
 msgid "*** product release for after build (%s) is empty"
-msgstr ""
+msgstr "*** product release ສຳລັບການບິວຫຼັງຈາກນັ້ນ (%s) ແມ່ນຫວ່າງເປົ່າ"
 
 #: src/rpminspect.c:196 src/rpminspect.c:204
 #, c-format
 msgid "*** product release for before build (%s) is empty"
-msgstr ""
+msgstr "*** product release ສຳລັບການບິວກ່ອນໜ້ານັ້ນ (%s) ແມ່ນຫວ່າງເປົ່າ"
 
 #: src/rpminspect.c:259
 #, c-format
 msgid "*** unable to determine product release for %s and %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດລະບຸ product release ສຳລັບ %s ແລະ %s"
 
 #: src/rpminspect.c:260
 msgid ""
 "*** See the 'favor_release' setting in the rpminspect configuration file."
-msgstr ""
+msgstr "*** ເບິ່ງການຕັ້ງຄ່າ 'favor_release' ໃນໄຟລ໌ການຕັ້ງຄ່າຂອງ rpminspect."
 
 #: src/rpminspect.c:288
 msgid "*** the -T and -E options are mutually exclusive"
-msgstr ""
+msgstr "*** ຕົວເລືອກ -T ແລະ -E ບໍ່ສາມາດໃຊ້ຮ່ວມກັນໄດ້"
 
 #: src/rpminspect.c:289 src/rpminspect.c:305 src/rpminspect.c:737
 #: src/rpminspect.c:776
 #, c-format
 msgid "*** See `%s --help` for more information."
-msgstr ""
+msgstr "*** ເບິ່ງຂໍ້ມູນເພີ່ມເຕີມໄດ້ທີ່ `%s --help`."
 
 #: src/rpminspect.c:304
 #, c-format
 msgid "*** unknown inspection: `%s`"
-msgstr ""
+msgstr "*** ບໍ່ຮູ້ຈັກການກວດສອບ: `%s`"
 
 #: src/rpminspect.c:455
 #, c-format
 msgid "*** unsupported build type: `%s`."
-msgstr ""
+msgstr "*** ບໍ່ຮອງຮັບປະເພດການບິວ: `%s`."
 
 #: src/rpminspect.c:464
 #, c-format
 msgid "*** invalid build type: `%s`."
-msgstr ""
+msgstr "*** ປະເພດການບິວບໍ່ຖືກຕ້ອງ: `%s`."
 
 #: src/rpminspect.c:481
 #, c-format
 msgid "*** invalid output format: `%s`."
-msgstr ""
+msgstr "*** ຮູບແບບຜົນລັບ (output format) ບໍ່ຖືກຕ້ອງ: `%s`."
 
 #: src/rpminspect.c:493
 #, c-format
 msgid "*** unable to expand working directory: `%s`"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດຂະຫຍາຍ (expand) working directory: `%s`"
 
 #: src/rpminspect.c:506
 #, c-format
 msgid "*** unable to use `%s' as working directory"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດໃຊ້ `%s` ເປັນ working directory ໄດ້"
 
 #: src/rpminspect.c:536
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s ເວີຊັນ %s\n"
 
 #: src/rpminspect.c:539
 #, c-format
 msgid "*** ?? getopt returned character code 0%o ??"
-msgstr ""
+msgstr "*** ?? getopt ສົ່ງຄ່າ character code 0%o ??"
 
 #: src/rpminspect.c:546
 #, c-format
 msgid "Available build types:\n"
-msgstr ""
+msgstr "ປະເພດການບິວທີ່ມີໃຫ້ໃຊ້:\n"
 
 #: src/rpminspect.c:567
 #, c-format
@@ -3763,6 +4197,8 @@ msgid ""
 "\n"
 "Available output formats:\n"
 msgstr ""
+"\n"
+"ຮູບແບບຜົນລັບທີ່ມີໃຫ້ໃຊ້:\n"
 
 #: src/rpminspect.c:584
 #, c-format
@@ -3770,34 +4206,36 @@ msgid ""
 "\n"
 "Available inspections:\n"
 msgstr ""
+"\n"
+"ລາຍການການກວດສອບທີ່ມີໃຫ້ໃຊ້:\n"
 
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
 #, c-format
 msgid "*** failed to read configuration file %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດອ່ານໄຟລ໌ການຕັ້ງຄ່າ %s ໄດ້"
 
 #: src/rpminspect.c:658
 #, c-format
 msgid "*** Please specify a configuration file using '-c' or supply ./%s"
-msgstr ""
+msgstr "*** ກະລຸນາລະບຸໄຟລ໌ການຕັ້ງຄ່າໂດຍໃຊ້ '-c' ຫຼື ຈັດຕຽມ ./%s"
 
 #: src/rpminspect.c:736
 msgid "*** Invalid before and after build specification."
-msgstr ""
+msgstr "*** ການລະບຸການບິວກ່ອນໜ້າ ແລະ ຫຼັງຈາກນັ້ນບໍ່ຖືກຕ້ອງ."
 
 #: src/rpminspect.c:744
 msgid "*** unable to read RPM configuration"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດອ່ານການຕັ້ງຄ່າ RPM ໄດ້"
 
 #: src/rpminspect.c:775
 #, c-format
 msgid "*** unsupported architecture specified: `%s`"
-msgstr ""
+msgstr "*** ລະບຸສະຖາປັດຕະຍະກຳທີ່ບໍ່ຮອງຮັບ: `%s`"
 
 #: src/rpminspect.c:793
 #, c-format
 msgid "*** unable to create directory %s"
-msgstr ""
+msgstr "*** ບໍ່ສາມາດສ້າງໄດເຣັກທໍຣີ %s ໄດ້"
 
 #: src/rpminspect.c:851
 #, c-format
@@ -3805,73 +4243,77 @@ msgid ""
 "Version information for libraries and programs used by %s as well as storage "
 "requirements.  This result is for informational and diagnostic purposes only."
 msgstr ""
+"ຂໍ້ມູນເວີຊັນສຳລັບ library ແລະ ໂປຣແກຣມທີ່ %s ໃຊ້ ລວມເຖິງຄວາມຕ້ອງການພື້ນທີ່ຈັດເກັບ. ຜົນລັບນີ້ແມ່ນເພື່ອແ"
+"ຈ້ງໃຫ້ຊາບ ແລະ ໃຊ້ໃນການວິເຄາະເທົ່ານັ້ນ."
 
 #: src/rpminspect.c:858
 #, c-format
 msgid "Space required to download artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "ພື້ນທີ່ທີ່ຕ້ອງການໃນການດາວໂຫຼດ artifacts: %lu ໄບຕ໌ (%s)\n"
 
 #: src/rpminspect.c:866
 #, c-format
 msgid "Space required to unpack artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "ພື້ນທີ່ທີ່ຕ້ອງການໃນການແຕກ artifacts: %lu ໄບຕ໌ (%s)\n"
 
 #: src/rpminspect.c:878
 #, c-format
 msgid "Command line arguments used to invoke %s."
-msgstr ""
+msgstr "ຕົວແປຄຳສັ່ງ (command line arguments) ທີ່ໃຊ້ໃນການຮຽກ %s."
 
 #: src/rpminspect.c:902
 #, c-format
 msgid "Local configuration file: %s"
-msgstr ""
+msgstr "ໄຟລ໌ການຕັ້ງຄ່າທ້ອງຖິ່ນ: %s"
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "ການບິວກ່ອນໜ້າ"
 
 #: src/rpminspect.c:917
 msgid "After Build"
-msgstr ""
+msgstr "ການບິວຫຼັງຈາກ"
 
 #: src/rpminspect.c:920
 msgid "Build"
-msgstr ""
+msgstr "ການບິວ (Build)"
 
 #: src/rpminspect.c:937
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
 msgstr ""
+"*** ບໍ່ພົບແພັກເກດທີ່ທຽບກັນໄດ້ (peers), ກະລຸນາກວດສອບວ່າແພັກເກດມີຢູ່ສຳລັບສະຖາປັດຕະຍະກຳທີ່ລະບຸ"
 
 #: src/rpminspect.c:958
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
 msgstr ""
+"*** ບໍ່ສາມາດຫາຊຸດແພັກເກດທີ່ທຽບກັນໄດ້ລະຫວ່າງການບິວກ່ອນໜ້າ ແລະ ຫຼັງຈາກນັ້ນ"
 
 #: src/rpminspect.c:972
 msgid "*** unable to determine product release or none specified (-r)."
-msgstr ""
+msgstr "*** ບໍ່ສາມາດລະບຸ product release ຫຼື ບໍ່ໄດ້ລະບຸໄວ້ (-r)."
 
 #: src/rpminspect.c:984
 #, c-format
 msgid "Skipping %s inspection..."
-msgstr ""
+msgstr "ກຳລັງຂ້າມການກວດສອບ %s..."
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "ຂ້າມ"
 
 #: src/rpminspect.c:1009
 #, c-format
 msgid "Running %s inspection..."
-msgstr ""
+msgstr "ກຳລັງດຳເນີນການກວດສອບ %s..."
 
 #: src/rpminspect.c:1018
 msgid "pass"
-msgstr ""
+msgstr "ຜ່ານ"
 
 #: src/rpminspect.c:1018
 msgid "FAIL"
-msgstr ""
+msgstr "ລົ້ມເຫຼວ (FAIL)"
 
 #: src/rpminspect.c:1046
 #, c-format
@@ -3879,3 +4321,5 @@ msgid ""
 "\n"
 "Keeping working directory: %s\n"
 msgstr ""
+"\n"
+"ຮັກສາ working directory ໄວ້ທີ່: %s\n"
