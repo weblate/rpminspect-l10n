@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2026-03-31 11:58+0000\n"
+"PO-Revision-Date: 2026-07-27 15:17+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ka/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -1428,7 +1428,7 @@ msgstr "წარუმატებელი"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "შეიძლება"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
@@ -1642,7 +1642,7 @@ msgstr ""
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
 msgid "${FILE}"
-msgstr ""
+msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
 #, c-format
@@ -1659,7 +1659,7 @@ msgstr ""
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
@@ -3390,7 +3390,7 @@ msgstr ""
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d"
 
 #: lib/runcmd.c:173
 #, c-format
@@ -3424,7 +3424,7 @@ msgstr "ინფო"
 
 #: lib/strfuncs.c:256 lib/strfuncs.c:288
 msgid "VERIFY"
-msgstr ""
+msgstr "გადამოწმება"
 
 #: lib/strfuncs.c:258 lib/strfuncs.c:290
 msgid "BAD"
@@ -3432,7 +3432,7 @@ msgstr "ცუდი"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "გამოტოვება"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
@@ -3860,7 +3860,7 @@ msgstr ""
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "გამოტოვება"
 
 #: src/rpminspect.c:1009
 #, c-format
@@ -3869,7 +3869,7 @@ msgstr ""
 
 #: src/rpminspect.c:1018
 msgid "pass"
-msgstr ""
+msgstr "გავლა"
 
 #: src/rpminspect.c:1018
 msgid "FAIL"
