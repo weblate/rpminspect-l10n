@@ -8,9 +8,8 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2025-06-01 05:14+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"PO-Revision-Date: 2026-08-02 10:18+0000\n"
+"Last-Translator: Alang Hsu <alang.hsu@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
 "projects/rpminspect/main/zh_TW/>\n"
 "Language: zh_TW\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -27,12 +26,16 @@ msgid ""
 "checks to see if the License tag contains any unprofessional words as "
 "defined in the configuration file."
 msgstr ""
+"檢查 RPM 中介資料的 License 標籤中所指定字串，是否描述了授權資料庫定義的許可"
+"軟體授權。同時檢查 License 標籤是否包含設定檔中所定義的任何不專業用語。"
 
 #: include/inspect.h:1347
 msgid ""
 "Check all binary RPMs in the build for any empty payloads. When comparing "
 "two builds, report new packages in the after build with empty payloads."
 msgstr ""
+"檢查建置中的所有二進位 RPM 是否有空的承載。在比較兩個建置時，回報新版本建置中"
+"帶有空承載的新套件。"
 
 #: include/inspect.h:1353
 msgid ""
@@ -40,6 +43,8 @@ msgid ""
 "Packages that lost payload data from the before build to the after build are "
 "reported."
 msgstr ""
+"檢查前後建置中的所有二進位 RPM 是否有空的承載。從前版本建置到後版本建置遺失承"
+"載資料的套件將會被回報。"
 
 #: include/inspect.h:1359
 msgid ""
@@ -51,6 +56,10 @@ msgid ""
 "before build specified, check for differences between the before and after "
 "build values of the previous RPM header values and report them."
 msgstr ""
+"執行一些 RPM 標頭檢查。首先，檢查 Vendor 是否包含設定檔中定義的預期字串。第二"
+"，檢查建置主機是否在設定檔中定義的預期子網域內。第三，檢查 Summary 字串是否有"
+"任何不專業用語。第四，檢查 Description 是否有任何不專業用語。最後，如果指定了"
+"前版本建置，檢查前後建置之間先前 RPM 標頭值的差異並回報。"
 
 #: include/inspect.h:1365
 msgid ""
@@ -58,10 +67,13 @@ msgid ""
 "man page is compressed. Second, check that each man page contains valid "
 "content. Lastly, check that each man page is installed to the correct path."
 msgstr ""
+"對 RPM 承載中的 man 手冊頁面執行一些檢查。首先，檢查每個 man 手冊頁面是否經過"
+"壓縮。第二，檢查每個 man 手冊頁面是否包含有效內容。最後，檢查每個 man 手冊頁"
+"面是否安裝到正確的路徑。"
 
 #: include/inspect.h:1371
 msgid "Check that XML files included in the RPM payload are well-formed."
-msgstr ""
+msgstr "檢查 RPM 承載中包含的 XML 檔案是否為格式良好的 XML。"
 
 #: include/inspect.h:1377
 msgid ""
@@ -71,28 +83,34 @@ msgid ""
 "after build did not lose a PT_GNU_RELRO segment. When comparing builds and "
 "there is a list of forbidden library functions, make sure nothing uses them."
 msgstr ""
+"對 ELF 檔案執行數項檢查。首先，檢查 ELF 物件是否不包含可執行的堆疊。第二，檢"
+"查 ELF 物件是否不包含文字重定位。在比較建置時，檢查後版本建置中的 ELF 物件是"
+"否遺失了 PT_GNU_RELRO 區段。在比較建置且有禁止的程式庫函式清單時，確保沒有任"
+"何內容使用它們。"
 
 #: include/inspect.h:1383
 msgid ""
 "Perform syntax and file reference checks on *.desktop files. Syntax errors "
 "and invalid file references are reported as errors."
 msgstr ""
+"對 *.desktop 檔案執行語法與檔案參照檢查。語法錯誤與無效的檔案參照會被回報為錯"
+"誤。"
 
 #: include/inspect.h:1389
 msgid ""
 "Check that the 'Release' tag in the RPM spec file includes the %{?dist} "
 "directive."
-msgstr ""
+msgstr "檢查 RPM spec 檔案中的「Release」標籤是否包含 %{?dist} 指令。"
 
 #: include/inspect.h:1395
 msgid "Ensure the spec file name conforms to the NAME.spec naming format."
-msgstr ""
+msgstr "確保 spec 檔案名稱符合 NAME.spec 命名格式。"
 
 #: include/inspect.h:1403
 msgid ""
 "Ensure compliance with modularity build and packaging policies (only valid "
 "for module builds, no-op otherwise)."
-msgstr ""
+msgstr "確保符合模組化建置與打包政策（僅對模組建置有效，否則為無操作）。"
 
 #: include/inspect.h:1411
 msgid ""
@@ -101,6 +119,9 @@ msgid ""
 "exceeded.  The bytecode version is vendor specific to releases and defined "
 "in the configuration file."
 msgstr ""
+"檢查 class 檔案最低所需的 Java 位元組碼版本，回報建置之間的位元組碼版本變更，"
+"並回報位元組碼版本是否超出範圍。位元組碼版本依發行版本而異，由供應商定義在設"
+"定檔中。"
 
 #: include/inspect.h:1417
 msgid ""
@@ -113,6 +134,11 @@ msgid ""
 "C and C++ header files are preprocessed and compared using diff(1).  Any "
 "changes with diff output are included in the results."
 msgstr ""
+"回報前後建置之間的檔案變更。若關切事項比單純回報變更更為關鍵（例如疑似有安全"
+"性影響），某些檔案變更會觸發額外警告。任何 gzip、bzip2 或 xz 壓縮檔案僅會比較"
+"其未壓縮內容，這將允許壓縮等級的變更透過。訊息目錄檔案（.mo）會解開並使用 "
+"diff(1) 比較。公開的 C 與 C++ 標頭檔案則會經過預處理並使用 diff(1) 比較。任何"
+"包含 diff 輸出的變更都會納入結果中。"
 
 #: include/inspect.h:1423
 msgid ""
@@ -122,6 +148,9 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"回報建置之間移動了安裝路徑或跨子套件移動的檔案。移動至安全性路徑前綴的檔案會"
+"產生特殊回報，以防需要安全性審查。rebase 的套件會以 INFO 層級回報這些發現，"
+"非 rebase 套件則以 VERIFY 層級或更高層級回報。"
 
 #: include/inspect.h:1429
 msgid ""
@@ -133,6 +162,10 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"回報前後建置之間被移除的檔案。共用程式庫會產生額外的回報輸出，因為它們可能是"
+"非預期的相依性移除。從安全性路徑前綴中移除的檔案會產生特殊回報，以防需要安全"
+"性審查。此檢查會忽略原始碼 RPM 與 debuginfo 檔案。rebase 的套件會以 INFO 層級"
+"回報這些發現，非 rebase 套件則以 VERIFY 層級或更高層級回報。"
 
 #: include/inspect.h:1435
 msgid ""
@@ -144,6 +177,10 @@ msgid ""
 "Rebased packages report these findings at the INFO level while non-rebased "
 "packages report them at the VERIFY level or higher."
 msgstr ""
+"回報前後建置之間新增的檔案。debuginfo 檔案以及符合設定檔中定義模式的檔案會被"
+"忽略。新增至安全性路徑的檔案會產生特殊回報，以防需要安全性審查。新的 setuid "
+"與 setgid 檔案會觸發安全性警告，除非該檔案在 fileinfo 清單中。rebase 的套件會"
+"以 INFO 層級回報這些發現，非 rebase 套件則以 VERIFY 層級或更高層級回報。"
 
 #: include/inspect.h:1441
 msgid ""
@@ -152,6 +189,9 @@ msgid ""
 "on the rebaseable list, the change is reported as informational. Otherwise "
 "the change is reported as a rebase of the package and requires inspection."
 msgstr ""
+"回報 RPM spec 檔案中定義的原始碼封存檔在前後建置之間的內容變更。若原始碼封存"
+"檔變更且套件位於可 rebase 清單中，則此變更以資訊層級回報。否則此變更視為套件 "
+"rebase 並需要檢查。"
 
 #: include/inspect.h:1447
 msgid ""
@@ -159,6 +199,8 @@ msgid ""
 "make sure executables are owned by the correct user and group. If a before "
 "and after build have been specified, also report ownership changes."
 msgstr ""
+"回報由非預期使用者與群組擁有的檔案與目錄。檢查以確保可執行檔由正確的使用者與"
+"群組擁有。若指定了前後建置，亦會回報擁有權變更。"
 
 #: include/inspect.h:1453
 msgid ""
@@ -169,6 +211,10 @@ msgid ""
 "perform the previous check but also report if a previously bad script is now "
 "passing the syntax check."
 msgstr ""
+"對建置中的所有 shell 腳本，使用其 #! 行中定義的 shell（該 shell 亦須列在設定"
+"資料的 shell 區段中）執行語法檢查。若語法檢查回傳非零值，請向使用者回報並回傳"
+"合併的 stdout 與 stderr。若比較兩個建置，除執行前述檢查外，亦會回報先前失敗的"
+"腳本是否現已透過語法檢查。"
 
 #: include/inspect.h:1459
 msgid ""
@@ -178,12 +224,17 @@ msgid ""
 "build.  If no annocheck tests are defined in the configuration file, this "
 "inspection is skipped."
 msgstr ""
+"對建置中所有 ELF 檔案執行設定檔中定義的 annocheck 測試。僅指定單一建置時只會"
+"執行分析。指定兩個建置時則會比較前後建置之間的測試結果。若設定檔中未定義任何 "
+"annocheck 測試，則會跳過此檢查。"
 
 #: include/inspect.h:1465
 msgid ""
 "Compare DT_NEEDED entries in dynamic ELF executables and shared libraries "
 "between the before and after build and report changes."
 msgstr ""
+"比較前後建置之間動態 ELF 可執行檔與共用程式庫中的 DT_NEEDED 項目，並回報變更"
+"。"
 
 #: include/inspect.h:1471
 msgid ""
@@ -191,6 +242,8 @@ msgid ""
 "non-empty files became empty, report those as results needing verification.  "
 "Report file change percentages as info-only."
 msgstr ""
+"回報建置之間的檔案大小變更。若空檔案變成非空，或非空檔案變成空的，則將其回報"
+"為需要確認的結果。檔案變更百分比僅以資訊層級回報。"
 
 #: include/inspect.h:1477
 msgid ""
@@ -198,6 +251,8 @@ msgid ""
 "list for the product release specified or determined.  Any setuid or setgid "
 "changes will raise a message requiring Security Team review."
 msgstr ""
+"回報建置之間的 stat(2) 模式變更。根據指定或判定的產品發行版本比對 fileinfo 清"
+"單。任何 setuid 或 setgid 變更將會觸發需要安全性團隊審查的訊息。"
 
 #: include/inspect.h:1485
 msgid ""
@@ -206,6 +261,9 @@ msgid ""
 "capabilities changes not listed will raise a message requiring Security Team "
 "review."
 msgstr ""
+"回報建置之間的 capabilities(7) 變更。根據指定或判定的產品發行版本比對 "
+"capabilities 清單。任何未列出的 capabilities 變更將會觸發需要安全性團隊審查的"
+"訊息。"
 
 #: include/inspect.h:1494
 msgid ""
@@ -213,6 +271,8 @@ msgid ""
 "between builds.  This inspection is intended as an information gathering "
 "tool to gather kernel module differences between two builds."
 msgstr ""
+"回報建置之間的核心模組參數、相依性、PCI ID 或符號差異。此檢查旨在作為資訊收集"
+"工具，用於收集兩個建置之間的核心模組差異。"
 
 #: include/inspect.h:1501
 msgid ""
@@ -222,12 +282,14 @@ msgid ""
 "architectures as provided in the before build and not seeing them in the "
 "after build."
 msgstr ""
+"回報前後建置之間出現與消失的 RPM 架構。此檢查不會回報 noarch 套件的消失。此檢"
+"查的目的是回報前版本建置中提供、但在後版本建置中消失的目標機器架構。"
 
 #: include/inspect.h:1507
 msgid ""
 "Report RPM subpackages that appear and disappear between the before and "
 "after builds."
-msgstr ""
+msgstr "回報前後建置之間出現與消失的 RPM 子套件。"
 
 #: include/inspect.h:1513
 #, c-format
@@ -236,6 +298,8 @@ msgid ""
 "Reports any other differences in the existing changelog between builds and "
 "that the new entry contains new text entries."
 msgstr ""
+"確保套件在 %changelog 中包含對應所建置版本的條目。回報建置之間現有 changelog "
+"的任何其他差異，以及新條目是否包含新的文字內容。"
 
 #: include/inspect.h:1519
 msgid ""
@@ -244,6 +308,8 @@ msgid ""
 "path migrations.  The main examples are /bin migrating to /usr/bin and /sbin "
 "migrating to /usr/sbin."
 msgstr ""
+"回報被打包至產品已不再使用之目錄中的檔案。這通常表示套件未因應路徑遷移而更新"
+"。主要範例包括 /bin 遷移至 /usr/bin，以及 /sbin 遷移至 /usr/sbin。"
 
 #: include/inspect.h:1525
 msgid ""
@@ -253,6 +319,10 @@ msgid ""
 "ELF objects shipped in packages.  This inspection looks for LTO bytecode in "
 "ELF relocatable objects and reports if any is present."
 msgstr ""
+"連結時間最佳化（LTO）可產生更小更快的共用 ELF 可執行檔與程式庫。LTO 位元組碼"
+"在不同版本的 gcc 之間並不穩定。因此，LTO 位元組碼不應出現在套件所提供的 .a "
+"和 .o ELF 物件中。此檢查會尋找 ELF 可重定位物件中的 LTO 位元組碼，並回報是否"
+"存在。"
 
 #: include/inspect.h:1531
 msgid ""
@@ -260,18 +330,20 @@ msgid ""
 "ensures absolute and relative symlinks are valid.  It also checks for any "
 "symlink usage that will cause problems for RPM."
 msgstr ""
+"符號連結必須在已安裝的系統上能夠解析。此檢查確保絕對與相對符號連結皆為有效的"
+"，同時檢查任何可能對 RPM 造成問題的符號連結用法。"
 
 #: include/inspect.h:1537
 #, c-format
 msgid ""
 "Check %files sections in the spec file for any forbidden path references."
-msgstr ""
+msgstr "檢查 spec 檔案中的 %files 區段是否有任何禁止的路徑參照。"
 
 #: include/inspect.h:1543
 msgid ""
 "Compare MIME types of files between builds and report any changes for "
 "verification."
-msgstr ""
+msgstr "比較建置之間檔案的 MIME 類型，並回報任何需要確認的變更。"
 
 #: include/inspect.h:1549
 msgid ""
@@ -284,6 +356,11 @@ msgid ""
 "that, turn off the abidiff inspection or add the package name to the "
 "rebaseable list."
 msgstr ""
+"在比較兩個建置或兩個套件時，使用 libabigail 專案的 abidiff(1) 來比較 ELF 檔案"
+"。差異將會被回報。若套件屬於 rebase 但不在可 rebase 清單中，且啟用了 rebase "
+"檢查，則 ABI 差異會以失敗形式回報。此處的假設是 rpminspect 是為了維護目的而比"
+"較建置，且您不希望為使用者引入任何 ABI 變更。若您不在意這點，請關閉 abidiff "
+"檢查或將套件名稱加入可 rebase 清單。"
 
 #: include/inspect.h:1555
 msgid ""
@@ -294,6 +371,10 @@ msgid ""
 "rebase, an incompatible change reported by kmidiff is reported for "
 "verification."
 msgstr ""
+"kmidiff 比較兩個 Linux 核心樹狀結構的二進位核心模組介面（KMI）。二進位 KMI "
+"是 Linux 核心向其模組公開的介面。此處我們關注的樹狀結構是 Linux 核心原始碼樹"
+"狀結構的建置結果。若比較的建置不被視為 rebase，則 kmidiff 回報的不相容變更會"
+"回報以供確認。"
 
 #: include/inspect.h:1561
 #, c-format
@@ -303,13 +384,16 @@ msgid ""
 "is reported at the INFO level.  Content and location changes are reporting "
 "at the VERIFY level unless the comparison is between rebased packages."
 msgstr ""
+"檢查並回報 spec 檔案中以 %config 標記的設定檔差異。若變更僅涉及空白或格式，結"
+"果會以 INFO 層級回報。內容與位置變更則以 VERIFY 層級回報，除非比較的是 "
+"rebase 的套件。"
 
 #: include/inspect.h:1567
 #, c-format
 msgid ""
 "Report changes in %doc marked files.  Files that have been added or removed "
 "as documentation files, for instance."
-msgstr ""
+msgstr "回報以 %doc 標記的檔案變更。例如被新增或移除的文件檔案。"
 
 #: include/inspect.h:1573
 msgid ""
@@ -323,6 +407,11 @@ msgid ""
 "can also list patch names that rpminspect should ignore during the "
 "inspection."
 msgstr ""
+"檢查 spec 檔案中定義的所有修補並回報建置之間的變更。此處的功能檢查是確保前文"
+"中定義的所有修補在 spec 檔案中都有對應的套用巨集。在 INFO 層級，rpminspect 會"
+"回報檔案數量、行數與修補大小變更。若修補大小或修補所觸及的檔案數量達到變更閾"
+"值，rpminspect 會以 VERIFY 層級回報變更，除非比較的是 rebase。設定檔亦可列出 "
+"rpminspect 在檢查期間應忽略的修補名稱。"
 
 #: include/inspect.h:1579
 msgid ""
@@ -330,6 +419,8 @@ msgid ""
 "found by libclamav will fail the inspection.  The ignore_path rules are not "
 "used in this inspection.  All files are scanned."
 msgstr ""
+"使用 libclamav 對建置中的每個檔案執行病毒掃描。libclamav 發現的任何內容都會導"
+"致檢查失敗。此檢查不使用 ignore_path 規則，所有檔案都會被掃描。"
 
 #: include/inspect.h:1585
 msgid ""
@@ -339,6 +430,9 @@ msgid ""
 "subdirectory map to the product release string.  The rules in each file "
 "define the politically sensitive allow and deny rules for that release."
 msgstr ""
+"檢查套件中已知的政治敏感檔案，並回報它們是允許還是禁止的。規則來自產品對應的 "
+"rpminspect-data 套件中 politics/ 子目錄。politics/ 子目錄中的檔案對應至產品發"
+"行字串。每個檔案中的規則定義了該發行版本的政治敏感允許與拒絕規則。"
 
 #: include/inspect.h:1591
 msgid ""
@@ -347,12 +441,14 @@ msgid ""
 "catch built packages that make use of deprecated API functions if you wish "
 "built packages to conform to replacement APIs."
 msgstr ""
+"檢查 ELF 檔案中的禁止函式。禁止函式定義在執行時期設定檔中。通常此檢查用於捕捉"
+"使用了已棄用 API 函式的已建置套件，若您希望建置的套件能遵循替代 API。"
 
 #: include/inspect.h:1597
 msgid ""
 "Check for forbidden paths in both the DT_RPATH and DT_RUNPATH settings in "
 "ELF shared objects."
-msgstr ""
+msgstr "檢查 ELF 共用物件中 DT_RPATH 與 DT_RUNPATH 設定中的禁止路徑。"
 
 #: include/inspect.h:1603
 msgid ""
@@ -360,6 +456,8 @@ msgid ""
 "for any prohibited Unicode code points, as defined in the configuration "
 "file.  Any prohibited code points are reported as a possible security risk."
 msgstr ""
+"掃描解壓縮並修補過的原始碼檔案、腳本與 RPM spec 檔案，尋找設定檔中定義的禁止 "
+"Unicode 碼位。任何禁止的碼位都會被回報為可能的安全性風險。"
 
 #: include/inspect.h:1609
 msgid ""
@@ -369,6 +467,9 @@ msgid ""
 "will check for correct RPM dependency metadata when inspecting a single "
 "build and report findings."
 msgstr ""
+"檢查正確的 RPM 相依性中介資料。回報不正確或衝突的發現，以及比較新舊建置時的預"
+"期變更。變更僅在比較建置時回報，但此檢查在檢查單一建置時亦會檢查正確的 RPM 相"
+"依性中介資料並回報發現。"
 
 #: include/inspect.h:1615
 msgid ""
@@ -377,31 +478,36 @@ msgid ""
 "report where symbols unexpectedly appear or disappear and what corrective "
 "action is needed."
 msgstr ""
+"檢查 RPM 套件中的檔案是否已除去除錯符號，以及 debuginfo 套件中的檔案是否包含"
+"除錯符號。在比較建置時，回報符號未預期出現或消失的位置，以及需要採取什麼校正"
+"措施。"
 
 #: include/inspect.h:1621
 msgid "Perform syntax check on udev rules files using udevadm verify."
-msgstr ""
+msgstr "使用 udevadm verify 對 udev 規則檔案執行語法檢查。"
 
 #: include/results.h:31
 msgid "Change the string specified on the 'Vendor:' line in the spec file."
-msgstr ""
+msgstr "變更 spec 檔案中「Vendor:」行所指定的字串。"
 
 #: include/results.h:38
 msgid "Make sure the SRPM is built on a host within the expected subdomain."
-msgstr ""
+msgstr "確保 SRPM 是在預期子網域內的主機上建置的。"
 
 #: include/results.h:45
 msgid ""
 "Unprofessional language as defined in the configuration file was found in "
 "the text shown.  Remove or change the offending words and rebuild."
 msgstr ""
+"所顯示的文字中發現了設定檔中定義的不專業用語。請移除或變更這些問題用語並重新"
+"建置。"
 
 #: include/results.h:60 include/results.h:75
 #, c-format
 msgid ""
 "Check to see if you eliminated a subpackage but still have the %package and/"
 "or the %files section for it."
-msgstr ""
+msgstr "檢查您是否移除了子套件但仍保留了其 %package 和／或 %files 區段。"
 
 #: include/results.h:90
 msgid ""
@@ -409,6 +515,8 @@ msgid ""
 "distribution (e.g., GPLv2+).  If the license in question is approved, the "
 "license database needs updating in the rpminspect-data package."
 msgstr ""
+"License 標籤必須包含發行版本所定義的經核准授權字串（例如 GPLv2+）。若該授權是"
+"經核准的，則需要更新 rpminspect-data 套件中的授權資料庫。"
 
 #: include/results.h:97
 msgid ""
@@ -416,6 +524,8 @@ msgid ""
 "valid licensedb file.  This is also commonly due to a missing vendor "
 "specific rpminspect-data package on the system."
 msgstr ""
+"確保 rpminspect 設定中的 licensedb 設定指向有效的 licensedb 檔案。這通常也因"
+"為系統上缺少供應商專用的 rpminspect-data 套件。"
 
 #: include/results.h:104
 msgid ""
@@ -426,36 +536,41 @@ msgid ""
 "but marked unapproved, you may need to work with the legal team regarding "
 "options for this software."
 msgstr ""
+"指定的授權縮寫在授權資料庫中未被列為經核准。授權資料庫在 rpminspect 設定檔中"
+"指定。請檢查此檔案並向適當的上游專案發送 pull request 以更新資料庫。若該授權"
+"在資料庫中但標記為未核准，您可能需要與法務團隊討論此軟體的選項。"
 
 #: include/results.h:119 include/results.h:154
 msgid "Ensure all object files are compiled with -fPIC"
-msgstr ""
+msgstr "確保所有目的檔均使用 -fPIC 編譯"
 
 #: include/results.h:126
 msgid ""
 "Ensure that the package is being built with the correct compiler and "
 "compiler flags"
-msgstr ""
+msgstr "確保套件使用正確的編譯器與編譯器旗標建置"
 
 #: include/results.h:133
 msgid ""
 "The data in an ELF file appears to be corrupt; ensure that packaged ELF "
 "files are not being truncated or incorrectly modified"
-msgstr ""
+msgstr "ELF 檔案中的資料似乎已損毀；確保已打包的 ELF 檔案未被截斷或錯誤修改"
 
 #: include/results.h:140
 msgid ""
 "An ELF stack is marked as executable. Ensure that no execstack options are "
 "being passed to the linker, and that no functions are defined on the stack."
 msgstr ""
+"ELF 堆疊被標記為可執行。確保沒有傳遞任何 execstack 選項給連結器，且堆疊上未定"
+"義任何函式。"
 
 #: include/results.h:147
 msgid "Ensure executables are linked with with '-z relro -z now'"
-msgstr ""
+msgstr "確保可執行檔使用「-z relro -z now」進行連結"
 
 #: include/results.h:169
 msgid "Correct the errors in the man page as reported by the libmandoc parser."
-msgstr ""
+msgstr "修正 libmandoc 解析器回報的 man 手冊頁面錯誤。"
 
 #: include/results.h:176
 msgid ""
@@ -463,34 +578,42 @@ msgid ""
 "in the directory beneath /usr/share/man that matches the section number of "
 "the page."
 msgstr ""
+"修正 man 手冊頁面的安裝路徑。man 手冊頁面必須安裝在 /usr/share/man 下與頁面章"
+"節號碼相符的目錄中。"
 
 #: include/results.h:191
 msgid "Correct the reported errors in the XML document"
-msgstr ""
+msgstr "修正回報的 XML 文件中的錯誤"
 
 #: include/results.h:206
 msgid ""
 "Refer to the Desktop Entry Specification at https://standards.freedesktop."
 "org/desktop-entry-spec/latest/ for help correcting the errors and warnings"
 msgstr ""
+"如需修正錯誤與警告的協助，請參閱 https://standards.freedesktop.org/desktop-"
+"entry-spec/latest/ 的 Desktop Entry Specification"
 
 #: include/results.h:221
 msgid ""
 "The Release: tag in the spec file must include a '%{?dist}' string.  Please "
 "add this to the spec file per the distribution packaging guidelines."
 msgstr ""
+"spec 檔案中的 Release: 標籤必須包含「%{?dist}」字串。請根據發行版本的打包指南"
+"將其加入 spec 檔案。"
 
 #: include/results.h:236
 msgid ""
 "The spec file name does not match the expected NAME.spec format.  Rename the "
 "spec file to conform to this policy."
-msgstr ""
+msgstr "spec 檔案名稱不符合預期的 NAME.spec 格式。請重新命名 spec 檔案以符合此政策。"
 
 #: include/results.h:253
 msgid ""
 "This package is part of a module but is missing the %{modularitylabel} "
 "header tag.  Add this as a %define in the spec file and rebuild."
 msgstr ""
+"此套件是模組的一部分但缺少 %{modularitylabel} 標頭標籤。請在 spec 檔案中將其"
+"加入為 %define 並重新建置。"
 
 #: include/results.h:260
 msgid ""
@@ -500,6 +623,9 @@ msgid ""
 "rules determining if the /data/static_context setting is required, "
 "forbidden, or recommend."
 msgstr ""
+"此建置包含有效或無效的 /data/static_context 設定。請參閱您正在建置的產品的模"
+"組規則，以決定設定應為何。rpminspect 設定也會設定規則來決定 /data/"
+"static_context 設定是必要的、禁止的還是建議的。"
 
 #: include/results.h:277
 msgid ""
@@ -507,24 +633,30 @@ msgid ""
 "met for the product release.  Ensure you are using the correct JDK for the "
 "build."
 msgstr ""
+"建置中一或多個 class 檔案的 Java 位元組碼版本不符合產品發行版本的要求。請確保"
+"您使用了正確的 JDK 來進行建置。"
 
 #: include/results.h:292
 msgid ""
 "File changes were found.  In most cases these are expected, but it is a good "
 "idea to verify the changes found are deliberate."
-msgstr ""
+msgstr "發現了檔案變更。在多數情況下這是預期的，但最好確認所發現的變更是刻意為之的。"
 
 #: include/results.h:307
 msgid ""
 "Unexpected file moves were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file moves between builds."
 msgstr ""
+"發現了非預期的檔案移動。請確認這些變更是正確的。如果不是，請調整建置以避免建"
+"置之間的檔案移動。"
 
 #: include/results.h:322
 msgid ""
 "Unexpected file removals were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file removals between builds."
 msgstr ""
+"發現了非預期的檔案移除。請確認這些變更是正確的。如果不是，請調整建置以避免建"
+"置之間的檔案移除。"
 
 #: include/results.h:337
 #, c-format
@@ -536,6 +668,10 @@ msgid ""
 "You may also need to update the data package or local configuration file and "
 "change the forbidden_path_prefixes or forbidden_path_suffixes list."
 msgstr ""
+"發現了非預期的檔案新增。請確認這些變更是正確的。如果不是，請調整建置以避免建"
+"置之間的檔案新增。如果是正確的，請更新 %s 並向擁有該檔案的 rpminspect 資料專"
+"案發送修補，讓 rpminspect 知道這是預期的變更。您可能也需要更新資料套件或本機"
+"設定檔，並變更 forbidden_path_prefixes 或 forbidden_path_suffixes 清單。"
 
 #: include/results.h:352
 #, c-format
@@ -545,6 +681,9 @@ msgid ""
 "deliberate, but needs inspection. If this change is expected, update %s and "
 "send a patch to the project that owns that file."
 msgstr ""
+"發現了非預期的原始碼封存檔內容變更。套件版本在建置之間沒有變更，但原始碼封存"
+"檔內容有變更。這可能是有意的，但需要檢查。若此變更是預期的，請更新 %s 並向擁"
+"有該檔案的專案發送修補。"
 
 #: include/results.h:367
 #, c-format
@@ -553,6 +692,8 @@ msgid ""
 "permissions are expected, update %s and send a patch to the project that "
 "owns it."
 msgstr ""
+"請確保 %%files 區段包含 %%defattr 巨集。若這些權限是預期的，請更新 %s 並向擁"
+"有它的專案發送修補。"
 
 #: include/results.h:374
 #, c-format
@@ -561,6 +702,8 @@ msgid ""
 "configuration, which is usually root. If this ownership is expected, update "
 "%s and send a patch to the project that owns it."
 msgstr ""
+"bin 路徑檔案必須由 rpminspect 設定中設定的 bin_owner 所擁有，這通常是 root。"
+"若此擁有權是預期的，請更新 %s 並向擁有它的專案發送修補。"
 
 #: include/results.h:381
 #, c-format
@@ -569,6 +712,8 @@ msgid ""
 "configuration, which is usually root. If this ownership is expect, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"bin 路徑檔案必須由 rpminspect 設定中設定的 bin_group 所擁有，這通常是 root。"
+"若此擁有權是預期的，請更新 %s 並向擁有它的專案發送修補。"
 
 #: include/results.h:388
 #, c-format
@@ -577,6 +722,8 @@ msgid ""
 "or remove the world execute bit on the file (chmod o-x). If this ownership "
 "is expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"請將檔案的群組變更為 rpminspect 設定中設定的 bin_group，或者移除檔案的全域執"
+"行位元（chmod o-x）。若此擁有權是預期的，請更新 %s 並向擁有它的專案發送修補。"
 
 #: include/results.h:395
 #, c-format
@@ -585,6 +732,8 @@ msgid ""
 "or remove the group write bit on the file (chmod g-w). If this ownership is "
 "expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"請將檔案的群組變更為 rpminspect 設定中設定的 bin_group，或者移除檔案的群組寫"
+"入位元（chmod g-w）。若此擁有權是預期的，請更新 %s 並向擁有它的專案發送修補。"
 
 #: include/results.h:402
 #, c-format
@@ -593,6 +742,8 @@ msgid ""
 "process to set correct owner and group information. If expected, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"請確認擁有權變更是預期的。如果不是，請調整套件建置流程以設定正確的擁有者與群"
+"組資訊。如果是預期的，請更新 %s 並向擁有它的專案發送修補。"
 
 #: include/results.h:409
 msgid ""
@@ -603,26 +754,34 @@ msgid ""
 "remedy, add a fileinfo rule for this file to the vendor data package under "
 "the appropriate product release file."
 msgstr ""
+"rpminspect 預期供應商資料套件中應有此檔案的 fileinfo 規則。這通常表示該檔案具"
+"有非標準的權限集（例如 setuid），在這種情況下 rpminspect 會檢查 fileinfo 清單"
+"以確保套件符合供應商規則。補救方法為在適當的產品發行檔案下，為此檔案新增 "
+"fileinfo 規則到供應商資料套件中。"
 
 #: include/results.h:424
 msgid "Consult the shell documentation for proper syntax."
-msgstr ""
+msgstr "請參考 shell 文件以取得正確的語法。"
 
 #: include/results.h:431
 msgid ""
 "The file referenced was not a known shell script in the before build but is "
 "now a shell script in the after build."
 msgstr ""
+"參照的檔案在前版本建置中不是已知的 shell 腳本，但在後版本建置中變成了 shell "
+"腳本。"
 
 #: include/results.h:438
 msgid ""
 "The referenced shell script is invalid. Consider debugging it with the '-n' "
 "option on the shell to find and fix the problem."
 msgstr ""
+"參照的 shell 腳本無效。請考慮使用 shell 的「-n」選項進行偵錯，以找出並修正問"
+"題。"
 
 #: include/results.h:453
 msgid "See annocheck(1) for more information."
-msgstr ""
+msgstr "請參閱 annocheck(1) 以取得更多資訊。"
 
 #: include/results.h:460
 msgid ""
@@ -631,6 +790,9 @@ msgid ""
 "declarations). Symbols may also appear as unfortified if the compiler is "
 "unable to determine the size of a buffer, which is not necessarily an error."
 msgstr ""
+"確保所有目的檔均使用「-O2 -D_FORTIFY_SOURCE=2」編譯，且所有適當的標頭均已包含"
+"（無隱含函式宣告）。若編譯器無法判斷緩衝區大小，符號也可能顯示為未強化，這不"
+"一定表示有錯誤。"
 
 #: include/results.h:475
 msgid ""
@@ -640,6 +802,9 @@ msgid ""
 "If they are not, modify the package spec file to ensure the build links with "
 "the correct shared libraries."
 msgstr ""
+"DT_NEEDED 符號已被新增或移除。這發生在建置環境具有不同版本的所需程式庫時。有"
+"時這是有意的，但有時不是。請確認這些變更是預期的。如果不是，請修改套件 spec "
+"檔案以確保建置連結到正確的共用程式庫。"
 
 #: include/results.h:490
 msgid ""
@@ -647,6 +812,8 @@ msgid ""
 "is, you can adjust the filesize inspection settings in the rpminspect.yaml "
 "file."
 msgstr ""
+"檔案大小明顯增加。請確保此變更是有意的。如果是，您可以調整 rpminspect.yaml 檔"
+"案中的 filesize 檢查設定。"
 
 #: include/results.h:497
 msgid ""
@@ -654,18 +821,22 @@ msgid ""
 "it is, you can adjust the filesize inspection settings in the rpminspect."
 "yaml file."
 msgstr ""
+"檔案大小明顯縮小。請確保此變更是有意的。如果是，您可以調整 rpminspect.yaml 檔"
+"案中的 filesize 檢查設定。"
 
 #: include/results.h:504
 msgid ""
 "A previously empty file is no longer empty.  Make sure this change is "
 "intended and fix the package spec file if necessary."
-msgstr ""
+msgstr "先前為空的檔案不再為空。請確保此變更是有意的，並在必要時修正套件 spec 檔案。"
 
 #: include/results.h:511
 msgid ""
 "A previously non-empty file is now empty.  Make sure this change is intended "
 "and fix the package space file if necessary."
 msgstr ""
+"先前為非空的檔案現在為空。請確保此變更是有意的，並在必要時修正套件 spec 檔案"
+"。"
 
 #: include/results.h:526
 #, c-format
@@ -676,6 +847,10 @@ msgid ""
 "may also be of help for this situation.  If necessary, update %s with the "
 "changes found here and send a patch to the project that owns the data file."
 msgstr ""
+"在指定的檔案上發現了非預期的 capabilities。請參考 capabilities(7)，並調整套件"
+"中的檔案或修改 rpminspect 供應商資料套件中的 capabilities 清單。安全性團隊也"
+"可能在此情況下提供協助。如有必要，請使用此處發現的變更更新 %s，並向擁有該資料"
+"檔案的專案發送修補。"
 
 #: include/results.h:541
 msgid ""
@@ -683,6 +858,8 @@ msgid ""
 "usability problems for users if module parameters were removed in a "
 "maintenance update."
 msgstr ""
+"建置之間移除了核心模組參數。若在維護更新中移除了模組參數，可能對使用者造成可"
+"用性問題。"
 
 #: include/results.h:548
 msgid ""
@@ -690,6 +867,8 @@ msgid ""
 "usability problems for users if module dependencies changed in a maintenance "
 "update."
 msgstr ""
+"建置之間核心模組相依性變更了。若在維護更新中變更了模組相依性，可能對使用者造"
+"成可用性問題。"
 
 #: include/results.h:555
 msgid ""
@@ -697,6 +876,8 @@ msgid ""
 "usability problems for users if module device aliases changed in a "
 "maintenance update."
 msgstr ""
+"建置之間核心模組裝置別名變更了。若在維護更新中變更了模組裝置別名，可能對使用"
+"者造成可用性問題。"
 
 #: include/results.h:565
 msgid ""
@@ -704,12 +885,14 @@ msgid ""
 "build.  This may be deliberate, but check to make sure you do not have any "
 "unexpected ExclusiveArch lines in the spec file."
 msgstr ""
+"前版本建置中存在的架構在後版本建置中消失了。這可能是有意的，但請檢查以確保 "
+"spec 檔案中沒有任何非預期的 ExclusiveArch 行。"
 
 #: include/results.h:566
 msgid ""
 "A new architecture has appeared in the after build.  This may indicate "
 "progress in the world of computing."
-msgstr ""
+msgstr "後版本建置中出現了一個新的架構。這可能代表計算領域的進步。"
 
 #: include/results.h:576
 msgid ""
@@ -717,31 +900,35 @@ msgid ""
 "This may be deliberate, but check to make sure you have correct syntax "
 "defining the subpackage in the spec file"
 msgstr ""
+"前版本建置中存在的子套件在後版本建置中消失了。這可能是有意的，但請檢查以確保"
+"您在 spec 檔案中定義子套件的語法是正確的"
 
 #: include/results.h:577
 msgid ""
 "A new subpackage has appeared in the after build.  This may indicate "
 "progress in the world of computing."
-msgstr ""
+msgstr "後版本建置中出現了一個新的子套件。這可能代表計算領域的進步。"
 
 #: include/results.h:587
 #, c-format
 msgid ""
 "Make sure the spec file in the after build contains a valid %changelog "
 "section."
-msgstr ""
+msgstr "確保後版本建置中的 spec 檔案包含有效的 %changelog 區段。"
 
 #: include/results.h:597
 msgid ""
 "Files should not be installed in old directory names.  Modify the package to "
 "install the affected file to the preferred directory."
-msgstr ""
+msgstr "檔案不應安裝在舊的目錄名稱中。請修改套件，將受影響的檔案安裝到慣用的目錄。"
 
 #: include/results.h:607
 msgid ""
 "ELF .o and .a files should not carry LTO (Link Time Optimization) bytecode.  "
 "Make sure you have stripped LTO bytecode from those files at install time."
 msgstr ""
+"ELF .o 與 .a 檔案不應包含 LTO（連結時間最佳化）位元組碼。請確保您已在安裝時從"
+"這些檔案中除去 LTO 位元組碼。"
 
 #: include/results.h:617
 msgid ""
@@ -750,6 +937,9 @@ msgid ""
 "and have a non-symlink turn in to a symlink, ensure this is deliberate.  "
 "NOTE:  You cannot turn a directory in to a symlink due to RPM limitations."
 msgstr ""
+"請確保符號連結指向建置中某個子套件內的有效目的地；不允許懸置的符號連結。若您"
+"正在比較建置且有一個非符號連結變成了符號連結，請確保這是有意的。注意：由於 "
+"RPM 的限制，您無法將目錄變成符號連結。"
 
 #: include/results.h:618
 #, c-format
@@ -762,6 +952,11 @@ msgid ""
 "scriptlet for replacing a directory.  See the packaging guidelines for "
 "'Scriptlet to replace a directory' for more information."
 msgstr ""
+"請確保符號連結指向建置中某個子套件內的有效目的地；不允許懸置的符號連結。若您"
+"正在比較建置且有一個非符號連結變成了符號連結，請確保這是有意的。注意：由於 "
+"RPM 的限制，您無法將目錄變成符號連結。若您絕對必須這樣做，請確保納入用於取代"
+"目錄的 %pretrans scriptlet。詳見打包指南中的「Scriptlet to replace a "
+"directory」取得更多資訊。"
 
 #: include/results.h:628
 #, c-format
@@ -771,6 +966,8 @@ msgid ""
 "See the RPM documentation or distribution package maintainer guide for more "
 "information."
 msgstr ""
+"從 %files 區段中指定的行移除禁止的路徑參照。在許多情況下，您可以使用 RPM 巨集"
+"來指定路徑位置。請參閱 RPM 文件或發行版本的套件維護者指南以取得更多資訊。"
 
 #: include/results.h:638
 msgid ""
@@ -778,6 +975,8 @@ msgid ""
 "is intended and if necessary fix the spec file so the correct file is "
 "included in the built package."
 msgstr ""
+"在許多情況下，MIME 類型變更是有意的。請確認此變更是有意的，並在必要時修正 "
+"spec 檔案，以便在已建置的套件中包含正確的檔案。"
 
 #: include/results.h:648
 msgid ""
@@ -785,6 +984,8 @@ msgid ""
 "users.  See the abidiff(1) documentation and the distribution ABI policies "
 "to determine if this detected change is allowed."
 msgstr ""
+"維護更新中引入的 ABI 變更可能對使用者造成問題。請參閱 abidiff(1) 文件與發行版"
+"本的 ABI 政策，以判斷此偵測到的變更是否允許。"
 
 #: include/results.h:658
 msgid ""
@@ -792,6 +993,8 @@ msgid ""
 "problems for users.  See the libabigail documentation and the distribution "
 "KMI policy to determine if this detected change is allowed."
 msgstr ""
+"維護更新中引入的核心模組介面變更可能對使用者造成問題。請參閱 libabigail 文件"
+"與發行版本的 KMI 政策，以判斷此偵測到的變更是否允許。"
 
 #: include/results.h:668
 #, c-format
@@ -801,6 +1004,8 @@ msgid ""
 "configuration files, make sure the package can handle upgrading an existing "
 "package -or- honor the old file locations."
 msgstr ""
+"對 %config 的變更應謹慎進行。請確保您已安裝正確的檔案且位於正確的位置。若套件"
+"正在重組設定檔案，請確保套件能處理升級現有套件，或尊重舊的檔案位置。"
 
 #: include/results.h:678
 #, c-format
@@ -809,6 +1014,8 @@ msgid ""
 "the package is not a rebase.  Sometimes upstream projects rename or move "
 "documentation files and the spec file needs to account for those changes."
 msgstr ""
+"在 %doc 檔案中發現了變更。若套件不是 rebase，請確認這些變更是有意的。有時上游"
+"專案會重新命名或移動文件檔案，而 spec 檔案需要反映這些變更。"
 
 #: include/results.h:688
 msgid ""
@@ -818,6 +1025,9 @@ msgid ""
 "the source package has any zero length or otherwise invalid patches and "
 "correct the problem."
 msgstr ""
+"發現了無效的修補檔案。這通常是比較兩個樹狀結構以產生修補集合的結果。當檔案消"
+"失時，可能導致產生的集合中出現長度為零的修補。請檢查原始碼套件是否有任何長度"
+"為零或無效的修補，並修正問題。"
 
 #: include/results.h:690
 #, c-format
@@ -831,6 +1041,12 @@ msgid ""
 "define the patch at the top of the spec file.  So Patch47 is applied with "
 "either a '%patch 47', '%patch -P 47', '%patch -P47', or '%patch47' macro."
 msgstr ""
+"指定的修補在原始碼 RPM 標頭中已定義（表示它在 spec 檔案中有 PatchN: 定義），"
+"但未在 spec 檔案中的任何位置套用。它缺少對應的 %patch 巨集，且 spec 檔案缺少 "
+"%autosetup 或 %autopatch 巨集。您可以透過在 spec 檔案中（通常在 %prep 區段）"
+"加入適當的 %patch 巨集來修正此問題。%patch 巨集所指定的編號對應到 spec 檔案頂"
+"部定義修補所用的編號。因此 Patch47 要透過「%patch 47」、「%patch -P 47」、"
+"「%patch -P47」或「%patch47」巨集來套用。"
 
 #: include/results.h:692
 #, c-format
@@ -840,12 +1056,17 @@ msgid ""
 "For example, Patch47 needs to have either a '%patch 47', '%patch -P 47', "
 "'%patch -P47', or '%patch47' macro."
 msgstr ""
+"指定的修補已定義，但與 %patch 巨集的編號不符。請確保所有編號的修補都有對應的 "
+"%patch 巨集。例如，Patch47 需要有「%patch 47」、「%patch -P 47」、「%patch -"
+"P47」或「%patch47」巨集。"
 
 #: include/results.h:694
 msgid ""
 "The defined patch file is not something rpminspect can handle.  This is "
 "likely a bug and should be reported to the upstream rpminspect project."
 msgstr ""
+"定義的修補檔案是 rpminspect 無法處理的。這很可能是 bug，應回報給上游的 "
+"rpminspect 專案。"
 
 #: include/results.h:704
 msgid ""
@@ -855,6 +1076,9 @@ msgid ""
 "sure the file in question is clean, please file a bug with rpminspect for "
 "further help."
 msgstr ""
+"ClamAV 在指定的檔案中發現了病毒。這可能是誤判，但您應手動檢查該檔案以確保它是"
+"乾淨的。這可能是 ClamAV 資料庫或偵測的問題。若您確定該檔案是乾淨的，請向 "
+"rpminspect 提交 bug 以取得進一步協助。"
 
 #: include/results.h:714
 #, c-format
@@ -864,6 +1088,8 @@ msgid ""
 "vendor data package for the product.  Modify the %s file and send a patch to "
 "the project that owns it."
 msgstr ""
+"在套件中發現了可能具有政治敏感內容的檔案。若此檔案是允許的，應將其加入產品對"
+"應的 rpminspect 供應商資料套件中。請修改 %s 檔案並向擁有它的專案發送修補。"
 
 #: include/results.h:724
 msgid ""
@@ -876,6 +1102,10 @@ msgid ""
 "order to allow for backwards compatibility.  Whenever possible the "
 "deprecated functions should not be used."
 msgstr ""
+"在套件中的 ELF 檔案內發現了禁止的符號。rpminspect 的設定指出指定的符號在套件"
+"中是禁止的。若這是有意的，您可能想要停用 badfuncs 檢查。若不是有意的，請查閱"
+"指定符號的 man 手冊頁面，看看哪些 API 函式已取代了禁止的符號。通常函式會被標"
+"記為已棄用但仍提供，以便向後相容。在可能的情況下，不應使用已棄用的函式。"
 
 #: include/results.h:734
 msgid ""
@@ -886,6 +1116,10 @@ msgid ""
 "try using a program such as patchelf to remove these properties from the ELF "
 "files."
 msgstr ""
+"在此套件的 ELF 共用物件上發現了 DT_RPATH 或 DT_RUNPATH 屬性。除特定情況外，不"
+"鼓勵使用 DT_RPATH 與 DT_RUNPATH。請檢查您是否在 spec 檔案的 %build 階段停用"
+"了 rpath。若無法輕鬆做到，您可以嘗試使用 patchelf 等程式從 ELF 檔案中移除這些"
+"屬性。"
 
 #: include/results.h:736
 msgid ""
@@ -893,6 +1127,8 @@ msgid ""
 "This indicates a linker error and should not happen.  ELF objects should "
 "only carry DT_RPATH or DT_RUNPATH, never both."
 msgstr ""
+"在 ELF 共用物件中同時發現了 DT_RPATH 與 DT_RUNPATH 屬性。這表示有連結器錯誤，"
+"且不應該發生。ELF 物件只應包含 DT_RPATH 或 DT_RUNPATH，不應同時包含兩者。"
 
 #: include/results.h:746
 msgid ""
@@ -902,6 +1138,9 @@ msgid ""
 "discuss the situation with the Product Security Team to determine the "
 "correct course of action."
 msgstr ""
+"rpminspect 設定檔包含一份禁止的 Unicode 碼位清單。在解壓縮並修補過的原始碼樹"
+"狀結構中，或是在原始碼 RPM 的文字原始碼檔案中發現了一個禁止的碼位。請移除此碼"
+"位，或與產品安全性團隊討論以決定正確的處理方式。"
 
 #: include/results.h:748
 #, c-format
@@ -912,6 +1151,9 @@ msgid ""
 "running.  A common cause is removal of the working directory while the "
 "program is executing."
 msgstr ""
+"spec 檔案的 %prep 區段因某些原因無法執行。這通常源於 librpmbuild 失敗，通常與"
+"封存檔解壓縮問題或 rpminspect 執行期間檔案系統變動有關。常見原因是在程式執行"
+"期間移除了工作目錄。"
 
 #: include/results.h:758
 msgid ""
@@ -919,6 +1161,8 @@ msgid ""
 "Check the spec file for this dependency and ensure you have not misspelled a "
 "macro or used a macro name that does not exist."
 msgstr ""
+"在記錄的相依性規則中發現了未展開的 RPM spec 檔案巨集。請檢查 spec 檔案中的這"
+"個相依性，並確保您沒有拼錯巨集或使用了不存在的巨集名稱。"
 
 #: include/results.h:760
 msgid ""
@@ -927,6 +1171,9 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{version}-%{release}' "
 "in the spec file."
 msgstr ""
+"請在 spec 檔案中為指定的子套件加入明確的 Requires。相依於另一個子套件中共用程"
+"式庫的子套件，必須在 spec 檔案中帶有明確的「Requires: SUBPACKAGE_NAME = %"
+"{version}-%{release}」。"
 
 #: include/results.h:762
 msgid ""
@@ -935,6 +1182,9 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-"
 "%{release}' in the spec file."
 msgstr ""
+"請在 spec 檔案中為指定的子套件加入明確的 Requires。相依於另一個子套件中共用程"
+"式庫的子套件，必須在 spec 檔案中帶有明確的「Requires: SUBPACKAGE_NAME = %"
+"{epoch}:%{version}-%{release}」。"
 
 #: include/results.h:764
 #, c-format
@@ -945,6 +1195,9 @@ msgid ""
 "spec file but you do need to make sure only one subpackage is packaging up "
 "the shared library in question."
 msgstr ""
+"檢查子套件的 %files 區段與明確的 Provides 陳述式。只有一個子套件應提供指定的"
+"共用程式庫。共用程式庫名稱會自動加入為 Provides，因此無需在 spec 檔案中指定它"
+"們，但您確實需要確保只有一個子套件在打包該共用程式庫。"
 
 #: include/results.h:766
 msgid ""
@@ -954,6 +1207,9 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"前版本建置中列出的相依性變更為後版本建置中指出的相依性。若這是 VERIFY 結果，"
+"表示 rpminspect 注意到在其視為套件維護更新的範圍內有變更。INFO 結果表示它注意"
+"到了此變更，但因比較的是 rebase 建置而認為無妨。"
 
 #: include/results.h:768
 msgid ""
@@ -963,6 +1219,9 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"後版本建置中出現了前版本建置中不存在的新相依性。若這是 VERIFY 結果，表示 "
+"rpminspect 注意到在其視為套件維護更新的範圍內有變更。INFO 結果表示它注意到了"
+"此變更，但因比較的是 rebase 建置而認為無妨。"
 
 #: include/results.h:770
 msgid ""
@@ -972,6 +1231,9 @@ msgid ""
 "An INFO result means it noticed this change, but deems it ok because it is "
 "comparing a rebased build."
 msgstr ""
+"前版本建置中存在的相依性在後版本建置中消失了，表示它已被移除或遺失。若這是 "
+"VERIFY 結果，表示 rpminspect 注意到在其視為套件維護更新的範圍內有變更。INFO "
+"結果表示它注意到了此變更，但因比較的是 rebase 建置而認為無妨。"
 
 #: include/results.h:772
 msgid ""
@@ -981,72 +1243,77 @@ msgid ""
 "%{version}-%{release}' to capture the package package Epoch in the "
 "dependency."
 msgstr ""
+"套件的 Epoch 值大於零，但明確的子套件相依性並未一致地使用它。對於所回報的相依"
+"性，需要將「= %{version}-%{release}」變更為「= %{epoch}:%{version}-%{release}"
+"」，以在相依性中納入套件的 Epoch 值。"
 
 #: include/results.h:781
 msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
+"如需修正錯誤與警告的協助，請參閱 https://www.freedesktop.org/software/"
+"systemd/man/udev.html 的 udev 文件。"
 
 #: lib/abi.c:65
 #, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr ""
+msgstr "*** 格式錯誤的 ABI 層級識別碼：%s"
 
 #: lib/abi.c:70
 #, c-format
 msgid "*** ABI level %d already defined"
-msgstr ""
+msgstr "*** ABI 層級 %d 已定義"
 
 #: lib/abi.c:84
 #, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr ""
+msgstr "*** 格式錯誤的 ABI 層級條目：%s"
 
 #: lib/builds.c:73
 #, c-format
 msgid "*** unable to create download directory %s"
-msgstr ""
+msgstr "*** 無法建立下載目錄 %s"
 
 #: lib/builds.c:85
 #, c-format
 msgid "*** unknown working directory type: %d"
-msgstr ""
+msgstr "*** 未知的工作目錄類型：%d"
 
 #: lib/builds.c:173
 #, c-format
 msgid "*** unable to read %s, skipping"
-msgstr ""
+msgstr "*** 無法讀取 %s，略過"
 
 #: lib/builds.c:205
 #, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr ""
+msgstr "*** 遇到未知的目錄成員：%s"
 
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "可用空間不足以完成所請求 %s 的下載。\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    需要 %s（在 %s 中），目前有 %s。\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
-msgstr ""
+msgstr "請參閱「-w」選項以指定替代的工作目錄。\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
-msgstr ""
+msgstr "無法判斷下載所請求 %s 所需的空間。\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "確保 %s 有足夠的可用空間。"
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
@@ -1106,7 +1373,7 @@ msgstr "*** 無法在 Koji hub %s 中找到任務 %s"
 #: lib/checksums.c:91
 #, c-format
 msgid "*** %s is a FIFO"
-msgstr ""
+msgstr "*** %s 是一個 FIFO"
 
 #: lib/copyfile.c:117
 #, c-format
@@ -1115,36 +1382,36 @@ msgstr "%s 已經存在"
 
 #: lib/copyfile.c:122
 msgid ", overwriting"
-msgstr ""
+msgstr "，正在覆寫"
 
 #: lib/curl.c:267 lib/readfile.c:60
 #, c-format
 msgid "*** unable to read %s"
-msgstr ""
+msgstr "*** 無法讀取 %s"
 
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
+msgstr "%s 在 %s（%s）上帶有預期的模式 %04o"
 
 #: lib/fileinfo.c:76
 #, c-format
 msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
-msgstr ""
+msgstr "%s 在 %s（%s）上帶有非預期的模式 %04o；預期模式為 %04o；需要安全性團隊檢查"
 
 #: lib/fileinfo.c:96
 #, c-format
 msgid ""
 "%s in %s on %s carries insecure mode %04o, Security Team review may be "
 "required"
-msgstr ""
+msgstr "%s 在 %s（%s）上帶有不安全的模式 %04o，可能需要安全性團隊審查"
 
 #: lib/fileinfo.c:155
 #, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
+msgstr "%s 在 %s（%s）上帶有預期的擁有者「%s」"
 
 #: lib/fileinfo.c:168
 #, c-format
@@ -1152,6 +1419,8 @@ msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s 在 %s（%s）上帶有非預期的擁有者「%s」；預期擁有者為「%s」；需要安全性團隊"
+"檢查"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
 #, c-format
@@ -1159,166 +1428,168 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o but has no fileinfo rule for owner "
 "specification, Security Team review may be required"
 msgstr ""
+"%s 在 %s（%s）上帶有不安全的模式 %04o，但沒有擁有者規範的 fileinfo 規則，可能"
+"需要安全性團隊審查"
 
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
+msgstr "%s 在 %s（%s）上帶有預期的群組「%s」"
 
 #: lib/fileinfo.c:262
 #, c-format
 msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
-msgstr ""
+msgstr "%s 在 %s（%s）上帶有非預期的群組「%s」；預期群組為「%s」；需要安全性團隊檢查"
 
 #: lib/init.c:226
 #, c-format
 msgid "*** invalid input string `%s`"
-msgstr ""
+msgstr "*** 無效的輸入字串「%s」"
 
 #: lib/init.c:253 lib/init.c:262 lib/init.c:270 lib/init.c:282 lib/init.c:291
 #: lib/init.c:299 lib/init.c:311 lib/init.c:320 lib/init.c:328 lib/init.c:340
 #, c-format
 msgid "*** invalid mode string: %s"
-msgstr ""
+msgstr "*** 無效的模式字串：%s"
 
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** 將條目加入陣列 %s->%s 時發生問題"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** 將忽略條目加入 %s 時發生問題"
 
 #: lib/init.c:418 lib/init.c:432
 msgid "*** error reading "
-msgstr ""
+msgstr "*** 讀取時發生錯誤 "
 
 #: lib/init.c:458
 #, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr ""
+msgstr "*** 忽略格式錯誤的區段 %s->%s"
 
 #: lib/init.c:515 lib/init.c:528
 #, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr ""
+msgstr "*** 讀取 %s 忽略模式時發生錯誤"
 
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
+msgstr "*** 旗標必須為「on」或「off」；忽略「%s」"
 
 #: lib/init.c:548
 #, c-format
 msgid "*** unknown inspections: `%s`"
-msgstr ""
+msgstr "*** 未知的檢查：「%s」"
 
 #: lib/init.c:559
 msgid "*** malformed/unknown inspections section"
-msgstr ""
+msgstr "*** 格式錯誤／未知的檢查區段"
 
 #: lib/init.c:591
 #, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr ""
+msgstr "*** 忽略格式錯誤的 %s 設定檔：%s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** 未知的模組化靜態內容設定「%s」"
 
 #: lib/init.c:717
 #, c-format
 msgid "*** unknown specname match setting '%s', defaulting to 'full'"
-msgstr ""
+msgstr "*** 未知的 specname 匹配設定「%s」，預設為「full」"
 
 #: lib/init.c:732
 #, c-format
 msgid "*** unknown specname primary setting '%s', defaulting to 'name'"
-msgstr ""
+msgstr "*** 未知的 specname 主名稱設定「%s」，預設為「name」"
 
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
-msgstr ""
+msgstr "*** 無效的 annocheck failure_reporting_level：%s，預設為 %s"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** 格式錯誤的 badfuncs->allowed 區段"
 
 #: lib/init.c:822
 #, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
-msgstr ""
+msgstr "*** 讀取 unicode 排除正規表達式時發生錯誤：%s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** 格式錯誤的 rpmdeps->ignore 區段；略過"
 
 #: lib/init.c:968
 #, c-format
 msgid "*** Invalid filename in the fileinfo list: %s"
-msgstr ""
+msgstr "*** fileinfo 清單中的無效檔案名稱：%s"
 
 #: lib/init.c:969
 msgid "*** From this invalid line:"
-msgstr ""
+msgstr "*** 來自此無效行："
 
 #: lib/init.c:970
 #, c-format
 msgid "***     %s"
-msgstr ""
+msgstr "***     %s"
 
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** 在 %s 中看到非預期的 token「%s」，無法繼續"
 
 #: lib/init.c:1414
 #, c-format
 msgid "*** invalid security rule: %s"
-msgstr ""
+msgstr "*** 無效的安全性規則：%s"
 
 #: lib/init.c:1426
 #, c-format
 msgid "*** unknown security rule: %s"
-msgstr ""
+msgstr "*** 未知的安全性規則：%s"
 
 #: lib/init.c:1435
 #, c-format
 msgid "*** unknown security action: %s"
-msgstr ""
+msgstr "*** 未知的安全性動作：%s"
 
 #: lib/init.c:1461
 #, c-format
 msgid "*** malformed security line: %s"
-msgstr ""
+msgstr "*** 格式錯誤的安全性行：%s"
 
 #: lib/init.c:1622
 #, c-format
 msgid "*** missing configuration file `%s'"
-msgstr ""
+msgstr "*** 缺少設定檔「%s」"
 
 #: lib/init.c:1658
 #, c-format
 msgid "*** unable to find profile '%s'"
-msgstr ""
+msgstr "*** 找不到設定檔「%s」"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "abidiff 使用錯誤"
 
 #: lib/inspect_abidiff.c:275
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 ABI 變更"
 
 #: lib/inspect_abidiff.c:284
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 ABI 不相容變更"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1326,13 +1597,15 @@ msgid ""
 "Comparing old vs. new version of %s in package %s with ABI compatibility "
 "level %ld on %s revealed ABI differences."
 msgstr ""
+"比較套件 %2$s 中 %1$s 的舊版與新版（ABI 相容層級 %3$ld），在 %4$s 上發現 ABI "
+"差異。"
 
 #: lib/inspect_abidiff.c:298
 #, c-format
 msgid ""
 "Comparing old vs. new version of %s in package %s on %s revealed ABI "
 "differences."
-msgstr ""
+msgstr "比較套件 %2$s 中 %1$s 的舊版與新版，在 %3$s 上發現 ABI 差異。"
 
 #: lib/inspect_abidiff.c:302
 #, c-format
@@ -1340,11 +1613,13 @@ msgid ""
 "Comparing from %s to %s in package %s with ABI compatibility level %ld on %s "
 "revealed ABI differences."
 msgstr ""
+"從 %1$s 比較到套件 %3$s 中的 %2$s（ABI 相容層級 %4$ld），在 %5$s 上發現 ABI "
+"差異。"
 
 #: lib/inspect_abidiff.c:304
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
-msgstr ""
+msgstr "從 %1$s 比較到套件 %3$s 中的 %2$s，在 %4$s 上發現 ABI 差異。"
 
 #: lib/inspect_abidiff.c:309
 #, c-format
@@ -1353,71 +1628,74 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"指令：%s\n"
+"\n"
+"%s"
 
 #: lib/inspect_addedfiles.c:149
 #, c-format
 msgid ""
 "Packages should not contain files or directories starting with `%s` on %s in "
 "%s: %s"
-msgstr ""
+msgstr "套件不應包含以「%1$s」開頭的檔案或目錄，在 %2$s 的 %3$s 中：%4$s"
 
 #: lib/inspect_addedfiles.c:150 lib/inspect_addedfiles.c:164
 msgid "invalid directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的無效目錄 ${FILE}"
 
 #: lib/inspect_addedfiles.c:163
 #, c-format
 msgid ""
 "Packages should not contain files or directories ending with `%s` on %s in "
 "%s: %s"
-msgstr ""
+msgstr "套件不應包含以「%1$s」結尾的檔案或目錄，在 %2$s 的 %3$s 中：%4$s"
 
 #: lib/inspect_addedfiles.c:177
 #, c-format
 msgid "Forbidden directory `%s` found on %s in %s: %s"
-msgstr ""
+msgstr "在 %2$s 的 %3$s 中發現禁止的目錄「%1$s」：%4$s"
 
 #: lib/inspect_addedfiles.c:178
 msgid "forbidden directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的禁止目錄 ${FILE}"
 
 #: lib/inspect_addedfiles.c:209
 #, c-format
 msgid ""
 "New security-related file `%s` added on %s in %s requires inspection by the "
 "Security Team"
-msgstr ""
+msgstr "在 %2$s 的 %3$s 中新增了安全性相關檔案「%1$s」，需要安全性團隊檢查"
 
 #: lib/inspect_addedfiles.c:211
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的新安全性相關檔案 ${FILE}"
 
 #: lib/inspect_addedfiles.c:231
 #, c-format
 msgid "`%s` added on %s in %s"
-msgstr ""
+msgstr "「%1$s」在 %2$s 的 %3$s 中已新增"
 
 #: lib/inspect_addedfiles.c:232
 msgid "new file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的新檔案 ${FILE}"
 
 #: lib/inspect_addedfiles.c:248
 msgid "the fileinfo list"
-msgstr ""
+msgstr "fileinfo 清單"
 
 #: lib/inspect_annocheck.c:116 lib/inspect_annocheck.c:151
 #, c-format
 msgid "*** libannocheck_enable_profile: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_profile：%s"
 
 #: lib/inspect_annocheck.c:136
 #, c-format
 msgid "*** libannocheck_get_known_profiles: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_profiles：%s"
 
 #: lib/inspect_annocheck.c:168
 msgid "NOT RUN"
-msgstr ""
+msgstr "未執行"
 
 #: lib/inspect_annocheck.c:170
 msgid "PASSED"
@@ -1429,7 +1707,7 @@ msgstr "失敗"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "可能"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
@@ -1437,152 +1715,152 @@ msgstr "已跳過"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
-msgstr ""
+msgstr "未知"
 
 #: lib/inspect_annocheck.c:226
 #, c-format
 msgid "*** libannocheck_init: %s"
-msgstr ""
+msgstr "*** libannocheck_init：%s"
 
 #: lib/inspect_annocheck.c:255
 #, c-format
 msgid "*** libannocheck_%s_test: %s"
-msgstr ""
+msgstr "*** libannocheck_%s_test：%s"
 
 #: lib/inspect_annocheck.c:267
 #, c-format
 msgid "*** libannocheck_enable_all_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_all_tests：%s"
 
 #: lib/inspect_annocheck.c:280
 #, c-format
 msgid "*** libannocheck_reinit: %s"
-msgstr ""
+msgstr "*** libannocheck_reinit：%s"
 
 #: lib/inspect_annocheck.c:373
 #, c-format
 msgid "*** before libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** libannocheck_run_tests 前：%s (%d)"
 
 #: lib/inspect_annocheck.c:382 lib/inspect_annocheck.c:426
 #, c-format
 msgid "*** libannocheck_get_known_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_tests：%s"
 
 #: lib/inspect_annocheck.c:400 lib/inspect_annocheck.c:530
 #, c-format
 msgid "*** libannocheck_finish: %s"
-msgstr ""
+msgstr "*** libannocheck_finish：%s"
 
 #: lib/inspect_annocheck.c:417
 #, c-format
 msgid "*** after libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** libannocheck_run_tests 後：%s (%d)"
 
 #: lib/inspect_annocheck.c:461 lib/inspect_annocheck.c:613
 msgid "lost -D_FORTIFY_SOURCE in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中遺失 -D_FORTIFY_SOURCE"
 
 #: lib/inspect_annocheck.c:464
 #, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s 在 %s 上可能遺失了 -O2 -D_FORTIFY_SOURCE"
 
 #: lib/inspect_annocheck.c:489
 #, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr ""
+msgstr "libannocheck「%1$s」針對 %2$s 在 %3$s 上持續透過"
 
 #: lib/inspect_annocheck.c:492
 #, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "libannocheck「%1$s」測試現在針對 %2$s 在 %3$s 上透過"
 
 #: lib/inspect_annocheck.c:495
 #, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "libannocheck「%1$s」測試現在針對 %2$s 在 %3$s 上失敗"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
 #, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "libannocheck「%1$s」測試針對 %2$s 在 %3$s 上失敗"
 
 #: lib/inspect_annocheck.c:503
 #, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "libannocheck「%1$s」測試針對 %2$s 在 %3$s 上透過"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
 msgid "annocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "annocheck「%1$s」測試針對 %2$s 在 %3$s 上透過"
 
 #: lib/inspect_annocheck.c:553
 #, c-format
 msgid "annocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "annocheck「%1$s」測試現在針對 %2$s 在 %3$s 上透過"
 
 #: lib/inspect_annocheck.c:555
 #, c-format
 msgid "annocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "annocheck「%1$s」測試現在針對 %2$s 在 %3$s 上失敗"
 
 #: lib/inspect_annocheck.c:561 lib/inspect_annocheck.c:571
 #, c-format
 msgid "annocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "annocheck「%1$s」測試針對 %2$s 在 %3$s 上失敗"
 
 #: lib/inspect_annocheck.c:616
 #, c-format
 msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s 在 %s 上可能遺失了 -D_FORTIFY_SOURCE"
 
 #: lib/inspect_arch.c:77
 msgid "lost ${ARCH}"
-msgstr ""
+msgstr "遺失了 ${ARCH}"
 
 #: lib/inspect_arch.c:79
 #, c-format
 msgid "Architecture '%s' has disappeared"
-msgstr ""
+msgstr "架構「%s」已消失"
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "新增了 ${ARCH}"
 
 #: lib/inspect_arch.c:96
 #, c-format
 msgid "Architecture '%s' has appeared"
-msgstr ""
+msgstr "架構「%s」已出現"
 
 #: lib/inspect_badfuncs.c:152
 #, c-format
 msgid "Forbidden function symbols found:\n"
-msgstr ""
+msgstr "發現禁止的函式符號：\n"
 
 #: lib/inspect_badfuncs.c:168
 #, c-format
 msgid "%s may use forbidden functions on %s"
-msgstr ""
+msgstr "%s 在 %s 上可能使用了禁止的函式"
 
 #: lib/inspect_badfuncs.c:175
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中有禁止的函式"
 
 #: lib/inspect_capabilities.c:82
 #, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
-msgstr ""
+msgstr "%1$s 的檔案 capabilities 從「%2$s」變更為「%3$s」，在 %4$s 的 %5$s 中\n"
 
 #: lib/inspect_capabilities.c:86
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 capabilities"
 
 #: lib/inspect_capabilities.c:98
 #, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr ""
+msgstr "找到 %1$s 的檔案 capabilities：「%2$s」，在 %3$s 的 %4$s 中\n"
 
 #: lib/inspect_capabilities.c:134
 #, c-format
@@ -1590,17 +1868,21 @@ msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
 msgstr ""
+"在 capabilities 清單中找到 %1$s 的條目：「%2$s」，在 %3$s 的 %4$s 中，與套件"
+"相符\n"
 
 #: lib/inspect_capabilities.c:145
 #, c-format
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
+"%1$s 的檔案 capabilities 清單不符：預期「%2$s」，實際為「%3$s」，在 %4$s 的 "
+"%5$s 中\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 capabilities 清單"
 
 #: lib/inspect_capabilities.c:165
 #, c-format
@@ -1608,75 +1890,79 @@ msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
 msgstr ""
+"%1$s 的檔案 capabilities（%2$s）在 %3$s 的 %4$s 中未於 capabilities 清單中找"
+"到\n"
 
 #: lib/inspect_capabilities.c:184
 #, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
 msgstr ""
+"預期 %1$s 在 %2$s 中應有檔案 capabilities，但在 %3$s 上未找到：預期為「%4$s"
+"」\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
 "  Changes to security policy related files require inspection by the "
 "Security Response Team."
-msgstr ""
+msgstr "  安全性政策相關檔案的變更需要安全性回應團隊檢查。"
 
 #: lib/inspect_changedfiles.c:319
 #, c-format
 msgid "Compressed %s file %s changed content in %s on %s."
-msgstr ""
+msgstr "已壓縮的 %1$s 檔案 %2$s 在 %3$s 的 %4$s 中變更了內容。"
 
 #: lib/inspect_changedfiles.c:353 lib/inspect_changedfiles.c:367
 #, c-format
 msgid "Error running msgunfmt on %s in %s on %s; malformed mo file?"
-msgstr ""
+msgstr "在 %2$s 的 %3$s 中對 %1$s 執行 msgunfmt 時發生錯誤；mo 檔案可能已損毀？"
 
 #: lib/inspect_changedfiles.c:357 lib/inspect_changedfiles.c:371
 msgid "msgunfmt on ${FILE}"
-msgstr ""
+msgstr "對 ${FILE} 執行 msgunfmt"
 
 #: lib/inspect_changedfiles.c:382
 #, c-format
 msgid "Message catalog %s changed content in %s on %s"
-msgstr ""
+msgstr "訊息目錄 %1$s 在 %2$s 的 %3$s 中變更了內容"
 
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
 msgid "${FILE}"
-msgstr ""
+msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
 #, c-format
 msgid ""
 "Public header file %s changed content in %s on %s.  A unified diff of the "
 "changes follows."
-msgstr ""
+msgstr "公開標頭檔案 %1$s 在 %2$s 的 %3$s 中變更了內容。以下是變更的 unified diff。"
 
 #: lib/inspect_changedfiles.c:462
 #, c-format
 msgid "File %s changed content in %s on %s."
-msgstr ""
+msgstr "檔案 %1$s 在 %2$s 的 %3$s 中變更了內容。"
 
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
-msgstr ""
+msgstr "因目前建置類型不是「rpm」，略過檢查。"
 
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
 msgid ""
 "%%config file %s went from actual file to symlink (pointing to %s) in %s on "
 "%s"
-msgstr ""
+msgstr "%%config 檔案 %1$s 從實體檔案變為符號連結（指向 %2$s），在 %3$s 的 %4$s 中"
 
 #: lib/inspect_config.c:123
 #, c-format
@@ -1684,16 +1970,18 @@ msgid ""
 "%%config file %s was a symlink (pointing to %s), became an actual file in %s "
 "on %s"
 msgstr ""
+"%%config 檔案 %1$s 原是符號連結（指向 %2$s），在 %3$s 的 %4$s 中變成了實體檔"
+"案"
 
 #: lib/inspect_config.c:132
 #, c-format
 msgid "Symlink value for %%config file %s changed in %s on %s."
-msgstr ""
+msgstr "%%config 檔案 %1$s 的符號連結值在 %2$s 的 %3$s 中已變更。"
 
 #: lib/inspect_config.c:153
 #, c-format
 msgid "%%config file content change for %s in %s on %s"
-msgstr ""
+msgstr "%%config 檔案 %1$s 的內容在 %2$s 的 %3$s 中已變更"
 
 #: lib/inspect_config.c:168
 #, c-format
@@ -1701,6 +1989,8 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
+"%%config 檔案 %1$s 在 %2$s 的 %3$s 中已變更（%4$s標記為 %%config -> %5$s標記"
+"為 %%config）\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
 msgid "not "
@@ -1709,80 +1999,80 @@ msgstr "不是 "
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "%1$s 在 %2$s 的 %3$s 中缺少除錯符號"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "缺少除錯符號"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "缺少：%s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%1$s 在 %2$s 的 %3$s 中包含除錯符號"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "包含除錯符號"
 
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "包含：%s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%1$s 在 %2$s 的 %3$s 中新增了除錯符號"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "新增了除錯符號"
 
 #: lib/inspect_debuginfo.c:266
 #, c-format
 msgid "Gained: %s"
-msgstr ""
+msgstr "新增：%s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%1$s 在 %2$s 的 %3$s 中遺失了除錯符號"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "遺失了除錯符號"
 
 #: lib/inspect_debuginfo.c:292
 #, c-format
 msgid "Lost: %s"
-msgstr ""
+msgstr "遺失：%s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
 msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
-msgstr ""
+msgstr "%1$s 在 %2$s 的 %3$s 中帶有 .gosymtab，但不應有 .gnu_debugdata 符號"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnu_debugdata 與 .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
 msgid ""
 "Desktop file %s on %s references executable %s but %s is not executable by "
 "all"
-msgstr ""
+msgstr "桌面檔案 %1$s（%2$s）參照了可執行檔 %3$s，但 %4$s 並非所有人皆可執行"
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 參照了不可執行的檔案"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -1791,67 +2081,69 @@ msgid ""
 "executable of that name, however it has a TryExec key so it may be ignored "
 "in case %s does not exist"
 msgstr ""
+"桌面檔案 %1$s（%2$s）參照了可執行檔 %3$s；沒有子套件包含該名稱的可執行檔，但"
+"因其有 TryExec 鍵，在 %4$s 不存在時可忽略"
 
 #: lib/inspect_desktop.c:308
 #, c-format
 msgid ""
 "Desktop file %s on %s references executable %s but no subpackages contain an "
 "executable of that name"
-msgstr ""
+msgstr "桌面檔案 %1$s（%2$s）參照了可執行檔 %3$s，但沒有子套件包含該名稱的可執行檔"
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 參照了缺少的可執行檔"
 
 #: lib/inspect_desktop.c:354
 #, c-format
 msgid "Desktop file %s on %s references icon %s but %s is not readable by all"
-msgstr ""
+msgstr "桌面檔案 %1$s（%2$s）參照了圖示 %3$s，但 %4$s 並非所有人皆可讀取"
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 參照了無法讀取的圖示"
 
 #: lib/inspect_desktop.c:376
 #, c-format
 msgid "Desktop file %s on %s references icon %s but no subpackages contain %s"
-msgstr ""
+msgstr "桌面檔案 %1$s（%2$s）參照了圖示 %3$s，但沒有子套件包含 %4$s"
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 參照了缺少的圖示"
 
 #: lib/inspect_desktop.c:452
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 無效"
 
 #: lib/inspect_desktop.c:455
 #, c-format
 msgid ""
 "File %s is no longer a valid desktop entry file on %s; desktop-file-validate "
 "reports:"
-msgstr ""
+msgstr "檔案 %1$s 在 %2$s 上不再是有效的桌面項目檔案；desktop-file-validate 回報："
 
 #: lib/inspect_desktop.c:457
 #, c-format
 msgid ""
 "New file %s is not a valid desktop file on %s; desktop-file-validate reports:"
-msgstr ""
+msgstr "新檔案 %1$s 在 %2$s 上不是有效的桌面檔案；desktop-file-validate 回報："
 
 #: lib/inspect_desktop.c:459
 #, c-format
 msgid ""
 "File %s is not a valid desktop file on %s; desktop-file-validate reports:"
-msgstr ""
+msgstr "檔案 %1$s 在 %2$s 上不是有效的桌面檔案；desktop-file-validate 回報："
 
 #: lib/inspect_disttag.c:184
 #, c-format
 msgid "The %s file is missing the %s tag."
-msgstr ""
+msgstr "%1$s 檔案缺少 %2$s 標籤。"
 
 #: lib/inspect_disttag.c:186
 msgid "${FILE} missing Release tag"
-msgstr ""
+msgstr "${FILE} 缺少 Release 標籤"
 
 #: lib/inspect_disttag.c:192
 #, c-format
@@ -1860,25 +2152,28 @@ msgid ""
 "should be of the form '%s' in the %s tag or in a macro used in the %s tag. "
 "After RPM macro expansion, no dist tag was found in this %s tag value."
 msgstr ""
+"%1$s 標籤值缺少正確格式的 dist 標籤。dist 標籤應為「%2$s」格式，出現於 %3$s "
+"標籤或 %4$s 標籤所使用的巨集中。經過 RPM 巨集展開後，在此 %5$s 標籤值中未找"
+"到 dist 標籤。"
 
 #: lib/inspect_disttag.c:194
 #, c-format
 msgid "${FILE} does not use '%%{?dist}' in Release"
-msgstr ""
+msgstr "${FILE} 在 Release 中未使用「%%{?dist}」"
 
 #: lib/inspect_disttag.c:263
 msgid "Specified package is not a source RPM, skipping."
-msgstr ""
+msgstr "指定的套件不是原始碼 RPM，略過。"
 
 #: lib/inspect_doc.c:71
 #, c-format
 msgid "%doc ${FILE}"
-msgstr ""
+msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
 #, c-format
 msgid "%%doc file content change for %s in %s on %s\n"
-msgstr ""
+msgstr "%%doc 檔案 %1$s 的內容在 %2$s 的 %3$s 中已變更\n"
 
 #: lib/inspect_doc.c:113
 #, c-format
@@ -1886,207 +2181,209 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
+"%%doc 檔案 %1$s 在 %2$s 的 %3$s 中已變更（%4$s標記為 %%doc -> %5$s標記為 "
+"%%doc）\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
 msgid "%s was an ELF file and now is not on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上原是 ELF 檔案，現在已不是"
 
 #: lib/inspect_dsodeps.c:96 lib/inspect_dsodeps.c:108
 msgid "ELF file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的 ELF 檔案 ${FILE}"
 
 #: lib/inspect_dsodeps.c:106
 #, c-format
 msgid "%s was a dynamic ELF file and now is not on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上原是動態 ELF 檔案，現在已不是"
 
 #: lib/inspect_dsodeps.c:146
 #, c-format
 msgid "DT_NEEDED symbol(s) removed from %s on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上的 DT_NEEDED 符號已移除"
 
 #: lib/inspect_dsodeps.c:148 lib/inspect_dsodeps.c:165
 msgid "DT_NEEDED symbol(s) in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的 DT_NEEDED 符號"
 
 #: lib/inspect_dsodeps.c:163
 #, c-format
 msgid "DT_NEEDED symbol(s) added to %s on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上新增了 DT_NEEDED 符號"
 
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "目的檔仍有可執行堆疊（無 GNU-stack 備註）：%1$s（%2$s）"
 
 #: lib/inspect_elf.c:435
 #, c-format
 msgid "Object has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "目的檔有可執行堆疊（無 GNU-stack 備註）：%1$s（%2$s）"
 
 #: lib/inspect_elf.c:438
 #, c-format
 msgid "Program built without GNU_STACK: %s on %s"
-msgstr ""
+msgstr "程式建置時無 GNU_STACK：%1$s（%2$s）"
 
 #: lib/inspect_elf.c:444
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的 GNU_STACK"
 
 #: lib/inspect_elf.c:496
 #, c-format
 msgid "File %s has invalid execstack flags (%s) on %s"
-msgstr ""
+msgstr "檔案 %1$s 在 %3$s 上有無效的 execstack 旗標（%2$s）"
 
 #: lib/inspect_elf.c:501
 #, c-format
 msgid "File %s has unrecognized GNU_STACK '%s' (expected RW or RWE) on %s"
-msgstr ""
+msgstr "檔案 %1$s 在 %3$s 上有無法識別的 GNU_STACK「%2$s」（預期為 RW 或 RWE）"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的 execstack"
 
 #: lib/inspect_elf.c:525
 #, c-format
 msgid "Object still has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "目的檔仍有可執行堆疊（GNU-stack 備註 = X）：%1$s（%2$s）"
 
 #: lib/inspect_elf.c:527
 #, c-format
 msgid "Object has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "目的檔有可執行堆疊（GNU-stack 備註 = X）：%1$s（%2$s）"
 
 #: lib/inspect_elf.c:531
 #, c-format
 msgid "Stack is still executable: %s on %s"
-msgstr ""
+msgstr "堆疊仍為可執行：%1$s（%2$s）"
 
 #: lib/inspect_elf.c:533
 #, c-format
 msgid "Stack is executable: %s on %s"
-msgstr ""
+msgstr "堆疊為可執行：%1$s（%2$s）"
 
 #: lib/inspect_elf.c:564
 #, c-format
 msgid "%s lost full GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上遺失了完整的 GNU_RELRO 安全性保護"
 
 #: lib/inspect_elf.c:567
 #, c-format
 msgid "%s lost GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上遺失了 GNU_RELRO 安全性保護"
 
 #: lib/inspect_elf.c:578
 msgid "lost GNU_RELRO in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中遺失了 GNU_RELRO"
 
 #: lib/inspect_elf.c:725
 #, c-format
 msgid "The following objects lost -fPIC:\n"
-msgstr ""
+msgstr "下列目的檔遺失了 -fPIC：\n"
 
 #: lib/inspect_elf.c:742
 #, c-format
 msgid "The following new objects were built without -fPIC:\n"
-msgstr ""
+msgstr "下列新目的檔建置時未使用 -fPIC：\n"
 
 #: lib/inspect_elf.c:755
 #, c-format
 msgid "%s in %s has objects built without -fPIC on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 中有未使用 -fPIC 建置的目的檔（%3$s）"
 
 #: lib/inspect_elf.c:763
 msgid "missing -fPIC in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中缺少 -fPIC"
 
 #: lib/inspect_elf.c:799
 msgid "TEXTREL relocations in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的 TEXTREL 重定位"
 
 #: lib/inspect_elf.c:814
 #, c-format
 msgid "%s in %s acquired TEXTREL relocations on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 中取得了 TEXTREL 重定位（%3$s）"
 
 #: lib/inspect_elf.c:817
 #, c-format
 msgid "%s in %s has TEXTREL relocations on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 中有 TEXTREL 重定位（%3$s）"
 
 #: lib/inspect_emptyrpm.c:95
 #, c-format
 msgid ""
 "New package %s is empty (no payloads); this is expected per the rpminspect "
 "configuration"
-msgstr ""
+msgstr "新套件 %s 為空（無承載）；根據 rpminspect 設定，此為預期行為"
 
 #: lib/inspect_emptyrpm.c:105
 #, c-format
 msgid ""
 "New package %s is empty (no payloads); this is expected because the package "
 "only contains %%ghost entries"
-msgstr ""
+msgstr "新套件 %s 為空（無承載）；此為預期行為，因為該套件僅包含 %%ghost 條目"
 
 #: lib/inspect_emptyrpm.c:116
 #, c-format
 msgid "New package %s is empty (no payloads)"
-msgstr ""
+msgstr "新套件 %s 為空（無承載）"
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} 有空承載"
 
 #: lib/inspect_files.c:111
 #, c-format
 msgid "Forbidden path reference (%s) on line %ld of %s"
-msgstr ""
+msgstr "%3$s 的第 %2$ld 行有禁止的路徑參照（%1$s）"
 
 #: lib/inspect_files.c:113
 #, c-format
 msgid "invalid spec line: %s"
-msgstr ""
+msgstr "無效的 spec 檔案行：%s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
-msgstr ""
+msgstr "files 檢查僅適用於原始碼套件，略過。"
 
 #: lib/inspect_filesize.c:67
 #, c-format
 msgid "%s became a non-empty file on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上變成了非空檔案"
 
 #: lib/inspect_filesize.c:71
 msgid "non-empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的非空 ${FILE}"
 
 #: lib/inspect_filesize.c:76
 #, c-format
 msgid "%s became an empty file on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上變成了空檔案"
 
 #: lib/inspect_filesize.c:80
 msgid "empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的空 ${FILE}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
 msgid "%s grew by %lld%% on %s"
-msgstr ""
+msgstr "%1$s 在 %3$s 上增加了 %2$lld%%"
 
 #: lib/inspect_filesize.c:99
 msgid "${FILE} size grew on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的大小增加了"
 
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr ""
+msgstr "%1$s 在 %3$s 上縮小了 %2$lld%%"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的大小縮小了"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2094,10 +2391,12 @@ msgid ""
 "File %s (%s), Java byte code version %d is incorrect (wrong endianness? "
 "corrupted file? space JDK?)"
 msgstr ""
+"檔案 %1$s（%2$s），Java 位元組碼版本 %3$d 不正確（位元組序錯誤？檔案損毀？備"
+"用 JDK？）"
 
 #: lib/inspect_javabytecode.c:131
 msgid "incorrect Java byte code version in ${FILE}"
-msgstr ""
+msgstr "${FILE} 中的 Java 位元組碼版本不正確"
 
 #: lib/inspect_javabytecode.c:136
 #, c-format
@@ -2105,44 +2404,46 @@ msgid ""
 "File %s (%s), Java byte code version %d greater than supported major version "
 "%d for product release %s"
 msgstr ""
+"檔案 %1$s（%2$s），Java 位元組碼版本 %3$d 大於產品發行版本 %5$s 所支援的主要"
+"版本 %4$d"
 
 #: lib/inspect_javabytecode.c:137
 msgid "Java byte code version too new in ${FILE}"
-msgstr ""
+msgstr "${FILE} 中的 Java 位元組碼版本太新"
 
 #: lib/inspect_javabytecode.c:152
 #, c-format
 msgid "Java byte code version changed from %d to %d in %s from %s"
-msgstr ""
+msgstr "Java 位元組碼版本從 %1$d 變更為 %2$d，在 %4$s 的 %3$s 中"
 
 #: lib/inspect_javabytecode.c:153
 msgid "Java byte code version changed in ${FILE}"
-msgstr ""
+msgstr "${FILE} 中的 Java 位元組碼版本已變更"
 
 #: lib/inspect_javabytecode.c:255 lib/inspect_javabytecode.c:267
 msgid "*** missing JVM version to product release mapping"
-msgstr ""
+msgstr "*** 缺少 JVM 版本至產品發行版本的對應"
 
 #: lib/inspect_kmidiff.c:252
 #, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s generated a kmidiff(1) usage error."
-msgstr ""
+msgstr "比較套件 %3$s 中 %1$s 到 %2$s（%4$s）時，產生了 kmidiff(1) 使用錯誤。"
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "kmidiff 使用錯誤"
 
 #: lib/inspect_kmidiff.c:256
 #, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s revealed Kernel Module Interface "
 "(KMI) differences."
-msgstr ""
+msgstr "比較套件 %3$s 中 %1$s 到 %2$s（%4$s）時，發現了核心模組介面（KMI）差異。"
 
 #: lib/inspect_kmidiff.c:258
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的 KMI 變更"
 
 #: lib/inspect_kmidiff.c:260
 #, c-format
@@ -2150,20 +2451,22 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed incompatible Kernel Module "
 "Interface (KMI) differences."
 msgstr ""
+"比較套件 %3$s 中 %1$s 到 %2$s（%4$s）時，發現了不相容的核心模組介面（KMI）差"
+"異。"
 
 #: lib/inspect_kmidiff.c:263
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的 KMI 不相容變更"
 
 #: lib/inspect_kmidiff.c:265
 #, c-format
 msgid ""
 "kmidiff(1) comparison of %s to %s in package %s on %s ended unexpectedly."
-msgstr ""
+msgstr "套件 %3$s 中 %1$s 到 %2$s 的 kmidiff(1) 比較（%4$s）非預期地結束了。"
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "kmidiff 非預期結束"
 
 #: lib/inspect_kmidiff.c:274
 #, c-format
@@ -2171,272 +2474,274 @@ msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
+"指令：%s\n"
+"結束代碼：%d%s%s"
 
 #: lib/inspect_kmod.c:28
 msgid "${FILE} kernel module alias on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的核心模組別名"
 
 #: lib/inspect_kmod.c:31
 #, c-format
 msgid "Kernel module '%s' lost alias '%s'"
-msgstr ""
+msgstr "核心模組「%1$s」遺失了別名「%2$s」"
 
 #: lib/inspect_kmod.c:41
 #, c-format
 msgid "Kernel module '%s' gained alias '%s'"
-msgstr ""
+msgstr "核心模組「%1$s」新增了別名「%2$s」"
 
 #: lib/inspect_kmod.c:188
 #, c-format
 msgid "Kernel module %s removes parameter '%s' (was present in %s)."
-msgstr ""
+msgstr "核心模組 %1$s 移除了參數「%2$s」（原本存在於 %3$s 中）。"
 
 #: lib/inspect_kmod.c:191 lib/inspect_kmod.c:208
 msgid "${FILE} kernel module parameter on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的核心模組參數"
 
 #: lib/inspect_kmod.c:205
 #, c-format
 msgid "Kernel module %s adds parameter '%s' (was not present in %s)."
-msgstr ""
+msgstr "核心模組 %1$s 新增了參數「%2$s」（原本不存在於 %3$s 中）。"
 
 #: lib/inspect_kmod.c:226
 #, c-format
 msgid "Kernel module %s removes dependency '%s' (was present in %s)."
-msgstr ""
+msgstr "核心模組 %1$s 移除了相依性「%2$s」（原本存在於 %3$s 中）。"
 
 #: lib/inspect_kmod.c:229
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的核心模組相依性"
 
 #: lib/inspect_kmod.c:243
 #, c-format
 msgid "Kernel module %s adds dependency '%s' (was not present in %s)."
-msgstr ""
+msgstr "核心模組 %1$s 新增了相依性「%2$s」（原本不存在於 %3$s 中）。"
 
 #: lib/inspect_kmod.c:246
 msgid "${FILE} kernel module parameter"
-msgstr ""
+msgstr "${FILE} 的核心模組參數"
 
 #: lib/inspect_license.c:47
 #, c-format
 msgid "*** parse error in license database %s"
-msgstr ""
+msgstr "*** 授權資料庫 %s 解析錯誤"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
-msgstr ""
+msgstr "*** 檢查授權資料庫時發生問題"
 
 #: lib/inspect_license.c:464
 #, c-format
 msgid "Unapproved license in %s: %s"
-msgstr ""
+msgstr "%1$s 中有未經核准的授權：%2$s"
 
 #: lib/inspect_license.c:505
 #, c-format
 msgid "Empty License Tag in %s"
-msgstr ""
+msgstr "%s 中的 License 標籤為空"
 
 #: lib/inspect_license.c:509
 msgid "missing License tag in ${FILE}"
-msgstr ""
+msgstr "${FILE} 中缺少 License 標籤"
 
 #: lib/inspect_license.c:518
 #, c-format
 msgid "Valid License Tag in %s: %s"
-msgstr ""
+msgstr "%1$s 中有有效的 License 標籤：%2$s"
 
 #: lib/inspect_license.c:532
 #, c-format
 msgid "License Tag contains unprofessional language in %s: %s"
-msgstr ""
+msgstr "%1$s 中的 License 標籤包含不專業用語：%2$s"
 
 #: lib/inspect_license.c:536
 msgid "unprofessional language in License tag in ${FILE}"
-msgstr ""
+msgstr "${FILE} 的 License 標籤中有不專業用語"
 
 #: lib/inspect_license.c:573
 msgid "Missing license database(s)."
-msgstr ""
+msgstr "缺少授權資料庫。"
 
 #: lib/inspect_license.c:577
 msgid "missing license database"
-msgstr ""
+msgstr "缺少授權資料庫"
 
 #: lib/inspect_lostpayload.c:62
 #, c-format
 msgid "Existing subpackage %s is now missing on %s"
-msgstr ""
+msgstr "既有的子套件 %1$s 現在在 %2$s 上消失了"
 
 #: lib/inspect_lostpayload.c:66
 msgid "missing subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上缺少子套件 ${FILE}"
 
 #: lib/inspect_lostpayload.c:82
 #, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr ""
+msgstr "套件 %1$s 在 %2$s 上持續為空（無承載）"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上既有的空子套件 ${FILE}"
 
 #: lib/inspect_lostpayload.c:93
 #, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr ""
+msgstr "套件 %1$s 在 %2$s 上變成空的（無承載）"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "${ARCH} 上的子套件 ${FILE} 現在有空承載"
 
 #: lib/inspect_lto.c:144
 msgid "${FILE} not portable on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 不具有可攜性"
 
 #: lib/inspect_lto.c:152
 #, c-format
 msgid ""
 "%s contains symbols [%s] on %s; this is not portable across compiler versions"
-msgstr ""
+msgstr "%1$s 在 %3$s 上包含符號 [%2$s]；這在不同編譯器版本之間不具可攜性"
 
 #: lib/inspect_lto.c:168
 #, c-format
 msgid ""
 "%s contains symbol [%s] on %s; this is not portable across compiler versions"
-msgstr ""
+msgstr "%1$s 在 %3$s 上包含符號 [%2$s]；這在不同編譯器版本之間不具可攜性"
 
 #: lib/inspect_manpage.c:52
 #, c-format
 msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
-msgstr ""
+msgstr "解析 %1$s:%2$d:%3$d 時發生錯誤：%4$s：%5$s：%6$s\n"
 
 #: lib/inspect_manpage.c:81
 #, c-format
 msgid "*** unable to compile man page path regular expression: %s"
-msgstr ""
+msgstr "*** 無法編譯 man 手冊頁面路徑正規表達式：%s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
 msgid "Unable to open man page %s\n"
-msgstr ""
+msgstr "無法開啟 man 手冊頁面 %s\n"
 
 #: lib/inspect_manpage.c:187
 #, c-format
 msgid "Man page %s does not end in %s\n"
-msgstr ""
+msgstr "man 手冊頁面 %s 不是以 %s 結尾\n"
 
 #: lib/inspect_manpage.c:195
 #, c-format
 msgid "man page with %s suffix is not really compressed with gzip\n"
-msgstr ""
+msgstr "帶有 %s 後綴的 man 手冊頁面實際上並未以 gzip 壓縮\n"
 
 #: lib/inspect_manpage.c:236
 #, c-format
 msgid "Errors found validating %s\n"
-msgstr ""
+msgstr "驗證 %s 時發現錯誤\n"
 
 #: lib/inspect_manpage.c:299
 #, c-format
 msgid "Man page %s is possibly empty on %s in %s"
-msgstr ""
+msgstr "man 手冊頁面 %1$s 在 %2$s 的 %3$s 中可能為空"
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的空 man 手冊頁面 ${FILE}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
 msgid "Man page checker reported problems with %s on %s in %s"
-msgstr ""
+msgstr "man 手冊頁面檢查器回報 %1$s 在 %2$s 的 %3$s 中有問題"
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr ""
+msgstr "${ARCH} 上的 man 手冊頁面 ${FILE} 有錯誤"
 
 #: lib/inspect_manpage.c:327
 #, c-format
 msgid "Man page %s has incorrect path on %s in %s"
-msgstr ""
+msgstr "man 手冊頁面 %1$s 在 %2$s 的 %3$s 中有不正確的路徑"
 
 #: lib/inspect_manpage.c:330
 msgid "man page ${FILE} on ${ARCH} has incorrect path"
-msgstr ""
+msgstr "${ARCH} 上的 man 手冊頁面 ${FILE} 路徑不正確"
 
 #: lib/inspect_metadata.c:40
 #, c-format
 msgid ""
 "Vendor not set in the rpminspect configuration, ignoring Package Vendor "
 "\"%s\" in %s"
-msgstr ""
+msgstr "rpminspect 設定中未設定 Vendor，忽略 %2$s 中的套件 Vendor「%1$s」"
 
 #: lib/inspect_metadata.c:51
 #, c-format
 msgid "Package Vendor \"%s\" is not \"%s\" in %s"
-msgstr ""
+msgstr "%3$s 中的套件 Vendor「%1$s」不是「%2$s」"
 
 #: lib/inspect_metadata.c:55
 msgid "invalid vendor ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 vendor 無效"
 
 #: lib/inspect_metadata.c:76
 #, c-format
 msgid ""
 "Package Build Host \"%s\" is not within an expected build host subdomain in "
 "%s"
-msgstr ""
+msgstr "%2$s 中的套件建置主機「%1$s」不在預期的建置主機子網域內"
 
 #: lib/inspect_metadata.c:80
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的建置主機無效"
 
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr ""
+msgstr "%s 中的套件 Summary 包含不專業用語"
 
 #: lib/inspect_metadata.c:93
 #, c-format
 msgid "Summary: %s"
-msgstr ""
+msgstr "Summary：%s"
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的 Summary 包含不專業用語"
 
 #: lib/inspect_metadata.c:109
 #, c-format
 msgid "Package Description contains unprofessional language in %s:"
-msgstr ""
+msgstr "%s 中的套件 Description 包含不專業用語："
 
 #: lib/inspect_metadata.c:114
 msgid "Description contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的 Description 包含不專業用語"
 
 #: lib/inspect_metadata.c:134
 #, c-format
 msgid "Gained Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "%2$s 中新增了套件 Vendor「%1$s」"
 
 #: lib/inspect_metadata.c:136
 #, c-format
 msgid "Lost Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "%2$s 中遺失了套件 Vendor「%1$s」"
 
 #: lib/inspect_metadata.c:138
 #, c-format
 msgid "Package Vendor changed from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "%3$s 中的套件 Vendor 從「%1$s」變更為「%2$s」"
 
 #: lib/inspect_metadata.c:156
 #, c-format
 msgid "Package Summary change from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "%3$s 中的套件 Summary 從「%1$s」變更為「%2$s」"
 
 #: lib/inspect_metadata.c:169
 #, c-format
 msgid "Package Description changed in %s"
-msgstr ""
+msgstr "%s 中的套件 Description 已變更"
 
 #: lib/inspect_metadata.c:170
 #, c-format
@@ -2449,6 +2754,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"從：\n"
+"\n"
+"%s\n"
+"\n"
+"變更為：\n"
+"\n"
+"%s"
 
 #: lib/inspect_modularity.c:119
 #, c-format
@@ -2456,6 +2768,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "forbid the presence of /data/static_context in the module metadata."
 msgstr ""
+"%1$s 中的 /data/static_context 值為 %2$s，但產品發行規則禁止模組中介資料中存"
+"在 /data/static_context。"
 
 #: lib/inspect_modularity.c:125
 #, c-format
@@ -2463,6 +2777,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "require the presence of /data/static_context in the module metadata."
 msgstr ""
+"%1$s 中的 /data/static_context 值為 %2$s，但產品發行規則要求模組中介資料中存"
+"在 /data/static_context。"
 
 #: lib/inspect_modularity.c:131
 #, c-format
@@ -2470,6 +2786,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "recommend the presence of /data/static_context in the module metadata."
 msgstr ""
+"%1$s 中的 /data/static_context 值為 %2$s，但產品發行規則建議模組中介資料中存"
+"在 /data/static_context。"
 
 #: lib/inspect_modularity.c:133
 #, c-format
@@ -2477,258 +2795,260 @@ msgid ""
 "The /data/static_context value in %s is %s, and the product release rules do "
 "not have a setting for /data/static_context in the module metadata."
 msgstr ""
+"%1$s 中的 /data/static_context 值為 %2$s，且產品發行規則對模組中介資料中的 /"
+"data/static_context 沒有設定。"
 
 #: lib/inspect_modularity.c:135
 #, c-format
 msgid ""
 "The /data/static_context value in %s is %s as required by the product "
 "release rules."
-msgstr ""
+msgstr "%1$s 中的 /data/static_context 值為 %2$s，符合產品發行規則的要求。"
 
 #: lib/inspect_modularity.c:143
 #, c-format
 msgid "%s The /data/static_context value is the same as in %s."
-msgstr ""
+msgstr "%s /data/static_context 值與 %s 中的相同。"
 
 #: lib/inspect_modularity.c:145
 #, c-format
 msgid "%s The /data/static_context value has changed since %s."
-msgstr ""
+msgstr "%s /data/static_context 值自 %s 起已變更。"
 
 #: lib/inspect_modularity.c:180
 #, c-format
 msgid ""
 "Package \"%s\" is part of a module but lacks the '%%{modularitylabel}' "
 "header tag."
-msgstr ""
+msgstr "套件「%s」是模組的一部分但缺少「%%{modularitylabel}」標頭標籤。"
 
 #: lib/inspect_modularity.c:224
 msgid "Inspection skipped because this build's type is not `module'."
-msgstr ""
+msgstr "因目前建置類型不是「module」，略過檢查。"
 
 #: lib/inspect_movedfiles.c:52
 #, c-format
 msgid "%s moved to ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "%s 移動至 ${ARCH} 上的 ${FILE}"
 
 #: lib/inspect_movedfiles.c:55
 #, c-format
 msgid "%s probably moved to %s on %s\n"
-msgstr ""
+msgstr "%1$s 可能已移動至 %3$s 上的 %2$s\n"
 
 #: lib/inspect_ownership.c:77
 #, c-format
 msgid "File %s has forbidden owner `%s` on %s"
-msgstr ""
+msgstr "檔案 %1$s 在 %3$s 上有禁止的擁有者「%2$s」"
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的禁止擁有者"
 
 #: lib/inspect_ownership.c:92
 #, c-format
 msgid "File %s has forbidden group `%s` on %s"
-msgstr ""
+msgstr "檔案 %1$s 在 %3$s 上有禁止的群組「%2$s」"
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的禁止群組"
 
 #: lib/inspect_ownership.c:119
 #, c-format
 msgid "File %s has owner `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "檔案 %1$s 在 %3$s 上的擁有者為「%2$s」，但應為「%4$s」"
 
 #: lib/inspect_ownership.c:124
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的擁有者無效"
 
 #: lib/inspect_ownership.c:162
 #, c-format
 msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is world "
 "executable"
-msgstr ""
+msgstr "檔案 %1$s（%2$s）有 CAP_SETUID capability，但群組為「%3$s」且為全域可執行"
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 CAP_SETUID 與 o+x"
 
 #: lib/inspect_ownership.c:179
 #, c-format
 msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is group writable"
-msgstr ""
+msgstr "檔案 %1$s（%2$s）有 CAP_SETUID capability，但群組為「%3$s」且為群組可寫入"
 
 #: lib/inspect_ownership.c:183
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 CAP_SETUID 與 g+w"
 
 #: lib/inspect_ownership.c:199
 #, c-format
 msgid "File %s has group `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "檔案 %1$s 在 %3$s 上的群組為「%2$s」，但應為「%4$s」"
 
 #: lib/inspect_ownership.c:204
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的群組無效"
 
 #: lib/inspect_ownership.c:268
 #, c-format
 msgid "File %s changed %s from `%s` to `%s` on %s"
-msgstr ""
+msgstr "檔案 %1$s 在 %5$s 上將 %2$s 從「%3$s」變更為「%4$s」"
 
 #: lib/inspect_ownership.c:270
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 變更了擁有者"
 
 #: lib/inspect_patches.c:395
 #, c-format
 msgid ""
 "Patch number %ld (%s) is missing a corresponding %%patch%ld macro, usually "
 "in %%prep."
-msgstr ""
+msgstr "修補編號 %1$ld（%2$s）缺少對應的 %%patch%3$ld 巨集，通常應在 %%prep 中。"
 
 #: lib/inspect_patches.c:397
 #, c-format
 msgid "missing %%patch macro for ${FILE}"
-msgstr ""
+msgstr "${FILE} 缺少 %%patch 巨集"
 
 #: lib/inspect_patches.c:399
 #, c-format
 msgid "Patch number %ld (%s) is mismatched with %%patch%ld macro."
-msgstr ""
+msgstr "修補編號 %1$ld（%2$s）與 %%patch%3$ld 巨集不符。"
 
 #: lib/inspect_patches.c:401
 #, c-format
 msgid "mismatched %%patch macro for ${FILE}"
-msgstr ""
+msgstr "${FILE} 的 %%patch 巨集不符"
 
 #: lib/inspect_patches.c:422
 msgid "undefined Patch ${FILE}"
-msgstr ""
+msgstr "未定義的修補 ${FILE}"
 
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "未定義的修補檔案 %s。"
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
 #, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr ""
+msgstr "*** 無法解壓縮修補：%s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
-msgstr ""
+msgstr "損毀的修補 ${FILE}"
 
 #: lib/inspect_patches.c:477 lib/inspect_patches.c:484
 #, c-format
 msgid "Patch %s is under 4 bytes in size - is it corrupt?"
-msgstr ""
+msgstr "修補 %s 大小不足 4 位元組 - 它是否已損毀？"
 
 #: lib/inspect_patches.c:506
 #, c-format
 msgid "%s changed (%ld bytes -> %ld bytes)"
-msgstr ""
+msgstr "%1$s 已變更（%2$ld 位元組 -> %3$ld 位元組）"
 
 #: lib/inspect_patches.c:510 lib/inspect_patches.c:535
 msgid "patch file ${FILE}"
-msgstr ""
+msgstr "修補檔案 ${FILE}"
 
 #: lib/inspect_patches.c:531
 #, c-format
 msgid "New patch file `%s` appeared"
-msgstr ""
+msgstr "新的修補檔案「%s」出現"
 
 #: lib/inspect_patches.c:551
 msgid "patch changes ${FILE}"
-msgstr ""
+msgstr "修補變更 ${FILE}"
 
 #: lib/inspect_patches.c:555
 #, c-format
 msgid "%s touches as many as %ld line%s"
-msgstr ""
+msgstr "%1$s 觸及多達 %2$ld 行%3$s"
 
 #: lib/inspect_patches.c:557
 #, c-format
 msgid "%s touches %ld file%s"
-msgstr ""
+msgstr "%1$s 觸及 %2$ld 個檔案%3$s"
 
 #: lib/inspect_patches.c:559
 #, c-format
 msgid "%s touches %ld file%s and %s%ld line%s"
-msgstr ""
+msgstr "%1$s 觸及 %2$ld 個檔案%3$s 和 %4$s%5$ld 行%6$s"
 
 #: lib/inspect_patches.c:559
 msgid "as many as "
-msgstr ""
+msgstr "多達 "
 
 #: lib/inspect_patches.c:626 lib/inspect_upstream.c:141
 msgid "No source packages available, skipping inspection."
-msgstr ""
+msgstr "沒有可用的原始碼套件，略過檢查。"
 
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "spec 檔案中定義了未處理的修補檔案「%s」"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** 無法識別的 %%patch 行：%s"
 
 #: lib/inspect_patches.c:828
 #, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr ""
+msgstr "*** 無法讀取 spec 檔案行：%s"
 
 #: lib/inspect_patches.c:881
 #, c-format
 msgid "Patch file `%s` removed"
-msgstr ""
+msgstr "修補檔案「%s」已移除"
 
 #: lib/inspect_pathmigration.c:81
 #, c-format
 msgid "File %s found should be in %s on %s"
-msgstr ""
+msgstr "找到的檔案 %1$s 應位於 %3$s 的 %2$s 中"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} 應位於 ${ARCH} 的 %s 中"
 
 #: lib/inspect_permissions.c:84
 msgid " changed setuid/setgid;"
-msgstr ""
+msgstr " 變更了 setuid/setgid；"
 
 #: lib/inspect_permissions.c:89
 msgid " became a directory;"
-msgstr ""
+msgstr " 變成了目錄；"
 
 #: lib/inspect_permissions.c:91
 msgid " became a character device;"
-msgstr ""
+msgstr " 變成了字元裝置；"
 
 #: lib/inspect_permissions.c:93
 msgid " became a block device;"
-msgstr ""
+msgstr " 變成了區塊裝置；"
 
 #: lib/inspect_permissions.c:95
 msgid " became a regular file;"
-msgstr ""
+msgstr " 變成了正規檔案；"
 
 #: lib/inspect_permissions.c:97
 msgid " became a FIFO;"
-msgstr ""
+msgstr " 變成了 FIFO；"
 
 #: lib/inspect_permissions.c:99
 msgid " became a symbolic link;"
-msgstr ""
+msgstr " 變成了符號連結；"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " 變成了 socket；"
 
 #: lib/inspect_permissions.c:105
 msgid " permissions"
@@ -2736,7 +3056,7 @@ msgstr " 權限"
 
 #: lib/inspect_permissions.c:111
 msgid " relaxed"
-msgstr ""
+msgstr " 放寬"
 
 #: lib/inspect_permissions.c:114
 msgid " changed"
@@ -2745,89 +3065,89 @@ msgstr " 變更"
 #: lib/inspect_permissions.c:129
 #, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr ""
+msgstr "%1$s 在 %4$s 上從 %2$04o 變為 %3$04o"
 
 #: lib/inspect_permissions.c:135
 #, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 權限從 %04o 變為 %04o"
 
 #: lib/inspect_permissions.c:149
 #, c-format
 msgid "%s (%s) is world-writable on %s"
-msgstr ""
+msgstr "%1$s（%2$s）在 %3$s 上為全域可寫入"
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 為全域可寫入"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
 msgid "*** invalid politics entry with pattern=%s and digest=%s"
-msgstr ""
+msgstr "*** 無效的 politics 條目，模式=%s，摘要=%s"
 
 #: lib/inspect_politics.c:92
 #, c-format
 msgid "*** unknown digest type for pattern %s: %s"
-msgstr ""
+msgstr "*** 模式 %1$s 的未知摘要類型：%2$s"
 
 #: lib/inspect_politics.c:126
 #, c-format
 msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules allow this "
 "file."
-msgstr ""
+msgstr "在 %2$s 的 %3$s 中發現可能是政治敏感的檔案（%1$s）：規則允許此檔案。"
 
 #: lib/inspect_politics.c:134
 #, c-format
 msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules prohibit "
 "this file."
-msgstr ""
+msgstr "在 %2$s 的 %3$s 中發現可能是政治敏感的檔案（%1$s）：規則禁止此檔案。"
 
 #: lib/inspect_politics.c:138
 msgid "${FILE} is politically sensitive"
-msgstr ""
+msgstr "${FILE} 是政治敏感的"
 
 #: lib/inspect_removedfiles.c:26
 msgid ""
 "; Removing security policy related files requires inspection by the Security "
 "Response Team."
-msgstr ""
+msgstr "；移除安全性政策相關檔案需要安全性回應團隊檢查。"
 
 #: lib/inspect_removedfiles.c:85
 msgid "library ${FILE} removed on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上已移除的程式庫 ${FILE}"
 
 #: lib/inspect_removedfiles.c:131
 #, c-format
 msgid "ABI break: Library %s with SONAME '%s' removed from %s"
-msgstr ""
+msgstr "ABI 破壞：帶有 SONAME「%2$s」的程式庫 %1$s 已從 %3$s 移除"
 
 #: lib/inspect_removedfiles.c:132
 msgid "missing SONAME in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中缺少 SONAME"
 
 #: lib/inspect_removedfiles.c:135
 #, c-format
 msgid "ABI break: Library %s removed from %s"
-msgstr ""
+msgstr "ABI 破壞：程式庫 %1$s 已從 %2$s 移除"
 
 #: lib/inspect_removedfiles.c:138
 #, c-format
 msgid "%s removed from %s"
-msgstr ""
+msgstr "%1$s 已從 %2$s 移除"
 
 #: lib/inspect_rpmdeps.c:129
 #, c-format
 msgid "Invalid looking %s dependency in the %s package on %s: %s"
-msgstr ""
+msgstr "%2$s 套件中看似無效的 %1$s 相依性（%3$s）：%4$s"
 
 #: lib/inspect_rpmdeps.c:132 lib/inspect_rpmdeps.c:892
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
 #, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "%s 中 ${ARCH} 上的「${FILE}」"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -2837,33 +3157,36 @@ msgid ""
 "%s' to the spec file to avoid the need to test interoperability between "
 "various combinations of old and new subpackages."
 msgstr ""
+"%2$s 上的子套件 %1$s 帶有「%3$s」，該內容來自子套件 %4$s，但未包含明確的套件"
+"版本要求。請在 spec 檔案中加入「Requires: %5$s = %6$s」，以避免需要測試新舊子"
+"套件各種組合之間的互通性。"
 
 #: lib/inspect_rpmdeps.c:387
 #, c-format
 msgid "missing 'Requires: ${FILE} = %s' in %s on ${ARCH}"
-msgstr ""
+msgstr "%2$s 中 ${ARCH} 上缺少「Requires: ${FILE} = %1$s」"
 
 #: lib/inspect_rpmdeps.c:409
 #, c-format
 msgid ""
 "Multiple subpackages provide '%s': [%s] but these subpackages carry explicit "
 "Requires: [%s]"
-msgstr ""
+msgstr "多個子套件提供「%1$s」：[%2$s]，但這些子套件帶有明確的 Requires：[%3$s]"
 
 #: lib/inspect_rpmdeps.c:410
 #, c-format
 msgid "%s all provide '${FILE}' on ${ARCH}"
-msgstr ""
+msgstr "%s 全部在 ${ARCH} 上提供「${FILE}」"
 
 #: lib/inspect_rpmdeps.c:540
 #, c-format
 msgid "Missing epoch prefix on the version-release in '%s' for %s on %s"
-msgstr ""
+msgstr "%2$s 中 %3$s 的「%1$s」版本-發行版缺少 epoch 前綴"
 
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr ""
+msgstr "%s 中 ${ARCH} 上的「${FILE}」需要 epoch"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
@@ -2872,109 +3195,111 @@ msgstr "規格檔案"
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "原始碼套件 %2$s 中新增了「%1$s」"
 
 #: lib/inspect_rpmdeps.c:889
 #, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%3$s 上子套件 %2$s 中新增了「%1$s」"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "原始碼套件 %2$s 中保留了「%1$s」"
 
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%3$s 上子套件 %2$s 中保留了「%1$s」"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr ""
+msgstr "原始碼套件 %3$s 中「%1$s」已變更為「%2$s」"
 
 #: lib/inspect_rpmdeps.c:909
 #, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%4$s 上子套件 %3$s 中「%1$s」已變更為「%2$s」"
 
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "%2$s 中 ${ARCH} 上的「%1$s」變成了「${FILE}」"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
-msgstr ""
+msgstr "；此為預期行為"
 
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr ""
+msgstr "原始碼套件 %2$s 中遺失了「%1$s」"
 
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%3$s 上子套件 %2$s 中遺失了「%1$s」"
 
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
-msgstr ""
+msgstr "*** 無法編譯 $ORIGIN 根前綴正規表達式：%s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
 msgid "%s has an invalid-looking %s on %s: %s"
-msgstr ""
+msgstr "%1$s 在 %3$s 上有看似無效的 %2$s：%4$s"
 
 #: lib/inspect_runpath.c:192
 msgid "runtime search path in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的執行時期搜尋路徑"
 
 #: lib/inspect_runpath.c:270
 msgid "both DT_RPATH and DT_RUNPATH in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中同時存在 DT_RPATH 與 DT_RUNPATH"
 
 #: lib/inspect_runpath.c:272
 #, c-format
 msgid "%s has both DT_RPATH and DT_RUNPATH on %s; this is not allowed"
-msgstr ""
+msgstr "%1$s 在 %2$s 上同時有 DT_RPATH 與 DT_RUNPATH；這是不允許的"
 
 #: lib/inspect_shellsyntax.c:125
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上無效的 shell 腳本 ${FILE}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
 msgid "%s is a shell script but was not before on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上現在是 shell 腳本，但之前不是"
 
 #: lib/inspect_shellsyntax.c:134
 #, c-format
 msgid "%s is a %s script but was a %s script before on %s"
-msgstr ""
+msgstr "%1$s 在 %4$s 上現在是 %2$s 腳本，但之前是 %3$s 腳本"
 
 #: lib/inspect_shellsyntax.c:181
 #, c-format
 msgid "%s is no longer a valid %s script on %s"
-msgstr ""
+msgstr "%1$s 在 %3$s 上不再是有效的 %2$s 腳本"
 
 #: lib/inspect_shellsyntax.c:190
 #, c-format
 msgid "%s became a valid %s script on %s"
-msgstr ""
+msgstr "%1$s 在 %3$s 上變成了有效的 %2$s 腳本"
 
 #: lib/inspect_shellsyntax.c:193
 msgid ""
 ". The script fails with '-n' but passes with '-O extglob'; be sure 'shopt "
 "extglob' is set in the script."
 msgstr ""
+"。此腳本使用「-n」時失敗，但使用「-O extglob」時透過；請確保腳本中已設定「"
+"shopt extglob」。"
 
 #: lib/inspect_shellsyntax.c:204 lib/inspect_shellsyntax.c:224
 #, c-format
 msgid "%s is not a valid %s script on %s"
-msgstr ""
+msgstr "%1$s 在 %3$s 上不是有效的 %2$s 腳本"
 
 #: lib/inspect_shellsyntax.c:215
 #, c-format
@@ -2982,302 +3307,304 @@ msgid ""
 "%s fails with '-n' but passes with '-O extglob'; be sure 'shopt extglob' is "
 "set in the script on %s"
 msgstr ""
+"%1$s 在 %2$s 上使用「-n」時失敗，但使用「-O extglob」時通過；請確保腳本中已設"
+"定「shopt extglob」"
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "非預期的 spec 檔案名稱"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "完全符合"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "開頭為"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
-msgstr ""
+msgstr "結尾為"
 
 #: lib/inspect_specname.c:78
 #, c-format
 msgid "Spec filename does not %s the primary name %s; got '%s'"
-msgstr ""
+msgstr "spec 檔案名稱未 %1$s 主要名稱 %2$s；取得的是「%3$s」"
 
 #: lib/inspect_specname.c:109
 msgid "The specname inspection is only for source packages, skipping."
-msgstr ""
+msgstr "specname 檢查僅適用於原始碼套件，略過。"
 
 #: lib/inspect_subpackages.c:68
 #, c-format
 msgid "Subpackage '%s' has disappeared on '%s'"
-msgstr ""
+msgstr "%2$s 上的子套件「%1$s」已消失"
 
 #: lib/inspect_subpackages.c:75 lib/inspect_subpackages.c:99
 msgid "subpackage ${FILE}"
-msgstr ""
+msgstr "子套件 ${FILE}"
 
 #: lib/inspect_subpackages.c:92
 #, c-format
 msgid "Subpackage '%s' has appeared on '%s'"
-msgstr ""
+msgstr "%2$s 上出現了子套件「%1$s」"
 
 #: lib/inspect_symlinks.c:98
 #, c-format
 msgid ""
 "Directory %s became a symbolic link (to %s) in %s on %s; this is not allowed!"
-msgstr ""
+msgstr "%3$s 上 %4$s 中的目錄 %1$s 變成了符號連結（指向 %2$s）；這是不允許的！"
 
 #: lib/inspect_symlinks.c:100
 #, c-format
 msgid "%s %s became a symbolic link (to %s) in %s on %s"
-msgstr ""
+msgstr "%4$s 上 %5$s 中的 %1$s %2$s 變成了符號連結（指向 %3$s）"
 
 #: lib/inspect_symlinks.c:108
 msgid "${FILE} became a symlink on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 變成了符號連結"
 
 #: lib/inspect_symlinks.c:125
 msgid "unable to read symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "無法讀取 ${ARCH} 上的符號連結 ${FILE}"
 
 #: lib/inspect_symlinks.c:126
 #, c-format
 msgid "An error occurred reading symbolic link %s in %s on %s."
-msgstr ""
+msgstr "讀取 %2$s 上 %3$s 中的符號連結 %1$s 時發生錯誤。"
 
 #: lib/inspect_symlinks.c:178
 #, c-format
 msgid ""
 "%s %s has too many levels of redirects and cannot be resolved in %s on %s"
-msgstr ""
+msgstr "%3$s 上 %4$s 中的 %1$s %2$s 有太多層重新導向，無法解析"
 
 #: lib/inspect_symlinks.c:182
 msgid "too many redirects for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的重新導向層數過多"
 
 #: lib/inspect_symlinks.c:277
 #, c-format
 msgid "%s %s %s a dangling symbolic link in %s on %s"
-msgstr ""
+msgstr "%3$s 上 %4$s 中的 %1$s %2$s %5$s 一個懸置的符號連結"
 
 #: lib/inspect_symlinks.c:284
 msgid "dangling symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上的懸置符號連結 ${FILE}"
 
 #: lib/inspect_types.c:69
 msgid "${FILE} MIME type on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 的 MIME 類型"
 
 #: lib/inspect_types.c:77 lib/inspect_types.c:82
 #, c-format
 msgid "Unknown MIME type `%s' on %s in %s"
-msgstr ""
+msgstr "%2$s 中 %3$s 上未知的 MIME 類型「%1$s」"
 
 #: lib/inspect_types.c:107
 #, c-format
 msgid "MIME type for %s in %s was `%s/%s' and became `%s/%s'"
-msgstr ""
+msgstr "%2$s 中 %1$s 的 MIME 類型從「%3$s/%4$s」變成了「%5$s/%6$s」"
 
 #: lib/inspect_udevrules.c:104 lib/inspect_udevrules.c:116
 #, c-format
 msgid "%s is a valid udev rules file on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上是有效的 udev 規則檔案"
 
 #: lib/inspect_udevrules.c:106
 #, c-format
 msgid "%s is now a valid udev rules file on %s"
-msgstr ""
+msgstr "%1$s 現在在 %2$s 上是有效的 udev 規則檔案"
 
 #: lib/inspect_udevrules.c:109
 #, c-format
 msgid "%s is no longer a valid udev rules file on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上不再是有效的 udev 規則檔案"
 
 #: lib/inspect_udevrules.c:112 lib/inspect_udevrules.c:118
 #, c-format
 msgid "%s is not a valid udev rules file on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 上不是有效的 udev 規則檔案"
 
 #: lib/inspect_unicode.c:465
 #, c-format
 msgid "*** empty localpath on %s"
-msgstr ""
+msgstr "*** %s 上的 localpath 為空"
 
 #: lib/inspect_unicode.c:474
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中有禁止的字碼位"
 
 #: lib/inspect_unicode.c:551
 #, c-format
 msgid ""
 "A forbidden code point, 0x%04X, was found in the %s source file on line %ld "
 "at column %ld.  This source file is used by %s."
-msgstr ""
+msgstr "禁止的字碼位 0x%04X 在 %s 原始檔第 %ld 行第 %ld 欄中發現，該原始檔由 %s 使用"
 
 #: lib/inspect_unicode.c:621
 #, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr ""
+msgstr "無法在 ${FILE} 中執行 %prep"
 
 #: lib/inspect_unicode.c:624
 #, c-format
 msgid ""
 "Unable to run through the %%prep section in %s or manually unpack sources "
 "for further scanning."
-msgstr ""
+msgstr "無法在 %s 中完成 %%prep 區段或手動解壓縮原始碼以進行進一步掃描。"
 
 #: lib/inspect_unicode.c:744
 msgid "The unicode inspection is only for source packages, skipping."
-msgstr ""
+msgstr "unicode 檢查僅適用於原始碼套件，略過。"
 
 #: lib/inspect_upstream.c:60
 #, c-format
 msgid "New upstream source file `%s` appeared"
-msgstr ""
+msgstr "新的上游原始檔「%s」出現"
 
 #: lib/inspect_upstream.c:62
 msgid "new source file ${FILE}"
-msgstr ""
+msgstr "新的原始碼檔案 ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
 msgid "Upstream source file `%s` changed content"
-msgstr ""
+msgstr "上游原始檔「%s」內容已變更"
 
 #: lib/inspect_upstream.c:93
 msgid "checksum of ${FILE}"
-msgstr ""
+msgstr "${FILE} 的校驗碼"
 
 #: lib/inspect_upstream.c:195
 #, c-format
 msgid "Source file `%s` removed"
-msgstr ""
+msgstr "原始檔「%s」已移除"
 
 #: lib/inspect_upstream.c:197
 msgid "source file ${FILE} removed"
-msgstr ""
+msgstr "原始碼檔案 ${FILE} 已移除"
 
 #: lib/inspect_virus.c:40
 msgid "*** cl_engine_new returned NULL, check clamav library"
-msgstr ""
+msgstr "*** cl_engine_new 回傳 NULL，請檢查 clamav 函式庫"
 
 #: lib/inspect_virus.c:98
 #, c-format
 msgid "Virus detected in %s in the %s package on %s: %s"
-msgstr ""
+msgstr "在 %2$s 套件的 %1$s 中偵測到病毒（%3$s）：%4$s"
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
-msgstr ""
+msgstr "clamav 版本資訊"
 
 #: lib/inspect_virus.c:140
 #, c-format
 msgid "clamav version %s"
-msgstr ""
+msgstr "clamav 版本 %s"
 
 #: lib/inspect_virus.c:145
 #, c-format
 msgid "*** missing %s"
-msgstr ""
+msgstr "*** 缺少 %s"
 
 #: lib/inspect_virus.c:169
 #, c-format
 msgid "%s version %u (%s)"
-msgstr ""
+msgstr "%s 版本 %u (%s)"
 
 #: lib/inspect_virus.c:201
 msgid "virus or malware in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 中的病毒或惡意軟體"
 
 #: lib/inspect_xml.c:195
 #, c-format
 msgid "%s is a well-formed XML file in %s on %s, but is not a valid XML file"
-msgstr ""
+msgstr "%1$s 在 %2$s 的 %3$s 中是格式良好的 XML 檔案，但不是有效的 XML 檔案"
 
 #: lib/inspect_xml.c:203
 #, c-format
 msgid "%s is not a well-formed XML file in %s on %s"
-msgstr ""
+msgstr "%1$s 在 %2$s 的 %3$s 中不是格式良好的 XML 檔案"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 上 ${FILE} 不是格式良好的 XML"
 
 #: lib/koji.c:142
 #, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr ""
+msgstr "*** XML-RPC 錯誤：%s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc 錯誤代碼 %1$s（%2$d）：getBuild(%3$s) 來自 %4$s"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** Koji 建置 %2$s 的狀態為 %1$s，無法繼續"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc 錯誤代碼 %1$s（%2$d）：getTaskInfo(%3$s) 來自 %4$s"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
-msgstr ""
+msgstr "*** Koji 任務 %2$s 的狀態為 %1$s，無法繼續"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "RPM 套件建置"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
-msgstr ""
+msgstr "由多個 RPM 套件建置組成的模組建置"
 
 #: lib/magic.c:21
 msgid "*** unable to initialize the magic library"
-msgstr ""
+msgstr "*** 無法初始化 magic 函式庫"
 
 #: lib/magic.c:26
 #, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr ""
+msgstr "*** 無法載入 magic 資料庫：%s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
 msgid "*** unable to mkdir %s"
-msgstr ""
+msgstr "*** 無法建立目錄 %s"
 
 #: lib/output.c:25
 msgid ""
 "Detailed results suitable for the console and piping through paging programs."
-msgstr ""
+msgstr "詳細結果，適用於主控台輸出以及透過分頁程式管線處理。"
 
 #: lib/output.c:27
 msgid ""
 "Results organized as a JSON data structure suitable for reading by web "
 "applications and other frontend tools."
-msgstr ""
+msgstr "結果以 JSON 資料結構組織，適用於網頁應用程式及其他前端工具讀取。"
 
 #: lib/output.c:29
 msgid ""
 "Results organized as an XUnit data structure suitable for use with Jenkins "
 "and other XUnit-enabled services."
-msgstr ""
+msgstr "結果以 XUnit 資料結構組織，適用於 Jenkins 及其他支援 XUnit 的服務。"
 
 #: lib/output.c:31
 msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
-msgstr ""
+msgstr "結果以每行一個結果的方式摘要，適用於透過分頁程式在主控台檢視。"
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
 #, c-format
 msgid "*** error opening %s for writing"
-msgstr ""
+msgstr "*** 開啟 %s 進行寫入時發生錯誤"
 
 #: lib/output_summary.c:53
 msgid "added"
@@ -3293,7 +3620,7 @@ msgstr "變更"
 
 #: lib/output_summary.c:61
 msgid "ok"
-msgstr ""
+msgstr "正常"
 
 #: lib/output_summary.c:63
 msgid "unknown"
@@ -3302,7 +3629,7 @@ msgstr "未知"
 #: lib/output_text.c:92 lib/output_xunit.c:83
 #, c-format
 msgid "Result: %s\n"
-msgstr ""
+msgstr "結果：%s\n"
 
 #: lib/output_text.c:95 lib/output_xunit.c:96
 #, c-format
@@ -3310,6 +3637,8 @@ msgid ""
 "Waiver Authorization: %s\n"
 "\n"
 msgstr ""
+"豁免授權：%s\n"
+"\n"
 
 #: lib/output_text.c:99 lib/output_xunit.c:110
 #, c-format
@@ -3318,6 +3647,9 @@ msgid ""
 "%s\n"
 "\n"
 msgstr ""
+"詳細資料：\n"
+"%s\n"
+"\n"
 
 #: lib/output_text.c:103 lib/output_xunit.c:118
 #, c-format
@@ -3325,49 +3657,51 @@ msgid ""
 "Suggested Remedy:\n"
 "%s"
 msgstr ""
+"建議補救措施：\n"
+"%s"
 
 #: lib/output_xunit.c:54
 #, c-format
 msgid "*** opening %s for writing"
-msgstr ""
+msgstr "*** 正在開啟 %s 進行寫入"
 
 #: lib/parse_yaml.c:114 lib/parse_yaml.c:139
 #, c-format
 msgid "*** %s: broken document"
-msgstr ""
+msgstr "*** %s：破損的文件"
 
 #: lib/parse_yaml.c:158 lib/parse_yaml.c:305
 #, c-format
 msgid "*** skipping token type %s"
-msgstr ""
+msgstr "*** 略過 token 類型 %s"
 
 #: lib/parse_yaml.c:386
 msgid "*** malformed type - freed?"
-msgstr ""
+msgstr "*** 格式錯誤的類型 - 已釋放？"
 
 #: lib/peers.c:176
 #, c-format
 msgid "There is not enough available space to unpack all of the RPMs.\n"
-msgstr ""
+msgstr "可用空間不足以解壓縮所有 RPM。\n"
 
 #: lib/readelf.c:48
 #, c-format
 msgid "*** unknown elftype_t %d"
-msgstr ""
+msgstr "*** 未知的 elftype_t %d"
 
 #: lib/readelf.c:76
 msgid "*** libelf version mismatch"
-msgstr ""
+msgstr "*** libelf 版本不符"
 
 #: lib/readfile.c:50
 #, c-format
 msgid "*** unable to find end of %s"
-msgstr ""
+msgstr "*** 找不到 %s 的結尾"
 
 #: lib/readfile.c:68
 #, c-format
 msgid "*** unable to close %s"
-msgstr ""
+msgstr "*** 無法關閉 %s"
 
 #: lib/rmtree.c:74
 #, c-format
@@ -3377,26 +3711,26 @@ msgstr "*** %s 不是目錄"
 #: lib/rpm.c:71
 #, c-format
 msgid "*** Fopen failed for %s: %s"
-msgstr ""
+msgstr "*** 對 %1$s 的 Fopen 失敗：%2$s"
 
 #: lib/rpm.c:255
 #, c-format
 msgid "*** file index %d is out of bounds for %s"
-msgstr ""
+msgstr "*** 檔案索引 %d 超出 %s 的範圍"
 
 #: lib/rpm.c:431
 msgid "*** error reading file from RPM payload"
-msgstr ""
+msgstr "*** 從 RPM 承載讀取檔案時發生錯誤"
 
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d"
 
 #: lib/runcmd.c:173
 #, c-format
 msgid "%d (%s)"
-msgstr ""
+msgstr "%d (%s)"
 
 #: lib/runcmd.c:178
 #, c-format
@@ -3405,15 +3739,18 @@ msgid ""
 "\n"
 "%s tried to run the command and it received signal %s"
 msgstr ""
+"%1$s\n"
+"\n"
+"%2$s 嘗試執行指令，但收到了訊號 %3$s"
 
 #: lib/runcmd.c:182
 #, c-format
 msgid "%s tried to run the command and it received signal %s"
-msgstr ""
+msgstr "%1$s 嘗試執行指令，但收到了訊號 %2$s"
 
 #: lib/strfuncs.c:250 lib/strfuncs.c:282
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: lib/strfuncs.c:252 lib/strfuncs.c:284
 msgid "OK"
@@ -3421,35 +3758,35 @@ msgstr "正確"
 
 #: lib/strfuncs.c:254 lib/strfuncs.c:286
 msgid "INFO"
-msgstr ""
+msgstr "資訊"
 
 #: lib/strfuncs.c:256 lib/strfuncs.c:288
 msgid "VERIFY"
-msgstr ""
+msgstr "確認"
 
 #: lib/strfuncs.c:258 lib/strfuncs.c:290
 msgid "BAD"
-msgstr ""
+msgstr "不良"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "略過"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "診斷"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
-msgstr ""
+msgstr "未知"
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
-msgstr ""
+msgstr "不可豁免"
 
 #: lib/strfuncs.c:310
 msgid "Anyone"
-msgstr ""
+msgstr "任何人"
 
 #: lib/strfuncs.c:312
 msgid "Security"
@@ -3473,7 +3810,7 @@ msgstr "區塊裝置"
 
 #: lib/strfuncs.c:551
 msgid "FIFO (named pipe)"
-msgstr ""
+msgstr "FIFO（具名管線）"
 
 #: lib/strfuncs.c:553
 msgid "symbolic link"
@@ -3489,19 +3826,19 @@ msgstr "成功。"
 
 #: lib/strfuncs.c:616
 msgid "One or more inspections failed."
-msgstr ""
+msgstr "一或多個檢查失敗。"
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "程式錯誤。"
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
-msgstr ""
+msgstr "找不到指定的設定檔。"
 
 #: lib/strfuncs.c:622
 msgid "Insufficient disk space in the working directory."
-msgstr ""
+msgstr "工作目錄中的磁碟空間不足。"
 
 #: src/rpminspect.c:48
 #, c-format
@@ -3509,11 +3846,13 @@ msgid ""
 "Compare package builds for policy compliance and consistency.\n"
 "\n"
 msgstr ""
+"比較套件建置以檢查政策合規性與一致性。\n"
+"\n"
 
 #: src/rpminspect.c:49
 #, c-format
 msgid "Usage: %s [OPTIONS] [before build] [after build]\n"
-msgstr ""
+msgstr "用法：%s [選項] [前版本建置] [後版本建置]\n"
 
 #: src/rpminspect.c:50
 #, c-format
@@ -3523,155 +3862,155 @@ msgstr "選項:\n"
 #: src/rpminspect.c:51
 #, c-format
 msgid "  -c FILE, --config=FILE      Configuration file to use\n"
-msgstr ""
+msgstr "  -c FILE, --config=FILE      使用的設定檔案\n"
 
 #: src/rpminspect.c:52
 #, c-format
 msgid "  -p NAME, --profile=NAME     Configuration profile to use\n"
-msgstr ""
+msgstr "  -p NAME, --profile=NAME     使用的設定檔\n"
 
 #: src/rpminspect.c:53
 #, c-format
 msgid "  -T LIST, --tests=LIST       List of tests to run\n"
-msgstr ""
+msgstr "  -T LIST, --tests=LIST       要執行的測試清單\n"
 
 #: src/rpminspect.c:54
 #, c-format
 msgid "                                (default: ALL)\n"
-msgstr ""
+msgstr "                                （預設：ALL）\n"
 
 #: src/rpminspect.c:55
 #, c-format
 msgid "  -E LIST, --exclude=LIST     List of tests to exclude\n"
-msgstr ""
+msgstr "  -E LIST, --exclude=LIST     要排除的測試清單\n"
 
 #: src/rpminspect.c:56
 #, c-format
 msgid "                                (default: none)\n"
-msgstr ""
+msgstr "                                （預設：無）\n"
 
 #: src/rpminspect.c:57
 #, c-format
 msgid "  -a LIST, --arches=LIST      List of architectures to check\n"
-msgstr ""
+msgstr "  -a LIST, --arches=LIST      要檢查的架構清單\n"
 
 #: src/rpminspect.c:58
 #, c-format
 msgid "  -r STR, --release=STR       Product release string\n"
-msgstr ""
+msgstr "  -r STR, --release=STR       產品發行版本字串\n"
 
 #: src/rpminspect.c:59
 #, c-format
 msgid "  -n, --no-rebase             Disable build rebase detection\n"
-msgstr ""
+msgstr "  -n, --no-rebase             停用建置 rebase 偵測\n"
 
 #: src/rpminspect.c:60
 #, c-format
 msgid "  -b TYPE, --build-type=TYPE  Set Koji build type to TYPE\n"
-msgstr ""
+msgstr "  -b TYPE, --build-type=TYPE  設定 Koji 建置類型為 TYPE\n"
 
 #: src/rpminspect.c:61
 #, c-format
 msgid "  -o FILE, --output=FILE      Write results to FILE\n"
-msgstr ""
+msgstr "  -o FILE, --output=FILE      將結果寫入 FILE\n"
 
 #: src/rpminspect.c:62
 #, c-format
 msgid "                                (default: stdout)\n"
-msgstr ""
+msgstr "                                （預設：stdout）\n"
 
 #: src/rpminspect.c:63
 #, c-format
 msgid "  -F TYPE, --format=TYPE      Format output results as TYPE\n"
-msgstr ""
+msgstr "  -F TYPE, --format=TYPE      以 TYPE 格式輸出結果\n"
 
 #: src/rpminspect.c:64
 #, c-format
 msgid "                                (default: text)\n"
-msgstr ""
+msgstr "                                （預設：text）\n"
 
 #: src/rpminspect.c:65
 #, c-format
 msgid "  -t TAG, --threshold=TAG     Result threshold triggering exit\n"
-msgstr ""
+msgstr "  -t TAG, --threshold=TAG     觸發退出的結果閾值\n"
 
 #: src/rpminspect.c:66
 #, c-format
 msgid "                              failure (default: VERIFY)\n"
-msgstr ""
+msgstr "                              失敗（預設：VERIFY）\n"
 
 #: src/rpminspect.c:67
 #, c-format
 msgid "  -s TAG, --suppress=TAG      Results suppression threshold\n"
-msgstr ""
+msgstr "  -s TAG, --suppress=TAG      結果抑制閾值\n"
 
 #: src/rpminspect.c:68
 #, c-format
 msgid "                                (default: off, report everything)\n"
-msgstr ""
+msgstr "                                （預設：關閉，回報所有項目）\n"
 
 #: src/rpminspect.c:69
 #, c-format
 msgid "  -l, --list                  List available tests and formats\n"
-msgstr ""
+msgstr "  -l, --list                  列出可用的測試與格式\n"
 
 #: src/rpminspect.c:70
 #, c-format
 msgid "  -w PATH, --workdir=PATH     Temporary directory to use\n"
-msgstr ""
+msgstr "  -w PATH, --workdir=PATH     使用的暫存目錄\n"
 
 #: src/rpminspect.c:71
 #, c-format
 msgid "                                (default: %s)\n"
-msgstr ""
+msgstr "                                （預設：%s）\n"
 
 #: src/rpminspect.c:72
 #, c-format
 msgid ""
 "  -f, --fetch-only            Fetch builds only, do not perform inspections\n"
-msgstr ""
+msgstr "  -f, --fetch-only            僅擷取建置，不執行檢查\n"
 
 #: src/rpminspect.c:73
 #, c-format
 msgid "                                (implies -k)\n"
-msgstr ""
+msgstr "                                （隱含 -k）\n"
 
 #: src/rpminspect.c:74
 #, c-format
 msgid ""
 "  -k, --keep                  Do not remove the comparison working files\n"
-msgstr ""
+msgstr "  -k, --keep                  不移除比較用的工作檔案\n"
 
 #: src/rpminspect.c:75
 #, c-format
 msgid "  -d, --debug                 Debugging mode output\n"
-msgstr ""
+msgstr "  -d, --debug                 除錯模式輸出\n"
 
 #: src/rpminspect.c:76
 #, c-format
 msgid ""
 "  -D, --dump-config           Dump configuration settings (in YAML format)\n"
-msgstr ""
+msgstr "  -D, --dump-config           傾印設定值（YAML 格式）\n"
 
 #: src/rpminspect.c:77
 #, c-format
 msgid "  -v, --verbose               Verbose inspection output\n"
-msgstr ""
+msgstr "  -v, --verbose               詳細檢查輸出\n"
 
 #: src/rpminspect.c:78
 #, c-format
 msgid "                              when finished, display full path\n"
-msgstr ""
+msgstr "                              完成時顯示完整路徑\n"
 
 #: src/rpminspect.c:79
 #, c-format
 msgid "  -?, --help                  Display usage information\n"
-msgstr ""
+msgstr "  -?, --help                  顯示使用資訊\n"
 
 #: src/rpminspect.c:80
 #, c-format
 msgid "  -V, --version               Display program version\n"
-msgstr ""
+msgstr "  -V, --version               顯示程式版本\n"
 
 #: src/rpminspect.c:81
 #, c-format
@@ -3679,71 +4018,73 @@ msgid ""
 "\n"
 "See the rpminspect(1) man page for more information.\n"
 msgstr ""
+"\n"
+"詳見 rpminspect(1) 手冊頁面以取得更多資訊。\n"
 
 #: src/rpminspect.c:114
 #, c-format
 msgid "*** unable to compile product release regular expression: %s"
-msgstr ""
+msgstr "*** 無法編譯產品發行版本正規表達式：%s"
 
 #: src/rpminspect.c:168 src/rpminspect.c:179
 #, c-format
 msgid "*** product release for after build (%s) is empty"
-msgstr ""
+msgstr "*** 後版本建置（%s）的產品發行版本為空"
 
 #: src/rpminspect.c:196 src/rpminspect.c:204
 #, c-format
 msgid "*** product release for before build (%s) is empty"
-msgstr ""
+msgstr "*** 前版本建置（%s）的產品發行版本為空"
 
 #: src/rpminspect.c:259
 #, c-format
 msgid "*** unable to determine product release for %s and %s"
-msgstr ""
+msgstr "*** 無法判斷 %s 和 %s 的產品發行版本"
 
 #: src/rpminspect.c:260
 msgid ""
 "*** See the 'favor_release' setting in the rpminspect configuration file."
-msgstr ""
+msgstr "*** 請參閱 rpminspect 設定檔中的「favor_release」設定。"
 
 #: src/rpminspect.c:288
 msgid "*** the -T and -E options are mutually exclusive"
-msgstr ""
+msgstr "*** -T 與 -E 選項互斥"
 
 #: src/rpminspect.c:289 src/rpminspect.c:305 src/rpminspect.c:737
 #: src/rpminspect.c:776
 #, c-format
 msgid "*** See `%s --help` for more information."
-msgstr ""
+msgstr "*** 詳見「%s --help」以取得更多資訊。"
 
 #: src/rpminspect.c:304
 #, c-format
 msgid "*** unknown inspection: `%s`"
-msgstr ""
+msgstr "*** 未知的檢查：「%s」"
 
 #: src/rpminspect.c:455
 #, c-format
 msgid "*** unsupported build type: `%s`."
-msgstr ""
+msgstr "*** 不支援的建置類型：「%s」。"
 
 #: src/rpminspect.c:464
 #, c-format
 msgid "*** invalid build type: `%s`."
-msgstr ""
+msgstr "*** 無效的建置類型：「%s」。"
 
 #: src/rpminspect.c:481
 #, c-format
 msgid "*** invalid output format: `%s`."
-msgstr ""
+msgstr "*** 無效的輸出格式：「%s」。"
 
 #: src/rpminspect.c:493
 #, c-format
 msgid "*** unable to expand working directory: `%s`"
-msgstr ""
+msgstr "*** 無法展開工作目錄：「%s」"
 
 #: src/rpminspect.c:506
 #, c-format
 msgid "*** unable to use `%s' as working directory"
-msgstr ""
+msgstr "*** 無法使用「%s」作為工作目錄"
 
 #: src/rpminspect.c:536
 #, c-format
@@ -3753,12 +4094,12 @@ msgstr "%s 版本 %s\n"
 #: src/rpminspect.c:539
 #, c-format
 msgid "*** ?? getopt returned character code 0%o ??"
-msgstr ""
+msgstr "*** ?? getopt 回傳字元代碼 0%o ??"
 
 #: src/rpminspect.c:546
 #, c-format
 msgid "Available build types:\n"
-msgstr ""
+msgstr "可用的建置類型：\n"
 
 #: src/rpminspect.c:567
 #, c-format
@@ -3766,6 +4107,8 @@ msgid ""
 "\n"
 "Available output formats:\n"
 msgstr ""
+"\n"
+"可用的輸出格式：\n"
 
 #: src/rpminspect.c:584
 #, c-format
@@ -3773,6 +4116,8 @@ msgid ""
 "\n"
 "Available inspections:\n"
 msgstr ""
+"\n"
+"可用的檢查：\n"
 
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
 #, c-format
@@ -3782,60 +4127,60 @@ msgstr "*** 讀取設定檔案 %s 失敗"
 #: src/rpminspect.c:658
 #, c-format
 msgid "*** Please specify a configuration file using '-c' or supply ./%s"
-msgstr ""
+msgstr "*** 請使用「-c」指定設定檔，或提供 ./%s"
 
 #: src/rpminspect.c:736
 msgid "*** Invalid before and after build specification."
-msgstr ""
+msgstr "*** 無效的前後建置規格。"
 
 #: src/rpminspect.c:744
 msgid "*** unable to read RPM configuration"
-msgstr ""
+msgstr "*** 無法讀取 RPM 設定"
 
 #: src/rpminspect.c:775
 #, c-format
 msgid "*** unsupported architecture specified: `%s`"
-msgstr ""
+msgstr "*** 指定了不支援的架構：「%s」"
 
 #: src/rpminspect.c:793
 #, c-format
 msgid "*** unable to create directory %s"
-msgstr ""
+msgstr "*** 無法建立目錄 %s"
 
 #: src/rpminspect.c:851
 #, c-format
 msgid ""
 "Version information for libraries and programs used by %s as well as storage "
 "requirements.  This result is for informational and diagnostic purposes only."
-msgstr ""
+msgstr "%s 所使用的函式庫與程式版本資訊，以及儲存空間需求。此結果僅供參考與診斷用途。"
 
 #: src/rpminspect.c:858
 #, c-format
 msgid "Space required to download artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "下載成品所需空間：%lu 位元組（%s）\n"
 
 #: src/rpminspect.c:866
 #, c-format
 msgid "Space required to unpack artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "解壓縮成品所需空間：%lu 位元組（%s）\n"
 
 #: src/rpminspect.c:878
 #, c-format
 msgid "Command line arguments used to invoke %s."
-msgstr ""
+msgstr "用於叫用 %s 的命令列參數。"
 
 #: src/rpminspect.c:902
 #, c-format
 msgid "Local configuration file: %s"
-msgstr ""
+msgstr "本機設定檔：%s"
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "前版本建置"
 
 #: src/rpminspect.c:917
 msgid "After Build"
-msgstr ""
+msgstr "後版本建置"
 
 #: src/rpminspect.c:920
 msgid "Build"
@@ -3843,38 +4188,38 @@ msgstr "建置"
 
 #: src/rpminspect.c:937
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
-msgstr ""
+msgstr "*** 無對應套件，請確保指定架構存在套件"
 
 #: src/rpminspect.c:958
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
-msgstr ""
+msgstr "*** 無法在前後建置之間找到一組對應套件"
 
 #: src/rpminspect.c:972
 msgid "*** unable to determine product release or none specified (-r)."
-msgstr ""
+msgstr "*** 無法判斷產品發行版本，或未指定（-r）。"
 
 #: src/rpminspect.c:984
 #, c-format
 msgid "Skipping %s inspection..."
-msgstr ""
+msgstr "正在略過 %s 檢查..."
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "略過"
 
 #: src/rpminspect.c:1009
 #, c-format
 msgid "Running %s inspection..."
-msgstr ""
+msgstr "正在執行 %s 檢查..."
 
 #: src/rpminspect.c:1018
 msgid "pass"
-msgstr ""
+msgstr "透過"
 
 #: src/rpminspect.c:1018
 msgid "FAIL"
-msgstr ""
+msgstr "失敗"
 
 #: src/rpminspect.c:1046
 #, c-format
@@ -3882,3 +4227,5 @@ msgid ""
 "\n"
 "Keeping working directory: %s\n"
 msgstr ""
+"\n"
+"保留工作目錄：%s\n"
