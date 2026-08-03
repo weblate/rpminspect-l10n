@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2026-07-27 15:17+0000\n"
+"PO-Revision-Date: 2026-08-03 10:35+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ka/>\n"
@@ -1436,7 +1436,7 @@ msgstr "გამოტოვებული"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
-msgstr ""
+msgstr "უცნობი"
 
 #: lib/inspect_annocheck.c:226
 #, c-format
@@ -1548,7 +1548,7 @@ msgstr ""
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "მიღებულია ${ARCH}"
 
 #: lib/inspect_arch.c:96
 #, c-format
@@ -1668,7 +1668,7 @@ msgstr ""
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
@@ -1717,7 +1717,7 @@ msgstr ""
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "აკლია: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
@@ -1872,7 +1872,7 @@ msgstr ""
 #: lib/inspect_doc.c:71
 #, c-format
 msgid "%doc ${FILE}"
-msgstr ""
+msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
 #, c-format
@@ -2988,11 +2988,11 @@ msgstr ""
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "ზუსტი დამთხვევა"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "იწყება რით"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
@@ -3436,11 +3436,11 @@ msgstr "გამოტოვება"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "დიაგნოსტიკა"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
-msgstr ""
+msgstr "უცნობი"
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
@@ -3492,7 +3492,7 @@ msgstr ""
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "პროგრამის შეცდომა."
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
@@ -3537,7 +3537,7 @@ msgstr ""
 #: src/rpminspect.c:54
 #, c-format
 msgid "                                (default: ALL)\n"
-msgstr ""
+msgstr "                                (ნაგულისხმევი: ALL)\n"
 
 #: src/rpminspect.c:55
 #, c-format
@@ -3547,7 +3547,7 @@ msgstr ""
 #: src/rpminspect.c:56
 #, c-format
 msgid "                                (default: none)\n"
-msgstr ""
+msgstr "                                (ნაგულისხმევი: none)\n"
 
 #: src/rpminspect.c:57
 #, c-format
@@ -3577,7 +3577,7 @@ msgstr ""
 #: src/rpminspect.c:62
 #, c-format
 msgid "                                (default: stdout)\n"
-msgstr ""
+msgstr "                                (ნაგულისხმევი: stdout)\n"
 
 #: src/rpminspect.c:63
 #, c-format
@@ -3587,7 +3587,7 @@ msgstr ""
 #: src/rpminspect.c:64
 #, c-format
 msgid "                                (default: text)\n"
-msgstr ""
+msgstr "                                (ნაგულისხმევი: text)\n"
 
 #: src/rpminspect.c:65
 #, c-format
@@ -3830,7 +3830,7 @@ msgstr ""
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "აგებამდე"
 
 #: src/rpminspect.c:917
 msgid "After Build"
