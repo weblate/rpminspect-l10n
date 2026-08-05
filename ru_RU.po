@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: 2021-07-12 17:33+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: ru\n"
+"PO-Revision-Date: 2026-08-05 23:20+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
+"Language-Team: Russian <https://translate.fedoraproject.org/projects/"
+"rpminspect/main/ru/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.8\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -85,15 +86,6 @@ msgstr ""
 "Убедитесь, что файлы XML, включенные в RPM загрузку, правильно сформированы."
 
 #: include/inspect.h:1377
-#, fuzzy
-#| msgid ""
-#| "Perform several checks on ELF files. First, check that ELF objects do not "
-#| "contain an executable stack. Second, check that ELF objects do not "
-#| "contain text relocations. When comparing builds, check that the ELF "
-#| "objects in the after build did not lose a PT_GNU_RELRO segment. When "
-#| "comparing builds, check that the ELF objects in the after build did not "
-#| "lose -D_FORTIFY_SOURCE. Lastly, if there is a list of forbidden library "
-#| "functions, make sure nothing uses them."
 msgid ""
 "Perform several checks on ELF files. First, check that ELF objects do not "
 "contain an executable stack. Second, check that ELF objects do not contain "
@@ -319,12 +311,6 @@ msgstr ""
 "проверки командой безопасности."
 
 #: include/inspect.h:1494
-#, fuzzy
-#| msgid ""
-#| "Report kernel module parameter, dependency, PCI ID, or symbol differences "
-#| "between builds.  Added and removed parameters are reported and if the "
-#| "package version is unchanged, these messages are reported as failures.  "
-#| "The same is true module dependencies, PCI IDs, and symbols."
 msgid ""
 "Report kernel module parameter, dependency, PCI ID, or symbol differences "
 "between builds.  This inspection is intended as an information gathering "
@@ -480,15 +466,6 @@ msgstr ""
 "добавлены или удалены как файлы документации."
 
 #: include/inspect.h:1573
-#, fuzzy
-#| msgid ""
-#| "Inspects all patches defined in the spec file and reports changes between "
-#| "builds.  At the INFO level, rpminspect reports diffstat(1) and patch size "
-#| "changes.  If thresholds are reached regarding a change in the patch size "
-#| "or the number of files the patch touches, rpminspect reports the change "
-#| "at the VERIFY level unless the comparison is for a rebase.  The "
-#| "configuration file can also list patch names that rpminspect should "
-#| "ignore during the inspection."
 msgid ""
 "Inspects all patches defined in the spec file and reports changes between "
 "builds.  The functional check here is to ensure all defined patches in the "
@@ -560,6 +537,10 @@ msgid ""
 "for any prohibited Unicode code points, as defined in the configuration "
 "file.  Any prohibited code points are reported as a possible security risk."
 msgstr ""
+"Сканирует извлечённые и исправленные файлы исходного кода, сценарии и файлы "
+"спецификаций RPM на наличие запрещённых кодовых точек Unicode, как "
+"определено в файле конфигурации. Любые запрещённые кодовые точки сообщаются "
+"как возможный риск безопасности."
 
 #: include/inspect.h:1609
 msgid ""
@@ -569,6 +550,11 @@ msgid ""
 "will check for correct RPM dependency metadata when inspecting a single "
 "build and report findings."
 msgstr ""
+"Проверяет корректность метаданных зависимостей RPM. Сообщает о неверных или "
+"конфликтующих результатах, а также об ожидаемых изменениях при сравнении "
+"новой сборки со старой. Изменения сообщаются только при сравнении сборок, но "
+"эта проверка будет проверять корректность метаданных зависимостей RPM при "
+"проверке одной сборки и сообщать результаты."
 
 #: include/inspect.h:1615
 msgid ""
@@ -577,10 +563,16 @@ msgid ""
 "report where symbols unexpectedly appear or disappear and what corrective "
 "action is needed."
 msgstr ""
+"Проверяет, что файлы в пакетах RPM имеют удалённые отладочные символы, а "
+"файлы в пакетах debuginfo содержат отладочные символы. При сравнении сборок "
+"сообщает, где символы неожиданно появляются или исчезают и какие "
+"корректирующие действия требуются."
 
 #: include/inspect.h:1621
 msgid "Perform syntax check on udev rules files using udevadm verify."
 msgstr ""
+"Выполняет синтаксическую проверку файлов правил udev с помощью udevadm "
+"verify."
 
 #: include/results.h:31
 msgid "Change the string specified on the 'Vendor:' line in the spec file."
@@ -739,6 +731,11 @@ msgid ""
 "rules determining if the /data/static_context setting is required, "
 "forbidden, or recommend."
 msgstr ""
+"Эта сборка содержит допустимый или недопустимый параметр /data/"
+"static_context. Обратитесь к правилам модулей для продукта, который вы "
+"собираете, чтобы определить, каким должен быть параметр. Настройки "
+"конфигурации rpminspect также задают правила, определяющие, является ли "
+"параметр /data/static_context обязательным, запрещённым или рекомендуемым."
 
 #: include/results.h:277
 msgid ""
@@ -755,6 +752,8 @@ msgid ""
 "File changes were found.  In most cases these are expected, but it is a good "
 "idea to verify the changes found are deliberate."
 msgstr ""
+"Обнаружены изменения файлов. В большинстве случаев они ожидаемы, но "
+"рекомендуется проверить, что обнаруженные изменения являются преднамеренными."
 
 #: include/results.h:307
 msgid ""
@@ -784,13 +783,16 @@ msgid ""
 "You may also need to update the data package or local configuration file and "
 "change the forbidden_path_prefixes or forbidden_path_suffixes list."
 msgstr ""
+"Обнаружены неожиданные добавления файлов. Проверьте правильность этих "
+"изменений. Если они неверны, настройте сборку, чтобы предотвратить "
+"добавление файлов между сборками. Если они верны, обновите %s и отправьте "
+"патч в проект данных rpminspect, владеющий этим файлом, чтобы rpminspect "
+"знал об этом изменении. Возможно, вам также потребуется обновить пакет "
+"данных или локальный файл конфигурации и изменить список "
+"forbidden_path_prefixes или forbidden_path_suffixes."
 
 #: include/results.h:352
-#, fuzzy, c-format
-#| msgid ""
-#| "Unexpected changed source archive content.  The version of the package "
-#| "did not change between builds, but the source archive content did.  This "
-#| "may be deliberate, but needs inspection."
+#, c-format
 msgid ""
 "Unexpected changed source archive content. The version of the package did "
 "not change between builds, but the source archive content did. This may be "
@@ -799,7 +801,8 @@ msgid ""
 msgstr ""
 "Неожиданно изменено содержимое исходного архива. Версия пакета не менялась "
 "между сборками, но содержимое исходного архива менялось. Это может быть "
-"сделано намеренно, но требует проверки."
+"сделано намеренно, но требует проверки. Если это изменение ожидаемо, "
+"обновите %s и отправьте патч в проект, владеющий этим файлом."
 
 #: include/results.h:367
 #, c-format
@@ -808,71 +811,65 @@ msgid ""
 "permissions are expected, update %s and send a patch to the project that "
 "owns it."
 msgstr ""
+"Убедитесь, что раздел %%files включает макрос %%defattr. Если эти разрешения "
+"ожидаемы, обновите %s и отправьте патч в проект, владеющий им."
 
 #: include/results.h:374
-#, fuzzy, c-format
-#| msgid ""
-#| "Bin path files must be owned by the bin_owner set in the rpminspect "
-#| "configuration, which is usually root."
+#, c-format
 msgid ""
 "Bin path files must be owned by the bin_owner set in the rpminspect "
 "configuration, which is usually root. If this ownership is expected, update "
 "%s and send a patch to the project that owns it."
 msgstr ""
-"Bin путь к файлам должен принадлежать bin_owner, установленному в rpminspect."
-"conf, который обычно является root."
+"Файлы в путях bin должны принадлежать владельцу bin_owner, установленному в "
+"конфигурации rpminspect, обычно это root. Если это владение ожидаемо, "
+"обновите %s и отправьте патч в проект, владеющий им."
 
 #: include/results.h:381
-#, fuzzy, c-format
-#| msgid ""
-#| "Bin path files must be owned by the bin_group set in the rpminspect "
-#| "configuration, which is usually root."
+#, c-format
 msgid ""
 "Bin path files must be owned by the bin_group set in the rpminspect "
 "configuration, which is usually root. If this ownership is expect, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
-"Bin путь к папке должны принадлежать группе bin_group, установленной в "
-"конфигурации rpminspect, обычно это root."
+"Файлы в путях bin должны принадлежать группе bin_group, установленной в "
+"конфигурации rpminspect, обычно это root. Если это владение ожидаемо, "
+"обновите %s и отправьте патч в проект, владеющий им."
 
 #: include/results.h:388
-#, fuzzy, c-format
-#| msgid ""
-#| "Either chgrp the file to the bin_group set in the rpminspect "
-#| "configuration or remove the world execute bit on the file (chmod o-x)."
+#, c-format
 msgid ""
 "Either chgrp the file to the bin_group set in the rpminspect configuration "
 "or remove the world execute bit on the file (chmod o-x). If this ownership "
 "is expected, update %s and send a patch to the project that owns it."
 msgstr ""
-"Либо chgrp файл в bin_group, установленный в конфигурации rpminspect, либо "
-"удалите world бит выполнения в файле (chmod o-x)."
+"Либо выполните chgrp для файла в группу bin_group, установленную в "
+"конфигурации rpminspect, либо удалите бит выполнения для остальных "
+"пользователей (chmod o-x). Если это владение ожидаемо, обновите %s и "
+"отправьте патч в проект, владеющий им."
 
 #: include/results.h:395
-#, fuzzy, c-format
-#| msgid ""
-#| "Either chgrp the file to the bin_group set in the rpminspect "
-#| "configuration or remove the group write bit on the file (chmod g-w)."
+#, c-format
 msgid ""
 "Either chgrp the file to the bin_group set in the rpminspect configuration "
 "or remove the group write bit on the file (chmod g-w). If this ownership is "
 "expected, update %s and send a patch to the project that owns it."
 msgstr ""
-"Либо chgrp файл в bin_group, установленный в конфигурации rpminspect, либо "
-"удалите бит групповой записи в файле (chmod g-w)."
+"Либо выполните chgrp для файла в группу bin_group, установленную в "
+"конфигурации rpminspect, либо удалите бит записи для группы (chmod g-w). "
+"Если это владение ожидаемо, обновите %s и отправьте патч в проект, владеющий "
+"им."
 
 #: include/results.h:402
-#, fuzzy, c-format
-#| msgid ""
-#| "Verify the ownership changes are expected. If not, adjust the package "
-#| "build process to set correct owner and group information."
+#, c-format
 msgid ""
 "Verify the ownership changes are expected. If not, adjust the package build "
 "process to set correct owner and group information. If expected, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
 "Убедитесь, что смена владельца ожидаемая. Если нет, настройте процесс сборки "
-"пакета, чтобы указать правильную информацию о владельце и группе."
+"пакета, чтобы указать правильную информацию о владельце и группе. Если "
+"ожидаемо, обновите %s и отправьте патч в проект, владеющий им."
 
 #: include/results.h:409
 msgid ""
@@ -883,6 +880,12 @@ msgid ""
 "remedy, add a fileinfo rule for this file to the vendor data package under "
 "the appropriate product release file."
 msgstr ""
+"rpminspect ожидает правило fileinfo из пакета данных поставщика для этого "
+"файла. Обычно это означает, что файл имеет нестандартный набор разрешений "
+"(например, setuid), что является условием, при котором rpminspect проверяет "
+"список fileinfo, чтобы убедиться, что пакет соответствует правилам "
+"поставщика. Для устранения добавьте правило fileinfo для этого файла в пакет "
+"данных поставщика в соответствующий файл выпуска продукта."
 
 #: include/results.h:424
 msgid "Consult the shell documentation for proper syntax."
@@ -941,6 +944,9 @@ msgid ""
 "is, you can adjust the filesize inspection settings in the rpminspect.yaml "
 "file."
 msgstr ""
+"Файл значительно увеличился в размере. Убедитесь, что это изменение "
+"преднамеренно. Если да, вы можете настроить параметры проверки filesize в "
+"файле rpminspect.yaml."
 
 #: include/results.h:497
 msgid ""
@@ -948,6 +954,9 @@ msgid ""
 "it is, you can adjust the filesize inspection settings in the rpminspect."
 "yaml file."
 msgstr ""
+"Файл значительно уменьшился в размере. Убедитесь, что это изменение "
+"преднамеренно. Если да, вы можете настроить параметры проверки filesize в "
+"файле rpminspect.yaml."
 
 #: include/results.h:504
 msgid ""
@@ -966,12 +975,7 @@ msgstr ""
 "и при необходимости исправьте файл пространства пакета."
 
 #: include/results.h:526
-#, fuzzy, c-format
-#| msgid ""
-#| "Unexpected capabilities were found on the indicated file.  Consult "
-#| "capabilities(7) and either adjust the files in the package or modify the "
-#| "capabilities list in the rpminspect vendor data package.  The security "
-#| "team may also be of help for this situation."
+#, c-format
 msgid ""
 "Unexpected capabilities were found on the indicated file.  Consult "
 "capabilities(7) and either adjust the files in the package or modify the "
@@ -982,7 +986,9 @@ msgstr ""
 "В указанном файле обнаружены неожиданные возможности. Проконсультируйтесь с "
 "capabilities(7) и либо настройте файлы в пакете, либо измените список "
 "возможностей в пакете данных поставщика rpminspect. Команда безопасности "
-"также может помочь в этой ситуации."
+"также может помочь в этой ситуации. При необходимости обновите %s с "
+"обнаруженными здесь изменениями и отправьте патч в проект, владеющий файлом "
+"данных."
 
 #: include/results.h:541
 msgid ""
@@ -1204,6 +1210,15 @@ msgid ""
 "define the patch at the top of the spec file.  So Patch47 is applied with "
 "either a '%patch 47', '%patch -P 47', '%patch -P47', or '%patch47' macro."
 msgstr ""
+"Указанный патч определён в заголовке исходного RPM (это означает, что он "
+"имеет определение PatchN: в файле спецификации), но не применяется нигде в "
+"файле спецификации. Отсутствует соответствующий макрос %patch, и в файле "
+"спецификации отсутствуют макросы %autosetup или %autopatch. Вы можете "
+"исправить это, добавив соответствующий макрос %patch в файл спецификации "
+"(обычно в раздел %prep). Номер, указанный с макросом %patch, соответствует "
+"номеру, использованному для определения патча в верхней части файла "
+"спецификации. Таким образом, Patch47 применяется с помощью макроса '%patch "
+"47', '%patch -P 47', '%patch -P47' или '%patch47'."
 
 #: include/results.h:692
 #, c-format
@@ -1213,12 +1228,18 @@ msgid ""
 "For example, Patch47 needs to have either a '%patch 47', '%patch -P 47', "
 "'%patch -P47', or '%patch47' macro."
 msgstr ""
+"Указанный патч определён, но его номер не соответствует макросу %patch. "
+"Убедитесь, что все нумерованные патчи имеют соответствующие макросы %patch. "
+"Например, для Patch47 должен быть макрос '%patch 47', '%patch -P 47', "
+"'%patch -P47' или '%patch47'."
 
 #: include/results.h:694
 msgid ""
 "The defined patch file is not something rpminspect can handle.  This is "
 "likely a bug and should be reported to the upstream rpminspect project."
 msgstr ""
+"Определённый файл патча не может быть обработан rpminspect. Это, вероятно, "
+"ошибка, и о ней следует сообщить в вышестоящий проект rpminspect."
 
 #: include/results.h:704
 msgid ""
@@ -1235,11 +1256,7 @@ msgstr ""
 "сообщите об ошибке в rpminspect для получения дополнительной помощи."
 
 #: include/results.h:714
-#, fuzzy, c-format
-#| msgid ""
-#| "A file with potential politically sensitive content was found in the "
-#| "package.  If this file is permitted, it should be added to the rpminspect "
-#| "vendor data package for the product."
+#, c-format
 msgid ""
 "A file with potential politically sensitive content was found in the "
 "package.  If this file is permitted, it should be added to the rpminspect "
@@ -1247,8 +1264,9 @@ msgid ""
 "the project that owns it."
 msgstr ""
 "В пакете обнаружен файл с потенциально политически конфиденциальным "
-"содержимым. Если этот файл разрешен, его следует добавить в пакет данных "
-"поставщика rpminspect для продукта."
+"содержимым. Если этот файл разрешён, его следует добавить в пакет данных "
+"поставщика rpminspect для продукта. Измените файл %s и отправьте патч в "
+"проект, владеющий им."
 
 #: include/results.h:724
 msgid ""
@@ -1304,6 +1322,11 @@ msgid ""
 "discuss the situation with the Product Security Team to determine the "
 "correct course of action."
 msgstr ""
+"Файл конфигурации rpminspect содержит список запрещённых кодовых точек "
+"Unicode. Одна из них была найдена в извлечённом и исправленном дереве "
+"исходного кода или в одном из текстовых файлов исходного кода в исходном "
+"RPM. Либо удалите эту кодовую точку, либо обсудите ситуацию с группой "
+"безопасности продукта, чтобы определить правильный курс действий."
 
 #: include/results.h:748
 #, c-format
@@ -1314,6 +1337,11 @@ msgid ""
 "running.  A common cause is removal of the working directory while the "
 "program is executing."
 msgstr ""
+"Раздел %prep файла спецификации по какой-то причине не удалось выполнить. "
+"Обычно это происходит из-за сбоя в librpmbuild, который часто связан с "
+"проблемами извлечения архива или изменением файловой системы во время "
+"выполнения rpminspect. Распространённой причиной является удаление рабочего "
+"каталога во время выполнения программы."
 
 #: include/results.h:758
 msgid ""
@@ -1321,6 +1349,10 @@ msgid ""
 "Check the spec file for this dependency and ensure you have not misspelled a "
 "macro or used a macro name that does not exist."
 msgstr ""
+"В указанном правиле зависимости найдены неразвёрнутые макросы файла "
+"спецификации RPM. Проверьте файл спецификации на наличие этой зависимости и "
+"убедитесь, что вы не допустили опечатку в макросе или не использовали имя "
+"макроса, которое не существует."
 
 #: include/results.h:760
 msgid ""
@@ -1329,6 +1361,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{version}-%{release}' "
 "in the spec file."
 msgstr ""
+"Добавьте указанную явную зависимость Requires в файл спецификации для "
+"указанного подпакета. Подпакеты, зависящие от общих библиотек в другом "
+"подпакете, должны содержать явный 'Requires: SUBPACKAGE_NAME = %{version}-%"
+"{release}' в файле спецификации."
 
 #: include/results.h:762
 msgid ""
@@ -1337,6 +1373,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-"
 "%{release}' in the spec file."
 msgstr ""
+"Добавьте указанную явную зависимость Requires в файл спецификации для "
+"указанного подпакета. Подпакеты, зависящие от общих библиотек в другом "
+"подпакете, должны содержать явный 'Requires: SUBPACKAGE_NAME = %{epoch}:%"
+"{version}-%{release}' в файле спецификации."
 
 #: include/results.h:764
 #, c-format
@@ -1347,6 +1387,11 @@ msgid ""
 "spec file but you do need to make sure only one subpackage is packaging up "
 "the shared library in question."
 msgstr ""
+"Проверьте разделы %files подпакетов и явные операторы Provides. Только один "
+"подпакет должен предоставлять данную общую библиотеку. Имена общих библиотек "
+"автоматически добавляются как Provides, поэтому нет необходимости указывать "
+"их в файле спецификации, но вы должны убедиться, что только один подпакет "
+"упаковывает данную общую библиотеку."
 
 #: include/results.h:766
 msgid ""
@@ -1356,6 +1401,11 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Зависимость, указанная в предыдущей сборке, изменилась на указанную "
+"зависимость в последующей сборке. Если это результат VERIFY, это означает, "
+"что rpminspect заметил изменение в том, что он считает обслуживающим "
+"обновлением пакета. Результат INFO означает, что он заметил это изменение, "
+"но считает его допустимым, поскольку сравнивает перебазированную сборку."
 
 #: include/results.h:768
 msgid ""
@@ -1365,6 +1415,11 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"В последующей сборке обнаружена новая зависимость, которой не было в "
+"предыдущей сборке. Если это результат VERIFY, это означает, что rpminspect "
+"заметил изменение в том, что он считает обслуживающим обновлением пакета. "
+"Результат INFO означает, что он заметил это изменение, но считает его "
+"допустимым, поскольку сравнивает перебазированную сборку."
 
 #: include/results.h:770
 msgid ""
@@ -1374,6 +1429,12 @@ msgid ""
 "An INFO result means it noticed this change, but deems it ok because it is "
 "comparing a rebased build."
 msgstr ""
+"Зависимость, присутствовавшая в предыдущей сборке, отсутствует в последующей "
+"сборке, что означает её удаление или потерю. Если это результат VERIFY, это "
+"означает, что rpminspect заметил изменение в том, что он считает "
+"обслуживающим обновлением пакета. Результат INFO означает, что он заметил "
+"это изменение, но считает его допустимым, поскольку сравнивает "
+"перебазированную сборку."
 
 #: include/results.h:772
 msgid ""
@@ -1383,90 +1444,86 @@ msgid ""
 "%{version}-%{release}' to capture the package package Epoch in the "
 "dependency."
 msgstr ""
+"Пакет имеет значение Epoch больше нуля, но явные зависимости подпакетов не "
+"используют его последовательно. Для указанной зависимости '= %{version}-%"
+"{release}' необходимо изменить на '= %{epoch}:%{version}-%{release}', чтобы "
+"включить Epoch пакета в зависимость."
 
 #: include/results.h:781
-#, fuzzy
-#| msgid ""
-#| "Refer to the Desktop Entry Specification at https://standards.freedesktop."
-#| "org/desktop-entry-spec/latest/ for help correcting the errors and warnings"
 msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
-"Обратитесь к Спецификации Desktop Entry на https://standards.freedesktop.org/"
-"desktop-entry-spec/latest/ для получения помощи по исправлению ошибок и "
-"предупреждений"
+"Обратитесь к документации udev по адресу https://www.freedesktop.org/"
+"software/systemd/man/udev.html для получения помощи по исправлению ошибок и "
+"предупреждений."
 
 #: lib/abi.c:65
-#, fuzzy, c-format
-#| msgid "malformed ABI level identifier: %s"
+#, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr "неверный идентификатор уровня ABI: %s"
+msgstr "*** неверный идентификатор уровня ABI: %s"
 
 #: lib/abi.c:70
-#, fuzzy, c-format
-#| msgid "ABI level %d already defined"
+#, c-format
 msgid "*** ABI level %d already defined"
-msgstr "Уровень ABI %d уже определен"
+msgstr "*** Уровень ABI %d уже определён"
 
 #: lib/abi.c:84
-#, fuzzy, c-format
-#| msgid "malformed ABI level entry: %s"
+#, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr "некорректная запись уровня ABI: %s"
+msgstr "*** некорректная запись уровня ABI: %s"
 
 #: lib/builds.c:73
-#, fuzzy, c-format
-#| msgid "unable to create download directory %s"
+#, c-format
 msgid "*** unable to create download directory %s"
-msgstr "невозможно создать каталог загрузок %s"
+msgstr "*** невозможно создать каталог загрузок %s"
 
 #: lib/builds.c:85
-#, fuzzy, c-format
-#| msgid "unknown workdir type %d"
+#, c-format
 msgid "*** unknown working directory type: %d"
-msgstr "неизвестный тип рабочего каталога %d"
+msgstr "*** неизвестный тип рабочего каталога: %d"
 
 #: lib/builds.c:173
-#, fuzzy, c-format
-#| msgid "unable to read %s, skipping"
+#, c-format
 msgid "*** unable to read %s, skipping"
-msgstr "не могу прочитать %s, пропускаю"
+msgstr "*** не удаётся прочитать %s, пропускаю"
 
 #: lib/builds.c:205
-#, fuzzy, c-format
-#| msgid "unknown directory member encountered: %s"
+#, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr "обнаружен неизвестный член каталога: %s"
+msgstr "*** обнаружен неизвестный член каталога: %s"
 
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "Недостаточно свободного места для загрузки запрошенного %s.\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    Требуется %s в %s, доступно %s.\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
 msgstr ""
+"Используйте параметр `-w' для указания альтернативного рабочего каталога.\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
 msgstr ""
+"Не удалось определить необходимое пространство для загрузки запрошенного "
+"%s.\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "Убедитесь, что %s имеет достаточно свободного места."
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
-msgstr ""
+msgstr "сборка"
 
 #: lib/builds.c:320
 msgid "Downloading module"
@@ -1477,60 +1534,52 @@ msgid "Downloading RPM build"
 msgstr "Загрузка RPM сборки"
 
 #: lib/builds.c:373 lib/inspect_modularity.c:47
-#, fuzzy, c-format
-#| msgid "ignoring malformed module metadata file: %s"
+#, c-format
 msgid "*** ignoring malformed module metadata file: %s"
-msgstr "игнорирование искаженного файла метаданных модуля: %s"
+msgstr "*** игнорирование искажённого файла метаданных модуля: %s"
 
 #: lib/builds.c:383
-#, fuzzy, c-format
-#| msgid "malformed ABI level identifier: %s"
+#, c-format
 msgid "*** malformed rpm filters in file: %s"
-msgstr "неверный идентификатор уровня ABI: %s"
+msgstr "*** искажённые фильтры rpm в файле: %s"
 
 #: lib/builds.c:541 lib/builds.c:545
 msgid "task"
-msgstr ""
+msgstr "задача"
 
 #: lib/builds.c:659 lib/builds.c:662
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: lib/builds.c:791
-#, fuzzy, c-format
-#| msgid "`%s' already exists"
+#, c-format
 msgid "*** `%s' already exists in %s"
-msgstr "`%s' уже существует"
+msgstr "*** `%s' уже существует в %s"
 
 #: lib/builds.c:829
-#, fuzzy, c-format
-#| msgid "unable to find after build: %s"
+#, c-format
 msgid "*** unable to find local build: %s"
-msgstr "невозможно найти после сборки: %s"
+msgstr "*** невозможно найти локальную сборку: %s"
 
 #: lib/builds.c:841
-#, fuzzy, c-format
-#| msgid "*** unable to mkdir %s"
+#, c-format
 msgid "*** unable to download RPM: %s"
-msgstr "невозможно создать директорию %s"
+msgstr "*** невозможно загрузить RPM: %s"
 
 #: lib/builds.c:860 lib/builds.c:893 lib/builds.c:903
-#, fuzzy, c-format
-#| msgid "*** unable to find tag %s for %s"
+#, c-format
 msgid "*** unable to find build %s in Koji hub %s"
-msgstr "невозможно найти тег %s для %s"
+msgstr "*** невозможно найти сборку %s в Koji hub %s"
 
 #: lib/builds.c:872
-#, fuzzy, c-format
-#| msgid "*** unable to find tag %s for %s"
+#, c-format
 msgid "*** unable to find task %s in Koji hub %s"
-msgstr "невозможно найти тег %s для %s"
+msgstr "*** невозможно найти задачу %s в Koji hub %s"
 
 #: lib/checksums.c:91
-#, fuzzy, c-format
-#| msgid "%s is a FIFO"
+#, c-format
 msgid "*** %s is a FIFO"
-msgstr "%s это FIFO"
+msgstr "*** %s является FIFO"
 
 #: lib/copyfile.c:117
 #, c-format
@@ -1542,32 +1591,23 @@ msgid ", overwriting"
 msgstr ", перезаписывается"
 
 #: lib/curl.c:267 lib/readfile.c:60
-#, fuzzy, c-format
-#| msgid "*** unable to mkdir %s"
+#, c-format
 msgid "*** unable to read %s"
-msgstr "невозможно создать директорию %s"
+msgstr "*** не удаётся прочитать %s"
 
 #: lib/fileinfo.c:64
-#, fuzzy, c-format
-#| msgid ""
-#| "%s in %s on %s carries mode %04o, is on the fileinfo list but expected "
-#| "mode %04o"
+#, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
-"%s в %s на %s имеет режим %04o, находится в списке информации о файлах, но "
-"ожидается режим%04o"
+msgstr "%s в %s на %s имеет ожидаемый режим %04o"
 
 #: lib/fileinfo.c:76
-#, fuzzy, c-format
-#| msgid ""
-#| "New security-related file `%s` added on %s requires inspection by the "
-#| "Security Team"
+#, c-format
 msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
 msgstr ""
-"Новый файл, связанный с безопасностью `%s` добавлен к %s требует осмотра "
-"Службой Безопасности"
+"%s в %s на %s имеет неожиданный режим %04o; ожидаемый режим %04o; требуется "
+"проверка группой безопасности"
 
 #: lib/fileinfo.c:96
 #, c-format
@@ -1579,66 +1619,46 @@ msgstr ""
 "группы безопасности"
 
 #: lib/fileinfo.c:155
-#, fuzzy, c-format
-#| msgid ""
-#| "%s in %s on %s carries owner '%s', but is on the fileinfo list with "
-#| "expected owner '%s'"
+#, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
-"%s в %s на %s имеет владельца '%s', но находится в списке информации о файле "
-"с ожидаемым владельцем '%s'"
+msgstr "%s в %s на %s имеет ожидаемого владельца '%s'"
 
 #: lib/fileinfo.c:168
-#, fuzzy, c-format
-#| msgid ""
-#| "New security-related file `%s` added on %s requires inspection by the "
-#| "Security Team"
+#, c-format
 msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
-"Новый файл, связанный с безопасностью `%s` добавлен к %s требует осмотра "
-"Службой Безопасности"
+"%s в %s на %s имеет неожиданного владельца '%s'; ожидаемый владелец '%s'; "
+"требуется проверка группой безопасности"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
-#, fuzzy, c-format
-#| msgid ""
-#| "%s in %s on %s carries insecure mode %04o, Security Team review may be "
-#| "required"
+#, c-format
 msgid ""
 "%s in %s on %s carries insecure mode %04o but has no fileinfo rule for owner "
 "specification, Security Team review may be required"
 msgstr ""
-"%s в %s на %s имеет небезопасный режим %04o, может потребоваться проверка "
-"группы безопасности"
+"%s в %s на %s имеет небезопасный режим %04o, но не имеет правила fileinfo "
+"для указания владельца, может потребоваться проверка группы безопасности"
 
 #: lib/fileinfo.c:249
-#, fuzzy, c-format
-#| msgid ""
-#| "%s in %s on %s carries group '%s', but is on the fileinfo list with "
-#| "expected group '%s'"
+#, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
-"%s в %s на %s содержит группу '%s', но находится в списке информации о "
-"файлах с ожидаемой группой '%s'"
+msgstr "%s в %s на %s имеет ожидаемую группу '%s'"
 
 #: lib/fileinfo.c:262
-#, fuzzy, c-format
-#| msgid ""
-#| "New security-related file `%s` added on %s requires inspection by the "
-#| "Security Team"
+#, c-format
 msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
-"Новый файл, связанный с безопасностью `%s` добавлен к %s требует осмотра "
-"Службой Безопасности"
+"%s в %s на %s имеет неожиданную группу '%s'; ожидаемая группа '%s'; "
+"требуется проверка группой безопасности"
 
 #: lib/init.c:226
-#, fuzzy, c-format
-#| msgid "invalid input string `%s`"
+#, c-format
 msgid "*** invalid input string `%s`"
-msgstr "неверная строка ввода: `%s`"
+msgstr "*** неверная строка ввода `%s`"
 
 #: lib/init.c:253 lib/init.c:262 lib/init.c:270 lib/init.c:282 lib/init.c:291
 #: lib/init.c:299 lib/init.c:311 lib/init.c:320 lib/init.c:328 lib/init.c:340
@@ -1649,60 +1669,50 @@ msgstr "*** неверная строка режима: %s"
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** проблема при добавлении записей в массив %s->%s"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** проблема при добавлении записей игнорирования в %s"
 
 #: lib/init.c:418 lib/init.c:432
-#, fuzzy
-#| msgid "*** error reading '%s'\n"
 msgid "*** error reading "
-msgstr "*** ошибка чтения '%s'\n"
+msgstr "*** ошибка чтения "
 
 #: lib/init.c:458
-#, fuzzy, c-format
-#| msgid "ignoring malformed %s configuration file: %s"
+#, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr "игнорирование искаженного файла конфигурации %s: %s"
+msgstr "*** игнорирование искажённого раздела %s->%s"
 
 #: lib/init.c:515 lib/init.c:528
-#, fuzzy, c-format
-#| msgid "*** error reading '%s'\n"
+#, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr "*** ошибка чтения '%s'\n"
+msgstr "*** ошибка чтения шаблона игнорирования %s"
 
 #: lib/init.c:544
-#, fuzzy, c-format
-#| msgid "*** inspection flag must be 'on' or 'off', ignoring for '%s'"
+#, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
-"*** флаг проверки должен быть 'включен' или 'выключен', игнорируя для '%s'"
+msgstr "*** флаг должен быть 'on' или 'off'; игнорирование '%s'"
 
 #: lib/init.c:548
-#, fuzzy, c-format
-#| msgid "*** Unknown inspection: `%s`"
+#, c-format
 msgid "*** unknown inspections: `%s`"
-msgstr "*** Неизвестная инспекция: `%s`"
+msgstr "*** неизвестные проверки: `%s`"
 
 #: lib/init.c:559
-#, fuzzy
-#| msgid "*** Unknown inspection: `%s`"
 msgid "*** malformed/unknown inspections section"
-msgstr "*** Неизвестная инспекция: `%s`"
+msgstr "*** искажённый/неизвестный раздел проверок"
 
 #: lib/init.c:591
-#, fuzzy, c-format
-#| msgid "ignoring malformed %s configuration file: %s"
+#, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr "игнорирование искаженного файла конфигурации %s: %s"
+msgstr "*** игнорирование искажённого файла конфигурации %s: %s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** неизвестные настройки статического контекста модульности '%s'"
 
 #: lib/init.c:717
 #, c-format
@@ -1720,21 +1730,20 @@ msgstr ""
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
-msgstr ""
+msgstr "*** недопустимый annocheck failure_reporting_level: %s, по умолчанию %s"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** искажённый раздел badfuncs->allowed"
 
 #: lib/init.c:822
-#, fuzzy, c-format
-#| msgid "*** unable to compile product release regular expression: %s"
+#, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
-msgstr "*** невозможно скомпилировать регулярное выражение релиза продукта: %s"
+msgstr "*** ошибка чтения регулярного выражения исключения unicode: %s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** искажённый раздел rpmdeps->ignore; пропускаю"
 
 #: lib/init.c:968
 #, c-format
@@ -1753,59 +1762,49 @@ msgstr "***     %s"
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** неожиданный токен `%s' в %s, невозможно продолжить"
 
 #: lib/init.c:1414
-#, fuzzy, c-format
-#| msgid "*** invalid mode string: %s"
+#, c-format
 msgid "*** invalid security rule: %s"
-msgstr "*** неверная строка режима: %s"
+msgstr "*** недопустимое правило безопасности: %s"
 
 #: lib/init.c:1426
-#, fuzzy, c-format
-#| msgid "*** Unknown inspection: `%s`"
+#, c-format
 msgid "*** unknown security rule: %s"
-msgstr "*** Неизвестная инспекция: `%s`"
+msgstr "*** неизвестное правило безопасности: %s"
 
 #: lib/init.c:1435
-#, fuzzy, c-format
-#| msgid "*** Unknown inspection: `%s`"
+#, c-format
 msgid "*** unknown security action: %s"
-msgstr "*** Неизвестная инспекция: `%s`"
+msgstr "*** неизвестное действие безопасности: %s"
 
 #: lib/init.c:1461
-#, fuzzy, c-format
-#| msgid "ignoring malformed %s configuration file: %s"
+#, c-format
 msgid "*** malformed security line: %s"
-msgstr "игнорирование искаженного файла конфигурации %s: %s"
+msgstr "*** искажённая строка безопасности: %s"
 
 #: lib/init.c:1622
-#, fuzzy, c-format
-#| msgid "ignoring malformed %s configuration file: %s"
+#, c-format
 msgid "*** missing configuration file `%s'"
-msgstr "игнорирование искаженного файла конфигурации %s: %s"
+msgstr "*** отсутствует файл конфигурации `%s'"
 
 #: lib/init.c:1658
-#, fuzzy, c-format
-#| msgid "*** unable to read profile '%s' from %s\n"
+#, c-format
 msgid "*** unable to find profile '%s'"
-msgstr "*** невозможно прочитать профиль '%s' с %s\n"
+msgstr "*** невозможно найти профиль '%s'"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "ошибка использования abidiff"
 
 #: lib/inspect_abidiff.c:275
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "Изменение ABI в ${FILE} на ${ARCH}"
 
 #: lib/inspect_abidiff.c:284
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "Несовместимое изменение ABI в ${FILE} на ${ARCH}"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1850,10 +1849,7 @@ msgstr ""
 "%s"
 
 #: lib/inspect_addedfiles.c:149
-#, fuzzy, c-format
-#| msgid ""
-#| "Packages should not contain not files or directories starting with `%s` "
-#| "on %s: %s"
+#, c-format
 msgid ""
 "Packages should not contain files or directories starting with `%s` on %s in "
 "%s: %s"
@@ -1861,16 +1857,11 @@ msgstr ""
 "Пакеты не должны содержать файлы или каталоги, начинающиеся с `%s` в %s: %s"
 
 #: lib/inspect_addedfiles.c:150 lib/inspect_addedfiles.c:164
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "invalid directory ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "недопустимый каталог ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:163
-#, fuzzy, c-format
-#| msgid ""
-#| "Packages should not contain files or directories ending with `%s` on %s: "
-#| "%s"
+#, c-format
 msgid ""
 "Packages should not contain files or directories ending with `%s` on %s in "
 "%s: %s"
@@ -1879,82 +1870,69 @@ msgstr ""
 "%s"
 
 #: lib/inspect_addedfiles.c:177
-#, fuzzy, c-format
-#| msgid "Forbidden directory `%s` found on %s"
+#, c-format
 msgid "Forbidden directory `%s` found on %s in %s: %s"
-msgstr "Запрещенный каталог `%s` найден в %s"
+msgstr "Запрещённый каталог `%s` найден в %s: %s"
 
 #: lib/inspect_addedfiles.c:178
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "forbidden directory ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "запрещённый каталог ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:209
-#, fuzzy, c-format
-#| msgid ""
-#| "New security-related file `%s` added on %s requires inspection by the "
-#| "Security Team"
+#, c-format
 msgid ""
 "New security-related file `%s` added on %s in %s requires inspection by the "
 "Security Team"
 msgstr ""
-"Новый файл, связанный с безопасностью `%s` добавлен к %s требует осмотра "
-"Службой Безопасности"
+"Новый файл, связанный с безопасностью, `%s` добавлен в %s, требуется "
+"проверка группой безопасности"
 
 #: lib/inspect_addedfiles.c:211
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "новый файл, связанный с безопасностью, ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:231
-#, fuzzy, c-format
-#| msgid "`%s` added on %s"
+#, c-format
 msgid "`%s` added on %s in %s"
-msgstr "`%s` добавлен к %s"
+msgstr "`%s` добавлен в %s"
 
 #: lib/inspect_addedfiles.c:232
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "new file ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "новый файл ${FILE} на ${ARCH}"
 
 #: lib/inspect_addedfiles.c:248
 msgid "the fileinfo list"
-msgstr ""
+msgstr "список fileinfo"
 
 #: lib/inspect_annocheck.c:116 lib/inspect_annocheck.c:151
 #, c-format
 msgid "*** libannocheck_enable_profile: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_profile: %s"
 
 #: lib/inspect_annocheck.c:136
 #, c-format
 msgid "*** libannocheck_get_known_profiles: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_profiles: %s"
 
 #: lib/inspect_annocheck.c:168
 msgid "NOT RUN"
-msgstr ""
+msgstr "НЕ ЗАПУЩЕН"
 
 #: lib/inspect_annocheck.c:170
 msgid "PASSED"
-msgstr ""
+msgstr "ПРОЙДЕН"
 
 #: lib/inspect_annocheck.c:172 lib/output_summary.c:59
-#, fuzzy
-#| msgid "FAIL"
 msgid "FAILED"
-msgstr "ОТКАЗ"
+msgstr "НЕ ПРОЙДЕН"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "ВОЗМОЖНО"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
-msgstr ""
+msgstr "пропущено"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
@@ -1963,84 +1941,76 @@ msgstr "НЕИЗВЕСТНЫЙ"
 #: lib/inspect_annocheck.c:226
 #, c-format
 msgid "*** libannocheck_init: %s"
-msgstr ""
+msgstr "*** libannocheck_init: %s"
 
 #: lib/inspect_annocheck.c:255
 #, c-format
 msgid "*** libannocheck_%s_test: %s"
-msgstr ""
+msgstr "*** libannocheck_%s_test: %s"
 
 #: lib/inspect_annocheck.c:267
 #, c-format
 msgid "*** libannocheck_enable_all_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_all_tests: %s"
 
 #: lib/inspect_annocheck.c:280
 #, c-format
 msgid "*** libannocheck_reinit: %s"
-msgstr ""
+msgstr "*** libannocheck_reinit: %s"
 
 #: lib/inspect_annocheck.c:373
 #, c-format
 msgid "*** before libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** перед libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:382 lib/inspect_annocheck.c:426
 #, c-format
 msgid "*** libannocheck_get_known_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_tests: %s"
 
 #: lib/inspect_annocheck.c:400 lib/inspect_annocheck.c:530
 #, c-format
 msgid "*** libannocheck_finish: %s"
-msgstr ""
+msgstr "*** libannocheck_finish: %s"
 
 #: lib/inspect_annocheck.c:417
 #, c-format
 msgid "*** after libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** после libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:461 lib/inspect_annocheck.c:613
-#, fuzzy
-#| msgid "-D_FORTIFY_SOURCE on ${FILE}"
 msgid "lost -D_FORTIFY_SOURCE in ${FILE} on ${ARCH}"
-msgstr "-D_FORTIFY_SOURCE на ${FILE}"
+msgstr "потерян -D_FORTIFY_SOURCE в ${FILE} на ${ARCH}"
 
 #: lib/inspect_annocheck.c:464
-#, fuzzy, c-format
-#| msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
+#, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr "%s могут быть потеряны -D_FORTIFY_SOURCE на %s"
+msgstr "%s мог потерять -O2 -D_FORTIFY_SOURCE на %s"
 
 #: lib/inspect_annocheck.c:489
-#, fuzzy, c-format
-#| msgid "annocheck '%s' test passes for %s on %s"
+#, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr "annocheck '%s' тесты пройдены для %s на %s"
+msgstr "libannocheck '%s' продолжает проходить для %s на %s"
 
 #: lib/inspect_annocheck.c:492
-#, fuzzy, c-format
-#| msgid "annocheck '%s' test now passes for %s on %s"
+#, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr "annocheck '%s' тест сейчас проходит для %s на %s"
+msgstr "libannocheck '%s' теперь проходит для %s на %s"
 
 #: lib/inspect_annocheck.c:495
-#, fuzzy, c-format
-#| msgid "annocheck '%s' test now fails for %s on %s"
+#, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr "annocheck '%s' тест в настоящее время не проходит для %s на %s"
+msgstr "libannocheck '%s' теперь не проходит для %s на %s"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
-#, fuzzy, c-format
-#| msgid "annocheck '%s' test fails for %s on %s"
+#, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr "annocheck '%s' тест не проходит для %s на %s"
+msgstr "libannocheck '%s' не проходит для %s на %s"
 
 #: lib/inspect_annocheck.c:503
-#, fuzzy, c-format
-#| msgid "annocheck '%s' test passes for %s on %s"
+#, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr "annocheck '%s' тесты пройдены для %s на %s"
+msgstr "libannocheck '%s' проходит для %s на %s"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
@@ -2096,102 +2066,85 @@ msgid "%s may use forbidden functions on %s"
 msgstr "%s может использовать запрещенные функции на %s"
 
 #: lib/inspect_badfuncs.c:175
-#, fuzzy
-#| msgid "forbidden functions found in ${FILE}"
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr "запрещенные функции найдены в ${FILE}"
+msgstr "запрещённые функции в ${FILE} на ${ARCH}"
 
 #: lib/inspect_capabilities.c:82
-#, fuzzy, c-format
-#| msgid "File capabilities for %s changed from '%s' to '%s' on %s\n"
+#, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
-msgstr "Файловые привилегии для %s изменены с '%s' на '%s' в %s\n"
+msgstr "Возможности файла для %s изменены с '%s' на '%s' в %s\n"
 
 #: lib/inspect_capabilities.c:86
-#, fuzzy
-#| msgid "${FILE} capabilities"
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr "${FILE} возможности"
+msgstr "${FILE} возможности на ${ARCH}"
 
 #: lib/inspect_capabilities.c:98
-#, fuzzy, c-format
-#| msgid "File capabilities found for %s: '%s' on %s\n"
+#, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr "Файловые привилегии найдены для %s: '%s' в %s\n"
+msgstr "Возможности файла найдены для %s: '%s' в %s\n"
 
 #: lib/inspect_capabilities.c:134
-#, fuzzy, c-format
-#| msgid ""
-#| "File capabilities list entry found for %s: '%s' on %s, matches package\n"
+#, c-format
 msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
 msgstr ""
-"Обнаружена запись в списке возможностей файла для %s: '%s' в %s, совпадает с "
-"пакетом\n"
+"Запись в списке возможностей файла найдена для %s: '%s' в %s, соответствует "
+"пакету\n"
 
 #: lib/inspect_capabilities.c:145
-#, fuzzy, c-format
-#| msgid "File capabilities list mismatch for %s: expected '%s', got '%s'\n"
+#, c-format
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
-"Несоответствие списка возможностей файла для %s: ожидаемый '%s', получили "
-"'%s'\n"
+"Несоответствие списка возможностей файла для %s: ожидалось '%s', получено "
+"'%s' в %s\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
-#, fuzzy
-#| msgid "${FILE} capabilities list"
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr "${FILE} список возможностей"
+msgstr "${FILE} список возможностей на ${ARCH}"
 
 #: lib/inspect_capabilities.c:165
-#, fuzzy, c-format
-#| msgid "File capabilities for %s not found on the capabilities list on %s\n"
+#, c-format
 msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
-msgstr "Возможности файла для %s не найдены в списке возможностей на %s\n"
+msgstr "Возможности файла для %s не найдены в списке возможностей в %s\n"
 
 #: lib/inspect_capabilities.c:184
-#, fuzzy, c-format
-#| msgid ""
-#| "File capabilities expected for %s but not found on %s: expected '%s'\n"
+#, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
 msgstr ""
-"Файловые привилегии ожидаемые для %s но не найдены в %s: ожидаемые '%s'\n"
+"Ожидались возможности файла для %s в %s, но не найдены: ожидалось '%s'\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
 "  Changes to security policy related files require inspection by the "
 "Security Response Team."
 msgstr ""
-" Изменения в файлах, связанных с политикой безопасности, требуют проверки "
+"  Изменения в файлах, связанных с политикой безопасности, требуют проверки "
 "группой реагирования на безопасность."
 
 #: lib/inspect_changedfiles.c:319
-#, fuzzy, c-format
-#| msgid "Compressed %s file %s changed content on %s."
+#, c-format
 msgid "Compressed %s file %s changed content in %s on %s."
-msgstr "Сжатый файл %s %s изменил содержимое на %s."
+msgstr "Сжатый файл %s %s изменил содержимое в %s на %s."
 
 #: lib/inspect_changedfiles.c:353 lib/inspect_changedfiles.c:367
-#, fuzzy, c-format
-#| msgid "Error running msgunfmt on %s on %s"
+#, c-format
 msgid "Error running msgunfmt on %s in %s on %s; malformed mo file?"
-msgstr "Ошибка запуска msgunfmt в %s в %s"
+msgstr "Ошибка при выполнении msgunfmt для %s в %s; искажённый mo-файл?"
 
 #: lib/inspect_changedfiles.c:357 lib/inspect_changedfiles.c:371
 msgid "msgunfmt on ${FILE}"
 msgstr "msgunfmt на ${FILE}"
 
 #: lib/inspect_changedfiles.c:382
-#, fuzzy, c-format
-#| msgid "Message catalog %s changed content on %s"
+#, c-format
 msgid "Message catalog %s changed content in %s on %s"
-msgstr "Каталог сообщений %s содержимое изменено %s"
+msgstr "Каталог сообщений %s изменил содержимое в %s на %s"
 
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
@@ -2199,22 +2152,18 @@ msgid "${FILE}"
 msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
-#, fuzzy, c-format
-#| msgid ""
-#| "Public header file %s changed content on %s.  The output of `diff -uw` "
-#| "folloes."
+#, c-format
 msgid ""
 "Public header file %s changed content in %s on %s.  A unified diff of the "
 "changes follows."
 msgstr ""
-"Общедоступный файл заголовка %s изменил содержимое на %s. Далее следует "
-"вывод команды `diff -uw`."
+"Публичный заголовочный файл %s изменил содержимое в %s на %s. Далее приведён "
+"унифицированный diff изменений."
 
 #: lib/inspect_changedfiles.c:462
-#, fuzzy, c-format
-#| msgid "Compressed %s file %s changed content on %s."
+#, c-format
 msgid "File %s changed content in %s on %s."
-msgstr "Сжатый файл %s %s изменил содержимое на %s."
+msgstr "Файл %s изменил содержимое в %s на %s."
 
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
@@ -2223,7 +2172,7 @@ msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
-msgstr ""
+msgstr "Проверка пропущена, так как тип этой сборки не `rpm'."
 
 #: lib/inspect_config.c:65
 #, c-format
@@ -2265,7 +2214,7 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
-"%%config файл изменен для %s в %s на %s (%s отмечен как  %%config -> %s "
+"%%config файл изменен для %s в %s на %s (%s отмечен как %%config -> %s "
 "отмечен как %%config)\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
@@ -2275,61 +2224,58 @@ msgstr "нет "
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "В %s в %s на %s отсутствуют отладочные символы"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "отсутствуют отладочные символы"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "Отсутствует: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%s в %s на %s содержит отладочные символы"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "содержит отладочные символы"
 
 #: lib/inspect_debuginfo.c:241
-#, fuzzy, c-format
-#| msgid "Command: %s"
+#, c-format
 msgid "Contains: %s"
-msgstr "Команда: %s"
+msgstr "Содержит: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%s в %s на %s получил отладочные символы"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "получил отладочные символы"
 
 #: lib/inspect_debuginfo.c:266
-#, fuzzy, c-format
-#| msgid "Command: %s"
+#, c-format
 msgid "Gained: %s"
-msgstr "Команда: %s"
+msgstr "Получено: %s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%s в %s на %s потерял отладочные символы"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "потерял отладочные символы"
 
 #: lib/inspect_debuginfo.c:292
-#, fuzzy, c-format
-#| msgid "Result: %s\n"
+#, c-format
 msgid "Lost: %s"
-msgstr "Результат: %s\n"
+msgstr "Потеряно: %s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
@@ -2337,10 +2283,11 @@ msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
 msgstr ""
+"%s в %s на %s содержит .gosymtab, но не должен иметь символ .gnu_debugdata"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnu_debugdata с .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
@@ -2353,7 +2300,7 @@ msgstr ""
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ссылается на неисполняемый файл на ${ARCH}"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -2377,7 +2324,7 @@ msgstr ""
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ссылается на отсутствующий исполняемый файл на ${ARCH}"
 
 #: lib/inspect_desktop.c:354
 #, c-format
@@ -2388,7 +2335,7 @@ msgstr ""
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ссылается на нечитаемую иконку на ${ARCH}"
 
 #: lib/inspect_desktop.c:376
 #, c-format
@@ -2399,13 +2346,11 @@ msgstr ""
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ссылается на отсутствующую иконку на ${ARCH}"
 
 #: lib/inspect_desktop.c:452
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "${FILE} недопустим на ${ARCH}"
 
 #: lib/inspect_desktop.c:455
 #, c-format
@@ -2437,7 +2382,7 @@ msgstr "В файле %s отсутствует тег %s."
 
 #: lib/inspect_disttag.c:186
 msgid "${FILE} missing Release tag"
-msgstr ""
+msgstr "${FILE} отсутствует тег Release"
 
 #: lib/inspect_disttag.c:192
 #, c-format
@@ -2446,11 +2391,14 @@ msgid ""
 "should be of the form '%s' in the %s tag or in a macro used in the %s tag. "
 "After RPM macro expansion, no dist tag was found in this %s tag value."
 msgstr ""
+"В значении тега %s отсутствует тег dist в правильной форме. Тег dist должен "
+"иметь форму '%s' в теге %s или в макросе, используемом в теге %s. После "
+"развёртывания макросов RPM в этом значении тега %s не найден тег dist."
 
 #: lib/inspect_disttag.c:194
 #, c-format
 msgid "${FILE} does not use '%%{?dist}' in Release"
-msgstr ""
+msgstr "${FILE} не использует '%%{?dist}' в Release"
 
 #: lib/inspect_disttag.c:263
 msgid "Specified package is not a source RPM, skipping."
@@ -2462,10 +2410,9 @@ msgid "%doc ${FILE}"
 msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
-#, fuzzy, c-format
-#| msgid "%%doc file content change for %s in %s on %s%s\n"
+#, c-format
 msgid "%%doc file content change for %s in %s on %s\n"
-msgstr "Изменение содержимого файла %%doc для %s в %s на %s%s\n"
+msgstr "Изменение содержимого файла %%doc для %s в %s на %s\n"
 
 #: lib/inspect_doc.c:113
 #, c-format
@@ -2496,10 +2443,8 @@ msgid "DT_NEEDED symbol(s) removed from %s on %s"
 msgstr "DT_NEEDED symbol(s) удален с %s на %s"
 
 #: lib/inspect_dsodeps.c:148 lib/inspect_dsodeps.c:165
-#, fuzzy
-#| msgid "DT_NEEDED symbol(s) in ${FILE}"
 msgid "DT_NEEDED symbol(s) in ${FILE} on ${ARCH}"
-msgstr "DT_NEEDED symbol(s) в ${FILE}"
+msgstr "Символ(ы) DT_NEEDED в ${FILE} на ${ARCH}"
 
 #: lib/inspect_dsodeps.c:163
 #, c-format
@@ -2522,10 +2467,8 @@ msgid "Program built without GNU_STACK: %s on %s"
 msgstr "Программа собрана без GNU_STACK: %s на %s"
 
 #: lib/inspect_elf.c:444
-#, fuzzy
-#| msgid "GNU_STACK on ${FILE}"
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr "GNU_STACK на ${FILE}"
+msgstr "GNU_STACK в ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:496
 #, c-format
@@ -2539,10 +2482,8 @@ msgstr ""
 "Файл %s имеет не распознанный GNU_STACK '%s' (ожидается RW или RWE) на %s"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
-#, fuzzy
-#| msgid "execstack on ${FILE}"
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr "execstack в ${FILE}"
+msgstr "execstack в ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:525
 #, c-format
@@ -2575,10 +2516,8 @@ msgid "%s lost GNU_RELRO security protection on %s"
 msgstr "%s потерял GNU_RELRO защиту безопасности на %s"
 
 #: lib/inspect_elf.c:578
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "lost GNU_RELRO in ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "потерян GNU_RELRO в ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:725
 #, c-format
@@ -2596,16 +2535,12 @@ msgid "%s in %s has objects built without -fPIC on %s"
 msgstr "%s в %s имеет объекты, построенные без -fPIC на %s"
 
 #: lib/inspect_elf.c:763
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "missing -fPIC in ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "отсутствует -fPIC в ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:799
-#, fuzzy
-#| msgid "TEXTREL relocations on ${FILE}"
 msgid "TEXTREL relocations in ${FILE} on ${ARCH}"
-msgstr "Переносы TEXTREL в ${FILE}"
+msgstr "Перемещения TEXTREL в ${FILE} на ${ARCH}"
 
 #: lib/inspect_elf.c:814
 #, c-format
@@ -2618,28 +2553,22 @@ msgid "%s in %s has TEXTREL relocations on %s"
 msgstr "%s в %s имеет TEXTREL перемещение на %s"
 
 #: lib/inspect_emptyrpm.c:95
-#, fuzzy, c-format
-#| msgid ""
-#| "New package %s is empty (no payloads); this is expected per the "
-#| "configuration file"
+#, c-format
 msgid ""
 "New package %s is empty (no payloads); this is expected per the rpminspect "
 "configuration"
 msgstr ""
-"Новый пакет %s пустой (нет полезных нагрузок); это ожидается в файле "
-"конфигурации"
+"Новый пакет %s пуст (нет полезной нагрузки); это ожидаемо в соответствии с "
+"конфигурацией rpminspect"
 
 #: lib/inspect_emptyrpm.c:105
-#, fuzzy, c-format
-#| msgid ""
-#| "New package %s is empty (no payloads); this is expected per the "
-#| "configuration file"
+#, c-format
 msgid ""
 "New package %s is empty (no payloads); this is expected because the package "
 "only contains %%ghost entries"
 msgstr ""
-"Новый пакет %s пустой (нет полезных нагрузок); это ожидается в файле "
-"конфигурации"
+"Новый пакет %s пуст (нет полезной нагрузки); это ожидаемо, так как пакет "
+"содержит только записи %%ghost"
 
 #: lib/inspect_emptyrpm.c:116
 #, c-format
@@ -2648,7 +2577,7 @@ msgstr "Новый пакет %s пустой (нет полезных нагр�
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} имеет пустую полезную нагрузку"
 
 #: lib/inspect_files.c:111
 #, c-format
@@ -2656,10 +2585,9 @@ msgid "Forbidden path reference (%s) on line %ld of %s"
 msgstr "Ссылка на запрещенный путь (%s) в строке %ld из%s"
 
 #: lib/inspect_files.c:113
-#, fuzzy, c-format
-#| msgid "*** invalid mode string: %s"
+#, c-format
 msgid "invalid spec line: %s"
-msgstr "*** неверная строка режима: %s"
+msgstr "недопустимая строка спецификации: %s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
@@ -2671,10 +2599,8 @@ msgid "%s became a non-empty file on %s"
 msgstr "%s стал непустым файлом на %s"
 
 #: lib/inspect_filesize.c:71
-#, fuzzy
-#| msgid "non-empty ${FILE}"
 msgid "non-empty ${FILE} on ${ARCH}"
-msgstr "не пустой ${FILE}"
+msgstr "непустой ${FILE} на ${ARCH}"
 
 #: lib/inspect_filesize.c:76
 #, c-format
@@ -2682,10 +2608,8 @@ msgid "%s became an empty file on %s"
 msgstr "%s стал пустым файлом на %s"
 
 #: lib/inspect_filesize.c:80
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "empty ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "пустой ${FILE} на ${ARCH}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
@@ -2693,10 +2617,8 @@ msgid "%s grew by %lld%% on %s"
 msgstr "%s вырос к %lld%% на %s"
 
 #: lib/inspect_filesize.c:99
-#, fuzzy
-#| msgid "${FILE} size grew"
 msgid "${FILE} size grew on ${ARCH}"
-msgstr "${FILE} размер вырос"
+msgstr "${FILE} увеличился в размере на ${ARCH}"
 
 #: lib/inspect_filesize.c:103
 #, c-format
@@ -2704,10 +2626,8 @@ msgid "%s shrank by %lld%% on %s"
 msgstr "%s сжался к %lld%% на %s"
 
 #: lib/inspect_filesize.c:104
-#, fuzzy
-#| msgid "${FILE} size shrank"
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr "${FILE} размер уменьшился"
+msgstr "${FILE} уменьшился в размере на ${ARCH}"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2715,12 +2635,12 @@ msgid ""
 "File %s (%s), Java byte code version %d is incorrect (wrong endianness? "
 "corrupted file? space JDK?)"
 msgstr ""
-"Файл %s (%s), Java байт-код версия %d некорректна (неправильный порядок "
-"байтов?  поврежденный файл? размер JDK?)"
+"Файл %s (%s), Java байт-код версия %d неверна (неправильный порядок байтов? "
+"повреждённый файл? размер JDK?)"
 
 #: lib/inspect_javabytecode.c:131
 msgid "incorrect Java byte code version in ${FILE}"
-msgstr ""
+msgstr "неверная версия байт-кода Java в ${FILE}"
 
 #: lib/inspect_javabytecode.c:136
 #, c-format
@@ -2732,10 +2652,8 @@ msgstr ""
 "версия %d для релиза продукта %s"
 
 #: lib/inspect_javabytecode.c:137
-#, fuzzy
-#| msgid "Java byte code version changed from %d to %d in %s from %s"
 msgid "Java byte code version too new in ${FILE}"
-msgstr "Java байт-код версия изменена с %d на %d в %s с %s"
+msgstr "Версия байт-кода Java слишком новая в ${FILE}"
 
 #: lib/inspect_javabytecode.c:152
 #, c-format
@@ -2743,32 +2661,27 @@ msgid "Java byte code version changed from %d to %d in %s from %s"
 msgstr "Java байт-код версия изменена с %d на %d в %s с %s"
 
 #: lib/inspect_javabytecode.c:153
-#, fuzzy
-#| msgid "Java byte code version changed from %d to %d in %s from %s"
 msgid "Java byte code version changed in ${FILE}"
-msgstr "Java байт-код версия изменена с %d на %d в %s с %s"
+msgstr "Версия байт-кода Java изменена в ${FILE}"
 
 #: lib/inspect_javabytecode.c:255 lib/inspect_javabytecode.c:267
 msgid "*** missing JVM version to product release mapping"
 msgstr "*** отсутствует версия JVM для сопоставления выпуска продукта"
 
 #: lib/inspect_kmidiff.c:252
-#, fuzzy, c-format
-#| msgid ""
-#| "Comparing from %s to %s in package %s on %s revealed ABI differences."
+#, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s generated a kmidiff(1) usage error."
-msgstr "Сравнение %s с %s в пакете %s на %s выявило различия в ABI."
+msgstr ""
+"Сравнение %s с %s в пакете %s на %s привело к ошибке использования kmidiff(1)"
+"."
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "ошибка использования kmidiff"
 
 #: lib/inspect_kmidiff.c:256
-#, fuzzy, c-format
-#| msgid ""
-#| "Comparing from %s to %s in package %s on %s revealed Kernel Module "
-#| "Interface (KMI) differences."
+#, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s revealed Kernel Module Interface "
 "(KMI) differences."
@@ -2777,60 +2690,44 @@ msgstr ""
 "ядра (KMI)."
 
 #: lib/inspect_kmidiff.c:258
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "Изменение KMI в ${FILE} на ${ARCH}"
 
 #: lib/inspect_kmidiff.c:260
-#, fuzzy, c-format
-#| msgid ""
-#| "Comparing from %s to %s in package %s on %s revealed Kernel Module "
-#| "Interface (KMI) differences."
+#, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s revealed incompatible Kernel Module "
 "Interface (KMI) differences."
 msgstr ""
-"Сравнение %s с %s в пакете %s на %s выявило различия в интерфейсе модуля "
-"ядра (KMI)."
+"Сравнение %s с %s в пакете %s на %s выявило несовместимые различия в "
+"интерфейсе модуля ядра (KMI)."
 
 #: lib/inspect_kmidiff.c:263
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "Несовместимое изменение KMI в ${FILE} на ${ARCH}"
 
 #: lib/inspect_kmidiff.c:265
-#, fuzzy, c-format
-#| msgid ""
-#| "Comparing from %s to %s in package %s on %s revealed ABI differences."
+#, c-format
 msgid ""
 "kmidiff(1) comparison of %s to %s in package %s on %s ended unexpectedly."
-msgstr "Сравнение %s с %s в пакете %s на %s выявило различия в ABI."
+msgstr "Сравнение kmidiff(1) %s с %s в пакете %s на %s неожиданно завершилось."
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "неожиданный выход kmidiff"
 
 #: lib/inspect_kmidiff.c:274
-#, fuzzy, c-format
-#| msgid ""
-#| "Command: %s\n"
-#| "\n"
-#| "%s"
+#, c-format
 msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
 "Команда: %s\n"
-"\n"
-"%s"
+"Код выхода: %d%s%s"
 
 #: lib/inspect_kmod.c:28
-#, fuzzy
-#| msgid "${FILE} kernel module alias"
 msgid "${FILE} kernel module alias on ${ARCH}"
-msgstr "${FILE} псевдоним модуля ядра"
+msgstr "Псевдоним модуля ядра ${FILE} на ${ARCH}"
 
 #: lib/inspect_kmod.c:31
 #, c-format
@@ -2843,54 +2740,45 @@ msgid "Kernel module '%s' gained alias '%s'"
 msgstr "Модуль ядра '%s' получил псевдоним '%s'"
 
 #: lib/inspect_kmod.c:188
-#, fuzzy, c-format
-#| msgid "Kernel module %s removes parameter '%s'"
+#, c-format
 msgid "Kernel module %s removes parameter '%s' (was present in %s)."
-msgstr "Модуль ядра %s удаляет параметр '%s'"
+msgstr "Модуль ядра %s удаляет параметр '%s' (присутствовал в %s)."
 
 #: lib/inspect_kmod.c:191 lib/inspect_kmod.c:208
-#, fuzzy
-#| msgid "${FILE} kernel module parameter"
 msgid "${FILE} kernel module parameter on ${ARCH}"
-msgstr "${FILE} параметр модуля ядра"
+msgstr "Параметр модуля ядра ${FILE} на ${ARCH}"
 
 #: lib/inspect_kmod.c:205
-#, fuzzy, c-format
-#| msgid "Kernel module %s adds parameter '%s'"
+#, c-format
 msgid "Kernel module %s adds parameter '%s' (was not present in %s)."
-msgstr "Модуль ядра %s добавляет параметр '%s'"
+msgstr "Модуль ядра %s добавляет параметр '%s' (отсутствовал в %s)."
 
 #: lib/inspect_kmod.c:226
-#, fuzzy, c-format
-#| msgid "Kernel module %s removes dependency '%s'"
+#, c-format
 msgid "Kernel module %s removes dependency '%s' (was present in %s)."
-msgstr "Модуль ядра %s удаляет зависимости '%s'"
+msgstr "Модуль ядра %s удаляет зависимость '%s' (присутствовала в %s)."
 
 #: lib/inspect_kmod.c:229
-#, fuzzy
-#| msgid "${FILE} kernel module dependency"
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr "Зависимость модуля ядра ${FILE}"
+msgstr "Зависимость модуля ядра ${FILE} на ${ARCH}"
 
 #: lib/inspect_kmod.c:243
-#, fuzzy, c-format
-#| msgid "Kernel module %s adds dependency '%s'"
+#, c-format
 msgid "Kernel module %s adds dependency '%s' (was not present in %s)."
-msgstr "Модуль ядра %s добавляет зависимости '%s'"
+msgstr "Модуль ядра %s добавляет зависимость '%s' (отсутствовала в %s)."
 
 #: lib/inspect_kmod.c:246
 msgid "${FILE} kernel module parameter"
 msgstr "${FILE} параметр модуля ядра"
 
 #: lib/inspect_license.c:47
-#, fuzzy, c-format
-#| msgid "Missing license database: %s: %s"
+#, c-format
 msgid "*** parse error in license database %s"
-msgstr "Отсутствует база данных лицензий: %s: %s"
+msgstr "*** ошибка синтаксического анализа в базе данных лицензий %s"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
-msgstr ""
+msgstr "*** проблема при проверке базы данных лицензий"
 
 #: lib/inspect_license.c:464
 #, c-format
@@ -2903,10 +2791,8 @@ msgid "Empty License Tag in %s"
 msgstr "Пустой тег лицензии в %s"
 
 #: lib/inspect_license.c:509
-#, fuzzy
-#| msgid "msgunfmt on ${FILE}"
 msgid "missing License tag in ${FILE}"
-msgstr "msgunfmt на ${FILE}"
+msgstr "отсутствует тег License в ${FILE}"
 
 #: lib/inspect_license.c:518
 #, c-format
@@ -2920,57 +2806,46 @@ msgstr "Лицензионный тег содержит непрофессио�
 
 #: lib/inspect_license.c:536
 msgid "unprofessional language in License tag in ${FILE}"
-msgstr ""
+msgstr "непрофессиональный язык в теге License в ${FILE}"
 
 #: lib/inspect_license.c:573
-#, fuzzy
-#| msgid "Missing license database: %s: %s"
 msgid "Missing license database(s)."
-msgstr "Отсутствует база данных лицензий: %s: %s"
+msgstr "Отсутствует база(ы) данных лицензий."
 
 #: lib/inspect_license.c:577
-#, fuzzy
-#| msgid "Missing license database: %s: %s"
 msgid "missing license database"
-msgstr "Отсутствует база данных лицензий: %s: %s"
+msgstr "отсутствует база данных лицензий"
 
 #: lib/inspect_lostpayload.c:62
-#, fuzzy, c-format
-#| msgid "Existing subpackage %s is now missing"
+#, c-format
 msgid "Existing subpackage %s is now missing on %s"
-msgstr "Существующий подпакет %s теперь отсутствует"
+msgstr "Существующий подпакет %s теперь отсутствует в %s"
 
 #: lib/inspect_lostpayload.c:66
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "missing subpackage ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "отсутствует подпакет ${FILE} на ${ARCH}"
 
 #: lib/inspect_lostpayload.c:82
-#, fuzzy, c-format
-#| msgid "Package %s continues to be empty (no payloads)"
+#, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr "Пакет %s все еще пустой (нет полезных нагрузок)"
+msgstr "Пакет %s на %s остаётся пустым (нет полезной нагрузки)"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "существующий пустой подпакет ${FILE} на ${ARCH}"
 
 #: lib/inspect_lostpayload.c:93
-#, fuzzy, c-format
-#| msgid "Package %s became empty (no payloads)"
+#, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr "Пакет %s стал пустым (нет полезных нагрузок)"
+msgstr "Пакет %s на %s стал пустым (нет полезной нагрузки)"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "подпакет ${FILE} на ${ARCH} теперь имеет пустую полезную нагрузку"
 
 #: lib/inspect_lto.c:144
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "${FILE} not portable on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "${FILE} не переносим на ${ARCH}"
 
 #: lib/inspect_lto.c:152
 #, c-format
@@ -2992,12 +2867,11 @@ msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
 msgstr "Ошибка анализа %s:%d:%d: %s: %s: %s\n"
 
 #: lib/inspect_manpage.c:81
-#, fuzzy, c-format
-#| msgid "unable to compile man page path regular expression: %s"
+#, c-format
 msgid "*** unable to compile man page path regular expression: %s"
 msgstr ""
-"невозможно скомпилировать регулярное выражение пути к странице руководства: "
-"%s"
+"*** невозможно скомпилировать регулярное выражение пути к странице "
+"руководства: %s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
@@ -3025,10 +2899,8 @@ msgid "Man page %s is possibly empty on %s in %s"
 msgstr "Man страница %s, возможно, пуста на %s в %s"
 
 #: lib/inspect_manpage.c:302
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "пустая страница руководства ${FILE} на ${ARCH}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
@@ -3037,10 +2909,8 @@ msgstr ""
 "Средство проверки страниц руководства сообщило о проблемах с %s на %s в %s"
 
 #: lib/inspect_manpage.c:318
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "страница руководства ${FILE} на ${ARCH} содержит ошибки"
 
 #: lib/inspect_manpage.c:327
 #, c-format
@@ -3048,10 +2918,8 @@ msgid "Man page %s has incorrect path on %s in %s"
 msgstr "Man страница %s имеет неверный путь к %s в %s"
 
 #: lib/inspect_manpage.c:330
-#, fuzzy
-#| msgid "Man page %s has incorrect path on %s in %s"
 msgid "man page ${FILE} on ${ARCH} has incorrect path"
-msgstr "Man страница %s имеет неверный путь к %s в %s"
+msgstr "страница руководства ${FILE} на ${ARCH} имеет неверный путь"
 
 #: lib/inspect_metadata.c:40
 #, c-format
@@ -3068,10 +2936,8 @@ msgid "Package Vendor \"%s\" is not \"%s\" in %s"
 msgstr "Вендор пакета \"%s\" не \"%s\" в %s"
 
 #: lib/inspect_metadata.c:55
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "invalid vendor ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "недопустимый поставщик ${FILE} на ${ARCH}"
 
 #: lib/inspect_metadata.c:76
 #, c-format
@@ -3083,10 +2949,8 @@ msgstr ""
 "%s"
 
 #: lib/inspect_metadata.c:80
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "недопустимый хост сборки ${FILE} на ${ARCH}"
 
 #: lib/inspect_metadata.c:92
 #, c-format
@@ -3099,10 +2963,8 @@ msgid "Summary: %s"
 msgstr "Сводка: %s"
 
 #: lib/inspect_metadata.c:97
-#, fuzzy
-#| msgid "Package Summary contains unprofessional language in %s"
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr "Сводка пакета содержит непрофессиональный язык в %s"
+msgstr "Сводка содержит непрофессиональные слова на ${ARCH}"
 
 #: lib/inspect_metadata.c:109
 #, c-format
@@ -3110,10 +2972,8 @@ msgid "Package Description contains unprofessional language in %s:"
 msgstr "Описание пакета содержит непрофессиональный язык в %s:"
 
 #: lib/inspect_metadata.c:114
-#, fuzzy
-#| msgid "Package Description contains unprofessional language in %s:"
 msgid "Description contains unprofessional words on ${ARCH}"
-msgstr "Описание пакета содержит непрофессиональный язык в %s:"
+msgstr "Описание содержит непрофессиональные слова на ${ARCH}"
 
 #: lib/inspect_metadata.c:134
 #, c-format
@@ -3165,6 +3025,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "forbid the presence of /data/static_context in the module metadata."
 msgstr ""
+"Значение /data/static_context в %s равно %s, но правила выпуска продукта "
+"запрещают наличие /data/static_context в метаданных модуля."
 
 #: lib/inspect_modularity.c:125
 #, c-format
@@ -3172,6 +3034,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "require the presence of /data/static_context in the module metadata."
 msgstr ""
+"Значение /data/static_context в %s равно %s, но правила выпуска продукта "
+"требуют наличия /data/static_context в метаданных модуля."
 
 #: lib/inspect_modularity.c:131
 #, c-format
@@ -3179,6 +3043,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "recommend the presence of /data/static_context in the module metadata."
 msgstr ""
+"Значение /data/static_context в %s равно %s, но правила выпуска продукта "
+"рекомендуют наличие /data/static_context в метаданных модуля."
 
 #: lib/inspect_modularity.c:133
 #, c-format
@@ -3186,6 +3052,8 @@ msgid ""
 "The /data/static_context value in %s is %s, and the product release rules do "
 "not have a setting for /data/static_context in the module metadata."
 msgstr ""
+"Значение /data/static_context в %s равно %s, и правила выпуска продукта не "
+"имеют настройки для /data/static_context в метаданных модуля."
 
 #: lib/inspect_modularity.c:135
 #, c-format
@@ -3193,16 +3061,18 @@ msgid ""
 "The /data/static_context value in %s is %s as required by the product "
 "release rules."
 msgstr ""
+"Значение /data/static_context в %s равно %s, как того требуют правила "
+"выпуска продукта."
 
 #: lib/inspect_modularity.c:143
 #, c-format
 msgid "%s The /data/static_context value is the same as in %s."
-msgstr ""
+msgstr "%s Значение /data/static_context такое же, как в %s."
 
 #: lib/inspect_modularity.c:145
 #, c-format
 msgid "%s The /data/static_context value has changed since %s."
-msgstr ""
+msgstr "%s Значение /data/static_context изменилось с %s."
 
 #: lib/inspect_modularity.c:180
 #, c-format
@@ -3215,18 +3085,17 @@ msgstr ""
 
 #: lib/inspect_modularity.c:224
 msgid "Inspection skipped because this build's type is not `module'."
-msgstr ""
+msgstr "Проверка пропущена, так как тип этой сборки не `module'."
 
 #: lib/inspect_movedfiles.c:52
-#, fuzzy, c-format
-#| msgid "ELF file ${FILE} on ${ARCH}"
+#, c-format
 msgid "%s moved to ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "%s перемещён в ${FILE} на ${ARCH}"
 
 #: lib/inspect_movedfiles.c:55
 #, c-format
 msgid "%s probably moved to %s on %s\n"
-msgstr ""
+msgstr "%s вероятно перемещён в %s на %s\n"
 
 #: lib/inspect_ownership.c:77
 #, c-format
@@ -3234,10 +3103,8 @@ msgid "File %s has forbidden owner `%s` on %s"
 msgstr "Файл %s имеет запрещенного владельца `%s` на %s"
 
 #: lib/inspect_ownership.c:82
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "запрещённый владелец для ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:92
 #, c-format
@@ -3245,10 +3112,8 @@ msgid "File %s has forbidden group `%s` on %s"
 msgstr "Файл %s имеет запрещенную группу `%s` на %s"
 
 #: lib/inspect_ownership.c:97
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "запрещённая группа для ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:119
 #, c-format
@@ -3256,10 +3121,8 @@ msgid "File %s has owner `%s` on %s, but should be `%s`"
 msgstr "Файл %s имеет владельца `%s` на %s, но должен быть `%s`"
 
 #: lib/inspect_ownership.c:124
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "недопустимый владелец для ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:162
 #, c-format
@@ -3270,10 +3133,8 @@ msgstr ""
 "Файл %s на %s имеет CAP_SETUID опции но группа `%s` и исполняемое слово"
 
 #: lib/inspect_ownership.c:166
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "CAP_SETUID и o+x для ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:179
 #, c-format
@@ -3284,10 +3145,8 @@ msgstr ""
 "группой"
 
 #: lib/inspect_ownership.c:183
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "CAP_SETUID и g+w для ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:199
 #, c-format
@@ -3295,10 +3154,8 @@ msgid "File %s has group `%s` on %s, but should be `%s`"
 msgstr "Файл %s имеет группу `%s` на %s, но должна быть `%s`"
 
 #: lib/inspect_ownership.c:204
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "недопустимая группа для ${FILE} на ${ARCH}"
 
 #: lib/inspect_ownership.c:268
 #, c-format
@@ -3306,10 +3163,8 @@ msgid "File %s changed %s from `%s` to `%s` on %s"
 msgstr "Файл %s изменен %s с `%s` на `%s` на %s"
 
 #: lib/inspect_ownership.c:270
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "Владелец ${FILE} изменился на ${ARCH}"
 
 #: lib/inspect_patches.c:395
 #, c-format
@@ -3317,38 +3172,37 @@ msgid ""
 "Patch number %ld (%s) is missing a corresponding %%patch%ld macro, usually "
 "in %%prep."
 msgstr ""
+"Для патча №%ld (%s) отсутствует соответствующий макрос %%patch%ld, обычно в "
+"%%prep."
 
 #: lib/inspect_patches.c:397
 #, c-format
 msgid "missing %%patch macro for ${FILE}"
-msgstr ""
+msgstr "отсутствует макрос %%patch для ${FILE}"
 
 #: lib/inspect_patches.c:399
 #, c-format
 msgid "Patch number %ld (%s) is mismatched with %%patch%ld macro."
-msgstr ""
+msgstr "Номер патча %ld (%s) не соответствует макросу %%patch%ld."
 
 #: lib/inspect_patches.c:401
 #, c-format
 msgid "mismatched %%patch macro for ${FILE}"
-msgstr ""
+msgstr "несоответствующий макрос %%patch для ${FILE}"
 
 #: lib/inspect_patches.c:422
-#, fuzzy
-#| msgid "corrupt patch ${FILE}"
 msgid "undefined Patch ${FILE}"
-msgstr "поврежденный патч ${FILE}"
+msgstr "неопределённый патч ${FILE}"
 
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "Неопределённый файл патча %s."
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
-#, fuzzy, c-format
-#| msgid "*** unable to mkdir %s"
+#, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr "невозможно создать директорию %s"
+msgstr "*** не удалось распаковать патч: %s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
@@ -3403,18 +3257,17 @@ msgstr "Пакеты с исходным кодом отсутствуют, пр
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "Необработанный файл патча `%s` определён в файле спецификации"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** нераспознанная строка %%patch: %s"
 
 #: lib/inspect_patches.c:828
-#, fuzzy, c-format
-#| msgid "*** unable to read profile '%s' from %s\n"
+#, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr "*** невозможно прочитать профиль '%s' с %s\n"
+msgstr "*** не удаётся прочитать строку файла спецификации: %s"
 
 #: lib/inspect_patches.c:881
 #, c-format
@@ -3422,89 +3275,68 @@ msgid "Patch file `%s` removed"
 msgstr "Патч-файл `%s` удален"
 
 #: lib/inspect_pathmigration.c:81
-#, fuzzy, c-format
-#| msgid "File %s has forbidden owner `%s` on %s"
+#, c-format
 msgid "File %s found should be in %s on %s"
-msgstr "Файл %s имеет запрещенного владельца `%s` на %s"
+msgstr "Файл %s должен находиться в %s на %s"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} должен находиться в %s на ${ARCH}"
 
 #: lib/inspect_permissions.c:84
-#, fuzzy
-#| msgid "changed setuid/setgid"
 msgid " changed setuid/setgid;"
-msgstr "изменен setuid/setgid"
+msgstr " изменён setuid/setgid;"
 
 #: lib/inspect_permissions.c:89
-#, fuzzy
-#| msgid "directory"
 msgid " became a directory;"
-msgstr "каталог"
+msgstr " стал каталогом;"
 
 #: lib/inspect_permissions.c:91
-#, fuzzy
-#| msgid "character device"
 msgid " became a character device;"
-msgstr "символьное устройство"
+msgstr " стал символьным устройством;"
 
 #: lib/inspect_permissions.c:93
-#, fuzzy
-#| msgid "block device"
 msgid " became a block device;"
-msgstr "блочное устройство"
+msgstr " стал блочным устройством;"
 
 #: lib/inspect_permissions.c:95
-#, fuzzy
-#| msgid "regular file"
 msgid " became a regular file;"
-msgstr "обычный файл"
+msgstr " стал обычным файлом;"
 
 #: lib/inspect_permissions.c:97
 msgid " became a FIFO;"
-msgstr ""
+msgstr " стал FIFO;"
 
 #: lib/inspect_permissions.c:99
-#, fuzzy
-#| msgid "symbolic link"
 msgid " became a symbolic link;"
-msgstr "символическая ссылка"
+msgstr " стал символической ссылкой;"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " стал сокетом;"
 
 #: lib/inspect_permissions.c:105
-#, fuzzy
-#| msgid "%s version %s\n"
 msgid " permissions"
-msgstr "%s версия %s\n"
+msgstr " разрешения"
 
 #: lib/inspect_permissions.c:111
-#, fuzzy
-#| msgid "relaxed"
 msgid " relaxed"
-msgstr "свободный"
+msgstr " ослаблены"
 
 #: lib/inspect_permissions.c:114
-#, fuzzy
-#| msgid "changed"
 msgid " changed"
-msgstr "изменен"
+msgstr " изменены"
 
 #: lib/inspect_permissions.c:129
-#, fuzzy, c-format
-#| msgid "%s %s permissions from %04o to %04o on %s"
+#, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr "%s %s права доступа с %04o к %04o на %s"
+msgstr "%s с %04o на %04o на %s"
 
 #: lib/inspect_permissions.c:135
-#, fuzzy, c-format
-#| msgid "%s %s permissions from %04o to %04o on %s"
+#, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr "%s %s права доступа с %04o к %04o на %s"
+msgstr "${FILE} разрешения с %04o на %04o на ${ARCH}"
 
 #: lib/inspect_permissions.c:149
 #, c-format
@@ -3512,22 +3344,18 @@ msgid "%s (%s) is world-writable on %s"
 msgstr "%s (%s) доступный на %s"
 
 #: lib/inspect_permissions.c:152
-#, fuzzy
-#| msgid "%s (%s) is world-writable on %s"
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr "%s (%s) доступный на %s"
+msgstr "${FILE} доступен для записи всем на ${ARCH}"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
-#, fuzzy, c-format
-#| msgid "invalid politics entry with pattern=%s and digest=%s"
+#, c-format
 msgid "*** invalid politics entry with pattern=%s and digest=%s"
-msgstr "недопустимая запись политики с pattern=%s и digest=%s"
+msgstr "*** недопустимая запись политики с pattern=%s и digest=%s"
 
 #: lib/inspect_politics.c:92
-#, fuzzy, c-format
-#| msgid "unknown digest type for pattern %s: %s"
+#, c-format
 msgid "*** unknown digest type for pattern %s: %s"
-msgstr "неизвестный тип дайджеста для шаблона %s: %s"
+msgstr "*** неизвестный тип дайджеста для шаблона %s: %s"
 
 #: lib/inspect_politics.c:126
 #, c-format
@@ -3560,10 +3388,8 @@ msgstr ""
 "группой реагирования на безопасность."
 
 #: lib/inspect_removedfiles.c:85
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "library ${FILE} removed on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "библиотека ${FILE} удалена на ${ARCH}"
 
 #: lib/inspect_removedfiles.c:131
 #, c-format
@@ -3571,10 +3397,8 @@ msgid "ABI break: Library %s with SONAME '%s' removed from %s"
 msgstr "ABI останов: Библиотека %s с SONAME '%s' удалена с %s"
 
 #: lib/inspect_removedfiles.c:132
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "missing SONAME in ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "отсутствует SONAME в ${FILE} на ${ARCH}"
 
 #: lib/inspect_removedfiles.c:135
 #, c-format
@@ -3587,17 +3411,15 @@ msgid "%s removed from %s"
 msgstr "%s удалена с %s"
 
 #: lib/inspect_rpmdeps.c:129
-#, fuzzy, c-format
-#| msgid "Virus detected in %s in the %s package on %s: %s"
+#, c-format
 msgid "Invalid looking %s dependency in the %s package on %s: %s"
-msgstr "В %s в пакете %s на %s: %s обнаружен вирус"
+msgstr "Подозрительная зависимость %s в пакете %s на %s: %s"
 
 #: lib/inspect_rpmdeps.c:132 lib/inspect_rpmdeps.c:892
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
-#, fuzzy, c-format
-#| msgid "ELF file ${FILE} on ${ARCH}"
+#, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "'${FILE}' в %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -3607,11 +3429,15 @@ msgid ""
 "%s' to the spec file to avoid the need to test interoperability between "
 "various combinations of old and new subpackages."
 msgstr ""
+"Подпакет %s на %s содержит '%s', который происходит из подпакета %s, но не "
+"содержит явного требования к версии пакета. Пожалуйста, добавьте 'Requires: "
+"%s = %s' в файл спецификации, чтобы избежать необходимости проверки "
+"совместимости между различными комбинациями старых и новых подпакетов."
 
 #: lib/inspect_rpmdeps.c:387
 #, c-format
 msgid "missing 'Requires: ${FILE} = %s' in %s on ${ARCH}"
-msgstr ""
+msgstr "отсутствует 'Requires: ${FILE} = %s' в %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:409
 #, c-format
@@ -3619,87 +3445,83 @@ msgid ""
 "Multiple subpackages provide '%s': [%s] but these subpackages carry explicit "
 "Requires: [%s]"
 msgstr ""
+"Несколько подпакетов предоставляют '%s': [%s], но эти подпакеты содержат "
+"явные Requires: [%s]"
 
 #: lib/inspect_rpmdeps.c:410
-#, fuzzy, c-format
-#| msgid "ELF file ${FILE} on ${ARCH}"
+#, c-format
 msgid "%s all provide '${FILE}' on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "%s все предоставляют '${FILE}' на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:540
 #, c-format
 msgid "Missing epoch prefix on the version-release in '%s' for %s on %s"
-msgstr ""
+msgstr "Отсутствует префикс epoch в version-release в '%s' для %s на %s"
 
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' требует epoch в %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
-msgstr ""
+msgstr "файл спецификации"
 
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "Получено '%s' в исходном пакете %s"
 
 #: lib/inspect_rpmdeps.c:889
-#, fuzzy, c-format
-#| msgid "Gained Package Vendor \"%s\" in %s"
+#, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr "Получил вендора пакета \"%s\" в %s"
+msgstr "Получено '%s' в подпакете %s на %s"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "Сохранено '%s' в исходном пакете %s"
 
 #: lib/inspect_rpmdeps.c:899
-#, fuzzy, c-format
-#| msgid "Existing subpackage %s is now missing"
+#, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr "Существующий подпакет %s теперь отсутствует"
+msgstr "Сохранено '%s' в подпакете %s на %s"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr ""
+msgstr "Изменено '%s' на '%s' в исходном пакете %s"
 
 #: lib/inspect_rpmdeps.c:909
-#, fuzzy, c-format
-#| msgid "annocheck '%s' test now passes for %s on %s"
+#, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr "annocheck '%s' тест сейчас проходит для %s на %s"
+msgstr "Изменено '%s' на '%s' в подпакете %s на %s"
 
 #: lib/inspect_rpmdeps.c:912
-#, fuzzy, c-format
-#| msgid "ELF file ${FILE} on ${ARCH}"
+#, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "'%s' стал '${FILE}' в %s на ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
-msgstr ""
+msgstr "; это ожидаемо"
 
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr ""
+msgstr "Потеряно '%s' в исходном пакете %s"
 
 #: lib/inspect_rpmdeps.c:942
-#, fuzzy, c-format
-#| msgid "Existing subpackage %s is now missing"
+#, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr "Существующий подпакет %s теперь отсутствует"
+msgstr "Потеряно '%s' в подпакете %s на %s"
 
 #: lib/inspect_runpath.c:136
-#, fuzzy, c-format
-#| msgid "unable to compile $ORIGIN root prefix regular expression: %s"
+#, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
 msgstr ""
-"невозможно скомпилировать регулярное выражение корневого префикса $ORIGIN: %s"
+"*** невозможно скомпилировать регулярное выражение корневого префикса "
+"$ORIGIN: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
@@ -3707,16 +3529,12 @@ msgid "%s has an invalid-looking %s on %s: %s"
 msgstr "%s имеет некорректно выглядящий %s на %s: %s"
 
 #: lib/inspect_runpath.c:192
-#, fuzzy
-#| msgid "runtime search path in ${FILE}"
 msgid "runtime search path in ${FILE} on ${ARCH}"
-msgstr "путь поиска во время выполнения в ${FILE}"
+msgstr "путь поиска во время выполнения в ${FILE} на ${ARCH}"
 
 #: lib/inspect_runpath.c:270
-#, fuzzy
-#| msgid "both DT_RPATH and DT_RUNPATH in ${FILE}"
 msgid "both DT_RPATH and DT_RUNPATH in ${FILE} on ${ARCH}"
-msgstr "оба DT_RPATH и DT_RUNPATH в ${FILE}"
+msgstr "оба DT_RPATH и DT_RUNPATH в ${FILE} на ${ARCH}"
 
 #: lib/inspect_runpath.c:272
 #, c-format
@@ -3724,10 +3542,8 @@ msgid "%s has both DT_RPATH and DT_RUNPATH on %s; this is not allowed"
 msgstr "%s имеет и DT_RPATH, и DT_RUNPATH на %s; это не разрешено"
 
 #: lib/inspect_shellsyntax.c:125
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "недопустимый сценарий оболочки ${FILE} на ${ARCH}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
@@ -3773,7 +3589,7 @@ msgstr ""
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "неожиданное имя файла спецификации"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
@@ -3826,13 +3642,11 @@ msgstr "%s %s стала символической ссылкой (к %s) в %s
 
 #: lib/inspect_symlinks.c:108
 msgid "${FILE} became a symlink on ${ARCH}"
-msgstr ""
+msgstr "${FILE} стал символической ссылкой на ${ARCH}"
 
 #: lib/inspect_symlinks.c:125
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "unable to read symlink ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "не удаётся прочитать символическую ссылку ${FILE} на ${ARCH}"
 
 #: lib/inspect_symlinks.c:126
 #, c-format
@@ -3848,10 +3662,8 @@ msgstr ""
 "%s на %s"
 
 #: lib/inspect_symlinks.c:182
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "too many redirects for ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "слишком много перенаправлений для ${FILE} на ${ARCH}"
 
 #: lib/inspect_symlinks.c:277
 #, c-format
@@ -3859,62 +3671,51 @@ msgid "%s %s %s a dangling symbolic link in %s on %s"
 msgstr "%s %s %s висящая символическая ссылка в %s в %s"
 
 #: lib/inspect_symlinks.c:284
-#, fuzzy
-#| msgid "ELF file ${FILE} on ${ARCH}"
 msgid "dangling symlink ${FILE} on ${ARCH}"
-msgstr "ELF file ${FILE} на ${ARCH}"
+msgstr "висячая символическая ссылка ${FILE} на ${ARCH}"
 
 #: lib/inspect_types.c:69
-#, fuzzy
-#| msgid "${FILE} MIME type"
 msgid "${FILE} MIME type on ${ARCH}"
-msgstr "${FILE} MIME тип"
+msgstr "Тип MIME ${FILE} на ${ARCH}"
 
 #: lib/inspect_types.c:77 lib/inspect_types.c:82
 #, c-format
 msgid "Unknown MIME type `%s' on %s in %s"
-msgstr ""
+msgstr "Неизвестный тип MIME `%s' на %s в %s"
 
 #: lib/inspect_types.c:107
-#, fuzzy, c-format
-#| msgid "MIME type on %s was %s and became %s on %s"
+#, c-format
 msgid "MIME type for %s in %s was `%s/%s' and became `%s/%s'"
-msgstr "Тип MIME на %s был %s и стал %s на %s"
+msgstr "Тип MIME для %s в %s был `%s/%s' и стал `%s/%s'"
 
 #: lib/inspect_udevrules.c:104 lib/inspect_udevrules.c:116
-#, fuzzy, c-format
-#| msgid "%s is not a valid %s script on %s"
+#, c-format
 msgid "%s is a valid udev rules file on %s"
-msgstr "%s не валидный %s скрипт на %s"
+msgstr "%s является допустимым файлом правил udev на %s"
 
 #: lib/inspect_udevrules.c:106
-#, fuzzy, c-format
-#| msgid "%s is not a valid %s script on %s"
+#, c-format
 msgid "%s is now a valid udev rules file on %s"
-msgstr "%s не валидный %s скрипт на %s"
+msgstr "%s теперь является допустимым файлом правил udev на %s"
 
 #: lib/inspect_udevrules.c:109
-#, fuzzy, c-format
-#| msgid "%s is no longer a valid %s script on %s"
+#, c-format
 msgid "%s is no longer a valid udev rules file on %s"
-msgstr "%s более не валидный %s скрипт %s"
+msgstr "%s больше не является допустимым файлом правил udev на %s"
 
 #: lib/inspect_udevrules.c:112 lib/inspect_udevrules.c:118
-#, fuzzy, c-format
-#| msgid "%s is not a valid %s script on %s"
+#, c-format
 msgid "%s is not a valid udev rules file on %s"
-msgstr "%s не валидный %s скрипт на %s"
+msgstr "%s не является допустимым файлом правил udev на %s"
 
 #: lib/inspect_unicode.c:465
 #, c-format
 msgid "*** empty localpath on %s"
-msgstr ""
+msgstr "*** пустой localpath на %s"
 
 #: lib/inspect_unicode.c:474
-#, fuzzy
-#| msgid "forbidden functions found in ${FILE}"
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr "запрещенные функции найдены в ${FILE}"
+msgstr "запрещённая кодовая точка в ${FILE} на ${ARCH}"
 
 #: lib/inspect_unicode.c:551
 #, c-format
@@ -3922,12 +3723,13 @@ msgid ""
 "A forbidden code point, 0x%04X, was found in the %s source file on line %ld "
 "at column %ld.  This source file is used by %s."
 msgstr ""
+"Запрещённая кодовая точка 0x%04X найдена в исходном файле %s в строке %ld в "
+"столбце %ld. Этот исходный файл используется %s."
 
 #: lib/inspect_unicode.c:621
-#, fuzzy, c-format
-#| msgid "virus or malware in ${FILE}"
+#, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr "вирус или вредоносное ПО в ${FILE}"
+msgstr "не удаётся выполнить %prep в ${FILE}"
 
 #: lib/inspect_unicode.c:624
 #, c-format
@@ -3935,12 +3737,13 @@ msgid ""
 "Unable to run through the %%prep section in %s or manually unpack sources "
 "for further scanning."
 msgstr ""
+"Не удалось выполнить раздел %%prep в %s или распаковать исходники вручную "
+"для дальнейшего сканирования."
 
 #: lib/inspect_unicode.c:744
-#, fuzzy
-#| msgid "The files inspection is only for source packages, skipping."
 msgid "The unicode inspection is only for source packages, skipping."
-msgstr "Проверка файлов только для пакетов с исходным кодом, пропуская."
+msgstr ""
+"Проверка unicode предназначена только для исходных пакетов, пропускается."
 
 #: lib/inspect_upstream.c:60
 #, c-format
@@ -3948,10 +3751,8 @@ msgid "New upstream source file `%s` appeared"
 msgstr "Появился новый исходный файл апстрима `%s`"
 
 #: lib/inspect_upstream.c:62
-#, fuzzy
-#| msgid "source file ${FILE}"
 msgid "new source file ${FILE}"
-msgstr "исходный файл ${FILE}"
+msgstr "новый исходный файл ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
@@ -3968,16 +3769,12 @@ msgid "Source file `%s` removed"
 msgstr "Исходный файл `%s` удален"
 
 #: lib/inspect_upstream.c:197
-#, fuzzy
-#| msgid "source file ${FILE}"
 msgid "source file ${FILE} removed"
-msgstr "исходный файл ${FILE}"
+msgstr "исходный файл ${FILE} удалён"
 
 #: lib/inspect_virus.c:40
-#, fuzzy
-#| msgid "cl_engine_new() returned NULL, check clamav library"
 msgid "*** cl_engine_new returned NULL, check clamav library"
-msgstr "cl_engine_new() вернул NULL, проверьте библиотеку clamav"
+msgstr "*** cl_engine_new вернул NULL, проверьте библиотеку clamav"
 
 #: lib/inspect_virus.c:98
 #, c-format
@@ -3996,7 +3793,7 @@ msgstr "версия clamav %s"
 #: lib/inspect_virus.c:145
 #, c-format
 msgid "*** missing %s"
-msgstr ""
+msgstr "*** отсутствует %s"
 
 #: lib/inspect_virus.c:169
 #, c-format
@@ -4004,10 +3801,8 @@ msgid "%s version %u (%s)"
 msgstr "%s версия %u (%s)"
 
 #: lib/inspect_virus.c:201
-#, fuzzy
-#| msgid "virus or malware in ${FILE}"
 msgid "virus or malware in ${FILE} on ${ARCH}"
-msgstr "вирус или вредоносное ПО в ${FILE}"
+msgstr "вирус или вредоносное ПО в ${FILE} на ${ARCH}"
 
 #: lib/inspect_xml.c:195
 #, c-format
@@ -4022,56 +3817,50 @@ msgid "%s is not a well-formed XML file in %s on %s"
 msgstr "%s не является правильно сформированным XML-файлом в %s на %s"
 
 #: lib/inspect_xml.c:207
-#, fuzzy
-#| msgid "%s is not a well-formed XML file in %s on %s"
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr "%s не является правильно сформированным XML-файлом в %s на %s"
+msgstr "${FILE} не является правильно сформированным XML на ${ARCH}"
 
 #: lib/koji.c:142
-#, fuzzy, c-format
-#| msgid "XML-RPC Fault: %s (%d)"
+#, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr "XML-RPC Ошибка: %s (%d)"
+msgstr "*** XML-RPC Ошибка: %s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** код ошибки xmlrpc %s (%d): getBuild(%s) из %s"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** Состояние сборки Koji для %s равно %s, невозможно продолжить"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** код ошибки xmlrpc %s (%d): getTaskInfo(%s) из %s"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
-msgstr ""
+msgstr "*** Состояние задачи Koji для задачи %s равно %s, невозможно продолжить"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "Сборка пакета RPM"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
-msgstr ""
+msgstr "Сборка модуля, состоящая из нескольких сборок пакетов RPM"
 
 #: lib/magic.c:21
-#, fuzzy
-#| msgid "unable to initialize the magic library"
 msgid "*** unable to initialize the magic library"
-msgstr "невозможно инициализировать волшебную библиотеку"
+msgstr "*** невозможно инициализировать библиотеку magic"
 
 #: lib/magic.c:26
-#, fuzzy, c-format
-#| msgid "unable to load the magic database: %s"
+#, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr "невозможно загрузить волшебную базу данных: %s"
+msgstr "*** невозможно загрузить базу данных magic: %s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
@@ -4079,13 +3868,11 @@ msgid "*** unable to mkdir %s"
 msgstr "невозможно создать директорию %s"
 
 #: lib/output.c:25
-#, fuzzy
-#| msgid ""
-#| "Plain text suitable for the console and piping through paging programs."
 msgid ""
 "Detailed results suitable for the console and piping through paging programs."
 msgstr ""
-"Простой текст, подходящий для консоли и передачи через программы подкачки."
+"Подробные результаты, подходящие для консоли и передачи через программы "
+"постраничного вывода."
 
 #: lib/output.c:27
 msgid ""
@@ -4104,28 +3891,25 @@ msgstr ""
 "использования с Jenkins и другими службами с поддержкой XUnit."
 
 #: lib/output.c:31
-#, fuzzy
-#| msgid ""
-#| "Plain text suitable for the console and piping through paging programs."
 msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
 msgstr ""
-"Простой текст, подходящий для консоли и передачи через программы подкачки."
+"Результаты сведены в одну строку на результат, подходят для просмотра в "
+"консоли с помощью программы постраничного вывода."
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
-#, fuzzy, c-format
-#| msgid "error opening %s for writing"
+#, c-format
 msgid "*** error opening %s for writing"
-msgstr "ошибка открытия %s для записи"
+msgstr "*** ошибка открытия %s для записи"
 
 #: lib/output_summary.c:53
 msgid "added"
-msgstr ""
+msgstr "добавлено"
 
 #: lib/output_summary.c:55
 msgid "removed"
-msgstr ""
+msgstr "удалено"
 
 #: lib/output_summary.c:57
 msgid "changed"
@@ -4133,11 +3917,11 @@ msgstr "изменен"
 
 #: lib/output_summary.c:61
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: lib/output_summary.c:63
 msgid "unknown"
-msgstr ""
+msgstr "неизвестно"
 
 #: lib/output_text.c:92 lib/output_xunit.c:83
 #, c-format
@@ -4174,65 +3958,57 @@ msgstr ""
 "%s"
 
 #: lib/output_xunit.c:54
-#, fuzzy, c-format
-#| msgid "opening %s for writing"
+#, c-format
 msgid "*** opening %s for writing"
-msgstr "открытие %s для записи"
+msgstr "*** открытие %s для записи"
 
 #: lib/parse_yaml.c:114 lib/parse_yaml.c:139
 #, c-format
 msgid "*** %s: broken document"
-msgstr ""
+msgstr "*** %s: повреждённый документ"
 
 #: lib/parse_yaml.c:158 lib/parse_yaml.c:305
 #, c-format
 msgid "*** skipping token type %s"
-msgstr ""
+msgstr "*** пропуск типа токена %s"
 
 #: lib/parse_yaml.c:386
 msgid "*** malformed type - freed?"
-msgstr ""
+msgstr "*** искажённый тип - освобождён?"
 
 #: lib/peers.c:176
 #, c-format
 msgid "There is not enough available space to unpack all of the RPMs.\n"
-msgstr ""
+msgstr "Недостаточно свободного места для распаковки всех RPM.\n"
 
 #: lib/readelf.c:48
-#, fuzzy, c-format
-#| msgid "unknown workdir type %d"
+#, c-format
 msgid "*** unknown elftype_t %d"
-msgstr "неизвестный тип рабочего каталога %d"
+msgstr "*** неизвестный elftype_t %d"
 
 #: lib/readelf.c:76
-#, fuzzy
-#| msgid "libelf version mismatch\n"
 msgid "*** libelf version mismatch"
-msgstr "несоответствие версий libelf\n"
+msgstr "*** несоответствие версий libelf"
 
 #: lib/readfile.c:50
-#, fuzzy, c-format
-#| msgid "*** unable to find tag %s for %s"
+#, c-format
 msgid "*** unable to find end of %s"
-msgstr "невозможно найти тег %s для %s"
+msgstr "*** не удаётся найти конец %s"
 
 #: lib/readfile.c:68
-#, fuzzy, c-format
-#| msgid "*** unable to mkdir %s"
+#, c-format
 msgid "*** unable to close %s"
-msgstr "невозможно создать директорию %s"
+msgstr "*** не удаётся закрыть %s"
 
 #: lib/rmtree.c:74
-#, fuzzy, c-format
-#| msgid "*** Unable to create directory %s"
+#, c-format
 msgid "*** %s is not a directory"
-msgstr "*** Невозможно создать каталог %s"
+msgstr "*** %s не является каталогом"
 
 #: lib/rpm.c:71
-#, fuzzy, c-format
-#| msgid "Fopen() failed for %s: %s"
+#, c-format
 msgid "*** Fopen failed for %s: %s"
-msgstr "Ошибка Fopen() для %s:%s"
+msgstr "*** Ошибка Fopen для %s: %s"
 
 #: lib/rpm.c:255
 #, c-format
@@ -4240,20 +4016,18 @@ msgid "*** file index %d is out of bounds for %s"
 msgstr "*** индекс файла %d выходит за пределы для %s"
 
 #: lib/rpm.c:431
-#, fuzzy
-#| msgid "error reading elf include path"
 msgid "*** error reading file from RPM payload"
-msgstr "ошибка чтения elf include path"
+msgstr "*** ошибка чтения файла из полезной нагрузки RPM"
 
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d"
 
 #: lib/runcmd.c:173
 #, c-format
 msgid "%d (%s)"
-msgstr ""
+msgstr "%d (%s)"
 
 #: lib/runcmd.c:178
 #, c-format
@@ -4262,15 +4036,18 @@ msgid ""
 "\n"
 "%s tried to run the command and it received signal %s"
 msgstr ""
+"%s\n"
+"\n"
+"%s попытался выполнить команду и получил сигнал %s"
 
 #: lib/runcmd.c:182
 #, c-format
 msgid "%s tried to run the command and it received signal %s"
-msgstr ""
+msgstr "%s попытался выполнить команду и получил сигнал %s"
 
 #: lib/strfuncs.c:250 lib/strfuncs.c:282
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: lib/strfuncs.c:252 lib/strfuncs.c:284
 msgid "OK"
@@ -4290,11 +4067,11 @@ msgstr "ПЛОХОЙ"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "ПРОПУСТИТЬ"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "ДИАГНОСТИКА"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
@@ -4342,23 +4119,23 @@ msgstr "сокет"
 
 #: lib/strfuncs.c:614
 msgid "Success."
-msgstr ""
+msgstr "Успешно."
 
 #: lib/strfuncs.c:616
 msgid "One or more inspections failed."
-msgstr ""
+msgstr "Одна или несколько проверок завершились неудачей."
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "Ошибка программы."
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
-msgstr ""
+msgstr "Указанный профиль не найден."
 
 #: lib/strfuncs.c:622
 msgid "Insufficient disk space in the working directory."
-msgstr ""
+msgstr "Недостаточно места на диске в рабочем каталоге."
 
 #: src/rpminspect.c:48
 #, c-format
@@ -4380,193 +4157,163 @@ msgid "Options:\n"
 msgstr "Параметры:\n"
 
 #: src/rpminspect.c:51
-#, fuzzy, c-format
-#| msgid "  -c FILE, --config=FILE   Configuration file to use\n"
+#, c-format
 msgid "  -c FILE, --config=FILE      Configuration file to use\n"
-msgstr "  -c FILE, --config=FILE   Файл конфигурации для использования\n"
+msgstr "  -c FILE, --config=FILE      Файл конфигурации для использования\n"
 
 #: src/rpminspect.c:52
-#, fuzzy, c-format
-#| msgid "  -p NAME, --profile=NAME  Configuration profile to use\n"
+#, c-format
 msgid "  -p NAME, --profile=NAME     Configuration profile to use\n"
-msgstr "  -p NAME, --profile=NAME  Профиль конфигурации для использования\n"
+msgstr "  -p NAME, --profile=NAME     Профиль конфигурации для использования\n"
 
 #: src/rpminspect.c:53
-#, fuzzy, c-format
-#| msgid "  -T LIST, --tests=LIST    List of tests to run\n"
+#, c-format
 msgid "  -T LIST, --tests=LIST       List of tests to run\n"
-msgstr "  -T LIST, --tests=LIST    Список тестов для запуска\n"
+msgstr "  -T LIST, --tests=LIST       Список тестов для запуска\n"
 
 #: src/rpminspect.c:54
-#, fuzzy, c-format
-#| msgid "                             (default: ALL)\n"
+#, c-format
 msgid "                                (default: ALL)\n"
-msgstr "                             (по умолчанию: ALL)\n"
+msgstr "                                (по умолчанию: ALL)\n"
 
 #: src/rpminspect.c:55
-#, fuzzy, c-format
-#| msgid "  -E LIST, --exclude=LIST  List of tests to exclude\n"
+#, c-format
 msgid "  -E LIST, --exclude=LIST     List of tests to exclude\n"
-msgstr "  -E LIST, --exclude=LIST  Список тестов для исключения\n"
+msgstr "  -E LIST, --exclude=LIST     Список тестов для исключения\n"
 
 #: src/rpminspect.c:56
-#, fuzzy, c-format
-#| msgid "                             (default: none)\n"
+#, c-format
 msgid "                                (default: none)\n"
-msgstr "                             (по умолчанию: none)\n"
+msgstr "                                (по умолчанию: none)\n"
 
 #: src/rpminspect.c:57
-#, fuzzy, c-format
-#| msgid "  -a LIST, --arches=LIST   List of architectures to check\n"
+#, c-format
 msgid "  -a LIST, --arches=LIST      List of architectures to check\n"
-msgstr "  -a LIST, --arches=LIST   Список архитектур для проверки\n"
+msgstr "  -a LIST, --arches=LIST      Список архитектур для проверки\n"
 
 #: src/rpminspect.c:58
-#, fuzzy, c-format
-#| msgid "  -r STR, --release=STR    Product release string\n"
+#, c-format
 msgid "  -r STR, --release=STR       Product release string\n"
-msgstr "  -r STR, --release=STR    Строка релиза продукта\n"
+msgstr "  -r STR, --release=STR       Строка релиза продукта\n"
 
 #: src/rpminspect.c:59
-#, fuzzy, c-format
-#| msgid "  -n, --no-rebase          Disable build rebase detection\n"
+#, c-format
 msgid "  -n, --no-rebase             Disable build rebase detection\n"
-msgstr "  -n, --no-rebase          Отключить обнаружение переустановки сборк\n"
+msgstr ""
+"  -n, --no-rebase             Отключить обнаружение перебазирования сборки\n"
 
 #: src/rpminspect.c:60
 #, c-format
 msgid "  -b TYPE, --build-type=TYPE  Set Koji build type to TYPE\n"
-msgstr ""
+msgstr "  -b TYPE, --build-type=TYPE  Установить тип сборки Koji в TYPE\n"
 
 #: src/rpminspect.c:61
-#, fuzzy, c-format
-#| msgid "  -o FILE, --output=FILE   Write results to FILE\n"
+#, c-format
 msgid "  -o FILE, --output=FILE      Write results to FILE\n"
-msgstr "  -o FILE, --output=FILE   Записать результаты в FILE\n"
+msgstr "  -o FILE, --output=FILE      Записать результаты в FILE\n"
 
 #: src/rpminspect.c:62
-#, fuzzy, c-format
-#| msgid "                             (default: stdout)\n"
+#, c-format
 msgid "                                (default: stdout)\n"
-msgstr "                             (по умолчанию: stdout)\n"
+msgstr "                                (по умолчанию: stdout)\n"
 
 #: src/rpminspect.c:63
-#, fuzzy, c-format
-#| msgid "  -F TYPE, --format=TYPE   Format output results as TYPE\n"
+#, c-format
 msgid "  -F TYPE, --format=TYPE      Format output results as TYPE\n"
 msgstr ""
-"  -F TYPE, --format=TYPE   Отформатировать выходной результат как TYPE\n"
+"  -F TYPE, --format=TYPE      Форматировать выходные результаты как TYPE\n"
 
 #: src/rpminspect.c:64
-#, fuzzy, c-format
-#| msgid "                             (default: text)\n"
+#, c-format
 msgid "                                (default: text)\n"
-msgstr "                             (по умолчанию: text)\n"
+msgstr "                                (по умолчанию: text)\n"
 
 #: src/rpminspect.c:65
-#, fuzzy, c-format
-#| msgid "  -t TAG, --threshold=TAG  Result threshold triggering exit\n"
+#, c-format
 msgid "  -t TAG, --threshold=TAG     Result threshold triggering exit\n"
-msgstr "  -t TAG, --threshold=TAG  Результат срабатывания триггера выхода\n"
+msgstr "  -t TAG, --threshold=TAG     Порог результата, вызывающий выход\n"
 
 #: src/rpminspect.c:66
-#, fuzzy, c-format
-#| msgid "                           failure (default: VERIFY)\n"
+#, c-format
 msgid "                              failure (default: VERIFY)\n"
-msgstr "                           неудача (по умолчанию: VERIFY)\n"
+msgstr "                              сбой (по умолчанию: VERIFY)\n"
 
 #: src/rpminspect.c:67
-#, fuzzy, c-format
-#| msgid "  -t TAG, --threshold=TAG  Result threshold triggering exit\n"
+#, c-format
 msgid "  -s TAG, --suppress=TAG      Results suppression threshold\n"
-msgstr "  -t TAG, --threshold=TAG  Результат срабатывания триггера выхода\n"
+msgstr "  -s TAG, --suppress=TAG      Порог подавления результатов\n"
 
 #: src/rpminspect.c:68
-#, fuzzy, c-format
-#| msgid "                             (default: text)\n"
+#, c-format
 msgid "                                (default: off, report everything)\n"
-msgstr "                             (по умолчанию: text)\n"
+msgstr ""
+"                                (по умолчанию: off, сообщать обо всём)\n"
 
 #: src/rpminspect.c:69
-#, fuzzy, c-format
-#| msgid "  -l, --list               List available tests and formats\n"
+#, c-format
 msgid "  -l, --list                  List available tests and formats\n"
-msgstr "  -l, --list               Список доступных тестов и форматов\n"
+msgstr "  -l, --list                  Список доступных тестов и форматов\n"
 
 #: src/rpminspect.c:70
-#, fuzzy, c-format
-#| msgid "  -w PATH, --workdir=PATH  Temporary directory to use\n"
+#, c-format
 msgid "  -w PATH, --workdir=PATH     Temporary directory to use\n"
-msgstr "  -w PATH, --workdir=PATH  Временный каталог для использования\n"
+msgstr "  -w PATH, --workdir=PATH     Временный каталог для использования\n"
 
 #: src/rpminspect.c:71
-#, fuzzy, c-format
-#| msgid "                             (default: %s)\n"
+#, c-format
 msgid "                                (default: %s)\n"
-msgstr "                             (по умолчанию: %s)\n"
+msgstr "                                (по умолчанию: %s)\n"
 
 #: src/rpminspect.c:72
-#, fuzzy, c-format
-#| msgid ""
-#| "  -f, --fetch-only         Fetch builds only, do not perform inspections\n"
+#, c-format
 msgid ""
 "  -f, --fetch-only            Fetch builds only, do not perform inspections\n"
-msgstr "  -f, --fetch-only         Получать только сборки, не проверять\n"
+msgstr ""
+"  -f, --fetch-only            Получать только сборки, не выполнять проверки\n"
 
 #: src/rpminspect.c:73
-#, fuzzy, c-format
-#| msgid "                             (implies -k)\n"
+#, c-format
 msgid "                                (implies -k)\n"
-msgstr "                             (подразумевает -k)\n"
+msgstr "                                (подразумевает -k)\n"
 
 #: src/rpminspect.c:74
-#, fuzzy, c-format
-#| msgid ""
-#| "  -k, --keep               Do not remove the comparison working files\n"
+#, c-format
 msgid ""
 "  -k, --keep                  Do not remove the comparison working files\n"
-msgstr "  -k, --keep               Не удалять рабочие файлы сравнения\n"
+msgstr "  -k, --keep                  Не удалять рабочие файлы сравнения\n"
 
 #: src/rpminspect.c:75
-#, fuzzy, c-format
-#| msgid "  -d, --debug              Debugging mode output\n"
+#, c-format
 msgid "  -d, --debug                 Debugging mode output\n"
-msgstr "  -d, --debug              Вывод в режиме отладки\n"
+msgstr "  -d, --debug                 Вывод в режиме отладки\n"
 
 #: src/rpminspect.c:76
-#, fuzzy, c-format
-#| msgid ""
-#| "  -D, --dump-config        Dump configuration settings used (in YAML "
-#| "format)\n"
+#, c-format
 msgid ""
 "  -D, --dump-config           Dump configuration settings (in YAML format)\n"
 msgstr ""
-"  -D, --dump-config        Используемые параметры конфигурации дампа (в "
-"формате YAML)\n"
+"  -D, --dump-config           Выгрузить настройки конфигурации (в формате "
+"YAML)\n"
 
 #: src/rpminspect.c:77
-#, fuzzy, c-format
-#| msgid "  -v, --verbose            Verbose inspection output\n"
+#, c-format
 msgid "  -v, --verbose               Verbose inspection output\n"
-msgstr "  -v, --verbose            Подробный вывод проверки\n"
+msgstr "  -v, --verbose               Подробный вывод проверки\n"
 
 #: src/rpminspect.c:78
-#, fuzzy, c-format
-#| msgid "                           when finished, display full path\n"
+#, c-format
 msgid "                              when finished, display full path\n"
-msgstr "                           по завершении отобразить полный путь\n"
+msgstr "                              по завершении отобразить полный путь\n"
 
 #: src/rpminspect.c:79
-#, fuzzy, c-format
-#| msgid "  -?, --help               Display usage information\n"
+#, c-format
 msgid "  -?, --help                  Display usage information\n"
-msgstr "  -?, --help               Показать информацию об использовании\n"
+msgstr "  -?, --help                  Показать информацию об использовании\n"
 
 #: src/rpminspect.c:80
-#, fuzzy, c-format
-#| msgid "  -V, --version            Display program version\n"
+#, c-format
 msgid "  -V, --version               Display program version\n"
-msgstr "  -V, --version            Показать версию программы\n"
+msgstr "  -V, --version               Показать версию программы\n"
 
 #: src/rpminspect.c:81
 #, c-format
@@ -4583,33 +4330,28 @@ msgid "*** unable to compile product release regular expression: %s"
 msgstr "*** невозможно скомпилировать регулярное выражение релиза продукта: %s"
 
 #: src/rpminspect.c:168 src/rpminspect.c:179
-#, fuzzy, c-format
-#| msgid "*** Product release for after build (%s) is empty"
+#, c-format
 msgid "*** product release for after build (%s) is empty"
-msgstr "*** Выпуск продукта для после сборки (%s) пустой"
+msgstr "*** Релиз продукта для последней сборки (%s) пуст"
 
 #: src/rpminspect.c:196 src/rpminspect.c:204
-#, fuzzy, c-format
-#| msgid "*** Product release for before build (%s) is empty"
+#, c-format
 msgid "*** product release for before build (%s) is empty"
-msgstr "*** Выпуск продукта для сборки (%s) пустой"
+msgstr "*** Релиз продукта для предыдущей сборки (%s) пуст"
 
 #: src/rpminspect.c:259
-#, fuzzy, c-format
-#| msgid "*** Unable to determine product release for %s and %s"
+#, c-format
 msgid "*** unable to determine product release for %s and %s"
-msgstr "*** Невозможно определить релиз продукта для %s и для %s"
+msgstr "*** Невозможно определить релиз продукта для %s и %s"
 
 #: src/rpminspect.c:260
 msgid ""
 "*** See the 'favor_release' setting in the rpminspect configuration file."
-msgstr ""
+msgstr "*** См. параметр 'favor_release' в файле конфигурации rpminspect."
 
 #: src/rpminspect.c:288
-#, fuzzy
-#| msgid "*** The -T and -E options are mutually exclusive"
 msgid "*** the -T and -E options are mutually exclusive"
-msgstr "*** -T и -E варианты взаимоисключающие"
+msgstr "*** параметры -T и -E являются взаимоисключающими"
 
 #: src/rpminspect.c:289 src/rpminspect.c:305 src/rpminspect.c:737
 #: src/rpminspect.c:776
@@ -4618,40 +4360,34 @@ msgid "*** See `%s --help` for more information."
 msgstr "*** См. `%s --help` для деталей."
 
 #: src/rpminspect.c:304
-#, fuzzy, c-format
-#| msgid "*** Unknown inspection: `%s`"
+#, c-format
 msgid "*** unknown inspection: `%s`"
-msgstr "*** Неизвестная инспекция: `%s`"
+msgstr "*** неизвестная проверка: `%s`"
 
 #: src/rpminspect.c:455
-#, fuzzy, c-format
-#| msgid "*** Unsupported architecture specified: `%s`"
+#, c-format
 msgid "*** unsupported build type: `%s`."
-msgstr "*** Указана неподдерживаемая архитектура: `%s`"
+msgstr "*** неподдерживаемый тип сборки: `%s`."
 
 #: src/rpminspect.c:464
-#, fuzzy, c-format
-#| msgid "*** Invalid output format: `%s`."
+#, c-format
 msgid "*** invalid build type: `%s`."
-msgstr "*** Неверный формат вывода: `%s`."
+msgstr "*** недопустимый тип сборки: `%s`."
 
 #: src/rpminspect.c:481
-#, fuzzy, c-format
-#| msgid "*** Invalid output format: `%s`."
+#, c-format
 msgid "*** invalid output format: `%s`."
-msgstr "*** Неверный формат вывода: `%s`."
+msgstr "*** недопустимый формат вывода: `%s`."
 
 #: src/rpminspect.c:493
-#, fuzzy, c-format
-#| msgid "*** Unable to expand workdir: `%s`"
+#, c-format
 msgid "*** unable to expand working directory: `%s`"
-msgstr "*** Невозможно расширить рабочий каталог: `%s`"
+msgstr "*** невозможно развернуть рабочий каталог: `%s`"
 
 #: src/rpminspect.c:506
-#, fuzzy, c-format
-#| msgid "*** Unable to create directory %s"
+#, c-format
 msgid "*** unable to use `%s' as working directory"
-msgstr "*** Невозможно создать каталог %s"
+msgstr "*** невозможно использовать `%s' в качестве рабочего каталога"
 
 #: src/rpminspect.c:536
 #, c-format
@@ -4659,28 +4395,23 @@ msgid "%s version %s\n"
 msgstr "%s версия %s\n"
 
 #: src/rpminspect.c:539
-#, fuzzy, c-format
-#| msgid "?? getopt returned character code 0%o ??"
+#, c-format
 msgid "*** ?? getopt returned character code 0%o ??"
-msgstr "?? getopt возвращенный код символа 0%o ??"
+msgstr "*** ?? getopt вернул код символа 0%o ??"
 
 #: src/rpminspect.c:546
-#, fuzzy, c-format
-#| msgid ""
-#| "\n"
-#| "Available inspections:\n"
+#, c-format
 msgid "Available build types:\n"
-msgstr ""
-"\n"
-"Доступные проверки:\n"
+msgstr "Доступные типы сборки:\n"
 
 #: src/rpminspect.c:567
-#, fuzzy, c-format
-#| msgid "Available output formats:\n"
+#, c-format
 msgid ""
 "\n"
 "Available output formats:\n"
-msgstr "Доступные форматы вывода:\n"
+msgstr ""
+"\n"
+"Доступные форматы вывода:\n"
 
 #: src/rpminspect.c:584
 #, c-format
@@ -4692,16 +4423,14 @@ msgstr ""
 "Доступные проверки:\n"
 
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
-#, fuzzy, c-format
-#| msgid "Failed to read configuration file %s"
+#, c-format
 msgid "*** failed to read configuration file %s"
-msgstr "Не удалось прочитать файл конфигурации %s"
+msgstr "*** не удалось прочитать файл конфигурации %s"
 
 #: src/rpminspect.c:658
-#, fuzzy, c-format
-#| msgid "Please specify a configuration file using '-c' or supply ./%s"
+#, c-format
 msgid "*** Please specify a configuration file using '-c' or supply ./%s"
-msgstr "Укажите файл конфигурации с помощью '-c' или supply ./%s"
+msgstr "*** Укажите файл конфигурации с помощью '-c' или укажите ./%s"
 
 #: src/rpminspect.c:736
 msgid "*** Invalid before and after build specification."
@@ -4712,38 +4441,34 @@ msgid "*** unable to read RPM configuration"
 msgstr "*** невозможно прочитать конфигурацию RPM"
 
 #: src/rpminspect.c:775
-#, fuzzy, c-format
-#| msgid "*** Unsupported architecture specified: `%s`"
+#, c-format
 msgid "*** unsupported architecture specified: `%s`"
-msgstr "*** Указана неподдерживаемая архитектура: `%s`"
+msgstr "*** указана неподдерживаемая архитектура: `%s`"
 
 #: src/rpminspect.c:793
-#, fuzzy, c-format
-#| msgid "*** Unable to create directory %s"
+#, c-format
 msgid "*** unable to create directory %s"
-msgstr "*** Невозможно создать каталог %s"
+msgstr "*** невозможно создать каталог %s"
 
 #: src/rpminspect.c:851
-#, fuzzy, c-format
-#| msgid ""
-#| "Version information for libraries and programs used by %s.  This result "
-#| "is for informational and diagnostic purposes only."
+#, c-format
 msgid ""
 "Version information for libraries and programs used by %s as well as storage "
 "requirements.  This result is for informational and diagnostic purposes only."
 msgstr ""
-"Информация о версиях библиотек и программ, используемых %s. Этот результат "
-"предназначен только для информационных и диагностических целей."
+"Информация о версиях библиотек и программ, используемых %s, а также "
+"требования к хранилищу. Этот результат предназначен только для "
+"информационных и диагностических целей."
 
 #: src/rpminspect.c:858
 #, c-format
 msgid "Space required to download artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Требуемое пространство для загрузки артефактов: %lu байт (%s)\n"
 
 #: src/rpminspect.c:866
 #, c-format
 msgid "Space required to unpack artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Требуемое пространство для распаковки артефактов: %lu байт (%s)\n"
 
 #: src/rpminspect.c:878
 #, c-format
@@ -4751,56 +4476,47 @@ msgid "Command line arguments used to invoke %s."
 msgstr "Аргументы командной строки, используемые для вызова %s."
 
 #: src/rpminspect.c:902
-#, fuzzy, c-format
-#| msgid "Failed to read configuration file %s"
+#, c-format
 msgid "Local configuration file: %s"
-msgstr "Не удалось прочитать файл конфигурации %s"
+msgstr "Локальный файл конфигурации: %s"
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "Предыдущая сборка"
 
 #: src/rpminspect.c:917
 msgid "After Build"
-msgstr ""
+msgstr "Последующая сборка"
 
 #: src/rpminspect.c:920
 msgid "Build"
-msgstr ""
+msgstr "Сборка"
 
 #: src/rpminspect.c:937
-#, fuzzy
-#| msgid "*** No peers, ensure packages exist for specified architecture(s)."
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
 msgstr ""
-"*** Нет одноранговых узлов, убедитесь, что пакеты существуют для указанной "
-"архитектуры/архитектур."
+"*** нет одноранговых узлов, убедитесь, что пакеты существуют для указанной "
+"архитектуры(архитектур)"
 
 #: src/rpminspect.c:958
-#, fuzzy
-#| msgid ""
-#| "Report RPM subpackages that appear and disappear between the before and "
-#| "after builds."
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
 msgstr ""
-"Сообщите о RPM-подпакетах, которые появляются и исчезают между сборками."
+"*** невозможно найти набор одноранговых пакетов между предыдущей и "
+"последующей сборками"
 
 #: src/rpminspect.c:972
-#, fuzzy
-#| msgid "*** Unable to determine product release for %s and %s"
 msgid "*** unable to determine product release or none specified (-r)."
-msgstr "*** Невозможно определить релиз продукта для %s и для %s"
+msgstr "*** невозможно определить релиз продукта или он не указан (-r)."
 
 #: src/rpminspect.c:984
-#, fuzzy, c-format
-#| msgid "Running %s inspection..."
+#, c-format
 msgid "Skipping %s inspection..."
-msgstr "Выполняется проверка %s ..."
+msgstr "Пропуск проверки %s..."
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "пропустить"
 
 #: src/rpminspect.c:1009
 #, c-format
