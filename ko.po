@@ -9,8 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
 "PO-Revision-Date: 2026-10-21 10:18+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
 "Language: ko\n"
@@ -2457,7 +2456,7 @@ msgstr ""
 
 #: lib/inspect_metadata.c:80
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr "${ARCH} 에서 ${FILE} 에 대한 잘못된 그룹"
+msgstr "${ARCH} 에서 잘못된 호스트 ${FILE}"
 
 #: lib/inspect_metadata.c:92
 #, c-format
@@ -2892,7 +2891,7 @@ msgstr ""
 #: lib/inspect_removedfiles.c:138
 #, c-format
 msgid "%s removed from %s"
-msgstr ""
+msgstr "%s 에서제거된 %s"
 
 #: lib/inspect_rpmdeps.c:129
 #, c-format
@@ -2903,7 +2902,7 @@ msgstr ""
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
 #, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 %s 에 있는 '${FILE}'"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -2968,12 +2967,12 @@ msgstr "%s 의 하위꾸러미 %s 에서 '%s' 를 유지함"
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr "원천 꾸러미 %s 에서 '%s' 를 획득함"
+msgstr "원천 꾸러미 %s 에서 '%s' 를 '%s' 로 변경함"
 
 #: lib/inspect_rpmdeps.c:909
 #, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "%s 의 하위꾸러미 %s 에서 '%s' 를 '%s' 로 변경함"
 
 #: lib/inspect_rpmdeps.c:912
 #, c-format
@@ -2987,7 +2986,7 @@ msgstr ""
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr "원천 꾸러미 %s 에서 '%s' 를 유지함"
+msgstr "원천 꾸러미 %s 에서 '%s' 손실"
 
 #: lib/inspect_rpmdeps.c:942
 #, c-format
