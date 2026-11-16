@@ -8,13 +8,16 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-11-17 10:18+0000\n"
+"Last-Translator: David Medina <dmedinacpnl@gmail.com>\n"
+"Language-Team: Catalan <https://translate.fedoraproject.org/projects/"
+"rpminspect/main/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -23,12 +26,19 @@ msgid ""
 "checks to see if the License tag contains any unprofessional words as "
 "defined in the configuration file."
 msgstr ""
+"Verifiqueu la cadena especificada a l'etiqueta de llicència de les metadades "
+"RPM descriu les llicències de programari permeses tal com es defineixen a la "
+"base de dades de llicències. També comprova si l'etiqueta de llicència conté "
+"paraules no professionals tal com es defineixen al fitxer de configuració."
 
 #: include/inspect.h:1347
 msgid ""
 "Check all binary RPMs in the build for any empty payloads. When comparing "
 "two builds, report new packages in the after build with empty payloads."
 msgstr ""
+"Comproveu tots els RPM binaris de la construcció per a qualsevol càrrega "
+"útil buida. En comparar dues construccions, informeu de paquets nous a la "
+"construcció posterior amb càrregues útils buides."
 
 #: include/inspect.h:1353
 msgid ""
@@ -36,6 +46,10 @@ msgid ""
 "Packages that lost payload data from the before build to the after build are "
 "reported."
 msgstr ""
+"Comproveu tots els RPM binaris de les compilacions anteriors i posteriors "
+"per a qualsevol càrrega útil buida. S'informa dels paquets que van perdre "
+"les dades de càrrega útil de la construcció anterior a la construcció "
+"posterior."
 
 #: include/inspect.h:1359
 msgid ""
@@ -47,6 +61,16 @@ msgid ""
 "before build specified, check for differences between the before and after "
 "build values of the previous RPM header values and report them."
 msgstr ""
+"Realitza algunes comprovacions de capçalera RPM. Primer, comproveu que el "
+"proveïdor conté la cadena esperada tal com està definida al fitxer de "
+"configuració. En segon lloc, comproveu que l'amfitrió de la construcció "
+"estigui en el subdomini esperat tal com es defineix al fitxer de "
+"configuració. En tercer lloc, comproveu la cadena de resum per a qualsevol "
+"paraula no professional. En quart lloc, consulteu la Descripció per a "
+"qualsevol paraula no professional. Finalment, si hi ha una construcció "
+"anterior especificada, comproveu les diferències entre els valors de "
+"construcció abans i després dels valors de capçalera RPM anteriors i "
+"informeu-ne."
 
 #: include/inspect.h:1365
 msgid ""
@@ -54,10 +78,16 @@ msgid ""
 "man page is compressed. Second, check that each man page contains valid "
 "content. Lastly, check that each man page is installed to the correct path."
 msgstr ""
+"Realitza algunes comprovacions a les pàgines man a la càrrega útil RPM. "
+"Primer, comproveu que cada pàgina del manual estigui comprimida. En segon "
+"lloc, comproveu que cada pàgina man conté contingut vàlid. Finalment, "
+"comproveu que cada pàgina del manual estigui instal·lada al camí correcte."
 
 #: include/inspect.h:1371
 msgid "Check that XML files included in the RPM payload are well-formed."
 msgstr ""
+"Comproveu que els fitxers XML inclosos a la càrrega útil del RPM estan ben "
+"formats."
 
 #: include/inspect.h:1377
 msgid ""
@@ -67,28 +97,44 @@ msgid ""
 "after build did not lose a PT_GNU_RELRO segment. When comparing builds and "
 "there is a list of forbidden library functions, make sure nothing uses them."
 msgstr ""
+"Realitza diverses comprovacions en els fitxers ELF. Primer, comproveu que "
+"els objectes ELF no continguin una pila executable. En segon lloc, comproveu "
+"que els objectes ELF no contenen reubicacions de text. Quan es comparen les "
+"compilacions, comproveu que els objectes ELF de la compilació posterior no "
+"perdin un segment PTGNURELRO. Quan es comparen les compilacions i hi ha una "
+"llista de funcions de biblioteca prohibides, assegureu-vos que res les "
+"utilitza."
 
 #: include/inspect.h:1383
 msgid ""
 "Perform syntax and file reference checks on *.desktop files. Syntax errors "
 "and invalid file references are reported as errors."
 msgstr ""
+"Realitza les comprovacions de sintaxi i de referència de fitxers als fitxers "
+"*.desktop. Els errors de sintaxi i les referències de fitxer no vàlides es "
+"notifiquen com a errors."
 
 #: include/inspect.h:1389
 msgid ""
 "Check that the 'Release' tag in the RPM spec file includes the %{?dist} "
 "directive."
 msgstr ""
+"Comproveu que l'etiqueta «Release» del fitxer d'especificació RPM inclou la "
+"directiva %{?dist}."
 
 #: include/inspect.h:1395
 msgid "Ensure the spec file name conforms to the NAME.spec naming format."
 msgstr ""
+"Assegureu-vos que el nom del fitxer spec s'ajusta al format de nom NOM.spec."
 
 #: include/inspect.h:1403
 msgid ""
 "Ensure compliance with modularity build and packaging policies (only valid "
 "for module builds, no-op otherwise)."
 msgstr ""
+"Garantir el compliment de les polítiques de construcció i embalatge de "
+"modularitat (només vàlid per a construccions de mòduls, no-op en cas "
+"contrari)."
 
 #: include/inspect.h:1411
 msgid ""
@@ -97,6 +143,11 @@ msgid ""
 "exceeded.  The bytecode version is vendor specific to releases and defined "
 "in the configuration file."
 msgstr ""
+"Comprova la versió mínima requerida de codi de bytes de Java als fitxers de "
+"classe, informa dels canvis de versió de codi de bytes entre les "
+"compilacions i informa si s'excedeixen les versions de codi de bytes.  La "
+"versió de bytecode és un proveïdor específic per a les versions i definit en "
+"el fitxer de configuració."
 
 #: include/inspect.h:1417
 msgid ""
@@ -109,6 +160,15 @@ msgid ""
 "C and C++ header files are preprocessed and compared using diff(1).  Any "
 "changes with diff output are included in the results."
 msgstr ""
+"Informe de fitxers canviats des de la construcció anterior a la construcció "
+"posterior.  Certs canvis de fitxer provocaran avisos addicionals si la "
+"preocupació és més crítica que només informar de canvis (per exemple, un "
+"sospitós impacte de seguretat).  Qualsevol fitxer comprimit gzip, bzip2, o "
+"xz només tindrà el seu contingut sense comprimir, cosa que permetrà canvis "
+"en el nivell de compressió utilitzat.  Els fitxers de catàleg de missatges "
+"(.mo) es desempaqueten i es comparen utilitzant diff(1).  Els fitxers de "
+"capçalera C i C++ públics estan preprocessats i comparats utilitzant diff(1)"
+".  Qualsevol canvi amb sortida de diff s'inclou en els resultats."
 
 #: include/inspect.h:1423
 msgid ""
@@ -118,6 +178,12 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Informeu dels fitxers que han mogut els camins d'instal·lació o a través de "
+"subpaquets entre compilacions.  Els fitxers moguts amb un prefix de camí de "
+"seguretat generen informes especials en cas que es requereixi una revisió de "
+"seguretat.  Els paquets basats en rebaixes informen d'aquests resultats a "
+"nivell INFO mentre que els paquets no basats els informen al nivell de "
+"verificació o superior."
 
 #: include/inspect.h:1429
 msgid ""
@@ -129,6 +195,14 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Informa dels fitxers eliminats de la construcció anterior a la construcció "
+"posterior.  Les biblioteques compartides obtenen una sortida d'informe "
+"addicional, ja que poden ser eliminacions de dependències inesperades.  Els "
+"fitxers eliminats amb un prefix de camí de seguretat generen informes "
+"especials en cas que es requereixi una revisió de seguretat.  Aquesta "
+"inspecció ignora els RPM d'origen i els fitxers debuginfo.  Els paquets "
+"basats en rebaixes informen d'aquests resultats a nivell INFO mentre que els "
+"paquets no basats els informen al nivell de verificació o superior."
 
 #: include/inspect.h:1435
 msgid ""
@@ -140,6 +214,14 @@ msgid ""
 "Rebased packages report these findings at the INFO level while non-rebased "
 "packages report them at the VERIFY level or higher."
 msgstr ""
+"Informes afegits des de la construcció anterior a la construcció posterior.  "
+"Els fitxers Debuginfo s'ignoren com els fitxers que coincideixen amb els "
+"patrons definits al fitxer de configuració.  Els fitxers afegits als camins "
+"de seguretat generen informes especials en cas que es requereixi una revisió "
+"de seguretat.  Els fitxers setuid i setgid nous aixequen un avís de "
+"seguretat tret que el fitxer estigui a la llista fileinfo.  Els paquets "
+"basats en rebaixes informen d'aquests resultats a nivell INFO mentre que els "
+"paquets no basats els informen al nivell de verificació o superior."
 
 #: include/inspect.h:1441
 msgid ""
@@ -148,6 +230,11 @@ msgid ""
 "on the rebaseable list, the change is reported as informational. Otherwise "
 "the change is reported as a rebase of the package and requires inspection."
 msgstr ""
+"Informe d'arxius d'origen definits en el fitxer spec RPM canviant el "
+"contingut entre l'abans i el després de la construcció. Si els arxius "
+"d'origen canvien i el paquet es troba a la llista rebaseable, el canvi "
+"s'informa com a informatiu. En cas contrari, el canvi s'informa com una base "
+"de dades del paquet i requereix inspecció."
 
 #: include/inspect.h:1447
 msgid ""
@@ -155,6 +242,10 @@ msgid ""
 "make sure executables are owned by the correct user and group. If a before "
 "and after build have been specified, also report ownership changes."
 msgstr ""
+"Informa de fitxers i directoris propietat d'usuaris i grups inesperats. "
+"Marqueu-ho per a assegurar-vos que els executables són propietat de l'usuari "
+"i del grup correctes. Si s'ha especificat un abans i un després de la "
+"construcció, també s'informarà dels canvis de propietat."
 
 #: include/inspect.h:1453
 msgid ""
@@ -165,6 +256,14 @@ msgid ""
 "perform the previous check but also report if a previously bad script is now "
 "passing the syntax check."
 msgstr ""
+"Per a tots els scripts d'intèrpret d'ordres de la construcció, realitzeu una "
+"comprovació de sintaxi utilitzant l'intèrpret d'ordres definit en el seu  "
+"the! línia (la línia també s'ha de llistar a la secció shell de les dades de "
+"configuració). Si la comprovació de sintaxi retorna diferent de zero, "
+"informeu-ne a l'usuari i retorneu una sortida estàndard combinada i una "
+"sortida estàndard. Si es comparen dues compilacions, realitzeu la "
+"comprovació anterior però també informeu si un script anteriorment dolent "
+"està passant la comprovació de sintaxi."
 
 #: include/inspect.h:1459
 msgid ""
@@ -174,12 +273,20 @@ msgid ""
 "build.  If no annocheck tests are defined in the configuration file, this "
 "inspection is skipped."
 msgstr ""
+"Realitza proves d'annocheck definides al fitxer de configuració de tots els "
+"fitxers ELF de la construcció.  Una sola construcció especificada només "
+"realitzarà una anàlisi.  Dues construccions especificades compararan els "
+"resultats de la prova entre l'abans i el després de la construcció.  Si no "
+"es defineixen proves d'annocheck al fitxer de configuració, aquesta "
+"inspecció s'omet."
 
 #: include/inspect.h:1465
 msgid ""
 "Compare DT_NEEDED entries in dynamic ELF executables and shared libraries "
 "between the before and after build and report changes."
 msgstr ""
+"Compareu les entrades DTNEEDED en executables ELF dinàmics i biblioteques "
+"compartides entre els canvis abans i després de construir i informar."
 
 #: include/inspect.h:1471
 msgid ""
@@ -187,6 +294,10 @@ msgid ""
 "non-empty files became empty, report those as results needing verification.  "
 "Report file change percentages as info-only."
 msgstr ""
+"Informa dels canvis de mida del fitxer entre compilacions.  Si els fitxers "
+"buits es converteixen en no buits o els fitxers no buits es tornen buits, "
+"informeu-ne com a resultats que necessiten verificació.  Informa dels "
+"percentatges de canvi de fitxer com a només info."
 
 #: include/inspect.h:1477
 msgid ""
@@ -194,6 +305,10 @@ msgid ""
 "list for the product release specified or determined.  Any setuid or setgid "
 "changes will raise a message requiring Security Team review."
 msgstr ""
+"Informa dels canvis en el mode «stat(2)» entre les compilacions.  Comprova a "
+"la llista d'informació de fitxer la versió del producte especificada o "
+"determinada.  Qualsevol canvi de setuid o setgid generarà un missatge que "
+"requereixi la revisió de l'equip de seguretat."
 
 #: include/inspect.h:1485
 msgid ""
@@ -202,6 +317,10 @@ msgid ""
 "capabilities changes not listed will raise a message requiring Security Team "
 "review."
 msgstr ""
+"Capacitats d'informe(7) canvis entre les construccions.  Comprova contra la "
+"llista de capacitats per a la versió del producte especificada o "
+"determinada.  Qualsevol canvi de capacitats que no es llisti generarà un "
+"missatge que requereixi la revisió de l'equip de seguretat."
 
 #: include/inspect.h:1494
 msgid ""
@@ -209,6 +328,10 @@ msgid ""
 "between builds.  This inspection is intended as an information gathering "
 "tool to gather kernel module differences between two builds."
 msgstr ""
+"Informa del paràmetre del mòdul del nucli, de la dependència, de l'ID PCI o "
+"de les diferències de símbols entre compilacions.  Aquesta inspecció està "
+"pensada com una eina de recopilació d'informació per recollir les "
+"diferències dels mòduls del nucli entre dues construccions."
 
 #: include/inspect.h:1501
 msgid ""
@@ -218,12 +341,19 @@ msgid ""
 "architectures as provided in the before build and not seeing them in the "
 "after build."
 msgstr ""
+"Informeu de les arquitectures RPM que apareixen i desapareixen entre l'abans "
+"i el després de les construccions.  Aquesta inspecció no informa de la "
+"pèrdua de paquets de noarch.  L'objectiu d'aquesta inspecció és informar de "
+"la pèrdua de les arquitectures de màquines objectiu tal com es preveu en la "
+"construcció anterior i no veure-les en la construcció posterior."
 
 #: include/inspect.h:1507
 msgid ""
 "Report RPM subpackages that appear and disappear between the before and "
 "after builds."
 msgstr ""
+"Informeu dels subpaquets RPM que apareixen i desapareixen entre l'abans i el "
+"després de les construccions."
 
 #: include/inspect.h:1513
 #, c-format
@@ -232,6 +362,10 @@ msgid ""
 "Reports any other differences in the existing changelog between builds and "
 "that the new entry contains new text entries."
 msgstr ""
+"Assegureu-vos que els paquets continguin una entrada al %changelog per a la "
+"versió construïda.  Informa de qualsevol altra diferència en el registre de "
+"canvis existent entre les compilacions i que l'entrada nova conté entrades "
+"de text noves."
 
 #: include/inspect.h:1519
 msgid ""
@@ -240,6 +374,10 @@ msgid ""
 "path migrations.  The main examples are /bin migrating to /usr/bin and /sbin "
 "migrating to /usr/sbin."
 msgstr ""
+"Informeu dels fitxers que s'empaqueten en directoris que ja no són "
+"utilitzats pel producte.  Normalment això significa que un paquet no s'ha "
+"actualitzat per tenir en compte les migracions de camins.  Els exemples "
+"principals són /bin migrating a /usr/bin i /sbin migrating a /usr/sbin."
 
 #: include/inspect.h:1525
 msgid ""
@@ -249,6 +387,12 @@ msgid ""
 "ELF objects shipped in packages.  This inspection looks for LTO bytecode in "
 "ELF relocatable objects and reports if any is present."
 msgstr ""
+"L'optimització de temps d'enllaç (LTO) produeix executables i biblioteques "
+"de ELF compartits més petits i ràpids.  El bytecode LTO no és estable des "
+"d'un llançament de gcc fins al següent.  Com a tal, el bytecode LTO no "
+"hauria d'estar present en els objectes .a i .o ELF enviats en paquets.  "
+"Aquesta inspecció busca bytecode LTO en objectes i informes reubicables ELF "
+"si n'hi ha."
 
 #: include/inspect.h:1531
 msgid ""
@@ -256,18 +400,26 @@ msgid ""
 "ensures absolute and relative symlinks are valid.  It also checks for any "
 "symlink usage that will cause problems for RPM."
 msgstr ""
+"Els enllaços simbòlics han de ser resolubles en el sistema instal·lat.  "
+"Aquesta inspecció assegura que els enllaços simbòlics absoluts i relatius "
+"són vàlids.  També comprova qualsevol ús d'enllaços simbòlics que causarà "
+"problemes per a RPM."
 
 #: include/inspect.h:1537
 #, c-format
 msgid ""
 "Check %files sections in the spec file for any forbidden path references."
 msgstr ""
+"Comproveu %files seccions del fitxer spec per a qualsevol referència de camí "
+"prohibida."
 
 #: include/inspect.h:1543
 msgid ""
 "Compare MIME types of files between builds and report any changes for "
 "verification."
 msgstr ""
+"Compareu tipus MIME de fitxers entre compilacions i informeu de qualsevol "
+"canvi per a la verificació."
 
 #: include/inspect.h:1549
 msgid ""
@@ -280,6 +432,14 @@ msgid ""
 "that, turn off the abidiff inspection or add the package name to the "
 "rebaseable list."
 msgstr ""
+"Quan es comparen dues construccions o dos paquets, es comparen els fitxers "
+"ELF utilitzant abidiff(1) del projecte libabigail.  S'informa de "
+"diferències.  Si el paquet és un rebase i no a la llista rebaseable i la "
+"inspecció de rebase està activada, les diferències ABI s'informen com a "
+"fallades.  La suposició aquí és que rpminspect està comparant construccions "
+"amb finalitats de manteniment i no voleu introduir cap canvi ABI per als "
+"usuaris.  Si no us importa això, apagueu la inspecció de l'abidiff o afegiu "
+"el nom del paquet a la llista rebaseable."
 
 #: include/inspect.h:1555
 msgid ""
@@ -290,6 +450,12 @@ msgid ""
 "rebase, an incompatible change reported by kmidiff is reported for "
 "verification."
 msgstr ""
+"El kmidiff compara les interfícies binàries del mòdul Kernel de dos arbres "
+"del nucli Linux.  El KMI binari és la interfície que el nucli Linux exposa "
+"als seus mòduls.  Els arbres que ens interessen aquí són el resultat de la "
+"construcció de l'arbre font del nucli Linux.  Si les construccions "
+"comparades no es consideren una base de dades, s'informa d'un canvi "
+"incompatible informat pel kmidiff per a la verificació."
 
 #: include/inspect.h:1561
 #, c-format
@@ -299,6 +465,11 @@ msgid ""
 "is reported at the INFO level.  Content and location changes are reporting "
 "at the VERIFY level unless the comparison is between rebased packages."
 msgstr ""
+"Comprova i informa de les diferències en els fitxers de configuració marcats "
+"amb %config en el fitxer spec.  Si els canvis són només espais en blanc o "
+"format, el resultat s'informa al nivell INFO.  Els canvis de contingut i de "
+"localització estan informant al nivell de verificació llevat que la "
+"comparació sigui entre paquets rebasats."
 
 #: include/inspect.h:1567
 #, c-format
@@ -306,6 +477,8 @@ msgid ""
 "Report changes in %doc marked files.  Files that have been added or removed "
 "as documentation files, for instance."
 msgstr ""
+"Informa de canvis en %doc fitxers marcats.  Fitxers que s'han afegit o "
+"eliminat com a fitxers de documentació, per exemple."
 
 #: include/inspect.h:1573
 msgid ""
@@ -319,6 +492,16 @@ msgid ""
 "can also list patch names that rpminspect should ignore during the "
 "inspection."
 msgstr ""
+"Inspecciona tots els pedaços definits al fitxer spec i informa dels canvis "
+"entre les compilacions.  La comprovació funcional aquí és per assegurar que "
+"tots els pedaços definits en el preàmbul tenen una macro d'aplicació "
+"corresponent en el fitxer spec.  A nivell INFO, rpminspect informa del "
+"recompte de fitxers, el recompte de línies i els canvis en la mida del "
+"pedaç.  Si s'assoleixen llindars pel que fa a un canvi en la mida del pedaç "
+"o en el nombre de fitxers que toca el pedaç, rpminspect informa del canvi al "
+"nivell de verificació llevat que la comparació sigui per a un rebase.  El "
+"fitxer de configuració també pot llistar els noms dels pedaços que "
+"rpminspect hauria d'ignorar durant la inspecció."
 
 #: include/inspect.h:1579
 msgid ""
@@ -326,6 +509,10 @@ msgid ""
 "found by libclamav will fail the inspection.  The ignore_path rules are not "
 "used in this inspection.  All files are scanned."
 msgstr ""
+"Realitza un escaneig de virus a cada fitxer de la construcció utilitzant "
+"libclamav.  Qualsevol cosa trobada per libclamav fallarà la inspecció.  En "
+"aquesta inspecció no s'utilitzen les regles de l'ignorància.  Tots els "
+"fitxers estan escanejats."
 
 #: include/inspect.h:1585
 msgid ""
@@ -335,6 +522,12 @@ msgid ""
 "subdirectory map to the product release string.  The rules in each file "
 "define the politically sensitive allow and deny rules for that release."
 msgstr ""
+"Comprova si hi ha fitxers políticament sensibles coneguts als paquets i "
+"informa si estan permesos o prohibits.  Les regles provenen del subdirectori "
+"polític del paquet rpminspect-data per al producte.  Els fitxers en el mapa "
+"de política/ subdirectori a la cadena de llançament del producte.  Les "
+"regles de cada fitxer defineixen el políticament sensible permetre i negar "
+"regles per a aquest llançament."
 
 #: include/inspect.h:1591
 msgid ""
@@ -343,12 +536,19 @@ msgid ""
 "catch built packages that make use of deprecated API functions if you wish "
 "built packages to conform to replacement APIs."
 msgstr ""
+"Comprova les funcions prohibides als fitxers ELF.  Les funcions prohibides "
+"es defineixen als fitxers de configuració en temps d'execució.  En general, "
+"aquesta inspecció s'utilitza per atrapar els paquets construïts que fan ús "
+"de funcions API obsoletes si voleu que els paquets construïts s'ajustin a "
+"les API de reemplaçament."
 
 #: include/inspect.h:1597
 msgid ""
 "Check for forbidden paths in both the DT_RPATH and DT_RUNPATH settings in "
 "ELF shared objects."
 msgstr ""
+"Comprova si hi ha camins prohibits tant a la configuració DTRPATH com a la "
+"configuració DTRUNPATH en objectes compartits ELF."
 
 #: include/inspect.h:1603
 msgid ""
@@ -356,6 +556,10 @@ msgid ""
 "for any prohibited Unicode code points, as defined in the configuration "
 "file.  Any prohibited code points are reported as a possible security risk."
 msgstr ""
+"Escaneja els fitxers de codi font extrets i apedaçats, els scripts i els "
+"fitxers d'especificació RPM per a qualsevol punt de codi Unicode prohibit, "
+"tal com es defineix al fitxer de configuració.  Qualsevol punt de codi "
+"prohibit és informat com un possible risc de seguretat."
 
 #: include/inspect.h:1609
 msgid ""
@@ -365,6 +569,12 @@ msgid ""
 "will check for correct RPM dependency metadata when inspecting a single "
 "build and report findings."
 msgstr ""
+"Comprova si hi ha metadades de dependències RPM correctes.  Informeu de "
+"resultats incorrectes o contradictoris, així com de canvis esperats en "
+"comparar una nova construcció amb una construcció més antiga.  Els canvis "
+"només s'informen quan es comparen les compilacions, però aquesta inspecció "
+"comprovarà si hi ha metadades de dependència RPM correctes quan "
+"s'inspeccioni una sola compilació i es notifiquin els resultats."
 
 #: include/inspect.h:1615
 msgid ""
@@ -373,24 +583,36 @@ msgid ""
 "report where symbols unexpectedly appear or disappear and what corrective "
 "action is needed."
 msgstr ""
+"Comprova que els fitxers dels paquets RPM tenen els seus símbols de "
+"depuració eliminats i els fitxers dels paquets debuginfo porten símbols de "
+"depuració.  Quan es comparen les construccions, s'informa d'on apareixen o "
+"desapareixen inesperadament els símbols i quina acció correctiva és "
+"necessària."
 
 #: include/inspect.h:1621
 msgid "Perform syntax check on udev rules files using udevadm verify."
 msgstr ""
+"Realitza una comprovació de sintaxi als fitxers de regles udev utilitzant la "
+"verificació udevadm."
 
 #: include/results.h:31
 msgid "Change the string specified on the 'Vendor:' line in the spec file."
-msgstr ""
+msgstr "Canvia la cadena especificada a la línia «Vendor:» del fitxer spec."
 
 #: include/results.h:38
 msgid "Make sure the SRPM is built on a host within the expected subdomain."
 msgstr ""
+"Assegureu-vos que el SRPM està construït en un amfitrió dins del subdomini "
+"esperat."
 
 #: include/results.h:45
 msgid ""
 "Unprofessional language as defined in the configuration file was found in "
 "the text shown.  Remove or change the offending words and rebuild."
 msgstr ""
+"S'ha trobat un llenguatge no professional tal com es defineix en el fitxer "
+"de configuració en el text mostrat.  Elimina o canvia les paraules ofensives "
+"i reconstrueix."
 
 #: include/results.h:60 include/results.h:75
 #, c-format
@@ -398,6 +620,8 @@ msgid ""
 "Check to see if you eliminated a subpackage but still have the %package and/"
 "or the %files section for it."
 msgstr ""
+"Marqueu-ho per veure si heu eliminat un subpaquet, però encara teniu la "
+"secció %package i/o %files."
 
 #: include/results.h:90
 msgid ""
@@ -405,6 +629,10 @@ msgid ""
 "distribution (e.g., GPLv2+).  If the license in question is approved, the "
 "license database needs updating in the rpminspect-data package."
 msgstr ""
+"L'etiqueta de llicència ha de contenir una cadena de llicència aprovada tal "
+"com la defineix la distribució (p. ex., GPLv2+).  Si s'aprova la llicència "
+"en qüestió, la base de dades de llicències necessita actualitzar-se en el "
+"paquet rpminspect-data."
 
 #: include/results.h:97
 msgid ""
@@ -412,6 +640,10 @@ msgid ""
 "valid licensedb file.  This is also commonly due to a missing vendor "
 "specific rpminspect-data package on the system."
 msgstr ""
+"Assegureu-vos que la configuració de licensedb a la configuració de "
+"rpminspect estigui establerta a un fitxer vàlid de licensedb.  Això també es "
+"deu normalment a un paquet de dades rpminspect específic del proveïdor que "
+"falta al sistema."
 
 #: include/results.h:104
 msgid ""
@@ -422,36 +654,52 @@ msgid ""
 "but marked unapproved, you may need to work with the legal team regarding "
 "options for this software."
 msgstr ""
+"L'abreviatura de llicència especificada no apareix com a aprovada a la base "
+"de dades de llicències.  La base de dades de llicències s'especifica al "
+"fitxer de configuració rpminspect.  Comproveu aquest fitxer i envieu una "
+"sol·licitud d'extracció al projecte d'actualització corresponent per "
+"actualitzar la base de dades.  Si la llicència apareix a la base de dades "
+"però està marcada com a no aprovada, és possible que hàgiu de treballar amb "
+"l'equip legal pel que fa a les opcions d'aquest programari."
 
 #: include/results.h:119 include/results.h:154
 msgid "Ensure all object files are compiled with -fPIC"
-msgstr ""
+msgstr "Assegura que tots els fitxers d'objecte estan compilats amb -fPIC"
 
 #: include/results.h:126
 msgid ""
 "Ensure that the package is being built with the correct compiler and "
 "compiler flags"
 msgstr ""
+"Assegureu-vos que el paquet s'està construint amb el compilador i les "
+"banderes correctes"
 
 #: include/results.h:133
 msgid ""
 "The data in an ELF file appears to be corrupt; ensure that packaged ELF "
 "files are not being truncated or incorrectly modified"
 msgstr ""
+"Les dades d'un fitxer ELF semblen estar malmeses; assegureu-vos que els "
+"fitxers ELF empaquetats no estan sent truncats o modificats incorrectament"
 
 #: include/results.h:140
 msgid ""
 "An ELF stack is marked as executable. Ensure that no execstack options are "
 "being passed to the linker, and that no functions are defined on the stack."
 msgstr ""
+"Una pila ELF està marcada com a executable. Assegureu-vos que no es passen "
+"opcions d'execstack a l'enllaçador, i que no es defineix cap funció a la "
+"pila."
 
 #: include/results.h:147
 msgid "Ensure executables are linked with with '-z relro -z now'"
-msgstr ""
+msgstr "Assegura que els executables estan enllaçats amb «-z relro -z now»"
 
 #: include/results.h:169
 msgid "Correct the errors in the man page as reported by the libmandoc parser."
 msgstr ""
+"Corregiu els errors de la pàgina «man» segons informa l'analitzador "
+"libmandoc."
 
 #: include/results.h:176
 msgid ""
@@ -459,34 +707,47 @@ msgid ""
 "in the directory beneath /usr/share/man that matches the section number of "
 "the page."
 msgstr ""
+"Corregeix el camí d'instal·lació per a la pàgina man. Les pàgines de manual "
+"s'han d'instal·lar al directori sota /usr/share/man que coincideixi amb el "
+"número de secció de la pàgina."
 
 #: include/results.h:191
 msgid "Correct the reported errors in the XML document"
-msgstr ""
+msgstr "Corregeix els errors notificats en el document XML"
 
 #: include/results.h:206
 msgid ""
 "Refer to the Desktop Entry Specification at https://standards.freedesktop."
 "org/desktop-entry-spec/latest/ for help correcting the errors and warnings"
 msgstr ""
+"Consulteu l'especificació d'entrada de l'escriptori a https://"
+"standards.freedesktop.org/desktop-entry-spec/latest/ per a obtenir ajuda per "
+"a corregir els errors i avisos"
 
 #: include/results.h:221
 msgid ""
 "The Release: tag in the spec file must include a '%{?dist}' string.  Please "
 "add this to the spec file per the distribution packaging guidelines."
 msgstr ""
+"L'etiqueta Release: al fitxer spec ha d'incloure una cadena '%{?dist}'.  "
+"Afegiu-ho al fitxer spec segons les directrius d'empaquetament de la "
+"distribució."
 
 #: include/results.h:236
 msgid ""
 "The spec file name does not match the expected NAME.spec format.  Rename the "
 "spec file to conform to this policy."
 msgstr ""
+"El nom del fitxer spec no coincideix amb el format esperat NAME.spec.  "
+"Canvia el nom del fitxer spec perquè s'ajusti a aquesta política."
 
 #: include/results.h:253
 msgid ""
 "This package is part of a module but is missing the %{modularitylabel} "
 "header tag.  Add this as a %define in the spec file and rebuild."
 msgstr ""
+"Aquest paquet forma part d'un mòdul, però manca l'etiqueta de capçalera %"
+"{modularitylabel}.  Afegiu-ho com a %define al fitxer spec i reconstruïu-lo."
 
 #: include/results.h:260
 msgid ""
@@ -496,6 +757,11 @@ msgid ""
 "rules determining if the /data/static_context setting is required, "
 "forbidden, or recommend."
 msgstr ""
+"Aquesta construcció conté un paràmetre /data/staticcontext vàlid o invàlid.  "
+"Consulteu les regles del mòdul per al producte que esteu construint per "
+"determinar quina ha de ser la configuració.  Els paràmetres de configuració "
+"de rpminspect també estableixen les regles que determinen si la "
+"configuració /data/staticcontext és necessària, prohibida o recomanada."
 
 #: include/results.h:277
 msgid ""
@@ -503,24 +769,35 @@ msgid ""
 "met for the product release.  Ensure you are using the correct JDK for the "
 "build."
 msgstr ""
+"La versió de codi de bytes de Java per a un o més fitxers de classe en la "
+"construcció no es va complir per a la versió del producte.  Assegureu-vos "
+"que esteu utilitzant el JDK correcte per a la construcció."
 
 #: include/results.h:292
 msgid ""
 "File changes were found.  In most cases these are expected, but it is a good "
 "idea to verify the changes found are deliberate."
 msgstr ""
+"S'han trobat canvis de fitxer.  En la majoria dels casos s'esperen, però és "
+"una bona idea verificar els canvis trobats són deliberats."
 
 #: include/results.h:307
 msgid ""
 "Unexpected file moves were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file moves between builds."
 msgstr ""
+"S'han trobat moviments de fitxer inesperats.  Verificar aquests canvis és "
+"correcte.  Si no ho són, ajusteu la construcció per evitar que el fitxer es "
+"mogui entre compilacions."
 
 #: include/results.h:322
 msgid ""
 "Unexpected file removals were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file removals between builds."
 msgstr ""
+"S'han trobat eliminacions de fitxers imprevistes.  Verificar aquests canvis "
+"és correcte.  Si no ho són, ajusteu la construcció per evitar que s'eliminin "
+"els fitxers entre compilacions."
 
 #: include/results.h:337
 #, c-format
@@ -532,6 +809,13 @@ msgid ""
 "You may also need to update the data package or local configuration file and "
 "change the forbidden_path_prefixes or forbidden_path_suffixes list."
 msgstr ""
+"S'han trobat addicions de fitxer no esperades.  Verificar aquests canvis és "
+"correcte.  Si no ho són, ajusteu la construcció per evitar les addicions de "
+"fitxers entre compilacions.  Si són correctes, actualitzeu %s i envieu un "
+"pedaç al projecte de dades rpminspect que és propietari d'aquest fitxer, de "
+"manera que rpminspect sap esperar aquest canvi.  També pot ser que hàgiu "
+"d'actualitzar el paquet de dades o el fitxer de configuració local i canviar "
+"la llista de prefixos prohibits o de sufixos prohibits."
 
 #: include/results.h:352
 #, c-format
@@ -541,6 +825,11 @@ msgid ""
 "deliberate, but needs inspection. If this change is expected, update %s and "
 "send a patch to the project that owns that file."
 msgstr ""
+"S'esperava un contingut d'arxiu font canviat. La versió del paquet no ha "
+"canviat entre compilacions, però el contingut de l'arxiu d'origen sí. Pot "
+"ser que sigui deliberada, però necessita inspecció. Si s'espera aquest "
+"canvi, actualitzeu %s i envieu un pedaç al projecte propietari d'aquest "
+"fitxer."
 
 #: include/results.h:367
 #, c-format
@@ -549,6 +838,9 @@ msgid ""
 "permissions are expected, update %s and send a patch to the project that "
 "owns it."
 msgstr ""
+"Assegureu-vos que la secció %%files inclou la macro %%defattr. Si s'esperen "
+"aquests permisos, actualitzeu %s i envieu un pedaç al projecte que el "
+"posseeix."
 
 #: include/results.h:374
 #, c-format
@@ -557,6 +849,10 @@ msgid ""
 "configuration, which is usually root. If this ownership is expected, update "
 "%s and send a patch to the project that owns it."
 msgstr ""
+"Els fitxers de camí de la safata han de ser propietat del contenidor "
+"establert a la configuració rpminspect, que normalment és root. Si s'espera "
+"aquesta propietat, actualitzeu %s i envieu un pedaç al projecte que el "
+"posseeix."
 
 #: include/results.h:381
 #, c-format
@@ -565,6 +861,9 @@ msgid ""
 "configuration, which is usually root. If this ownership is expect, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"Els fitxers de camí de la safata han de ser propietat del bingroup establert "
+"a la configuració rpminspect, que normalment és root. Si s'espera aquesta "
+"propietat, actualitzeu %s i envieu un pedaç al projecte que el posseeix."
 
 #: include/results.h:388
 #, c-format
@@ -573,6 +872,9 @@ msgid ""
 "or remove the world execute bit on the file (chmod o-x). If this ownership "
 "is expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"O bé chgrp el fitxer al bingroup establert a la configuració rpminspect o bé "
+"elimineu el món executeu bit al fitxer (chmod o-x). Si s'espera aquesta "
+"propietat, actualitzeu %s i envieu un pedaç al projecte que el posseeix."
 
 #: include/results.h:395
 #, c-format
@@ -581,6 +883,10 @@ msgid ""
 "or remove the group write bit on the file (chmod g-w). If this ownership is "
 "expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"Escriviu el fitxer al bingroup establert a la configuració rpminspect o "
+"suprimiu el bit d'escriptura del grup al fitxer (chmod g-w). Si s'espera "
+"aquesta propietat, actualitzeu %s i envieu un pedaç al projecte que el "
+"posseeix."
 
 #: include/results.h:402
 #, c-format
@@ -589,6 +895,10 @@ msgid ""
 "process to set correct owner and group information. If expected, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"S'espera verificar els canvis de propietat. Si no, ajusteu el procés de "
+"construcció de paquets per establir la informació correcta del propietari i "
+"del grup. Si s'esperava, actualitzeu %s i envieu un pedaç al projecte que el "
+"posseeix."
 
 #: include/results.h:409
 msgid ""
@@ -599,26 +909,41 @@ msgid ""
 "remedy, add a fileinfo rule for this file to the vendor data package under "
 "the appropriate product release file."
 msgstr ""
+"rpminspect espera una regla fileinfo del paquet de dades del proveïdor per a "
+"aquest fitxer. Normalment això significa que el fitxer té un conjunt no "
+"estàndard de permisos (p. ex., setuid) que és una condició on rpminspect "
+"comprovaria la llista fileinfo per assegurar que el paquet s'ajusta a les "
+"regles del proveïdor. Per a remeiar, afegiu una regla fileinfo per a aquest "
+"fitxer al paquet de dades del proveïdor sota el fitxer de llançament de "
+"producte apropiat."
 
 #: include/results.h:424
 msgid "Consult the shell documentation for proper syntax."
 msgstr ""
+"Consulteu la documentació de l'intèrpret d'ordres per a obtenir una sintaxi "
+"adequada."
 
 #: include/results.h:431
 msgid ""
 "The file referenced was not a known shell script in the before build but is "
 "now a shell script in the after build."
 msgstr ""
+"El fitxer al qual es fa referència no era un script d'intèrpret d'ordres "
+"conegut en la construcció anterior, però ara és un script d'intèrpret "
+"d'ordres en la construcció posterior."
 
 #: include/results.h:438
 msgid ""
 "The referenced shell script is invalid. Consider debugging it with the '-n' "
 "option on the shell to find and fix the problem."
 msgstr ""
+"L'script de l'intèrpret d'ordres referenciat no és vàlid. Considereu depurar-"
+"lo amb l'opció «-n» de l'intèrpret d'ordres per a trobar i solucionar el "
+"problema."
 
 #: include/results.h:453
 msgid "See annocheck(1) for more information."
-msgstr ""
+msgstr "Vegeu annocheck(1) per a més informació."
 
 #: include/results.h:460
 msgid ""
@@ -627,6 +952,11 @@ msgid ""
 "declarations). Symbols may also appear as unfortified if the compiler is "
 "unable to determine the size of a buffer, which is not necessarily an error."
 msgstr ""
+"Assegureu-vos que tots els fitxers d'objecte es compilen amb '-O2 -"
+"DFORTIFYSOURCE,2', i que s'inclouen totes les capçaleres apropiades (no hi "
+"ha declaracions implícites de funcions). Els símbols també poden aparèixer "
+"com a no fortificats si el compilador no pot determinar la mida d'un buffer, "
+"cosa que no és necessàriament un error."
 
 #: include/results.h:475
 msgid ""
@@ -636,6 +966,11 @@ msgid ""
 "If they are not, modify the package spec file to ensure the build links with "
 "the correct shared libraries."
 msgstr ""
+"S'han afegit o eliminat els símbols DTNEEDED.  Això passa quan l'entorn de "
+"construcció té diferents versions de les biblioteques requerides.  A vegades "
+"això és deliberat, però a vegades no.  S'espera verificar aquests canvis.  "
+"Si no ho són, modifiqueu el fitxer spec del paquet per assegurar els "
+"enllaços de construcció amb les biblioteques compartides correctes."
 
 #: include/results.h:490
 msgid ""
@@ -643,6 +978,9 @@ msgid ""
 "is, you can adjust the filesize inspection settings in the rpminspect.yaml "
 "file."
 msgstr ""
+"Un fitxer va créixer en una quantitat notable.  Assegurar que aquest canvi "
+"està previst.  Si ho és, podeu ajustar la configuració de la inspecció de la "
+"mida del fitxer al fitxer rpminspect.yaml."
 
 #: include/results.h:497
 msgid ""
@@ -650,18 +988,25 @@ msgid ""
 "it is, you can adjust the filesize inspection settings in the rpminspect."
 "yaml file."
 msgstr ""
+"Un fitxer s'ha reduït en una quantitat notable.  Assegurar que aquest canvi "
+"està previst.  Si ho és, podeu ajustar la configuració de la inspecció de la "
+"mida del fitxer al fitxer rpminspect.yaml."
 
 #: include/results.h:504
 msgid ""
 "A previously empty file is no longer empty.  Make sure this change is "
 "intended and fix the package spec file if necessary."
 msgstr ""
+"Un fitxer prèviament buit ja no és buit.  Assegureu-vos que aquest canvi "
+"està previst i corregiu el fitxer spec del paquet si és necessari."
 
 #: include/results.h:511
 msgid ""
 "A previously non-empty file is now empty.  Make sure this change is intended "
 "and fix the package space file if necessary."
 msgstr ""
+"Un fitxer no buit anteriorment està buit.  Assegureu-vos que aquest canvi "
+"està previst i corregiu el fitxer d'espai del paquet si és necessari."
 
 #: include/results.h:526
 #, c-format
@@ -672,6 +1017,12 @@ msgid ""
 "may also be of help for this situation.  If necessary, update %s with the "
 "changes found here and send a patch to the project that owns the data file."
 msgstr ""
+"S'han trobat capacitats no esperades al fitxer indicat.  Consulteu capacitats"
+"(7) i ajusteu els fitxers del paquet o modifiqueu la llista de capacitats "
+"del paquet de dades del proveïdor rpminspect.  L'equip de seguretat també "
+"pot ser d'ajuda per aquesta situació.  Si cal, actualitzeu %s amb els canvis "
+"trobats aquí i envieu un pedaç al projecte que és propietari del fitxer de "
+"dades."
 
 #: include/results.h:541
 msgid ""
@@ -679,6 +1030,9 @@ msgid ""
 "usability problems for users if module parameters were removed in a "
 "maintenance update."
 msgstr ""
+"Els paràmetres del mòdul del nucli s'han eliminat entre compilacions.  Això "
+"pot presentar problemes d'usabilitat per als usuaris si els paràmetres del "
+"mòdul s'han eliminat en una actualització de manteniment."
 
 #: include/results.h:548
 msgid ""
@@ -686,6 +1040,9 @@ msgid ""
 "usability problems for users if module dependencies changed in a maintenance "
 "update."
 msgstr ""
+"Les dependències del mòdul del nucli han canviat entre les construccions.  "
+"Això pot presentar problemes d'usabilitat per als usuaris si les "
+"dependències del mòdul han canviat en una actualització de manteniment."
 
 #: include/results.h:555
 msgid ""
@@ -693,6 +1050,10 @@ msgid ""
 "usability problems for users if module device aliases changed in a "
 "maintenance update."
 msgstr ""
+"Els àlies del dispositiu del mòdul del nucli han canviat entre les "
+"compilacions.  Això pot presentar problemes d'usabilitat per als usuaris si "
+"els àlies dels mòduls del dispositiu han canviat en una actualització de "
+"manteniment."
 
 #: include/results.h:565
 msgid ""
@@ -700,12 +1061,17 @@ msgid ""
 "build.  This may be deliberate, but check to make sure you do not have any "
 "unexpected ExclusiveArch lines in the spec file."
 msgstr ""
+"Ara falta una arquitectura present en la construcció anterior en la "
+"construcció posterior.  Això pot ser deliberat, però comproveu per assegurar-"
+"vos que no teniu cap línia ExclusiveArch inesperada al fitxer spec."
 
 #: include/results.h:566
 msgid ""
 "A new architecture has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Una nova arquitectura ha aparegut en l'edifici posterior.  Això pot indicar "
+"un progrés en el món de la computació."
 
 #: include/results.h:576
 msgid ""
@@ -713,12 +1079,17 @@ msgid ""
 "This may be deliberate, but check to make sure you have correct syntax "
 "defining the subpackage in the spec file"
 msgstr ""
+"Ara falta un subpaquet present a la construcció anterior a la construcció "
+"posterior.  Això pot ser deliberat, però comproveu que teniu la sintaxi "
+"correcta definint el subpaquet al fitxer spec"
 
 #: include/results.h:577
 msgid ""
 "A new subpackage has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Un nou subpaquet ha aparegut en el muntatge posterior.  Això pot indicar un "
+"progrés en el món de la computació."
 
 #: include/results.h:587
 #, c-format
@@ -726,18 +1097,25 @@ msgid ""
 "Make sure the spec file in the after build contains a valid %changelog "
 "section."
 msgstr ""
+"Assegureu-vos que el fitxer spec del post build conté una secció %changelog "
+"vàlida."
 
 #: include/results.h:597
 msgid ""
 "Files should not be installed in old directory names.  Modify the package to "
 "install the affected file to the preferred directory."
 msgstr ""
+"Els fitxers no s'han d'instal·lar als noms de directoris antics.  Modifica "
+"el paquet per instal·lar el fitxer afectat al directori preferit."
 
 #: include/results.h:607
 msgid ""
 "ELF .o and .a files should not carry LTO (Link Time Optimization) bytecode.  "
 "Make sure you have stripped LTO bytecode from those files at install time."
 msgstr ""
+"Els fitxers ELF .o i .a no han de portar el bytecode LTO (Link Time "
+"Optimization).  Assegureu-vos que heu eliminat el bytecode LTO d'aquests "
+"fitxers en el moment de la instal·lació."
 
 #: include/results.h:617
 msgid ""
@@ -746,6 +1124,12 @@ msgid ""
 "and have a non-symlink turn in to a symlink, ensure this is deliberate.  "
 "NOTE:  You cannot turn a directory in to a symlink due to RPM limitations."
 msgstr ""
+"Assegureu-vos que els enllaços simbòlics apunten a una destinació vàlida en "
+"un dels subpaquets de la construcció; no es permeten enllaços simbòlics "
+"penjants.  Si esteu comparant construccions i teniu un enllaç que no sigui "
+"un enllaç simbòlic, assegureu-vos que això sigui deliberat.  NOTA: No podeu "
+"convertir un directori en un enllaç simbòlic a causa de les limitacions de "
+"RPM."
 
 #: include/results.h:618
 #, c-format
@@ -758,6 +1142,15 @@ msgid ""
 "scriptlet for replacing a directory.  See the packaging guidelines for "
 "'Scriptlet to replace a directory' for more information."
 msgstr ""
+"Assegureu-vos que els enllaços simbòlics apunten a una destinació vàlida en "
+"un dels subpaquets de la construcció; no es permeten enllaços simbòlics "
+"penjants.  Si esteu comparant construccions i teniu un enllaç que no sigui "
+"un enllaç simbòlic, assegureu-vos que això sigui deliberat.  NOTA: No podeu "
+"convertir un directori en un enllaç simbòlic a causa de les limitacions de "
+"RPM.  Si heu de fer-ho absolutament, assegureu-vos d'incloure el scriptlet "
+"%pretrans per a reemplaçar un directori.  Vegeu les directrius "
+"d'empaquetament per a «Scriptlet per a substituir un directori» per a més "
+"informació."
 
 #: include/results.h:628
 #, c-format
@@ -767,6 +1160,10 @@ msgid ""
 "See the RPM documentation or distribution package maintainer guide for more "
 "information."
 msgstr ""
+"Elimina les referències de camí prohibides de la línia indicada a la secció "
+"%files.  En molts casos podeu utilitzar macros RPM per a especificar "
+"ubicacions de camí.  Consulteu la guia del mantenidor de paquets de "
+"documentació o distribució RPM per a més informació."
 
 #: include/results.h:638
 msgid ""
@@ -774,6 +1171,9 @@ msgid ""
 "is intended and if necessary fix the spec file so the correct file is "
 "included in the built package."
 msgstr ""
+"En molts casos el tipus MIME canviant és deliberat.  Verifiqueu que el canvi "
+"està previst i, si cal, corregiu el fitxer spec de manera que el fitxer "
+"correcte s'inclogui en el paquet construït."
 
 #: include/results.h:648
 msgid ""
@@ -781,6 +1181,10 @@ msgid ""
 "users.  See the abidiff(1) documentation and the distribution ABI policies "
 "to determine if this detected change is allowed."
 msgstr ""
+"Els canvis ABI introduïts durant les actualitzacions de manteniment poden "
+"provocar problemes per als usuaris.  Consulteu la documentació de l'abidiff"
+"(1) i les polítiques de distribució de l'ABI per determinar si es permet "
+"aquest canvi detectat."
 
 #: include/results.h:658
 msgid ""
@@ -788,6 +1192,10 @@ msgid ""
 "problems for users.  See the libabigail documentation and the distribution "
 "KMI policy to determine if this detected change is allowed."
 msgstr ""
+"La interfície del mòdul de nuclis introduïda durant les actualitzacions de "
+"manteniment pot provocar problemes per als usuaris.  Vegeu la documentació "
+"de libabigail i la política de distribució de KMI per determinar si aquest "
+"canvi detectat està permès."
 
 #: include/results.h:668
 #, c-format
@@ -797,6 +1205,11 @@ msgid ""
 "configuration files, make sure the package can handle upgrading an existing "
 "package -or- honor the old file locations."
 msgstr ""
+"Els canvis a %config s'han de fer amb cura.  Assegureu-vos que heu "
+"instal·lat el fitxer correcte i a la ubicació correcta.  Si un paquet està "
+"reestructurant fitxers de configuració, assegureu-vos que el paquet pot "
+"gestionar l'actualització d'un paquet existent -o- honorar les ubicacions de "
+"fitxer antigues."
 
 #: include/results.h:678
 #, c-format
@@ -805,6 +1218,10 @@ msgid ""
 "the package is not a rebase.  Sometimes upstream projects rename or move "
 "documentation files and the spec file needs to account for those changes."
 msgstr ""
+"S'han trobat canvis entre els fitxers %doc.  Verifiqueu aquests canvis si el "
+"paquet no és una base de dades.  De vegades els projectes de la font canvien "
+"el nom o mouen els fitxers de documentació i el fitxer spec ha de tenir en "
+"compte aquests canvis."
 
 #: include/results.h:688
 msgid ""
@@ -814,6 +1231,11 @@ msgid ""
 "the source package has any zero length or otherwise invalid patches and "
 "correct the problem."
 msgstr ""
+"S'ha trobat un fitxer de pedaç no vàlid.  Això sol ser el resultat de "
+"generar una col·lecció de pegats comparant dos arbres.  Quan els fitxers "
+"desapareixen, això pot provocar pegats de longitud zero a la col·lecció "
+"resultant.  Marqueu-ho per a veure si el paquet d'origen té una longitud "
+"zero o si no és un pegat invàlid i corregiu el problema."
 
 #: include/results.h:690
 #, c-format
@@ -827,6 +1249,14 @@ msgid ""
 "define the patch at the top of the spec file.  So Patch47 is applied with "
 "either a '%patch 47', '%patch -P 47', '%patch -P47', or '%patch47' macro."
 msgstr ""
+"El pedaç anomenat es defineix a la capçalera RPM d'origen (això vol dir que "
+"té una definició de PatchN: al fitxer spec) però no s'aplica enlloc del "
+"fitxer spec.  Manca una macro %patch corresponent i el fitxer spec no té les "
+"macros %autosetup o %autopatch.  Podeu corregir-ho afegint la macro %patch "
+"apropiada al fitxer spec (normalment a la secció %prep).  El nombre "
+"especificat amb la macro %patch correspon al nombre utilitzat per definir el "
+"pedaç a la part superior del fitxer spec.  Per tant, el Patch47 s'aplica amb "
+"una macro '%patch 47', '%patch -P 47', '%patch -P47', o '%patch47'."
 
 #: include/results.h:692
 #, c-format
@@ -836,12 +1266,19 @@ msgid ""
 "For example, Patch47 needs to have either a '%patch 47', '%patch -P 47', "
 "'%patch -P47', or '%patch47' macro."
 msgstr ""
+"El pedaç anomenat està definit però no coincideix amb el nombre amb la macro "
+"%patch.  Assegureu-vos que tots els pedaços numerats tinguin les macros "
+"corresponents %patch.  Per exemple, el Patch47 necessita tenir una macro "
+"'%patch 47', '%patch -P 47', '%patch -P47', o '%patch47'."
 
 #: include/results.h:694
 msgid ""
 "The defined patch file is not something rpminspect can handle.  This is "
 "likely a bug and should be reported to the upstream rpminspect project."
 msgstr ""
+"El fitxer de pedaç definit no és una cosa que pugui gestionar rpminspect.  "
+"Això és probable que sigui un error i s'hauria d'informar al projecte "
+"rpminspect."
 
 #: include/results.h:704
 msgid ""
@@ -851,6 +1288,11 @@ msgid ""
 "sure the file in question is clean, please file a bug with rpminspect for "
 "further help."
 msgstr ""
+"ClamAV ha trobat un virus en el fitxer anomenat.  Això pot ser un fals "
+"positiu, però hauríeu d'inspeccionar manualment el fitxer en qüestió per "
+"assegurar-vos que està net.  Això pot ser un problema amb la base de dades "
+"ClamAV o la detecció.  Si esteu segur que el fitxer en qüestió està net, si "
+"us plau, envieu un error amb rpminspect per a obtenir més ajuda."
 
 #: include/results.h:714
 #, c-format
@@ -860,6 +1302,10 @@ msgid ""
 "vendor data package for the product.  Modify the %s file and send a patch to "
 "the project that owns it."
 msgstr ""
+"En el paquet s'ha trobat un fitxer amb potencial contingut políticament "
+"sensible.  Si aquest fitxer està permès, s'ha d'afegir al paquet de dades "
+"del proveïdor rpminspect per al producte.  Modifiqueu el fitxer %s i envieu "
+"un pedaç al projecte que el posseeix."
 
 #: include/results.h:724
 msgid ""
@@ -872,6 +1318,15 @@ msgid ""
 "order to allow for backwards compatibility.  Whenever possible the "
 "deprecated functions should not be used."
 msgstr ""
+"S'han trobat símbols prohibits en un fitxer ELF del paquet.  Els paràmetres "
+"de configuració per a rpminspect indiquen que els símbols amb nom estan "
+"prohibits als paquets.  Si això és deliberat, és possible que vulgueu "
+"desactivar la inspecció de badfuncs.  Si no és deliberada, comproveu les "
+"pàgines man dels símbols amb nom per veure quines funcions de l'API han "
+"substituït els símbols prohibits.  En general, una funció es marca com "
+"obsoleta, però encara es proporciona per permetre la compatibilitat cap "
+"enrere.  Sempre que sigui possible, les funcions obsoletes no s'han "
+"d'utilitzar."
 
 #: include/results.h:734
 msgid ""
@@ -882,6 +1337,12 @@ msgid ""
 "try using a program such as patchelf to remove these properties from the ELF "
 "files."
 msgstr ""
+"Les propietats DTRPATH o DTRUNPATH s'han trobat en objectes compartits ELF "
+"en aquest paquet.  L'ús de DTRPATH i DTRUNPATH està desaconsellat excepte en "
+"determinades situacions.  Marqueu-ho per a veure que teniu un rpath "
+"inhabilitant durant l'etapa %build del fitxer spec.  Si no podeu fer-ho "
+"fàcilment, podeu intentar utilitzar un programa com el patchelf per eliminar "
+"aquestes propietats dels fitxers ELF."
 
 #: include/results.h:736
 msgid ""
@@ -889,6 +1350,9 @@ msgid ""
 "This indicates a linker error and should not happen.  ELF objects should "
 "only carry DT_RPATH or DT_RUNPATH, never both."
 msgstr ""
+"Tant les propietats DTRPATH com DTRUNPATH s'han trobat en un objecte "
+"compartit ELF.  Això indica un error de l'enllaçador i no hauria de passar.  "
+"Els objectes ELF només han de portar DTRPATH o DTRUNPATH, mai ambdós."
 
 #: include/results.h:746
 msgid ""
@@ -898,6 +1362,11 @@ msgid ""
 "discuss the situation with the Product Security Team to determine the "
 "correct course of action."
 msgstr ""
+"El fitxer de configuració rpminspect conté una llista de punts de codi "
+"Unicode prohibits.  Un es va trobar a l'arbre font extret i apedaçat o en un "
+"dels fitxers font de text del RPM font.  O bé eliminar aquest punt de codi o "
+"discutir la situació amb l'equip de seguretat del producte per determinar el "
+"curs correcte d'acció."
 
 #: include/results.h:748
 #, c-format
@@ -908,6 +1377,11 @@ msgid ""
 "running.  A common cause is removal of the working directory while the "
 "program is executing."
 msgstr ""
+"La secció %prep del fitxer spec no s'ha pogut executar per alguna raó.  Això "
+"normalment resulta d'una fallada en librpmbuild, que normalment està lligat "
+"a problemes d'extracció d'arxiu o al canvi del sistema de fitxers mentre "
+"s'està executant rpminspect.  Una causa habitual és l'eliminació del "
+"directori de treball mentre el programa s'està executant."
 
 #: include/results.h:758
 msgid ""
@@ -915,6 +1389,10 @@ msgid ""
 "Check the spec file for this dependency and ensure you have not misspelled a "
 "macro or used a macro name that does not exist."
 msgstr ""
+"S'han trobat macros de fitxer especiós RPM no expandides a la regla de "
+"dependència anotada.  Comproveu el fitxer spec per a aquesta dependència i "
+"assegureu-vos que no heu escrit malament una macro o heu utilitzat un nom de "
+"macro que no existeix."
 
 #: include/results.h:760
 msgid ""
@@ -923,6 +1401,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{version}-%{release}' "
 "in the spec file."
 msgstr ""
+"Afegeix els Requeriments explícits indicats al fitxer spec per al subpaquet "
+"anomenat.  Els subpaquets depenent de les biblioteques compartides en un "
+"altre subpaquet han de portar un 'Requereix: SUBPACKAGENAME  the %{version}-%"
+"{release}' explícit al fitxer spec."
 
 #: include/results.h:762
 msgid ""
@@ -931,6 +1413,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-"
 "%{release}' in the spec file."
 msgstr ""
+"Afegeix els Requeriments explícits indicats al fitxer spec per al subpaquet "
+"anomenat.  Els subpaquets depenent de les biblioteques compartides en un "
+"altre subpaquet han de portar un 'Requereix: SUBPACKAGENAME  the %{epoch}:%"
+"{version}-%{release}' explícit al fitxer spec."
 
 #: include/results.h:764
 #, c-format
@@ -941,6 +1427,12 @@ msgid ""
 "spec file but you do need to make sure only one subpackage is packaging up "
 "the shared library in question."
 msgstr ""
+"Comprova les seccions del subpaquet %files i les expressions explícites "
+"Proporciona.  Només un subpaquet hauria de proporcionar una biblioteca "
+"compartida donada.  Els noms de les biblioteques compartides s'afegeixen "
+"automàticament com a Proveïdors, de manera que no hi ha necessitat "
+"d'especificar-los en el fitxer spec, però cal assegurar-se que només un "
+"subpaquet està empaquetant la biblioteca compartida en qüestió."
 
 #: include/results.h:766
 msgid ""
@@ -950,6 +1442,12 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Una dependència llistada a la construcció anterior ha canviat a la "
+"dependència indicada a la construcció posterior.  Si aquest és un resultat "
+"de verificació, significa que rpminspect es va adonar del canvi en el que "
+"considera una actualització de manteniment en un paquet.  Un resultat d'INFO "
+"significa que es va adonar d'aquest canvi, però ho considera correcte perquè "
+"està comparant una construcció basada en la reposició."
 
 #: include/results.h:768
 msgid ""
@@ -959,6 +1457,12 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Es veu una nova dependència en la construcció posterior que no estava "
+"present en la construcció anterior.  Si aquest és un resultat de "
+"verificació, significa que rpminspect es va adonar del canvi en el que "
+"considera una actualització de manteniment en un paquet.  Un resultat d'INFO "
+"significa que es va adonar d'aquest canvi, però ho considera correcte perquè "
+"està comparant una construcció basada en la reposició."
 
 #: include/results.h:770
 msgid ""
@@ -968,6 +1472,12 @@ msgid ""
 "An INFO result means it noticed this change, but deems it ok because it is "
 "comparing a rebased build."
 msgstr ""
+"Una dependència vista en la construcció anterior no es veu en la construcció "
+"posterior, el que significa que es va eliminar o es va perdre.  Si aquest és "
+"un resultat de verificació, significa que rpminspect es va adonar del canvi "
+"en el que considera una actualització de manteniment en un paquet.  Un "
+"resultat d'INFO significa que es va adonar d'aquest canvi, però ho considera "
+"correcte perquè està comparant una construcció basada en la reposició."
 
 #: include/results.h:772
 msgid ""
@@ -977,151 +1487,160 @@ msgid ""
 "%{version}-%{release}' to capture the package package Epoch in the "
 "dependency."
 msgstr ""
+"El paquet té un valor d'Epoch més gran que zero, però les dependències "
+"explícites del subpaquet no l'utilitzen constantment.  Per a la dependència "
+"informada, el ' %{ %{version}-%{release}' ha de canviar a ' %{ %{epoch}:%"
+"{version}-%{release}' per capturar el paquet de paquets Epoch a la "
+"dependència."
 
 #: include/results.h:781
 msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
+"Consulteu la documentació d'udev a https://www.freedesktop.org/software/"
+"systemd/man/udev.html per obtenir ajuda per corregir els errors i avisos."
 
 #: lib/abi.c:65
 #, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr ""
+msgstr "*** identificador de nivell ABI mal format: %s"
 
 #: lib/abi.c:70
 #, c-format
 msgid "*** ABI level %d already defined"
-msgstr ""
+msgstr "*** El nivell ABI %d ja està definit"
 
 #: lib/abi.c:84
 #, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr ""
+msgstr "*** entrada de nivell ABI mal formada: %s"
 
 #: lib/builds.c:73
 #, c-format
 msgid "*** unable to create download directory %s"
-msgstr ""
+msgstr "*** no s'ha pogut crear el directori de baixades %s"
 
 #: lib/builds.c:85
 #, c-format
 msgid "*** unknown working directory type: %d"
-msgstr ""
+msgstr "*** tipus de directori de treball desconegut: %d"
 
 #: lib/builds.c:173
 #, c-format
 msgid "*** unable to read %s, skipping"
-msgstr ""
+msgstr "*** no es pot llegir %s, s'omet"
 
 #: lib/builds.c:205
 #, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr ""
+msgstr "*** s'ha trobat un membre de directori desconegut: %s"
 
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "No hi ha prou espai disponible per baixar el %s sol·licitat.\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    Necessiteu %s a %s, teniu %s.\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
 msgstr ""
+"Vegeu l'opció «-w» per a especificar un directori de treball alternatiu.\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
 msgstr ""
+"No s'ha pogut determinar l'espai requerit per baixar el %s sol·licitat.\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "Assegureu-vos que %s tingui prou espai disponible."
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
-msgstr ""
+msgstr "construcció"
 
 #: lib/builds.c:320
 msgid "Downloading module"
-msgstr ""
+msgstr "S'està baixant el mòdul"
 
 #: lib/builds.c:323
 msgid "Downloading RPM build"
-msgstr ""
+msgstr "S'està baixant la construcció RPM"
 
 #: lib/builds.c:373 lib/inspect_modularity.c:47
 #, c-format
 msgid "*** ignoring malformed module metadata file: %s"
-msgstr ""
+msgstr "*** s'ignorarà el fitxer de metadades del mòdul mal format: %s"
 
 #: lib/builds.c:383
 #, c-format
 msgid "*** malformed rpm filters in file: %s"
-msgstr ""
+msgstr "*** filtres rpm mal formats al fitxer: %s"
 
 #: lib/builds.c:541 lib/builds.c:545
 msgid "task"
-msgstr ""
+msgstr "tasca"
 
 #: lib/builds.c:659 lib/builds.c:662
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: lib/builds.c:791
 #, c-format
 msgid "*** `%s' already exists in %s"
-msgstr ""
+msgstr "*** %s ja existeix a %s"
 
 #: lib/builds.c:829
 #, c-format
 msgid "*** unable to find local build: %s"
-msgstr ""
+msgstr "*** no s'ha pogut trobar la construcció local: %s"
 
 #: lib/builds.c:841
 #, c-format
 msgid "*** unable to download RPM: %s"
-msgstr ""
+msgstr "*** no s'ha pogut baixar el RPM: %s"
 
 #: lib/builds.c:860 lib/builds.c:893 lib/builds.c:903
 #, c-format
 msgid "*** unable to find build %s in Koji hub %s"
-msgstr ""
+msgstr "*** no s'ha pogut trobar la construcció %s al centre Koji %s"
 
 #: lib/builds.c:872
 #, c-format
 msgid "*** unable to find task %s in Koji hub %s"
-msgstr ""
+msgstr "*** no s'ha pogut trobar la tasca %s al centre Koji %s"
 
 #: lib/checksums.c:91
 #, c-format
 msgid "*** %s is a FIFO"
-msgstr ""
+msgstr "*** %s és un FIFO"
 
 #: lib/copyfile.c:117
 #, c-format
 msgid "%s already exists"
-msgstr ""
+msgstr "%s ja existeix"
 
 #: lib/copyfile.c:122
 msgid ", overwriting"
-msgstr ""
+msgstr ", sobreescriptura"
 
 #: lib/curl.c:267 lib/readfile.c:60
 #, c-format
 msgid "*** unable to read %s"
-msgstr ""
+msgstr "*** no es pot llegir %s"
 
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
+msgstr "%s a %s a %s porta el mode esperat %04o"
 
 #: lib/fileinfo.c:76
 #, c-format
@@ -1129,6 +1648,8 @@ msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s a %s a %s porta el mode inesperat %04o; el mode esperat %04o; requereix "
+"una inspecció per part de l'equip de seguretat"
 
 #: lib/fileinfo.c:96
 #, c-format
@@ -1136,11 +1657,13 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o, Security Team review may be "
 "required"
 msgstr ""
+"%s a %s a %s té el mode insegur %04o, es pot requerir la revisió de l'equip "
+"de seguretat"
 
 #: lib/fileinfo.c:155
 #, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
+msgstr "%s a %s a %s té el propietari esperat «%s»"
 
 #: lib/fileinfo.c:168
 #, c-format
@@ -1148,6 +1671,8 @@ msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s a %s a %s porta un propietari inesperat «%s»; s'esperava un propietari «%s"
+"»; requereix una inspecció per part de l'equip de seguretat"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
 #, c-format
@@ -1155,11 +1680,14 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o but has no fileinfo rule for owner "
 "specification, Security Team review may be required"
 msgstr ""
+"%s a %s a %s té el mode insegur %04o però no té cap regla d'informació de "
+"fitxer per a l'especificació del propietari, és possible que es requereixi "
+"la revisió de l'equip de seguretat"
 
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
+msgstr "%s a %s a %s porta el grup esperat «%s»"
 
 #: lib/fileinfo.c:262
 #, c-format
@@ -1167,154 +1695,160 @@ msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s a %s a %s porta un grup inesperat «%s»; s'esperava un grup «%s»; "
+"requereix una inspecció per part de l'equip de seguretat"
 
 #: lib/init.c:226
 #, c-format
 msgid "*** invalid input string `%s`"
-msgstr ""
+msgstr "*** cadena d'entrada  string%s` no vàlida"
 
 #: lib/init.c:253 lib/init.c:262 lib/init.c:270 lib/init.c:282 lib/init.c:291
 #: lib/init.c:299 lib/init.c:311 lib/init.c:320 lib/init.c:328 lib/init.c:340
 #, c-format
 msgid "*** invalid mode string: %s"
-msgstr ""
+msgstr "*** cadena de mode no vàlida: %s"
 
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** problema en afegir entrades a la matriu %s- to%s"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** problema en afegir entrades ignorades a %s"
 
 #: lib/init.c:418 lib/init.c:432
 msgid "*** error reading "
-msgstr ""
+msgstr "*** error en llegir "
 
 #: lib/init.c:458
 #, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr ""
+msgstr "*** s'ignorarà la secció mal formada %s-ed%s"
 
 #: lib/init.c:515 lib/init.c:528
 #, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr ""
+msgstr "*** s'ha produït un error en llegir el patró %s ignore"
 
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
+msgstr "*** l'indicador ha d'estar «activat» o «desactivat»; s'ignorarà «%s»"
 
 #: lib/init.c:548
 #, c-format
 msgid "*** unknown inspections: `%s`"
-msgstr ""
+msgstr "*** inspeccions desconegudes: s%s:"
 
 #: lib/init.c:559
 msgid "*** malformed/unknown inspections section"
-msgstr ""
+msgstr "*** secció d'inspeccions mal formades/desconegudes"
 
 #: lib/init.c:591
 #, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr ""
+msgstr "*** s'ignorarà el fitxer de configuració %s mal format: %s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** configuració de context estàtic de modularitat desconeguda «%s»"
 
 #: lib/init.c:717
 #, c-format
 msgid "*** unknown specname match setting '%s', defaulting to 'full'"
 msgstr ""
+"*** el paràmetre «%s» coincideix amb el nom d'especificació desconegut, de "
+"manera predeterminada és «full»"
 
 #: lib/init.c:732
 #, c-format
 msgid "*** unknown specname primary setting '%s', defaulting to 'name'"
 msgstr ""
+"*** s'ha trobat el paràmetre primari «%s», de manera predeterminada a «name»"
 
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
-msgstr ""
+msgstr "*** error d'annocheck fallantnivell d'informe: %s, per defecte a %s"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** malformació de «badfuncs-edsecció permesa»"
 
 #: lib/init.c:822
 #, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
 msgstr ""
+"*** s'ha produït un error en llegir l'expressió unicode exclude regular: %s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** rpmdeps-edignore mal format; s'omet"
 
 #: lib/init.c:968
 #, c-format
 msgid "*** Invalid filename in the fileinfo list: %s"
-msgstr ""
+msgstr "*** Nom de fitxer no vàlid a la llista d'informació de fitxer: %s"
 
 #: lib/init.c:969
 msgid "*** From this invalid line:"
-msgstr ""
+msgstr "*** Des d'aquesta línia no vàlida:"
 
 #: lib/init.c:970
 #, c-format
 msgid "***     %s"
-msgstr ""
+msgstr "*** %s"
 
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** testimoni inesperat «%s» vist a %s, no es pot continuar"
 
 #: lib/init.c:1414
 #, c-format
 msgid "*** invalid security rule: %s"
-msgstr ""
+msgstr "*** regla de seguretat no vàlida: %s"
 
 #: lib/init.c:1426
 #, c-format
 msgid "*** unknown security rule: %s"
-msgstr ""
+msgstr "*** regla de seguretat desconeguda: %s"
 
 #: lib/init.c:1435
 #, c-format
 msgid "*** unknown security action: %s"
-msgstr ""
+msgstr "*** acció de seguretat desconeguda: %s"
 
 #: lib/init.c:1461
 #, c-format
 msgid "*** malformed security line: %s"
-msgstr ""
+msgstr "*** línia de seguretat mal formada: %s"
 
 #: lib/init.c:1622
 #, c-format
 msgid "*** missing configuration file `%s'"
-msgstr ""
+msgstr "*** falta el fitxer de configuració «%s»"
 
 #: lib/init.c:1658
 #, c-format
 msgid "*** unable to find profile '%s'"
-msgstr ""
+msgstr "*** no s'ha pogut trobar el perfil '%s'"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "error d'ús de l'abidiff"
 
 #: lib/inspect_abidiff.c:275
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Canvi ABI a ${FILE} el ${ARCH}"
 
 #: lib/inspect_abidiff.c:284
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Canvi incompatible amb ABI a ${FILE} el ${ARCH}"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1322,6 +1856,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s with ABI compatibility "
 "level %ld on %s revealed ABI differences."
 msgstr ""
+"Comparant la versió antiga vs. nova de %s al paquet %s amb el nivell de "
+"compatibilitat ABI %ld a %s s'han revelat diferències ABI."
 
 #: lib/inspect_abidiff.c:298
 #, c-format
@@ -1329,6 +1865,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s on %s revealed ABI "
 "differences."
 msgstr ""
+"Comparant la versió antiga vs. nova de %s al paquet %s a %s s'han revelat "
+"diferències ABI."
 
 #: lib/inspect_abidiff.c:302
 #, c-format
@@ -1336,11 +1874,13 @@ msgid ""
 "Comparing from %s to %s in package %s with ABI compatibility level %ld on %s "
 "revealed ABI differences."
 msgstr ""
+"Comparant de %s a %s al paquet %s amb el nivell de compatibilitat ABI %ld a "
+"%s s'han revelat diferències ABI."
 
 #: lib/inspect_abidiff.c:304
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
-msgstr ""
+msgstr "Comparant de %s a %s al paquet %s a %s s'han revelat diferències ABI."
 
 #: lib/inspect_abidiff.c:309
 #, c-format
@@ -1349,6 +1889,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Ordre: %s\n"
+"\n"
+"%s"
 
 #: lib/inspect_addedfiles.c:149
 #, c-format
@@ -1356,10 +1899,12 @@ msgid ""
 "Packages should not contain files or directories starting with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Els paquets no haurien de contenir fitxers o directoris que comencin amb  "
+"or%s: a %s a %s: %s"
 
 #: lib/inspect_addedfiles.c:150 lib/inspect_addedfiles.c:164
 msgid "invalid directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "el directori ${FILE} no és vàlid el ${ARCH}"
 
 #: lib/inspect_addedfiles.c:163
 #, c-format
@@ -1367,15 +1912,17 @@ msgid ""
 "Packages should not contain files or directories ending with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Els paquets no haurien de contenir fitxers o directoris que acabin amb  "
+"or%s: a %s a %s: %s"
 
 #: lib/inspect_addedfiles.c:177
 #, c-format
 msgid "Forbidden directory `%s` found on %s in %s: %s"
-msgstr ""
+msgstr "S'ha trobat el directori prohibit %s a %s a %s: %s"
 
 #: lib/inspect_addedfiles.c:178
 msgid "forbidden directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "directori prohibit ${FILE} el ${ARCH}"
 
 #: lib/inspect_addedfiles.c:209
 #, c-format
@@ -1383,202 +1930,204 @@ msgid ""
 "New security-related file `%s` added on %s in %s requires inspection by the "
 "Security Team"
 msgstr ""
+"El fitxer nou relacionat amb la seguretat  the%s the afegit a %s a %s "
+"requereix una inspecció per part de l'equip de seguretat"
 
 #: lib/inspect_addedfiles.c:211
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "fitxer nou relacionat amb la seguretat ${FILE} el ${ARCH}"
 
 #: lib/inspect_addedfiles.c:231
 #, c-format
 msgid "`%s` added on %s in %s"
-msgstr ""
+msgstr "%s afegit a %s a %s"
 
 #: lib/inspect_addedfiles.c:232
 msgid "new file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "fitxer nou ${FILE} el ${ARCH}"
 
 #: lib/inspect_addedfiles.c:248
 msgid "the fileinfo list"
-msgstr ""
+msgstr "la llista d'informació de fitxer"
 
 #: lib/inspect_annocheck.c:116 lib/inspect_annocheck.c:151
 #, c-format
 msgid "*** libannocheck_enable_profile: %s"
-msgstr ""
+msgstr "*** libannocheckenableprofile: %s"
 
 #: lib/inspect_annocheck.c:136
 #, c-format
 msgid "*** libannocheck_get_known_profiles: %s"
-msgstr ""
+msgstr "*** libannocheckgetknownprofiles: %s"
 
 #: lib/inspect_annocheck.c:168
 msgid "NOT RUN"
-msgstr ""
+msgstr "NO EXECUTAT"
 
 #: lib/inspect_annocheck.c:170
 msgid "PASSED"
-msgstr ""
+msgstr "PASSAT"
 
 #: lib/inspect_annocheck.c:172 lib/output_summary.c:59
 msgid "FAILED"
-msgstr ""
+msgstr "HA FALLAT"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "POTSER"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
-msgstr ""
+msgstr "s'ha saltat"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
-msgstr ""
+msgstr "DESCONEGUT"
 
 #: lib/inspect_annocheck.c:226
 #, c-format
 msgid "*** libannocheck_init: %s"
-msgstr ""
+msgstr "*** libannocheckinit: %s"
 
 #: lib/inspect_annocheck.c:255
 #, c-format
 msgid "*** libannocheck_%s_test: %s"
-msgstr ""
+msgstr "*** libannocheck%stest: %s"
 
 #: lib/inspect_annocheck.c:267
 #, c-format
 msgid "*** libannocheck_enable_all_tests: %s"
-msgstr ""
+msgstr "*** libannocheckenablealltests: %s"
 
 #: lib/inspect_annocheck.c:280
 #, c-format
 msgid "*** libannocheck_reinit: %s"
-msgstr ""
+msgstr "*** libannocheckreinit: %s"
 
 #: lib/inspect_annocheck.c:373
 #, c-format
 msgid "*** before libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** abans de libannocheckruntests: %s (%d)"
 
 #: lib/inspect_annocheck.c:382 lib/inspect_annocheck.c:426
 #, c-format
 msgid "*** libannocheck_get_known_tests: %s"
-msgstr ""
+msgstr "*** libannocheckgetknowntests: %s"
 
 #: lib/inspect_annocheck.c:400 lib/inspect_annocheck.c:530
 #, c-format
 msgid "*** libannocheck_finish: %s"
-msgstr ""
+msgstr "*** libannocheckfinish: %s"
 
 #: lib/inspect_annocheck.c:417
 #, c-format
 msgid "*** after libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** després de libannocheckruntests: %s (%d)"
 
 #: lib/inspect_annocheck.c:461 lib/inspect_annocheck.c:613
 msgid "lost -D_FORTIFY_SOURCE in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "s'ha perdut -DFORTIFYSOURCE a ${FILE} el ${ARCH}"
 
 #: lib/inspect_annocheck.c:464
 #, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s pot haver perdut -O2 -DFORTIFYSOURCE a %s"
 
 #: lib/inspect_annocheck.c:489
 #, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr ""
+msgstr "el libannocheck «%s» continua passant per %s a %s"
 
 #: lib/inspect_annocheck.c:492
 #, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "el test libannocheck «%s» passa ara per %s a %s"
 
 #: lib/inspect_annocheck.c:495
 #, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "la prova de libannocheck «%s» ara falla per a %s a %s"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
 #, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "el test libannocheck «%s» falla per %s a %s"
 
 #: lib/inspect_annocheck.c:503
 #, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "libannocheck '%s' prova passa per %s a %s"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
 msgid "annocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "annocheck '%s' prova passa per %s a %s"
 
 #: lib/inspect_annocheck.c:553
 #, c-format
 msgid "annocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "la prova «%s» d'annocheck ara passa per %s a %s"
 
 #: lib/inspect_annocheck.c:555
 #, c-format
 msgid "annocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "la prova «%s» d'annocheck ara falla per %s a %s"
 
 #: lib/inspect_annocheck.c:561 lib/inspect_annocheck.c:571
 #, c-format
 msgid "annocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "la prova d'annocheck «%s» ha fallat per a %s a %s"
 
 #: lib/inspect_annocheck.c:616
 #, c-format
 msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s pot haver perdut -DFORTIFYSOURCE a %s"
 
 #: lib/inspect_arch.c:77
 msgid "lost ${ARCH}"
-msgstr ""
+msgstr "${ARCH} perdut"
 
 #: lib/inspect_arch.c:79
 #, c-format
 msgid "Architecture '%s' has disappeared"
-msgstr ""
+msgstr "L'arquitectura «%s» ha desaparegut"
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "guanyat ${ARCH}"
 
 #: lib/inspect_arch.c:96
 #, c-format
 msgid "Architecture '%s' has appeared"
-msgstr ""
+msgstr "Ha aparegut l'arquitectura «%s»"
 
 #: lib/inspect_badfuncs.c:152
 #, c-format
 msgid "Forbidden function symbols found:\n"
-msgstr ""
+msgstr "S'han trobat símbols de funcions prohibides:\n"
 
 #: lib/inspect_badfuncs.c:168
 #, c-format
 msgid "%s may use forbidden functions on %s"
-msgstr ""
+msgstr "%s pot utilitzar funcions prohibides a %s"
 
 #: lib/inspect_badfuncs.c:175
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "funcions prohibides a ${FILE} el ${ARCH}"
 
 #: lib/inspect_capabilities.c:82
 #, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
-msgstr ""
+msgstr "Les capacitats del fitxer %s han canviat de «%s» a «%s» a %s el %s\n"
 
 #: lib/inspect_capabilities.c:86
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr ""
+msgstr "${FILE} capacitats en ${ARCH}"
 
 #: lib/inspect_capabilities.c:98
 #, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr ""
+msgstr "S'han trobat capacitats de fitxer per a %s: «%s» a %s a %s\n"
 
 #: lib/inspect_capabilities.c:134
 #, c-format
@@ -1586,17 +2135,21 @@ msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
 msgstr ""
+"S'ha trobat l'entrada de la llista de capacitats del fitxer %s: «%s» a %s a "
+"%s, coincideix amb el paquet\n"
 
 #: lib/inspect_capabilities.c:145
 #, c-format
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
+"La llista de capacitats del fitxer no coincideix amb %s: s'esperava «%s», "
+"s'ha obtingut «%s» a %s a %s\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr ""
+msgstr "${FILE} llista de capacitats en ${ARCH}"
 
 #: lib/inspect_capabilities.c:165
 #, c-format
@@ -1604,42 +2157,50 @@ msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
 msgstr ""
+"No s'han trobat capacitats de fitxer per a %s (%s) a la llista de capacitats "
+"de %s a %s\n"
 
 #: lib/inspect_capabilities.c:184
 #, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
 msgstr ""
+"S'esperaven capacitats de fitxer per a %s a %s però no s'han trobat a %s: "
+"s'esperava «%s»\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
 "  Changes to security policy related files require inspection by the "
 "Security Response Team."
 msgstr ""
+"  Els canvis en els fitxers relacionats amb la política de seguretat "
+"requereixen una inspecció per part de l'equip de resposta de seguretat."
 
 #: lib/inspect_changedfiles.c:319
 #, c-format
 msgid "Compressed %s file %s changed content in %s on %s."
-msgstr ""
+msgstr "El fitxer %s comprimit %s ha canviat el contingut a %s a %s."
 
 #: lib/inspect_changedfiles.c:353 lib/inspect_changedfiles.c:367
 #, c-format
 msgid "Error running msgunfmt on %s in %s on %s; malformed mo file?"
 msgstr ""
+"S'ha produït un error en executar msgunfmt a %s a %s a %s; el fitxer mo és "
+"mal format?"
 
 #: lib/inspect_changedfiles.c:357 lib/inspect_changedfiles.c:371
 msgid "msgunfmt on ${FILE}"
-msgstr ""
+msgstr "msgunfmt a ${FILE}"
 
 #: lib/inspect_changedfiles.c:382
 #, c-format
 msgid "Message catalog %s changed content in %s on %s"
-msgstr ""
+msgstr "El catàleg de missatges %s ha canviat el contingut a %s a %s"
 
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
 msgid "${FILE}"
-msgstr ""
+msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
 #, c-format
@@ -1647,25 +2208,27 @@ msgid ""
 "Public header file %s changed content in %s on %s.  A unified diff of the "
 "changes follows."
 msgstr ""
+"El fitxer de capçalera pública %s ha canviat el contingut a %s a %s.  Es "
+"segueix una diferència unificada dels canvis."
 
 #: lib/inspect_changedfiles.c:462
 #, c-format
 msgid "File %s changed content in %s on %s."
-msgstr ""
+msgstr "El fitxer %s ha canviat el contingut a %s a %s."
 
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
-msgstr ""
+msgstr "S'ha omès la inspecció perquè aquest tipus de construcció no és «rpm»."
 
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
@@ -1673,6 +2236,8 @@ msgid ""
 "%%config file %s went from actual file to symlink (pointing to %s) in %s on "
 "%s"
 msgstr ""
+"El fitxer %%config %s ha passat del fitxer real a l'enllaç simbòlic "
+"(apuntant a %s) a %s el %s"
 
 #: lib/inspect_config.c:123
 #, c-format
@@ -1680,16 +2245,19 @@ msgid ""
 "%%config file %s was a symlink (pointing to %s), became an actual file in %s "
 "on %s"
 msgstr ""
+"El fitxer %%config %s era un enllaç simbòlic (apuntant a %s), es va "
+"convertir en un fitxer real a %s a %s"
 
 #: lib/inspect_config.c:132
 #, c-format
 msgid "Symlink value for %%config file %s changed in %s on %s."
 msgstr ""
+"El valor de l'enllaç simbòlic per al fitxer %%config %s ha canviat a %s a %s."
 
 #: lib/inspect_config.c:153
 #, c-format
 msgid "%%config file content change for %s in %s on %s"
-msgstr ""
+msgstr "%%config fitxer de canvi de contingut per %s a %s a %s"
 
 #: lib/inspect_config.c:168
 #, c-format
@@ -1697,66 +2265,68 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
+"canvi de fitxer %%config per %s a %s el %s (%smarcat com %%config -) "
+"%smarcat com %%config)\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
 msgid "not "
-msgstr ""
+msgstr "no "
 
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "%s a %s a %s manca símbols de depuració"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "falten símbols de depuració"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "Falta: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%s a %s a %s conté símbols de depuració"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "conté símbols de depuració"
 
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "Conté: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%s a %s a %s ha guanyat símbols de depuració"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "s'han obtingut els símbols de depuració"
 
 #: lib/inspect_debuginfo.c:266
 #, c-format
 msgid "Gained: %s"
-msgstr ""
+msgstr "Guanyat: %s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%s a %s a %s ha perdut símbols de depuració"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "símbols de depuració perduts"
 
 #: lib/inspect_debuginfo.c:292
 #, c-format
 msgid "Lost: %s"
-msgstr ""
+msgstr "Perdut: %s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
@@ -1764,10 +2334,11 @@ msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
 msgstr ""
+"%s a %s a %s porta .gosymtab però no hauria de tenir el símbol .gnudebugdata"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnudebugdata amb .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
@@ -1775,10 +2346,12 @@ msgid ""
 "Desktop file %s on %s references executable %s but %s is not executable by "
 "all"
 msgstr ""
+"El fitxer d'escriptori %s a %s fa referència a l'executable %s però %s no és "
+"executable per tots"
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${FILE} fa referència a un fitxer no executable el ${ARCH}"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -1787,6 +2360,9 @@ msgid ""
 "executable of that name, however it has a TryExec key so it may be ignored "
 "in case %s does not exist"
 msgstr ""
+"El fitxer d'escriptori %s a %s fa referència a l'executable %s; cap "
+"subpaquet conté un executable d'aquest nom, però té una clau TryExec pel que "
+"pot ser ignorat en cas que %s no existeixi"
 
 #: lib/inspect_desktop.c:308
 #, c-format
@@ -1794,32 +2370,38 @@ msgid ""
 "Desktop file %s on %s references executable %s but no subpackages contain an "
 "executable of that name"
 msgstr ""
+"El fitxer d'escriptori %s a %s fa referència a l'executable %s però cap "
+"subpaquet conté un executable d'aquest nom"
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} referències que falten a l'executable el ${ARCH}"
 
 #: lib/inspect_desktop.c:354
 #, c-format
 msgid "Desktop file %s on %s references icon %s but %s is not readable by all"
 msgstr ""
+"El fitxer d'escriptori %s a la icona %s de referències %s però %s no és "
+"llegible per tothom"
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} fa referència a la icona no llegible a ${ARCH}"
 
 #: lib/inspect_desktop.c:376
 #, c-format
 msgid "Desktop file %s on %s references icon %s but no subpackages contain %s"
 msgstr ""
+"El fitxer d'escriptori %s a %s fa referència a la icona %s, però no hi ha "
+"subpaquets que continguin %s"
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} referències a la icona que manca a ${ARCH}"
 
 #: lib/inspect_desktop.c:452
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr ""
+msgstr "${FILE} no és vàlid a ${ARCH}"
 
 #: lib/inspect_desktop.c:455
 #, c-format
@@ -1827,27 +2409,33 @@ msgid ""
 "File %s is no longer a valid desktop entry file on %s; desktop-file-validate "
 "reports:"
 msgstr ""
+"El fitxer %s ja no és un fitxer d'entrada d'escriptori vàlid a %s; informes "
+"de validació de fitxer d'escriptori:"
 
 #: lib/inspect_desktop.c:457
 #, c-format
 msgid ""
 "New file %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"El fitxer nou %s no és un fitxer d'escriptori vàlid a %s; informes de "
+"validació de fitxer d'escriptori:"
 
 #: lib/inspect_desktop.c:459
 #, c-format
 msgid ""
 "File %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"El fitxer %s no és un fitxer d'escriptori vàlid a %s; informes de validació "
+"de fitxer d'escriptori:"
 
 #: lib/inspect_disttag.c:184
 #, c-format
 msgid "The %s file is missing the %s tag."
-msgstr ""
+msgstr "Al fitxer %s li falta l'etiqueta %s."
 
 #: lib/inspect_disttag.c:186
 msgid "${FILE} missing Release tag"
-msgstr ""
+msgstr "${FILE} manca l'etiqueta Release"
 
 #: lib/inspect_disttag.c:192
 #, c-format
@@ -1856,25 +2444,29 @@ msgid ""
 "should be of the form '%s' in the %s tag or in a macro used in the %s tag. "
 "After RPM macro expansion, no dist tag was found in this %s tag value."
 msgstr ""
+"Al valor de l'etiqueta %s li falta l'etiqueta dist en la forma adequada. "
+"L'etiqueta dist hauria de ser de la forma «%s» a l'etiqueta %s o en una "
+"macro utilitzada a l'etiqueta %s. Després de l'expansió de la macro RPM, no "
+"s'ha trobat cap etiqueta dist en aquest valor d'etiqueta %s."
 
 #: lib/inspect_disttag.c:194
 #, c-format
 msgid "${FILE} does not use '%%{?dist}' in Release"
-msgstr ""
+msgstr "${FILE} no utilitza «%%{?dist}» en la versió"
 
 #: lib/inspect_disttag.c:263
 msgid "Specified package is not a source RPM, skipping."
-msgstr ""
+msgstr "El paquet especificat no és un RPM d'origen, s'ometrà."
 
 #: lib/inspect_doc.c:71
 #, c-format
 msgid "%doc ${FILE}"
-msgstr ""
+msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
 #, c-format
 msgid "%%doc file content change for %s in %s on %s\n"
-msgstr ""
+msgstr "Canvi de contingut del fitxer %%doc per a %s a %s a %s\n"
 
 #: lib/inspect_doc.c:113
 #, c-format
@@ -1882,134 +2474,137 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
+"Canvi de fitxer %%doc per %s a %s el %s (%smarcat com %%doc -) %smarcat com "
+"%%doc)\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
 msgid "%s was an ELF file and now is not on %s"
-msgstr ""
+msgstr "%s era un fitxer ELF i ara no és a %s"
 
 #: lib/inspect_dsodeps.c:96 lib/inspect_dsodeps.c:108
 msgid "ELF file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "fitxer ELF ${FILE} el ${ARCH}"
 
 #: lib/inspect_dsodeps.c:106
 #, c-format
 msgid "%s was a dynamic ELF file and now is not on %s"
-msgstr ""
+msgstr "%s era un fitxer ELF dinàmic i ara no és a %s"
 
 #: lib/inspect_dsodeps.c:146
 #, c-format
 msgid "DT_NEEDED symbol(s) removed from %s on %s"
-msgstr ""
+msgstr "El/s símbol/s DTNEEDED/s s'ha/n eliminat de %s a %s"
 
 #: lib/inspect_dsodeps.c:148 lib/inspect_dsodeps.c:165
 msgid "DT_NEEDED symbol(s) in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Símbol(s) DTNEEDED(s) a ${FILE} el ${ARCH}"
 
 #: lib/inspect_dsodeps.c:163
 #, c-format
 msgid "DT_NEEDED symbol(s) added to %s on %s"
-msgstr ""
+msgstr "S'ha afegit el/s símbol/s DTNEEDED/s a %s a %s"
 
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "L'objecte encara té una pila executable (sense nota GNU-stack): %s a %s"
 
 #: lib/inspect_elf.c:435
 #, c-format
 msgid "Object has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "L'objecte té una pila executable (sense nota GNU-stack): %s a %s"
 
 #: lib/inspect_elf.c:438
 #, c-format
 msgid "Program built without GNU_STACK: %s on %s"
-msgstr ""
+msgstr "Programa construït sense GNUSTACK: %s a %s"
 
 #: lib/inspect_elf.c:444
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "GNUSTACK a ${FILE} el ${ARCH}"
 
 #: lib/inspect_elf.c:496
 #, c-format
 msgid "File %s has invalid execstack flags (%s) on %s"
-msgstr ""
+msgstr "El fitxer %s té indicadors d'execstack no vàlids (%s) a %s"
 
 #: lib/inspect_elf.c:501
 #, c-format
 msgid "File %s has unrecognized GNU_STACK '%s' (expected RW or RWE) on %s"
-msgstr ""
+msgstr "El fitxer %s no té el GNUSTACK «%s» (s'esperava RW o RWE) a %s"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "execstack a ${FILE} el ${ARCH}"
 
 #: lib/inspect_elf.c:525
 #, c-format
 msgid "Object still has executable stack (GNU-stack note = X): %s on %s"
 msgstr ""
+"L'objecte encara té una pila executable (nota st X de GNU-stack): %s a %s"
 
 #: lib/inspect_elf.c:527
 #, c-format
 msgid "Object has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "L'objecte té una pila executable (nota st X de GNU-stack): %s a %s"
 
 #: lib/inspect_elf.c:531
 #, c-format
 msgid "Stack is still executable: %s on %s"
-msgstr ""
+msgstr "La pila encara és executable: %s a %s"
 
 #: lib/inspect_elf.c:533
 #, c-format
 msgid "Stack is executable: %s on %s"
-msgstr ""
+msgstr "La pila és executable: %s a %s"
 
 #: lib/inspect_elf.c:564
 #, c-format
 msgid "%s lost full GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s ha perdut tota la protecció de seguretat de GNURELRO a %s"
 
 #: lib/inspect_elf.c:567
 #, c-format
 msgid "%s lost GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s ha perdut la protecció de seguretat de GNURELRO a %s"
 
 #: lib/inspect_elf.c:578
 msgid "lost GNU_RELRO in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ha perdut GNURELRO a ${FILE} el ${ARCH}"
 
 #: lib/inspect_elf.c:725
 #, c-format
 msgid "The following objects lost -fPIC:\n"
-msgstr ""
+msgstr "Els objectes següents perduts -fPIC:\n"
 
 #: lib/inspect_elf.c:742
 #, c-format
 msgid "The following new objects were built without -fPIC:\n"
-msgstr ""
+msgstr "Els següents objectes nous es van construir sense -fPIC:\n"
 
 #: lib/inspect_elf.c:755
 #, c-format
 msgid "%s in %s has objects built without -fPIC on %s"
-msgstr ""
+msgstr "%s a %s té objectes construïts sense -fPIC a %s"
 
 #: lib/inspect_elf.c:763
 msgid "missing -fPIC in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "falta -fPIC a ${FILE} el ${ARCH}"
 
 #: lib/inspect_elf.c:799
 msgid "TEXTREL relocations in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Reubicacions de TEXTREL a ${FILE} el ${ARCH}"
 
 #: lib/inspect_elf.c:814
 #, c-format
 msgid "%s in %s acquired TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s a %s ha adquirit textREL deslocalitzacions a %s"
 
 #: lib/inspect_elf.c:817
 #, c-format
 msgid "%s in %s has TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s a %s té reubicacions de TEXTREL a %s"
 
 #: lib/inspect_emptyrpm.c:95
 #, c-format
@@ -2017,6 +2612,8 @@ msgid ""
 "New package %s is empty (no payloads); this is expected per the rpminspect "
 "configuration"
 msgstr ""
+"El paquet nou %s està buit (sense càrregues útils); s'espera que això sigui "
+"segons la configuració rpminspect"
 
 #: lib/inspect_emptyrpm.c:105
 #, c-format
@@ -2024,65 +2621,67 @@ msgid ""
 "New package %s is empty (no payloads); this is expected because the package "
 "only contains %%ghost entries"
 msgstr ""
+"El paquet nou %s està buit (sense càrregues útils); s'espera perquè el "
+"paquet només conté entrades %%ghost"
 
 #: lib/inspect_emptyrpm.c:116
 #, c-format
 msgid "New package %s is empty (no payloads)"
-msgstr ""
+msgstr "El paquet nou %s està buit (sense càrregues útils)"
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} té una càrrega útil buida"
 
 #: lib/inspect_files.c:111
 #, c-format
 msgid "Forbidden path reference (%s) on line %ld of %s"
-msgstr ""
+msgstr "Referència de camí prohibida (%s) a la línia %ld de %s"
 
 #: lib/inspect_files.c:113
 #, c-format
 msgid "invalid spec line: %s"
-msgstr ""
+msgstr "la línia d'especificació no és vàlida: %s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
-msgstr ""
+msgstr "La inspecció de fitxers només és per a paquets d'origen, s'omet."
 
 #: lib/inspect_filesize.c:67
 #, c-format
 msgid "%s became a non-empty file on %s"
-msgstr ""
+msgstr "%s es va convertir en un fitxer no buit a %s"
 
 #: lib/inspect_filesize.c:71
 msgid "non-empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${FILE} no buit el ${ARCH}"
 
 #: lib/inspect_filesize.c:76
 #, c-format
 msgid "%s became an empty file on %s"
-msgstr ""
+msgstr "%s es va convertir en un fitxer buit a %s"
 
 #: lib/inspect_filesize.c:80
 msgid "empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "${FILE} buit el ${ARCH}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
 msgid "%s grew by %lld%% on %s"
-msgstr ""
+msgstr "%s ha crescut %lld%% a %s"
 
 #: lib/inspect_filesize.c:99
 msgid "${FILE} size grew on ${ARCH}"
-msgstr ""
+msgstr "la mida de ${FILE} ha crescut el ${ARCH}"
 
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr ""
+msgstr "%s s'ha reduït per %lld%% a %s"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr ""
+msgstr "${FILE} la mida es va reduir el ${ARCH}"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2090,10 +2689,12 @@ msgid ""
 "File %s (%s), Java byte code version %d is incorrect (wrong endianness? "
 "corrupted file? space JDK?)"
 msgstr ""
+"Fitxer %s (%s), la versió de codi de byte de Java %d és incorrecta "
+"(endianness incorrecte? fitxer corrupte? espai JDK?)"
 
 #: lib/inspect_javabytecode.c:131
 msgid "incorrect Java byte code version in ${FILE}"
-msgstr ""
+msgstr "versió incorrecta del codi de byte de Java a ${FILE}"
 
 #: lib/inspect_javabytecode.c:136
 #, c-format
@@ -2101,33 +2702,37 @@ msgid ""
 "File %s (%s), Java byte code version %d greater than supported major version "
 "%d for product release %s"
 msgstr ""
+"Fitxer %s (%s), la versió de codi de bytes de Java %d és més gran que la "
+"versió principal admesa %d per a la versió de producte %s"
 
 #: lib/inspect_javabytecode.c:137
 msgid "Java byte code version too new in ${FILE}"
-msgstr ""
+msgstr "La versió de codi de byte de Java és massa nova a ${FILE}"
 
 #: lib/inspect_javabytecode.c:152
 #, c-format
 msgid "Java byte code version changed from %d to %d in %s from %s"
-msgstr ""
+msgstr "La versió de codi de bytes de Java ha canviat de %d a %d a %s de %s"
 
 #: lib/inspect_javabytecode.c:153
 msgid "Java byte code version changed in ${FILE}"
-msgstr ""
+msgstr "S'ha canviat la versió del codi de byte de Java a ${FILE}"
 
 #: lib/inspect_javabytecode.c:255 lib/inspect_javabytecode.c:267
 msgid "*** missing JVM version to product release mapping"
-msgstr ""
+msgstr "*** falta la versió JVM al mapatge de llançament de producte"
 
 #: lib/inspect_kmidiff.c:252
 #, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s generated a kmidiff(1) usage error."
 msgstr ""
+"En comparar %s amb %s al paquet %s a %s s'ha generat un error d'ús del "
+"kmidiff(1)."
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "Error d'ús del kmidiff"
 
 #: lib/inspect_kmidiff.c:256
 #, c-format
@@ -2135,10 +2740,12 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed Kernel Module Interface "
 "(KMI) differences."
 msgstr ""
+"Comparant %s amb %s al paquet %s a %s s'han revelat diferències entre la "
+"interfície del mòdul del nucli (KMI)."
 
 #: lib/inspect_kmidiff.c:258
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "Canvi de KMI a ${FILE} el ${ARCH}"
 
 #: lib/inspect_kmidiff.c:260
 #, c-format
@@ -2146,20 +2753,24 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed incompatible Kernel Module "
 "Interface (KMI) differences."
 msgstr ""
+"Comparant %s amb %s al paquet %s a %s s'han revelat diferències "
+"incompatibles entre la interfície del mòdul del nucli (KMI)."
 
 #: lib/inspect_kmidiff.c:263
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "El canvi del KMI és incompatible a ${FILE} el ${ARCH}"
 
 #: lib/inspect_kmidiff.c:265
 #, c-format
 msgid ""
 "kmidiff(1) comparison of %s to %s in package %s on %s ended unexpectedly."
 msgstr ""
+"La comparació kmidiff(1) de %s a %s en el paquet %s a %s ha acabat "
+"inesperadament."
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "Sortida inesperada del kmidiff"
 
 #: lib/inspect_kmidiff.c:274
 #, c-format
@@ -2167,197 +2778,207 @@ msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
+"Ordre: %s\n"
+"Codi de sortida: %d%s%s"
 
 #: lib/inspect_kmod.c:28
 msgid "${FILE} kernel module alias on ${ARCH}"
-msgstr ""
+msgstr "àlies del mòdul del nucli ${FILE} a ${ARCH}"
 
 #: lib/inspect_kmod.c:31
 #, c-format
 msgid "Kernel module '%s' lost alias '%s'"
-msgstr ""
+msgstr "El mòdul del nucli «%s» ha perdut l'àlies «%s»"
 
 #: lib/inspect_kmod.c:41
 #, c-format
 msgid "Kernel module '%s' gained alias '%s'"
-msgstr ""
+msgstr "El mòdul del nucli «%s» ha obtingut l'àlies «%s»"
 
 #: lib/inspect_kmod.c:188
 #, c-format
 msgid "Kernel module %s removes parameter '%s' (was present in %s)."
-msgstr ""
+msgstr "El mòdul del nucli %s elimina el paràmetre «%s» (era present a %s)."
 
 #: lib/inspect_kmod.c:191 lib/inspect_kmod.c:208
 msgid "${FILE} kernel module parameter on ${ARCH}"
-msgstr ""
+msgstr "Paràmetre del mòdul del nucli ${FILE} a ${ARCH}"
 
 #: lib/inspect_kmod.c:205
 #, c-format
 msgid "Kernel module %s adds parameter '%s' (was not present in %s)."
 msgstr ""
+"El mòdul del nucli %s afegeix el paràmetre «%s» (no estava present a %s)."
 
 #: lib/inspect_kmod.c:226
 #, c-format
 msgid "Kernel module %s removes dependency '%s' (was present in %s)."
-msgstr ""
+msgstr "El mòdul del nucli %s elimina la dependència «%s» (era present a %s)."
 
 #: lib/inspect_kmod.c:229
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr ""
+msgstr "dependència del mòdul del nucli ${FILE} de ${ARCH}"
 
 #: lib/inspect_kmod.c:243
 #, c-format
 msgid "Kernel module %s adds dependency '%s' (was not present in %s)."
 msgstr ""
+"El mòdul del nucli %s afegeix la dependència «%s» (no estava present a %s)."
 
 #: lib/inspect_kmod.c:246
 msgid "${FILE} kernel module parameter"
-msgstr ""
+msgstr "Paràmetre del mòdul del nucli ${FILE}"
 
 #: lib/inspect_license.c:47
 #, c-format
 msgid "*** parse error in license database %s"
-msgstr ""
+msgstr "*** error d'anàlisi a la base de dades de llicències %s"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
-msgstr ""
+msgstr "*** problema en comprovar la base de dades de llicències"
 
 #: lib/inspect_license.c:464
 #, c-format
 msgid "Unapproved license in %s: %s"
-msgstr ""
+msgstr "Llicència no aprovada a %s: %s"
 
 #: lib/inspect_license.c:505
 #, c-format
 msgid "Empty License Tag in %s"
-msgstr ""
+msgstr "Etiqueta de llicència buida a %s"
 
 #: lib/inspect_license.c:509
 msgid "missing License tag in ${FILE}"
-msgstr ""
+msgstr "falta l'etiqueta de llicència a ${FILE}"
 
 #: lib/inspect_license.c:518
 #, c-format
 msgid "Valid License Tag in %s: %s"
-msgstr ""
+msgstr "Etiqueta de llicència vàlida a %s: %s"
 
 #: lib/inspect_license.c:532
 #, c-format
 msgid "License Tag contains unprofessional language in %s: %s"
-msgstr ""
+msgstr "L'etiqueta de llicència conté un llenguatge no professional a %s: %s"
 
 #: lib/inspect_license.c:536
 msgid "unprofessional language in License tag in ${FILE}"
-msgstr ""
+msgstr "llenguatge no professional a l'etiqueta de llicència ${FILE}"
 
 #: lib/inspect_license.c:573
 msgid "Missing license database(s)."
-msgstr ""
+msgstr "Falta la base de dades de llicències."
 
 #: lib/inspect_license.c:577
 msgid "missing license database"
-msgstr ""
+msgstr "manca la base de dades de llicències"
 
 #: lib/inspect_lostpayload.c:62
 #, c-format
 msgid "Existing subpackage %s is now missing on %s"
-msgstr ""
+msgstr "Manca el subpaquet existent %s a %s"
 
 #: lib/inspect_lostpayload.c:66
 msgid "missing subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "manca el subpaquet ${FILE} a ${ARCH}"
 
 #: lib/inspect_lostpayload.c:82
 #, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr ""
+msgstr "El paquet %s a %s continua buit (sense càrregues útils)"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "subpaquet buit existent ${FILE} a ${ARCH}"
 
 #: lib/inspect_lostpayload.c:93
 #, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr ""
+msgstr "El paquet %s a %s es va tornar buit (sense càrregues útils)"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "el subpaquet ${FILE} a ${ARCH} ara té una càrrega útil buida"
 
 #: lib/inspect_lto.c:144
 msgid "${FILE} not portable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} no és portable a ${ARCH}"
 
 #: lib/inspect_lto.c:152
 #, c-format
 msgid ""
 "%s contains symbols [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s conté símbols [%s] a %s; això no és portable a través de les versions del "
+"compilador"
 
 #: lib/inspect_lto.c:168
 #, c-format
 msgid ""
 "%s contains symbol [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s conté el símbol [%s] a %s; això no és portable a través de les versions "
+"del compilador"
 
 #: lib/inspect_manpage.c:52
 #, c-format
 msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
-msgstr ""
+msgstr "Error en analitzar %s:%d:%d: %s: %s: %s\n"
 
 #: lib/inspect_manpage.c:81
 #, c-format
 msgid "*** unable to compile man page path regular expression: %s"
 msgstr ""
+"*** no s'ha pogut compilar l'expressió regular del camí de la pàgina man: %s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
 msgid "Unable to open man page %s\n"
-msgstr ""
+msgstr "No s'ha pogut obrir la pàgina de manual %s\n"
 
 #: lib/inspect_manpage.c:187
 #, c-format
 msgid "Man page %s does not end in %s\n"
-msgstr ""
+msgstr "La pàgina de manual %s no acaba a %s\n"
 
 #: lib/inspect_manpage.c:195
 #, c-format
 msgid "man page with %s suffix is not really compressed with gzip\n"
-msgstr ""
+msgstr "la pàgina man amb el sufix %s no està realment comprimida amb gzip\n"
 
 #: lib/inspect_manpage.c:236
 #, c-format
 msgid "Errors found validating %s\n"
-msgstr ""
+msgstr "S'han trobat errors en validar %s\n"
 
 #: lib/inspect_manpage.c:299
 #, c-format
 msgid "Man page %s is possibly empty on %s in %s"
-msgstr ""
+msgstr "La pàgina del manual %s possiblement està buida a %s a %s"
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "pàgina de manual buida ${FILE} el ${ARCH}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
 msgid "Man page checker reported problems with %s on %s in %s"
 msgstr ""
+"El verificador de pàgines de manual ha informat de problemes amb %s a %s a %s"
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr ""
+msgstr "la pàgina del manual ${FILE} a ${ARCH} té errors"
 
 #: lib/inspect_manpage.c:327
 #, c-format
 msgid "Man page %s has incorrect path on %s in %s"
-msgstr ""
+msgstr "La pàgina del manual %s té un camí incorrecte a %s a %s"
 
 #: lib/inspect_manpage.c:330
 msgid "man page ${FILE} on ${ARCH} has incorrect path"
-msgstr ""
+msgstr "la pàgina man ${FILE} a ${ARCH} té un camí incorrecte"
 
 #: lib/inspect_metadata.c:40
 #, c-format
@@ -2365,15 +2986,17 @@ msgid ""
 "Vendor not set in the rpminspect configuration, ignoring Package Vendor "
 "\"%s\" in %s"
 msgstr ""
+"El proveïdor no s'ha establert a la configuració rpminspect, s'ignorarà el "
+"proveïdor de paquets «%s» a %s"
 
 #: lib/inspect_metadata.c:51
 #, c-format
 msgid "Package Vendor \"%s\" is not \"%s\" in %s"
-msgstr ""
+msgstr "El proveïdor de paquets «%s» no és «%s» a %s"
 
 #: lib/inspect_metadata.c:55
 msgid "invalid vendor ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "proveïdor no vàlid ${FILE} a ${ARCH}"
 
 #: lib/inspect_metadata.c:76
 #, c-format
@@ -2381,58 +3004,60 @@ msgid ""
 "Package Build Host \"%s\" is not within an expected build host subdomain in "
 "%s"
 msgstr ""
+"L'amfitrió de construcció de paquets «%s» no està dins d'un subdomini "
+"esperat de l'amfitrió de construcció a %s"
 
 #: lib/inspect_metadata.c:80
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "l'amfitrió de construcció ${FILE} no és vàlid el ${ARCH}"
 
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr ""
+msgstr "El resum del paquet conté un llenguatge no professional a %s"
 
 #: lib/inspect_metadata.c:93
 #, c-format
 msgid "Summary: %s"
-msgstr ""
+msgstr "Resum: %s"
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "El resum conté paraules no professionals a ${ARCH}"
 
 #: lib/inspect_metadata.c:109
 #, c-format
 msgid "Package Description contains unprofessional language in %s:"
-msgstr ""
+msgstr "La descripció del paquet conté un llenguatge no professional a %s:"
 
 #: lib/inspect_metadata.c:114
 msgid "Description contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "La descripció conté paraules no professionals a ${ARCH}"
 
 #: lib/inspect_metadata.c:134
 #, c-format
 msgid "Gained Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "S'ha guanyat el proveïdor de paquets «%s» a %s"
 
 #: lib/inspect_metadata.c:136
 #, c-format
 msgid "Lost Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "S'ha perdut el proveïdor de paquets «%s» a %s"
 
 #: lib/inspect_metadata.c:138
 #, c-format
 msgid "Package Vendor changed from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "El proveïdor de paquets ha canviat de «%s» a «%s» a %s"
 
 #: lib/inspect_metadata.c:156
 #, c-format
 msgid "Package Summary change from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Canvi del resum del paquet de «%s» a «%s» a %s"
 
 #: lib/inspect_metadata.c:169
 #, c-format
 msgid "Package Description changed in %s"
-msgstr ""
+msgstr "S'ha canviat la descripció del paquet a %s"
 
 #: lib/inspect_metadata.c:170
 #, c-format
@@ -2445,6 +3070,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"des de:\n"
+"\n"
+"%s\n"
+"\n"
+"a:\n"
+"\n"
+"%s"
 
 #: lib/inspect_modularity.c:119
 #, c-format
@@ -2452,6 +3084,9 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "forbid the presence of /data/static_context in the module metadata."
 msgstr ""
+"El valor /data/staticcontext a %s és %s, però les regles de llançament del "
+"producte prohibeixen la presència de /data/staticcontext a les metadades del "
+"mòdul."
 
 #: lib/inspect_modularity.c:125
 #, c-format
@@ -2459,6 +3094,9 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "require the presence of /data/static_context in the module metadata."
 msgstr ""
+"El valor /data/staticcontext a %s és %s, però les regles de llançament del "
+"producte requereixen la presència de /data/staticcontext a les metadades del "
+"mòdul."
 
 #: lib/inspect_modularity.c:131
 #, c-format
@@ -2466,6 +3104,9 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "recommend the presence of /data/static_context in the module metadata."
 msgstr ""
+"El valor /data/staticcontext a %s és %s, però les regles de llançament del "
+"producte recomanen la presència de /data/staticcontext a les metadades del "
+"mòdul."
 
 #: lib/inspect_modularity.c:133
 #, c-format
@@ -2473,6 +3114,9 @@ msgid ""
 "The /data/static_context value in %s is %s, and the product release rules do "
 "not have a setting for /data/static_context in the module metadata."
 msgstr ""
+"El valor /data/staticcontext a %s és %s, i les regles de llançament del "
+"producte no tenen una configuració per a /data/staticcontext a les metadades "
+"del mòdul."
 
 #: lib/inspect_modularity.c:135
 #, c-format
@@ -2480,16 +3124,18 @@ msgid ""
 "The /data/static_context value in %s is %s as required by the product "
 "release rules."
 msgstr ""
+"El valor /data/staticcontext a %s és %s tal com ho requereixen les regles de "
+"llançament del producte."
 
 #: lib/inspect_modularity.c:143
 #, c-format
 msgid "%s The /data/static_context value is the same as in %s."
-msgstr ""
+msgstr "%s El valor /data/staticcontext és el mateix que a %s."
 
 #: lib/inspect_modularity.c:145
 #, c-format
 msgid "%s The /data/static_context value has changed since %s."
-msgstr ""
+msgstr "%s El valor /data/staticcontext ha canviat des de %s."
 
 #: lib/inspect_modularity.c:180
 #, c-format
@@ -2497,47 +3143,50 @@ msgid ""
 "Package \"%s\" is part of a module but lacks the '%%{modularitylabel}' "
 "header tag."
 msgstr ""
+"El paquet «%s» forma part d'un mòdul però no té l'etiqueta de capçalera «%%"
+"{modularitylabel}."
 
 #: lib/inspect_modularity.c:224
 msgid "Inspection skipped because this build's type is not `module'."
 msgstr ""
+"S'ha omès la inspecció perquè el tipus d'aquesta construcció no és «module»."
 
 #: lib/inspect_movedfiles.c:52
 #, c-format
 msgid "%s moved to ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "%s s'ha mogut a ${FILE} el ${ARCH}"
 
 #: lib/inspect_movedfiles.c:55
 #, c-format
 msgid "%s probably moved to %s on %s\n"
-msgstr ""
+msgstr "%s probablement s'ha mogut a %s el %s\n"
 
 #: lib/inspect_ownership.c:77
 #, c-format
 msgid "File %s has forbidden owner `%s` on %s"
-msgstr ""
+msgstr "El fitxer %s té prohibit el propietari %s on a %s"
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "propietari prohibit per a ${FILE} el ${ARCH}"
 
 #: lib/inspect_ownership.c:92
 #, c-format
 msgid "File %s has forbidden group `%s` on %s"
-msgstr ""
+msgstr "El fitxer %s té prohibit el grup %s a %s"
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "grup prohibit per a ${FILE} el ${ARCH}"
 
 #: lib/inspect_ownership.c:119
 #, c-format
 msgid "File %s has owner `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "El fitxer %s té el propietari ,%s, a %s, però hauria de ser ,%s,"
 
 #: lib/inspect_ownership.c:124
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "propietari no vàlid per a ${FILE} el ${ARCH}"
 
 #: lib/inspect_ownership.c:162
 #, c-format
@@ -2545,38 +3194,42 @@ msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is world "
 "executable"
 msgstr ""
+"El fitxer %s a %s té la capacitat CAPSETUID però agrupa  and%s and i és "
+"executable mundial"
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAPSETUID i o+x per a ${FILE} el ${ARCH}"
 
 #: lib/inspect_ownership.c:179
 #, c-format
 msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is group writable"
 msgstr ""
+"El fitxer %s a %s té la capacitat CAPSETUID però el grup  and%s and i es pot "
+"escriure en grup"
 
 #: lib/inspect_ownership.c:183
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAPSETUID i g+w per a ${FILE} el ${ARCH}"
 
 #: lib/inspect_ownership.c:199
 #, c-format
 msgid "File %s has group `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "El fitxer %s té el grup ,%s, a %s, però hauria de ser ,%s,"
 
 #: lib/inspect_ownership.c:204
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "grup no vàlid per a ${FILE} el ${ARCH}"
 
 #: lib/inspect_ownership.c:268
 #, c-format
 msgid "File %s changed %s from `%s` to `%s` on %s"
-msgstr ""
+msgstr "El fitxer %s ha canviat %s de %s a %s a %s"
 
 #: lib/inspect_ownership.c:270
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ha canviat de propietari el ${ARCH}"
 
 #: lib/inspect_patches.c:395
 #, c-format
@@ -2584,188 +3237,190 @@ msgid ""
 "Patch number %ld (%s) is missing a corresponding %%patch%ld macro, usually "
 "in %%prep."
 msgstr ""
+"Al número de pedaç %ld (%s) li falta una macro %%patch%ld corresponent, "
+"normalment a %%prep."
 
 #: lib/inspect_patches.c:397
 #, c-format
 msgid "missing %%patch macro for ${FILE}"
-msgstr ""
+msgstr "falta la macro %%patch per a ${FILE}"
 
 #: lib/inspect_patches.c:399
 #, c-format
 msgid "Patch number %ld (%s) is mismatched with %%patch%ld macro."
-msgstr ""
+msgstr "El número de pedaç %ld (%s) no coincideix amb la macro %%patch%ld."
 
 #: lib/inspect_patches.c:401
 #, c-format
 msgid "mismatched %%patch macro for ${FILE}"
-msgstr ""
+msgstr "macro %%patch no coincideix per a ${FILE}"
 
 #: lib/inspect_patches.c:422
 msgid "undefined Patch ${FILE}"
-msgstr ""
+msgstr "pedaços no definits ${FILE}"
 
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "Fitxer de pedaç %s no definit."
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
 #, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr ""
+msgstr "*** no s'ha pogut descomprimir el pedaç: %s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
-msgstr ""
+msgstr "pegat malmès ${FILE}"
 
 #: lib/inspect_patches.c:477 lib/inspect_patches.c:484
 #, c-format
 msgid "Patch %s is under 4 bytes in size - is it corrupt?"
-msgstr ""
+msgstr "El pedaç %s té una mida inferior a 4 bytes - està malmès?"
 
 #: lib/inspect_patches.c:506
 #, c-format
 msgid "%s changed (%ld bytes -> %ld bytes)"
-msgstr ""
+msgstr "%s canviat (%ld bytes -) %ld bytes)"
 
 #: lib/inspect_patches.c:510 lib/inspect_patches.c:535
 msgid "patch file ${FILE}"
-msgstr ""
+msgstr "fitxer de pedaç ${FILE}"
 
 #: lib/inspect_patches.c:531
 #, c-format
 msgid "New patch file `%s` appeared"
-msgstr ""
+msgstr "Ha aparegut el fitxer de pedaç nou «%s»"
 
 #: lib/inspect_patches.c:551
 msgid "patch changes ${FILE}"
-msgstr ""
+msgstr "canvis de pedaç ${FILE}"
 
 #: lib/inspect_patches.c:555
 #, c-format
 msgid "%s touches as many as %ld line%s"
-msgstr ""
+msgstr "%s toca tantes com %ld línia%s"
 
 #: lib/inspect_patches.c:557
 #, c-format
 msgid "%s touches %ld file%s"
-msgstr ""
+msgstr "%s toca %ld fitxer%s"
 
 #: lib/inspect_patches.c:559
 #, c-format
 msgid "%s touches %ld file%s and %s%ld line%s"
-msgstr ""
+msgstr "%s toca %ld fitxer%s i %s%ld línia%s"
 
 #: lib/inspect_patches.c:559
 msgid "as many as "
-msgstr ""
+msgstr "tantes com "
 
 #: lib/inspect_patches.c:626 lib/inspect_upstream.c:141
 msgid "No source packages available, skipping inspection."
-msgstr ""
+msgstr "No hi ha paquets d'origen disponibles, s'omet la inspecció."
 
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "Fitxer de pedaç no gestionat  in%s in definit al fitxer spec"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** línia %%patch no reconeguda: %s"
 
 #: lib/inspect_patches.c:828
 #, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr ""
+msgstr "*** no s'ha pogut llegir la línia de fitxer spec: %s"
 
 #: lib/inspect_patches.c:881
 #, c-format
 msgid "Patch file `%s` removed"
-msgstr ""
+msgstr "S'ha suprimit el fitxer de pedaç «%s»"
 
 #: lib/inspect_pathmigration.c:81
 #, c-format
 msgid "File %s found should be in %s on %s"
-msgstr ""
+msgstr "S'ha trobat el fitxer %s a %s a %s"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} hauria d'estar a %s el ${ARCH}"
 
 #: lib/inspect_permissions.c:84
 msgid " changed setuid/setgid;"
-msgstr ""
+msgstr " setuid/setgid; canviat"
 
 #: lib/inspect_permissions.c:89
 msgid " became a directory;"
-msgstr ""
+msgstr " s'ha convertit en un directori;"
 
 #: lib/inspect_permissions.c:91
 msgid " became a character device;"
-msgstr ""
+msgstr " es va convertir en un dispositiu de caràcters;"
 
 #: lib/inspect_permissions.c:93
 msgid " became a block device;"
-msgstr ""
+msgstr " s'ha convertit en un dispositiu de blocs;"
 
 #: lib/inspect_permissions.c:95
 msgid " became a regular file;"
-msgstr ""
+msgstr " s'ha convertit en un fitxer normal;"
 
 #: lib/inspect_permissions.c:97
 msgid " became a FIFO;"
-msgstr ""
+msgstr " es va convertir en un FIFO;"
 
 #: lib/inspect_permissions.c:99
 msgid " became a symbolic link;"
-msgstr ""
+msgstr " es va convertir en un enllaç simbòlic;"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " es va convertir en un sòcol;"
 
 #: lib/inspect_permissions.c:105
 msgid " permissions"
-msgstr ""
+msgstr " permisos"
 
 #: lib/inspect_permissions.c:111
 msgid " relaxed"
-msgstr ""
+msgstr " relaxat"
 
 #: lib/inspect_permissions.c:114
 msgid " changed"
-msgstr ""
+msgstr " canviat"
 
 #: lib/inspect_permissions.c:129
 #, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr ""
+msgstr "%s de %04o a %04o a %s"
 
 #: lib/inspect_permissions.c:135
 #, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr ""
+msgstr "${FILE} permisos de %04o a %04o el ${ARCH}"
 
 #: lib/inspect_permissions.c:149
 #, c-format
 msgid "%s (%s) is world-writable on %s"
-msgstr ""
+msgstr "%s (%s) es pot escriure al món a %s"
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} es pot escriure mundialment el ${ARCH}"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
 msgid "*** invalid politics entry with pattern=%s and digest=%s"
-msgstr ""
+msgstr "*** entrada de política no vàlida amb patró %s i resum %s"
 
 #: lib/inspect_politics.c:92
 #, c-format
 msgid "*** unknown digest type for pattern %s: %s"
-msgstr ""
+msgstr "*** tipus de resum desconegut per al patró %s: %s"
 
 #: lib/inspect_politics.c:126
 #, c-format
@@ -2773,6 +3428,8 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules allow this "
 "file."
 msgstr ""
+"Possible fitxer políticament sensible (%s) trobat a %s a %s: les regles "
+"permeten aquest fitxer."
 
 #: lib/inspect_politics.c:134
 #, c-format
@@ -2780,50 +3437,54 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules prohibit "
 "this file."
 msgstr ""
+"Possible fitxer políticament sensible (%s) trobat a %s a %s: les regles "
+"prohibeixen aquest fitxer."
 
 #: lib/inspect_politics.c:138
 msgid "${FILE} is politically sensitive"
-msgstr ""
+msgstr "${FILE} és políticament sensible"
 
 #: lib/inspect_removedfiles.c:26
 msgid ""
 "; Removing security policy related files requires inspection by the Security "
 "Response Team."
 msgstr ""
+"; L'eliminació dels fitxers relacionats amb la política de seguretat "
+"requereix la inspecció per part de l'equip de resposta de seguretat."
 
 #: lib/inspect_removedfiles.c:85
 msgid "library ${FILE} removed on ${ARCH}"
-msgstr ""
+msgstr "la biblioteca ${FILE} s'ha suprimit el ${ARCH}"
 
 #: lib/inspect_removedfiles.c:131
 #, c-format
 msgid "ABI break: Library %s with SONAME '%s' removed from %s"
-msgstr ""
+msgstr "Salt ABI: la biblioteca %s amb SONAME «%s» s'ha eliminat de %s"
 
 #: lib/inspect_removedfiles.c:132
 msgid "missing SONAME in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "manca SONAME a ${FILE} el ${ARCH}"
 
 #: lib/inspect_removedfiles.c:135
 #, c-format
 msgid "ABI break: Library %s removed from %s"
-msgstr ""
+msgstr "Salt ABI: la biblioteca %s s'ha suprimit de %s"
 
 #: lib/inspect_removedfiles.c:138
 #, c-format
 msgid "%s removed from %s"
-msgstr ""
+msgstr "%s eliminat de %s"
 
 #: lib/inspect_rpmdeps.c:129
 #, c-format
 msgid "Invalid looking %s dependency in the %s package on %s: %s"
-msgstr ""
+msgstr "Dependència %s no vàlida al paquet %s de %s: %s"
 
 #: lib/inspect_rpmdeps.c:132 lib/inspect_rpmdeps.c:892
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
 #, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' a %s el ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -2833,11 +3494,15 @@ msgid ""
 "%s' to the spec file to avoid the need to test interoperability between "
 "various combinations of old and new subpackages."
 msgstr ""
+"El subpaquet %s a %s porta «%s», que prové del subpaquet %s però no té un "
+"requisit explícit de versió del paquet.  Si us plau, afegiu 'Requereix: %s  "
+"the %s' al fitxer spec per evitar la necessitat de provar la "
+"interoperabilitat entre diverses combinacions de subpaquets antics i nous."
 
 #: lib/inspect_rpmdeps.c:387
 #, c-format
 msgid "missing 'Requires: ${FILE} = %s' in %s on ${ARCH}"
-msgstr ""
+msgstr "falta 'Requereix: ${FILE} : %s' a %s el ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:409
 #, c-format
@@ -2845,132 +3510,136 @@ msgid ""
 "Multiple subpackages provide '%s': [%s] but these subpackages carry explicit "
 "Requires: [%s]"
 msgstr ""
+"Múltiples subpaquets proporcionen «%s»: [%s] però aquests subpaquets porten "
+"requeriments explícits: [%s]"
 
 #: lib/inspect_rpmdeps.c:410
 #, c-format
 msgid "%s all provide '${FILE}' on ${ARCH}"
-msgstr ""
+msgstr "%s proporciona '${FILE}' a ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:540
 #, c-format
 msgid "Missing epoch prefix on the version-release in '%s' for %s on %s"
-msgstr ""
+msgstr "Falta el prefix d'època a la versió de llançament a «%s» per a %s a %s"
 
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr ""
+msgstr "«${FILE}» necessita una època en %s el ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
-msgstr ""
+msgstr "fitxer spec"
 
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "S'ha obtingut «%s» al paquet font %s"
 
 #: lib/inspect_rpmdeps.c:889
 #, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "S'ha guanyat «%s» al subpaquet %s a %s"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "S'ha conservat «%s» al paquet font %s"
 
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "S'ha retingut «%s» al subpaquet %s a %s"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr ""
+msgstr "S'ha canviat «%s» a «%s» en el paquet font %s"
 
 #: lib/inspect_rpmdeps.c:909
 #, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "S'ha canviat «%s» a «%s» en el subpaquet %s a %s"
 
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "«%s» es va convertir en «${FILE}» a %s el ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
-msgstr ""
+msgstr "; això s'espera"
 
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr ""
+msgstr "S'ha perdut «%s» al paquet font %s"
 
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "S'ha perdut «%s» al subpaquet %s a %s"
 
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
-msgstr ""
+msgstr "*** no es pot compilar l'expressió regular del prefix arrel $ORIGIN: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
 msgid "%s has an invalid-looking %s on %s: %s"
-msgstr ""
+msgstr "%s té un %s d'aspecte no vàlid a %s: %s"
 
 #: lib/inspect_runpath.c:192
 msgid "runtime search path in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "camí de cerca en temps d'execució a ${FILE} el ${ARCH}"
 
 #: lib/inspect_runpath.c:270
 msgid "both DT_RPATH and DT_RUNPATH in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "tant DTRPATH com DTRUNPATH a ${FILE} el ${ARCH}"
 
 #: lib/inspect_runpath.c:272
 #, c-format
 msgid "%s has both DT_RPATH and DT_RUNPATH on %s; this is not allowed"
-msgstr ""
+msgstr "%s té DTRPATH i DTRUNPATH a %s; això no està permès"
 
 #: lib/inspect_shellsyntax.c:125
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "l'script d'intèrpret d'ordres ${FILE} no és vàlid el ${ARCH}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
 msgid "%s is a shell script but was not before on %s"
-msgstr ""
+msgstr "%s és un script d'intèrpret d'ordres però no era abans a %s"
 
 #: lib/inspect_shellsyntax.c:134
 #, c-format
 msgid "%s is a %s script but was a %s script before on %s"
-msgstr ""
+msgstr "%s és un script %s però era un script %s abans a %s"
 
 #: lib/inspect_shellsyntax.c:181
 #, c-format
 msgid "%s is no longer a valid %s script on %s"
-msgstr ""
+msgstr "%s ja no és un script %s vàlid a %s"
 
 #: lib/inspect_shellsyntax.c:190
 #, c-format
 msgid "%s became a valid %s script on %s"
-msgstr ""
+msgstr "%s es va convertir en un script %s vàlid a %s"
 
 #: lib/inspect_shellsyntax.c:193
 msgid ""
 ". The script fails with '-n' but passes with '-O extglob'; be sure 'shopt "
 "extglob' is set in the script."
 msgstr ""
+". L'script falla amb «-n», però passa amb «-O extglob»; assegureu-vos que «"
+"shopt extglob» està establert a l'script."
 
 #: lib/inspect_shellsyntax.c:204 lib/inspect_shellsyntax.c:224
 #, c-format
 msgid "%s is not a valid %s script on %s"
-msgstr ""
+msgstr "%s no és un script %s vàlid a %s"
 
 #: lib/inspect_shellsyntax.c:215
 #, c-format
@@ -2978,131 +3647,136 @@ msgid ""
 "%s fails with '-n' but passes with '-O extglob'; be sure 'shopt extglob' is "
 "set in the script on %s"
 msgstr ""
+"%s falla amb «-n», però passa amb «-O extglob»; assegureu-vos que «shopt "
+"extglob» està establert a l'script a %s"
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "nom de fitxer especificat inesperat"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "coincidència exacta"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "comença amb"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
-msgstr ""
+msgstr "acaba amb"
 
 #: lib/inspect_specname.c:78
 #, c-format
 msgid "Spec filename does not %s the primary name %s; got '%s'"
 msgstr ""
+"El nom de fitxer especificat no %s és el nom principal %s; s'ha obtingut «%s»"
 
 #: lib/inspect_specname.c:109
 msgid "The specname inspection is only for source packages, skipping."
-msgstr ""
+msgstr "La inspecció de l'especname només és per als paquets d'origen, s'omet."
 
 #: lib/inspect_subpackages.c:68
 #, c-format
 msgid "Subpackage '%s' has disappeared on '%s'"
-msgstr ""
+msgstr "El subpaquet «%s» ha desaparegut a «%s»"
 
 #: lib/inspect_subpackages.c:75 lib/inspect_subpackages.c:99
 msgid "subpackage ${FILE}"
-msgstr ""
+msgstr "subpaquet ${FILE}"
 
 #: lib/inspect_subpackages.c:92
 #, c-format
 msgid "Subpackage '%s' has appeared on '%s'"
-msgstr ""
+msgstr "El subpaquet «%s» ha aparegut a «%s»"
 
 #: lib/inspect_symlinks.c:98
 #, c-format
 msgid ""
 "Directory %s became a symbolic link (to %s) in %s on %s; this is not allowed!"
 msgstr ""
+"El directori %s es va convertir en un enllaç simbòlic (a %s) a %s a %s; això "
+"no està permès!"
 
 #: lib/inspect_symlinks.c:100
 #, c-format
 msgid "%s %s became a symbolic link (to %s) in %s on %s"
-msgstr ""
+msgstr "%s %s es va convertir en un enllaç simbòlic (a %s) a %s a %s"
 
 #: lib/inspect_symlinks.c:108
 msgid "${FILE} became a symlink on ${ARCH}"
-msgstr ""
+msgstr "${FILE} es va convertir en un enllaç simbòlic el ${ARCH}"
 
 #: lib/inspect_symlinks.c:125
 msgid "unable to read symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "no s'ha pogut llegir l'enllaç simbòlic ${FILE} el ${ARCH}"
 
 #: lib/inspect_symlinks.c:126
 #, c-format
 msgid "An error occurred reading symbolic link %s in %s on %s."
-msgstr ""
+msgstr "S'ha produït un error en llegir l'enllaç simbòlic %s a %s a %s."
 
 #: lib/inspect_symlinks.c:178
 #, c-format
 msgid ""
 "%s %s has too many levels of redirects and cannot be resolved in %s on %s"
-msgstr ""
+msgstr "%s %s té massa nivells de redireccions i no es pot resoldre a %s a %s"
 
 #: lib/inspect_symlinks.c:182
 msgid "too many redirects for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "hi ha massa redireccionaments per a ${FILE} el ${ARCH}"
 
 #: lib/inspect_symlinks.c:277
 #, c-format
 msgid "%s %s %s a dangling symbolic link in %s on %s"
-msgstr ""
+msgstr "%s %s %s un enllaç simbòlic penjant a %s el %s"
 
 #: lib/inspect_symlinks.c:284
 msgid "dangling symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "enllaç simbòlic penjant ${FILE} a ${ARCH}"
 
 #: lib/inspect_types.c:69
 msgid "${FILE} MIME type on ${ARCH}"
-msgstr ""
+msgstr "${FILE} tipus MIME a ${ARCH}"
 
 #: lib/inspect_types.c:77 lib/inspect_types.c:82
 #, c-format
 msgid "Unknown MIME type `%s' on %s in %s"
-msgstr ""
+msgstr "Tipus MIME «%s» desconegut a %s a %s"
 
 #: lib/inspect_types.c:107
 #, c-format
 msgid "MIME type for %s in %s was `%s/%s' and became `%s/%s'"
-msgstr ""
+msgstr "El tipus MIME de %s a %s era  and%s/%s' i es va convertir en  and%s/%s'"
 
 #: lib/inspect_udevrules.c:104 lib/inspect_udevrules.c:116
 #, c-format
 msgid "%s is a valid udev rules file on %s"
-msgstr ""
+msgstr "%s és un fitxer vàlid de regles udev a %s"
 
 #: lib/inspect_udevrules.c:106
 #, c-format
 msgid "%s is now a valid udev rules file on %s"
-msgstr ""
+msgstr "%s ara és un fitxer vàlid de regles udev a %s"
 
 #: lib/inspect_udevrules.c:109
 #, c-format
 msgid "%s is no longer a valid udev rules file on %s"
-msgstr ""
+msgstr "%s ja no és un fitxer vàlid de regles udev a %s"
 
 #: lib/inspect_udevrules.c:112 lib/inspect_udevrules.c:118
 #, c-format
 msgid "%s is not a valid udev rules file on %s"
-msgstr ""
+msgstr "%s no és un fitxer vàlid de regles udev a %s"
 
 #: lib/inspect_unicode.c:465
 #, c-format
 msgid "*** empty localpath on %s"
-msgstr ""
+msgstr "*** camí local buit a %s"
 
 #: lib/inspect_unicode.c:474
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "punt de codi prohibit a ${FILE} el ${ARCH}"
 
 #: lib/inspect_unicode.c:551
 #, c-format
@@ -3110,11 +3784,13 @@ msgid ""
 "A forbidden code point, 0x%04X, was found in the %s source file on line %ld "
 "at column %ld.  This source file is used by %s."
 msgstr ""
+"S'ha trobat un punt de codi prohibit, 0x%04X, al fitxer font %s de la línia "
+"%ld a la columna %ld.  %s utilitza aquest fitxer d'origen."
 
 #: lib/inspect_unicode.c:621
 #, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr ""
+msgstr "no s'ha pogut executar %prep a ${FILE}"
 
 #: lib/inspect_unicode.c:624
 #, c-format
@@ -3122,183 +3798,197 @@ msgid ""
 "Unable to run through the %%prep section in %s or manually unpack sources "
 "for further scanning."
 msgstr ""
+"No s'ha pogut executar a través de la secció %%prep a %s o desempaquetar "
+"manualment les fonts per a escanejar-les més."
 
 #: lib/inspect_unicode.c:744
 msgid "The unicode inspection is only for source packages, skipping."
-msgstr ""
+msgstr "La inspecció d'unicode només és per a paquets d'origen, s'omet."
 
 #: lib/inspect_upstream.c:60
 #, c-format
 msgid "New upstream source file `%s` appeared"
-msgstr ""
+msgstr "Ha aparegut el nou fitxer font stream%s`"
 
 #: lib/inspect_upstream.c:62
 msgid "new source file ${FILE}"
-msgstr ""
+msgstr "fitxer font nou ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
 msgid "Upstream source file `%s` changed content"
-msgstr ""
+msgstr "El fitxer font d'entrada «%s» ha canviat el contingut"
 
 #: lib/inspect_upstream.c:93
 msgid "checksum of ${FILE}"
-msgstr ""
+msgstr "suma de verificació de ${FILE}"
 
 #: lib/inspect_upstream.c:195
 #, c-format
 msgid "Source file `%s` removed"
-msgstr ""
+msgstr "S'ha suprimit el fitxer d'origen «%s»"
 
 #: lib/inspect_upstream.c:197
 msgid "source file ${FILE} removed"
-msgstr ""
+msgstr "s'ha eliminat el fitxer font ${FILE}"
 
 #: lib/inspect_virus.c:40
 msgid "*** cl_engine_new returned NULL, check clamav library"
-msgstr ""
+msgstr "*** el clenginenew ha retornat NULL, comprova la biblioteca del clamav"
 
 #: lib/inspect_virus.c:98
 #, c-format
 msgid "Virus detected in %s in the %s package on %s: %s"
-msgstr ""
+msgstr "S'ha detectat un virus a %s al paquet %s a %s: %s"
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
-msgstr ""
+msgstr "informació de la versió de clamav"
 
 #: lib/inspect_virus.c:140
 #, c-format
 msgid "clamav version %s"
-msgstr ""
+msgstr "clamav versió %s"
 
 #: lib/inspect_virus.c:145
 #, c-format
 msgid "*** missing %s"
-msgstr ""
+msgstr "*** falta %s"
 
 #: lib/inspect_virus.c:169
 #, c-format
 msgid "%s version %u (%s)"
-msgstr ""
+msgstr "%s versió %u (%s)"
 
 #: lib/inspect_virus.c:201
 msgid "virus or malware in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "virus o malware a ${FILE} el ${ARCH}"
 
 #: lib/inspect_xml.c:195
 #, c-format
 msgid "%s is a well-formed XML file in %s on %s, but is not a valid XML file"
 msgstr ""
+"%s és un fitxer XML ben format a %s a %s, però no és un fitxer XML vàlid"
 
 #: lib/inspect_xml.c:203
 #, c-format
 msgid "%s is not a well-formed XML file in %s on %s"
-msgstr ""
+msgstr "%s no és un fitxer XML ben formatat a %s a %s"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr ""
+msgstr "${FILE} no està ben format XML a ${ARCH}"
 
 #: lib/koji.c:142
 #, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr ""
+msgstr "*** Error XML-RPC: %s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** codi de falla xmlrpc %s (%d): getBuild(%s) de %s"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** L'estat de construcció del Koji és %s per a %s, no es pot continuar"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** codi de falla xmlrpc %s (%d): getTaskInfo(%s) de %s"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
 msgstr ""
+"*** L'estat de la tasca Koji és %s per a la tasca %s, no es pot continuar"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "Construcció de paquets RPM"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
 msgstr ""
+"Construcció de mòduls que consisteix en múltiples construccions de paquets "
+"RPM"
 
 #: lib/magic.c:21
 msgid "*** unable to initialize the magic library"
-msgstr ""
+msgstr "*** no s'ha pogut inicialitzar la biblioteca màgica"
 
 #: lib/magic.c:26
 #, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr ""
+msgstr "*** no s'ha pogut carregar la base de dades màgica: %s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
 msgid "*** unable to mkdir %s"
-msgstr ""
+msgstr "*** no s'ha pogut mkdir %s"
 
 #: lib/output.c:25
 msgid ""
 "Detailed results suitable for the console and piping through paging programs."
 msgstr ""
+"Resultats detallats adequats per a la consola i canonades a través de "
+"programes de paginació."
 
 #: lib/output.c:27
 msgid ""
 "Results organized as a JSON data structure suitable for reading by web "
 "applications and other frontend tools."
 msgstr ""
+"Resultats organitzats com una estructura de dades JSON adequada per a la "
+"lectura per aplicacions web i altres eines de frontend."
 
 #: lib/output.c:29
 msgid ""
 "Results organized as an XUnit data structure suitable for use with Jenkins "
 "and other XUnit-enabled services."
 msgstr ""
+"Resultats organitzats com una estructura de dades XUnit adequada per al seu "
+"ús amb Jenkins i altres serveis habilitats per XUnit."
 
 #: lib/output.c:31
 msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
 msgstr ""
+"Els resultats es resumeixen amb un resultat per línia, adequat per a la "
+"visualització de consola amb un programa de paginació."
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
 #, c-format
 msgid "*** error opening %s for writing"
-msgstr ""
+msgstr "*** error en obrir %s per a escriptura"
 
 #: lib/output_summary.c:53
 msgid "added"
-msgstr ""
+msgstr "afegit"
 
 #: lib/output_summary.c:55
 msgid "removed"
-msgstr ""
+msgstr "eliminat"
 
 #: lib/output_summary.c:57
 msgid "changed"
-msgstr ""
+msgstr "canviat"
 
 #: lib/output_summary.c:61
 msgid "ok"
-msgstr ""
+msgstr "ok"
 
 #: lib/output_summary.c:63
 msgid "unknown"
-msgstr ""
+msgstr "desconegut"
 
 #: lib/output_text.c:92 lib/output_xunit.c:83
 #, c-format
 msgid "Result: %s\n"
-msgstr ""
+msgstr "Resultat: %s\n"
 
 #: lib/output_text.c:95 lib/output_xunit.c:96
 #, c-format
@@ -3306,6 +3996,8 @@ msgid ""
 "Waiver Authorization: %s\n"
 "\n"
 msgstr ""
+"Autorització d'exempció: %s\n"
+"\n"
 
 #: lib/output_text.c:99 lib/output_xunit.c:110
 #, c-format
@@ -3314,6 +4006,9 @@ msgid ""
 "%s\n"
 "\n"
 msgstr ""
+"Detalls\n"
+"%s\n"
+"\n"
 
 #: lib/output_text.c:103 lib/output_xunit.c:118
 #, c-format
@@ -3321,78 +4016,80 @@ msgid ""
 "Suggested Remedy:\n"
 "%s"
 msgstr ""
+"Remei suggerit:\n"
+"%s"
 
 #: lib/output_xunit.c:54
 #, c-format
 msgid "*** opening %s for writing"
-msgstr ""
+msgstr "*** s'està obrint %s per a escriptura"
 
 #: lib/parse_yaml.c:114 lib/parse_yaml.c:139
 #, c-format
 msgid "*** %s: broken document"
-msgstr ""
+msgstr "*** %s: document trencat"
 
 #: lib/parse_yaml.c:158 lib/parse_yaml.c:305
 #, c-format
 msgid "*** skipping token type %s"
-msgstr ""
+msgstr "*** s'omet el tipus de token %s"
 
 #: lib/parse_yaml.c:386
 msgid "*** malformed type - freed?"
-msgstr ""
+msgstr "*** tipus mal formatat - alliberat?"
 
 #: lib/peers.c:176
 #, c-format
 msgid "There is not enough available space to unpack all of the RPMs.\n"
-msgstr ""
+msgstr "No hi ha prou espai disponible per a desempaquetar tots els RPM.\n"
 
 #: lib/readelf.c:48
 #, c-format
 msgid "*** unknown elftype_t %d"
-msgstr ""
+msgstr "*** elftypet %d desconegut"
 
 #: lib/readelf.c:76
 msgid "*** libelf version mismatch"
-msgstr ""
+msgstr "*** la versió de la difamació no coincideix"
 
 #: lib/readfile.c:50
 #, c-format
 msgid "*** unable to find end of %s"
-msgstr ""
+msgstr "*** no s'ha pogut trobar el final de %s"
 
 #: lib/readfile.c:68
 #, c-format
 msgid "*** unable to close %s"
-msgstr ""
+msgstr "*** no s'ha pogut tancar %s"
 
 #: lib/rmtree.c:74
 #, c-format
 msgid "*** %s is not a directory"
-msgstr ""
+msgstr "*** %s no és un directori"
 
 #: lib/rpm.c:71
 #, c-format
 msgid "*** Fopen failed for %s: %s"
-msgstr ""
+msgstr "*** Fopen ha fallat per a %s: %s"
 
 #: lib/rpm.c:255
 #, c-format
 msgid "*** file index %d is out of bounds for %s"
-msgstr ""
+msgstr "*** l'índex de fitxers %d està fora de límits per a %s"
 
 #: lib/rpm.c:431
 msgid "*** error reading file from RPM payload"
-msgstr ""
+msgstr "*** s'ha produït un error en llegir el fitxer de la càrrega útil RPM"
 
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d"
 
 #: lib/runcmd.c:173
 #, c-format
 msgid "%d (%s)"
-msgstr ""
+msgstr "%d (%s)"
 
 #: lib/runcmd.c:178
 #, c-format
@@ -3401,103 +4098,106 @@ msgid ""
 "\n"
 "%s tried to run the command and it received signal %s"
 msgstr ""
+"%s\n"
+"\n"
+"%s ha intentat executar l'ordre i ha rebut el senyal %s"
 
 #: lib/runcmd.c:182
 #, c-format
 msgid "%s tried to run the command and it received signal %s"
-msgstr ""
+msgstr "%s ha intentat executar l'ordre i ha rebut el senyal %s"
 
 #: lib/strfuncs.c:250 lib/strfuncs.c:282
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: lib/strfuncs.c:252 lib/strfuncs.c:284
 msgid "OK"
-msgstr ""
+msgstr "D'ACORD"
 
 #: lib/strfuncs.c:254 lib/strfuncs.c:286
 msgid "INFO"
-msgstr ""
+msgstr "INFORMACIÓ"
 
 #: lib/strfuncs.c:256 lib/strfuncs.c:288
 msgid "VERIFY"
-msgstr ""
+msgstr "VERIFICA"
 
 #: lib/strfuncs.c:258 lib/strfuncs.c:290
 msgid "BAD"
-msgstr ""
+msgstr "DOLENT"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "OMET"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "DIAGNÒSTIC"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
-msgstr ""
+msgstr "UnKnOwN"
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
-msgstr ""
+msgstr "No es pot donar"
 
 #: lib/strfuncs.c:310
 msgid "Anyone"
-msgstr ""
+msgstr "Qualsevol"
 
 #: lib/strfuncs.c:312
 msgid "Security"
-msgstr ""
+msgstr "Seguretat"
 
 #: lib/strfuncs.c:543
 msgid "regular file"
-msgstr ""
+msgstr "fitxer normal"
 
 #: lib/strfuncs.c:545
 msgid "directory"
-msgstr ""
+msgstr "directori"
 
 #: lib/strfuncs.c:547
 msgid "character device"
-msgstr ""
+msgstr "dispositiu de caràcters"
 
 #: lib/strfuncs.c:549
 msgid "block device"
-msgstr ""
+msgstr "bloca el dispositiu"
 
 #: lib/strfuncs.c:551
 msgid "FIFO (named pipe)"
-msgstr ""
+msgstr "FIFO (canonada amb nom)"
 
 #: lib/strfuncs.c:553
 msgid "symbolic link"
-msgstr ""
+msgstr "enllaç simbòlic"
 
 #: lib/strfuncs.c:555
 msgid "socket"
-msgstr ""
+msgstr "sòcol"
 
 #: lib/strfuncs.c:614
 msgid "Success."
-msgstr ""
+msgstr "Èxit."
 
 #: lib/strfuncs.c:616
 msgid "One or more inspections failed."
-msgstr ""
+msgstr "Han fallat una o més inspeccions."
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "Error del programa."
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
-msgstr ""
+msgstr "No s'ha trobat el perfil especificat."
 
 #: lib/strfuncs.c:622
 msgid "Insufficient disk space in the working directory."
-msgstr ""
+msgstr "Espai de disc insuficient al directori de treball."
 
 #: src/rpminspect.c:48
 #, c-format
@@ -3505,169 +4205,174 @@ msgid ""
 "Compare package builds for policy compliance and consistency.\n"
 "\n"
 msgstr ""
+"Compareu les construccions de paquets per al compliment de les polítiques i "
+"la consistència.\n"
+"\n"
 
 #: src/rpminspect.c:49
 #, c-format
 msgid "Usage: %s [OPTIONS] [before build] [after build]\n"
-msgstr ""
+msgstr "Ús: %s [OPCIONS] [abans de construir] [després de construir]\n"
 
 #: src/rpminspect.c:50
 #, c-format
 msgid "Options:\n"
-msgstr ""
+msgstr "Opcions:\n"
 
 #: src/rpminspect.c:51
 #, c-format
 msgid "  -c FILE, --config=FILE      Configuration file to use\n"
-msgstr ""
+msgstr "  -c FITXER, --config,Fitxer de configuració a utilitzar\n"
 
 #: src/rpminspect.c:52
 #, c-format
 msgid "  -p NAME, --profile=NAME     Configuration profile to use\n"
-msgstr ""
+msgstr "  -p NOM, --profile,NOM Perfil de configuració a utilitzar\n"
 
 #: src/rpminspect.c:53
 #, c-format
 msgid "  -T LIST, --tests=LIST       List of tests to run\n"
-msgstr ""
+msgstr "  -T LIST, --tests ofLIST Llista de proves a executar\n"
 
 #: src/rpminspect.c:54
 #, c-format
 msgid "                                (default: ALL)\n"
-msgstr ""
+msgstr "                                (predeterminat: ALL)\n"
 
 #: src/rpminspect.c:55
 #, c-format
 msgid "  -E LIST, --exclude=LIST     List of tests to exclude\n"
-msgstr ""
+msgstr "  -E LIST, --exclude ofLIST Llista de proves a excloure\n"
 
 #: src/rpminspect.c:56
 #, c-format
 msgid "                                (default: none)\n"
-msgstr ""
+msgstr "                                (predeterminat: cap)\n"
 
 #: src/rpminspect.c:57
 #, c-format
 msgid "  -a LIST, --arches=LIST      List of architectures to check\n"
-msgstr ""
+msgstr "  -a LIST, --arches ofLIST Llista d'arquitectures a comprovar\n"
 
 #: src/rpminspect.c:58
 #, c-format
 msgid "  -r STR, --release=STR       Product release string\n"
-msgstr ""
+msgstr "  -r STR, --release,STR Cadena de llançament de producte\n"
 
 #: src/rpminspect.c:59
 #, c-format
 msgid "  -n, --no-rebase             Disable build rebase detection\n"
-msgstr ""
+msgstr "  -n, --no-rebase Desactiva la detecció de la base de dades\n"
 
 #: src/rpminspect.c:60
 #, c-format
 msgid "  -b TYPE, --build-type=TYPE  Set Koji build type to TYPE\n"
 msgstr ""
+"  -b TYPE, --build-type,TYPE Estableix el tipus de construcció Koji a TYPE\n"
 
 #: src/rpminspect.c:61
 #, c-format
 msgid "  -o FILE, --output=FILE      Write results to FILE\n"
-msgstr ""
+msgstr "  -o FITXER, --output,FITXER Escriu resultats a FITXER\n"
 
 #: src/rpminspect.c:62
 #, c-format
 msgid "                                (default: stdout)\n"
-msgstr ""
+msgstr "                                (predeterminat: stdout)\n"
 
 #: src/rpminspect.c:63
 #, c-format
 msgid "  -F TYPE, --format=TYPE      Format output results as TYPE\n"
-msgstr ""
+msgstr "  -F TIPUS, --format,TIPUS Format resultats de sortida com A TIPUS\n"
 
 #: src/rpminspect.c:64
 #, c-format
 msgid "                                (default: text)\n"
-msgstr ""
+msgstr "                                (predeterminat: text)\n"
 
 #: src/rpminspect.c:65
 #, c-format
 msgid "  -t TAG, --threshold=TAG     Result threshold triggering exit\n"
-msgstr ""
+msgstr "  -t TAG, --threshold,TAG Llindar de resultat\n"
 
 #: src/rpminspect.c:66
 #, c-format
 msgid "                              failure (default: VERIFY)\n"
-msgstr ""
+msgstr "                              fallada (predeterminat: VERIFICA)\n"
 
 #: src/rpminspect.c:67
 #, c-format
 msgid "  -s TAG, --suppress=TAG      Results suppression threshold\n"
-msgstr ""
+msgstr "  -s TAG, --suppress,Suprimeix el llindar de supressió de resultats\n"
 
 #: src/rpminspect.c:68
 #, c-format
 msgid "                                (default: off, report everything)\n"
 msgstr ""
+"                                (predeterminat: desactivat, informa-ho tot)\n"
 
 #: src/rpminspect.c:69
 #, c-format
 msgid "  -l, --list                  List available tests and formats\n"
-msgstr ""
+msgstr "  -l, --list Llista de proves i formats disponibles\n"
 
 #: src/rpminspect.c:70
 #, c-format
 msgid "  -w PATH, --workdir=PATH     Temporary directory to use\n"
-msgstr ""
+msgstr "  -w PATH, --workdir,CAMÍ Directori temporal a utilitzar\n"
 
 #: src/rpminspect.c:71
 #, c-format
 msgid "                                (default: %s)\n"
-msgstr ""
+msgstr "                                (predeterminat: %s)\n"
 
 #: src/rpminspect.c:72
 #, c-format
 msgid ""
 "  -f, --fetch-only            Fetch builds only, do not perform inspections\n"
-msgstr ""
+msgstr "  -f, --fetch-only Fetch builds only, no realitzeu inspeccions\n"
 
 #: src/rpminspect.c:73
 #, c-format
 msgid "                                (implies -k)\n"
-msgstr ""
+msgstr "                                (implica -k)\n"
 
 #: src/rpminspect.c:74
 #, c-format
 msgid ""
 "  -k, --keep                  Do not remove the comparison working files\n"
-msgstr ""
+msgstr "  -k, --keep No eliminis els fitxers de treball de comparació\n"
 
 #: src/rpminspect.c:75
 #, c-format
 msgid "  -d, --debug                 Debugging mode output\n"
-msgstr ""
+msgstr "  -d, --debug Sortida del mode de depuració\n"
 
 #: src/rpminspect.c:76
 #, c-format
 msgid ""
 "  -D, --dump-config           Dump configuration settings (in YAML format)\n"
-msgstr ""
+msgstr "  -D, --dump-config Configuració de bolcat (en format YAML)\n"
 
 #: src/rpminspect.c:77
 #, c-format
 msgid "  -v, --verbose               Verbose inspection output\n"
-msgstr ""
+msgstr "  -v, --verbose Sortida de la inspecció\n"
 
 #: src/rpminspect.c:78
 #, c-format
 msgid "                              when finished, display full path\n"
-msgstr ""
+msgstr "                              en acabar, mostra el camí complet\n"
 
 #: src/rpminspect.c:79
 #, c-format
 msgid "  -?, --help                  Display usage information\n"
-msgstr ""
+msgstr "  -?, --help Mostra la informació d'ús\n"
 
 #: src/rpminspect.c:80
 #, c-format
 msgid "  -V, --version               Display program version\n"
-msgstr ""
+msgstr "  -V, --version Mostra la versió del programa\n"
 
 #: src/rpminspect.c:81
 #, c-format
@@ -3675,86 +4380,91 @@ msgid ""
 "\n"
 "See the rpminspect(1) man page for more information.\n"
 msgstr ""
+"\n"
+"Vegeu la pàgina del manual rpminspect(1) per a més informació.\n"
 
 #: src/rpminspect.c:114
 #, c-format
 msgid "*** unable to compile product release regular expression: %s"
 msgstr ""
+"*** no s'ha pogut compilar l'expressió regular de la versió del producte: %s"
 
 #: src/rpminspect.c:168 src/rpminspect.c:179
 #, c-format
 msgid "*** product release for after build (%s) is empty"
-msgstr ""
+msgstr "*** la versió del producte després de la construcció (%s) està buida"
 
 #: src/rpminspect.c:196 src/rpminspect.c:204
 #, c-format
 msgid "*** product release for before build (%s) is empty"
-msgstr ""
+msgstr "*** la versió del producte abans de construir (%s) està buida"
 
 #: src/rpminspect.c:259
 #, c-format
 msgid "*** unable to determine product release for %s and %s"
-msgstr ""
+msgstr "*** no s'ha pogut determinar la versió del producte per a %s i %s"
 
 #: src/rpminspect.c:260
 msgid ""
 "*** See the 'favor_release' setting in the rpminspect configuration file."
 msgstr ""
+"*** Vegeu la configuració «favorrelease» al fitxer de configuració "
+"rpminspect."
 
 #: src/rpminspect.c:288
 msgid "*** the -T and -E options are mutually exclusive"
-msgstr ""
+msgstr "*** les opcions -T i -E són mútuament excloents"
 
 #: src/rpminspect.c:289 src/rpminspect.c:305 src/rpminspect.c:737
 #: src/rpminspect.c:776
 #, c-format
 msgid "*** See `%s --help` for more information."
-msgstr ""
+msgstr "*** Vegeu  See%s --help. per a més informació."
 
 #: src/rpminspect.c:304
 #, c-format
 msgid "*** unknown inspection: `%s`"
-msgstr ""
+msgstr "*** inspecció desconeguda: :%s:"
 
 #: src/rpminspect.c:455
 #, c-format
 msgid "*** unsupported build type: `%s`."
-msgstr ""
+msgstr "*** tipus de construcció no admès: .%s.."
 
 #: src/rpminspect.c:464
 #, c-format
 msgid "*** invalid build type: `%s`."
-msgstr ""
+msgstr "*** tipus de construcció no vàlid: .%s.."
 
 #: src/rpminspect.c:481
 #, c-format
 msgid "*** invalid output format: `%s`."
-msgstr ""
+msgstr "*** format de sortida no vàlid: .%s.."
 
 #: src/rpminspect.c:493
 #, c-format
 msgid "*** unable to expand working directory: `%s`"
-msgstr ""
+msgstr "*** no es pot expandir el directori de treball:  to%s to"
 
 #: src/rpminspect.c:506
 #, c-format
 msgid "*** unable to use `%s' as working directory"
-msgstr ""
+msgstr "*** no es pot utilitzar «%s» com a directori de treball"
 
 #: src/rpminspect.c:536
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s versió %s\n"
 
 #: src/rpminspect.c:539
 #, c-format
 msgid "*** ?? getopt returned character code 0%o ??"
-msgstr ""
+msgstr "***? getopt ha retornat el codi de caràcter 0%o ??"
 
 #: src/rpminspect.c:546
 #, c-format
 msgid "Available build types:\n"
-msgstr ""
+msgstr "Tipus de construcció disponibles:\n"
 
 #: src/rpminspect.c:567
 #, c-format
@@ -3762,6 +4472,8 @@ msgid ""
 "\n"
 "Available output formats:\n"
 msgstr ""
+"\n"
+"Formats de sortida disponibles:\n"
 
 #: src/rpminspect.c:584
 #, c-format
@@ -3769,34 +4481,38 @@ msgid ""
 "\n"
 "Available inspections:\n"
 msgstr ""
+"\n"
+"inspeccions disponibles:\n"
 
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
 #, c-format
 msgid "*** failed to read configuration file %s"
-msgstr ""
+msgstr "*** no s'ha pogut llegir el fitxer de configuració %s"
 
 #: src/rpminspect.c:658
 #, c-format
 msgid "*** Please specify a configuration file using '-c' or supply ./%s"
 msgstr ""
+"*** Si us plau, especifiqueu un fitxer de configuració usant «-c» o proveïu "
+"./%s"
 
 #: src/rpminspect.c:736
 msgid "*** Invalid before and after build specification."
-msgstr ""
+msgstr "*** No vàlid abans i després de l'especificació de construcció."
 
 #: src/rpminspect.c:744
 msgid "*** unable to read RPM configuration"
-msgstr ""
+msgstr "*** no s'ha pogut llegir la configuració RPM"
 
 #: src/rpminspect.c:775
 #, c-format
 msgid "*** unsupported architecture specified: `%s`"
-msgstr ""
+msgstr "*** s'ha especificat una arquitectura no compatible: :%s:"
 
 #: src/rpminspect.c:793
 #, c-format
 msgid "*** unable to create directory %s"
-msgstr ""
+msgstr "*** no s'ha pogut crear el directori %s"
 
 #: src/rpminspect.c:851
 #, c-format
@@ -3804,73 +4520,82 @@ msgid ""
 "Version information for libraries and programs used by %s as well as storage "
 "requirements.  This result is for informational and diagnostic purposes only."
 msgstr ""
+"Informació de versió per a biblioteques i programes utilitzats per %s, així "
+"com requisits d'emmagatzematge.  Aquest resultat només té finalitats "
+"informatives i diagnòstiques."
 
 #: src/rpminspect.c:858
 #, c-format
 msgid "Space required to download artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Espai necessari per a baixar els artefactes: %lu bytes (%s)\n"
 
 #: src/rpminspect.c:866
 #, c-format
 msgid "Space required to unpack artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Espai necessari per a desempaquetar artefactes: %lu bytes (%s)\n"
 
 #: src/rpminspect.c:878
 #, c-format
 msgid "Command line arguments used to invoke %s."
-msgstr ""
+msgstr "Arguments de la línia d'ordres utilitzats per a invocar %s."
 
 #: src/rpminspect.c:902
 #, c-format
 msgid "Local configuration file: %s"
-msgstr ""
+msgstr "Fitxer de configuració local: %s"
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "Abans de construir"
 
 #: src/rpminspect.c:917
 msgid "After Build"
-msgstr ""
+msgstr "Després de construir"
 
 #: src/rpminspect.c:920
 msgid "Build"
-msgstr ""
+msgstr "Construeix"
 
 #: src/rpminspect.c:937
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
 msgstr ""
+"*** sense parells, assegura que hi ha paquets per a les arquitectures "
+"especificades"
 
 #: src/rpminspect.c:958
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
 msgstr ""
+"*** no s'ha pogut trobar un conjunt de paquets entre les construccions "
+"anteriors i posteriors"
 
 #: src/rpminspect.c:972
 msgid "*** unable to determine product release or none specified (-r)."
 msgstr ""
+"*** no s'ha pogut determinar el llançament del producte o no s'ha "
+"especificat cap (-r)."
 
 #: src/rpminspect.c:984
 #, c-format
 msgid "Skipping %s inspection..."
-msgstr ""
+msgstr "S'està ometent la inspecció %s..."
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "omet"
 
 #: src/rpminspect.c:1009
 #, c-format
 msgid "Running %s inspection..."
-msgstr ""
+msgstr "S'està executant la inspecció %s..."
 
 #: src/rpminspect.c:1018
 msgid "pass"
-msgstr ""
+msgstr "passa"
 
 #: src/rpminspect.c:1018
 msgid "FAIL"
-msgstr ""
+msgstr "FALLA"
 
 #: src/rpminspect.c:1046
 #, c-format
@@ -3878,3 +4603,5 @@ msgid ""
 "\n"
 "Keeping working directory: %s\n"
 msgstr ""
+"\n"
+"S'està mantenint el directori de treball: %s\n"
