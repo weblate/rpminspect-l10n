@@ -9,8 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
 "PO-Revision-Date: 2026-11-19 10:18+0000\n"
-"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-"
-"memory@weblate.org>\n"
+"Last-Translator: 김인수 <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/"
 "rpminspect/main/ko/>\n"
 "Language: ko\n"
@@ -2939,7 +2938,7 @@ msgstr ""
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr "${ARCH} 에서 %s 에 있는 '${FILE}'"
+msgstr "'${FILE}' 부분은 ${ARCH} 의 %s 에서 우선순위가 필요합니다"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
@@ -2978,7 +2977,7 @@ msgstr "%s 의 하위꾸러미 %s 에서 '%s' 를 '%s' 로 변경함"
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr "${ARCH} 에서 %s 에 있는 '${FILE}'"
+msgstr "'%s' 부분은 ${ARCH} 의 %s 에서 '${FILE}'로 되었습니다"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
