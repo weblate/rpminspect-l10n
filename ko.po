@@ -2978,7 +2978,7 @@ msgstr "%s 의 하위꾸러미 %s 에서 '%s' 를 '%s' 로 변경함"
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "${ARCH} 에서 %s 에 있는 '${FILE}'"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
