@@ -8,13 +8,17 @@ msgstr ""
 "Project-Id-Version: rpminspect\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-27 09:21-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-11-23 21:18+0000\n"
+"Last-Translator: Rihards Prieditis <rprieditis@gmail.com>\n"
+"Language-Team: Latvian <https://translate.fedoraproject.org/projects/"
+"rpminspect/main/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: include/inspect.h:1341
 msgid ""
@@ -23,12 +27,17 @@ msgid ""
 "checks to see if the License tag contains any unprofessional words as "
 "defined in the configuration file."
 msgstr ""
+"Pārbaudīt, vai RPM metadatu tagā License norādītā virkne apraksta atļautas "
+"programmatūras licences, kā noteikts licenču datubāzē. Pārbauda arī, vai "
+"tagā License nav kādu konfigurācijas failā definētu neprofesionālu vārdu."
 
 #: include/inspect.h:1347
 msgid ""
 "Check all binary RPMs in the build for any empty payloads. When comparing "
 "two builds, report new packages in the after build with empty payloads."
 msgstr ""
+"Pārbaudīt, vai nevienai būves binārajai RPM nav tukša satura. Salīdzinot "
+"divas būves, ziņot par jaunām pakotnēm būvē „pēc” ar tukšu saturu."
 
 #: include/inspect.h:1353
 msgid ""
@@ -36,6 +45,9 @@ msgid ""
 "Packages that lost payload data from the before build to the after build are "
 "reported."
 msgstr ""
+"Pārbaudīt, vai nevienai būvju „pirms” un „pēc” binārajai RPM nav tukša "
+"satura. Tiek ziņots par pakotnēm, kas no būves „pirms” līdz būvei „pēc” "
+"zaudējušas satura datus."
 
 #: include/inspect.h:1359
 msgid ""
@@ -47,6 +59,13 @@ msgid ""
 "before build specified, check for differences between the before and after "
 "build values of the previous RPM header values and report them."
 msgstr ""
+"Veikt dažas RPM galvenes pārbaudes. Pirmkārt, pārbaudīt, vai Vendor satur "
+"gaidīto, konfigurācijas failā definēto virkni. Otrkārt, pārbaudīt, vai "
+"būvēšanas resursdators ir gaidītajā, konfigurācijas failā definētajā "
+"apakšdomēnā. Treškārt, pārbaudīt, vai virknē Summary nav neprofesionālu "
+"vārdu. Ceturtkārt, pārbaudīt, vai Description nav neprofesionālu vārdu. "
+"Visbeidzot, ja norādīta būve „pirms”, pārbaudīt iepriekšējo RPM galvenes "
+"vērtību atšķirības starp būvēm „pirms” un „pēc” un ziņot par tām."
 
 #: include/inspect.h:1365
 msgid ""
@@ -54,10 +73,14 @@ msgid ""
 "man page is compressed. Second, check that each man page contains valid "
 "content. Lastly, check that each man page is installed to the correct path."
 msgstr ""
+"Veikt dažas RPM satura man lapu pārbaudes. Pirmkārt, pārbaudīt, vai katra "
+"man lapa ir saspiesta. Otrkārt, pārbaudīt, vai katrai man lapai ir derīgs "
+"saturs. Visbeidzot, pārbaudīt, vai katra man lapa ir instalēta pareizajā "
+"ceļā."
 
 #: include/inspect.h:1371
 msgid "Check that XML files included in the RPM payload are well-formed."
-msgstr ""
+msgstr "Pārbaudīt, vai RPM saturā iekļautie XML faili ir pareizi veidoti."
 
 #: include/inspect.h:1377
 msgid ""
@@ -67,28 +90,38 @@ msgid ""
 "after build did not lose a PT_GNU_RELRO segment. When comparing builds and "
 "there is a list of forbidden library functions, make sure nothing uses them."
 msgstr ""
+"Veikt vairākas ELF failu pārbaudes. Pirmkārt, pārbaudīt, vai ELF objektos "
+"nav izpildāma steka. Otrkārt, pārbaudīt, vai ELF objektos nav teksta "
+"relokāciju. Salīdzinot būves, pārbaudīt, vai ELF objekti būvē „pēc” nav "
+"zaudējuši segmentu PT_GNU_RELRO. Salīdzinot būves, ja ir aizliegto "
+"bibliotēkas funkciju saraksts, pārliecināties, ka neviens tās neizmanto."
 
 #: include/inspect.h:1383
 msgid ""
 "Perform syntax and file reference checks on *.desktop files. Syntax errors "
 "and invalid file references are reported as errors."
 msgstr ""
+"Veikt *.desktop failu sintakses un failu atsauču pārbaudes. Par sintakses "
+"kļūdām un nederīgām failu atsaucēm tiek ziņots kā par kļūdām."
 
 #: include/inspect.h:1389
 msgid ""
 "Check that the 'Release' tag in the RPM spec file includes the %{?dist} "
 "directive."
-msgstr ""
+msgstr "Pārbaudīt, vai RPM spec faila tags 'Release' ietver direktīvu %{?dist}."
 
 #: include/inspect.h:1395
 msgid "Ensure the spec file name conforms to the NAME.spec naming format."
 msgstr ""
+"Nodrošināt, ka spec faila nosaukums atbilst nosaukuma formātam NAME.spec."
 
 #: include/inspect.h:1403
 msgid ""
 "Ensure compliance with modularity build and packaging policies (only valid "
 "for module builds, no-op otherwise)."
 msgstr ""
+"Nodrošināt atbilstību modularitātes būvēšanas un pakošanas politikām (derīgs "
+"tikai moduļu būvēm, citādi nedara neko)."
 
 #: include/inspect.h:1411
 msgid ""
@@ -97,6 +130,10 @@ msgid ""
 "exceeded.  The bytecode version is vendor specific to releases and defined "
 "in the configuration file."
 msgstr ""
+"Pārbaudīt klašu failos minimālo nepieciešamo Java baitkoda versiju, ziņot "
+"par baitkoda versijas izmaiņām starp būvēm un ziņot, ja baitkoda versijas ir "
+"pārsniegtas.  Baitkoda versija ir ražotāja laidieniem specifiska un definēta "
+"konfigurācijas failā."
 
 #: include/inspect.h:1417
 msgid ""
@@ -109,6 +146,14 @@ msgid ""
 "C and C++ header files are preprocessed and compared using diff(1).  Any "
 "changes with diff output are included in the results."
 msgstr ""
+"Ziņot par mainītajiem failiem no būves „pirms” līdz būvei „pēc”.  Noteiktas "
+"failu izmaiņas izraisīs papildu brīdinājumus, ja problēma ir nopietnāka par "
+"vienkāršu ziņošanu par izmaiņām (piem., iespējama ietekme uz drošību).  "
+"Visiem ar gzip, bzip2 vai xz saspiestajiem failiem tiks salīdzināts tikai to "
+"atspiestais saturs, kas ļauj izlaist izmaiņas izmantotajā saspiešanas "
+"līmenī.  Ziņojumu katalogu faili (.mo) tiek izpakoti un salīdzināti ar diff"
+"(1).  Publiskie C un C++ galvenes faili tiek priekšapstrādāti un salīdzināti "
+"ar diff(1).  Visas izmaiņas ar diff izvadi tiek iekļautas rezultātos."
 
 #: include/inspect.h:1423
 msgid ""
@@ -118,6 +163,11 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Ziņot par failiem, kuriem starp būvēm mainījušies instalēšanas ceļi vai kuri "
+"pārvietoti starp apakšpakotnēm.  Faili, kas pārvietoti ar drošības ceļa "
+"priedēkli, rada īpašu ziņojumu gadījumam, ja nepieciešama drošības "
+"pārskatīšana.  Pārbāzētas pakotnes ziņo par šiem atradumiem līmenī INFO, bet "
+"nepārbāzētas pakotnes — līmenī VERIFY vai augstākā."
 
 #: include/inspect.h:1429
 msgid ""
@@ -129,6 +179,13 @@ msgid ""
 "these findings at the INFO level while non-rebased packages report them at "
 "the VERIFY level or higher."
 msgstr ""
+"Ziņot par noņemtajiem failiem no būves „pirms” līdz būvei „pēc”.  "
+"Koplietotajām bibliotēkām tiek sniegta papildu ziņojuma izvade, jo tās var "
+"būt negaidīti atkarību noņemšanas gadījumi.  Faili, kas noņemti ar drošības "
+"ceļa priedēkli, rada īpašu ziņojumu gadījumam, ja nepieciešama drošības "
+"pārskatīšana.  Šī pārbaude ignorē pirmkoda RPM un debuginfo failus.  "
+"Pārbāzētas pakotnes ziņo par šiem atradumiem līmenī INFO, bet nepārbāzētas "
+"pakotnes — līmenī VERIFY vai augstākā."
 
 #: include/inspect.h:1435
 msgid ""
@@ -140,6 +197,13 @@ msgid ""
 "Rebased packages report these findings at the INFO level while non-rebased "
 "packages report them at the VERIFY level or higher."
 msgstr ""
+"Ziņot par pievienotajiem failiem no būves „pirms” līdz būvei „pēc”.  "
+"Debuginfo faili tiek ignorēti, tāpat kā faili, kas atbilst konfigurācijas "
+"failā definētajiem šabloniem.  Drošības ceļiem pievienotie faili rada īpašu "
+"ziņojumu gadījumam, ja nepieciešama drošības pārskatīšana.  Jauni setuid un "
+"setgid faili izraisa drošības brīdinājumu, ja vien fails nav sarakstā "
+"fileinfo.  Pārbāzētas pakotnes ziņo par šiem atradumiem līmenī INFO, bet "
+"nepārbāzētas pakotnes — līmenī VERIFY vai augstākā."
 
 #: include/inspect.h:1441
 msgid ""
@@ -148,6 +212,10 @@ msgid ""
 "on the rebaseable list, the change is reported as informational. Otherwise "
 "the change is reported as a rebase of the package and requires inspection."
 msgstr ""
+"Ziņot par RPM spec failā definēto Source arhīvu satura izmaiņām starp būvēm „"
+"pirms” un „pēc”. Ja avota arhīvi mainās un pakotne ir pārbāzējamo sarakstā, "
+"par izmaiņu tiek ziņots kā par informatīvu. Citādi par izmaiņu tiek ziņots "
+"kā par pakotnes pārbāzēšanu, un tai nepieciešama pārbaude."
 
 #: include/inspect.h:1447
 msgid ""
@@ -155,6 +223,10 @@ msgid ""
 "make sure executables are owned by the correct user and group. If a before "
 "and after build have been specified, also report ownership changes."
 msgstr ""
+"Ziņot par failiem un direktorijām, kuru īpašnieki ir negaidīti lietotāji un "
+"grupas. Pārbaudīt, vai izpildāmo failu īpašnieks ir pareizais lietotājs un "
+"grupa. Ja norādītas būves „pirms” un „pēc”, ziņot arī par īpašumtiesību "
+"izmaiņām."
 
 #: include/inspect.h:1453
 msgid ""
@@ -165,6 +237,12 @@ msgid ""
 "perform the previous check but also report if a previously bad script is now "
 "passing the syntax check."
 msgstr ""
+"Visiem būves čaulas skriptiem veikt sintakses pārbaudi, izmantojot to rindā "
+"#! norādīto čaulu (čaulai jābūt uzskaitītai arī konfigurācijas datu sadaļā "
+"shell). Ja sintakses pārbaude atgriež vērtību, kas nav nulle, ziņot par to "
+"lietotājam un atgriezt apvienotu stdout un stderr. Salīdzinot divas būves, "
+"veikt iepriekšējo pārbaudi, bet ziņot arī, ja iepriekš kļūdains skripts "
+"tagad iztur sintakses pārbaudi."
 
 #: include/inspect.h:1459
 msgid ""
@@ -174,12 +252,19 @@ msgid ""
 "build.  If no annocheck tests are defined in the configuration file, this "
 "inspection is skipped."
 msgstr ""
+"Veikt konfigurācijas failā definētos annocheck testus visiem būves ELF "
+"failiem.  Ja norādīta viena būve, tiks veikta tikai analīze.  Ja norādītas "
+"divas būves, tiks salīdzināti testu rezultāti starp būvēm „pirms” un „pēc”.  "
+"Ja konfigurācijas failā annocheck testi nav definēti, šī pārbaude tiek "
+"izlaista."
 
 #: include/inspect.h:1465
 msgid ""
 "Compare DT_NEEDED entries in dynamic ELF executables and shared libraries "
 "between the before and after build and report changes."
 msgstr ""
+"Salīdzināt DT_NEEDED ierakstus dinamiskajos ELF izpildāmajos failos un "
+"koplietotajās bibliotēkās starp būvēm „pirms” un „pēc” un ziņot par izmaiņām."
 
 #: include/inspect.h:1471
 msgid ""
@@ -187,6 +272,9 @@ msgid ""
 "non-empty files became empty, report those as results needing verification.  "
 "Report file change percentages as info-only."
 msgstr ""
+"Ziņot par failu izmēra izmaiņām starp būvēm.  Ja tukši faili kļuvuši netukši "
+"vai netukši faili kļuvuši tukši, ziņot par tiem kā par rezultātiem, kam "
+"nepieciešama pārbaude.  Ziņot par failu izmaiņu procentiem tikai informatīvi."
 
 #: include/inspect.h:1477
 msgid ""
@@ -194,6 +282,9 @@ msgid ""
 "list for the product release specified or determined.  Any setuid or setgid "
 "changes will raise a message requiring Security Team review."
 msgstr ""
+"Ziņot par stat(2) režīma izmaiņām starp būvēm.  Salīdzina ar norādītā vai "
+"noteiktā produkta laidiena sarakstu fileinfo.  Jebkuras setuid vai setgid "
+"izmaiņas izraisīs ziņojumu, kam nepieciešama drošības komandas pārskatīšana."
 
 #: include/inspect.h:1485
 msgid ""
@@ -202,6 +293,9 @@ msgid ""
 "capabilities changes not listed will raise a message requiring Security Team "
 "review."
 msgstr ""
+"Ziņot par capabilities(7) izmaiņām starp būvēm.  Salīdzina ar norādītā vai "
+"noteiktā produkta laidiena spēju sarakstu.  Jebkuras nesarakstītas spēju "
+"izmaiņas izraisīs ziņojumu, kam nepieciešama drošības komandas pārskatīšana."
 
 #: include/inspect.h:1494
 msgid ""
@@ -209,6 +303,9 @@ msgid ""
 "between builds.  This inspection is intended as an information gathering "
 "tool to gather kernel module differences between two builds."
 msgstr ""
+"Ziņot par kodola moduļu parametru, atkarību, PCI ID vai simbolu atšķirībām "
+"starp būvēm.  Šī pārbaude ir paredzēta kā informācijas vākšanas rīks kodola "
+"moduļu atšķirību apkopošanai starp divām būvēm."
 
 #: include/inspect.h:1501
 msgid ""
@@ -218,12 +315,18 @@ msgid ""
 "architectures as provided in the before build and not seeing them in the "
 "after build."
 msgstr ""
+"Ziņot par RPM arhitektūrām, kas parādās un pazūd starp būvēm „pirms” un „pēc"
+"”.  Šī pārbaude neziņo par noarch pakotņu zudumu.  Šīs pārbaudes mērķis ir "
+"ziņot par mērķa mašīnu arhitektūru zudumu, kas bija nodrošinātas būvē „pirms"
+"”, bet nav redzamas būvē „pēc”."
 
 #: include/inspect.h:1507
 msgid ""
 "Report RPM subpackages that appear and disappear between the before and "
 "after builds."
 msgstr ""
+"Ziņot par RPM apakšpakotnēm, kas parādās un pazūd starp būvēm „pirms” un „pēc"
+"”."
 
 #: include/inspect.h:1513
 #, c-format
@@ -232,6 +335,9 @@ msgid ""
 "Reports any other differences in the existing changelog between builds and "
 "that the new entry contains new text entries."
 msgstr ""
+"Nodrošināt, ka pakotnes satur ierakstu %changelog uzbūvētajai versijai.  "
+"Ziņo par jebkurām citām esošā izmaiņu žurnāla atšķirībām starp būvēm un par "
+"to, vai jaunajā ierakstā ir jauni teksta ieraksti."
 
 #: include/inspect.h:1519
 msgid ""
@@ -240,6 +346,10 @@ msgid ""
 "path migrations.  The main examples are /bin migrating to /usr/bin and /sbin "
 "migrating to /usr/sbin."
 msgstr ""
+"Ziņot par failiem, kas iepakoti direktorijās, kuras produkts vairs "
+"neizmanto.  Parasti tas nozīmē, ka pakotne nav atjaunināta, lai ņemtu vērā "
+"ceļu migrāciju.  Galvenie piemēri ir /bin migrācija uz /usr/bin un /sbin "
+"migrācija uz /usr/sbin."
 
 #: include/inspect.h:1525
 msgid ""
@@ -249,6 +359,11 @@ msgid ""
 "ELF objects shipped in packages.  This inspection looks for LTO bytecode in "
 "ELF relocatable objects and reports if any is present."
 msgstr ""
+"Saistīšanas laika optimizācija (LTO) rada mazākus un ātrākus koplietotos ELF "
+"izpildāmos failus un bibliotēkas.  LTO baitkods nav stabils starp gcc "
+"laidieniem.  Tāpēc LTO baitkodam nevajadzētu atrasties pakotnēs piegādātajos "
+".a un .o ELF objektos.  Šī pārbaude meklē LTO baitkodu ELF relocējamos "
+"objektos un ziņo, ja tāds ir."
 
 #: include/inspect.h:1531
 msgid ""
@@ -256,18 +371,24 @@ msgid ""
 "ensures absolute and relative symlinks are valid.  It also checks for any "
 "symlink usage that will cause problems for RPM."
 msgstr ""
+"Simboliskajām saitēm jābūt atrisināmām instalētajā sistēmā.  Šī pārbaude "
+"nodrošina, ka absolūtās un relatīvās simboliskās saites ir derīgas.  Tā "
+"pārbauda arī, vai simboliskās saites netiek izmantotas veidā, kas radīs "
+"problēmas RPM."
 
 #: include/inspect.h:1537
 #, c-format
 msgid ""
 "Check %files sections in the spec file for any forbidden path references."
-msgstr ""
+msgstr "Pārbaudīt spec faila sadaļās %files, vai nav aizliegtu ceļu atsauču."
 
 #: include/inspect.h:1543
 msgid ""
 "Compare MIME types of files between builds and report any changes for "
 "verification."
 msgstr ""
+"Salīdzināt failu MIME tipus starp būvēm un ziņot par jebkurām izmaiņām "
+"pārbaudei."
 
 #: include/inspect.h:1549
 msgid ""
@@ -280,6 +401,13 @@ msgid ""
 "that, turn off the abidiff inspection or add the package name to the "
 "rebaseable list."
 msgstr ""
+"Salīdzinot divas būves vai divas pakotnes, salīdzināt ELF failus ar projekta "
+"libabigail rīku abidiff(1).  Par atšķirībām tiek ziņots.  Ja pakotne ir "
+"pārbāzēta, nav pārbāzējamo sarakstā un pārbāzēšanas pārbaude ir iespējota, "
+"par ABI atšķirībām tiek ziņots kā par kļūmēm.  Pieņēmums ir tāds, ka "
+"rpminspect salīdzina būves uzturēšanas nolūkos un jūs nevēlaties lietotājiem "
+"ieviest nekādas ABI izmaiņas.  Ja tas jums nav svarīgi, izslēdziet pārbaudi "
+"abidiff vai pievienojiet pakotnes nosaukumu pārbāzējamo sarakstam."
 
 #: include/inspect.h:1555
 msgid ""
@@ -290,6 +418,11 @@ msgid ""
 "rebase, an incompatible change reported by kmidiff is reported for "
 "verification."
 msgstr ""
+"kmidiff salīdzina divu Linux kodola koku bināros kodola moduļu interfeisus.  "
+"Binārais KMI ir interfeiss, ko Linux kodols atklāj saviem moduļiem.  Šeit "
+"interesējošie koki ir Linux kodola pirmkoda koka būvēšanas rezultāts.  Ja "
+"salīdzinātās būves netiek uzskatītas par pārbāzēšanu, par kmidiff ziņotu "
+"nesaderīgu izmaiņu tiek ziņots pārbaudei."
 
 #: include/inspect.h:1561
 #, c-format
@@ -299,6 +432,11 @@ msgid ""
 "is reported at the INFO level.  Content and location changes are reporting "
 "at the VERIFY level unless the comparison is between rebased packages."
 msgstr ""
+"Pārbaudīt un ziņot par atšķirībām konfigurācijas failos, kas spec failā "
+"atzīmēti ar %config.  Ja izmaiņas skar tikai atstarpes vai formatējumu, "
+"rezultāts tiek ziņots līmenī INFO.  Par satura un atrašanās vietas izmaiņām "
+"tiek ziņots līmenī VERIFY, ja vien salīdzinājums nav starp pārbāzētām "
+"pakotnēm."
 
 #: include/inspect.h:1567
 #, c-format
@@ -306,6 +444,8 @@ msgid ""
 "Report changes in %doc marked files.  Files that have been added or removed "
 "as documentation files, for instance."
 msgstr ""
+"Ziņot par izmaiņām ar %doc atzīmētajos failos.  Piemēram, par failiem, kas "
+"pievienoti vai noņemti kā dokumentācijas faili."
 
 #: include/inspect.h:1573
 msgid ""
@@ -319,6 +459,14 @@ msgid ""
 "can also list patch names that rpminspect should ignore during the "
 "inspection."
 msgstr ""
+"Pārbauda visus spec failā definētos ielāpus un ziņo par izmaiņām starp "
+"būvēm.  Funkcionālā pārbaude šeit ir nodrošināt, ka visiem preambulā "
+"definētajiem ielāpiem spec failā ir atbilstošs lietošanas makro.  Līmenī "
+"INFO rpminspect ziņo par failu skaita, rindu skaita un ielāpa izmēra "
+"izmaiņām.  Ja tiek sasniegti sliekšņi attiecībā uz ielāpa izmēra vai ielāpa "
+"skarto failu skaita izmaiņām, rpminspect ziņo par izmaiņu līmenī VERIFY, ja "
+"vien salīdzinājums nav pārbāzēšanai.  Konfigurācijas failā var arī uzskaitīt "
+"ielāpu nosaukumus, kurus rpminspect pārbaudes laikā ignorēs."
 
 #: include/inspect.h:1579
 msgid ""
@@ -326,6 +474,9 @@ msgid ""
 "found by libclamav will fail the inspection.  The ignore_path rules are not "
 "used in this inspection.  All files are scanned."
 msgstr ""
+"Veic vīrusu skenēšanu katram būves failam, izmantojot libclamav.  Jebkas, ko "
+"atrod libclamav, izraisīs pārbaudes kļūmi.  Kārtulas ignore_path šajā "
+"pārbaudē netiek izmantotas.  Tiek skenēti visi faili."
 
 #: include/inspect.h:1585
 msgid ""
@@ -335,6 +486,11 @@ msgid ""
 "subdirectory map to the product release string.  The rules in each file "
 "define the politically sensitive allow and deny rules for that release."
 msgstr ""
+"Pārbaudīt, vai pakotnēs nav zināmu politiski jutīgu failu, un ziņot, vai tie "
+"ir atļauti vai aizliegti.  Kārtulas nāk no produkta pakotnes rpminspect-data "
+"apakšdirektorijas politics/.  Faili apakšdirektorijā politics/ atbilst "
+"produkta laidiena virknei.  Katra faila kārtulas definē šī laidiena "
+"politiski jutīgās atļaušanas un liegšanas kārtulas."
 
 #: include/inspect.h:1591
 msgid ""
@@ -343,12 +499,18 @@ msgid ""
 "catch built packages that make use of deprecated API functions if you wish "
 "built packages to conform to replacement APIs."
 msgstr ""
+"Pārbaudīt, vai ELF failos nav aizliegtu funkciju.  Aizliegtās funkcijas ir "
+"definētas izpildlaika konfigurācijas failos.  Parasti šo pārbaudi izmanto, "
+"lai notvertu uzbūvētas pakotnes, kas izmanto novecojušas API funkcijas, ja "
+"vēlaties, lai uzbūvētās pakotnes atbilstu aizstājošajām API."
 
 #: include/inspect.h:1597
 msgid ""
 "Check for forbidden paths in both the DT_RPATH and DT_RUNPATH settings in "
 "ELF shared objects."
 msgstr ""
+"Pārbaudīt, vai ELF koplietotajos objektos iestatījumos DT_RPATH un "
+"DT_RUNPATH nav aizliegtu ceļu."
 
 #: include/inspect.h:1603
 msgid ""
@@ -356,6 +518,10 @@ msgid ""
 "for any prohibited Unicode code points, as defined in the configuration "
 "file.  Any prohibited code points are reported as a possible security risk."
 msgstr ""
+"Skenēt izvilktos un ielāpotos pirmkoda failus, skriptus un RPM spec failus, "
+"vai tajos nav konfigurācijas failā definētu aizliegtu Unicode koda punktu.  "
+"Par visiem aizliegtajiem koda punktiem tiek ziņots kā par iespējamu drošības "
+"risku."
 
 #: include/inspect.h:1609
 msgid ""
@@ -365,6 +531,11 @@ msgid ""
 "will check for correct RPM dependency metadata when inspecting a single "
 "build and report findings."
 msgstr ""
+"Pārbaudīt, vai RPM atkarību metadati ir pareizi.  Ziņot par nepareiziem vai "
+"konfliktējošiem atradumiem, kā arī par gaidītām izmaiņām, salīdzinot jaunu "
+"būvi ar vecāku būvi.  Par izmaiņām tiek ziņots tikai, salīdzinot būves, "
+"taču, pārbaudot vienu būvi, šī pārbaude pārbaudīs RPM atkarību metadatu "
+"pareizību un ziņos par atradumiem."
 
 #: include/inspect.h:1615
 msgid ""
@@ -373,24 +544,31 @@ msgid ""
 "report where symbols unexpectedly appear or disappear and what corrective "
 "action is needed."
 msgstr ""
+"Pārbauda, vai RPM pakotņu failiem ir noņemti atkļūdošanas simboli un vai "
+"debuginfo pakotņu failiem ir atkļūdošanas simboli.  Salīdzinot būves, ziņo, "
+"kur simboli negaidīti parādās vai pazūd un kāda labošanas darbība "
+"nepieciešama."
 
 #: include/inspect.h:1621
 msgid "Perform syntax check on udev rules files using udevadm verify."
-msgstr ""
+msgstr "Veikt udev kārtulu failu sintakses pārbaudi, izmantojot udevadm verify."
 
 #: include/results.h:31
 msgid "Change the string specified on the 'Vendor:' line in the spec file."
-msgstr ""
+msgstr "Mainiet spec faila rindā 'Vendor:' norādīto virkni."
 
 #: include/results.h:38
 msgid "Make sure the SRPM is built on a host within the expected subdomain."
 msgstr ""
+"Pārliecinieties, ka SRPM tiek būvēta resursdatorā gaidītajā apakšdomēnā."
 
 #: include/results.h:45
 msgid ""
 "Unprofessional language as defined in the configuration file was found in "
 "the text shown.  Remove or change the offending words and rebuild."
 msgstr ""
+"Parādītajā tekstā tika atrasta konfigurācijas failā definēta neprofesionāla "
+"valoda.  Noņemiet vai mainiet aizskarošos vārdus un būvējiet atkārtoti."
 
 #: include/results.h:60 include/results.h:75
 #, c-format
@@ -398,6 +576,8 @@ msgid ""
 "Check to see if you eliminated a subpackage but still have the %package and/"
 "or the %files section for it."
 msgstr ""
+"Pārbaudiet, vai apakšpakotne nav likvidēta, bet tai joprojām ir sadaļa "
+"%package un/vai %files."
 
 #: include/results.h:90
 msgid ""
@@ -405,6 +585,9 @@ msgid ""
 "distribution (e.g., GPLv2+).  If the license in question is approved, the "
 "license database needs updating in the rpminspect-data package."
 msgstr ""
+"Tagā License jābūt distribūcijas apstiprinātai licences virknei (piem., "
+"GPLv2+).  Ja attiecīgā licence ir apstiprināta, pakotnē rpminspect-data "
+"jāatjaunina licenču datubāze."
 
 #: include/results.h:97
 msgid ""
@@ -412,6 +595,9 @@ msgid ""
 "valid licensedb file.  This is also commonly due to a missing vendor "
 "specific rpminspect-data package on the system."
 msgstr ""
+"Pārliecinieties, ka rpminspect konfigurācijas iestatījums licensedb ir "
+"iestatīts uz derīgu licensedb failu.  Bieži iemesls ir arī tas, ka sistēmā "
+"trūkst ražotājam specifiskas pakotnes rpminspect-data."
 
 #: include/results.h:104
 msgid ""
@@ -422,36 +608,48 @@ msgid ""
 "but marked unapproved, you may need to work with the legal team regarding "
 "options for this software."
 msgstr ""
+"Norādītā licences saīsne licenču datubāzē nav uzskaitīta kā apstiprināta.  "
+"Licenču datubāze ir norādīta rpminspect konfigurācijas failā.  Pārbaudiet šo "
+"failu un nosūtiet attiecīgajam augšteces projektam izvilkšanas pieprasījumu "
+"datubāzes atjaunināšanai.  Ja licence datubāzē ir uzskaitīta, bet atzīmēta "
+"kā neapstiprināta, jums, iespējams, jāsadarbojas ar juridisko komandu par "
+"šīs programmatūras iespējām."
 
 #: include/results.h:119 include/results.h:154
 msgid "Ensure all object files are compiled with -fPIC"
-msgstr ""
+msgstr "Nodrošiniet, ka visi objektu faili ir kompilēti ar -fPIC"
 
 #: include/results.h:126
 msgid ""
 "Ensure that the package is being built with the correct compiler and "
 "compiler flags"
 msgstr ""
+"Nodrošiniet, ka pakotne tiek būvēta ar pareizo kompilatoru un kompilatora "
+"karogiem"
 
 #: include/results.h:133
 msgid ""
 "The data in an ELF file appears to be corrupt; ensure that packaged ELF "
 "files are not being truncated or incorrectly modified"
 msgstr ""
+"ELF faila dati šķiet bojāti; nodrošiniet, ka iepakotie ELF faili netiek "
+"apcirsti vai nepareizi mainīti"
 
 #: include/results.h:140
 msgid ""
 "An ELF stack is marked as executable. Ensure that no execstack options are "
 "being passed to the linker, and that no functions are defined on the stack."
 msgstr ""
+"ELF steks ir atzīmēts kā izpildāms. Nodrošiniet, ka saistītājam netiek "
+"nodotas nekādas execstack opcijas un ka stekā netiek definētas funkcijas."
 
 #: include/results.h:147
 msgid "Ensure executables are linked with with '-z relro -z now'"
-msgstr ""
+msgstr "Nodrošiniet, ka izpildāmie faili ir saistīti ar '-z relro -z now'"
 
 #: include/results.h:169
 msgid "Correct the errors in the man page as reported by the libmandoc parser."
-msgstr ""
+msgstr "Izlabojiet man lapas kļūdas, par kurām ziņo parsētājs libmandoc."
 
 #: include/results.h:176
 msgid ""
@@ -459,34 +657,44 @@ msgid ""
 "in the directory beneath /usr/share/man that matches the section number of "
 "the page."
 msgstr ""
+"Izlabojiet man lapas instalēšanas ceļu. Man lapām jābūt instalētām "
+"direktorijā zem /usr/share/man, kas atbilst lapas sadaļas numuram."
 
 #: include/results.h:191
 msgid "Correct the reported errors in the XML document"
-msgstr ""
+msgstr "Izlabojiet XML dokumentā ziņotās kļūdas"
 
 #: include/results.h:206
 msgid ""
 "Refer to the Desktop Entry Specification at https://standards.freedesktop."
 "org/desktop-entry-spec/latest/ for help correcting the errors and warnings"
 msgstr ""
+"Palīdzību kļūdu un brīdinājumu labošanā skatiet Desktop Entry specifikācijā: "
+"https://standards.freedesktop.org/desktop-entry-spec/latest/"
 
 #: include/results.h:221
 msgid ""
 "The Release: tag in the spec file must include a '%{?dist}' string.  Please "
 "add this to the spec file per the distribution packaging guidelines."
 msgstr ""
+"Spec faila tagā Release: jābūt virknei '%{?dist}'.  Lūdzu, pievienojiet to "
+"spec failam saskaņā ar distribūcijas pakošanas vadlīnijām."
 
 #: include/results.h:236
 msgid ""
 "The spec file name does not match the expected NAME.spec format.  Rename the "
 "spec file to conform to this policy."
 msgstr ""
+"Spec faila nosaukums neatbilst gaidītajam formātam NAME.spec.  Pārdēvējiet "
+"spec failu, lai tas atbilstu šai politikai."
 
 #: include/results.h:253
 msgid ""
 "This package is part of a module but is missing the %{modularitylabel} "
 "header tag.  Add this as a %define in the spec file and rebuild."
 msgstr ""
+"Šī pakotne ir moduļa daļa, bet tai trūkst galvenes taga %{modularitylabel}.  "
+"Pievienojiet to kā %define spec failā un būvējiet atkārtoti."
 
 #: include/results.h:260
 msgid ""
@@ -496,6 +704,10 @@ msgid ""
 "rules determining if the /data/static_context setting is required, "
 "forbidden, or recommend."
 msgstr ""
+"Šī būve satur vai nu derīgu, vai nederīgu iestatījumu /data/static_context.  "
+"Lai noteiktu, kādam jābūt iestatījumam, skatiet būvējamā produkta moduļu "
+"kārtulas.  rpminspect konfigurācijas iestatījumi arī nosaka kārtulas, vai "
+"iestatījums /data/static_context ir obligāts, aizliegts vai ieteicams."
 
 #: include/results.h:277
 msgid ""
@@ -503,24 +715,35 @@ msgid ""
 "met for the product release.  Ensure you are using the correct JDK for the "
 "build."
 msgstr ""
+"Vienā vai vairākos būves klašu failos nav izpildīta produkta laidienam "
+"vajadzīgā Java baitkoda versija.  Pārliecinieties, ka būvei izmantojat "
+"pareizo JDK."
 
 #: include/results.h:292
 msgid ""
 "File changes were found.  In most cases these are expected, but it is a good "
 "idea to verify the changes found are deliberate."
 msgstr ""
+"Tika atrastas failu izmaiņas.  Vairumā gadījumu tās ir gaidītas, taču "
+"ieteicams pārbaudīt, vai atrastās izmaiņas ir apzinātas."
 
 #: include/results.h:307
 msgid ""
 "Unexpected file moves were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file moves between builds."
 msgstr ""
+"Tika atrasta negaidīta failu pārvietošana.  Pārbaudiet, vai šīs izmaiņas ir "
+"pareizas.  Ja tās nav, pielāgojiet būvi, lai novērstu failu pārvietošanu "
+"starp būvēm."
 
 #: include/results.h:322
 msgid ""
 "Unexpected file removals were found.  Verify these changes are correct.  If "
 "they are not, adjust the build to prevent the file removals between builds."
 msgstr ""
+"Tika atrasta negaidīta failu noņemšana.  Pārbaudiet, vai šīs izmaiņas ir "
+"pareizas.  Ja tās nav, pielāgojiet būvi, lai novērstu failu noņemšanu starp "
+"būvēm."
 
 #: include/results.h:337
 #, c-format
@@ -532,6 +755,13 @@ msgid ""
 "You may also need to update the data package or local configuration file and "
 "change the forbidden_path_prefixes or forbidden_path_suffixes list."
 msgstr ""
+"Tika atrasta negaidīta failu pievienošana.  Pārbaudiet, vai šīs izmaiņas ir "
+"pareizas.  Ja tās nav, pielāgojiet būvi, lai novērstu failu pievienošanu "
+"starp būvēm.  Ja tās ir pareizas, atjauniniet %s un nosūtiet ielāpu "
+"rpminspect datu projektam, kuram pieder šis fails, lai rpminspect zinātu, ka "
+"šī izmaiņa ir gaidāma.  Iespējams, jāatjaunina arī datu pakotne vai lokālais "
+"konfigurācijas fails un jāmaina saraksts forbidden_path_prefixes vai "
+"forbidden_path_suffixes."
 
 #: include/results.h:352
 #, c-format
@@ -541,6 +771,10 @@ msgid ""
 "deliberate, but needs inspection. If this change is expected, update %s and "
 "send a patch to the project that owns that file."
 msgstr ""
+"Negaidīti mainīts avota arhīva saturs. Pakotnes versija starp būvēm "
+"nemainījās, bet avota arhīva saturs mainījās. Tas var būt apzināti, taču ir "
+"jāpārbauda. Ja šī izmaiņa ir gaidīta, atjauniniet %s un nosūtiet ielāpu "
+"projektam, kuram pieder šis fails."
 
 #: include/results.h:367
 #, c-format
@@ -549,6 +783,8 @@ msgid ""
 "permissions are expected, update %s and send a patch to the project that "
 "owns it."
 msgstr ""
+"Pārliecinieties, ka sadaļa %%files ietver makro %%defattr. Ja šīs atļaujas "
+"ir gaidītas, atjauniniet %s un nosūtiet ielāpu projektam, kuram tas pieder."
 
 #: include/results.h:374
 #, c-format
@@ -557,6 +793,9 @@ msgid ""
 "configuration, which is usually root. If this ownership is expected, update "
 "%s and send a patch to the project that owns it."
 msgstr ""
+"Bin ceļa failu īpašniekam jābūt rpminspect konfigurācijā iestatītajam "
+"bin_owner, kas parasti ir root. Ja šīs īpašumtiesības ir gaidītas, "
+"atjauniniet %s un nosūtiet ielāpu projektam, kuram tas pieder."
 
 #: include/results.h:381
 #, c-format
@@ -565,6 +804,9 @@ msgid ""
 "configuration, which is usually root. If this ownership is expect, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"Bin ceļa failu grupai jābūt rpminspect konfigurācijā iestatītajai bin_group, "
+"kas parasti ir root. Ja šīs īpašumtiesības ir gaidītas, atjauniniet %s un "
+"nosūtiet ielāpu projektam, kuram tas pieder."
 
 #: include/results.h:388
 #, c-format
@@ -573,6 +815,10 @@ msgid ""
 "or remove the world execute bit on the file (chmod o-x). If this ownership "
 "is expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"Vai nu mainiet faila grupu (chgrp) uz rpminspect konfigurācijā iestatīto "
+"bin_group, vai noņemiet failam izpildes bitu citiem (chmod o-x). Ja šīs "
+"īpašumtiesības ir gaidītas, atjauniniet %s un nosūtiet ielāpu projektam, "
+"kuram tas pieder."
 
 #: include/results.h:395
 #, c-format
@@ -581,6 +827,10 @@ msgid ""
 "or remove the group write bit on the file (chmod g-w). If this ownership is "
 "expected, update %s and send a patch to the project that owns it."
 msgstr ""
+"Vai nu mainiet faila grupu (chgrp) uz rpminspect konfigurācijā iestatīto "
+"bin_group, vai noņemiet failam grupas rakstīšanas bitu (chmod g-w). Ja šīs "
+"īpašumtiesības ir gaidītas, atjauniniet %s un nosūtiet ielāpu projektam, "
+"kuram tas pieder."
 
 #: include/results.h:402
 #, c-format
@@ -589,6 +839,10 @@ msgid ""
 "process to set correct owner and group information. If expected, update %s "
 "and send a patch to the project that owns it."
 msgstr ""
+"Pārbaudiet, vai īpašumtiesību izmaiņas ir gaidītas. Ja nav, pielāgojiet "
+"pakotnes būvēšanas procesu, lai iestatītu pareizu īpašnieka un grupas "
+"informāciju. Ja ir gaidītas, atjauniniet %s un nosūtiet ielāpu projektam, "
+"kuram tas pieder."
 
 #: include/results.h:409
 msgid ""
@@ -599,26 +853,36 @@ msgid ""
 "remedy, add a fileinfo rule for this file to the vendor data package under "
 "the appropriate product release file."
 msgstr ""
+"rpminspect gaida šim failam fileinfo kārtulu no ražotāja datu pakotnes. "
+"Parasti tas nozīmē, ka failam ir nestandarta atļauju kopa (piem., setuid) — "
+"situācija, kurā rpminspect pārbauda sarakstu fileinfo, lai nodrošinātu "
+"pakotnes atbilstību ražotāja kārtulām. Lai to novērstu, pievienojiet šim "
+"failam fileinfo kārtulu ražotāja datu pakotnē attiecīgā produkta laidiena "
+"failā."
 
 #: include/results.h:424
 msgid "Consult the shell documentation for proper syntax."
-msgstr ""
+msgstr "Pareizo sintaksi skatiet čaulas dokumentācijā."
 
 #: include/results.h:431
 msgid ""
 "The file referenced was not a known shell script in the before build but is "
 "now a shell script in the after build."
 msgstr ""
+"Norādītais fails būvē „pirms” nebija zināms čaulas skripts, bet būvē „pēc” "
+"ir čaulas skripts."
 
 #: include/results.h:438
 msgid ""
 "The referenced shell script is invalid. Consider debugging it with the '-n' "
 "option on the shell to find and fix the problem."
 msgstr ""
+"Norādītais čaulas skripts ir nederīgs. Apsveriet tā atkļūdošanu ar čaulas "
+"opciju '-n', lai atrastu un novērstu problēmu."
 
 #: include/results.h:453
 msgid "See annocheck(1) for more information."
-msgstr ""
+msgstr "Plašāku informāciju skatiet annocheck(1)."
 
 #: include/results.h:460
 msgid ""
@@ -627,6 +891,10 @@ msgid ""
 "declarations). Symbols may also appear as unfortified if the compiler is "
 "unable to determine the size of a buffer, which is not necessarily an error."
 msgstr ""
+"Nodrošiniet, ka visi objektu faili ir kompilēti ar '-O2 -D_FORTIFY_SOURCE=2' "
+"un ka ir iekļautas visas atbilstošās galvenes (nav netiešu funkciju "
+"deklarāciju). Simboli var parādīties kā nenostiprināti arī tad, ja "
+"kompilators nevar noteikt bufera izmēru, kas ne vienmēr ir kļūda."
 
 #: include/results.h:475
 msgid ""
@@ -636,6 +904,11 @@ msgid ""
 "If they are not, modify the package spec file to ensure the build links with "
 "the correct shared libraries."
 msgstr ""
+"DT_NEEDED simboli ir pievienoti vai noņemti.  Tas notiek, ja būvēšanas vidē "
+"ir citas vajadzīgo bibliotēku versijas.  Dažreiz tas ir apzināti, bet "
+"dažreiz ne.  Pārbaudiet, vai šīs izmaiņas ir gaidītas.  Ja nav, mainiet "
+"pakotnes spec failu, lai būve tiktu saistīta ar pareizajām koplietotajām "
+"bibliotēkām."
 
 #: include/results.h:490
 msgid ""
@@ -643,6 +916,9 @@ msgid ""
 "is, you can adjust the filesize inspection settings in the rpminspect.yaml "
 "file."
 msgstr ""
+"Fails ir ievērojami palielinājies.  Pārliecinieties, ka šī izmaiņa ir "
+"paredzēta.  Ja ir, varat pielāgot pārbaudes filesize iestatījumus failā "
+"rpminspect.yaml."
 
 #: include/results.h:497
 msgid ""
@@ -650,18 +926,25 @@ msgid ""
 "it is, you can adjust the filesize inspection settings in the rpminspect."
 "yaml file."
 msgstr ""
+"Fails ir ievērojami samazinājies.  Pārliecinieties, ka šī izmaiņa ir "
+"paredzēta.  Ja ir, varat pielāgot pārbaudes filesize iestatījumus failā "
+"rpminspect.yaml."
 
 #: include/results.h:504
 msgid ""
 "A previously empty file is no longer empty.  Make sure this change is "
 "intended and fix the package spec file if necessary."
 msgstr ""
+"Iepriekš tukšs fails vairs nav tukšs.  Pārliecinieties, ka šī izmaiņa ir "
+"paredzēta, un, ja nepieciešams, izlabojiet pakotnes spec failu."
 
 #: include/results.h:511
 msgid ""
 "A previously non-empty file is now empty.  Make sure this change is intended "
 "and fix the package space file if necessary."
 msgstr ""
+"Iepriekš netukšs fails tagad ir tukšs.  Pārliecinieties, ka šī izmaiņa ir "
+"paredzēta, un, ja nepieciešams, izlabojiet pakotnes spec failu."
 
 #: include/results.h:526
 #, c-format
@@ -672,6 +955,11 @@ msgid ""
 "may also be of help for this situation.  If necessary, update %s with the "
 "changes found here and send a patch to the project that owns the data file."
 msgstr ""
+"Norādītajam failam tika atrastas negaidītas spējas.  Skatiet capabilities(7) "
+"un vai nu pielāgojiet pakotnes failus, vai mainiet spēju sarakstu rpminspect "
+"ražotāja datu pakotnē.  Šādā situācijā var palīdzēt arī drošības komanda.  "
+"Ja nepieciešams, atjauniniet %s ar šeit atrastajām izmaiņām un nosūtiet "
+"ielāpu projektam, kuram pieder datu fails."
 
 #: include/results.h:541
 msgid ""
@@ -679,6 +967,8 @@ msgid ""
 "usability problems for users if module parameters were removed in a "
 "maintenance update."
 msgstr ""
+"Starp būvēm ir noņemti kodola moduļu parametri.  Tas var radīt lietojamības "
+"problēmas lietotājiem, ja moduļu parametri noņemti uzturēšanas atjauninājumā."
 
 #: include/results.h:548
 msgid ""
@@ -686,6 +976,9 @@ msgid ""
 "usability problems for users if module dependencies changed in a maintenance "
 "update."
 msgstr ""
+"Starp būvēm ir mainījušās kodola moduļu atkarības.  Tas var radīt "
+"lietojamības problēmas lietotājiem, ja moduļu atkarības mainītas uzturēšanas "
+"atjauninājumā."
 
 #: include/results.h:555
 msgid ""
@@ -693,6 +986,9 @@ msgid ""
 "usability problems for users if module device aliases changed in a "
 "maintenance update."
 msgstr ""
+"Starp būvēm ir mainījušies kodola moduļu ierīču aizstājvārdi.  Tas var radīt "
+"lietojamības problēmas lietotājiem, ja moduļu ierīču aizstājvārdi mainīti "
+"uzturēšanas atjauninājumā."
 
 #: include/results.h:565
 msgid ""
@@ -700,12 +996,16 @@ msgid ""
 "build.  This may be deliberate, but check to make sure you do not have any "
 "unexpected ExclusiveArch lines in the spec file."
 msgstr ""
+"Būvē „pirms” esošā arhitektūra tagad trūkst būvē „pēc”.  Tas var būt "
+"apzināti, taču pārbaudiet, vai spec failā nav negaidītu rindu ExclusiveArch."
 
 #: include/results.h:566
 msgid ""
 "A new architecture has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Būvē „pēc” ir parādījusies jauna arhitektūra.  Tas var liecināt par progresu "
+"skaitļošanas pasaulē."
 
 #: include/results.h:576
 msgid ""
@@ -713,31 +1013,41 @@ msgid ""
 "This may be deliberate, but check to make sure you have correct syntax "
 "defining the subpackage in the spec file"
 msgstr ""
+"Būvē „pirms” esošā apakšpakotne tagad trūkst būvē „pēc”.  Tas var būt "
+"apzināti, taču pārbaudiet, vai spec failā apakšpakotnes definēšanai "
+"izmantojat pareizu sintaksi"
 
 #: include/results.h:577
 msgid ""
 "A new subpackage has appeared in the after build.  This may indicate "
 "progress in the world of computing."
 msgstr ""
+"Būvē „pēc” ir parādījusies jauna apakšpakotne.  Tas var liecināt par "
+"progresu skaitļošanas pasaulē."
 
 #: include/results.h:587
 #, c-format
 msgid ""
 "Make sure the spec file in the after build contains a valid %changelog "
 "section."
-msgstr ""
+msgstr "Pārliecinieties, ka būves „pēc” spec failā ir derīga sadaļa %changelog."
 
 #: include/results.h:597
 msgid ""
 "Files should not be installed in old directory names.  Modify the package to "
 "install the affected file to the preferred directory."
 msgstr ""
+"Failus nevajadzētu instalēt vecajos direktoriju nosaukumos.  Mainiet "
+"pakotni, lai skarto failu instalētu vēlamajā direktorijā."
 
 #: include/results.h:607
 msgid ""
 "ELF .o and .a files should not carry LTO (Link Time Optimization) bytecode.  "
 "Make sure you have stripped LTO bytecode from those files at install time."
 msgstr ""
+"ELF .o un .a failos nedrīkst būt LTO (saistīšanas laika optimizācijas) "
+"baitkoda.  Pārliecinieties, ka instalēšanas laikā LTO baitkods no šiem "
+"failiem ir noņemts."
 
 #: include/results.h:617
 msgid ""
@@ -746,6 +1056,11 @@ msgid ""
 "and have a non-symlink turn in to a symlink, ensure this is deliberate.  "
 "NOTE:  You cannot turn a directory in to a symlink due to RPM limitations."
 msgstr ""
+"Pārliecinieties, ka simboliskās saites norāda uz derīgu mērķi kādā no būves "
+"apakšpakotnēm; karājošās simboliskās saites nav atļautas.  Ja salīdzināt "
+"būves un kāds objekts, kas nav simboliskā saite, pārvēršas par simbolisko "
+"saiti, pārliecinieties, ka tas ir apzināti.  PIEZĪME:  RPM ierobežojumu dēļ "
+"direktoriju nevar pārvērst par simbolisko saiti."
 
 #: include/results.h:618
 #, c-format
@@ -758,6 +1073,14 @@ msgid ""
 "scriptlet for replacing a directory.  See the packaging guidelines for "
 "'Scriptlet to replace a directory' for more information."
 msgstr ""
+"Pārliecinieties, ka simboliskās saites norāda uz derīgu mērķi kādā no būves "
+"apakšpakotnēm; karājošās simboliskās saites nav atļautas.  Ja salīdzināt "
+"būves un kāds objekts, kas nav simboliskā saite, pārvēršas par simbolisko "
+"saiti, pārliecinieties, ka tas ir apzināti.  PIEZĪME:  RPM ierobežojumu dēļ "
+"direktoriju nevar pārvērst par simbolisko saiti.  Ja tas noteikti jādara, "
+"pārliecinieties, ka iekļaujat direktorijas aizstāšanai skriptletu "
+"%pretrans.  Plašāku informāciju skatiet pakošanas vadlīniju sadaļā "
+"'Scriptlet to replace a directory'."
 
 #: include/results.h:628
 #, c-format
@@ -767,6 +1090,10 @@ msgid ""
 "See the RPM documentation or distribution package maintainer guide for more "
 "information."
 msgstr ""
+"Noņemiet aizliegtās ceļu atsauces no norādītās rindas sadaļā %files.  "
+"Daudzos gadījumos ceļu atrašanās vietu norādīšanai var izmantot RPM makro.  "
+"Plašāku informāciju skatiet RPM dokumentācijā vai distribūcijas pakotņu "
+"uzturētāju rokasgrāmatā."
 
 #: include/results.h:638
 msgid ""
@@ -774,6 +1101,9 @@ msgid ""
 "is intended and if necessary fix the spec file so the correct file is "
 "included in the built package."
 msgstr ""
+"Daudzos gadījumos MIME tipa maiņa ir apzināta.  Pārbaudiet, vai izmaiņa ir "
+"paredzēta, un, ja nepieciešams, izlabojiet spec failu, lai uzbūvētajā "
+"pakotnē tiktu iekļauts pareizais fails."
 
 #: include/results.h:648
 msgid ""
@@ -781,6 +1111,9 @@ msgid ""
 "users.  See the abidiff(1) documentation and the distribution ABI policies "
 "to determine if this detected change is allowed."
 msgstr ""
+"ABI izmaiņas, kas ieviestas uzturēšanas atjauninājumos, var radīt problēmas "
+"lietotājiem.  Lai noteiktu, vai šī konstatētā izmaiņa ir atļauta, skatiet "
+"abidiff(1) dokumentāciju un distribūcijas ABI politikas."
 
 #: include/results.h:658
 msgid ""
@@ -788,6 +1121,9 @@ msgid ""
 "problems for users.  See the libabigail documentation and the distribution "
 "KMI policy to determine if this detected change is allowed."
 msgstr ""
+"Kodola moduļu interfeiss, kas ieviests uzturēšanas atjauninājumos, var radīt "
+"problēmas lietotājiem.  Lai noteiktu, vai šī konstatētā izmaiņa ir atļauta, "
+"skatiet libabigail dokumentāciju un distribūcijas KMI politiku."
 
 #: include/results.h:668
 #, c-format
@@ -797,6 +1133,10 @@ msgid ""
 "configuration files, make sure the package can handle upgrading an existing "
 "package -or- honor the old file locations."
 msgstr ""
+"%config izmaiņas jāveic uzmanīgi.  Pārliecinieties, ka instalēts pareizais "
+"fails un pareizajā vietā.  Ja pakotne pārstrukturē konfigurācijas failus, "
+"pārliecinieties, ka pakotne spēj apstrādāt esošas pakotnes jaunināšanu -vai- "
+"ievēro vecās failu atrašanās vietas."
 
 #: include/results.h:678
 #, c-format
@@ -805,6 +1145,9 @@ msgid ""
 "the package is not a rebase.  Sometimes upstream projects rename or move "
 "documentation files and the spec file needs to account for those changes."
 msgstr ""
+"%doc failos atrastas izmaiņas.  Ja pakotne nav pārbāzēta, pārbaudiet, vai "
+"šīs izmaiņas ir paredzētas.  Dažreiz augšteces projekti pārdēvē vai pārvieto "
+"dokumentācijas failus, un spec failā šīs izmaiņas jāņem vērā."
 
 #: include/results.h:688
 msgid ""
@@ -814,6 +1157,10 @@ msgid ""
 "the source package has any zero length or otherwise invalid patches and "
 "correct the problem."
 msgstr ""
+"Tika atrasts nederīgs ielāpa fails.  Parasti tas ir ielāpu kolekcijas "
+"ģenerēšanas rezultāts, salīdzinot divus kokus.  Ja faili pazūd, iegūtajā "
+"kolekcijā var rasties nulles garuma ielāpi.  Pārbaudiet, vai pirmkoda "
+"pakotnē nav nulles garuma vai citādi nederīgu ielāpu, un novērsiet problēmu."
 
 #: include/results.h:690
 #, c-format
@@ -827,6 +1174,13 @@ msgid ""
 "define the patch at the top of the spec file.  So Patch47 is applied with "
 "either a '%patch 47', '%patch -P 47', '%patch -P47', or '%patch47' macro."
 msgstr ""
+"Nosauktais ielāps ir definēts pirmkoda RPM galvenē (tas nozīmē, ka spec "
+"failā tam ir definīcija PatchN:), bet spec failā tas nekur netiek lietots.  "
+"Tam trūkst atbilstoša makro %patch, un spec failā nav makro %autosetup vai "
+"%autopatch.  To var labot, spec failā (parasti sadaļā %prep) pievienojot "
+"atbilstošo makro %patch.  Ar makro %patch norādītais numurs atbilst numuram, "
+"kas izmantots ielāpa definēšanai spec faila augšdaļā.  Tātad Patch47 tiek "
+"lietots ar makro '%patch 47', '%patch -P 47', '%patch -P47' vai '%patch47'."
 
 #: include/results.h:692
 #, c-format
@@ -836,12 +1190,18 @@ msgid ""
 "For example, Patch47 needs to have either a '%patch 47', '%patch -P 47', "
 "'%patch -P47', or '%patch47' macro."
 msgstr ""
+"Nosauktais ielāps ir definēts, bet tā numurs neatbilst makro %patch.  "
+"Pārliecinieties, ka visiem numurētajiem ielāpiem ir atbilstoši makro "
+"%patch.  Piemēram, Patch47 vajadzīgs makro '%patch 47', '%patch -P 47', "
+"'%patch -P47' vai '%patch47'."
 
 #: include/results.h:694
 msgid ""
 "The defined patch file is not something rpminspect can handle.  This is "
 "likely a bug and should be reported to the upstream rpminspect project."
 msgstr ""
+"Definētais ielāpa fails nav tāds, ko rpminspect spēj apstrādāt.  Visticamāk, "
+"tā ir kļūda, un par to jāziņo augšteces projektam rpminspect."
 
 #: include/results.h:704
 msgid ""
@@ -851,6 +1211,11 @@ msgid ""
 "sure the file in question is clean, please file a bug with rpminspect for "
 "further help."
 msgstr ""
+"ClamAV ir atradis vīrusu nosauktajā failā.  Tas var būt viltus pozitīvs "
+"rezultāts, taču jums attiecīgais fails jāpārbauda manuāli, lai "
+"pārliecinātos, ka tas ir tīrs.  Tā var būt problēma ar ClamAV datubāzi vai "
+"noteikšanu.  Ja ir pārliecība, ka attiecīgais fails ir tīrs, lūdzu, "
+"iesniedziet kļūdas ziņojumu rpminspect, lai saņemtu papildu palīdzību."
 
 #: include/results.h:714
 #, c-format
@@ -860,6 +1225,9 @@ msgid ""
 "vendor data package for the product.  Modify the %s file and send a patch to "
 "the project that owns it."
 msgstr ""
+"Pakotnē tika atrasts fails ar iespējami politiski jutīgu saturu.  Ja šis "
+"fails ir atļauts, tas jāpievieno produkta rpminspect ražotāja datu "
+"pakotnei.  Mainiet failu %s un nosūtiet ielāpu projektam, kuram tas pieder."
 
 #: include/results.h:724
 msgid ""
@@ -872,6 +1240,14 @@ msgid ""
 "order to allow for backwards compatibility.  Whenever possible the "
 "deprecated functions should not be used."
 msgstr ""
+"Pakotnes ELF failā tika atrasti aizliegti simboli.  rpminspect "
+"konfigurācijas iestatījumi norāda, ka nosauktie simboli pakotnēs ir "
+"aizliegti.  Ja tas ir apzināti, iespējams, vēlēsieties atspējot pārbaudi "
+"badfuncs.  Ja tas nav apzināti, skatiet nosaukto simbolu man lapas, lai "
+"noskaidrotu, kuras API funkcijas aizstājušas aizliegtos simbolus.  Parasti "
+"funkcija tiek atzīmēta kā novecojusi, taču joprojām tiek nodrošināta, lai "
+"saglabātu atpakaļsaderību.  Kad vien iespējams, novecojušās funkcijas "
+"nevajadzētu izmantot."
 
 #: include/results.h:734
 msgid ""
@@ -882,6 +1258,11 @@ msgid ""
 "try using a program such as patchelf to remove these properties from the ELF "
 "files."
 msgstr ""
+"Šīs pakotnes ELF koplietotajos objektos tika atrastas īpašības DT_RPATH vai "
+"DT_RUNPATH.  DT_RPATH un DT_RUNPATH izmantošana nav ieteicama, izņemot "
+"noteiktas situācijas.  Pārbaudiet, vai spec faila posmā %build atspējojat "
+"rpath.  Ja to nevar viegli izdarīt, varat mēģināt noņemt šīs īpašības no ELF "
+"failiem ar tādu programmu kā patchelf."
 
 #: include/results.h:736
 msgid ""
@@ -889,6 +1270,9 @@ msgid ""
 "This indicates a linker error and should not happen.  ELF objects should "
 "only carry DT_RPATH or DT_RUNPATH, never both."
 msgstr ""
+"ELF koplietotajā objektā tika atrastas gan īpašība DT_RPATH, gan "
+"DT_RUNPATH.  Tas norāda uz saistītāja kļūdu, un tam nevajadzētu notikt.  ELF "
+"objektos drīkst būt tikai DT_RPATH vai DT_RUNPATH, nekad abi."
 
 #: include/results.h:746
 msgid ""
@@ -898,6 +1282,11 @@ msgid ""
 "discuss the situation with the Product Security Team to determine the "
 "correct course of action."
 msgstr ""
+"rpminspect konfigurācijas failā ir aizliegto Unicode koda punktu saraksts.  "
+"Viens no tiem tika atrasts izvilktajā un ielāpotajā pirmkoda kokā vai kādā "
+"no pirmkoda RPM teksta avota failiem.  Vai nu noņemiet šo koda punktu, vai "
+"apspriediet situāciju ar produkta drošības komandu, lai noteiktu pareizo "
+"rīcību."
 
 #: include/results.h:748
 #, c-format
@@ -908,6 +1297,10 @@ msgid ""
 "running.  A common cause is removal of the working directory while the "
 "program is executing."
 msgstr ""
+"Spec faila sadaļu %prep kāda iemesla dēļ nevarēja izpildīt.  Parasti tas ir "
+"librpmbuild kļūmes rezultāts, kas parasti saistīta ar arhīvu izvilkšanas "
+"problēmām vai failu sistēmas izmaiņām, kamēr darbojas rpminspect.  Bieži "
+"iemesls ir darba direktorijas noņemšana programmas izpildes laikā."
 
 #: include/results.h:758
 msgid ""
@@ -915,6 +1308,9 @@ msgid ""
 "Check the spec file for this dependency and ensure you have not misspelled a "
 "macro or used a macro name that does not exist."
 msgstr ""
+"Norādītajā atkarības kārtulā tika atrasti neizvērsti RPM spec faila makro.  "
+"Pārbaudiet šīs atkarības spec failu un pārliecinieties, ka makro nav "
+"uzrakstīts kļūdaini un netiek izmantots neeksistējošs makro nosaukums."
 
 #: include/results.h:760
 msgid ""
@@ -923,6 +1319,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{version}-%{release}' "
 "in the spec file."
 msgstr ""
+"Pievienojiet nosauktās apakšpakotnes spec failam norādīto skaidro Requires.  "
+"Apakšpakotnēm, kas atkarīgas no citas apakšpakotnes koplietotajām "
+"bibliotēkām, spec failā jābūt skaidram 'Requires: SUBPACKAGE_NAME = %"
+"{version}-%{release}'."
 
 #: include/results.h:762
 msgid ""
@@ -931,6 +1331,10 @@ msgid ""
 "must carry an explicit 'Requires: SUBPACKAGE_NAME = %{epoch}:%{version}-"
 "%{release}' in the spec file."
 msgstr ""
+"Pievienojiet nosauktās apakšpakotnes spec failam norādīto skaidro Requires.  "
+"Apakšpakotnēm, kas atkarīgas no citas apakšpakotnes koplietotajām "
+"bibliotēkām, spec failā jābūt skaidram 'Requires: SUBPACKAGE_NAME = %{epoch}"
+":%{version}-%{release}'."
 
 #: include/results.h:764
 #, c-format
@@ -941,6 +1345,11 @@ msgid ""
 "spec file but you do need to make sure only one subpackage is packaging up "
 "the shared library in question."
 msgstr ""
+"Pārbaudiet apakšpakotņu sadaļas %files un skaidros Provides paziņojumus.  "
+"Konkrētu koplietoto bibliotēku drīkst nodrošināt tikai viena apakšpakotne.  "
+"Koplietoto bibliotēku nosaukumi automātiski tiek pievienoti kā Provides, "
+"tāpēc tie nav jānorāda spec failā, taču jāpārliecinās, ka attiecīgo "
+"koplietoto bibliotēku iepako tikai viena apakšpakotne."
 
 #: include/results.h:766
 msgid ""
@@ -950,6 +1359,11 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Būvē „pirms” uzskaitītā atkarība būvē „pēc” mainījusies uz norādīto "
+"atkarību.  Ja tas ir rezultāts VERIFY, tas nozīmē, ka rpminspect pamanīja "
+"izmaiņu, ko tas uzskata par pakotnes uzturēšanas atjauninājumu.  Rezultāts "
+"INFO nozīmē, ka tas pamanīja šo izmaiņu, bet uzskata to par pieņemamu, jo "
+"salīdzina pārbāzētu būvi."
 
 #: include/results.h:768
 msgid ""
@@ -959,6 +1373,11 @@ msgid ""
 "result means it noticed this change, but deems it ok because it is comparing "
 "a rebased build."
 msgstr ""
+"Būvē „pēc” redzama jauna atkarība, kuras nebija būvē „pirms”.  Ja tas ir "
+"rezultāts VERIFY, tas nozīmē, ka rpminspect pamanīja izmaiņu, ko tas uzskata "
+"par pakotnes uzturēšanas atjauninājumu.  Rezultāts INFO nozīmē, ka tas "
+"pamanīja šo izmaiņu, bet uzskata to par pieņemamu, jo salīdzina pārbāzētu "
+"būvi."
 
 #: include/results.h:770
 msgid ""
@@ -968,6 +1387,11 @@ msgid ""
 "An INFO result means it noticed this change, but deems it ok because it is "
 "comparing a rebased build."
 msgstr ""
+"Būvē „pirms” redzamā atkarība nav redzama būvē „pēc”, kas nozīmē, ka tā "
+"noņemta vai pazaudēta.  Ja tas ir rezultāts VERIFY, tas nozīmē, ka "
+"rpminspect pamanīja izmaiņu, ko tas uzskata par pakotnes uzturēšanas "
+"atjauninājumu.  Rezultāts INFO nozīmē, ka tas pamanīja šo izmaiņu, bet "
+"uzskata to par pieņemamu, jo salīdzina pārbāzētu būvi."
 
 #: include/results.h:772
 msgid ""
@@ -977,151 +1401,157 @@ msgid ""
 "%{version}-%{release}' to capture the package package Epoch in the "
 "dependency."
 msgstr ""
+"Pakotnei ir Epoch vērtība, kas lielāka par nulli, bet skaidrās apakšpakotņu "
+"atkarības to neizmanto konsekventi.  Ziņotajai atkarībai '= %{version}-%"
+"{release}' jāmaina uz '= %{epoch}:%{version}-%{release}', lai atkarībā "
+"iekļautu pakotnes Epoch."
 
 #: include/results.h:781
 msgid ""
 "Refer to the udev documentation at https://www.freedesktop.org/software/"
 "systemd/man/udev.html for help correcting the errors and warnings."
 msgstr ""
+"Palīdzību kļūdu un brīdinājumu labošanā skatiet udev dokumentācijā: https://"
+"www.freedesktop.org/software/systemd/man/udev.html."
 
 #: lib/abi.c:65
 #, c-format
 msgid "*** malformed ABI level identifier: %s"
-msgstr ""
+msgstr "*** nepareizi veidots ABI līmeņa identifikators: %s"
 
 #: lib/abi.c:70
 #, c-format
 msgid "*** ABI level %d already defined"
-msgstr ""
+msgstr "*** ABI līmenis %d jau ir definēts"
 
 #: lib/abi.c:84
 #, c-format
 msgid "*** malformed ABI level entry: %s"
-msgstr ""
+msgstr "*** nepareizi veidots ABI līmeņa ieraksts: %s"
 
 #: lib/builds.c:73
 #, c-format
 msgid "*** unable to create download directory %s"
-msgstr ""
+msgstr "*** nevar izveidot lejupielāžu direktoriju %s"
 
 #: lib/builds.c:85
 #, c-format
 msgid "*** unknown working directory type: %d"
-msgstr ""
+msgstr "*** nezināms darba direktorijas tips: %d"
 
 #: lib/builds.c:173
 #, c-format
 msgid "*** unable to read %s, skipping"
-msgstr ""
+msgstr "*** nevar nolasīt %s, izlaiž"
 
 #: lib/builds.c:205
 #, c-format
 msgid "*** unknown directory member encountered: %s"
-msgstr ""
+msgstr "*** sastapts nezināms direktorijas elements: %s"
 
 #: lib/builds.c:234
 #, c-format
 msgid "There is not enough available space to download the requested %s.\n"
-msgstr ""
+msgstr "Nav pietiekami daudz brīvas vietas, lai lejupielādētu pieprasīto: %s.\n"
 
 #: lib/builds.c:235 lib/peers.c:177
 #, c-format
 msgid "    Need %s in %s, have %s.\n"
-msgstr ""
+msgstr "    Vajag %s direktorijā %s, ir %s.\n"
 
 #: lib/builds.c:236 lib/peers.c:178
 #, c-format
 msgid "See the `-w' option for specifying an alternate working directory.\n"
-msgstr ""
+msgstr "Alternatīvas darba direktorijas norādīšanai skatiet opciju `-w'.\n"
 
 #: lib/builds.c:249
 #, c-format
 msgid "Unable to determine the required space to download the requested %s.\n"
-msgstr ""
+msgstr "Nevar noteikt vietu, kas vajadzīga pieprasītā lejupielādei: %s.\n"
 
 #: lib/builds.c:250
 #, c-format
 msgid "Ensure %s has sufficient space available."
-msgstr ""
+msgstr "Nodrošiniet, lai %s būtu pietiekami daudz brīvas vietas."
 
 #: lib/builds.c:290 lib/builds.c:294
 msgid "build"
-msgstr ""
+msgstr "būve"
 
 #: lib/builds.c:320
 msgid "Downloading module"
-msgstr ""
+msgstr "Lejupielādē moduli"
 
 #: lib/builds.c:323
 msgid "Downloading RPM build"
-msgstr ""
+msgstr "Lejupielādē RPM būvi"
 
 #: lib/builds.c:373 lib/inspect_modularity.c:47
 #, c-format
 msgid "*** ignoring malformed module metadata file: %s"
-msgstr ""
+msgstr "*** ignorē nepareizi veidotu moduļa metadatu failu: %s"
 
 #: lib/builds.c:383
 #, c-format
 msgid "*** malformed rpm filters in file: %s"
-msgstr ""
+msgstr "*** nepareizi veidoti rpm filtri failā: %s"
 
 #: lib/builds.c:541 lib/builds.c:545
 msgid "task"
-msgstr ""
+msgstr "uzdevums"
 
 #: lib/builds.c:659 lib/builds.c:662
 msgid "RPM"
-msgstr ""
+msgstr "RPM"
 
 #: lib/builds.c:791
 #, c-format
 msgid "*** `%s' already exists in %s"
-msgstr ""
+msgstr "*** „%s” jau eksistē direktorijā %s"
 
 #: lib/builds.c:829
 #, c-format
 msgid "*** unable to find local build: %s"
-msgstr ""
+msgstr "*** nevar atrast lokālu būvi: %s"
 
 #: lib/builds.c:841
 #, c-format
 msgid "*** unable to download RPM: %s"
-msgstr ""
+msgstr "*** nevar lejupielādēt RPM: %s"
 
 #: lib/builds.c:860 lib/builds.c:893 lib/builds.c:903
 #, c-format
 msgid "*** unable to find build %s in Koji hub %s"
-msgstr ""
+msgstr "*** nevar atrast būvi %s Koji centrmezglā %s"
 
 #: lib/builds.c:872
 #, c-format
 msgid "*** unable to find task %s in Koji hub %s"
-msgstr ""
+msgstr "*** nevar atrast uzdevumu %s Koji centrmezglā %s"
 
 #: lib/checksums.c:91
 #, c-format
 msgid "*** %s is a FIFO"
-msgstr ""
+msgstr "*** %s ir FIFO"
 
 #: lib/copyfile.c:117
 #, c-format
 msgid "%s already exists"
-msgstr ""
+msgstr "%s jau eksistē"
 
 #: lib/copyfile.c:122
 msgid ", overwriting"
-msgstr ""
+msgstr ", pārraksta"
 
 #: lib/curl.c:267 lib/readfile.c:60
 #, c-format
 msgid "*** unable to read %s"
-msgstr ""
+msgstr "*** nevar nolasīt %s"
 
 #: lib/fileinfo.c:64
 #, c-format
 msgid "%s in %s on %s carries expected mode %04o"
-msgstr ""
+msgstr "%s pakotnē %s arhitektūrā %s ir gaidītais režīms %04o"
 
 #: lib/fileinfo.c:76
 #, c-format
@@ -1129,6 +1559,8 @@ msgid ""
 "%s in %s on %s carries unexpected mode %04o; expected mode %04o; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s pakotnē %s arhitektūrā %s ir negaidīts režīms %04o; gaidītais režīms "
+"%04o; nepieciešama drošības komandas pārbaude"
 
 #: lib/fileinfo.c:96
 #, c-format
@@ -1136,11 +1568,13 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o, Security Team review may be "
 "required"
 msgstr ""
+"%s pakotnē %s arhitektūrā %s ir nedrošs režīms %04o, var būt nepieciešama "
+"drošības komandas pārskatīšana"
 
 #: lib/fileinfo.c:155
 #, c-format
 msgid "%s in %s on %s carries expected owner '%s'"
-msgstr ""
+msgstr "%s pakotnē %s arhitektūrā %s ir gaidītais īpašnieks „%s”"
 
 #: lib/fileinfo.c:168
 #, c-format
@@ -1148,6 +1582,8 @@ msgid ""
 "%s in %s on %s carries unexpected owner '%s'; expected owner '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s pakotnē %s arhitektūrā %s ir negaidīts īpašnieks „%s”; gaidītais "
+"īpašnieks „%s”; nepieciešama drošības komandas pārbaude"
 
 #: lib/fileinfo.c:192 lib/fileinfo.c:286
 #, c-format
@@ -1155,11 +1591,14 @@ msgid ""
 "%s in %s on %s carries insecure mode %04o but has no fileinfo rule for owner "
 "specification, Security Team review may be required"
 msgstr ""
+"%s pakotnē %s arhitektūrā %s ir nedrošs režīms %04o, bet nav fileinfo "
+"kārtulas īpašnieka norādei, var būt nepieciešama drošības komandas "
+"pārskatīšana"
 
 #: lib/fileinfo.c:249
 #, c-format
 msgid "%s in %s on %s carries expected group '%s'"
-msgstr ""
+msgstr "%s pakotnē %s arhitektūrā %s ir gaidītā grupa „%s”"
 
 #: lib/fileinfo.c:262
 #, c-format
@@ -1167,154 +1606,161 @@ msgid ""
 "%s in %s on %s carries group unexpected '%s'; expected group '%s'; requires "
 "inspection by the Security Team"
 msgstr ""
+"%s pakotnē %s arhitektūrā %s ir negaidīta grupa „%s”; gaidītā grupa „%s”; "
+"nepieciešama drošības komandas pārbaude"
 
 #: lib/init.c:226
 #, c-format
 msgid "*** invalid input string `%s`"
-msgstr ""
+msgstr "*** nederīga ievades virkne „%s”"
 
 #: lib/init.c:253 lib/init.c:262 lib/init.c:270 lib/init.c:282 lib/init.c:291
 #: lib/init.c:299 lib/init.c:311 lib/init.c:320 lib/init.c:328 lib/init.c:340
 #, c-format
 msgid "*** invalid mode string: %s"
-msgstr ""
+msgstr "*** nederīga režīma virkne: %s"
 
 #: lib/init.c:378
 #, c-format
 msgid "*** problem adding entries to array %s->%s"
-msgstr ""
+msgstr "*** problēma, pievienojot ierakstus masīvam %s->%s"
 
 #: lib/init.c:399
 #, c-format
 msgid "*** problem adding ignore entries to %s"
-msgstr ""
+msgstr "*** problēma, pievienojot ignorēšanas ierakstus %s"
 
 #: lib/init.c:418 lib/init.c:432
 msgid "*** error reading "
-msgstr ""
+msgstr "*** kļūda, nolasot "
 
 #: lib/init.c:458
 #, c-format
 msgid "*** ignoring malformed section %s->%s"
-msgstr ""
+msgstr "*** ignorē nepareizi veidotu sadaļu %s->%s"
 
 #: lib/init.c:515 lib/init.c:528
 #, c-format
 msgid "*** error reading %s ignore pattern"
-msgstr ""
+msgstr "*** kļūda, nolasot %s ignorēšanas šablonu"
 
 #: lib/init.c:544
 #, c-format
 msgid "*** flag must be 'on' or 'off'; ignoring '%s'"
-msgstr ""
+msgstr "*** karogam jābūt 'on' vai 'off'; ignorē „%s”"
 
 #: lib/init.c:548
 #, c-format
 msgid "*** unknown inspections: `%s`"
-msgstr ""
+msgstr "*** nezināmas pārbaudes: „%s”"
 
 #: lib/init.c:559
 msgid "*** malformed/unknown inspections section"
-msgstr ""
+msgstr "*** nepareizi veidota/nezināma pārbaužu sadaļa"
 
 #: lib/init.c:591
 #, c-format
 msgid "*** ignoring malformed %s configuration file: %s"
-msgstr ""
+msgstr "*** ignorē nepareizi veidotu %s konfigurācijas failu: %s"
 
 #: lib/init.c:653
 #, c-format
 msgid "*** unknown modularity static context settiongs '%s'"
-msgstr ""
+msgstr "*** nezināmi modularitātes statiskā konteksta iestatījumi „%s”"
 
 #: lib/init.c:717
 #, c-format
 msgid "*** unknown specname match setting '%s', defaulting to 'full'"
 msgstr ""
+"*** nezināms specname match iestatījums „%s”, pēc noklusējuma izmanto 'full'"
 
 #: lib/init.c:732
 #, c-format
 msgid "*** unknown specname primary setting '%s', defaulting to 'name'"
 msgstr ""
+"*** nezināms specname primary iestatījums „%s”, pēc noklusējuma izmanto "
+"'name'"
 
 #: lib/init.c:747
 #, c-format
 msgid "*** invalid annocheck failure_reporting_level: %s, defaulting to %s"
 msgstr ""
+"*** nederīgs annocheck failure_reporting_level: %s, pēc noklusējuma izmanto "
+"%s"
 
 #: lib/init.c:804
 msgid "*** malformed badfuncs->allowed section"
-msgstr ""
+msgstr "*** nepareizi veidota sadaļa badfuncs->allowed"
 
 #: lib/init.c:822
 #, c-format
 msgid "*** error reading unicode exclude regular expression: %s"
-msgstr ""
+msgstr "*** kļūda, nolasot unicode izslēgšanas regulāro izteiksmi: %s"
 
 #: lib/init.c:832
 msgid "*** malformed rpmdeps->ignore section; skipping"
-msgstr ""
+msgstr "*** nepareizi veidota sadaļa rpmdeps->ignore; izlaiž"
 
 #: lib/init.c:968
 #, c-format
 msgid "*** Invalid filename in the fileinfo list: %s"
-msgstr ""
+msgstr "*** Nederīgs faila nosaukums sarakstā fileinfo: %s"
 
 #: lib/init.c:969
 msgid "*** From this invalid line:"
-msgstr ""
+msgstr "*** No šīs nederīgās rindas:"
 
 #: lib/init.c:970
 #, c-format
 msgid "***     %s"
-msgstr ""
+msgstr "***     %s"
 
 #: lib/init.c:1121
 #, c-format
 msgid "*** unexpected token `%s' seen in %s, cannot continue"
-msgstr ""
+msgstr "*** negaidīta leksēma „%s” sastapta %s, nevar turpināt"
 
 #: lib/init.c:1414
 #, c-format
 msgid "*** invalid security rule: %s"
-msgstr ""
+msgstr "*** nederīga drošības kārtula: %s"
 
 #: lib/init.c:1426
 #, c-format
 msgid "*** unknown security rule: %s"
-msgstr ""
+msgstr "*** nezināma drošības kārtula: %s"
 
 #: lib/init.c:1435
 #, c-format
 msgid "*** unknown security action: %s"
-msgstr ""
+msgstr "*** nezināma drošības darbība: %s"
 
 #: lib/init.c:1461
 #, c-format
 msgid "*** malformed security line: %s"
-msgstr ""
+msgstr "*** nepareizi veidota drošības rinda: %s"
 
 #: lib/init.c:1622
 #, c-format
 msgid "*** missing configuration file `%s'"
-msgstr ""
+msgstr "*** trūkst konfigurācijas faila „%s”"
 
 #: lib/init.c:1658
 #, c-format
 msgid "*** unable to find profile '%s'"
-msgstr ""
+msgstr "*** nevar atrast profilu „%s”"
 
 #: lib/inspect_abidiff.c:266
 msgid "abidiff usage error"
-msgstr ""
+msgstr "abidiff lietošanas kļūda"
 
 #: lib/inspect_abidiff.c:275
 msgid "ABI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ABI izmaiņa ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_abidiff.c:284
 msgid "ABI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ABI nesaderīga izmaiņa ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_abidiff.c:296
 #, c-format
@@ -1322,6 +1768,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s with ABI compatibility "
 "level %ld on %s revealed ABI differences."
 msgstr ""
+"Salīdzinot %s veco un jauno versiju pakotnē %s ar ABI saderības līmeni %ld "
+"arhitektūrā %s, atklājās ABI atšķirības."
 
 #: lib/inspect_abidiff.c:298
 #, c-format
@@ -1329,6 +1777,8 @@ msgid ""
 "Comparing old vs. new version of %s in package %s on %s revealed ABI "
 "differences."
 msgstr ""
+"Salīdzinot %s veco un jauno versiju pakotnē %s arhitektūrā %s, atklājās ABI "
+"atšķirības."
 
 #: lib/inspect_abidiff.c:302
 #, c-format
@@ -1336,11 +1786,14 @@ msgid ""
 "Comparing from %s to %s in package %s with ABI compatibility level %ld on %s "
 "revealed ABI differences."
 msgstr ""
+"Salīdzinot no %s uz %s pakotnē %s ar ABI saderības līmeni %ld arhitektūrā "
+"%s, atklājās ABI atšķirības."
 
 #: lib/inspect_abidiff.c:304
 #, c-format
 msgid "Comparing from %s to %s in package %s on %s revealed ABI differences."
 msgstr ""
+"Salīdzinot no %s uz %s pakotnē %s arhitektūrā %s, atklājās ABI atšķirības."
 
 #: lib/inspect_abidiff.c:309
 #, c-format
@@ -1349,6 +1802,9 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Komanda: %s\n"
+"\n"
+"%s"
 
 #: lib/inspect_addedfiles.c:149
 #, c-format
@@ -1356,10 +1812,12 @@ msgid ""
 "Packages should not contain files or directories starting with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Pakotnēs nedrīkst būt faili vai direktorijas, kas sākas ar „%s”, arhitektūrā "
+"%s pakotnē %s: %s"
 
 #: lib/inspect_addedfiles.c:150 lib/inspect_addedfiles.c:164
 msgid "invalid directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "nederīga direktorija ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_addedfiles.c:163
 #, c-format
@@ -1367,15 +1825,17 @@ msgid ""
 "Packages should not contain files or directories ending with `%s` on %s in "
 "%s: %s"
 msgstr ""
+"Pakotnēs nedrīkst būt faili vai direktorijas, kas beidzas ar „%s”, "
+"arhitektūrā %s pakotnē %s: %s"
 
 #: lib/inspect_addedfiles.c:177
 #, c-format
 msgid "Forbidden directory `%s` found on %s in %s: %s"
-msgstr ""
+msgstr "Atrasta aizliegta direktorija „%s” arhitektūrā %s pakotnē %s: %s"
 
 #: lib/inspect_addedfiles.c:178
 msgid "forbidden directory ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "aizliegta direktorija ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_addedfiles.c:209
 #, c-format
@@ -1383,202 +1843,204 @@ msgid ""
 "New security-related file `%s` added on %s in %s requires inspection by the "
 "Security Team"
 msgstr ""
+"Jaunam ar drošību saistītam failam „%s”, kas pievienots arhitektūrā %s "
+"pakotnē %s, nepieciešama drošības komandas pārbaude"
 
 #: lib/inspect_addedfiles.c:211
 msgid "new security-related file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "jauns ar drošību saistīts fails ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_addedfiles.c:231
 #, c-format
 msgid "`%s` added on %s in %s"
-msgstr ""
+msgstr "„%s” pievienots arhitektūrā %s pakotnē %s"
 
 #: lib/inspect_addedfiles.c:232
 msgid "new file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "jauns fails ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_addedfiles.c:248
 msgid "the fileinfo list"
-msgstr ""
+msgstr "saraksts fileinfo"
 
 #: lib/inspect_annocheck.c:116 lib/inspect_annocheck.c:151
 #, c-format
 msgid "*** libannocheck_enable_profile: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_profile: %s"
 
 #: lib/inspect_annocheck.c:136
 #, c-format
 msgid "*** libannocheck_get_known_profiles: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_profiles: %s"
 
 #: lib/inspect_annocheck.c:168
 msgid "NOT RUN"
-msgstr ""
+msgstr "NAV PALAISTS"
 
 #: lib/inspect_annocheck.c:170
 msgid "PASSED"
-msgstr ""
+msgstr "IZTURĒTS"
 
 #: lib/inspect_annocheck.c:172 lib/output_summary.c:59
 msgid "FAILED"
-msgstr ""
+msgstr "NEIZDEVĀS"
 
 #: lib/inspect_annocheck.c:174
 msgid "MAYBE"
-msgstr ""
+msgstr "IESPĒJAMS"
 
 #: lib/inspect_annocheck.c:176
 msgid "skipped"
-msgstr ""
+msgstr "izlaists"
 
 #: lib/inspect_annocheck.c:178 lib/strfuncs.c:557
 msgid "UNKNOWN"
-msgstr ""
+msgstr "NEZINĀMS"
 
 #: lib/inspect_annocheck.c:226
 #, c-format
 msgid "*** libannocheck_init: %s"
-msgstr ""
+msgstr "*** libannocheck_init: %s"
 
 #: lib/inspect_annocheck.c:255
 #, c-format
 msgid "*** libannocheck_%s_test: %s"
-msgstr ""
+msgstr "*** libannocheck_%s_test: %s"
 
 #: lib/inspect_annocheck.c:267
 #, c-format
 msgid "*** libannocheck_enable_all_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_enable_all_tests: %s"
 
 #: lib/inspect_annocheck.c:280
 #, c-format
 msgid "*** libannocheck_reinit: %s"
-msgstr ""
+msgstr "*** libannocheck_reinit: %s"
 
 #: lib/inspect_annocheck.c:373
 #, c-format
 msgid "*** before libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** pirms libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:382 lib/inspect_annocheck.c:426
 #, c-format
 msgid "*** libannocheck_get_known_tests: %s"
-msgstr ""
+msgstr "*** libannocheck_get_known_tests: %s"
 
 #: lib/inspect_annocheck.c:400 lib/inspect_annocheck.c:530
 #, c-format
 msgid "*** libannocheck_finish: %s"
-msgstr ""
+msgstr "*** libannocheck_finish: %s"
 
 #: lib/inspect_annocheck.c:417
 #, c-format
 msgid "*** after libannocheck_run_tests: %s (%d)"
-msgstr ""
+msgstr "*** pēc libannocheck_run_tests: %s (%d)"
 
 #: lib/inspect_annocheck.c:461 lib/inspect_annocheck.c:613
 msgid "lost -D_FORTIFY_SOURCE in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "zaudēts -D_FORTIFY_SOURCE ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_annocheck.c:464
 #, c-format
 msgid "%s may have lost -O2 -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s, iespējams, zaudēja -O2 -D_FORTIFY_SOURCE arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:489
 #, c-format
 msgid "libannocheck '%s' continues passing for %s on %s"
-msgstr ""
+msgstr "libannocheck „%s” joprojām iztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:492
 #, c-format
 msgid "libannocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "libannocheck tests „%s” tagad iztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:495
 #, c-format
 msgid "libannocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "libannocheck tests „%s” tagad neiztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:498 lib/inspect_annocheck.c:505
 #, c-format
 msgid "libannocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "libannocheck tests „%s” neiztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:503
 #, c-format
 msgid "libannocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "libannocheck tests „%s” iztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:551 lib/inspect_annocheck.c:569
 #, c-format
 msgid "annocheck '%s' test passes for %s on %s"
-msgstr ""
+msgstr "annocheck tests „%s” iztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:553
 #, c-format
 msgid "annocheck '%s' test now passes for %s on %s"
-msgstr ""
+msgstr "annocheck tests „%s” tagad iztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:555
 #, c-format
 msgid "annocheck '%s' test now fails for %s on %s"
-msgstr ""
+msgstr "annocheck tests „%s” tagad neiztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:561 lib/inspect_annocheck.c:571
 #, c-format
 msgid "annocheck '%s' test fails for %s on %s"
-msgstr ""
+msgstr "annocheck tests „%s” neiztur %s arhitektūrā %s"
 
 #: lib/inspect_annocheck.c:616
 #, c-format
 msgid "%s may have lost -D_FORTIFY_SOURCE on %s"
-msgstr ""
+msgstr "%s, iespējams, zaudēja -D_FORTIFY_SOURCE arhitektūrā %s"
 
 #: lib/inspect_arch.c:77
 msgid "lost ${ARCH}"
-msgstr ""
+msgstr "zaudēta ${ARCH}"
 
 #: lib/inspect_arch.c:79
 #, c-format
 msgid "Architecture '%s' has disappeared"
-msgstr ""
+msgstr "Arhitektūra „%s” ir pazudusi"
 
 #: lib/inspect_arch.c:94
 msgid "gained ${ARCH}"
-msgstr ""
+msgstr "iegūta ${ARCH}"
 
 #: lib/inspect_arch.c:96
 #, c-format
 msgid "Architecture '%s' has appeared"
-msgstr ""
+msgstr "Arhitektūra „%s” ir parādījusies"
 
 #: lib/inspect_badfuncs.c:152
 #, c-format
 msgid "Forbidden function symbols found:\n"
-msgstr ""
+msgstr "Atrasti aizliegtu funkciju simboli:\n"
 
 #: lib/inspect_badfuncs.c:168
 #, c-format
 msgid "%s may use forbidden functions on %s"
-msgstr ""
+msgstr "%s, iespējams, izmanto aizliegtas funkcijas arhitektūrā %s"
 
 #: lib/inspect_badfuncs.c:175
 msgid "forbidden functions in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "aizliegtas funkcijas ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_capabilities.c:82
 #, c-format
 msgid "File capabilities for %s changed from '%s' to '%s' in %s on %s\n"
-msgstr ""
+msgstr "Faila %s spējas mainītas no „%s” uz „%s” pakotnē %s arhitektūrā %s\n"
 
 #: lib/inspect_capabilities.c:86
 msgid "${FILE} capabilities on ${ARCH}"
-msgstr ""
+msgstr "${FILE} spējas arhitektūrā ${ARCH}"
 
 #: lib/inspect_capabilities.c:98
 #, c-format
 msgid "File capabilities found for %s: '%s' in %s on %s\n"
-msgstr ""
+msgstr "Atrastas faila %s spējas: „%s” pakotnē %s arhitektūrā %s\n"
 
 #: lib/inspect_capabilities.c:134
 #, c-format
@@ -1586,17 +2048,21 @@ msgid ""
 "File capabilities list entry found for %s: '%s' in %s on %s, matches "
 "package\n"
 msgstr ""
+"Atrasts faila %s spēju saraksta ieraksts: „%s” pakotnē %s arhitektūrā %s, "
+"atbilst pakotnei\n"
 
 #: lib/inspect_capabilities.c:145
 #, c-format
 msgid ""
 "File capabilities list mismatch for %s: expected '%s', got '%s' in %s on %s\n"
 msgstr ""
+"Faila %s spēju saraksta neatbilstība: gaidīts „%s”, iegūts „%s” pakotnē %s "
+"arhitektūrā %s\n"
 
 #: lib/inspect_capabilities.c:149 lib/inspect_capabilities.c:169
 #: lib/inspect_capabilities.c:188
 msgid "${FILE} capabilities list on ${ARCH}"
-msgstr ""
+msgstr "${FILE} spēju saraksts arhitektūrā ${ARCH}"
 
 #: lib/inspect_capabilities.c:165
 #, c-format
@@ -1604,42 +2070,49 @@ msgid ""
 "File capabilities for %s (%s) not found on the capabilities list in %s on "
 "%s\n"
 msgstr ""
+"Faila %s spējas (%s) nav atrastas spēju sarakstā pakotnē %s arhitektūrā %s\n"
 
 #: lib/inspect_capabilities.c:184
 #, c-format
 msgid ""
 "File capabilities expected for %s in %s but not found on %s: expected '%s'\n"
 msgstr ""
+"Faila %s spējas pakotnē %s bija gaidītas, bet arhitektūrā %s nav atrastas: "
+"gaidīts „%s”\n"
 
 #: lib/inspect_changedfiles.c:31
 msgid ""
 "  Changes to security policy related files require inspection by the "
 "Security Response Team."
 msgstr ""
+"  Ar drošības politiku saistīto failu izmaiņām nepieciešama drošības "
+"reaģēšanas komandas pārbaude."
 
 #: lib/inspect_changedfiles.c:319
 #, c-format
 msgid "Compressed %s file %s changed content in %s on %s."
-msgstr ""
+msgstr "Saspiestajam %s failam %s mainījies saturs pakotnē %s arhitektūrā %s."
 
 #: lib/inspect_changedfiles.c:353 lib/inspect_changedfiles.c:367
 #, c-format
 msgid "Error running msgunfmt on %s in %s on %s; malformed mo file?"
 msgstr ""
+"Kļūda, izpildot msgunfmt %s pakotnē %s arhitektūrā %s; nepareizi veidots mo "
+"fails?"
 
 #: lib/inspect_changedfiles.c:357 lib/inspect_changedfiles.c:371
 msgid "msgunfmt on ${FILE}"
-msgstr ""
+msgstr "msgunfmt ${FILE}"
 
 #: lib/inspect_changedfiles.c:382
 #, c-format
 msgid "Message catalog %s changed content in %s on %s"
-msgstr ""
+msgstr "Ziņojumu katalogam %s mainījies saturs pakotnē %s arhitektūrā %s"
 
 #: lib/inspect_changedfiles.c:386 lib/inspect_changedfiles.c:443
 #: lib/inspect_changedfiles.c:465
 msgid "${FILE}"
-msgstr ""
+msgstr "${FILE}"
 
 #: lib/inspect_changedfiles.c:439
 #, c-format
@@ -1647,25 +2120,27 @@ msgid ""
 "Public header file %s changed content in %s on %s.  A unified diff of the "
 "changes follows."
 msgstr ""
+"Publiskajam galvenes failam %s mainījies saturs pakotnē %s arhitektūrā %s.  "
+"Tālāk seko izmaiņu unificētais diff."
 
 #: lib/inspect_changedfiles.c:462
 #, c-format
 msgid "File %s changed content in %s on %s."
-msgstr ""
+msgstr "Failam %s mainījies saturs pakotnē %s arhitektūrā %s."
 
 #: lib/inspect_changelog.c:235 lib/inspect_changelog.c:369
 #, c-format
 msgid "%%changelog"
-msgstr ""
+msgstr "%%changelog"
 
 #: lib/inspect_changelog.c:438
 msgid "Inspection skipped because this build's type is not `rpm'."
-msgstr ""
+msgstr "Pārbaude izlaista, jo šīs būves tips nav `rpm'."
 
 #: lib/inspect_config.c:65
 #, c-format
 msgid "%config ${FILE}"
-msgstr ""
+msgstr "%config ${FILE}"
 
 #: lib/inspect_config.c:114
 #, c-format
@@ -1673,6 +2148,8 @@ msgid ""
 "%%config file %s went from actual file to symlink (pointing to %s) in %s on "
 "%s"
 msgstr ""
+"%%config fails %s no faktiska faila kļuva par simbolisko saiti (norāda uz "
+"%s) pakotnē %s arhitektūrā %s"
 
 #: lib/inspect_config.c:123
 #, c-format
@@ -1680,16 +2157,20 @@ msgid ""
 "%%config file %s was a symlink (pointing to %s), became an actual file in %s "
 "on %s"
 msgstr ""
+"%%config fails %s bija simboliskā saite (norādīja uz %s), kļuva par faktisku "
+"failu pakotnē %s arhitektūrā %s"
 
 #: lib/inspect_config.c:132
 #, c-format
 msgid "Symlink value for %%config file %s changed in %s on %s."
 msgstr ""
+"%%config faila %s simboliskās saites vērtība mainījusies pakotnē %s "
+"arhitektūrā %s."
 
 #: lib/inspect_config.c:153
 #, c-format
 msgid "%%config file content change for %s in %s on %s"
-msgstr ""
+msgstr "%%config faila satura izmaiņa failam %s pakotnē %s arhitektūrā %s"
 
 #: lib/inspect_config.c:168
 #, c-format
@@ -1697,66 +2178,68 @@ msgid ""
 "%%config file change for %s in %s on %s (%smarked as %%config -> %smarked as "
 "%%config)\n"
 msgstr ""
+"%%config faila izmaiņa failam %s pakotnē %s arhitektūrā %s (%satzīmēts kā "
+"%%config -> %satzīmēts kā %%config)\n"
 
 #: lib/inspect_config.c:169 lib/inspect_doc.c:114
 msgid "not "
-msgstr ""
+msgstr "ne "
 
 #: lib/inspect_debuginfo.c:217
 #, c-format
 msgid "%s in %s on %s is missing debugging symbols"
-msgstr ""
+msgstr "%s pakotnē %s arhitektūrā %s trūkst atkļūdošanas simbolu"
 
 #: lib/inspect_debuginfo.c:221
 msgid "missing debugging symbols"
-msgstr ""
+msgstr "trūkst atkļūdošanas simbolu"
 
 #: lib/inspect_debuginfo.c:224
 #, c-format
 msgid "Missing: %s"
-msgstr ""
+msgstr "Trūkst: %s"
 
 #: lib/inspect_debuginfo.c:235
 #, c-format
 msgid "%s in %s on %s contains debugging symbols"
-msgstr ""
+msgstr "%s pakotnē %s arhitektūrā %s satur atkļūdošanas simbolus"
 
 #: lib/inspect_debuginfo.c:239
 msgid "contains debugging symbols"
-msgstr ""
+msgstr "satur atkļūdošanas simbolus"
 
 #: lib/inspect_debuginfo.c:241
 #, c-format
 msgid "Contains: %s"
-msgstr ""
+msgstr "Satur: %s"
 
 #: lib/inspect_debuginfo.c:260
 #, c-format
 msgid "%s in %s on %s gained debugging symbols"
-msgstr ""
+msgstr "%s pakotnē %s arhitektūrā %s ieguva atkļūdošanas simbolus"
 
 #: lib/inspect_debuginfo.c:261
 msgid "gained debugging symbols"
-msgstr ""
+msgstr "iegūti atkļūdošanas simboli"
 
 #: lib/inspect_debuginfo.c:266
 #, c-format
 msgid "Gained: %s"
-msgstr ""
+msgstr "Iegūti: %s"
 
 #: lib/inspect_debuginfo.c:286
 #, c-format
 msgid "%s in %s on %s lost debugging symbols"
-msgstr ""
+msgstr "%s pakotnē %s arhitektūrā %s zaudēja atkļūdošanas simbolus"
 
 #: lib/inspect_debuginfo.c:287
 msgid "lost debugging symbols"
-msgstr ""
+msgstr "zaudēti atkļūdošanas simboli"
 
 #: lib/inspect_debuginfo.c:292
 #, c-format
 msgid "Lost: %s"
-msgstr ""
+msgstr "Zaudēti: %s"
 
 #: lib/inspect_debuginfo.c:318
 #, c-format
@@ -1764,10 +2247,12 @@ msgid ""
 "%s in %s on %s carries .gosymtab but should not have the .gnu_debugdata "
 "symbol"
 msgstr ""
+"%s pakotnē %s arhitektūrā %s ir .gosymtab, bet tam nevajadzētu būt simbolam "
+".gnu_debugdata"
 
 #: lib/inspect_debuginfo.c:320
 msgid ".gnu_debugdata with .gosymtab"
-msgstr ""
+msgstr ".gnu_debugdata ar .gosymtab"
 
 #: lib/inspect_desktop.c:275
 #, c-format
@@ -1775,10 +2260,12 @@ msgid ""
 "Desktop file %s on %s references executable %s but %s is not executable by "
 "all"
 msgstr ""
+"Darbvirsmas fails %s arhitektūrā %s atsaucas uz izpildāmo failu %s, bet %s "
+"nav izpildāms visiem"
 
 #: lib/inspect_desktop.c:279
 msgid "${FILE} references non-executable file on ${ARCH}"
-msgstr ""
+msgstr "${FILE} atsaucas uz neizpildāmu failu arhitektūrā ${ARCH}"
 
 #: lib/inspect_desktop.c:300
 #, c-format
@@ -1787,6 +2274,9 @@ msgid ""
 "executable of that name, however it has a TryExec key so it may be ignored "
 "in case %s does not exist"
 msgstr ""
+"Darbvirsmas fails %s arhitektūrā %s atsaucas uz izpildāmo failu %s; nevienā "
+"apakšpakotnē nav šāda nosaukuma izpildāmā faila, tomēr tam ir atslēga "
+"TryExec, tāpēc to var ignorēt, ja %s neeksistē"
 
 #: lib/inspect_desktop.c:308
 #, c-format
@@ -1794,32 +2284,38 @@ msgid ""
 "Desktop file %s on %s references executable %s but no subpackages contain an "
 "executable of that name"
 msgstr ""
+"Darbvirsmas fails %s arhitektūrā %s atsaucas uz izpildāmo failu %s, bet "
+"nevienā apakšpakotnē nav šāda nosaukuma izpildāmā faila"
 
 #: lib/inspect_desktop.c:312
 msgid "${FILE} references missing executable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} atsaucas uz trūkstošu izpildāmo failu arhitektūrā ${ARCH}"
 
 #: lib/inspect_desktop.c:354
 #, c-format
 msgid "Desktop file %s on %s references icon %s but %s is not readable by all"
 msgstr ""
+"Darbvirsmas fails %s arhitektūrā %s atsaucas uz ikonu %s, bet %s nav lasāms "
+"visiem"
 
 #: lib/inspect_desktop.c:358
 msgid "${FILE} references unreadble icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} atsaucas uz nelasāmu ikonu arhitektūrā ${ARCH}"
 
 #: lib/inspect_desktop.c:376
 #, c-format
 msgid "Desktop file %s on %s references icon %s but no subpackages contain %s"
 msgstr ""
+"Darbvirsmas fails %s arhitektūrā %s atsaucas uz ikonu %s, bet nevienā "
+"apakšpakotnē nav %s"
 
 #: lib/inspect_desktop.c:380
 msgid "${FILE} references missing icon on ${ARCH}"
-msgstr ""
+msgstr "${FILE} atsaucas uz trūkstošu ikonu arhitektūrā ${ARCH}"
 
 #: lib/inspect_desktop.c:452
 msgid "${FILE} is not valid on ${ARCH}"
-msgstr ""
+msgstr "${FILE} nav derīgs arhitektūrā ${ARCH}"
 
 #: lib/inspect_desktop.c:455
 #, c-format
@@ -1827,27 +2323,33 @@ msgid ""
 "File %s is no longer a valid desktop entry file on %s; desktop-file-validate "
 "reports:"
 msgstr ""
+"Fails %s vairs nav derīgs darbvirsmas ieraksta fails arhitektūrā %s; desktop-"
+"file-validate ziņo:"
 
 #: lib/inspect_desktop.c:457
 #, c-format
 msgid ""
 "New file %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"Jaunais fails %s nav derīgs darbvirsmas fails arhitektūrā %s; desktop-file-"
+"validate ziņo:"
 
 #: lib/inspect_desktop.c:459
 #, c-format
 msgid ""
 "File %s is not a valid desktop file on %s; desktop-file-validate reports:"
 msgstr ""
+"Fails %s nav derīgs darbvirsmas fails arhitektūrā %s; desktop-file-validate "
+"ziņo:"
 
 #: lib/inspect_disttag.c:184
 #, c-format
 msgid "The %s file is missing the %s tag."
-msgstr ""
+msgstr "Failam %s trūkst taga %s."
 
 #: lib/inspect_disttag.c:186
 msgid "${FILE} missing Release tag"
-msgstr ""
+msgstr "${FILE} trūkst taga Release"
 
 #: lib/inspect_disttag.c:192
 #, c-format
@@ -1856,25 +2358,28 @@ msgid ""
 "should be of the form '%s' in the %s tag or in a macro used in the %s tag. "
 "After RPM macro expansion, no dist tag was found in this %s tag value."
 msgstr ""
+"Taga %s vērtībā trūkst pareizas formas dist taga. Dist tagam jābūt formā „%s"
+"” tagā %s vai makro, kas izmantots tagā %s. Pēc RPM makro izvēršanas šajā %s "
+"taga vērtībā netika atrasts dist tags."
 
 #: lib/inspect_disttag.c:194
 #, c-format
 msgid "${FILE} does not use '%%{?dist}' in Release"
-msgstr ""
+msgstr "${FILE} tagā Release neizmanto '%%{?dist}'"
 
 #: lib/inspect_disttag.c:263
 msgid "Specified package is not a source RPM, skipping."
-msgstr ""
+msgstr "Norādītā pakotne nav pirmkoda RPM, izlaiž."
 
 #: lib/inspect_doc.c:71
 #, c-format
 msgid "%doc ${FILE}"
-msgstr ""
+msgstr "%doc ${FILE}"
 
 #: lib/inspect_doc.c:98
 #, c-format
 msgid "%%doc file content change for %s in %s on %s\n"
-msgstr ""
+msgstr "%%doc faila satura izmaiņa failam %s pakotnē %s arhitektūrā %s\n"
 
 #: lib/inspect_doc.c:113
 #, c-format
@@ -1882,134 +2387,141 @@ msgid ""
 "%%doc file change for %s in %s on %s (%smarked as %%doc -> %smarked as "
 "%%doc)\n"
 msgstr ""
+"%%doc faila izmaiņa failam %s pakotnē %s arhitektūrā %s (%satzīmēts kā "
+"%%doc -> %satzīmēts kā %%doc)\n"
 
 #: lib/inspect_dsodeps.c:94
 #, c-format
 msgid "%s was an ELF file and now is not on %s"
-msgstr ""
+msgstr "%s bija ELF fails, bet tagad vairs nav arhitektūrā %s"
 
 #: lib/inspect_dsodeps.c:96 lib/inspect_dsodeps.c:108
 msgid "ELF file ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "ELF fails ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_dsodeps.c:106
 #, c-format
 msgid "%s was a dynamic ELF file and now is not on %s"
-msgstr ""
+msgstr "%s bija dinamisks ELF fails, bet tagad vairs nav arhitektūrā %s"
 
 #: lib/inspect_dsodeps.c:146
 #, c-format
 msgid "DT_NEEDED symbol(s) removed from %s on %s"
-msgstr ""
+msgstr "DT_NEEDED simbols(-i) noņemts(-i) no %s arhitektūrā %s"
 
 #: lib/inspect_dsodeps.c:148 lib/inspect_dsodeps.c:165
 msgid "DT_NEEDED symbol(s) in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "DT_NEEDED simbols(-i) ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_dsodeps.c:163
 #, c-format
 msgid "DT_NEEDED symbol(s) added to %s on %s"
-msgstr ""
+msgstr "DT_NEEDED simbols(-i) pievienots(-i) %s arhitektūrā %s"
 
 #: lib/inspect_elf.c:433
 #, c-format
 msgid "Object still has executable stack (no GNU-stack note): %s on %s"
 msgstr ""
+"Objektam joprojām ir izpildāms steks (nav GNU-stack piezīmes): %s "
+"arhitektūrā %s"
 
 #: lib/inspect_elf.c:435
 #, c-format
 msgid "Object has executable stack (no GNU-stack note): %s on %s"
-msgstr ""
+msgstr "Objektam ir izpildāms steks (nav GNU-stack piezīmes): %s arhitektūrā %s"
 
 #: lib/inspect_elf.c:438
 #, c-format
 msgid "Program built without GNU_STACK: %s on %s"
-msgstr ""
+msgstr "Programma uzbūvēta bez GNU_STACK: %s arhitektūrā %s"
 
 #: lib/inspect_elf.c:444
 msgid "GNU_STACK in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "GNU_STACK ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_elf.c:496
 #, c-format
 msgid "File %s has invalid execstack flags (%s) on %s"
-msgstr ""
+msgstr "Failam %s ir nederīgi execstack karogi (%s) arhitektūrā %s"
 
 #: lib/inspect_elf.c:501
 #, c-format
 msgid "File %s has unrecognized GNU_STACK '%s' (expected RW or RWE) on %s"
 msgstr ""
+"Failam %s ir neatpazīts GNU_STACK „%s” (gaidīts RW vai RWE) arhitektūrā %s"
 
 #: lib/inspect_elf.c:510 lib/inspect_elf.c:540
 msgid "execstack in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "execstack ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_elf.c:525
 #, c-format
 msgid "Object still has executable stack (GNU-stack note = X): %s on %s"
 msgstr ""
+"Objektam joprojām ir izpildāms steks (GNU-stack piezīme = X): %s arhitektūrā "
+"%s"
 
 #: lib/inspect_elf.c:527
 #, c-format
 msgid "Object has executable stack (GNU-stack note = X): %s on %s"
-msgstr ""
+msgstr "Objektam ir izpildāms steks (GNU-stack piezīme = X): %s arhitektūrā %s"
 
 #: lib/inspect_elf.c:531
 #, c-format
 msgid "Stack is still executable: %s on %s"
-msgstr ""
+msgstr "Steks joprojām ir izpildāms: %s arhitektūrā %s"
 
 #: lib/inspect_elf.c:533
 #, c-format
 msgid "Stack is executable: %s on %s"
-msgstr ""
+msgstr "Steks ir izpildāms: %s arhitektūrā %s"
 
 #: lib/inspect_elf.c:564
 #, c-format
 msgid "%s lost full GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s zaudēja pilnu GNU_RELRO drošības aizsardzību arhitektūrā %s"
 
 #: lib/inspect_elf.c:567
 #, c-format
 msgid "%s lost GNU_RELRO security protection on %s"
-msgstr ""
+msgstr "%s zaudēja GNU_RELRO drošības aizsardzību arhitektūrā %s"
 
 #: lib/inspect_elf.c:578
 msgid "lost GNU_RELRO in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "zaudēts GNU_RELRO ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_elf.c:725
 #, c-format
 msgid "The following objects lost -fPIC:\n"
-msgstr ""
+msgstr "Šie objekti zaudēja -fPIC:\n"
 
 #: lib/inspect_elf.c:742
 #, c-format
 msgid "The following new objects were built without -fPIC:\n"
-msgstr ""
+msgstr "Šie jaunie objekti uzbūvēti bez -fPIC:\n"
 
 #: lib/inspect_elf.c:755
 #, c-format
 msgid "%s in %s has objects built without -fPIC on %s"
-msgstr ""
+msgstr "%s pakotnē %s ir objekti, kas uzbūvēti bez -fPIC, arhitektūrā %s"
 
 #: lib/inspect_elf.c:763
 msgid "missing -fPIC in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "trūkst -fPIC ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_elf.c:799
 msgid "TEXTREL relocations in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "TEXTREL relokācijas ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_elf.c:814
 #, c-format
 msgid "%s in %s acquired TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s pakotnē %s ieguva TEXTREL relokācijas arhitektūrā %s"
 
 #: lib/inspect_elf.c:817
 #, c-format
 msgid "%s in %s has TEXTREL relocations on %s"
-msgstr ""
+msgstr "%s pakotnē %s ir TEXTREL relokācijas arhitektūrā %s"
 
 #: lib/inspect_emptyrpm.c:95
 #, c-format
@@ -2017,6 +2529,8 @@ msgid ""
 "New package %s is empty (no payloads); this is expected per the rpminspect "
 "configuration"
 msgstr ""
+"Jaunā pakotne %s ir tukša (nav satura); saskaņā ar rpminspect konfigurāciju "
+"tas ir gaidīts"
 
 #: lib/inspect_emptyrpm.c:105
 #, c-format
@@ -2024,65 +2538,67 @@ msgid ""
 "New package %s is empty (no payloads); this is expected because the package "
 "only contains %%ghost entries"
 msgstr ""
+"Jaunā pakotne %s ir tukša (nav satura); tas ir gaidīts, jo pakotne satur "
+"tikai %%ghost ierakstus"
 
 #: lib/inspect_emptyrpm.c:116
 #, c-format
 msgid "New package %s is empty (no payloads)"
-msgstr ""
+msgstr "Jaunā pakotne %s ir tukša (nav satura)"
 
 #: lib/inspect_emptyrpm.c:120
 msgid "${FILE} has empty payload"
-msgstr ""
+msgstr "${FILE} ir tukšs saturs"
 
 #: lib/inspect_files.c:111
 #, c-format
 msgid "Forbidden path reference (%s) on line %ld of %s"
-msgstr ""
+msgstr "Aizliegta ceļa atsauce (%1$s) faila %3$s rindā %2$ld"
 
 #: lib/inspect_files.c:113
 #, c-format
 msgid "invalid spec line: %s"
-msgstr ""
+msgstr "nederīga spec rinda: %s"
 
 #: lib/inspect_files.c:172
 msgid "The files inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Pārbaude files ir tikai pirmkoda pakotnēm, izlaiž."
 
 #: lib/inspect_filesize.c:67
 #, c-format
 msgid "%s became a non-empty file on %s"
-msgstr ""
+msgstr "%s kļuva par netukšu failu arhitektūrā %s"
 
 #: lib/inspect_filesize.c:71
 msgid "non-empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "netukšs ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_filesize.c:76
 #, c-format
 msgid "%s became an empty file on %s"
-msgstr ""
+msgstr "%s kļuva par tukšu failu arhitektūrā %s"
 
 #: lib/inspect_filesize.c:80
 msgid "empty ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "tukšs ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_filesize.c:98
 #, c-format
 msgid "%s grew by %lld%% on %s"
-msgstr ""
+msgstr "%s palielinājās par %lld%% arhitektūrā %s"
 
 #: lib/inspect_filesize.c:99
 msgid "${FILE} size grew on ${ARCH}"
-msgstr ""
+msgstr "${FILE} izmērs palielinājās arhitektūrā ${ARCH}"
 
 #: lib/inspect_filesize.c:103
 #, c-format
 msgid "%s shrank by %lld%% on %s"
-msgstr ""
+msgstr "%s samazinājās par %lld%% arhitektūrā %s"
 
 #: lib/inspect_filesize.c:104
 msgid "${FILE} size shrank on ${ARCH}"
-msgstr ""
+msgstr "${FILE} izmērs samazinājās arhitektūrā ${ARCH}"
 
 #: lib/inspect_javabytecode.c:130
 #, c-format
@@ -2090,10 +2606,12 @@ msgid ""
 "File %s (%s), Java byte code version %d is incorrect (wrong endianness? "
 "corrupted file? space JDK?)"
 msgstr ""
+"Faila %s (%s) Java baitkoda versija %d ir nepareiza (nepareiza baitu secība? "
+"bojāts fails? kosmosa JDK?)"
 
 #: lib/inspect_javabytecode.c:131
 msgid "incorrect Java byte code version in ${FILE}"
-msgstr ""
+msgstr "nepareiza Java baitkoda versija ${FILE}"
 
 #: lib/inspect_javabytecode.c:136
 #, c-format
@@ -2101,33 +2619,37 @@ msgid ""
 "File %s (%s), Java byte code version %d greater than supported major version "
 "%d for product release %s"
 msgstr ""
+"Faila %s (%s) Java baitkoda versija %d ir lielāka par atbalstīto galveno "
+"versiju %d produkta laidienam %s"
 
 #: lib/inspect_javabytecode.c:137
 msgid "Java byte code version too new in ${FILE}"
-msgstr ""
+msgstr "pārāk jauna Java baitkoda versija ${FILE}"
 
 #: lib/inspect_javabytecode.c:152
 #, c-format
 msgid "Java byte code version changed from %d to %d in %s from %s"
-msgstr ""
+msgstr "Java baitkoda versija mainījusies no %d uz %d %s no %s"
 
 #: lib/inspect_javabytecode.c:153
 msgid "Java byte code version changed in ${FILE}"
-msgstr ""
+msgstr "Java baitkoda versija mainījusies ${FILE}"
 
 #: lib/inspect_javabytecode.c:255 lib/inspect_javabytecode.c:267
 msgid "*** missing JVM version to product release mapping"
-msgstr ""
+msgstr "*** trūkst JVM versijas atbilstības produkta laidienam"
 
 #: lib/inspect_kmidiff.c:252
 #, c-format
 msgid ""
 "Comparing %s to %s in package %s on %s generated a kmidiff(1) usage error."
 msgstr ""
+"Salīdzinot %s ar %s pakotnē %s arhitektūrā %s, radās kmidiff(1) lietošanas "
+"kļūda."
 
 #: lib/inspect_kmidiff.c:254
 msgid "kmidiff usage error"
-msgstr ""
+msgstr "kmidiff lietošanas kļūda"
 
 #: lib/inspect_kmidiff.c:256
 #, c-format
@@ -2135,10 +2657,12 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed Kernel Module Interface "
 "(KMI) differences."
 msgstr ""
+"Salīdzinot %s ar %s pakotnē %s arhitektūrā %s, atklājās kodola moduļu "
+"interfeisa (KMI) atšķirības."
 
 #: lib/inspect_kmidiff.c:258
 msgid "KMI change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "KMI izmaiņa ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_kmidiff.c:260
 #, c-format
@@ -2146,20 +2670,24 @@ msgid ""
 "Comparing %s to %s in package %s on %s revealed incompatible Kernel Module "
 "Interface (KMI) differences."
 msgstr ""
+"Salīdzinot %s ar %s pakotnē %s arhitektūrā %s, atklājās nesaderīgas kodola "
+"moduļu interfeisa (KMI) atšķirības."
 
 #: lib/inspect_kmidiff.c:263
 msgid "KMI incompatible change in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "KMI nesaderīga izmaiņa ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_kmidiff.c:265
 #, c-format
 msgid ""
 "kmidiff(1) comparison of %s to %s in package %s on %s ended unexpectedly."
 msgstr ""
+"%s un %s kmidiff(1) salīdzināšana pakotnē %s arhitektūrā %s negaidīti "
+"beidzās."
 
 #: lib/inspect_kmidiff.c:267
 msgid "kmidiff unexpected exit"
-msgstr ""
+msgstr "kmidiff negaidīta iziešana"
 
 #: lib/inspect_kmidiff.c:274
 #, c-format
@@ -2167,197 +2695,204 @@ msgid ""
 "Command: %s\n"
 "Exit code: %d%s%s"
 msgstr ""
+"Komanda: %s\n"
+"Iziešanas kods: %d%s%s"
 
 #: lib/inspect_kmod.c:28
 msgid "${FILE} kernel module alias on ${ARCH}"
-msgstr ""
+msgstr "${FILE} kodola moduļa aizstājvārds arhitektūrā ${ARCH}"
 
 #: lib/inspect_kmod.c:31
 #, c-format
 msgid "Kernel module '%s' lost alias '%s'"
-msgstr ""
+msgstr "Kodola modulis „%s” zaudēja aizstājvārdu „%s”"
 
 #: lib/inspect_kmod.c:41
 #, c-format
 msgid "Kernel module '%s' gained alias '%s'"
-msgstr ""
+msgstr "Kodola modulis „%s” ieguva aizstājvārdu „%s”"
 
 #: lib/inspect_kmod.c:188
 #, c-format
 msgid "Kernel module %s removes parameter '%s' (was present in %s)."
-msgstr ""
+msgstr "Kodola modulis %s noņem parametru „%s” (bija %s)."
 
 #: lib/inspect_kmod.c:191 lib/inspect_kmod.c:208
 msgid "${FILE} kernel module parameter on ${ARCH}"
-msgstr ""
+msgstr "${FILE} kodola moduļa parametrs arhitektūrā ${ARCH}"
 
 #: lib/inspect_kmod.c:205
 #, c-format
 msgid "Kernel module %s adds parameter '%s' (was not present in %s)."
-msgstr ""
+msgstr "Kodola modulis %s pievieno parametru „%s” (nebija %s)."
 
 #: lib/inspect_kmod.c:226
 #, c-format
 msgid "Kernel module %s removes dependency '%s' (was present in %s)."
-msgstr ""
+msgstr "Kodola modulis %s noņem atkarību „%s” (bija %s)."
 
 #: lib/inspect_kmod.c:229
 msgid "${FILE} kernel module dependency on ${ARCH}"
-msgstr ""
+msgstr "${FILE} kodola moduļa atkarība arhitektūrā ${ARCH}"
 
 #: lib/inspect_kmod.c:243
 #, c-format
 msgid "Kernel module %s adds dependency '%s' (was not present in %s)."
-msgstr ""
+msgstr "Kodola modulis %s pievieno atkarību „%s” (nebija %s)."
 
 #: lib/inspect_kmod.c:246
 msgid "${FILE} kernel module parameter"
-msgstr ""
+msgstr "${FILE} kodola moduļa parametrs"
 
 #: lib/inspect_license.c:47
 #, c-format
 msgid "*** parse error in license database %s"
-msgstr ""
+msgstr "*** parsēšanas kļūda licenču datubāzē %s"
 
 #: lib/inspect_license.c:135
 msgid "*** problem checking license database"
-msgstr ""
+msgstr "*** problēma, pārbaudot licenču datubāzi"
 
 #: lib/inspect_license.c:464
 #, c-format
 msgid "Unapproved license in %s: %s"
-msgstr ""
+msgstr "Neapstiprināta licence %s: %s"
 
 #: lib/inspect_license.c:505
 #, c-format
 msgid "Empty License Tag in %s"
-msgstr ""
+msgstr "Tukšs License tags %s"
 
 #: lib/inspect_license.c:509
 msgid "missing License tag in ${FILE}"
-msgstr ""
+msgstr "trūkst License taga ${FILE}"
 
 #: lib/inspect_license.c:518
 #, c-format
 msgid "Valid License Tag in %s: %s"
-msgstr ""
+msgstr "Derīgs License tags %s: %s"
 
 #: lib/inspect_license.c:532
 #, c-format
 msgid "License Tag contains unprofessional language in %s: %s"
-msgstr ""
+msgstr "License tags satur neprofesionālu valodu %s: %s"
 
 #: lib/inspect_license.c:536
 msgid "unprofessional language in License tag in ${FILE}"
-msgstr ""
+msgstr "neprofesionāla valoda License tagā ${FILE}"
 
 #: lib/inspect_license.c:573
 msgid "Missing license database(s)."
-msgstr ""
+msgstr "Trūkst licenču datubāzes."
 
 #: lib/inspect_license.c:577
 msgid "missing license database"
-msgstr ""
+msgstr "trūkst licenču datubāzes"
 
 #: lib/inspect_lostpayload.c:62
 #, c-format
 msgid "Existing subpackage %s is now missing on %s"
-msgstr ""
+msgstr "Esošā apakšpakotne %s tagad trūkst arhitektūrā %s"
 
 #: lib/inspect_lostpayload.c:66
 msgid "missing subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "trūkst apakšpakotnes ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_lostpayload.c:82
 #, c-format
 msgid "Package %s on %s continues to be empty (no payloads)"
-msgstr ""
+msgstr "Pakotne %s arhitektūrā %s joprojām ir tukša (nav satura)"
 
 #: lib/inspect_lostpayload.c:86
 msgid "existing empty subpackage ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "esoša tukša apakšpakotne ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_lostpayload.c:93
 #, c-format
 msgid "Package %s on %s became empty (no payloads)"
-msgstr ""
+msgstr "Pakotne %s arhitektūrā %s kļuva tukša (nav satura)"
 
 #: lib/inspect_lostpayload.c:97
 msgid "subpackage ${FILE} on ${ARCH} now has empty payload"
-msgstr ""
+msgstr "apakšpakotnei ${FILE} arhitektūrā ${ARCH} tagad ir tukšs saturs"
 
 #: lib/inspect_lto.c:144
 msgid "${FILE} not portable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} nav pārnesams arhitektūrā ${ARCH}"
 
 #: lib/inspect_lto.c:152
 #, c-format
 msgid ""
 "%s contains symbols [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s satur simbolus [%s] arhitektūrā %s; tas nav pārnesams starp kompilatora "
+"versijām"
 
 #: lib/inspect_lto.c:168
 #, c-format
 msgid ""
 "%s contains symbol [%s] on %s; this is not portable across compiler versions"
 msgstr ""
+"%s satur simbolu [%s] arhitektūrā %s; tas nav pārnesams starp kompilatora "
+"versijām"
 
 #: lib/inspect_manpage.c:52
 #, c-format
 msgid "Error parsing %s:%d:%d: %s: %s: %s\n"
-msgstr ""
+msgstr "Kļūda, parsējot %s:%d:%d: %s: %s: %s\n"
 
 #: lib/inspect_manpage.c:81
 #, c-format
 msgid "*** unable to compile man page path regular expression: %s"
-msgstr ""
+msgstr "*** nevar kompilēt man lapas ceļa regulāro izteiksmi: %s"
 
 #: lib/inspect_manpage.c:179
 #, c-format
 msgid "Unable to open man page %s\n"
-msgstr ""
+msgstr "Nevar atvērt man lapu %s\n"
 
 #: lib/inspect_manpage.c:187
 #, c-format
 msgid "Man page %s does not end in %s\n"
-msgstr ""
+msgstr "Man lapa %s nebeidzas ar %s\n"
 
 #: lib/inspect_manpage.c:195
 #, c-format
 msgid "man page with %s suffix is not really compressed with gzip\n"
-msgstr ""
+msgstr "man lapa ar sufiksu %s patiesībā nav saspiesta ar gzip\n"
 
 #: lib/inspect_manpage.c:236
 #, c-format
 msgid "Errors found validating %s\n"
-msgstr ""
+msgstr "Validējot %s, atrastas kļūdas\n"
 
 #: lib/inspect_manpage.c:299
 #, c-format
 msgid "Man page %s is possibly empty on %s in %s"
-msgstr ""
+msgstr "Man lapa %s, iespējams, ir tukša arhitektūrā %s pakotnē %s"
 
 #: lib/inspect_manpage.c:302
 msgid "empty man page ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "tukša man lapa ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_manpage.c:315
 #, c-format
 msgid "Man page checker reported problems with %s on %s in %s"
 msgstr ""
+"Man lapu pārbaudītājs ziņoja par problēmām ar %s arhitektūrā %s pakotnē %s"
 
 #: lib/inspect_manpage.c:318
 msgid "man page ${FILE} on ${ARCH} has errors"
-msgstr ""
+msgstr "man lapā ${FILE} arhitektūrā ${ARCH} ir kļūdas"
 
 #: lib/inspect_manpage.c:327
 #, c-format
 msgid "Man page %s has incorrect path on %s in %s"
-msgstr ""
+msgstr "Man lapai %s ir nepareizs ceļš arhitektūrā %s pakotnē %s"
 
 #: lib/inspect_manpage.c:330
 msgid "man page ${FILE} on ${ARCH} has incorrect path"
-msgstr ""
+msgstr "man lapai ${FILE} arhitektūrā ${ARCH} ir nepareizs ceļš"
 
 #: lib/inspect_metadata.c:40
 #, c-format
@@ -2365,15 +2900,16 @@ msgid ""
 "Vendor not set in the rpminspect configuration, ignoring Package Vendor "
 "\"%s\" in %s"
 msgstr ""
+"rpminspect konfigurācijā nav iestatīts Vendor, ignorē pakotnes Vendor „%s” %s"
 
 #: lib/inspect_metadata.c:51
 #, c-format
 msgid "Package Vendor \"%s\" is not \"%s\" in %s"
-msgstr ""
+msgstr "Pakotnes Vendor „%s” nav „%s” %s"
 
 #: lib/inspect_metadata.c:55
 msgid "invalid vendor ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "nederīgs ražotājs ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_metadata.c:76
 #, c-format
@@ -2381,58 +2917,59 @@ msgid ""
 "Package Build Host \"%s\" is not within an expected build host subdomain in "
 "%s"
 msgstr ""
+"Pakotnes Build Host „%s” nav gaidītajā būvēšanas resursdatoru apakšdomēnā %s"
 
 #: lib/inspect_metadata.c:80
 msgid "invalid build host ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "nederīgs būvēšanas resursdators ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_metadata.c:92
 #, c-format
 msgid "Package Summary contains unprofessional language in %s"
-msgstr ""
+msgstr "Pakotnes Summary satur neprofesionālu valodu %s"
 
 #: lib/inspect_metadata.c:93
 #, c-format
 msgid "Summary: %s"
-msgstr ""
+msgstr "Summary: %s"
 
 #: lib/inspect_metadata.c:97
 msgid "Summary contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "Summary satur neprofesionālus vārdus arhitektūrā ${ARCH}"
 
 #: lib/inspect_metadata.c:109
 #, c-format
 msgid "Package Description contains unprofessional language in %s:"
-msgstr ""
+msgstr "Pakotnes Description satur neprofesionālu valodu %s:"
 
 #: lib/inspect_metadata.c:114
 msgid "Description contains unprofessional words on ${ARCH}"
-msgstr ""
+msgstr "Description satur neprofesionālus vārdus arhitektūrā ${ARCH}"
 
 #: lib/inspect_metadata.c:134
 #, c-format
 msgid "Gained Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "Iegūts pakotnes Vendor „%s” %s"
 
 #: lib/inspect_metadata.c:136
 #, c-format
 msgid "Lost Package Vendor \"%s\" in %s"
-msgstr ""
+msgstr "Zaudēts pakotnes Vendor „%s” %s"
 
 #: lib/inspect_metadata.c:138
 #, c-format
 msgid "Package Vendor changed from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Pakotnes Vendor mainīts no „%s” uz „%s” %s"
 
 #: lib/inspect_metadata.c:156
 #, c-format
 msgid "Package Summary change from \"%s\" to \"%s\" in %s"
-msgstr ""
+msgstr "Pakotnes Summary mainīts no „%s” uz „%s” %s"
 
 #: lib/inspect_metadata.c:169
 #, c-format
 msgid "Package Description changed in %s"
-msgstr ""
+msgstr "Pakotnes Description mainīts %s"
 
 #: lib/inspect_metadata.c:170
 #, c-format
@@ -2445,6 +2982,13 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"no:\n"
+"\n"
+"%s\n"
+"\n"
+"uz:\n"
+"\n"
+"%s"
 
 #: lib/inspect_modularity.c:119
 #, c-format
@@ -2452,6 +2996,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "forbid the presence of /data/static_context in the module metadata."
 msgstr ""
+"/data/static_context vērtība %s ir %s, bet produkta laidiena kārtulas "
+"aizliedz /data/static_context klātbūtni moduļa metadatos."
 
 #: lib/inspect_modularity.c:125
 #, c-format
@@ -2459,6 +3005,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "require the presence of /data/static_context in the module metadata."
 msgstr ""
+"/data/static_context vērtība %s ir %s, bet produkta laidiena kārtulas "
+"pieprasa /data/static_context klātbūtni moduļa metadatos."
 
 #: lib/inspect_modularity.c:131
 #, c-format
@@ -2466,6 +3014,8 @@ msgid ""
 "The /data/static_context value in %s is %s, but the product release rules "
 "recommend the presence of /data/static_context in the module metadata."
 msgstr ""
+"/data/static_context vērtība %s ir %s, bet produkta laidiena kārtulas "
+"iesaka /data/static_context klātbūtni moduļa metadatos."
 
 #: lib/inspect_modularity.c:133
 #, c-format
@@ -2473,6 +3023,8 @@ msgid ""
 "The /data/static_context value in %s is %s, and the product release rules do "
 "not have a setting for /data/static_context in the module metadata."
 msgstr ""
+"/data/static_context vērtība %s ir %s, un produkta laidiena kārtulās nav "
+"iestatījuma /data/static_context klātbūtnei moduļa metadatos."
 
 #: lib/inspect_modularity.c:135
 #, c-format
@@ -2480,16 +3032,18 @@ msgid ""
 "The /data/static_context value in %s is %s as required by the product "
 "release rules."
 msgstr ""
+"/data/static_context vērtība %s ir %s, kā to pieprasa produkta laidiena "
+"kārtulas."
 
 #: lib/inspect_modularity.c:143
 #, c-format
 msgid "%s The /data/static_context value is the same as in %s."
-msgstr ""
+msgstr "%s /data/static_context vērtība ir tāda pati kā %s."
 
 #: lib/inspect_modularity.c:145
 #, c-format
 msgid "%s The /data/static_context value has changed since %s."
-msgstr ""
+msgstr "%s /data/static_context vērtība ir mainījusies kopš %s."
 
 #: lib/inspect_modularity.c:180
 #, c-format
@@ -2497,47 +3051,49 @@ msgid ""
 "Package \"%s\" is part of a module but lacks the '%%{modularitylabel}' "
 "header tag."
 msgstr ""
+"Pakotne „%s” ir moduļa daļa, bet tai trūkst galvenes taga '%%"
+"{modularitylabel}'."
 
 #: lib/inspect_modularity.c:224
 msgid "Inspection skipped because this build's type is not `module'."
-msgstr ""
+msgstr "Pārbaude izlaista, jo šīs būves tips nav `module'."
 
 #: lib/inspect_movedfiles.c:52
 #, c-format
 msgid "%s moved to ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "%s pārvietots uz ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_movedfiles.c:55
 #, c-format
 msgid "%s probably moved to %s on %s\n"
-msgstr ""
+msgstr "%s, iespējams, pārvietots uz %s arhitektūrā %s\n"
 
 #: lib/inspect_ownership.c:77
 #, c-format
 msgid "File %s has forbidden owner `%s` on %s"
-msgstr ""
+msgstr "Failam %s ir aizliegts īpašnieks „%s” arhitektūrā %s"
 
 #: lib/inspect_ownership.c:82
 msgid "forbidden owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "aizliegts īpašnieks ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_ownership.c:92
 #, c-format
 msgid "File %s has forbidden group `%s` on %s"
-msgstr ""
+msgstr "Failam %s ir aizliegta grupa „%s” arhitektūrā %s"
 
 #: lib/inspect_ownership.c:97
 msgid "forbidden group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "aizliegta grupa ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_ownership.c:119
 #, c-format
 msgid "File %s has owner `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "Failam %s ir īpašnieks „%s” arhitektūrā %s, bet jābūt „%s”"
 
 #: lib/inspect_ownership.c:124
 msgid "invalid owner for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "nederīgs īpašnieks ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_ownership.c:162
 #, c-format
@@ -2545,38 +3101,42 @@ msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is world "
 "executable"
 msgstr ""
+"Failam %s arhitektūrā %s ir spēja CAP_SETUID, bet grupa „%s”, un tas ir "
+"izpildāms visiem"
 
 #: lib/inspect_ownership.c:166
 msgid "CAP_SETUID and o+x for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID un o+x ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_ownership.c:179
 #, c-format
 msgid ""
 "File %s on %s has CAP_SETUID capability but group `%s` and is group writable"
 msgstr ""
+"Failam %s arhitektūrā %s ir spēja CAP_SETUID, bet grupa „%s”, un grupa tajā "
+"var rakstīt"
 
 #: lib/inspect_ownership.c:183
 msgid "CAP_SETUID and g+w for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "CAP_SETUID un g+w ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_ownership.c:199
 #, c-format
 msgid "File %s has group `%s` on %s, but should be `%s`"
-msgstr ""
+msgstr "Failam %s ir grupa „%s” arhitektūrā %s, bet jābūt „%s”"
 
 #: lib/inspect_ownership.c:204
 msgid "invalid group for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "nederīga grupa ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_ownership.c:268
 #, c-format
 msgid "File %s changed %s from `%s` to `%s` on %s"
-msgstr ""
+msgstr "Failam %s mainīts %s no „%s” uz „%s” arhitektūrā %s"
 
 #: lib/inspect_ownership.c:270
 msgid "${FILE} changed owner on ${ARCH}"
-msgstr ""
+msgstr "${FILE} mainīts īpašnieks arhitektūrā ${ARCH}"
 
 #: lib/inspect_patches.c:395
 #, c-format
@@ -2584,188 +3144,190 @@ msgid ""
 "Patch number %ld (%s) is missing a corresponding %%patch%ld macro, usually "
 "in %%prep."
 msgstr ""
+"Ielāpam numur %ld (%s) trūkst atbilstoša makro %%patch%ld, parasti sadaļā "
+"%%prep."
 
 #: lib/inspect_patches.c:397
 #, c-format
 msgid "missing %%patch macro for ${FILE}"
-msgstr ""
+msgstr "trūkst makro %%patch ${FILE}"
 
 #: lib/inspect_patches.c:399
 #, c-format
 msgid "Patch number %ld (%s) is mismatched with %%patch%ld macro."
-msgstr ""
+msgstr "Ielāpa numurs %ld (%s) neatbilst makro %%patch%ld."
 
 #: lib/inspect_patches.c:401
 #, c-format
 msgid "mismatched %%patch macro for ${FILE}"
-msgstr ""
+msgstr "neatbilstošs makro %%patch ${FILE}"
 
 #: lib/inspect_patches.c:422
 msgid "undefined Patch ${FILE}"
-msgstr ""
+msgstr "nedefinēts Patch ${FILE}"
 
 #: lib/inspect_patches.c:423
 #, c-format
 msgid "Undefined Patch file %s."
-msgstr ""
+msgstr "Nedefinēts Patch fails %s."
 
 #: lib/inspect_patches.c:436 lib/inspect_patches.c:444
 #, c-format
 msgid "*** unable to uncompress patch: %s"
-msgstr ""
+msgstr "*** nevar atspiest ielāpu: %s"
 
 #: lib/inspect_patches.c:473
 msgid "corrupt patch ${FILE}"
-msgstr ""
+msgstr "bojāts ielāps ${FILE}"
 
 #: lib/inspect_patches.c:477 lib/inspect_patches.c:484
 #, c-format
 msgid "Patch %s is under 4 bytes in size - is it corrupt?"
-msgstr ""
+msgstr "Ielāpa %s izmērs ir mazāks par 4 baitiem — vai tas ir bojāts?"
 
 #: lib/inspect_patches.c:506
 #, c-format
 msgid "%s changed (%ld bytes -> %ld bytes)"
-msgstr ""
+msgstr "%s mainīts (%ld baiti -> %ld baiti)"
 
 #: lib/inspect_patches.c:510 lib/inspect_patches.c:535
 msgid "patch file ${FILE}"
-msgstr ""
+msgstr "ielāpa fails ${FILE}"
 
 #: lib/inspect_patches.c:531
 #, c-format
 msgid "New patch file `%s` appeared"
-msgstr ""
+msgstr "Parādījies jauns ielāpa fails „%s”"
 
 #: lib/inspect_patches.c:551
 msgid "patch changes ${FILE}"
-msgstr ""
+msgstr "ielāpa izmaiņas ${FILE}"
 
 #: lib/inspect_patches.c:555
 #, c-format
 msgid "%s touches as many as %ld line%s"
-msgstr ""
+msgstr "%s skar rindas: līdz %ld%.0s"
 
 #: lib/inspect_patches.c:557
 #, c-format
 msgid "%s touches %ld file%s"
-msgstr ""
+msgstr "%s skar failus: %ld%.0s"
 
 #: lib/inspect_patches.c:559
 #, c-format
 msgid "%s touches %ld file%s and %s%ld line%s"
-msgstr ""
+msgstr "%s skar failus: %ld%.0s un rindas: %s%ld%.0s"
 
 #: lib/inspect_patches.c:559
 msgid "as many as "
-msgstr ""
+msgstr "līdz "
 
 #: lib/inspect_patches.c:626 lib/inspect_upstream.c:141
 msgid "No source packages available, skipping inspection."
-msgstr ""
+msgstr "Nav pieejamu pirmkoda pakotņu, pārbaude izlaista."
 
 #: lib/inspect_patches.c:725
 #, c-format
 msgid "Unhandled patch file `%s` defined in spec file"
-msgstr ""
+msgstr "Spec failā definēts neapstrādāts ielāpa fails „%s”"
 
 #: lib/inspect_patches.c:822
 #, c-format
 msgid "*** unrecognized %%patch line: %s"
-msgstr ""
+msgstr "*** neatpazīta %%patch rinda: %s"
 
 #: lib/inspect_patches.c:828
 #, c-format
 msgid "*** unable to read spec file line: %s"
-msgstr ""
+msgstr "*** nevar nolasīt spec faila rindu: %s"
 
 #: lib/inspect_patches.c:881
 #, c-format
 msgid "Patch file `%s` removed"
-msgstr ""
+msgstr "Ielāpa fails „%s” noņemts"
 
 #: lib/inspect_pathmigration.c:81
 #, c-format
 msgid "File %s found should be in %s on %s"
-msgstr ""
+msgstr "Atrastajam failam %s jābūt direktorijā %s arhitektūrā %s"
 
 #: lib/inspect_pathmigration.c:82
 #, c-format
 msgid "${FILE} should be in %s on ${ARCH}"
-msgstr ""
+msgstr "${FILE} jābūt direktorijā %s arhitektūrā ${ARCH}"
 
 #: lib/inspect_permissions.c:84
 msgid " changed setuid/setgid;"
-msgstr ""
+msgstr " mainīts setuid/setgid;"
 
 #: lib/inspect_permissions.c:89
 msgid " became a directory;"
-msgstr ""
+msgstr " kļuva par direktoriju;"
 
 #: lib/inspect_permissions.c:91
 msgid " became a character device;"
-msgstr ""
+msgstr " kļuva par rakstzīmju ierīci;"
 
 #: lib/inspect_permissions.c:93
 msgid " became a block device;"
-msgstr ""
+msgstr " kļuva par bloku ierīci;"
 
 #: lib/inspect_permissions.c:95
 msgid " became a regular file;"
-msgstr ""
+msgstr " kļuva par parastu failu;"
 
 #: lib/inspect_permissions.c:97
 msgid " became a FIFO;"
-msgstr ""
+msgstr " kļuva par FIFO;"
 
 #: lib/inspect_permissions.c:99
 msgid " became a symbolic link;"
-msgstr ""
+msgstr " kļuva par simbolisko saiti;"
 
 #: lib/inspect_permissions.c:101
 msgid " became a socket;"
-msgstr ""
+msgstr " kļuva par ligzdu;"
 
 #: lib/inspect_permissions.c:105
 msgid " permissions"
-msgstr ""
+msgstr " atļaujas"
 
 #: lib/inspect_permissions.c:111
 msgid " relaxed"
-msgstr ""
+msgstr " atvieglotas"
 
 #: lib/inspect_permissions.c:114
 msgid " changed"
-msgstr ""
+msgstr " mainītas"
 
 #: lib/inspect_permissions.c:129
 #, c-format
 msgid "%s from %04o to %04o on %s"
-msgstr ""
+msgstr "%s no %04o uz %04o arhitektūrā %s"
 
 #: lib/inspect_permissions.c:135
 #, c-format
 msgid "${FILE} permissions from %04o to %04o on ${ARCH}"
-msgstr ""
+msgstr "${FILE} atļaujas no %04o uz %04o arhitektūrā ${ARCH}"
 
 #: lib/inspect_permissions.c:149
 #, c-format
 msgid "%s (%s) is world-writable on %s"
-msgstr ""
+msgstr "%s (%s) ir rakstāms visiem arhitektūrā %s"
 
 #: lib/inspect_permissions.c:152
 msgid "${FILE} is world-writable on ${ARCH}"
-msgstr ""
+msgstr "${FILE} ir rakstāms visiem arhitektūrā ${ARCH}"
 
 #: lib/inspect_politics.c:47 lib/inspect_politics.c:67
 #, c-format
 msgid "*** invalid politics entry with pattern=%s and digest=%s"
-msgstr ""
+msgstr "*** nederīgs politikas ieraksts ar pattern=%s un digest=%s"
 
 #: lib/inspect_politics.c:92
 #, c-format
 msgid "*** unknown digest type for pattern %s: %s"
-msgstr ""
+msgstr "*** nezināms šablona %s jaucējvērtības tips: %s"
 
 #: lib/inspect_politics.c:126
 #, c-format
@@ -2773,6 +3335,8 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules allow this "
 "file."
 msgstr ""
+"Iespējami politiski jutīgs fails (%s) atrasts pakotnē %s arhitektūrā %s: "
+"kārtulas šo failu atļauj."
 
 #: lib/inspect_politics.c:134
 #, c-format
@@ -2780,50 +3344,54 @@ msgid ""
 "Possible politically sensitive file (%s) found in %s on %s: rules prohibit "
 "this file."
 msgstr ""
+"Iespējami politiski jutīgs fails (%s) atrasts pakotnē %s arhitektūrā %s: "
+"kārtulas šo failu aizliedz."
 
 #: lib/inspect_politics.c:138
 msgid "${FILE} is politically sensitive"
-msgstr ""
+msgstr "${FILE} ir politiski jutīgs"
 
 #: lib/inspect_removedfiles.c:26
 msgid ""
 "; Removing security policy related files requires inspection by the Security "
 "Response Team."
 msgstr ""
+"; Ar drošības politiku saistīto failu noņemšanai nepieciešama drošības "
+"reaģēšanas komandas pārbaude."
 
 #: lib/inspect_removedfiles.c:85
 msgid "library ${FILE} removed on ${ARCH}"
-msgstr ""
+msgstr "bibliotēka ${FILE} noņemta arhitektūrā ${ARCH}"
 
 #: lib/inspect_removedfiles.c:131
 #, c-format
 msgid "ABI break: Library %s with SONAME '%s' removed from %s"
-msgstr ""
+msgstr "ABI pārrāvums: bibliotēka %s ar SONAME „%s” noņemta no %s"
 
 #: lib/inspect_removedfiles.c:132
 msgid "missing SONAME in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "trūkst SONAME ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_removedfiles.c:135
 #, c-format
 msgid "ABI break: Library %s removed from %s"
-msgstr ""
+msgstr "ABI pārrāvums: bibliotēka %s noņemta no %s"
 
 #: lib/inspect_removedfiles.c:138
 #, c-format
 msgid "%s removed from %s"
-msgstr ""
+msgstr "%s noņemts no %s"
 
 #: lib/inspect_rpmdeps.c:129
 #, c-format
 msgid "Invalid looking %s dependency in the %s package on %s: %s"
-msgstr ""
+msgstr "Aizdomīga %s atkarība pakotnē %s arhitektūrā %s: %s"
 
 #: lib/inspect_rpmdeps.c:132 lib/inspect_rpmdeps.c:892
 #: lib/inspect_rpmdeps.c:902 lib/inspect_rpmdeps.c:948
 #, c-format
 msgid "'${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' %s arhitektūrā ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:386
 #, c-format
@@ -2833,11 +3401,15 @@ msgid ""
 "%s' to the spec file to avoid the need to test interoperability between "
 "various combinations of old and new subpackages."
 msgstr ""
+"Apakšpakotnei %s arhitektūrā %s ir „%s”, kas nāk no apakšpakotnes %s, bet "
+"tai nav skaidras pakotnes versijas prasības.  Lūdzu, pievienojiet spec "
+"failam 'Requires: %s = %s', lai nebūtu jātestē sadarbspēja starp dažādām "
+"veco un jauno apakšpakotņu kombinācijām."
 
 #: lib/inspect_rpmdeps.c:387
 #, c-format
 msgid "missing 'Requires: ${FILE} = %s' in %s on ${ARCH}"
-msgstr ""
+msgstr "trūkst 'Requires: ${FILE} = %s' %s arhitektūrā ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:409
 #, c-format
@@ -2845,132 +3417,137 @@ msgid ""
 "Multiple subpackages provide '%s': [%s] but these subpackages carry explicit "
 "Requires: [%s]"
 msgstr ""
+"Vairākas apakšpakotnes nodrošina „%s”: [%s], bet šīm apakšpakotnēm ir "
+"skaidri Requires: [%s]"
 
 #: lib/inspect_rpmdeps.c:410
 #, c-format
 msgid "%s all provide '${FILE}' on ${ARCH}"
-msgstr ""
+msgstr "%s visas nodrošina '${FILE}' arhitektūrā ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:540
 #, c-format
 msgid "Missing epoch prefix on the version-release in '%s' for %s on %s"
 msgstr ""
+"Trūkst epoch priedēkļa versijai-laidienam „%s” pakotnei %s arhitektūrā %s"
 
 #: lib/inspect_rpmdeps.c:541
 #, c-format
 msgid "'${FILE}' needs epoch in %s on ${ARCH}"
-msgstr ""
+msgstr "'${FILE}' vajag epoch %s arhitektūrā ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:807
 msgid "spec file"
-msgstr ""
+msgstr "spec fails"
 
 #: lib/inspect_rpmdeps.c:887
 #, c-format
 msgid "Gained '%s' in source package %s"
-msgstr ""
+msgstr "Iegūts „%s” pirmkoda pakotnē %s"
 
 #: lib/inspect_rpmdeps.c:889
 #, c-format
 msgid "Gained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Iegūts „%s” apakšpakotnē %s arhitektūrā %s"
 
 #: lib/inspect_rpmdeps.c:897
 #, c-format
 msgid "Retained '%s' in source package %s"
-msgstr ""
+msgstr "Saglabāts „%s” pirmkoda pakotnē %s"
 
 #: lib/inspect_rpmdeps.c:899
 #, c-format
 msgid "Retained '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Saglabāts „%s” apakšpakotnē %s arhitektūrā %s"
 
 #: lib/inspect_rpmdeps.c:907
 #, c-format
 msgid "Changed '%s' to '%s' in source package %s"
-msgstr ""
+msgstr "Mainīts „%s” uz „%s” pirmkoda pakotnē %s"
 
 #: lib/inspect_rpmdeps.c:909
 #, c-format
 msgid "Changed '%s' to '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Mainīts „%s” uz „%s” apakšpakotnē %s arhitektūrā %s"
 
 #: lib/inspect_rpmdeps.c:912
 #, c-format
 msgid "'%s' became '${FILE}' in %s on ${ARCH}"
-msgstr ""
+msgstr "„%s” kļuva par '${FILE}' %s arhitektūrā ${ARCH}"
 
 #: lib/inspect_rpmdeps.c:918
 msgid "; this is expected"
-msgstr ""
+msgstr "; tas ir gaidīts"
 
 #: lib/inspect_rpmdeps.c:940
 #, c-format
 msgid "Lost '%s' in source package %s"
-msgstr ""
+msgstr "Zaudēts „%s” pirmkoda pakotnē %s"
 
 #: lib/inspect_rpmdeps.c:942
 #, c-format
 msgid "Lost '%s' in subpackage %s on %s"
-msgstr ""
+msgstr "Zaudēts „%s” apakšpakotnē %s arhitektūrā %s"
 
 #: lib/inspect_runpath.c:136
 #, c-format
 msgid "*** unable to compile $ORIGIN root prefix regular expression: %s"
-msgstr ""
+msgstr "*** nevar kompilēt $ORIGIN saknes priedēkļa regulāro izteiksmi: %s"
 
 #: lib/inspect_runpath.c:190
 #, c-format
 msgid "%s has an invalid-looking %s on %s: %s"
-msgstr ""
+msgstr "%s ir aizdomīgs %s arhitektūrā %s: %s"
 
 #: lib/inspect_runpath.c:192
 msgid "runtime search path in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "izpildlaika meklēšanas ceļš ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_runpath.c:270
 msgid "both DT_RPATH and DT_RUNPATH in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "gan DT_RPATH, gan DT_RUNPATH ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_runpath.c:272
 #, c-format
 msgid "%s has both DT_RPATH and DT_RUNPATH on %s; this is not allowed"
-msgstr ""
+msgstr "%s ir gan DT_RPATH, gan DT_RUNPATH arhitektūrā %s; tas nav atļauts"
 
 #: lib/inspect_shellsyntax.c:125
 msgid "invalid shell script ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "nederīgs čaulas skripts ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_shellsyntax.c:132
 #, c-format
 msgid "%s is a shell script but was not before on %s"
-msgstr ""
+msgstr "%s ir čaulas skripts, bet iepriekš nebija arhitektūrā %s"
 
 #: lib/inspect_shellsyntax.c:134
 #, c-format
 msgid "%s is a %s script but was a %s script before on %s"
-msgstr ""
+msgstr "%s ir %s skripts, bet iepriekš bija %s skripts arhitektūrā %s"
 
 #: lib/inspect_shellsyntax.c:181
 #, c-format
 msgid "%s is no longer a valid %s script on %s"
-msgstr ""
+msgstr "%s vairs nav derīgs %s skripts arhitektūrā %s"
 
 #: lib/inspect_shellsyntax.c:190
 #, c-format
 msgid "%s became a valid %s script on %s"
-msgstr ""
+msgstr "%s kļuva par derīgu %s skriptu arhitektūrā %s"
 
 #: lib/inspect_shellsyntax.c:193
 msgid ""
 ". The script fails with '-n' but passes with '-O extglob'; be sure 'shopt "
 "extglob' is set in the script."
 msgstr ""
+". Skripts neiztur ar '-n', bet iztur ar '-O extglob'; pārliecinieties, ka "
+"skriptā ir iestatīts 'shopt extglob'."
 
 #: lib/inspect_shellsyntax.c:204 lib/inspect_shellsyntax.c:224
 #, c-format
 msgid "%s is not a valid %s script on %s"
-msgstr ""
+msgstr "%s nav derīgs %s skripts arhitektūrā %s"
 
 #: lib/inspect_shellsyntax.c:215
 #, c-format
@@ -2978,131 +3555,137 @@ msgid ""
 "%s fails with '-n' but passes with '-O extglob'; be sure 'shopt extglob' is "
 "set in the script on %s"
 msgstr ""
+"%s neiztur ar '-n', bet iztur ar '-O extglob'; pārliecinieties, ka skriptā "
+"ir iestatīts 'shopt extglob', arhitektūrā %s"
 
 #: lib/inspect_specname.c:68
 msgid "unexpected spec filename"
-msgstr ""
+msgstr "negaidīts spec faila nosaukums"
 
 #: lib/inspect_specname.c:71
 msgid "exactly match"
-msgstr ""
+msgstr "atbilst precīzi"
 
 #: lib/inspect_specname.c:73
 msgid "begin with"
-msgstr ""
+msgstr "sākas ar"
 
 #: lib/inspect_specname.c:75
 msgid "end with"
-msgstr ""
+msgstr "beidzas ar"
 
 #: lib/inspect_specname.c:78
 #, c-format
 msgid "Spec filename does not %s the primary name %s; got '%s'"
-msgstr ""
+msgstr "Spec faila nosaukums ne%s — primārais nosaukums: %s; iegūts „%s”"
 
 #: lib/inspect_specname.c:109
 msgid "The specname inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Pārbaude specname ir tikai pirmkoda pakotnēm, izlaiž."
 
 #: lib/inspect_subpackages.c:68
 #, c-format
 msgid "Subpackage '%s' has disappeared on '%s'"
-msgstr ""
+msgstr "Apakšpakotne „%s” ir pazudusi arhitektūrā „%s”"
 
 #: lib/inspect_subpackages.c:75 lib/inspect_subpackages.c:99
 msgid "subpackage ${FILE}"
-msgstr ""
+msgstr "apakšpakotne ${FILE}"
 
 #: lib/inspect_subpackages.c:92
 #, c-format
 msgid "Subpackage '%s' has appeared on '%s'"
-msgstr ""
+msgstr "Apakšpakotne „%s” ir parādījusies arhitektūrā „%s”"
 
 #: lib/inspect_symlinks.c:98
 #, c-format
 msgid ""
 "Directory %s became a symbolic link (to %s) in %s on %s; this is not allowed!"
 msgstr ""
+"Direktorija %s kļuva par simbolisko saiti (uz %s) pakotnē %s arhitektūrā %s; "
+"tas nav atļauts!"
 
 #: lib/inspect_symlinks.c:100
 #, c-format
 msgid "%s %s became a symbolic link (to %s) in %s on %s"
-msgstr ""
+msgstr "%s %s kļuva par simbolisko saiti (uz %s) pakotnē %s arhitektūrā %s"
 
 #: lib/inspect_symlinks.c:108
 msgid "${FILE} became a symlink on ${ARCH}"
-msgstr ""
+msgstr "${FILE} kļuva par simbolisko saiti arhitektūrā ${ARCH}"
 
 #: lib/inspect_symlinks.c:125
 msgid "unable to read symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "nevar nolasīt simbolisko saiti ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_symlinks.c:126
 #, c-format
 msgid "An error occurred reading symbolic link %s in %s on %s."
-msgstr ""
+msgstr "Nolasot simbolisko saiti %s pakotnē %s arhitektūrā %s, radās kļūda."
 
 #: lib/inspect_symlinks.c:178
 #, c-format
 msgid ""
 "%s %s has too many levels of redirects and cannot be resolved in %s on %s"
 msgstr ""
+"%s %s ir pārāk daudz pāradresāciju līmeņu, un to nevar atrisināt pakotnē %s "
+"arhitektūrā %s"
 
 #: lib/inspect_symlinks.c:182
 msgid "too many redirects for ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "pārāk daudz pāradresāciju ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_symlinks.c:277
 #, c-format
 msgid "%s %s %s a dangling symbolic link in %s on %s"
-msgstr ""
+msgstr "%s %s %s karājoša simboliskā saite pakotnē %s arhitektūrā %s"
 
 #: lib/inspect_symlinks.c:284
 msgid "dangling symlink ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "karājoša simboliskā saite ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_types.c:69
 msgid "${FILE} MIME type on ${ARCH}"
-msgstr ""
+msgstr "${FILE} MIME tips arhitektūrā ${ARCH}"
 
 #: lib/inspect_types.c:77 lib/inspect_types.c:82
 #, c-format
 msgid "Unknown MIME type `%s' on %s in %s"
-msgstr ""
+msgstr "Nezināms MIME tips „%s” arhitektūrā %s pakotnē %s"
 
 #: lib/inspect_types.c:107
 #, c-format
 msgid "MIME type for %s in %s was `%s/%s' and became `%s/%s'"
-msgstr ""
+msgstr "%s MIME tips pakotnē %s bija `%s/%s' un kļuva par `%s/%s'"
 
 #: lib/inspect_udevrules.c:104 lib/inspect_udevrules.c:116
 #, c-format
 msgid "%s is a valid udev rules file on %s"
-msgstr ""
+msgstr "%s ir derīgs udev kārtulu fails arhitektūrā %s"
 
 #: lib/inspect_udevrules.c:106
 #, c-format
 msgid "%s is now a valid udev rules file on %s"
-msgstr ""
+msgstr "%s tagad ir derīgs udev kārtulu fails arhitektūrā %s"
 
 #: lib/inspect_udevrules.c:109
 #, c-format
 msgid "%s is no longer a valid udev rules file on %s"
-msgstr ""
+msgstr "%s vairs nav derīgs udev kārtulu fails arhitektūrā %s"
 
 #: lib/inspect_udevrules.c:112 lib/inspect_udevrules.c:118
 #, c-format
 msgid "%s is not a valid udev rules file on %s"
-msgstr ""
+msgstr "%s nav derīgs udev kārtulu fails arhitektūrā %s"
 
 #: lib/inspect_unicode.c:465
 #, c-format
 msgid "*** empty localpath on %s"
-msgstr ""
+msgstr "*** tukšs localpath arhitektūrā %s"
 
 #: lib/inspect_unicode.c:474
 msgid "forbidden code point in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "aizliegts koda punkts ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_unicode.c:551
 #, c-format
@@ -3110,11 +3693,13 @@ msgid ""
 "A forbidden code point, 0x%04X, was found in the %s source file on line %ld "
 "at column %ld.  This source file is used by %s."
 msgstr ""
+"Pirmkoda failā %2$s %3$ld. rindas %4$ld. kolonnā tika atrasts aizliegts koda "
+"punkts 0x%1$04X.  Šo pirmkoda failu izmanto %5$s."
 
 #: lib/inspect_unicode.c:621
 #, c-format
 msgid "unable to run %prep in ${FILE}"
-msgstr ""
+msgstr "nevar izpildīt %prep ${FILE}"
 
 #: lib/inspect_unicode.c:624
 #, c-format
@@ -3122,183 +3707,194 @@ msgid ""
 "Unable to run through the %%prep section in %s or manually unpack sources "
 "for further scanning."
 msgstr ""
+"Nevar izpildīt sadaļu %%prep %s vai manuāli izpakot pirmkodu tālākai "
+"skenēšanai."
 
 #: lib/inspect_unicode.c:744
 msgid "The unicode inspection is only for source packages, skipping."
-msgstr ""
+msgstr "Pārbaude unicode ir tikai pirmkoda pakotnēm, izlaiž."
 
 #: lib/inspect_upstream.c:60
 #, c-format
 msgid "New upstream source file `%s` appeared"
-msgstr ""
+msgstr "Parādījies jauns augšteces pirmkoda fails „%s”"
 
 #: lib/inspect_upstream.c:62
 msgid "new source file ${FILE}"
-msgstr ""
+msgstr "jauns pirmkoda fails ${FILE}"
 
 #: lib/inspect_upstream.c:91
 #, c-format
 msgid "Upstream source file `%s` changed content"
-msgstr ""
+msgstr "Augšteces pirmkoda failam „%s” mainījies saturs"
 
 #: lib/inspect_upstream.c:93
 msgid "checksum of ${FILE}"
-msgstr ""
+msgstr "${FILE} kontrolsumma"
 
 #: lib/inspect_upstream.c:195
 #, c-format
 msgid "Source file `%s` removed"
-msgstr ""
+msgstr "Pirmkoda fails „%s” noņemts"
 
 #: lib/inspect_upstream.c:197
 msgid "source file ${FILE} removed"
-msgstr ""
+msgstr "pirmkoda fails ${FILE} noņemts"
 
 #: lib/inspect_virus.c:40
 msgid "*** cl_engine_new returned NULL, check clamav library"
-msgstr ""
+msgstr "*** cl_engine_new atgrieza NULL, pārbaudiet clamav bibliotēku"
 
 #: lib/inspect_virus.c:98
 #, c-format
 msgid "Virus detected in %s in the %s package on %s: %s"
-msgstr ""
+msgstr "Konstatēts vīruss %s pakotnē %s arhitektūrā %s: %s"
 
 #: lib/inspect_virus.c:135
 msgid "clamav version information"
-msgstr ""
+msgstr "clamav versijas informācija"
 
 #: lib/inspect_virus.c:140
 #, c-format
 msgid "clamav version %s"
-msgstr ""
+msgstr "clamav versija %s"
 
 #: lib/inspect_virus.c:145
 #, c-format
 msgid "*** missing %s"
-msgstr ""
+msgstr "*** trūkst %s"
 
 #: lib/inspect_virus.c:169
 #, c-format
 msgid "%s version %u (%s)"
-msgstr ""
+msgstr "%s versija %u (%s)"
 
 #: lib/inspect_virus.c:201
 msgid "virus or malware in ${FILE} on ${ARCH}"
-msgstr ""
+msgstr "vīruss vai ļaunprogrammatūra ${FILE} arhitektūrā ${ARCH}"
 
 #: lib/inspect_xml.c:195
 #, c-format
 msgid "%s is a well-formed XML file in %s on %s, but is not a valid XML file"
 msgstr ""
+"%s ir pareizi veidots XML fails pakotnē %s arhitektūrā %s, bet nav derīgs "
+"XML fails"
 
 #: lib/inspect_xml.c:203
 #, c-format
 msgid "%s is not a well-formed XML file in %s on %s"
-msgstr ""
+msgstr "%s nav pareizi veidots XML fails pakotnē %s arhitektūrā %s"
 
 #: lib/inspect_xml.c:207
 msgid "${FILE} is not well-formed XML on ${ARCH}"
-msgstr ""
+msgstr "${FILE} nav pareizi veidots XML arhitektūrā ${ARCH}"
 
 #: lib/koji.c:142
 #, c-format
 msgid "*** XML-RPC Fault: %s (%d)"
-msgstr ""
+msgstr "*** XML-RPC kļūme: %s (%d)"
 
 #: lib/koji.c:652
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getBuild(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc kļūmes kods %s (%d): getBuild(%s) no %s"
 
 #: lib/koji.c:884
 #, c-format
 msgid "*** Koji build state is %s for %s, cannot continue"
-msgstr ""
+msgstr "*** Koji būves stāvoklis ir %s būvei %s, nevar turpināt"
 
 #: lib/koji.c:1147
 #, c-format
 msgid "*** xmlrpc fault code %s (%d): getTaskInfo(%s) from %s"
-msgstr ""
+msgstr "*** xmlrpc kļūmes kods %s (%d): getTaskInfo(%s) no %s"
 
 #: lib/koji.c:1171
 #, c-format
 msgid "*** Koji task state is %s for task %s, cannot continue"
-msgstr ""
+msgstr "*** Koji uzdevuma stāvoklis ir %s uzdevumam %s, nevar turpināt"
 
 #: lib/koji.c:1399
 msgid "RPM package build"
-msgstr ""
+msgstr "RPM pakotnes būve"
 
 #: lib/koji.c:1401
 msgid "Module build consisting of multiple RPM package builds"
-msgstr ""
+msgstr "Moduļa būve, kas sastāv no vairākām RPM pakotņu būvēm"
 
 #: lib/magic.c:21
 msgid "*** unable to initialize the magic library"
-msgstr ""
+msgstr "*** nevar inicializēt bibliotēku magic"
 
 #: lib/magic.c:26
 #, c-format
 msgid "*** unable to load the magic database: %s"
-msgstr ""
+msgstr "*** nevar ielādēt magic datubāzi: %s"
 
 #: lib/mkdirp.c:76 lib/mkdirp.c:89
 #, c-format
 msgid "*** unable to mkdir %s"
-msgstr ""
+msgstr "*** nevar izveidot direktoriju (mkdir) %s"
 
 #: lib/output.c:25
 msgid ""
 "Detailed results suitable for the console and piping through paging programs."
 msgstr ""
+"Detalizēti rezultāti, piemēroti konsolei un padošanai lapošanas programmām."
 
 #: lib/output.c:27
 msgid ""
 "Results organized as a JSON data structure suitable for reading by web "
 "applications and other frontend tools."
 msgstr ""
+"Rezultāti, sakārtoti JSON datu struktūrā, kas piemērota lasīšanai tīmekļa "
+"lietotnēm un citiem priekšgala rīkiem."
 
 #: lib/output.c:29
 msgid ""
 "Results organized as an XUnit data structure suitable for use with Jenkins "
 "and other XUnit-enabled services."
 msgstr ""
+"Rezultāti, sakārtoti XUnit datu struktūrā, kas piemērota izmantošanai ar "
+"Jenkins un citiem pakalpojumiem ar XUnit atbalstu."
 
 #: lib/output.c:31
 msgid ""
 "Results summarized with one result per line, suitable for console viewing "
 "with a paging program."
 msgstr ""
+"Kopsavilkuma rezultāti — viens rezultāts rindā, piemēroti skatīšanai konsolē "
+"ar lapošanas programmu."
 
 #: lib/output_json.c:99 lib/output_summary.c:45 lib/output_text.c:53
 #, c-format
 msgid "*** error opening %s for writing"
-msgstr ""
+msgstr "*** kļūda, atverot %s rakstīšanai"
 
 #: lib/output_summary.c:53
 msgid "added"
-msgstr ""
+msgstr "pievienots"
 
 #: lib/output_summary.c:55
 msgid "removed"
-msgstr ""
+msgstr "noņemts"
 
 #: lib/output_summary.c:57
 msgid "changed"
-msgstr ""
+msgstr "mainīts"
 
 #: lib/output_summary.c:61
 msgid "ok"
-msgstr ""
+msgstr "labi"
 
 #: lib/output_summary.c:63
 msgid "unknown"
-msgstr ""
+msgstr "nezināms"
 
 #: lib/output_text.c:92 lib/output_xunit.c:83
 #, c-format
 msgid "Result: %s\n"
-msgstr ""
+msgstr "Rezultāts: %s\n"
 
 #: lib/output_text.c:95 lib/output_xunit.c:96
 #, c-format
@@ -3306,6 +3902,8 @@ msgid ""
 "Waiver Authorization: %s\n"
 "\n"
 msgstr ""
+"Atbrīvojuma autorizācija: %s\n"
+"\n"
 
 #: lib/output_text.c:99 lib/output_xunit.c:110
 #, c-format
@@ -3314,6 +3912,9 @@ msgid ""
 "%s\n"
 "\n"
 msgstr ""
+"Sīkāka informācija:\n"
+"%s\n"
+"\n"
 
 #: lib/output_text.c:103 lib/output_xunit.c:118
 #, c-format
@@ -3321,78 +3922,80 @@ msgid ""
 "Suggested Remedy:\n"
 "%s"
 msgstr ""
+"Ieteiktais risinājums:\n"
+"%s"
 
 #: lib/output_xunit.c:54
 #, c-format
 msgid "*** opening %s for writing"
-msgstr ""
+msgstr "*** atver %s rakstīšanai"
 
 #: lib/parse_yaml.c:114 lib/parse_yaml.c:139
 #, c-format
 msgid "*** %s: broken document"
-msgstr ""
+msgstr "*** %s: bojāts dokuments"
 
 #: lib/parse_yaml.c:158 lib/parse_yaml.c:305
 #, c-format
 msgid "*** skipping token type %s"
-msgstr ""
+msgstr "*** izlaiž leksēmas tipu %s"
 
 #: lib/parse_yaml.c:386
 msgid "*** malformed type - freed?"
-msgstr ""
+msgstr "*** nepareizi veidots tips — atbrīvots?"
 
 #: lib/peers.c:176
 #, c-format
 msgid "There is not enough available space to unpack all of the RPMs.\n"
-msgstr ""
+msgstr "Nav pietiekami daudz brīvas vietas, lai izpakotu visas RPM.\n"
 
 #: lib/readelf.c:48
 #, c-format
 msgid "*** unknown elftype_t %d"
-msgstr ""
+msgstr "*** nezināms elftype_t %d"
 
 #: lib/readelf.c:76
 msgid "*** libelf version mismatch"
-msgstr ""
+msgstr "*** libelf versiju neatbilstība"
 
 #: lib/readfile.c:50
 #, c-format
 msgid "*** unable to find end of %s"
-msgstr ""
+msgstr "*** nevar atrast %s beigas"
 
 #: lib/readfile.c:68
 #, c-format
 msgid "*** unable to close %s"
-msgstr ""
+msgstr "*** nevar aizvērt %s"
 
 #: lib/rmtree.c:74
 #, c-format
 msgid "*** %s is not a directory"
-msgstr ""
+msgstr "*** %s nav direktorija"
 
 #: lib/rpm.c:71
 #, c-format
 msgid "*** Fopen failed for %s: %s"
-msgstr ""
+msgstr "*** Fopen neizdevās %s: %s"
 
 #: lib/rpm.c:255
 #, c-format
 msgid "*** file index %d is out of bounds for %s"
-msgstr ""
+msgstr "*** faila indekss %d ir ārpus robežām %s"
 
 #: lib/rpm.c:431
 msgid "*** error reading file from RPM payload"
-msgstr ""
+msgstr "*** kļūda, nolasot failu no RPM satura"
 
 #: lib/runcmd.c:171
 #, c-format
 msgid "%d"
-msgstr ""
+msgstr "%d"
 
 #: lib/runcmd.c:173
 #, c-format
 msgid "%d (%s)"
-msgstr ""
+msgstr "%d (%s)"
 
 #: lib/runcmd.c:178
 #, c-format
@@ -3401,103 +4004,106 @@ msgid ""
 "\n"
 "%s tried to run the command and it received signal %s"
 msgstr ""
+"%s\n"
+"\n"
+"%s mēģināja izpildīt komandu, un tā saņēma signālu %s"
 
 #: lib/runcmd.c:182
 #, c-format
 msgid "%s tried to run the command and it received signal %s"
-msgstr ""
+msgstr "%s mēģināja izpildīt komandu, un tā saņēma signālu %s"
 
 #: lib/strfuncs.c:250 lib/strfuncs.c:282
 msgid "NULL"
-msgstr ""
+msgstr "NULL"
 
 #: lib/strfuncs.c:252 lib/strfuncs.c:284
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: lib/strfuncs.c:254 lib/strfuncs.c:286
 msgid "INFO"
-msgstr ""
+msgstr "INFO"
 
 #: lib/strfuncs.c:256 lib/strfuncs.c:288
 msgid "VERIFY"
-msgstr ""
+msgstr "VERIFY"
 
 #: lib/strfuncs.c:258 lib/strfuncs.c:290
 msgid "BAD"
-msgstr ""
+msgstr "BAD"
 
 #: lib/strfuncs.c:260 lib/strfuncs.c:292
 msgid "SKIP"
-msgstr ""
+msgstr "SKIP"
 
 #: lib/strfuncs.c:262 lib/strfuncs.c:294
 msgid "DIAGNOSTICS"
-msgstr ""
+msgstr "DIAGNOSTICS"
 
 #: lib/strfuncs.c:264 lib/strfuncs.c:314
 msgid "UnKnOwN"
-msgstr ""
+msgstr "UnKnOwN"
 
 #: lib/strfuncs.c:308
 msgid "Not Waivable"
-msgstr ""
+msgstr "Nav atbrīvojams"
 
 #: lib/strfuncs.c:310
 msgid "Anyone"
-msgstr ""
+msgstr "Ikviens"
 
 #: lib/strfuncs.c:312
 msgid "Security"
-msgstr ""
+msgstr "Drošība"
 
 #: lib/strfuncs.c:543
 msgid "regular file"
-msgstr ""
+msgstr "parasts fails"
 
 #: lib/strfuncs.c:545
 msgid "directory"
-msgstr ""
+msgstr "direktorija"
 
 #: lib/strfuncs.c:547
 msgid "character device"
-msgstr ""
+msgstr "rakstzīmju ierīce"
 
 #: lib/strfuncs.c:549
 msgid "block device"
-msgstr ""
+msgstr "bloku ierīce"
 
 #: lib/strfuncs.c:551
 msgid "FIFO (named pipe)"
-msgstr ""
+msgstr "FIFO (nosaukts kanāls)"
 
 #: lib/strfuncs.c:553
 msgid "symbolic link"
-msgstr ""
+msgstr "simboliskā saite"
 
 #: lib/strfuncs.c:555
 msgid "socket"
-msgstr ""
+msgstr "ligzda"
 
 #: lib/strfuncs.c:614
 msgid "Success."
-msgstr ""
+msgstr "Veiksmīgi."
 
 #: lib/strfuncs.c:616
 msgid "One or more inspections failed."
-msgstr ""
+msgstr "Viena vai vairākas pārbaudes neizdevās."
 
 #: lib/strfuncs.c:618
 msgid "Program error."
-msgstr ""
+msgstr "Programmas kļūda."
 
 #: lib/strfuncs.c:620
 msgid "The specified profile is not found."
-msgstr ""
+msgstr "Norādītais profils nav atrasts."
 
 #: lib/strfuncs.c:622
 msgid "Insufficient disk space in the working directory."
-msgstr ""
+msgstr "Darba direktorijā nepietiek vietas diskā."
 
 #: src/rpminspect.c:48
 #, c-format
@@ -3505,169 +4111,174 @@ msgid ""
 "Compare package builds for policy compliance and consistency.\n"
 "\n"
 msgstr ""
+"Salīdzināt pakotņu būves politiku ievērošanas un konsekvences nolūkā.\n"
+"\n"
 
 #: src/rpminspect.c:49
 #, c-format
 msgid "Usage: %s [OPTIONS] [before build] [after build]\n"
-msgstr ""
+msgstr "Lietošana: %s [OPCIJAS] [būve pirms] [būve pēc]\n"
 
 #: src/rpminspect.c:50
 #, c-format
 msgid "Options:\n"
-msgstr ""
+msgstr "Opcijas:\n"
 
 #: src/rpminspect.c:51
 #, c-format
 msgid "  -c FILE, --config=FILE      Configuration file to use\n"
-msgstr ""
+msgstr "  -c FAILS, --config=FAILS    Izmantojamais konfigurācijas fails\n"
 
 #: src/rpminspect.c:52
 #, c-format
 msgid "  -p NAME, --profile=NAME     Configuration profile to use\n"
-msgstr ""
+msgstr "  -p NOS, --profile=NOS       Izmantojamais konfigurācijas profils\n"
 
 #: src/rpminspect.c:53
 #, c-format
 msgid "  -T LIST, --tests=LIST       List of tests to run\n"
-msgstr ""
+msgstr "  -T SAR, --tests=SAR         Izpildāmo testu saraksts\n"
 
 #: src/rpminspect.c:54
 #, c-format
 msgid "                                (default: ALL)\n"
-msgstr ""
+msgstr "                                (noklusējums: ALL)\n"
 
 #: src/rpminspect.c:55
 #, c-format
 msgid "  -E LIST, --exclude=LIST     List of tests to exclude\n"
-msgstr ""
+msgstr "  -E SAR, --exclude=SAR       Izslēdzamo testu saraksts\n"
 
 #: src/rpminspect.c:56
 #, c-format
 msgid "                                (default: none)\n"
-msgstr ""
+msgstr "                                (noklusējums: neviens)\n"
 
 #: src/rpminspect.c:57
 #, c-format
 msgid "  -a LIST, --arches=LIST      List of architectures to check\n"
-msgstr ""
+msgstr "  -a SAR, --arches=SAR        Pārbaudāmo arhitektūru saraksts\n"
 
 #: src/rpminspect.c:58
 #, c-format
 msgid "  -r STR, --release=STR       Product release string\n"
-msgstr ""
+msgstr "  -r VIRK, --release=VIRK     Produkta laidiena virkne\n"
 
 #: src/rpminspect.c:59
 #, c-format
 msgid "  -n, --no-rebase             Disable build rebase detection\n"
-msgstr ""
+msgstr "  -n, --no-rebase             Atspējot būves pārbāzēšanas noteikšanu\n"
 
 #: src/rpminspect.c:60
 #, c-format
 msgid "  -b TYPE, --build-type=TYPE  Set Koji build type to TYPE\n"
-msgstr ""
+msgstr "  -b TIPS, --build-type=TIPS  Iestatīt Koji būves tipu uz TIPS\n"
 
 #: src/rpminspect.c:61
 #, c-format
 msgid "  -o FILE, --output=FILE      Write results to FILE\n"
-msgstr ""
+msgstr "  -o FAILS, --output=FAILS    Rakstīt rezultātus FAILĀ\n"
 
 #: src/rpminspect.c:62
 #, c-format
 msgid "                                (default: stdout)\n"
-msgstr ""
+msgstr "                                (noklusējums: stdout)\n"
 
 #: src/rpminspect.c:63
 #, c-format
 msgid "  -F TYPE, --format=TYPE      Format output results as TYPE\n"
-msgstr ""
+msgstr "  -F TIPS, --format=TIPS      Formatēt izvades rezultātus kā TIPS\n"
 
 #: src/rpminspect.c:64
 #, c-format
 msgid "                                (default: text)\n"
-msgstr ""
+msgstr "                                (noklusējums: text)\n"
 
 #: src/rpminspect.c:65
 #, c-format
 msgid "  -t TAG, --threshold=TAG     Result threshold triggering exit\n"
 msgstr ""
+"  -t TAGS, --threshold=TAGS   Rezultāta slieksnis, kas izraisa iziešanu\n"
 
 #: src/rpminspect.c:66
 #, c-format
 msgid "                              failure (default: VERIFY)\n"
-msgstr ""
+msgstr "                              ar kļūmi (noklusējums: VERIFY)\n"
 
 #: src/rpminspect.c:67
 #, c-format
 msgid "  -s TAG, --suppress=TAG      Results suppression threshold\n"
-msgstr ""
+msgstr "  -s TAGS, --suppress=TAGS    Rezultātu apslāpēšanas slieksnis\n"
 
 #: src/rpminspect.c:68
 #, c-format
 msgid "                                (default: off, report everything)\n"
-msgstr ""
+msgstr "                                (noklusējums: off, ziņot par visu)\n"
 
 #: src/rpminspect.c:69
 #, c-format
 msgid "  -l, --list                  List available tests and formats\n"
-msgstr ""
+msgstr "  -l, --list                  Uzskaitīt pieejamos testus un formātus\n"
 
 #: src/rpminspect.c:70
 #, c-format
 msgid "  -w PATH, --workdir=PATH     Temporary directory to use\n"
-msgstr ""
+msgstr "  -w CEĻŠ, --workdir=CEĻŠ     Izmantojamā pagaidu direktorija\n"
 
 #: src/rpminspect.c:71
 #, c-format
 msgid "                                (default: %s)\n"
-msgstr ""
+msgstr "                                (noklusējums: %s)\n"
 
 #: src/rpminspect.c:72
 #, c-format
 msgid ""
 "  -f, --fetch-only            Fetch builds only, do not perform inspections\n"
-msgstr ""
+msgstr "  -f, --fetch-only            Tikai ienest būves, neveikt pārbaudes\n"
 
 #: src/rpminspect.c:73
 #, c-format
 msgid "                                (implies -k)\n"
-msgstr ""
+msgstr "                                (ietver -k)\n"
 
 #: src/rpminspect.c:74
 #, c-format
 msgid ""
 "  -k, --keep                  Do not remove the comparison working files\n"
-msgstr ""
+msgstr "  -k, --keep                  Nenoņemt salīdzināšanas darba failus\n"
 
 #: src/rpminspect.c:75
 #, c-format
 msgid "  -d, --debug                 Debugging mode output\n"
-msgstr ""
+msgstr "  -d, --debug                 Atkļūdošanas režīma izvade\n"
 
 #: src/rpminspect.c:76
 #, c-format
 msgid ""
 "  -D, --dump-config           Dump configuration settings (in YAML format)\n"
 msgstr ""
+"  -D, --dump-config           Izmest konfigurācijas iestatījumus (YAML "
+"formātā)\n"
 
 #: src/rpminspect.c:77
 #, c-format
 msgid "  -v, --verbose               Verbose inspection output\n"
-msgstr ""
+msgstr "  -v, --verbose               Detalizēta pārbaužu izvade\n"
 
 #: src/rpminspect.c:78
 #, c-format
 msgid "                              when finished, display full path\n"
-msgstr ""
+msgstr "                              pēc pabeigšanas parādīt pilnu ceļu\n"
 
 #: src/rpminspect.c:79
 #, c-format
 msgid "  -?, --help                  Display usage information\n"
-msgstr ""
+msgstr "  -?, --help                  Parādīt lietošanas informāciju\n"
 
 #: src/rpminspect.c:80
 #, c-format
 msgid "  -V, --version               Display program version\n"
-msgstr ""
+msgstr "  -V, --version               Parādīt programmas versiju\n"
 
 #: src/rpminspect.c:81
 #, c-format
@@ -3675,86 +4286,89 @@ msgid ""
 "\n"
 "See the rpminspect(1) man page for more information.\n"
 msgstr ""
+"\n"
+"Plašāku informāciju skatiet rokasgrāmatas lapā rpminspect(1).\n"
 
 #: src/rpminspect.c:114
 #, c-format
 msgid "*** unable to compile product release regular expression: %s"
-msgstr ""
+msgstr "*** nevar kompilēt produkta laidiena regulāro izteiksmi: %s"
 
 #: src/rpminspect.c:168 src/rpminspect.c:179
 #, c-format
 msgid "*** product release for after build (%s) is empty"
-msgstr ""
+msgstr "*** produkta laidiens būvei „pēc” (%s) ir tukšs"
 
 #: src/rpminspect.c:196 src/rpminspect.c:204
 #, c-format
 msgid "*** product release for before build (%s) is empty"
-msgstr ""
+msgstr "*** produkta laidiens būvei „pirms” (%s) ir tukšs"
 
 #: src/rpminspect.c:259
 #, c-format
 msgid "*** unable to determine product release for %s and %s"
-msgstr ""
+msgstr "*** nevar noteikt produkta laidienu %s un %s"
 
 #: src/rpminspect.c:260
 msgid ""
 "*** See the 'favor_release' setting in the rpminspect configuration file."
 msgstr ""
+"*** Skatiet rpminspect konfigurācijas faila iestatījumu 'favor_release'."
 
 #: src/rpminspect.c:288
 msgid "*** the -T and -E options are mutually exclusive"
-msgstr ""
+msgstr "*** opcijas -T un -E ir savstarpēji izslēdzošas"
 
 #: src/rpminspect.c:289 src/rpminspect.c:305 src/rpminspect.c:737
 #: src/rpminspect.c:776
 #, c-format
 msgid "*** See `%s --help` for more information."
-msgstr ""
+msgstr "*** Plašāku informāciju skatiet `%s --help`."
 
 #: src/rpminspect.c:304
 #, c-format
 msgid "*** unknown inspection: `%s`"
-msgstr ""
+msgstr "*** nezināma pārbaude: „%s”"
 
 #: src/rpminspect.c:455
 #, c-format
 msgid "*** unsupported build type: `%s`."
-msgstr ""
+msgstr "*** neatbalstīts būves tips: „%s”."
 
 #: src/rpminspect.c:464
 #, c-format
 msgid "*** invalid build type: `%s`."
-msgstr ""
+msgstr "*** nederīgs būves tips: „%s”."
 
 #: src/rpminspect.c:481
 #, c-format
 msgid "*** invalid output format: `%s`."
-msgstr ""
+msgstr "*** nederīgs izvades formāts: „%s”."
 
 #: src/rpminspect.c:493
 #, c-format
 msgid "*** unable to expand working directory: `%s`"
-msgstr ""
+msgstr "*** nevar izvērst darba direktoriju: „%s”"
 
 #: src/rpminspect.c:506
 #, c-format
 msgid "*** unable to use `%s' as working directory"
-msgstr ""
+msgstr "*** nevar izmantot „%s” kā darba direktoriju"
 
 #: src/rpminspect.c:536
 #, c-format
 msgid "%s version %s\n"
-msgstr ""
+msgstr "%s versija %s\n"
 
 #: src/rpminspect.c:539
 #, c-format
 msgid "*** ?? getopt returned character code 0%o ??"
-msgstr ""
+msgstr "*** ?? getopt atgrieza rakstzīmes kodu 0%o ??"
 
 #: src/rpminspect.c:546
 #, c-format
 msgid "Available build types:\n"
-msgstr ""
+msgstr "Pieejamie būvju tipi:\n"
 
 #: src/rpminspect.c:567
 #, c-format
@@ -3762,6 +4376,8 @@ msgid ""
 "\n"
 "Available output formats:\n"
 msgstr ""
+"\n"
+"Pieejamie izvades formāti:\n"
 
 #: src/rpminspect.c:584
 #, c-format
@@ -3769,34 +4385,36 @@ msgid ""
 "\n"
 "Available inspections:\n"
 msgstr ""
+"\n"
+"Pieejamās pārbaudes:\n"
 
 #: src/rpminspect.c:627 src/rpminspect.c:635 src/rpminspect.c:653
 #, c-format
 msgid "*** failed to read configuration file %s"
-msgstr ""
+msgstr "*** neizdevās nolasīt konfigurācijas failu %s"
 
 #: src/rpminspect.c:658
 #, c-format
 msgid "*** Please specify a configuration file using '-c' or supply ./%s"
-msgstr ""
+msgstr "*** Lūdzu, norādiet konfigurācijas failu ar '-c' vai nodrošiniet ./%s"
 
 #: src/rpminspect.c:736
 msgid "*** Invalid before and after build specification."
-msgstr ""
+msgstr "*** Nederīga būvju „pirms” un „pēc” norāde."
 
 #: src/rpminspect.c:744
 msgid "*** unable to read RPM configuration"
-msgstr ""
+msgstr "*** nevar nolasīt RPM konfigurāciju"
 
 #: src/rpminspect.c:775
 #, c-format
 msgid "*** unsupported architecture specified: `%s`"
-msgstr ""
+msgstr "*** norādīta neatbalstīta arhitektūra: „%s”"
 
 #: src/rpminspect.c:793
 #, c-format
 msgid "*** unable to create directory %s"
-msgstr ""
+msgstr "*** nevar izveidot direktoriju %s"
 
 #: src/rpminspect.c:851
 #, c-format
@@ -3804,73 +4422,76 @@ msgid ""
 "Version information for libraries and programs used by %s as well as storage "
 "requirements.  This result is for informational and diagnostic purposes only."
 msgstr ""
+"%s izmantoto bibliotēku un programmu versiju informācija, kā arī krātuves "
+"prasības.  Šis rezultāts ir tikai informatīviem un diagnostikas nolūkiem."
 
 #: src/rpminspect.c:858
 #, c-format
 msgid "Space required to download artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Artefaktu lejupielādei nepieciešamā vieta: %lu baiti (%s)\n"
 
 #: src/rpminspect.c:866
 #, c-format
 msgid "Space required to unpack artifacts: %lu bytes (%s)\n"
-msgstr ""
+msgstr "Artefaktu izpakošanai nepieciešamā vieta: %lu baiti (%s)\n"
 
 #: src/rpminspect.c:878
 #, c-format
 msgid "Command line arguments used to invoke %s."
-msgstr ""
+msgstr "Komandrindas argumenti, ar kuriem izsaukts %s."
 
 #: src/rpminspect.c:902
 #, c-format
 msgid "Local configuration file: %s"
-msgstr ""
+msgstr "Lokālais konfigurācijas fails: %s"
 
 #: src/rpminspect.c:912
 msgid "Before Build"
-msgstr ""
+msgstr "Būve pirms"
 
 #: src/rpminspect.c:917
 msgid "After Build"
-msgstr ""
+msgstr "Būve pēc"
 
 #: src/rpminspect.c:920
 msgid "Build"
-msgstr ""
+msgstr "Būve"
 
 #: src/rpminspect.c:937
 msgid "*** no peers, ensure packages exist for specified architecture(s)"
 msgstr ""
+"*** nav partneru, pārliecinieties, ka norādītajām arhitektūrām ir pakotnes"
 
 #: src/rpminspect.c:958
 msgid ""
 "*** unable to find a set of peer packages between the before and after builds"
-msgstr ""
+msgstr "*** nevar atrast partneru pakotņu kopu starp būvēm „pirms” un „pēc”"
 
 #: src/rpminspect.c:972
 msgid "*** unable to determine product release or none specified (-r)."
-msgstr ""
+msgstr "*** nevar noteikt produkta laidienu, vai tas nav norādīts (-r)."
 
 #: src/rpminspect.c:984
 #, c-format
 msgid "Skipping %s inspection..."
-msgstr ""
+msgstr "Izlaiž pārbaudi %s…"
 
 #: src/rpminspect.c:989
 msgid "skip"
-msgstr ""
+msgstr "izlaists"
 
 #: src/rpminspect.c:1009
 #, c-format
 msgid "Running %s inspection..."
-msgstr ""
+msgstr "Izpilda pārbaudi %s…"
 
 #: src/rpminspect.c:1018
 msgid "pass"
-msgstr ""
+msgstr "izturēts"
 
 #: src/rpminspect.c:1018
 msgid "FAIL"
-msgstr ""
+msgstr "NEIZDEVĀS"
 
 #: src/rpminspect.c:1046
 #, c-format
@@ -3878,3 +4499,5 @@ msgid ""
 "\n"
 "Keeping working directory: %s\n"
 msgstr ""
+"\n"
+"Saglabā darba direktoriju: %s\n"
